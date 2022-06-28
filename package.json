@@ -8,9 +8,8 @@
 		]
 	},
 	"scripts": {
-		"dev": "rw dev",
-		"redwood": "rw",
-		"rw": "rw"
+		"deploy": "yarn rw prisma migrate dev && yarn rw setup deploy netlify",
+		"dev": "rw dev"
 	},
 	"eslintConfig": {
 		"extends": "@redwoodjs/eslint-config",
