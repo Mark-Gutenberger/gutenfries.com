@@ -8,7 +8,7 @@
 		]
 	},
 	"scripts": {
-		"deploy": "yarn rw prisma migrate dev && yarn rw setup deploy netlify",
+		"deploy": "yarn install && yarn rw prisma migrate dev && yarn rw setup deploy netlify",
 		"dev": "rw dev"
 	},
 	"eslintConfig": {
