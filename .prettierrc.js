@@ -1,11 +1,4 @@
-/*
- * SPDX - License - Identifier: MIT
- * Author: Mark Gutenberger <mark-gutenberger@outlook.com>
- * .prettierrc.js (c) 2022
- * Desc: prettier config file
- * Created:  2022-02-25T14:24:49.313Z
- * Modified: 2022-03-06T04:49:54.106Z
- */
+/** @type {import('prettier').RequiredOptions} */
 module.exports = {
 	$schema: 'http://json.schemastore.org/prettierrc',
 	arrowParens: 'always',
@@ -25,6 +18,12 @@ module.exports = {
 	useTabs: true,
 	vueIndentScriptAndStyle: false,
 	overrides: [
+		{
+			files: 'Routes.*',
+			options: {
+				printWidth: 999,
+			},
+		},
 		{
 			files: [
 				'nuget.config',
