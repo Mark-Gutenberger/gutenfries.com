@@ -16,7 +16,7 @@ module.exports = {
 		'prettier/prettier': 'warn',
 		'class-methods-use-this': 'off',
 		'no-param-reassign': 'off',
-		camelcase: 'off',
+		// camelcase: 'off',
 		'no-unused-vars': 'off',
 	},
 };
