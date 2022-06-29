@@ -9,7 +9,8 @@
 	},
 	"scripts": {
 		"deploy": "yarn install && yarn rw prisma migrate dev && yarn rw setup deploy netlify",
-		"dev": "rw dev"
+		"dev": "rw dev",
+		"studio": "yarn rw prisma studio"
 	},
 	"eslintConfig": {
 		"extends": "@redwoodjs/eslint-config",
@@ -20,7 +21,9 @@
 		"@redwoodjs/core": "2.0.0",
 		"eslint": "^8.18.0",
 		"prettier": "^2.7.1",
-		"prettier-eslint": "^15.0.1"
+		"prettier-eslint": "^15.0.1",
+		"prisma": "^4.0.0",
+		"redwood": "^0.0.1"
 	},
 	"engines": {
 		"node": ">=14.19 <=16.x",
@@ -29,5 +32,6 @@
 	"packageManager": "yarn@3.2.1",
 	"prisma": {
 		"seed": "yarn rw exec seed"
-	}
+	},
+	"prisma.schema": "./api/db/schema.prisma"
 }

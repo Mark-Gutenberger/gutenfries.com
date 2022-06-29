@@ -4,6 +4,7 @@
 .env
 .netlify
 .redwood
+.TODO
 dev.db*
 dist
 dist-babel
