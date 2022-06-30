@@ -1,31 +1,39 @@
-import type { QueryResolvers, MutationResolvers } from 'types/graphql';
 import type { Prisma } from '@prisma/client';
+
 import { validate } from '@redwoodjs/api';
 import { db } from 'src/lib/db';
 
-export const contacts: QueryResolvers['contacts'] = () => {
+export const contacts = () => {
 	return db.contact.findMany();
 };
 
-export const contact: QueryResolvers['contact'] = ({ id }) => {
+export const contact = ({ id }: Prisma.ContactWhereUniqueInput) => {
 	return db.contact.findUnique({
 		where: { id },
 	});
 };
+
+interface CreateContactArgs {
+	input: Prisma.ContactCreateInput;
+}
 
 export const createContact = ({ input }: CreateContactArgs) => {
 	validate(input.email, 'email', { email: true });
 	return db.contact.create({ data: input });
 };
 
-export const updateContact: MutationResolvers['updateContact'] = ({ id, input }) => {
+interface UpdateContactArgs extends Prisma.ContactWhereUniqueInput {
+	input: Prisma.ContactUpdateInput;
+}
+
+export const updateContact = ({ id, input }: UpdateContactArgs) => {
 	return db.contact.update({
 		data: input,
 		where: { id },
 	});
 };
 
-export const deleteContact: MutationResolvers['deleteContact'] = ({ id }) => {
+export const deleteContact = ({ id }: Prisma.ContactWhereUniqueInput) => {
 	return db.contact.delete({
 		where: { id },
 	});

@@ -7,11 +7,6 @@
 			"packages/*"
 		]
 	},
-	"scripts": {
-		"deploy": "yarn install && yarn rw prisma migrate dev && yarn rw setup deploy netlify",
-		"dev": "rw dev",
-		"studio": "yarn rw prisma studio"
-	},
 	"eslintConfig": {
 		"extends": "@redwoodjs/eslint-config",
 		"root": true
@@ -22,8 +17,7 @@
 		"eslint": "^8.18.0",
 		"prettier": "^2.7.1",
 		"prettier-eslint": "^15.0.1",
-		"prisma": "^4.0.0",
-		"redwood": "^0.0.1"
+		"prisma": "^4.0.0"
 	},
 	"engines": {
 		"node": ">=14.19 <=16.x",

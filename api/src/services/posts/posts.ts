@@ -1,31 +1,39 @@
-import type { QueryResolvers, MutationResolvers } from 'types/graphql';
+import type { Prisma } from '@prisma/client';
 
 import { db } from 'src/lib/db';
 
-export const posts: QueryResolvers['posts'] = () => {
+export const posts = () => {
 	return db.post.findMany();
 };
 
-export const post: QueryResolvers['post'] = ({ id }) => {
+export const post = ({ id }: Prisma.PostWhereUniqueInput) => {
 	return db.post.findUnique({
 		where: { id },
 	});
 };
 
-export const createPost: MutationResolvers['createPost'] = ({ input }) => {
+interface CreatePostArgs {
+	input: Prisma.PostCreateInput;
+}
+
+export const createPost = ({ input }: CreatePostArgs) => {
 	return db.post.create({
 		data: input,
 	});
 };
 
-export const updatePost: MutationResolvers['updatePost'] = ({ id, input }) => {
+interface UpdatePostArgs extends Prisma.PostWhereUniqueInput {
+	input: Prisma.PostUpdateInput;
+}
+
+export const updatePost = ({ id, input }: UpdatePostArgs) => {
 	return db.post.update({
 		data: input,
 		where: { id },
 	});
 };
 
-export const deletePost: MutationResolvers['deletePost'] = ({ id }) => {
+export const deletePost = ({ id }: Prisma.PostWhereUniqueInput) => {
 	return db.post.delete({
 		where: { id },
 	});

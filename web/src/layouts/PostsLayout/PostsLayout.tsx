@@ -1,6 +1,8 @@
 import { Link, routes } from '@redwoodjs/router';
 import { Toaster } from '@redwoodjs/web/toast';
 
+import 'web/src/scaffold.css';
+
 type PostLayoutProps = {
 	children: React.ReactNode;
 };

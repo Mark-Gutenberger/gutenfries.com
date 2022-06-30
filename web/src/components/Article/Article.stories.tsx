@@ -1,7 +1,7 @@
-import Article from './Article'
+import Article from './Article';
 
 export const generated = () => {
-  return <Article />
-}
+	return <Article />;
+};
 
-export default { title: 'Components/Article' }
+export default { title: 'Components/Article' };
