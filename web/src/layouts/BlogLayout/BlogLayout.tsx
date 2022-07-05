@@ -1,13 +1,25 @@
 import { Link, routes } from '@redwoodjs/router';
 import { useAuth } from '@redwoodjs/auth';
 import { Toaster } from '@redwoodjs/web/toast';
+import { Stack, IStackTokens } from '@fluentui/react';
+import { DefaultButton, PrimaryButton } from '@fluentui/react/lib/Button';
 
 type BlogLayoutProps = {
 	children?: React.ReactNode;
 };
 
-const BlogLayout = ({ children }: BlogLayoutProps) => {
+export interface IButtonExampleProps {
+	// These are set based on the toggles shown above the examples (not needed in real code)
+	disabled?: boolean;
+	checked?: boolean;
+}
+
+// Example formatting
+const stackTokens: IStackTokens = { childrenGap: 40 };
+
+const BlogLayout: React.FunctionComponent<IButtonExampleProps> = ({ children }: BlogLayoutProps, props) => {
 	const { logOut, isAuthenticated, currentUser } = useAuth();
+	const { disabled, checked } = props;
 
 	return (
 		<>
@@ -38,12 +50,23 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
 						</li>
 						<li>
 							{isAuthenticated ? (
-								<div>
-									<button type='button' onClick={logOut} className='py-2 px-4'>
-										Logout
-									</button>
-								</div>
+								// <div>
+								// 	<button type='button' onClick={logOut} className='py-2 px-4'>
+								// 		Logout
+								// 	</button>
+								// </div>
+								// <Stack horizontal tokens={stackTokens}>
+								<PrimaryButton
+									className='py-2 px-4'
+									onClick={logOut}
+									allowDisabledFocus
+									disabled={disabled}
+									checked={checked}
+								>
+									Logout
+								</PrimaryButton>
 							) : (
+								// </Stack>
 								<Link to={routes.login()} className='py-2 px-4'>
 									Login
 								</Link>

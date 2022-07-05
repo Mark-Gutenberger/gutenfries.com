@@ -27,5 +27,8 @@
 	"prisma": {
 		"seed": "yarn rw exec seed"
 	},
-	"prisma.schema": "./api/db/schema.prisma"
+	"prisma.schema": "./api/db/schema.prisma",
+	"dependencies": {
+		"@fluentui/react": "^8.77.3"
+	}
 }
