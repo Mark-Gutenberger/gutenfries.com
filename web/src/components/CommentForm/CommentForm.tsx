@@ -47,12 +47,13 @@ const CommentForm = ({ postId }: Props) => {
 					titleClassName='font-semibold'
 					wrapperClassName='bg-red-100 text-red-900 text-sm p-3 rounded'
 				/>
+
 				<Label name='name' className='block text-xs font-semibold text-gray-500 uppercase'>
 					Name
 				</Label>
-				<TextField
-					name='name'
-					className='block w-full p-1 border rounded text-sm '
+				<TextAreaField
+					name='body'
+					className='block w-full p-1 border rounded h-24 text-sm'
 					validation={{ required: true }}
 				/>
 
