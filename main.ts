@@ -8,7 +8,7 @@
 import { InnerRenderFunction, RenderContext, start } from '$fresh/server.ts';
 import manifest from './fresh.gen.ts';
 
-import { db } from './db/db.ts';
+// import { db } from './db/db.ts';
 
 import { config, setup } from '@twind';
 import { virtualSheet } from 'twind/sheets';
@@ -26,6 +26,6 @@ function render(ctx: RenderContext, render: InnerRenderFunction) {
 	ctx.state.set('twind', newSnapshot);
 }
 
-db.sync();
+// db.sync();
 
 await start(manifest, { render, port: 1234 });
