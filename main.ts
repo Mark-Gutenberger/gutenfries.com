@@ -1,3 +1,4 @@
+console.log(`Deno version: ${Deno.version.deno}`);
 /// <reference no-default-lib="true" />
 /// <reference lib="dom" />
 /// <reference lib="dom.asynciterable" />
