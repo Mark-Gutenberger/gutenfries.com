@@ -1,33 +1,6 @@
 ###
 ## proj specific rules:
-!.keep
-.env
-.netlify
-.redwood
-.TODO
-dev.db*
-dist
-dist-babel
-node_modules
-yarn-error.log
-web/public/mockServiceWorker.js
-web/types/graphql.d.ts
-api/types/graphql.d.ts
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-###
+##
 
 .NOTES
 # Windows thumbnail cache files
@@ -1344,3 +1317,8 @@ node_modules/**/*
 .expo/*
 npm-debug.*
 !.keep
+
+
+# Added by cargo
+
+/target

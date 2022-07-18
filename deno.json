@@ -1,0 +1,28 @@
+{
+	"tasks": {
+		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen",
+		"production": "deno run -A --unstable main.ts",
+		"wac": " rustwasmc build --target deno --enable-aot"
+	},
+	"compilerOptions": {
+		"allowJs": true,
+		"strict": true
+	},
+	"importMap": "./import_map.json",
+	"lint": {
+		"rules": {
+			"tags": ["recommended"],
+			"include": ["ban-untagged-todo"],
+			"exclude": ["no-unused-vars"]
+		}
+	},
+	"fmt": {
+		"options": {
+			"useTabs": true,
+			"lineWidth": 125,
+			"indentWidth": 4,
+			"proseWrap": "preserve",
+			"singleQuote": true
+		}
+	}
+}
