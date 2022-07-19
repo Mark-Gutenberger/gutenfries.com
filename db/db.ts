@@ -1,7 +1,7 @@
 import { Database, MySQLConnector } from 'denoDB';
 import { config as dotEnvConfig } from 'dotEnv';
 
-import { TestModel } from './models.ts';
+import { Business, TestModel } from './models.ts';
 
 dotEnvConfig({ export: true });
 
@@ -23,4 +23,6 @@ const connector = new MySQLConnector({
 
 export const db = new Database(connector);
 
-db.link([TestModel]);
+db.link([TestModel, Business]);
+
+db.sync({ drop: true });

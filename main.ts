@@ -1,4 +1,3 @@
-// console.log(`Deno version: ${Deno.version.deno}`);
 /// <reference no-default-lib="true" />
 /// <reference lib="dom" />
 /// <reference lib="dom.asynciterable" />
@@ -26,8 +25,6 @@ function render(ctx: RenderContext, render: InnerRenderFunction) {
 	ctx.state.set('twind', newSnapshot);
 }
 
-// db.sync();
+await start(manifest, { render, port: 1234 });
 
 console.log(Deno.env.toObject());
-
-await start(manifest, { render, port: 1234 });

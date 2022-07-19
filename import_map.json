@@ -7,7 +7,8 @@
 		"@twind": "./utils/twind.ts",
 		"twind": "https://esm.sh/twind@0.16.17",
 		"twind/": "https://esm.sh/twind@0.16.17/",
-		"denoDB": "https://deno.land/x/denodb@v1.0.39/mod.ts",
-		"dotEnv": "https://deno.land/x/dotenv@v1.0.1/mod.ts"
+		"denoDB": "https://raw.githubusercontent.com/joeldesante/denodb/master/mod.ts",
+		"dotEnv": "https://deno.land/x/dotenv@v1.0.1/mod.ts",
+		"postgres": "https://deno.land/x/postgres@v0.14.0/mod.ts"
 	}
 }
