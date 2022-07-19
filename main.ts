@@ -28,6 +28,6 @@ function render(ctx: RenderContext, render: InnerRenderFunction) {
 
 // db.sync();
 
-console.log('hi mom');
+console.log(Deno.env.toObject());
 
 await start(manifest, { render, port: 1234 });
