@@ -10,11 +10,11 @@ export const handler: Handlers = {
 	},
 };
 
-export default function AboutPage() {
-	return (
-		<main>
-			<h1>About</h1>
-			<p>This is the about page.</p>
-		</main>
-	);
-}
+const AboutPage = () => (
+	<main>
+		<h1>About</h1>
+		<p>This is the about page.</p>
+	</main>
+);
+
+export default AboutPage;

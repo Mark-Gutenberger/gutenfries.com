@@ -2,9 +2,10 @@
 import { h } from 'preact';
 import { tw } from '@twind';
 
-export default function Nav() {
-	return (
-		<div id='navBar'>
-		</div>
-	);
-}
+const Nav = () => (
+	<div id='navBar'>
+		hi
+	</div>
+);
+
+export default Nav();

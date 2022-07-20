@@ -2,7 +2,9 @@
 	"tasks": {
 		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen",
 		"production": "deno run -A --unstable main.ts",
-		"wac": " rustwasmc build --target deno --enable-aot"
+		"start": "deno run -A --unstable main.ts",
+		"docker-build": "Docker build -t gutenfries.com .",
+		"docker-run": "docker run --rm -it -p 1234:1234 gutenfries.com:latest"
 	},
 	"compilerOptions": {
 		"allowJs": true,
