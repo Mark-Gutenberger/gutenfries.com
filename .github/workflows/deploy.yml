@@ -35,4 +35,4 @@ jobs:
         resource-group: gutenfries.com
         package: app.zip
         script-file: server.bundle.js
-        deno-version: "1.23.4"
+        deno-version: "preview"
