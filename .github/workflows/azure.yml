@@ -1,0 +1,30 @@
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - uses: actions/checkout@v2
+
+    - uses: azure/login@v1.1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Set up Deno
+      uses: denolib/setup-deno@master
+      with:
+        deno-version: 1.0.2
+
+    - name: Bundle and zip Deno app
+      run: |
+        deno bundle server.ts server.bundle.js
+        zip app.zip server.bundle.js
+    - name: Deploy to Azure Web Apps
+      uses: anthonychu/azure-webapps-deno-deploy@master
+      with:
+        app-name: gutenfries
+        resource-group: gutenfries.com
+        package: app.zip
+        script-file: server.bundle.js
+        deno-version: "1.23.4"
