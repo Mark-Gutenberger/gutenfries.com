@@ -34,5 +34,5 @@ jobs:
         app-name: gutenfries
         resource-group: gutenfries.com
         package: app.zip
-        script-file: server.bundle.js
+        script-file: main.bundle.js
         deno-version: "preview"
