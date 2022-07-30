@@ -9,7 +9,7 @@ jobs:
 
     - uses: azure/login@v1.1
       with:
-        creds: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34F2A98BF1FE44C8AFEE020006E2A832  }}
+        creds: ${{ secrets.AZURE_CREDENTIALS  }}
     
     - name: Set up Deno
       uses: denolib/setup-deno@master
