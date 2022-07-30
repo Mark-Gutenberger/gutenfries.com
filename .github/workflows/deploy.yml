@@ -22,7 +22,7 @@ jobs:
     - name: Set up Deno
       uses: denolib/setup-deno@master
       with:
-        deno-version: 1.0.2
+        deno-version: 1.23.4
 
     - name: Bundle and zip Deno app
       run: |
