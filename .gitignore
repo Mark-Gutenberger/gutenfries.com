@@ -2,6 +2,7 @@
 ## proj specific rules:
 !pkg
 !pkg/
+main.bundle.js
 ##
 
 .NOTES
