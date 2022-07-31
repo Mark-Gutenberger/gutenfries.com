@@ -25,6 +25,6 @@ function render(ctx: RenderContext, render: InnerRenderFunction) {
 	ctx.state.set('twind', newSnapshot);
 }
 
-await start(manifest, { render, port: 1234 });
+await start(manifest, { render, port: 80 });
 
 console.log(Deno.env.toObject());

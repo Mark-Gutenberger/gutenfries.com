@@ -4,7 +4,7 @@
 		"production": "deno run -A --unstable main.ts",
 		"start": "deno run -A --unstable main.ts",
 		"docker-build": "Docker build -t gutenfries.com .",
-		"docker-run": "docker run --rm -it -p 1234:1234 gutenfries.com:latest"
+		"docker-run": "docker run --rm -it -p 80:80 gutenfries.com:latest"
 	},
 	"compilerOptions": {
 		"allowJs": true,
