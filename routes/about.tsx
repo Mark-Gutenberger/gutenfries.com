@@ -1,5 +1,6 @@
 /** @jsx h */
-import { h } from 'preact';
+/** @jsxFrag Fragment */
+import { Fragment, h } from 'preact';
 import { Handlers } from '$fresh/server.ts';
 import { MainLayout } from '../layouts/MainLayout.tsx';
 import { PageProps } from '$fresh/server.ts';
@@ -13,13 +14,24 @@ export const handler: Handlers = {
 	},
 };
 
-function AboutPage(props: PageProps) {
-	const route = 'about';
+function AboutPage(pageProps_: PageProps) {
+	const route = pageProps_.url.pathname;
+	const title = 'Marcus Gutenberger';
+	const description = 'Marcus Gutenberger is a software engineer and designer';
+
 	return (
-		<MainLayout theme={theme} route={route}>
-			<h1>About</h1>
-			<p>This is the about page.</p>
-		</MainLayout>
+		<>
+			<MainLayout
+				title={title}
+				description={description}
+				pageProps_={pageProps_}
+				theme={theme}
+				route={route}
+			>
+				<h1>{route}</h1>
+				<p>This is the about page.</p>
+			</MainLayout>
+		</>
 	);
 }
 

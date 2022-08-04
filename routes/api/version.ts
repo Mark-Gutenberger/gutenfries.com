@@ -14,3 +14,5 @@ export const handler: Handlers = {
 		);
 	},
 };
+
+export { version };

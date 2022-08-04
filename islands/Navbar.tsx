@@ -8,6 +8,7 @@ interface NavbarProps {
 }
 
 function Navbar({ theme, route }: NavbarProps) {
+	// TODO(@gutenfries): improve mobile responsiveness
 	const t = theme;
 
 	const navStyles =
