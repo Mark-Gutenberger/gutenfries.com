@@ -26,6 +26,7 @@
 ![Github Issues](https://img.shields.io/github/issues/gutenfries/gutenfries.com.svg)
 ![Github Contributors](https://img.shields.io/github/contributors/gutenfries/gutenfries.com.svg)
 ![Github MIT License](https://img.shields.io/github/license/gutenfries/gutenfries.com.svg)
+![Tests Status](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-tests.yml/badge.svg)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -99,7 +100,6 @@ Use the `BLANK_README.md` to get started.
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
