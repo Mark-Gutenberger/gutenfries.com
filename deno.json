@@ -1,10 +1,13 @@
 {
+	"version": "0.0.0",
 	"tasks": {
-		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen",
+		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen --location=http://localhost:80/about",
 		"production": "deno run -A --unstable main.ts",
 		"start": "deno run -A --unstable main.ts",
 		"docker-build": "Docker build -t gutenfries.com .",
-		"docker-run": "docker run --rm -it -p 80:80 gutenfries.com:latest"
+		"docker-run": "docker run --rm -it -p 80:80 gutenfries.com:latest",
+		"docker-tag": "docker tag gutenfries.com gutenfries.azurecr.io/$(deno run -A ./utils/version.ts)",
+		"docker-push": "docker push gutenfries.azurecr.io/gutenfries.com"
 	},
 	"compilerOptions": {
 		"allowJs": true,
@@ -21,7 +24,7 @@
 	"fmt": {
 		"options": {
 			"useTabs": true,
-			"lineWidth": 125,
+			"lineWidth": 100,
 			"indentWidth": 4,
 			"proseWrap": "preserve",
 			"singleQuote": true

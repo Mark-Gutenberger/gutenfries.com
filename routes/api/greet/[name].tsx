@@ -1,15 +1,16 @@
 /** @jsx h */
 import { h } from 'preact';
 import { PageProps } from '$fresh/server.ts';
+import { MainLayout } from '../../../layouts/MainLayout.tsx';
 
-const GreetPage = (props: PageProps) => {
+function Greet(props: PageProps) {
 	const { name } = props.params;
 
 	return (
-		<main>
-			<p>Greetings to you, {name}!</p>
-		</main>
+		// <MainLayout>
+		<p>Greetings to you, {name}!</p>
+		// </MainLayout>
 	);
-};
+}
 
-export default GreetPage;
+export default Greet;
