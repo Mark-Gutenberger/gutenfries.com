@@ -3,8 +3,14 @@
 !pkg
 !pkg/
 main.bundle.js
+wasm/*
+!wasm/.gitkeep
+!*.min.js
 ##
 
+!.gitkeep
+!**/*.gitkeep
+!*.gitkeep
 .NOTES
 # Windows thumbnail cache files
 Thumbs.db
@@ -977,7 +983,6 @@ compile_commands.json
 # QtCreator local machine specific files for imported projects
 *creator.user*
 *_qmlcache.qrc
-*.min.*
 # Created by https://www.gitignore.io/api/reactnative,intellij,android,osx,xcode
 
 ### Android ###
@@ -1324,3 +1329,10 @@ npm-debug.*
 # Added by cargo
 
 /target
+
+
+# Added by cargo
+#
+# already existing elements were commented out
+
+#/target

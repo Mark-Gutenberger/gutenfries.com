@@ -12,9 +12,9 @@ import * as $6 from './routes/api/joke.ts';
 import * as $7 from './routes/api/random-uuid.ts';
 import * as $8 from './routes/api/version.ts';
 import * as $9 from './routes/api/wasm.ts';
-import * as $10 from './routes/index.tsx';
-import * as $$0 from './islands/Counter.tsx';
-import * as $$1 from './islands/Navbar.tsx';
+import * as $10 from './routes/home.tsx';
+import * as $11 from './routes/index.tsx';
+import * as $$0 from './islands/Navbar.tsx';
 
 const manifest = {
 	routes: {
@@ -28,11 +28,11 @@ const manifest = {
 		'./routes/api/random-uuid.ts': $7,
 		'./routes/api/version.ts': $8,
 		'./routes/api/wasm.ts': $9,
-		'./routes/index.tsx': $10,
+		'./routes/home.tsx': $10,
+		'./routes/index.tsx': $11,
 	},
 	islands: {
-		'./islands/Counter.tsx': $$0,
-		'./islands/Navbar.tsx': $$1,
+		'./islands/Navbar.tsx': $$0,
 	},
 	baseUrl: import.meta.url,
 };

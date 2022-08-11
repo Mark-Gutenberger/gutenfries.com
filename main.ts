@@ -5,13 +5,18 @@
 /// <reference lib="deno.unstable" />
 
 import { InnerRenderFunction, RenderContext, start } from '$fresh/server.ts';
+import { IS_BROWSER } from '$fresh/runtime.ts';
 import manifest from './fresh.gen.ts';
-
-// import { db } from './db/db.ts';
 
 import { config, setup } from '@twind';
 import { virtualSheet } from 'twind/sheets';
 
+import { version } from './utils/version.ts';
+
+// load the environment
+import 'dotenv/load.ts';
+
+// setup twind
 const sheet = virtualSheet();
 sheet.reset();
 setup({ ...config, sheet });
@@ -25,6 +30,36 @@ function render(ctx: RenderContext, render: InnerRenderFunction) {
 	ctx.state.set('twind', newSnapshot);
 }
 
-await start(manifest, { render, port: 80 });
+/**
+ * log valuable info to the server
+ * @param version_  pass `version`, provided by `utils/version.ts`
+ */
+const debugLog = (version_: unknown): void => {
+	console.log('\n-------------------------------------------------------------\n');
+	// spit out the program version
+	console.log(`gutenfries.com version: ${version_}\n`);
 
-console.log(Deno.env.toObject());
+	// cwd
+	console.log(`Deno CWD: ${Deno.cwd()}\n`);
+
+	// do a quick checky check for potential issues from the `PORT` env var
+	if (Deno.env.get('PORT') !== undefined) {
+		console.warn(
+			`WARN: \`PORT\` env var is set to \`${
+				Deno.env.get('PORT')
+			}\`. This MAY present issues, proceed with caution.\n`,
+		);
+	}
+
+	// print the rest of the enviroment
+	console.log(`Deno Env:\n`);
+	console.table(Deno.env.toObject());
+
+	console.log('-------------------------------------------------------------\n');
+};
+
+if (IS_BROWSER !== true) {
+	debugLog(version);
+}
+
+await start(manifest, { render, port: 80 });

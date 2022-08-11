@@ -13,6 +13,5 @@
 	},
 	"[javascriptreact]": {
 		"editor.defaultFormatter": "denoland.vscode-deno"
-	},
-	"svg.preview.background": "dark-transparent"
+	}
 }

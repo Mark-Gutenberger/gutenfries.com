@@ -1,10 +1,12 @@
 {
 	"$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"tasks": {
 		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen --location=http://localhost:80/about",
-		"production": "deno run -A --unstable main.ts",
+		"production": "deno task build; deno run -A --unstable main.ts",
 		"start": "deno run -A --unstable main.ts",
+		"build": "cargo build --target wasm32-unknown-unknown --release; mkdir -p wasm; wasm-bindgen ./target/wasm32-unknown-unknown/release/gutenfries.wasm --out-dir ./wasm/ --out-name wasm --target deno --typescript",
+		"clean": "rm -rf ./wasm/ ./target/",
 		"docker-build": "Docker build -t gutenfries.com .",
 		"docker-run": "docker run --rm -it -p 80:80 gutenfries.com:latest",
 		"docker-tag": "docker tag gutenfries.com gutenfries.azurecr.io/gutenfries.com:$(deno run -A ./utils/version.ts)",
@@ -20,6 +22,9 @@
 			"tags": ["recommended"],
 			"include": ["ban-untagged-todo"],
 			"exclude": ["no-unused-vars"]
+		},
+		"files": {
+			"exclude": ["static/", "target/", "wasm/"]
 		}
 	},
 	"fmt": {
@@ -29,6 +34,9 @@
 			"indentWidth": 4,
 			"proseWrap": "preserve",
 			"singleQuote": true
+		},
+		"files": {
+			"exclude": ["static/", "target/", "wasm/"]
 		}
 	}
 }

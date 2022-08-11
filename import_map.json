@@ -11,7 +11,8 @@
 		"twind/": "https://esm.sh/twind@0.16.17/",
 
 		"testing/": "https://deno.land/std@0.150.0/testing/",
+		"$std/": "https://deno.land/std@0.150.0/",
 
-		"$std/": "https://deno.land/std@0.150.0/"
+		"dotenv/": "https://deno.land/x/dotenv@v3.2.0/"
 	}
 }
