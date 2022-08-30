@@ -1,14 +1,12 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { Attributes, Component, ComponentChildren, Fragment, h, Ref } from 'preact';
-import Navbar from '../islands/Navbar.tsx';
+import { Navbar } from '../components/Navbar.tsx';
 import { PageProps } from '$fresh/server.ts';
 import { Head } from '../components/Head.tsx';
 import { tw } from '@twind';
-import Icon from '../utils/fa.tsx';
 
 type MainLayoutProps = {
-	route: string | URL | URLPattern;
 	theme: Record<string, string>;
 	title?: string;
 	description: string;
@@ -25,19 +23,18 @@ type MainLayoutProps = {
 /**
  * Main layout wrapper
  */
-function MainLayout({ route, title, description, theme, pageProps_, children }: MainLayoutProps) {
+function MainLayout({ title, description, theme, pageProps_, children }: MainLayoutProps) {
 	const t = theme;
 
 	return (
-		<html className={tw`bg-${t.LightBlue}`}>
+		<html className={tw`bg-${t.LightBlue} font-rounded`}>
 			<Head
-				route={route}
 				title={title}
 				description={description}
 				pageProps_={pageProps_}
 			/>
 			<main>
-				<Navbar theme={theme} route={route} />
+				<Navbar pageProps_={pageProps_} />
 				{children}
 			</main>
 		</html>

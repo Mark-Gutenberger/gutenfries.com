@@ -6,8 +6,7 @@ import { PageProps } from '$fresh/server.ts';
 import { theme } from '../utils/theme.ts';
 
 function Home(pageProps_: PageProps) {
-	// const route = pageProps_.url.pathname.substring(1);
-	const route = 'Home';
+	const route = pageProps_.url.pathname.slice(1);
 	const description = 'Marcus Gutenberger is a software engineer and designer';
 	return (
 		<html>
@@ -16,10 +15,14 @@ function Home(pageProps_: PageProps) {
 				description={description}
 				pageProps_={pageProps_}
 				theme={theme}
-				route={route}
 			>
-				<h1>{route}</h1>
-				<p>This is the about page.</p>
+				<br></br>
+				<p>
+					Are you all right? No. He's making the tie in the cab as they're flying up
+					Madison. He finally gets there. He runs up the steps into the church. The
+					wedding is on. And he says, "Watermelon? I thought you said Guatemalan. Why
+					would I marry a watermelon?" Is that a bee joke?
+				</p>
 			</MainLayout>
 		</html>
 	);

@@ -5,17 +5,21 @@ import { PageProps } from '$fresh/server.ts';
 import { asset } from '$fresh/runtime.ts';
 
 type HeadProps = {
-	route: string | URL | URLPattern;
 	title?: string;
 	description: string;
 	pageProps_: PageProps;
 };
 
-function Head({ route, pageProps_, description, title }: HeadProps) {
+function Head({ pageProps_, description, title }: HeadProps) {
 	const ogImageUrl = new URL(asset('/logo.svg'), pageProps_.url).href;
+
+	let pipe: string;
+	if (pageProps_.url.pathname.slice(1) != '') pipe = '|';
+	else pipe = '';
+
 	return (
 		<FreshHead>
-			<title>{route} | Marcus Gutenberger</title>
+			<title>{pageProps_.url.pathname.slice(1)} {pipe} Marcus Gutenberger</title>
 
 			<meta name='description' content={description} />
 			<meta property='og:title' content={title} />
@@ -31,8 +35,6 @@ function Head({ route, pageProps_, description, title }: HeadProps) {
 				rel='stylesheet'
 			>
 			</link>
-
-			<script defer src='fontawesome-6.1.2/js/all.min.js'></script>
 		</FreshHead>
 	);
 }
