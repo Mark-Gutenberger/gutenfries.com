@@ -6,14 +6,16 @@ import * as $0 from './routes/_404.tsx';
 import * as $1 from './routes/_500.tsx';
 import * as $2 from './routes/_middleware.ts';
 import * as $3 from './routes/about.tsx';
-import * as $4 from './routes/api/github/[username].tsx';
-import * as $5 from './routes/api/greet/[name].tsx';
-import * as $6 from './routes/api/joke.ts';
-import * as $7 from './routes/api/random-uuid.ts';
-import * as $8 from './routes/api/version.ts';
-import * as $9 from './routes/api/wasm.ts';
-import * as $10 from './routes/home.tsx';
-import * as $11 from './routes/index.tsx';
+import * as $4 from './routes/api/[url].tsx';
+import * as $5 from './routes/api/v1/github/[username].tsx';
+import * as $6 from './routes/api/v1/greet/[name].tsx';
+import * as $7 from './routes/api/v1/joke.ts';
+import * as $8 from './routes/api/v1/markdown/[filepath].tsx';
+import * as $9 from './routes/api/v1/random-uuid.ts';
+import * as $10 from './routes/api/v1/version.ts';
+import * as $11 from './routes/api/v1/wasm.ts';
+import * as $12 from './routes/home.tsx';
+import * as $13 from './routes/index.tsx';
 import * as $$0 from './islands/Navbar.tsx';
 
 const manifest = {
@@ -22,14 +24,16 @@ const manifest = {
 		'./routes/_500.tsx': $1,
 		'./routes/_middleware.ts': $2,
 		'./routes/about.tsx': $3,
-		'./routes/api/github/[username].tsx': $4,
-		'./routes/api/greet/[name].tsx': $5,
-		'./routes/api/joke.ts': $6,
-		'./routes/api/random-uuid.ts': $7,
-		'./routes/api/version.ts': $8,
-		'./routes/api/wasm.ts': $9,
-		'./routes/home.tsx': $10,
-		'./routes/index.tsx': $11,
+		'./routes/api/[url].tsx': $4,
+		'./routes/api/v1/github/[username].tsx': $5,
+		'./routes/api/v1/greet/[name].tsx': $6,
+		'./routes/api/v1/joke.ts': $7,
+		'./routes/api/v1/markdown/[filepath].tsx': $8,
+		'./routes/api/v1/random-uuid.ts': $9,
+		'./routes/api/v1/version.ts': $10,
+		'./routes/api/v1/wasm.ts': $11,
+		'./routes/home.tsx': $12,
+		'./routes/index.tsx': $13,
 	},
 	islands: {
 		'./islands/Navbar.tsx': $$0,

@@ -7,4 +7,6 @@ const callback = (): string | unknown => {
 	return version_;
 };
 
+callback();
+
 export const version = callback();
