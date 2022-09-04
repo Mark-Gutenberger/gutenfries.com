@@ -5,13 +5,12 @@
 /// <reference lib="deno.unstable" />
 
 import { InnerRenderFunction, RenderContext, start } from '$fresh/server.ts';
-import { IS_BROWSER } from '$fresh/runtime.ts';
-import manifest from './fresh.gen.ts';
+import manifest from '@/fresh.gen.ts';
 
 import { config, setup } from '@twind';
 import { virtualSheet } from 'twind/sheets';
 
-import { version } from './utils/version.ts';
+import { version } from '@/utils/version.ts';
 
 // load the environment
 import 'dotenv/load.ts';
@@ -58,7 +57,11 @@ const debugLog = (version_: unknown): void => {
 	console.log('-------------------------------------------------------------\n');
 };
 
-if (IS_BROWSER !== true) {
+if (
+	Deno.args.includes('--log') ||
+	Deno.args.includes('--debug') ||
+	Deno.args.includes('--verbose')
+) {
 	debugLog(version);
 }
 

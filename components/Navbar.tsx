@@ -3,41 +3,17 @@
 import { h } from 'preact';
 import { tw } from '@twind';
 import { PageProps } from '$fresh/server.ts';
-
-const routes = [
-	{ name: 'Home', href: '/home', current: false },
-	{ name: 'About', href: '/about', current: false },
-	/* { name: 'Projects', href: '#', current: false },
-	{ name: 'Calendar', href: '#', current: false }, */
-];
+import NavButtons from '@/islands/NavButtons.tsx';
 
 interface NavbarProps {
 	pageProps_: PageProps;
 }
 
-function classNames(...classes: string[]) {
-	return classes.filter(Boolean).join(' ');
-}
-
 function Navbar({ pageProps_ }: NavbarProps) {
 	// try to set the current route to true
-	const route = pageProps_.url.pathname;
-	// TODO(@gutenfries): fix bug where state is kept during navigation, causing multiple active navbar links
-	routes.forEach(({ href }) => {
-		if (route !== href) {
-			routes[routes.findIndex(({ href }) => href === route)].current = false;
-		}
-	});
-
-	routes.forEach(({ href }) => {
-		if (route === href) {
-			routes[routes.findIndex(({ href }) => href === route)].current = true;
-			// make everything else false
-		}
-	});
 
 	return (
-		<header className={tw`bg-gray-800`}>
+		<header className={tw`absolute w-full bg-gray-800`}>
 			<div className={tw`max-w-7xl px-6`}>
 				<div
 					className={tw`relative flex h-16 place-items-around items-center justify-start`}
@@ -47,31 +23,13 @@ function Navbar({ pageProps_ }: NavbarProps) {
 					>
 						<div className={tw`flex flex-shrink-0 items-center`}>
 							<img
-								width='100%'
-								height='100%'
+								className={tw`h-100 w-100 select-none`}
+								draggable={false}
 								src='/logo.svg'
 								alt='the fresh logo: a sliced lemon dripping with juice'
 							/>
 						</div>
-						<div className={tw`sm:ml-6 sm:block`}>
-							<nav className={tw`flex space-x-4`}>
-								{routes.map((item) => (
-									<a
-										key={item.name}
-										href={item.href}
-										className={classNames(
-											item.current
-												? tw`bg-gray-900 text-white`
-												: tw`text-gray-300 hover:bg-gray-700 hover:text-white`,
-											tw`px-3 py-2 rounded-md text-md font-medium`,
-										)}
-										aria-current={item.current ? 'page' : undefined}
-									>
-										{item.name}
-									</a>
-								))}
-							</nav>
-						</div>
+						<NavButtons pageProps_={pageProps_} />
 					</div>
 
 					{/* button for if you want it later */}

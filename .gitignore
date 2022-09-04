@@ -3,8 +3,7 @@
 !pkg
 !pkg/
 main.bundle.js
-wasm/*
-!wasm/.gitkeep
+wasm/
 !*.min.js
 ##
 

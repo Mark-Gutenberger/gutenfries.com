@@ -4,13 +4,12 @@ import { Head as FreshHead } from '$fresh/runtime.ts';
 import { PageProps } from '$fresh/server.ts';
 import { asset } from '$fresh/runtime.ts';
 
-type HeadProps = {
+interface HeadProps {
 	title?: string;
-	description: string;
 	pageProps_: PageProps;
-};
+}
 
-function Head({ pageProps_, description, title }: HeadProps) {
+function Head({ pageProps_, title }: HeadProps) {
 	const ogImageUrl = new URL(asset('/logo.svg'), pageProps_.url).href;
 
 	let pipe: string;
@@ -21,9 +20,15 @@ function Head({ pageProps_, description, title }: HeadProps) {
 		<FreshHead>
 			<title>{pageProps_.url.pathname.slice(1)} {pipe} Marcus Gutenberger</title>
 
-			<meta name='description' content={description} />
+			<meta
+				name='description'
+				content='Marcus Gutenberger is a software engineer and designer'
+			/>
 			<meta property='og:title' content={title} />
-			<meta property='og:description' content={description} />
+			<meta
+				property='og:description'
+				content='Marcus Gutenberger is a software engineer and designer'
+			/>
 			<meta property='og:type' content='website' />
 			<meta property='og:url' content={pageProps_.url.href} />
 			<meta property='og:image' content={ogImageUrl} />

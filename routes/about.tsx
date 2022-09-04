@@ -1,22 +1,14 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { Fragment, h } from 'preact';
-import { MainLayout } from '../layouts/MainLayout.tsx';
+import { MainLayout } from '@/layouts/MainLayout.tsx';
 import { PageProps } from '$fresh/server.ts';
-import { theme } from '../utils/theme.ts';
-import { Navbar } from '../components/Navbar.tsx';
 
 function AboutPage(pageProps_: PageProps) {
-	const route = pageProps_.url.pathname.slice(1);
-	// const title = 'interesting things';
-	const description = 'Marcus Gutenberger is a software engineer and designer';
-
 	return (
 		<>
 			<MainLayout
-				description={description}
 				pageProps_={pageProps_}
-				theme={theme}
 			>
 				<br></br>
 				<p>

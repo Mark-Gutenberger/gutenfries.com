@@ -16,6 +16,7 @@ import * as $10 from './routes/api/v1/version.ts';
 import * as $11 from './routes/api/v1/wasm.ts';
 import * as $12 from './routes/home.tsx';
 import * as $13 from './routes/index.tsx';
+import * as $$0 from './islands/NavButtons.tsx';
 
 const manifest = {
 	routes: {
@@ -34,7 +35,9 @@ const manifest = {
 		'./routes/home.tsx': $12,
 		'./routes/index.tsx': $13,
 	},
-	islands: {},
+	islands: {
+		'./islands/NavButtons.tsx': $$0,
+	},
 	baseUrl: import.meta.url,
 };
 
