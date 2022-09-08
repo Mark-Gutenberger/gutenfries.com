@@ -1,5 +1,5 @@
-import { version } from '../../routes/api/version.ts';
-import { version as version_ } from '../../utils/version.ts';
+import { version } from '@/routes/api/v1/version.ts';
+import { version as version_ } from '@/utils/version.ts';
 import { assertEquals } from 'testing/asserts.ts';
 
 Deno.test({
