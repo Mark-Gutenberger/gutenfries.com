@@ -1,0 +1,11 @@
+/* global styles: */
+
+html {
+	overscroll-behavior: none;
+}
+
+html,
+body {
+	position: fixed;
+	overflow: auto;
+}

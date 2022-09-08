@@ -1,11 +1,11 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { Context, createContext, Fragment, h } from 'preact';
-import { Navbar } from '@/components/Navbar.tsx';
 import { PageProps } from '$fresh/server.ts';
 import { Head } from '@/components/Head.tsx';
+import Navbar from '@/islands/Navbar.tsx';
 import { tw } from '@twind';
-import { useContext, useEffect, useState } from 'preact/hooks';
+import { Fragment, h } from 'preact';
+import * as rust from '@/wasm/wasm.js';
 
 interface MainLayoutProps {
 	title?: string;
@@ -19,56 +19,41 @@ interface MainLayoutProps {
 		| Element;
 }
 
-// it doesn't matter what the state is initialized with, all that matters is the type.
-const Theme: Context<string | undefined> = createContext<string | undefined>('');
-
-function DisplayTheme() {
-	const theme = useContext(Theme);
-	return <p>Active theme: {theme}</p>;
-}
-
 function MainLayout({ title, pageProps_, children }: MainLayoutProps) {
-	const BackgroundImageUrl = '/images/backgrounds/milad-fakurian-E8Ufcyxz514-unsplash.jpg';
+	const BgColor_1 = rust.random_color();
+	const BgColor_2 = rust.random_color();
+	const BgColor_3 = rust.random_color();
+
 	return (
-		<main className={tw`font-rounded pointer-events-auto`}>
-			<Theme.Provider value='dark'>
+		<>
+			{/* scripts to run main content load */}
+			{/*  */}
+			<main className={tw`overscroll-none font-rounded pointer-events-auto`}>
 				<Head
 					title={title}
 					pageProps_={pageProps_}
 				/>
 				<Navbar pageProps_={pageProps_} />
-				<div className={tw`container w-full`}>
-					{/* Backgroud Image */}
-					<div className={tw`backround-image grid place-items-center h-screen w-screen`}>
-						<style>
-							{`
-								.backround-image {
-									background-image: url(${BackgroundImageUrl});
-									background-size: cover;
-									background-repeat: no-repeat;
-								}
-							`}
-						</style>
-						{
-							/* <img
-							draggable={false}
-							src='/images/backgrounds/milad-fakurian-E8Ufcyxz514-unsplash.jpg'
-							className={tw`w-full top-0 -z-10 h-full object-cover static select-none pointer-events-none`}
-							alt='background image'
-						/> */
-						}
-
+				{/* wrapper for the page area, less the navbar */}
+				<div className={tw`container h-full w-full`}>
+					{/* Backgroud */}
+					<div
+						className={tw`bg-gradient-to-r from-${BgColor_1} via-${BgColor_2} to-${BgColor_3} p-2.5 grid place-items-center h-screen w-screen`}
+					>
 						<div
-							className={tw`bg-red-300 w-3/4 h-3/4 absolute container rounded-lg p-4`}
+							className={tw`bg-gray-700 bg-clip-padding backdrop-filter backdrop-blur-md
+						bg-opacity-50 max-w-screen-lg p-2.5 max-h-[860px]
+						h-4/5 flex flex-col overflow-hidden relative w-full rounded-xl`}
 						>
-							{/* TODO: throw this away */}
-							<DisplayTheme />
 							{children}
 						</div>
 					</div>
 				</div>
-			</Theme.Provider>
-		</main>
+			</main>
+			{/* scripts to run after page paint */}
+			<script>feather.replace()</script>
+			{/*  */}
+		</>
 	);
 }
 

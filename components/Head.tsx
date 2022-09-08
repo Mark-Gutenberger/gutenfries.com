@@ -1,8 +1,7 @@
 /** @jsx h */
 import { Fragment, h } from 'preact';
-import { Head as FreshHead } from '$fresh/runtime.ts';
 import { PageProps } from '$fresh/server.ts';
-import { asset } from '$fresh/runtime.ts';
+import { asset, Head as FreshHead } from '$fresh/runtime.ts';
 
 interface HeadProps {
 	title?: string;
@@ -10,7 +9,7 @@ interface HeadProps {
 }
 
 function Head({ pageProps_, title }: HeadProps) {
-	const ogImageUrl = new URL(asset('/logo.svg'), pageProps_.url).href;
+	const ogImageUrl = new URL(asset('/icons/logo.svg'), pageProps_.url).href;
 
 	let pipe: string;
 	if (pageProps_.url.pathname.slice(1) != '') pipe = '|';
@@ -18,7 +17,9 @@ function Head({ pageProps_, title }: HeadProps) {
 
 	return (
 		<FreshHead>
-			<title>{pageProps_.url.pathname.slice(1)} {pipe} Marcus Gutenberger</title>
+			<title>
+				{pageProps_.url.pathname.slice(1)} {pipe} Marcus Gutenberger
+			</title>
 
 			<meta
 				name='description'
@@ -40,6 +41,13 @@ function Head({ pageProps_, title }: HeadProps) {
 				rel='stylesheet'
 			>
 			</link>
+
+			<link rel='stylesheet' href={asset('/global.css')}></link>
+
+			<script src='/icons/feather.min.js'></script>
+			<script>
+				feather.replace();
+			</script>
 		</FreshHead>
 	);
 }

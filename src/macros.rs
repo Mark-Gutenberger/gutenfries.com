@@ -29,7 +29,7 @@ pub mod macros {
 	macro_rules! printf {
 		// case 1: 1 argument; only a raw string is passed
 		($a:expr) => {
-			crate::macros::macros::log($a);
+			crate::macros::macros::log($a.to_string().as_str());
 		};
 		// case 2: 2 arguments; a string literal and a raw variable is passed
 		($a:expr, $b:expr$(,)?) => {
@@ -38,6 +38,8 @@ pub mod macros {
 		// case 3: n arguments; a string literal and n raw variables are passed
 		($a:expr, $($b:expr$(,)?),+) => {
 		crate::macros::macros::log(&format!($a, $($b),+));
-	};
-}
+		};
+	}
+
+	pub use printf;
 }
