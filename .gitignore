@@ -1,9 +1,7 @@
 ###
 ## proj specific rules:
-!pkg
-!pkg/
 main.bundle.js
-wasm/
+!wasm/
 !*.min.js
 ##
 

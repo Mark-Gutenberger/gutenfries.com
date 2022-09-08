@@ -86,9 +86,9 @@ There are many great README templates available on GitHub; however, I didn't fin
 
 Here's why:
 
--   Your time should be focused on creating something amazing. A project that solves a problem and helps others
--   You shouldn't be doing the same tasks over and over like creating a README from scratch
--   You should implement DRY principles for the rest of your life :smile:
+- Your time should be focused on creating something amazing. A project that solves a problem and helps others
+- You shouldn't be doing the same tasks over and over like creating a README from scratch
+- You should implement DRY principles for the rest of your life :smile:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more shortly. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people who have contributed to expanding this template!
 
@@ -113,10 +113,10 @@ To get a local copy up and running follow these simple example steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 
--   npm
-    ```sh
-    npm install npm@latest -g
-    ```
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
 ### Installation
 
@@ -124,9 +124,9 @@ _Below is an example of how you can instruct your audience on installing and set
 
 1. Clone the repo
 
-    ```sh
-    git clone https://github.com/gutenfries/gutenfries.com.git
-    ```
+   ```sh
+   git clone https://github.com/gutenfries/gutenfries.com.git
+   ```
 
 2. That's it. Loving deno yet?
 
@@ -146,13 +146,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
--   [x] Add Changelog
--   [x] Add back-to-top links
--   [ ] Add Additional Templates w/ Examples
--   [ ] Add "components" document to easily copy & paste sections of the readme
--   [ ] Multi-language Support
-    -   [ ] Chinese
-    -   [ ] Spanish
+- [x] Add Changelog
+- [x] Add back-to-top links
+- [ ] Add Additional Templates w/ Examples
+- [ ] Add "components" document to easily copy & paste sections of the readme
+- [ ] Multi-language Support
+  - [ ] Chinese
+  - [ ] Spanish
 
 See the [open issues](https://github.com/gutenfries/gutenfries.com/issues) for a full list of proposed features (and known issues).
 
@@ -199,12 +199,12 @@ Project Link: [https://github.com/gutenfries/gutenfries.com](https://github.com/
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
--   [Choose an Open Source License](https://choosealicense.com)
--   [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
--   [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
--   [Malven's Grid Cheatsheet](https://grid.malven.co/)
--   [Img Shields](https://shields.io)
--   [GitHub Pages](https://pages.github.com)
--   [React Icons](https://react-icons.github.io/react-icons/search)
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+- [Malven's Grid Cheatsheet](https://grid.malven.co/)
+- [Img Shields](https://shields.io)
+- [GitHub Pages](https://pages.github.com)
+- [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
