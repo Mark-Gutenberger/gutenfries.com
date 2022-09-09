@@ -45,24 +45,6 @@ function addHeapObject(obj) {
     heap[idx] = obj;
     return idx;
 }
-/**
-* generates a random tailwind v2 color
-* @returns {string}
-*/
-export function random_color() {
-    const ret = wasm.random_color();
-    return takeObject(ret);
-}
-
-/**
-* generates multiple random tailwind v2 colors and returns them as an Array
-* @param {number} count
-* @returns {Array<any>}
-*/
-export function random_colors(count) {
-    const ret = wasm.random_colors(count);
-    return takeObject(ret);
-}
 
 let WASM_VECTOR_LEN = 0;
 
@@ -109,6 +91,153 @@ function passStringToWasm0(arg, malloc, realloc) {
     WASM_VECTOR_LEN = offset;
     return ptr;
 }
+
+function isLikeNone(x) {
+    return x === undefined || x === null;
+}
+
+let cachedInt32Memory0 = new Int32Array();
+
+function getInt32Memory0() {
+    if (cachedInt32Memory0.byteLength === 0) {
+        cachedInt32Memory0 = new Int32Array(wasm.memory.buffer);
+    }
+    return cachedInt32Memory0;
+}
+/**
+* returns a random color from the tailwind css v2 palette
+*
+* ## Example:
+* ```
+* let color = get_random_color();
+* ```
+* output: `blue`
+* @returns {string}
+*/
+export function random_color() {
+    const ret = wasm.random_color();
+    return takeObject(ret);
+}
+
+/**
+* returns a random shade from the tailwind css v2 palette
+*
+* ## Example:
+* ```
+* let shade = get_random_shade();
+* ```
+* output: `600`
+* @returns {string}
+*/
+export function random_shade() {
+    const ret = wasm.random_shade();
+    return takeObject(ret);
+}
+
+/**
+* returns a random dark shade from the tailwind css v2 palette
+* ## Example:
+* ```
+* let shade = random_shade_dark();
+* ```
+* output: `800`
+* ## Example:
+* ```
+* let shade = random_shade_dark();
+* ```
+* output: `900`
+* @returns {string}
+*/
+export function random_shade_dark() {
+    const ret = wasm.random_shade_dark();
+    return takeObject(ret);
+}
+
+/**
+* returns a random light shade from the tailwind css v2 palette
+* ## Example:
+* ```
+* let shade = random_shade_light();
+* ```
+* output: `200`
+* ## Example:
+* ```
+* let shade = random_shade_light();
+* ```
+* output: `500`
+* @returns {string}
+*/
+export function random_shade_light() {
+    const ret = wasm.random_shade_light();
+    return takeObject(ret);
+}
+
+/**
+* generates a random tw color from the tailwind css v2 palette
+*
+* ## Example:
+* ```
+* let color = random_tw_color();
+* ```
+* output: `blue-600`
+* @returns {string}
+*/
+export function random_tw_color() {
+    const ret = wasm.random_tw_color();
+    return takeObject(ret);
+}
+
+/**
+* generates a random dark tw color from the tailwind css v2 palette
+*
+* ## Example:
+* ```
+* let color = random_tw_color_dark();
+* ```
+* output: `blue-600`
+* @returns {string}
+*/
+export function random_tw_color_dark() {
+    const ret = wasm.random_tw_color_dark();
+    return takeObject(ret);
+}
+
+/**
+* generates a random light tw color from the tailwind css v2 palette
+*
+* ## Example:
+* ```
+* let color = random_tw_color_light();
+* ```
+* output: `blue-600`
+* @returns {string}
+*/
+export function random_tw_color_light() {
+    const ret = wasm.random_tw_color_light();
+    return takeObject(ret);
+}
+
+/**
+* generates ```n``` random tw colors from the tailwind css v2 palette, where ```n``` is the
+* first argument
+* ## Example:
+* ```
+* let colors = random_tw_colors(5);
+* ```
+* output: `["blue-600", "indigo-700", "pink-800", "purple-900", "red-500"]`
+* ## Example:
+* ```
+* let colors = random_tw_colors(1);
+* ```
+* output: `["blue-600"]`
+* @param {number} n
+* @returns {Array<any>}
+*/
+export function random_tw_colors(n) {
+    const ret = wasm.random_tw_colors(n);
+    return takeObject(ret);
+}
+
 /**
 * @param {string} name
 */
@@ -141,7 +270,7 @@ const imports = {
         __wbindgen_object_drop_ref: function(arg0) {
             takeObject(arg0);
         },
-        __wbg_log_25ec45daeda13315: function(arg0, arg1) {
+        __wbg_log_db1469a1e6c25abd: function(arg0, arg1) {
             console.log(getStringFromWasm0(arg0, arg1));
         },
         __wbg_process_e56fd54cf6319b6c: function(arg0) {
@@ -253,6 +382,14 @@ const imports = {
         __wbindgen_object_clone_ref: function(arg0) {
             const ret = getObject(arg0);
             return addHeapObject(ret);
+        },
+        __wbindgen_string_get: function(arg0, arg1) {
+            const obj = getObject(arg1);
+            const ret = typeof(obj) === 'string' ? obj : undefined;
+            var ptr0 = isLikeNone(ret) ? 0 : passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+            var len0 = WASM_VECTOR_LEN;
+            getInt32Memory0()[arg0 / 4 + 1] = len0;
+            getInt32Memory0()[arg0 / 4 + 0] = ptr0;
         },
         __wbindgen_throw: function(arg0, arg1) {
             throw new Error(getStringFromWasm0(arg0, arg1));

@@ -1,5 +1,5 @@
 [package]
-name = "gutenfries"
+name = "rust"
 version = "0.0.0"                                             # dont put a version in the rust crate.
 edition = "2018"
 license = "GPL-3.0"

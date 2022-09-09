@@ -20,7 +20,7 @@ interface MainLayoutProps {
 }
 
 function MainLayout({ title, pageProps_, children }: MainLayoutProps) {
-	const BgColor = rust.random_colors(3);
+	const BgColor = rust.random_tw_colors(3);
 
 	return (
 		<>

@@ -1,5 +1,6 @@
 import { IS_BROWSER } from '$fresh/runtime.ts';
 import { Configuration, setup } from 'twind';
+import * as colors from 'twind/colors';
 
 export * from 'twind';
 
@@ -9,42 +10,33 @@ export const config: Configuration = {
 	theme: {
 		extend: {
 			colors: {
-				yellow: {
-					'50': '#ffffe5',
-					'100': '#ffffb7',
-					'200': '#ffff89',
-					'300': '#ffff5c',
-					'400': '#ffff2e',
-					'500': '#ffff00',
-					'600': '#d2d300',
-					'700': '#a6a600',
-					'800': '#797a00',
-					'900': '#4c4d00',
-				},
-				teal: {
-					'50': '#ffffff',
-					'100': '#e0fbf6',
-					'200': '#c2f7ed',
-					'300': '#a3f3e4',
-					'400': '#85efdb',
-					'500': '#66ebd2',
-					'600': '#51d3bb',
-					'700': '#3cbca4',
-					'800': '#27a48c',
-					'900': '#128c75',
-				},
-				lemon: {
-					'50': '#ffffff',
-					'100': '#fff8d2',
-					'200': '#fff1a5',
-					'300': '#ffe978',
-					'400': '#ffe24b',
-					'500': '#ffdb1e',
-					'600': '#dabb17',
-					'700': '#b59a0f',
-					'800': '#8f7a08',
-					'900': '#6a5900',
-				},
+				'transparent': 'transparent',
+				'current': 'currentColor',
+				'amber': colors.amber,
+				'black': colors.black,
+				'blue': colors.blue,
+				'blueGray': colors.blueGray,
+				'coolGray': colors.coolGray,
+				'cyan': colors.cyan,
+				'emerald': colors.emerald,
+				'fuchsia': colors.fuchsia,
+				'gray': colors.gray,
+				'green': colors.green,
+				'indigo': colors.indigo,
+				'lightBlue': colors.lightBlue,
+				'lime': colors.lime,
+				'orange': colors.orange,
+				'pink': colors.pink,
+				'purple': colors.purple,
+				'red': colors.red,
+				'rose': colors.rose,
+				'sky': colors.sky,
+				'teal': colors.teal,
+				'trueGray': colors.trueGray,
+				'violet': colors.violet,
+				'warmGray': colors.warmGray,
+				'white': colors.white,
+				'yellow': colors.yellow,
 			},
 			fontFamily: {
 				rounded: ['Nunito', 'sans-serif'],

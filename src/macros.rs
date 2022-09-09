@@ -19,9 +19,10 @@ pub mod macros {
 	/// prints a formatted string to the console (stdout equivalent)
 	/// first argument is a string literal (ex ```"Hi {}"```).
 	///
-	/// all of the remaining arguments are  passed into the string literal
+	/// all of the remaining arguments are passed into the string literal
 	///
-	/// # Example
+	/// ## Example:
+	///
 	/// ```
 	/// printf!("Hi {}", "Bob");
 	/// ```
