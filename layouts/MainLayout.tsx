@@ -20,25 +20,22 @@ interface MainLayoutProps {
 }
 
 function MainLayout({ title, pageProps_, children }: MainLayoutProps) {
-	const BgColor_1 = rust.random_color();
-	const BgColor_2 = rust.random_color();
-	const BgColor_3 = rust.random_color();
+	const BgColor = rust.random_colors(3);
 
 	return (
 		<>
 			{/* scripts to run main content load */}
 			{/*  */}
 			<main className={tw`overscroll-none font-rounded pointer-events-auto`}>
-				<Head
-					title={title}
-					pageProps_={pageProps_}
-				/>
+				<Head title={title} pageProps_={pageProps_} />
 				<Navbar pageProps_={pageProps_} />
 				{/* wrapper for the page area, less the navbar */}
 				<div className={tw`container h-full w-full`}>
 					{/* Backgroud */}
 					<div
-						className={tw`bg-gradient-to-r from-${BgColor_1} via-${BgColor_2} to-${BgColor_3} p-2.5 grid place-items-center h-screen w-screen`}
+						className={tw` background-animate bg-gradient-to-r
+						from-${BgColor[0]} via-${BgColor[1]} to-${BgColor[2]}
+						 p-2.5 grid place-items-center h-screen w-screen`}
 					>
 						<div
 							className={tw`bg-gray-700 bg-clip-padding backdrop-filter backdrop-blur-md
@@ -48,6 +45,27 @@ function MainLayout({ title, pageProps_, children }: MainLayoutProps) {
 							{children}
 						</div>
 					</div>
+					<style jsx>
+						{`
+							.background-animate {
+								background-size: 400%;
+
+								-webkit-animation: AnimationName 3s ease infinite;
+								-moz-animation: AnimationName 3s ease infinite;
+								animation: AnimationName 3s ease infinite;
+							}
+
+							@keyframes AnimationName {
+								0%,
+								100% {
+									background-position: 0% 50%;
+								}
+								50% {
+									background-position: 100% 50%;
+								}
+							}
+						`}
+					</style>
 				</div>
 			</main>
 			{/* scripts to run after page paint */}
