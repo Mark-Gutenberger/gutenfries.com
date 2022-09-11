@@ -4,7 +4,11 @@ import { Fragment, h } from 'preact';
 import { MainLayout } from '@/layouts/MainLayout.tsx';
 import { PageProps } from '$fresh/server.ts';
 
-function AboutPage(pageProps_: PageProps) {
+interface AboutPageProps {
+	pageProps_: PageProps;
+}
+
+function AboutPage({ pageProps_ }: AboutPageProps) {
 	return (
 		<>
 			<MainLayout

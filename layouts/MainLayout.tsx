@@ -4,11 +4,11 @@ import { PageProps } from '$fresh/server.ts';
 import { Head } from '@/components/Head.tsx';
 import Navbar from '@/islands/Navbar.tsx';
 import { tw } from '@twind';
-import { Fragment, h } from 'preact';
+import { h } from 'preact';
 import * as rust from '@/wasm/wasm.js';
+import { App } from '@/components/App.tsx';
 
 interface MainLayoutProps {
-	title?: string;
 	pageProps_: PageProps;
 	children?:
 		| preact.AnyComponent[]
@@ -19,15 +19,13 @@ interface MainLayoutProps {
 		| Element;
 }
 
-function MainLayout({ title, pageProps_, children }: MainLayoutProps) {
-	const BgColor = rust.random_tw_colors(3);
+function MainLayout({ pageProps_, children }: MainLayoutProps) {
+	const BgColor = rust.random_tw_colors(3, 100.0);
 
 	return (
-		<>
-			{/* scripts to run main content load */}
-			{/*  */}
+		<App>
+			<Head pageProps_={pageProps_} />
 			<main className={tw`overscroll-none font-rounded pointer-events-auto`}>
-				<Head title={title} pageProps_={pageProps_} />
 				<Navbar pageProps_={pageProps_} />
 				{/* wrapper for the page area, less the navbar */}
 				<div className={tw`container h-full w-full`}>
@@ -38,7 +36,7 @@ function MainLayout({ title, pageProps_, children }: MainLayoutProps) {
 						 p-2.5 grid place-items-center h-screen w-screen`}
 					>
 						<div
-							className={tw`bg-gray-700 bg-clip-padding backdrop-filter backdrop-blur-md
+							className={tw`bg-gray-700 text-gray-100 bg-clip-padding backdrop-filter backdrop-blur-md
 						bg-opacity-50 max-w-screen-lg p-2.5 max-h-[860px]
 						h-4/5 flex flex-col overflow-hidden relative w-full rounded-xl`}
 						>
@@ -68,10 +66,7 @@ function MainLayout({ title, pageProps_, children }: MainLayoutProps) {
 					</style>
 				</div>
 			</main>
-			{/* scripts to run after page paint */}
-			<script>feather.replace()</script>
-			{/*  */}
-		</>
+		</App>
 	);
 }
 

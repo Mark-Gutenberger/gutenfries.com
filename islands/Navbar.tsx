@@ -14,7 +14,7 @@ interface Routes {
 }
 
 const routes: Routes[] = [
-	{ name: 'Home', href: '/home', current: false },
+	{ name: 'Home', href: '/', current: false },
 	{ name: 'About', href: '/about', current: false },
 	{ name: 'Projects', href: '#', current: false },
 	{ name: 'Calendar', href: '#', current: false },
@@ -37,7 +37,12 @@ function Navbar({ pageProps_ }: NavbarProps) {
 	});
 
 	// TODO(@gutenfries): type error... non breaking
-	routes[routes.findIndex(({ href }) => href === route)].current = true;
+	if (route === '/') {
+		routes[0].current = true;
+	} else {
+		const routeIndex = routes.findIndex(({ href }) => href === route);
+		routes[routeIndex].current = true;
+	}
 
 	return (
 		<header className={tw`absolute w-full p-4 shadow-lg bg-gray-800`}>

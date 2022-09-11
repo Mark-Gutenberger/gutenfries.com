@@ -2,6 +2,8 @@
 import { h } from 'preact';
 import { UnknownPageProps } from '$fresh/server.ts';
 
-const NotFoundPage = ({ url }: UnknownPageProps) => <p>404 not found: {url.pathname}</p>;
+function NotFoundPage({ url }: UnknownPageProps) {
+	return <h1>404: {url.pathname} not found</h1>;
+}
 
 export default NotFoundPage;
