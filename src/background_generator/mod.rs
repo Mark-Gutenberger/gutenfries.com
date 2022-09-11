@@ -6,12 +6,9 @@ pub mod background_generator {
 	use js_sys::{Array as JsArray, JsString};
 	use wasm_bindgen::prelude::*;
 
-	use crate::{
-		background_generator::{
-			colors::colors::{methods::*, *},
-			hex::hex::*,
-		},
-		printf,
+	use crate::background_generator::{
+		colors::colors::{methods::*, *},
+		hex::hex::*,
 	};
 
 	#[wasm_bindgen]
