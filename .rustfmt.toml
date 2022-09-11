@@ -1,5 +1,5 @@
 # OTBS
-unstable_features = true
+non_upper_case_globalsunstable_features = true
 reorder_imports = true
 imports_granularity = "Crate"
 use_small_heuristics = "Max"

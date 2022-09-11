@@ -1,45 +1,18 @@
-pub mod background_generator {
+pub mod colors;
+pub mod hex;
 
+pub mod background_generator {
 	use getrandom::getrandom;
-	use js_sys::{Array, JsString, Object};
+	use js_sys::{Array as JsArray, JsString};
 	use wasm_bindgen::prelude::*;
 
-	use crate::macros::macros::printf;
-
-	const COLORS_ARRAY: [&str; 19] = [
-		"amber",
-		// "black",
-		"blue",
-		"blueGray",
-		// "coolGray",
-		"cyan",
-		"emerald",
-		"fuchsia",
-		// "gray",
-		"green",
-		"indigo",
-		"lightBlue",
-		"lime",
-		"orange",
-		"pink",
-		"purple",
-		"red",
-		"rose",
-		"sky",
-		"teal",
-		// "trueGray",
-		"violet",
-		// "warmGray",
-		// "white",
-		"yellow",
-	];
-
-	const COLOR_SHADES_ARRAY: [&str; 10] =
-		["50", "100", "200", "300", "400", "500", "600", "700", "800", "900"];
-
-	const COLOR_SHADES_ARRAY_LIGHT: [&str; 4] = ["200", "300", "400", "500"];
-
-	const COLOR_SHADES_ARRAY_DARK: [&str; 5] = ["500", "600", "700", "800", "900"];
+	use crate::{
+		background_generator::{
+			colors::colors::{methods::*, *},
+			hex::hex::*,
+		},
+		printf,
+	};
 
 	#[wasm_bindgen]
 	/// returns a random color from the tailwind css v2 palette
@@ -163,6 +136,11 @@ pub mod background_generator {
 	#[wasm_bindgen]
 	/// generates ```n``` random tw colors from the tailwind css v2 palette, where ```n``` is the
 	/// first argument
+	/// ## Arguments:
+	/// * ```n``` - the number of colors to generate
+	///
+	/// * ```tol``` - the tolerance of the generated colors
+	///
 	/// ## Example:
 	/// ```
 	/// let colors = random_tw_colors(5);
@@ -173,11 +151,43 @@ pub mod background_generator {
 	/// let colors = random_tw_colors(1);
 	/// ```
 	/// output: `["blue-600"]`
-	pub fn random_tw_colors(n: usize) -> Array {
-		let colors_array = Array::new();
+	pub fn random_tw_colors(n: i32, tolerance: u32) -> JsArray {
+		// initialize an empty JsArray for the return value
+		let colors_array = JsArray::new();
 
-		for _ in 0..n {
-			colors_array.push(&random_tw_color());
+		// generate an initial value and convert to String
+		let color_1: String = random_tw_color_dark().as_string().unwrap();
+		// convert to &str
+		let color_1: &str = &color_1;
+		// convert the &str to a hex value (String)
+		let color_1_hex = color_to_hex(color_1);
+		// convert the String to &str
+		let color_1_hex: &str = &color_1_hex;
+
+		// push the initial value to the return array as a JsString
+		colors_array.push(&JsString::from(color_1));
+
+		let mut i = 1;
+		while i < n {
+			let color = random_tw_color_dark();
+			// convert to String
+			let color: String = color.as_string().unwrap();
+			// convert to &str
+			let color: &str = &color;
+			// convert the &str to a hex value (String)
+			let color_hex = color_to_hex(color);
+			// convert the hex value to a &str
+			let color_hex: &str = &color_hex;
+
+			// check if the color clashes with the previous color in the array
+			if compare_hex_tolerance(color_hex, color_1_hex, tolerance as u64) {
+				// if it does not clash, push the color to the return array as a JsString
+				colors_array.push(&JsString::from(color));
+				i += 1;
+			} else {
+				// if it does clash, do nothing
+				continue;
+			}
 		}
 
 		colors_array
