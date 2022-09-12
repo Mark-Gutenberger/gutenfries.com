@@ -4,36 +4,34 @@
 
 import * as $0 from './routes/_404.tsx';
 import * as $1 from './routes/_500.tsx';
-import * as $2 from './routes/_middleware.ts';
-import * as $3 from './routes/about.tsx';
-import * as $4 from './routes/api/[url].tsx';
-import * as $5 from './routes/api/v1/github/[username].tsx';
-import * as $6 from './routes/api/v1/greet/[name].tsx';
-import * as $7 from './routes/api/v1/joke.ts';
-import * as $8 from './routes/api/v1/markdown/[filepath].tsx';
-import * as $9 from './routes/api/v1/random-uuid.ts';
-import * as $10 from './routes/api/v1/theme-generator.ts';
-import * as $11 from './routes/api/v1/version.ts';
-import * as $12 from './routes/api/v1/wasm.ts';
-import * as $13 from './routes/index.tsx';
+import * as $2 from './routes/about.tsx';
+import * as $3 from './routes/api/[url].tsx';
+import * as $4 from './routes/api/v1/github/[username].tsx';
+import * as $5 from './routes/api/v1/greet/[name].tsx';
+import * as $6 from './routes/api/v1/joke.ts';
+import * as $7 from './routes/api/v1/markdown/[filepath].tsx';
+import * as $8 from './routes/api/v1/random-uuid.ts';
+import * as $9 from './routes/api/v1/theme-generator.ts';
+import * as $10 from './routes/api/v1/version.ts';
+import * as $11 from './routes/api/v1/wasm.ts';
+import * as $12 from './routes/index.tsx';
 import * as $$0 from './islands/Navbar.tsx';
 
 const manifest = {
 	routes: {
 		'./routes/_404.tsx': $0,
 		'./routes/_500.tsx': $1,
-		'./routes/_middleware.ts': $2,
-		'./routes/about.tsx': $3,
-		'./routes/api/[url].tsx': $4,
-		'./routes/api/v1/github/[username].tsx': $5,
-		'./routes/api/v1/greet/[name].tsx': $6,
-		'./routes/api/v1/joke.ts': $7,
-		'./routes/api/v1/markdown/[filepath].tsx': $8,
-		'./routes/api/v1/random-uuid.ts': $9,
-		'./routes/api/v1/theme-generator.ts': $10,
-		'./routes/api/v1/version.ts': $11,
-		'./routes/api/v1/wasm.ts': $12,
-		'./routes/index.tsx': $13,
+		'./routes/about.tsx': $2,
+		'./routes/api/[url].tsx': $3,
+		'./routes/api/v1/github/[username].tsx': $4,
+		'./routes/api/v1/greet/[name].tsx': $5,
+		'./routes/api/v1/joke.ts': $6,
+		'./routes/api/v1/markdown/[filepath].tsx': $7,
+		'./routes/api/v1/random-uuid.ts': $8,
+		'./routes/api/v1/theme-generator.ts': $9,
+		'./routes/api/v1/version.ts': $10,
+		'./routes/api/v1/wasm.ts': $11,
+		'./routes/index.tsx': $12,
 	},
 	islands: {
 		'./islands/Navbar.tsx': $$0,
