@@ -1,14 +1,7 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { Fragment, h } from 'preact';
 import { MainLayout } from '@/layouts/MainLayout.tsx';
 import { PageProps } from '$fresh/server.ts';
 
-interface AboutPageProps {
-	pageProps_: PageProps;
-}
-
-function AboutPage({ pageProps_ }: AboutPageProps) {
+function AboutPage(pageProps_: PageProps) {
 	return (
 		<>
 			<MainLayout

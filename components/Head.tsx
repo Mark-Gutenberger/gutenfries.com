@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
 import { PageProps } from '$fresh/server.ts';
 import { asset, Head as FreshHead } from '$fresh/runtime.ts';
 
@@ -8,7 +6,7 @@ interface HeadProps {
 }
 
 function Head({ pageProps_ }: HeadProps) {
-	const ogImageUrl = new URL(asset('/icons/screenshot.png'), pageProps_.url).href;
+	const ogImageUrl = new URL(asset('/images/screenshot.png'), pageProps_.url).href;
 
 	let pipe: string;
 	if (pageProps_.url.pathname.slice(1) != '') {

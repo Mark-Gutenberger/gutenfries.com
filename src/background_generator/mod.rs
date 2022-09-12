@@ -11,7 +11,7 @@ pub mod background_generator {
 		hex::hex::*,
 	};
 
-	#[wasm_bindgen]
+	// #[wasm_bindgen]
 	/// returns a random color from the tailwind css v2 palette
 	///
 	/// ## Example:
@@ -29,7 +29,7 @@ pub mod background_generator {
 		JsString::from(color)
 	}
 
-	#[wasm_bindgen]
+	// #[wasm_bindgen]
 	/// returns a random shade from the tailwind css v2 palette
 	///
 	/// ## Example:
@@ -47,7 +47,7 @@ pub mod background_generator {
 		JsString::from(shade)
 	}
 
-	#[wasm_bindgen]
+	// #[wasm_bindgen]
 	/// returns a random dark shade from the tailwind css v2 palette
 	/// ## Example:
 	/// ```
@@ -69,7 +69,7 @@ pub mod background_generator {
 		JsString::from(shade)
 	}
 
-	#[wasm_bindgen]
+	// #[wasm_bindgen]
 	/// returns a random light shade from the tailwind css v2 palette
 	/// ## Example:
 	/// ```
@@ -91,7 +91,7 @@ pub mod background_generator {
 		JsString::from(shade)
 	}
 
-	#[wasm_bindgen]
+	// #[wasm_bindgen]
 	/// generates a random tw color from the tailwind css v2 palette
 	///
 	/// ## Example:
@@ -104,7 +104,7 @@ pub mod background_generator {
 		JsString::from(color_string)
 	}
 
-	#[wasm_bindgen]
+	// #[wasm_bindgen]
 	/// generates a random dark tw color from the tailwind css v2 palette
 	///
 	/// ## Example:
@@ -117,7 +117,7 @@ pub mod background_generator {
 		JsString::from(color_string)
 	}
 
-	#[wasm_bindgen]
+	// #[wasm_bindgen]
 	/// generates a random light tw color from the tailwind css v2 palette
 	///
 	/// ## Example:

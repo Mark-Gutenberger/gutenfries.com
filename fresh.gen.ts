@@ -2,6 +2,7 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import config from './deno.json' assert { type: 'json' };
 import * as $0 from './routes/_404.tsx';
 import * as $1 from './routes/_500.tsx';
 import * as $2 from './routes/about.tsx';
@@ -14,7 +15,8 @@ import * as $8 from './routes/api/v1/random-uuid.ts';
 import * as $9 from './routes/api/v1/theme-generator.ts';
 import * as $10 from './routes/api/v1/version.ts';
 import * as $11 from './routes/api/v1/wasm.ts';
-import * as $12 from './routes/index.tsx';
+import * as $12 from './routes/home.tsx';
+import * as $13 from './routes/index.tsx';
 import * as $$0 from './islands/Navbar.tsx';
 
 const manifest = {
@@ -31,12 +33,14 @@ const manifest = {
 		'./routes/api/v1/theme-generator.ts': $9,
 		'./routes/api/v1/version.ts': $10,
 		'./routes/api/v1/wasm.ts': $11,
-		'./routes/index.tsx': $12,
+		'./routes/home.tsx': $12,
+		'./routes/index.tsx': $13,
 	},
 	islands: {
 		'./islands/Navbar.tsx': $$0,
 	},
 	baseUrl: import.meta.url,
+	config,
 };
 
 export default manifest;

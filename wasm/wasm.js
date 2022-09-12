@@ -104,119 +104,6 @@ function addHeapObject(obj) {
 	return idx;
 }
 /**
- * returns a random color from the tailwind css v2 palette
- *
- * ## Example:
- * ```
- * let color = get_random_color();
- * ```
- * output: `blue`
- * @returns {string}
- */
-export function random_color() {
-	const ret = wasm.random_color();
-	return takeObject(ret);
-}
-
-/**
- * returns a random shade from the tailwind css v2 palette
- *
- * ## Example:
- * ```
- * let shade = get_random_shade();
- * ```
- * output: `600`
- * @returns {string}
- */
-export function random_shade() {
-	const ret = wasm.random_shade();
-	return takeObject(ret);
-}
-
-/**
- * returns a random dark shade from the tailwind css v2 palette
- * ## Example:
- * ```
- * let shade = random_shade_dark();
- * ```
- * output: `800`
- * ## Example:
- * ```
- * let shade = random_shade_dark();
- * ```
- * output: `900`
- * @returns {string}
- */
-export function random_shade_dark() {
-	const ret = wasm.random_shade_dark();
-	return takeObject(ret);
-}
-
-/**
- * returns a random light shade from the tailwind css v2 palette
- * ## Example:
- * ```
- * let shade = random_shade_light();
- * ```
- * output: `200`
- * ## Example:
- * ```
- * let shade = random_shade_light();
- * ```
- * output: `500`
- * @returns {string}
- */
-export function random_shade_light() {
-	const ret = wasm.random_shade_light();
-	return takeObject(ret);
-}
-
-/**
- * generates a random tw color from the tailwind css v2 palette
- *
- * ## Example:
- * ```
- * let color = random_tw_color();
- * ```
- * output: `blue-600`
- * @returns {string}
- */
-export function random_tw_color() {
-	const ret = wasm.random_tw_color();
-	return takeObject(ret);
-}
-
-/**
- * generates a random dark tw color from the tailwind css v2 palette
- *
- * ## Example:
- * ```
- * let color = random_tw_color_dark();
- * ```
- * output: `blue-600`
- * @returns {string}
- */
-export function random_tw_color_dark() {
-	const ret = wasm.random_tw_color_dark();
-	return takeObject(ret);
-}
-
-/**
- * generates a random light tw color from the tailwind css v2 palette
- *
- * ## Example:
- * ```
- * let color = random_tw_color_light();
- * ```
- * output: `blue-600`
- * @returns {string}
- */
-export function random_tw_color_light() {
-	const ret = wasm.random_tw_color_light();
-	return takeObject(ret);
-}
-
-/**
  * generates ```n``` random tw colors from the tailwind css v2 palette, where ```n``` is the
  * first argument
  * ## Arguments:
@@ -250,11 +137,6 @@ export function greet(name) {
 	const ptr0 = passStringToWasm0(name, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
 	const len0 = WASM_VECTOR_LEN;
 	wasm.greet(ptr0, len0);
-}
-
-/** */
-export function run() {
-	wasm.run();
 }
 
 function handleError(f, args) {
@@ -439,5 +321,3 @@ switch (wasm_url.protocol) {
 
 const wasmInstance = (await WebAssembly.instantiate(wasmCode, imports)).instance;
 const wasm = wasmInstance.exports;
-
-wasm.__wbindgen_start();

@@ -47,8 +47,8 @@ pub mod rust {
 		printf!("Hello from {}!", name);
 	}
 
-	#[wasm_bindgen(start)]
-	pub fn run() {
-		greet("Rust");
-	}
+	// #[wasm_bindgen(start)]
+	// pub fn main() {
+	// 	greet("Rust");
+	// }
 }

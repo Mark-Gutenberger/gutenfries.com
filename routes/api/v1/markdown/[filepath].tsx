@@ -1,7 +1,3 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-// TODO(@gutenfries): eventually impliment markdown rendering on your own
-import { Fragment, h } from 'preact';
 import { PageProps } from '$fresh/server.ts';
 import { html, tokens } from 'rustyMarkdown';
 import { ensureFile } from '$std/fs/mod.ts';
