@@ -1,4 +1,3 @@
-import { tw } from 'twind';
 import { PageProps } from '$fresh/server.ts';
 
 interface NavbarProps {
@@ -43,16 +42,16 @@ function Navbar({ pageProps_ }: NavbarProps) {
 
 	return (
 		<header className='absolute w-full p-4 shadow-lg bg-gray-800'>
-			<nav className='container mx-auto min-h-12 sm:flex justify-start text-gray-400 sm:self-center text-xl border-t sm:border-none'>
+			<nav className='container mx-auto min-h-[12] h-auto sm:flex justify-start text-gray-400 sm:self-center text-xl border-t sm:border-none'>
 				{routes.map((item) => (
 					<a
 						key={item.name}
 						href={item.href}
 						className={classNames(
 							item.current
-								? tw`bg-gray-900 text-white`
-								: tw`text-gray-300 hover:bg-gray-700 hover:text-white`,
-							tw`rounded-md text-md font-medium p-3 mx-3 sm:inline-block`,
+								? 'bg-gray-900 text-white'
+								: 'text-gray-300 hover:bg-gray-700 hover:text-white',
+							'rounded-md text-md font-medium p-3 mx-3 sm:inline-block',
 						)}
 						aria-current={item.current ? 'page' : undefined}
 					>
@@ -72,7 +71,7 @@ function Navbar({ pageProps_ }: NavbarProps) {
 						<input
 							type='text'
 							id='voice-search'
-							className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+							className='min-w-[20] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
 							placeholder='Search for anything...'
 							required
 						/>
@@ -104,4 +103,4 @@ function Navbar({ pageProps_ }: NavbarProps) {
 	);
 }
 
-export default Navbar;
+export { Navbar };

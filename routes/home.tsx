@@ -1,7 +1,7 @@
 import { MainLayout } from '@/layouts/MainLayout.tsx';
 import { PageProps } from '$fresh/server.ts';
 
-function Index(pageProps_: PageProps) {
+function Home(pageProps_: PageProps) {
 	return (
 		<MainLayout
 			pageProps_={pageProps_}
@@ -21,4 +21,4 @@ function Index(pageProps_: PageProps) {
 	);
 }
 
-export default Index;
+export default Home;
