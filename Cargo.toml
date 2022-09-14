@@ -13,9 +13,8 @@ path = "rust/lib.rs"
 
 [dependencies]
 deno_bindgen = "0.7.0"
-serde = { version = "1", features = ["derive"] }
+# serde = { version = "1", features = ["derive"] }
 getrandom = { version = "0.2.7", features = ["js"] }
-object = "0.29.0"
 
 [profile.release]
 # Tell `rustc` to optimize for small code size.

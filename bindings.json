@@ -1,0 +1,1 @@
+{"name":"rust","littleEndian":true,"symbols":{"random_tw_colors":{"parameters":["i32","u32","str"],"result":"str","nonBlocking":false},"greet":{"parameters":["str"],"result":"void","nonBlocking":false}},"typeDefs":{},"tsTypes":{}}
