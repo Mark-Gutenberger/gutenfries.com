@@ -1,8 +1,7 @@
 ###
 ## proj specific rules:
 main.bundle.js
-!*.min.js
-*.wat
+bindings.json
 ##
 
 !.gitkeep

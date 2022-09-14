@@ -12,11 +12,8 @@ interface GradientBackgroundProps {
 }
 
 const GradientBackground = ({ children }: GradientBackgroundProps) => {
-	// const BgColor = rust.random_tw_colors(3, 100.0);
 	const BgColor = random_tw_colors(3, 100.0, 'tailwind');
-	console.log(BgColor);
 	const BgColors = parseColors(BgColor);
-	console.log(BgColors);
 
 	return (
 		<div
