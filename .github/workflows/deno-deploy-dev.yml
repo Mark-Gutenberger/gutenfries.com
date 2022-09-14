@@ -16,10 +16,11 @@ jobs:
         # TODO: add a build step here
 
       - name: Build
-        run: curl -sSf https://sh.rustup.rs | sh -s -- -y --nightly-toolchain 1.65.0 \
-          export PATH="$PATH:/home/rust/.cargo/bin" \
-          deno install -Afq -n deno_bindgen https://deno.land/x/deno_bindgen/cli.ts \
-          deno task build \
+        run: |
+          curl -sSf https://sh.rustup.rs | sh -s -- -y --nightly-toolchain 1.65.0
+          export PATH="$PATH:/home/rust/.cargo/bin"
+          deno install -Afq -n deno_bindgen https://deno.land/x/deno_bindgen/cli.ts
+          deno task build
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
