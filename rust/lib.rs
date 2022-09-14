@@ -30,25 +30,14 @@
 //! [Steve Klabnik]:
 //! [Carol Nichols]:
 
-extern crate wasm_bindgen;
-
 mod background_generator;
-mod macros;
 
 pub mod rust {
-	extern crate wasm_bindgen;
 
-	use wasm_bindgen::prelude::*;
+	use deno_bindgen::deno_bindgen;
 
-	use crate::macros::macros::printf;
-
-	#[wasm_bindgen]
+	#[deno_bindgen]
 	pub fn greet(name: &str) {
-		printf!("Hello from {}!", name);
+		print!("Hello from {}!", name);
 	}
-
-	// #[wasm_bindgen(start)]
-	// pub fn main() {
-	// 	greet("Rust");
-	// }
 }

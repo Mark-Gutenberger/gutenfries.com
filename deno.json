@@ -6,8 +6,8 @@
 		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen",
 		"production": "deno task build; deno run -A --unstable main.ts",
 		"start": "deno run -A --unstable main.ts",
-		"build": "cargo build --target wasm32-unknown-unknown --release; mkdir -p wasm; wasm-bindgen ./target/wasm32-unknown-unknown/release/rust.wasm --out-dir ./wasm/ --out-name wasm --target deno --typescript",
-		"clean": "rm -rf ./wasm/ ./target/",
+		"build": "deno_bindgen",
+		"clean": "cargo clean",
 		"docker-build": "Docker build -t gutenfries.com .",
 		"docker-run": "docker run --rm -it -p 80:80 gutenfries.com:latest",
 		"docker-tag": "docker tag gutenfries.com gutenfries.azurecr.io/gutenfries.com:$(deno run -A ./utils/version.ts)",
@@ -22,22 +22,12 @@
 	"importMap": "./import_map.json",
 	"lint": {
 		"rules": {
-			"tags": [
-				"recommended"
-			],
-			"include": [
-				"ban-untagged-todo"
-			],
-			"exclude": [
-				"no-unused-vars"
-			]
+			"tags": ["recommended"],
+			"include": ["ban-untagged-todo"],
+			"exclude": ["no-unused-vars"]
 		},
 		"files": {
-			"exclude": [
-				"static/",
-				"target/",
-				"wasm/"
-			]
+			"exclude": ["static/", "target/", "wasm/"]
 		}
 	},
 	"fmt": {
@@ -49,10 +39,7 @@
 			"singleQuote": true
 		},
 		"files": {
-			"exclude": [
-				"static/",
-				"target/"
-			]
+			"exclude": ["static/", "target/"]
 		}
 	}
 }

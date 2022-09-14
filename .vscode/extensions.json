@@ -1,4 +1,10 @@
 {
-	"unwantedRecommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+	"unwantedRecommendations": [
+		"ms-vscode.vscode-typescript-next",
+		"ms-vscode.vscode-typescript",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode"
+	],
 	"recommendations": ["denoland.vscode-deno"]
+	// "disabled": ["ms-vscode.vscode-typescript-next", "dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
 }

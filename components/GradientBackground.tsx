@@ -1,4 +1,5 @@
-import * as rust from '@/wasm/wasm.js';
+import { random_tw_colors } from '@/bindings/bindings.ts';
+import { parseColors } from '@/rust/background_generator/typescript/parseColors.ts';
 
 interface GradientBackgroundProps {
 	children?:
@@ -11,37 +12,20 @@ interface GradientBackgroundProps {
 }
 
 const GradientBackground = ({ children }: GradientBackgroundProps) => {
-	const BgColor = rust.random_tw_colors(3, 100.0);
+	// const BgColor = rust.random_tw_colors(3, 100.0);
+	const BgColor = random_tw_colors(3, 100.0, 'tailwind');
+	console.log(BgColor);
+	const BgColors = parseColors(BgColor);
+	console.log(BgColors);
 
 	return (
-		<>
-			<style jsx>
-				{`
-				.background-animate {
-					background-size: 400%;
-					-webkit-animation: AnimationName 3s ease infinite;
-					-moz-animation: AnimationName 3s ease infinite;
-					animation: AnimationName 3s ease infinite;
-				}
-				@keyframes AnimationName {
-					0%,
-					100% {
-						background-position: 0% 50%;
-					}
-					50% {
-						background-position: 100% 50%;
-					}
-				}
-			`}
-			</style>
-			<div
-				className={`background-animate bg-gradient-to-r
-						 from-${BgColor[0]} via-${BgColor[1]} to-${BgColor[2]}
-						 p-2.5 grid place-items-center h-screen w-screen`}
-			>
-			</div>
+		<div
+			className={`${`background-animate`} bg-gradient-to-r
+				from-${BgColors[0]} via-${BgColors[1]} to-${BgColors[2]}
+				p-2.5 grid place-items-center h-screen w-screen`}
+		>
 			{children}
-		</>
+		</div>
 	);
 };
 
