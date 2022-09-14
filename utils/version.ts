@@ -1,4 +1,4 @@
-import { readJson } from './json.ts';
+import { readJson } from '@/utils/json.ts';
 
 const denoJson = await readJson('./deno.json');
 const version_ = denoJson.version;

@@ -1,0 +1,18 @@
+{
+	"test": {
+		"test": "test"
+	},
+	"data": {
+		"string": "string",
+		"number": 1,
+		"boolean": true,
+		"array": ["string", 1, true],
+		"object": {
+			"string": "string",
+			"number": 1,
+			"boolean": true,
+			"array": ["string", 1, true]
+		},
+		"float": 1.1
+	}
+}

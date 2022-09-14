@@ -31,4 +31,4 @@ jobs:
           deno-version: canary # v1.25.0
 
       - name: Run tests
-        run: deno test --allow-all --no-check --unstable
+        run: deno test --allow-all --no-check --unstable --doc --allow-none
