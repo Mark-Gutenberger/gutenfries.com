@@ -11,13 +11,18 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install rust nightly toolchain
         uses: actions-rs/toolchain@v1
         with:
           toolchain: nightly
           override: true
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: canary # v1.25.0
 
       - name: Install deno_bindgen
         run: deno install -Afq -n deno_bindgen https://deno.land/x/deno_bindgen/cli.ts
