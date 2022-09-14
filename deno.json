@@ -4,8 +4,8 @@
 	"apiVersion": "v1",
 	"tasks": {
 		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen",
-		"production": "deno task build; deno run -A --unstable main.ts",
-		"start": "deno run -A --unstable main.ts",
+		"production": "deno task build; deno task start",
+		"start": "deno run -A --unstable main.ts --import_map=import_map.json",
 		"build": "deno_bindgen",
 		"clean": "cargo clean",
 		"docker-build": "Docker build -t gutenfries.com .",
@@ -27,7 +27,7 @@
 			"exclude": ["no-unused-vars"]
 		},
 		"files": {
-			"exclude": ["static/", "target/", "wasm/"]
+			"exclude": ["static/", "target/", "bindings/"]
 		}
 	},
 	"fmt": {
