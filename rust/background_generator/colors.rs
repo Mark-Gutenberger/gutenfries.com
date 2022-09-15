@@ -1,4 +1,3 @@
-#[allow(non_upper_case_globals)]
 pub mod colors {
 
 	pub const COLORS_ARRAY: [&str; 19] = [
@@ -36,13 +35,16 @@ pub mod colors {
 
 	pub const COLOR_SHADES_ARRAY_DARK: [&str; 5] = ["500", "600", "700", "800", "900"];
 
-	const BAD_COLORS_ARRAY: [&str; 4] = ["black", "white", "gray", "trueGray"];
+	pub const BAD_COLORS_ARRAY: [&str; 4] = ["black", "white", "gray", "trueGray"];
 
+	#[allow(non_upper_case_globals)]
 	pub const black: &str = "#000000";
+	#[allow(non_upper_case_globals)]
 	pub const white: &str = "#ffffff";
 
 	type TwColor<'a> = [[&'a str; 2]; 10];
 
+	#[allow(non_upper_case_globals)]
 	pub const rose: TwColor = [
 		["50", "#fff1f2"],
 		["100", "#ffe4e6"],
@@ -55,7 +57,7 @@ pub mod colors {
 		["800", "#9f1239"],
 		["900", "#881337"],
 	];
-
+	#[allow(non_upper_case_globals)]
 	pub const pink: TwColor = [
 		["50", "#fdf2f8"],
 		["100", "#fce7f3"],
@@ -68,6 +70,7 @@ pub mod colors {
 		["800", "#9d174d"],
 		["900", "#831843"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const fuchsia: TwColor = [
 		["50", "#fdf4ff"],
 		["100", "#fae8ff"],
@@ -80,6 +83,7 @@ pub mod colors {
 		["800", "#86198f"],
 		["900", "#701a75"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const purple: TwColor = [
 		["50", "#faf5ff"],
 		["100", "#f3e8ff"],
@@ -92,6 +96,7 @@ pub mod colors {
 		["800", "#6b21a8"],
 		["900", "#581c87"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const violet: TwColor = [
 		["50", "#f5f3ff"],
 		["100", "#ede9fe"],
@@ -104,6 +109,7 @@ pub mod colors {
 		["800", "#5b21b6"],
 		["900", "#4c1d95"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const indigo: TwColor = [
 		["50", "#eef2ff"],
 		["100", "#e0e7ff"],
@@ -116,6 +122,7 @@ pub mod colors {
 		["800", "#3730a3"],
 		["900", "#312e81"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const blue: TwColor = [
 		["50", "#eff6ff"],
 		["100", "#dbeafe"],
@@ -128,6 +135,7 @@ pub mod colors {
 		["800", "#1e40af"],
 		["900", "#1e3a8a"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const lightBlue: TwColor = [
 		["50", "#f0f9ff"],
 		["100", "#e0f2fe"],
@@ -140,6 +148,7 @@ pub mod colors {
 		["800", "#075985"],
 		["900", "#0c4a6e"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const cyan: TwColor = [
 		["50", "#ecfeff"],
 		["100", "#cffafe"],
@@ -152,6 +161,7 @@ pub mod colors {
 		["800", "#155e75"],
 		["900", "#164e63"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const sky: TwColor = [
 		["50", "#f0f9ff"],
 		["100", "#e0f2fe"],
@@ -164,6 +174,7 @@ pub mod colors {
 		["800", "#075985"],
 		["900", "#0c4a6e"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const teal: TwColor = [
 		["50", "#f0fdfa"],
 		["100", "#ccfbf1"],
@@ -176,6 +187,7 @@ pub mod colors {
 		["800", "#115e59"],
 		["900", "#134e4a"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const emerald: TwColor = [
 		["50", "#ecfdf5"],
 		["100", "#d1fae5"],
@@ -188,6 +200,7 @@ pub mod colors {
 		["800", "#065f46"],
 		["900", "#064e3b"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const green: TwColor = [
 		["50", "#f0fdf4"],
 		["100", "#dcfce7"],
@@ -200,6 +213,7 @@ pub mod colors {
 		["800", "#166534"],
 		["900", "#14532d"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const lime: TwColor = [
 		["50", "#f7fee7"],
 		["100", "#ecfccb"],
@@ -212,6 +226,7 @@ pub mod colors {
 		["800", "#3f6212"],
 		["900", "#365314"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const yellow: TwColor = [
 		["50", "#fefce8"],
 		["100", "#fef9c3"],
@@ -224,6 +239,7 @@ pub mod colors {
 		["800", "#854d0e"],
 		["900", "#713f12"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const amber: TwColor = [
 		["50", "#fffbeb"],
 		["100", "#fef3c7"],
@@ -236,6 +252,7 @@ pub mod colors {
 		["800", "#92400e"],
 		["900", "#78350f"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const orange: TwColor = [
 		["50", "#fff7ed"],
 		["100", "#ffedd5"],
@@ -248,6 +265,7 @@ pub mod colors {
 		["800", "#9a3412"],
 		["900", "#7c2d12"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const red: TwColor = [
 		["50", "#fef2f2"],
 		["100", "#fee2e2"],
@@ -260,6 +278,7 @@ pub mod colors {
 		["800", "#991b1b"],
 		["900", "#7f1d1d"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const warmGray: TwColor = [
 		["50", "#fafaf9"],
 		["100", "#f5f5f4"],
@@ -272,6 +291,7 @@ pub mod colors {
 		["800", "#292524"],
 		["900", "#1c1917"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const trueGray: TwColor = [
 		["50", "#fafafa"],
 		["100", "#f5f5f5"],
@@ -284,6 +304,7 @@ pub mod colors {
 		["800", "#262626"],
 		["900", "#171717"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const gray: TwColor = [
 		["50", "#fafafa"],
 		["100", "#f4f4f5"],
@@ -296,6 +317,7 @@ pub mod colors {
 		["800", "#27272a"],
 		["900", "#18181b"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const coolGray: TwColor = [
 		["50", "#f9fafb"],
 		["100", "#f3f4f6"],
@@ -308,6 +330,7 @@ pub mod colors {
 		["800", "#1f2937"],
 		["900", "#111827"],
 	];
+	#[allow(non_upper_case_globals)]
 	pub const blueGray: TwColor = [
 		["50", "#f8fafc"],
 		["100", "#f1f5f9"],
@@ -321,7 +344,10 @@ pub mod colors {
 		["900", "#0f172a"],
 	];
 
-	pub const colors: [(&str, [[&str; 2]; 10]); 23] = [
+	type Color<'a> = [(&'a str, [[&'a str; 2]; 10]); 23];
+
+	#[allow(non_upper_case_globals)]
+	pub const colors: Color = [
 		("rose", rose),
 		("pink", pink),
 		("fuchsia", fuchsia),

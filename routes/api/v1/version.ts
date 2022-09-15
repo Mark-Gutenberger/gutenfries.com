@@ -1,12 +1,13 @@
 import { Handlers } from '$fresh/server.ts';
-// import { Handlers } from '$fresh/server.ts';
 import { version } from '@/utils/version.ts';
 
+const body = version;
+
 export const handler: Handlers = {
-	GET(req) {
+	GET() {
 		return new Response(
 			JSON.stringify(
-				version,
+				body,
 			),
 			{
 				headers: { 'Content-Type': 'application/json' },
@@ -15,4 +16,4 @@ export const handler: Handlers = {
 	},
 };
 
-export { version };
+export { body };

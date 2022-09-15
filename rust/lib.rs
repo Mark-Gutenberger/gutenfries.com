@@ -30,14 +30,6 @@
 //! [Steve Klabnik]:
 //! [Carol Nichols]:
 
-mod background_generator;
+pub mod background_generator;
 
-pub mod rust {
-
-	use deno_bindgen::deno_bindgen;
-
-	#[deno_bindgen]
-	pub fn greet(name: &str) {
-		print!("Hello from {}!", name);
-	}
-}
+// pub mod rust {}

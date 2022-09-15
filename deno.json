@@ -8,7 +8,7 @@
 		"start": "deno run -A --unstable main.ts",
 		"build": "deno_bindgen",
 		"clean": "cargo clean",
-		"test": "deno test --allow-all --no-check --unstable --doc --allow-none",
+		"test": "deno test --allow-all --no-check --unstable --doc --allow-none; cargo test",
 		"docker-build": "Docker build -t gutenfries.com .",
 		"docker-run": "docker run --rm -it -p 80:80 gutenfries.com:latest",
 		"docker-tag": "docker tag gutenfries.com gutenfries.azurecr.io/gutenfries.com:$(deno run -A ./utils/version.ts)",

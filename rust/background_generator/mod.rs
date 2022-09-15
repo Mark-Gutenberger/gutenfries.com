@@ -1,5 +1,6 @@
 pub mod colors;
 pub mod hex;
+pub mod tests;
 
 pub mod background_generator {
 	use deno_bindgen::deno_bindgen;
@@ -129,7 +130,6 @@ pub mod background_generator {
 		String::from(color_string)
 	}
 
-	#[deno_bindgen]
 	/// generates ```n``` random tw colors from the tailwind css v2 palette, where ```n``` is the
 	/// first argument and return the a  String, where each color is separated by a semicolon
 	/// Takes an optional third parameter to specify if the colors should be represented by their
@@ -157,7 +157,7 @@ pub mod background_generator {
 	/// let colors = random_tw_colors(3, 100, "hex");
 	/// ```
 	/// output: `#0000ff;#ff0000;#00ff00`
-	pub fn random_tw_colors(n: i32, tolerance: u32, format: &str) -> String {
+	pub fn random_tw_colors_internal(n: i32, tolerance: u32, format: &str) -> String {
 		// determine what format to return the colors in
 		let format = String::from(format);
 
@@ -200,5 +200,11 @@ pub mod background_generator {
 		}
 
 		return return_colors;
+	}
+
+	#[deno_bindgen]
+	/// wraps `random_tw_colors_internal` function
+	pub fn random_tw_colors(n: i32, tolerance: u32, format: &str) -> String {
+		random_tw_colors_internal(n, tolerance, format)
 	}
 }

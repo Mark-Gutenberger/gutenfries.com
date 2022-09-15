@@ -2,6 +2,7 @@
 ## proj specific rules:
 main.bundle.js
 bindings.json
+write.test.json
 ##
 
 !.gitkeep

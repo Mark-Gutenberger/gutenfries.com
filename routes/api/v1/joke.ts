@@ -14,8 +14,13 @@ const JOKES = [
 	'An SEO expert walked into a bar, pub, inn, tavern, hostelry, public house.',
 ];
 
+const randomIndex = Math.floor(Math.random() * JOKES.length);
+const body = JOKES[randomIndex];
+
 export const handler = (_req: Request, _ctx: HandlerContext): Response => {
 	const randomIndex = Math.floor(Math.random() * JOKES.length);
 	const body = JOKES[randomIndex];
 	return new Response(body);
 };
+
+export { body, JOKES };

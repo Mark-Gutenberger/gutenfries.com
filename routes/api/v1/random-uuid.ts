@@ -1,10 +1,14 @@
 import { Handlers } from '$fresh/server.ts';
 
+const uuid = crypto.randomUUID();
+const body = uuid as string;
+
 export const handler: Handlers = {
-	GET(req) {
-		const uuid = crypto.randomUUID();
-		return new Response(JSON.stringify(uuid), {
+	GET() {
+		return new Response(JSON.stringify(body), {
 			headers: { 'Content-Type': 'application/json' },
 		});
 	},
 };
+
+export { body };
