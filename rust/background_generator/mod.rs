@@ -3,8 +3,8 @@ pub mod hex;
 pub mod tests;
 
 pub mod background_generator {
-	use deno_bindgen::deno_bindgen;
 	use getrandom::getrandom;
+	use wasm_bindgen::prelude::*;
 
 	use crate::background_generator::{
 		colors::colors::{methods::*, *},
@@ -202,7 +202,7 @@ pub mod background_generator {
 		return return_colors;
 	}
 
-	#[deno_bindgen]
+	#[wasm_bindgen]
 	/// wraps `random_tw_colors_internal` function
 	pub fn random_tw_colors(n: i32, tolerance: u32, format: &str) -> String {
 		random_tw_colors_internal(n, tolerance, format)

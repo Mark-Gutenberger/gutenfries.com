@@ -24,9 +24,6 @@ jobs:
         with:
           deno-version: canary # v1.25.0
 
-      - name: Install deno_bindgen
-        run: deno install -Afq -n deno_bindgen https://deno.land/x/deno_bindgen@0.7.0/cli.ts
-
       - name: Build
         run: deno task build
 

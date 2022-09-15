@@ -1,5 +1,5 @@
 import { HandlerContext } from '$fresh/server.ts';
-import { random_tw_colors } from '@/bindings/bindings.ts';
+import { random_tw_colors } from '@/wasm/wasm.js';
 import { parseColors } from '@/rust/background_generator/typescript/parseColors.ts';
 
 const body = parseColors(random_tw_colors(3, 200, 'tailwind'));
