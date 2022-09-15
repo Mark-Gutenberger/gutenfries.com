@@ -18,6 +18,7 @@
 *** for contributors-URL, forks-URL, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/gutenfries/gutenfries.com)]()
 [![GitHub Contributors](https://img.shields.io/github/contributors/gutenfries/gutenfries.com)](https://github.com/gutenfries/gutenfries.com/graphs/contributors)
 [![GitHub Stars](https://img.shields.io/github/stars/gutenfries/gutenfries.com)](https://github.com/gutenfries/gutenfries.com/stargazers)
