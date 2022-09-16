@@ -1,6 +1,6 @@
 {
 	"$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
-	"version": "0.0.6",
+	"version": "0.1.0",
 	"apiVersion": "v1",
 	"tasks": {
 		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen",
@@ -9,7 +9,7 @@
 		"build": "cargo build --target wasm32-unknown-unknown --release; mkdir -p wasm; wasm-bindgen ./target/wasm32-unknown-unknown/release/rust.wasm --out-dir ./wasm/ --out-name wasm --target deno --typescript; deno fmt",
 		"clean": "cargo clean && rm -rf ./wasm",
 		"test": "deno test --allow-all --no-check --unstable --doc --allow-none; cargo test",
-		"docker-build": "Docker build -t gutenfries.com .",
+		"docker-build": "docker build --build-arg GIT_REVISION=$(git rev-parse HEAD) -t gutenfries.com .",
 		"docker-run": "docker run --rm -it -p 80:80 gutenfries.com:latest",
 		"docker-tag": "docker tag gutenfries.com gutenfries.azurecr.io/gutenfries.com:$(deno run -A ./utils/version.ts)",
 		"docker-push": "echo 'you have to do this by hand'"
