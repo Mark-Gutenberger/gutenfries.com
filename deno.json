@@ -15,8 +15,6 @@
 		"docker-push": "echo 'you have to do this by hand'"
 	},
 	"compilerOptions": {
-		"allowJs": true,
-		"strict": true,
 		"jsx": "react-jsx",
 		"jsxImportSource": "preact"
 	},

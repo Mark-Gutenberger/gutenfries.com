@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
 import { MainLayout } from '@/layouts/MainLayout.tsx';
 import { PageProps } from '$fresh/server.ts';
 
