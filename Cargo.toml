@@ -1,9 +1,9 @@
 [package]
 name = "rust"
-version = "0.0.0"                                             # dont put a version in the rust crate.
+version = "0.0.0"                                           # dont put a version in the rust crate.
 edition = "2018"
 license = "GPL-3.0"
-authors = ["mark gutenberger <mark-gutenberger@outlook.com>"]
+authors = ["mark gutenberger <gutenfries@gmail.com>"]
 repository = "https://github.com/gutenfries/gutenfries.com"
 
 

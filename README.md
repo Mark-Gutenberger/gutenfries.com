@@ -10,15 +10,6 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-URL, forks-URL, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/gutenfries/gutenfries.com)]()
 [![GitHub Contributors](https://img.shields.io/github/contributors/gutenfries/gutenfries.com)](https://github.com/gutenfries/gutenfries.com/graphs/contributors)
 [![GitHub Stars](https://img.shields.io/github/stars/gutenfries/gutenfries.com)](https://github.com/gutenfries/gutenfries.com/stargazers)
@@ -27,79 +18,73 @@
 [![MIT License](https://img.shields.io/github/license/gutenfries/gutenfries.com.svg)](https://github.com/gutenfries/gutenfries.com/blob/main/LICENSE.md)
 [![deno-tests](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-tests.yml)
 [![rust-tests](https://github.com/gutenfries/gutenfries.com/actions/workflows/rust-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.com/actions/workflows/rust-tests.yml)
+[![made with fresh](static/images/fresh-badge-dark.svg)](https://fresh.deno.dev)
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-<a href="https://github.com/gutenfries/gutenfries.com">
-	<img src="static/icons/logo.svg" alt="Logo" width="80" height="80">
-</a>
-
-<h1 align="center">gutenfries.com</h1>
-
-<p align="center">
-Welcome to the repository for my site!
-	<br/>
-	<br/>
-	<a href="https://gutenfries.azurewebsites.net/">Production Delployment</a>
-	·
-	<a href="https://gutenfries.deno.dev">Preview Delployment</a>
-	·
-	<a href="https://github.com/gutenfries/gutenfries.com/issues">Report Bug</a>
-	·
-	<a href="https://github.com/gutenfries/gutenfries.com/issues">Request Feature</a>
-</p>
-</div>
+<center>
+	<a href="https://github.com/gutenfries/gutenfries.com">
+		<img src="static/icons/logo.svg" alt="Logo" width="80" height="80">
+	</a>
+	<h1 align="center">gutenfries.com</h1>
+	<p align="center">
+	Welcome to the repository for my site!
+		<br/>
+		<br/>
+		<a href="https://gutenfries.azurewebsites.net/">Production Delployment</a>
+		·
+		<a href="https://gutenfries.deno.dev">Preview Delployment</a>
+		·
+		<a href="https://github.com/gutenfries/gutenfries.com/issues">Report Bug</a>
+		·
+		<a href="https://github.com/gutenfries/gutenfries.com/issues">Request Feature</a>
+	</p>
+</center>
 
 <!-- TABLE OF CONTENTS -->
 <details>
-<summary>Table of Contents</summary>
-<ol>
-	<li>
-	<a href="#Overview">Overview</a>
-	<ul>
-		<li><a href="#built-with">Built With</a></li>
-	</ul>
-	</li>
-	<li>
-	<a href="#getting-started">Getting Started</a>
-	<ul>
-		<li><a href="#prerequisites">Prerequisites</a></li>
-		<li><a href="#installation">Installation</a></li>
-	</ul>
-	</li>
-	<li><a href="#usage">Usage</a></li>
-	<li><a href="#roadmap">Roadmap</a></li>
-	<li><a href="#contributing">Contributing</a></li>
-	<li><a href="#license">License</a></li>
-	<li><a href="#contact">Contact</a></li>
-	<li><a href="#acknowledgments">Acknowledgments</a></li>
-</ol>
+	<summary>Table of Contents</summary>
+	<ol>
+		<li>
+			<a href="#getting-started">Getting Started</a>
+			<ul>
+				<li><a href="#built-with">Built With</a></li>
+				<li><a href="#prerequisites">Prerequisites</a></li>
+				<li><a href="#installation">Installation</a></li>
+			</ul>
+		</li>
+		<li><a href="#usage">Usage</a></li>
+		<li><a href="#roadmap">Roadmap</a></li>
+		<li><a href="#contributing">Contributing</a></li>
+		<li><a href="#license">License</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#acknowledgments">Acknowledgments</a></li>
+	</ol>
 </details>
 
 <!-- Overview -->
 
 ## Overview
 
-![Product Name Screen Shot](static/images/screenshot.png)
+<!-- TODO(@gutenfries): add screenshot -->
 
-There are many great README templates available on GitHub; however, I didn't find one that suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+![gutenfries.com Screen Shot](static/images/screenshot.png)
 
-Here's why:
-
-- Your time should be focused on creating something amazing. A project that solves a problem and helps others
-- You shouldn't be doing the same tasks over and over like creating a README from scratch
-- You should implement DRY principles for the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more shortly. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people who have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+This is my website, built on [Fresh](https://fresh.deno.dev).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgments section. Here are a few examples.
+- [Deno](https://deno.land/) - A secure runtime for JavaScript and TypeScript
+- [Fresh](https://fresh.deno.dev) (Deno framework)
+- [Preact](https://preactjs.org/) (JSX Library)
+- [Tailwind CSS](https://tailwindcss.com/) ([Twind](https://twind.dev/)) (Styling)
+- [Azure](https://azure.microsoft.com/en-us/) (Production Deployment)
+- [GitHub Actions](https://github.com/featuers/actions) (CI/CD)
+- [Deno Deploy](https://deno.com/deploy) (Preview Deployment)
+- [Rust](https://www.rust-lang.org/) (wasm FFI)
+  - [wasm-bindgen](https://rustwasm.github.io/wasm-bindgen/) (wasm FFI tooling)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,39 +92,71 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Go ahead and clone the repo if you would like to be involved in development.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+The environment required to get rust working correctly for this use case can be quite tricky, especially on windows. With that said, these are the system prerequisites:
 
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+- [Rust](https://www.rust-lang.org/tools/install)
+
+You may or may not already have rust installed on your system, but you need to have the nightly toolchain installed. You can check if you have it installed by running:
+
+```sh
+rustup toolchain list
+```
+
+If you do not have the nightly toolchain installed, you can install it by running:
+
+```sh
+rustup toolchain install nightly
+```
+
+If you need to install rust, you can do so by running:
+
+```sh
+curl -sSf https://sh.rustup.rs | sh -s -- -y --nightly-toolchain 1.65.0
+export PATH="$PATH:/home/rust/.cargo/bin"
+```
+
+Additionally, you will need to install the wasm-bindgen-cli tooling. You can do so by running:
+
+```sh
+cargo install wasm-bindgen-cli
+```
+
+That _should_ take care of the rust requirements.
+I have found windows to be rather finicky with the rust environment, so if you run into issues, please let me know and I'll get back to you if I can help.
+
+- [Deno](https://deno.land/manual/getting_started/installation)
+
+Again, you may or may not already have deno installed on your system, You will need >v1.24.0 (v1.25.3 recommended) You can check if you have it installed by running:
+
+```sh
+deno --version
+```
+
+If you need to update deno, you can do so by running:
+
+```sh
+deno upgrade # will update to the latest stable version
+```
+
+If you do not have deno installed, you can install it by running:
+
+```sh
+curl -fsSL https://deno.land/x/install/install.sh | sh
+```
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Clone the repo
+1. Clone the repo.
 
    ```sh
    git clone https://github.com/gutenfries/gutenfries.com.git
    ```
 
-2. That's it. Loving deno yet?
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+2. There is no step two. _No_ dependency installation. Rust and Deno are God-tier languages.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,13 +164,21 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back-to-top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-  - [ ] Chinese
-  - [ ] Spanish
+- ### Done
+- [x] Modern gradient/glass card UI
+- [x] Modern repository structure
+- [x] CD with GitHub Actions & Deno Deploy
+- [x] CI testing
+- ### Partially Done
+- [ ] Tests
+  - [x] Typescript tests
+  - [x] Rust tests
+  - [ ] JSX/Preact tests
+- ### Planned
+- [ ] CD with GitHub Actions & Azure
+- [ ] Resume page
+- ### Potential
+- [ ] Blog
 
 See the [open issues](https://github.com/gutenfries/gutenfries.com/issues) for a full list of proposed features (and known issues).
 
@@ -163,7 +188,7 @@ See the [open issues](https://github.com/gutenfries/gutenfries.com/issues) for a
 
 ## Contributing
 
-Contributions are what makes the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are _**greatly appreciated**_.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -180,7 +205,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the GNU-GPL-v3.0 License. See `LICENSE.md` for more information.
+Open sourced under the GNU-GPL-v3.0 License. See `LICENSE.md` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,7 +213,13 @@ Distributed under the GNU-GPL-v3.0 License. See `LICENSE.md` for more informatio
 
 ## Contact
 
-Marcus Gutenberger - [@gutenfries](https://twitter.com/gutenfries) - mark-gutenberger@outlook.com
+Marcus Gutenberger
+
+<!-- TODO(@gutenfries): add this when appropriate -->
+<!-- -   [gutenfries.deno.dev](https://gutenfries.deno.dev) -->
+
+- [@gutenfries](https://twitter.com/gutenfries)
+- [gutenfries@gmail.com](mailto:gutenfries@gmail.com)
 
 Project Link: [https://github.com/gutenfries/gutenfries.com](https://github.com/gutenfires/gutenfries.com)
 
@@ -198,14 +229,15 @@ Project Link: [https://github.com/gutenfries/gutenfries.com](https://github.com/
 
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Helpful resources used to get this project off the ground:
 
-- [Choose an Open Source License](https://choosealicense.com)
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-- [Malven's Grid Cheatsheet](https://grid.malven.co/)
-- [Img Shields](https://shields.io)
-- [GitHub Pages](https://pages.github.com)
-- [React Icons](https://react-icons.github.io/react-icons/search)
+- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+- [Feather Icons](https://feathericons.com/)
+- [Fresh docs](https://fresh.deno.dev/docs)
+- [Preact docs](https://preactjs.com/guide/v10/getting-started)
+- [Deno docs](https://deno.land/manual)
+- [Deno Deploy docs](https://deno.com/deploy/docs)
+- [Rust docs](https://doc.rust-lang.org/book/)
+- [wasm-bindgen docs](https://rustwasm.github.io/wasm-bindgen/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
