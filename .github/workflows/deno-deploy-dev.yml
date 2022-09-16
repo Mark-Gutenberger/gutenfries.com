@@ -13,24 +13,24 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
 
-      - name: Install rust nightly toolchain (with wasm32-unknown-unknown target)
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: nightly
-          target: wasm32-unknown-unknown
-          override: true
-
-      - name: Setup Deno
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: canary # v1.25.0
-
-      - name: Install wasm-bindgen
-        run: cargo install wasm-bindgen-cli
-
-      - name: Build
-        run: deno task build
-
+        #   - name: Install rust nightly toolchain (with wasm32-unknown-unknown target)
+        # uses: actions-rs/toolchain@v1
+        # with:
+        #   toolchain: nightly
+        #   target: wasm32-unknown-unknown
+        #   override: true
+        #
+        #   - name: Setup Deno
+        # uses: denoland/setup-deno@v1
+        # with:
+        #   deno-version: canary # v1.25.0
+        #
+        #   - name: Install wasm-bindgen
+        # run: cargo install wasm-bindgen-cli
+        #
+        #   - name: Build
+        # run: deno task build
+        #
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
