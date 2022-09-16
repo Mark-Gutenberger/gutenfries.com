@@ -205,7 +205,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Open sourced under the GNU-GPL-v3.0 License. See `LICENSE.md` for more information.
+Open sourced under the MIT License. See ![LICENSE.md](https://github.com/gutenfries/gutenfries.com/blob/main/LICENSE.md) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
