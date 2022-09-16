@@ -13,10 +13,11 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
 
-      - name: Install rust nightly toolchain
+      - name: Install rust nightly toolchain (with wasm32-unknown-unknown target)
         uses: actions-rs/toolchain@v1
         with:
           toolchain: nightly
+          target: wasm32-unknown-unknown
           override: true
 
       - name: Setup Deno
