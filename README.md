@@ -18,6 +18,7 @@
 [![MIT License](https://img.shields.io/github/license/gutenfries/gutenfries.com.svg)](https://github.com/gutenfries/gutenfries.com/blob/main/LICENSE.md)
 [![deno-tests](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-tests.yml)
 [![rust-tests](https://github.com/gutenfries/gutenfries.com/actions/workflows/rust-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.com/actions/workflows/rust-tests.yml)
+[![Production](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-deploy-dev.yml/badge.svg)](https://gutenfries.deno.dev)
 [![made with fresh](static/images/fresh-badge-dark.svg)](https://fresh.deno.dev)
 
 <!-- PROJECT LOGO -->
