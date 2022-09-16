@@ -1,11 +1,7 @@
+import { ComponentChildren } from 'preact';
+
 interface GlassCardProps {
-	children?:
-		| preact.AnyComponent[]
-		| preact.AnyComponent
-		| preact.VNode[]
-		| preact.VNode
-		| Element[]
-		| Element;
+	children?: ComponentChildren;
 }
 
 const GlassCard = ({ children }: GlassCardProps) => {

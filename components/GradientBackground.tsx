@@ -1,14 +1,9 @@
 import { random_tw_colors } from '@/wasm/wasm.js';
 import { parseColors } from '@/rust/background_generator/typescript/parseColors.ts';
+import { ComponentChildren } from 'preact';
 
 interface GradientBackgroundProps {
-	children?:
-		| preact.AnyComponent[]
-		| preact.AnyComponent
-		| preact.VNode[]
-		| preact.VNode
-		| Element[]
-		| Element;
+	children?: ComponentChildren;
 }
 
 const GradientBackground = ({ children }: GradientBackgroundProps) => {

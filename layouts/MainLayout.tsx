@@ -4,16 +4,11 @@ import { Navbar } from '@/components/Navbar.tsx';
 import { GradientBackground } from '@/components/GradientBackground.tsx';
 import { App } from '@/components/App.tsx';
 import { GlassCard } from '@/components/GlassCard.tsx';
+import { ComponentChildren } from 'preact';
 
 interface MainLayoutProps {
 	pageProps_: PageProps;
-	children?:
-		| preact.AnyComponent[]
-		| preact.AnyComponent
-		| preact.VNode[]
-		| preact.VNode
-		| Element[]
-		| Element;
+	children?: ComponentChildren;
 }
 
 function MainLayout({ pageProps_, children }: MainLayoutProps) {
