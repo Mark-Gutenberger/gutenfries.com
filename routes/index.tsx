@@ -1,3 +1,6 @@
+/** @jsx h */
+import { h } from 'preact';
+
 function Index() {
 	return (
 		<script>
