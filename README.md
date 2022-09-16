@@ -22,7 +22,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<center>
+<div align="center">
 	<a href="https://github.com/gutenfries/gutenfries.com">
 		<img src="static/icons/logo.svg" alt="Logo" width="80" height="80">
 	</a>
@@ -39,7 +39,7 @@
 		·
 		<a href="https://github.com/gutenfries/gutenfries.com/issues">Request Feature</a>
 	</p>
-</center>
+</div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
