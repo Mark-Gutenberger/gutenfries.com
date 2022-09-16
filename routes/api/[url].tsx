@@ -1,4 +1,7 @@
-import { Handlers, UnknownPageProps } from '$fresh/server.ts';
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { Fragment, h } from 'preact';
+import { UnknownPageProps } from '$fresh/server.ts';
 import { readJson } from '@/utils/json.ts';
 
 const denoJson = await readJson('./deno.json');

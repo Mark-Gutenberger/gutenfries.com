@@ -1,3 +1,5 @@
+/** @jsx h */
+import { h } from 'preact';
 import { random_tw_colors } from '@/wasm/wasm.js';
 import { parseColors } from '@/rust/background_generator/typescript/parseColors.ts';
 import { ComponentChildren } from 'preact';

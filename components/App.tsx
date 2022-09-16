@@ -1,3 +1,6 @@
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { Fragment, h } from 'preact';
 import { ComponentChildren } from 'preact';
 
 interface AppProps {

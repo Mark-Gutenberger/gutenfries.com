@@ -1,3 +1,5 @@
+/** @jsx h */
+import { h } from 'preact';
 import { PageProps } from '$fresh/server.ts';
 
 interface NavbarProps {

@@ -1,3 +1,5 @@
+/** @jsx h */
+import { h } from 'preact';
 import { ComponentChildren } from 'preact';
 
 interface GlassCardProps {

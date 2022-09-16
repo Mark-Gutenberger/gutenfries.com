@@ -1,3 +1,6 @@
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { Fragment, h } from 'preact';
 import { Handlers, PageProps } from '$fresh/server.ts';
 
 interface User {
@@ -24,11 +27,11 @@ const Page = ({ data }: PageProps<User | null>) => {
 	}
 
 	return (
-		<div>
+		<>
 			<img src={data.avatar_url} width={64} height={64} />
 			<h1>{data.name}</h1>
 			<p>{data.login}</p>
-		</div>
+		</>
 	);
 };
 

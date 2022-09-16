@@ -14,10 +14,6 @@
 		"docker-tag": "docker tag gutenfries.com gutenfries.azurecr.io/gutenfries.com:$(deno run -A ./utils/version.ts)",
 		"docker-push": "echo 'you have to do this by hand'"
 	},
-	"compilerOptions": {
-		"jsx": "react-jsx",
-		"jsxImportSource": "preact"
-	},
 	"importMap": "import_map.json",
 	"lint": {
 		"rules": {
@@ -26,7 +22,7 @@
 			"exclude": ["no-unused-vars"]
 		},
 		"files": {
-			"exclude": ["static/", "target/", "bindings/"]
+			"exclude": ["static/", "target/", "wasm/"]
 		}
 	},
 	"fmt": {
