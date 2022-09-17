@@ -25,6 +25,17 @@ function Head({ pageProps_ }: HeadProps) {
 
 			<link rel='icon' href={asset('/icons/favicon.ico')}></link>
 
+			{/* if your browser supports it, why not? */}
+
+			{/* Chrome, Firefox OS and Opera */}
+			<meta name='theme-color' content='#5f5eaa' />
+			{/* Windows Phone */}
+			<meta name='msapplication-navbutton-color' content='#5f5eaa' />
+			<meta name='msapplication-TileColor' content='#5f5eaa' />
+			{/* iOS Safari */}
+			<meta name='apple-mobile-web-app-capable' content='yes' />
+			<meta name='apple-mobile-web-app-status-bar-style' content='#5f5eaa' />
+
 			{/* Open Graph meta data */}
 			<meta
 				name='description'
@@ -41,7 +52,7 @@ function Head({ pageProps_ }: HeadProps) {
 			<meta property='og:type' content='website' />
 			<meta property='og:url' content={pageProps_.url.href} />
 			<meta property='og:image' content={ogImageUrl} />
-			{/* end Open Graph meta data */}
+
 			{/* google fonts */}
 			<link rel='preconnect' href='https://fonts.googleapis.com'></link>
 			<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true'></link>
@@ -50,13 +61,9 @@ function Head({ pageProps_ }: HeadProps) {
 				rel='stylesheet'
 			>
 			</link>
-			{/* end google fonts */}
+
 			{/* client-side stylesheets */}
 			<link rel='stylesheet' href={asset('/global.css')}></link>
-			{/* end client-side stylesheets */}
-			{/* client-side scripts */}
-			<script src={asset('/icons/feather.min.js')}></script>
-			{/* edn client-side scripts */}
 		</FreshHead>
 	);
 }

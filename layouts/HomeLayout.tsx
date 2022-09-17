@@ -1,34 +1,37 @@
 /** @jsx h */
-import { h } from 'preact';
+/** @jsxFrag Fragment */
+import { Fragment, h } from 'preact';
 import { PageProps } from '$fresh/server.ts';
 import { Head } from '@/components/Head.tsx';
 import { Navbar } from '@/components/Navbar.tsx';
 import { GradientBackground } from '@/components/GradientBackground.tsx';
-import { App } from '@/components/App.tsx';
 import { GlassCard } from '@/components/GlassCard.tsx';
 import { ComponentChildren } from 'preact';
 
-interface MainLayoutProps {
+interface HomeLayoutProps {
 	pageProps_: PageProps;
 	children?: ComponentChildren;
 }
 
-function MainLayout({ pageProps_, children }: MainLayoutProps) {
+function HomeLayout({ pageProps_, children }: HomeLayoutProps) {
 	return (
-		<App>
-			<Head pageProps_={pageProps_} />
-			<main
+		<>
+			{/* EWWW, a div? already?? sorry folks, it had to be done... */}
+			<div
 				className={`overscroll-none ${`font-rounded`} pointer-events-auto h-screen w-screen`}
 			>
-				<Navbar pageProps_={pageProps_} />
-				<GradientBackground>
-					<GlassCard>
-						{children}
-					</GlassCard>
-				</GradientBackground>
-			</main>
-		</App>
+				<Head pageProps_={pageProps_} />
+				<main>
+					<Navbar pageProps_={pageProps_} />
+					<GradientBackground>
+						<GlassCard>
+							{children}
+						</GlassCard>
+					</GradientBackground>
+				</main>
+			</div>
+		</>
 	);
 }
 
-export { MainLayout };
+export { HomeLayout };

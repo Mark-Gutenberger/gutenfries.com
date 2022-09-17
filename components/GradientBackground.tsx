@@ -16,7 +16,7 @@ const GradientBackground = ({ children }: GradientBackgroundProps) => {
 		<div
 			className={`${`background-animate`} bg-gradient-to-r
 				from-${BgColors[0]} via-${BgColors[1]} to-${BgColors[2]}
-				p-2.5 grid place-items-center h-screen w-screen`}
+				flex items-center place-content-center p-5 pt-[6.25rem] h-screen w-screen`}
 		>
 			{children}
 		</div>

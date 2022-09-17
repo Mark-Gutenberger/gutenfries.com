@@ -32,9 +32,7 @@
 	Welcome to the repository for my site!
 		<br/>
 		<br/>
-		<a href="https://gutenfries.azurewebsites.net/">Production Delployment</a>
-		·
-		<a href="https://gutenfries.deno.dev">Preview Delployment</a>
+		<a href="https://gutenfries.deno.dev">Production</a>
 		·
 		<a href="https://github.com/gutenfries/gutenfries.com/issues">Report Bug</a>
 		·
@@ -78,12 +76,11 @@ This is my website, built on [Fresh](https://fresh.deno.dev).
 ### Built With
 
 - [Deno](https://deno.land/) - A secure runtime for JavaScript and TypeScript
+- [Deno Deploy](https://deno.com/deploy) (Deployment)
 - [Fresh](https://fresh.deno.dev) (Deno framework)
 - [Preact](https://preactjs.org/) (JSX Library)
 - [Tailwind CSS](https://tailwindcss.com/) ([Twind](https://twind.dev/)) (Styling)
-- [Azure](https://azure.microsoft.com/en-us/) (Production Deployment)
 - [GitHub Actions](https://github.com/featuers/actions) (CI/CD)
-- [Deno Deploy](https://deno.com/deploy) (Preview Deployment)
 - [Rust](https://www.rust-lang.org/) (wasm FFI)
   - [wasm-bindgen](https://rustwasm.github.io/wasm-bindgen/) (wasm FFI tooling)
 
@@ -176,8 +173,9 @@ curl -fsSL https://deno.land/x/install/install.sh | sh
   - [x] Rust tests
   - [ ] JSX/Preact tests
 - ### Planned
-- [ ] CD with GitHub Actions & Azure
+- [ ] Search engine
 - [ ] Resume page
+- [ ] SEO
 - ### Potential
 - [ ] Blog
 
@@ -233,7 +231,7 @@ Project Link: [https://github.com/gutenfries/gutenfries.com](https://github.com/
 Helpful resources used to get this project off the ground:
 
 - [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-- [Feather Icons](https://feathericons.com/)
+- [Octo Icons](https://primer.style/octicons/)
 - [Fresh docs](https://fresh.deno.dev/docs)
 - [Preact docs](https://preactjs.com/guide/v10/getting-started)
 - [Deno docs](https://deno.land/manual)
