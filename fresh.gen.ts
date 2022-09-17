@@ -16,6 +16,8 @@ import * as $9 from './routes/api/v1/version.ts';
 import * as $10 from './routes/api/v1/wasm.ts';
 import * as $11 from './routes/home.tsx';
 import * as $12 from './routes/index.tsx';
+import * as $$0 from './islands/CopyArea.tsx';
+import * as $$1 from './islands/SearchBar.tsx';
 
 const manifest = {
 	routes: {
@@ -33,7 +35,10 @@ const manifest = {
 		'./routes/home.tsx': $11,
 		'./routes/index.tsx': $12,
 	},
-	islands: {},
+	islands: {
+		'./islands/CopyArea.tsx': $$0,
+		'./islands/SearchBar.tsx': $$1,
+	},
 	baseUrl: import.meta.url,
 	config,
 };

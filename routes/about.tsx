@@ -1,11 +1,11 @@
 /** @jsx h */
 import { h } from 'preact';
-import { MainLayout } from '@/layouts/MainLayout.tsx';
+import { HomeLayout } from '@/layouts/HomeLayout.tsx';
 import { PageProps } from '$fresh/server.ts';
 
 function AboutPage(pageProps_: PageProps) {
 	return (
-		<MainLayout
+		<HomeLayout
 			pageProps_={pageProps_}
 		>
 			<br></br>
@@ -15,7 +15,7 @@ function AboutPage(pageProps_: PageProps) {
 				live TV? That's insane! You don't have that? We have Hivo, but it's a disease. It's
 				a horrible, horrible disease.
 			</p>
-		</MainLayout>
+		</HomeLayout>
 	);
 }
 

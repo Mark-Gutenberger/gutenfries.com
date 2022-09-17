@@ -1,11 +1,11 @@
 /** @jsx h */
 import { h } from 'preact';
-import { MainLayout } from '@/layouts/MainLayout.tsx';
+import { HomeLayout } from '@/layouts/HomeLayout.tsx';
 import { PageProps } from '$fresh/server.ts';
 
 function Home(pageProps_: PageProps) {
 	return (
-		<MainLayout
+		<HomeLayout
 			pageProps_={pageProps_}
 		>
 			<p>
@@ -19,7 +19,7 @@ function Home(pageProps_: PageProps) {
 				culpa, aliquid quibusdam id fugiat numquam! Consectetur, ad dignissimos.
 				<br />
 			</p>
-		</MainLayout>
+		</HomeLayout>
 	);
 }
 
