@@ -45,10 +45,8 @@ function Navbar({ pageProps_ }: NavbarProps) {
 						key={item.name}
 						href={item.href}
 						className={classNames(
-							item.current
-								? 'bg-gray-900 text-white'
-								: 'text-gray-300 hover:bg-gray-700 hover:text-white',
-							'rounded-md text-md font-medium p-3 mx-1 sm:inline-block',
+							item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+							'rounded-md text-md font-medium p-3 mx-1 sm:inline-block'
 						)}
 						aria-current={item.current ? 'page' : undefined}
 					>
