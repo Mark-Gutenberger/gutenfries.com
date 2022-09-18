@@ -4,29 +4,27 @@ import { Fragment, h } from 'preact';
 import { PageProps } from '$fresh/server.ts';
 import { Head } from '@/components/Head.tsx';
 import { Navbar } from '@/components/Navbar.tsx';
-import { GradientBackground } from '@/components/GradientBackground.tsx';
-import { GlassCard } from '@/components/GlassCard.tsx';
 import { ComponentChildren } from 'preact';
 
-interface HomeLayoutProps {
+interface ResumeLayoutProps {
 	pageProps_: PageProps;
 	children?: ComponentChildren;
 }
 
-function HomeLayout({ pageProps_, children }: HomeLayoutProps) {
+function ResumeLayout({ pageProps_, children }: ResumeLayoutProps) {
 	return (
 		<>
-			<div className={`overscroll-none ${`font-rounded`} pointer-events-auto h-screen w-screen`}>
+			<div
+				className={`overscroll-none ${`font-rounded`} pointer-events-auto h-screen w-screen`}
+			>
 				<Head pageProps_={pageProps_} />
 				<main>
 					<Navbar pageProps_={pageProps_} />
-					<GradientBackground>
-						<GlassCard>{children}</GlassCard>
-					</GradientBackground>
+					{children}
 				</main>
 			</div>
 		</>
 	);
 }
 
-export { HomeLayout };
+export { ResumeLayout };
