@@ -14,9 +14,11 @@ import * as $7 from './routes/api/v1/random-uuid.ts';
 import * as $8 from './routes/api/v1/theme-generator.ts';
 import * as $9 from './routes/api/v1/version.ts';
 import * as $10 from './routes/api/v1/wasm.ts';
-import * as $11 from './routes/home.tsx';
-import * as $12 from './routes/index.tsx';
-import * as $$0 from './islands/CopyArea.tsx';
+import * as $11 from './routes/contact.tsx';
+import * as $12 from './routes/home.tsx';
+import * as $13 from './routes/index.tsx';
+import * as $14 from './routes/resume.tsx';
+import * as $$0 from './islands/CalendlyWidget.tsx';
 import * as $$1 from './islands/SearchBar.tsx';
 
 const manifest = {
@@ -32,11 +34,13 @@ const manifest = {
 		'./routes/api/v1/theme-generator.ts': $8,
 		'./routes/api/v1/version.ts': $9,
 		'./routes/api/v1/wasm.ts': $10,
-		'./routes/home.tsx': $11,
-		'./routes/index.tsx': $12,
+		'./routes/contact.tsx': $11,
+		'./routes/home.tsx': $12,
+		'./routes/index.tsx': $13,
+		'./routes/resume.tsx': $14,
 	},
 	islands: {
-		'./islands/CopyArea.tsx': $$0,
+		'./islands/CalendlyWidget.tsx': $$0,
 		'./islands/SearchBar.tsx': $$1,
 	},
 	baseUrl: import.meta.url,

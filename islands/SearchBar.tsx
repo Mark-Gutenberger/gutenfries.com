@@ -18,7 +18,7 @@ function SearchBar() {
 									<svg
 										name='Search'
 										strokeWidth='2'
-										className='fill-current text-gray-500 cursor-pointer dark:text-gray-400'
+										className='fill-current text-gray-500 cursor-pointer dark:text-gray-300'
 										xmlns='http://www.w3.org/2000/svg'
 										viewBox='0 0 24 24'
 										width='24'
@@ -34,7 +34,7 @@ function SearchBar() {
 								<input
 									id='voice-search'
 									type='text'
-									className='min-w-full bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+									className='min-w-full bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
 									placeholder='Search for anything...'
 									required
 								/>

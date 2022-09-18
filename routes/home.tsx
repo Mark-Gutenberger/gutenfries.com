@@ -3,7 +3,7 @@ import { h } from 'preact';
 import { HomeLayout } from '@/layouts/HomeLayout.tsx';
 import { PageProps } from '$fresh/server.ts';
 
-function Home(pageProps_: PageProps) {
+function HomePage(pageProps_: PageProps) {
 	return (
 		<HomeLayout
 			pageProps_={pageProps_}
@@ -23,4 +23,4 @@ function Home(pageProps_: PageProps) {
 	);
 }
 
-export default Home;
+export default HomePage;
