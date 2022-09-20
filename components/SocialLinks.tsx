@@ -48,7 +48,7 @@ function SocialLinks() {
 			</a>
 			<a
 				className='mx-1.5 outline-none text-gray-300 hover:bg-green-700 hover:shadow-2xl hover:text-white p-2.5 rounded-md text-3xl'
-				href='peerlist.io/gutenfries'
+				href='https://peerlist.io/gutenfries'
 				target='_blank'
 				rel='noopener noreferrer'
 			>
