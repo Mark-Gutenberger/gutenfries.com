@@ -19,7 +19,8 @@ import * as $12 from './routes/home.tsx';
 import * as $13 from './routes/index.tsx';
 import * as $14 from './routes/resume.tsx';
 import * as $$0 from './islands/CalendlyWidget.tsx';
-import * as $$1 from './islands/SearchBar.tsx';
+import * as $$1 from './islands/GradientBackground.tsx';
+import * as $$2 from './islands/SearchBar.tsx';
 
 const manifest = {
 	routes: {
@@ -41,7 +42,8 @@ const manifest = {
 	},
 	islands: {
 		'./islands/CalendlyWidget.tsx': $$0,
-		'./islands/SearchBar.tsx': $$1,
+		'./islands/GradientBackground.tsx': $$1,
+		'./islands/SearchBar.tsx': $$2,
 	},
 	baseUrl: import.meta.url,
 	config,

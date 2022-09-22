@@ -38,15 +38,17 @@ function Navbar({ pageProps_ }: NavbarProps) {
 	// }
 
 	return (
-		<header className='flex absolute w-full shadow-lg p-4 bg-gray-800'>
+		<header className='flex absolute w-full shadow-lg p-4 bg-gray-800 z-10'>
 			<nav className='h-auto flex justify-start text-gray-300 text-xl border-none'>
 				{routes.map((item) => (
 					<a
 						key={item.name}
 						href={item.href}
 						className={classNames(
-							item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-							'rounded-md text-md font-medium p-3 mx-1 sm:inline-block'
+							item.current
+								? 'bg-gray-900 text-white'
+								: 'text-gray-300 hover:bg-gray-700 hover:text-white',
+							'rounded-md text-md font-medium p-3 mx-1 sm:inline-block',
 						)}
 						aria-current={item.current ? 'page' : undefined}
 					>
