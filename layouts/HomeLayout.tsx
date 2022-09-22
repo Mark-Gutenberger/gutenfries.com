@@ -4,7 +4,7 @@ import { Fragment, h } from 'preact';
 import { PageProps } from '$fresh/server.ts';
 import { Head } from '@/components/Head.tsx';
 import { Navbar } from '@/components/Navbar.tsx';
-import GradientBackground from '@/islands/GradientBackground.tsx';
+import { GradientBackground } from '@/components/GradientBackground.tsx';
 import { GlassCard } from '@/components/GlassCard.tsx';
 import { ComponentChildren } from 'preact';
 
