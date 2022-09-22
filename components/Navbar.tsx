@@ -38,7 +38,7 @@ function Navbar({ pageProps_ }: NavbarProps) {
 	// }
 
 	return (
-		<header className='flex absolute w-full shadow-lg p-4 bg-gray-800'>
+		<header className='flex absolute w-full shadow-lg p-4 bg-gray-800 z-10'>
 			<nav className='h-auto flex justify-start text-gray-300 text-xl border-none'>
 				{routes.map((item) => (
 					<a
