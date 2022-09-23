@@ -4,7 +4,7 @@
 
 		"$fresh/": "https://deno.land/x/fresh@1.1.1/",
 		"$std/": "https://deno.land/std@0.150.0/",
-		"testing/": "https://deno.land/std@0.150.0/testing/",
+		"$testing/": "https://deno.land/std@0.150.0/testing/",
 
 		"preact": "https://esm.sh/preact@10.11.0",
 		"preact/": "https://esm.sh/preact@10.11.0/",
@@ -12,6 +12,8 @@
 		"@preact/signal-core": "https://esm.sh/*@preact/signals-core@1.0.1",
 
 		"twind": "https://esm.sh/twind@0.16.17",
-		"twind/": "https://esm.sh/twind@0.16.17/"
+		"twind/": "https://esm.sh/twind@0.16.17/",
+
+		"rusty_markdown": "https://deno.land/x/rusty_markdown@v0.4.1/mod.ts"
 	}
 }

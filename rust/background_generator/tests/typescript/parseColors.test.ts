@@ -1,5 +1,5 @@
 import { parseColors } from '@/rust/background_generator/typescript/parseColors.ts';
-import { assert, assertEquals } from 'testing/asserts.ts';
+import { assert, assertEquals } from '$testing/asserts.ts';
 
 Deno.test({
 	name: '`parseColors()` unit test',

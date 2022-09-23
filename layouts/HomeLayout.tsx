@@ -16,13 +16,14 @@ interface HomeLayoutProps {
 function HomeLayout({ pageProps_, children }: HomeLayoutProps) {
 	return (
 		<>
-			<div className={`overscroll-none ${`font-rounded`} pointer-events-auto h-screen w-screen`}>
+			<div
+				className={`overscroll-none ${`font-rounded`} pointer-events-auto h-screen w-screen`}
+			>
 				<Head pageProps_={pageProps_} />
 				<main>
 					<Navbar pageProps_={pageProps_} />
-					<GradientBackground>
-						<GlassCard>{children}</GlassCard>
-					</GradientBackground>
+					<GradientBackground />
+					<GlassCard>{children}</GlassCard>
 				</main>
 			</div>
 		</>

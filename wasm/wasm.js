@@ -187,35 +187,35 @@ const imports = {
 				getObject(arg0).randomFillSync(getArrayU8FromWasm0(arg1, arg2));
 			}, arguments);
 		},
-		__wbg_newnoargs_e1ddb03293334932: function (arg0, arg1) {
+		__wbg_newnoargs_b5b063fc6c2f0376: function (arg0, arg1) {
 			const ret = new Function(getStringFromWasm0(arg0, arg1));
 			return addHeapObject(ret);
 		},
-		__wbg_call_a6fa88c3302e8ad5: function () {
+		__wbg_call_97ae9d8645dc388b: function () {
 			return handleError(function (arg0, arg1) {
 				const ret = getObject(arg0).call(getObject(arg1));
 				return addHeapObject(ret);
 			}, arguments);
 		},
-		__wbg_self_14408afdb5c69451: function () {
+		__wbg_self_6d479506f72c6a71: function () {
 			return handleError(function () {
 				const ret = self.self;
 				return addHeapObject(ret);
 			}, arguments);
 		},
-		__wbg_window_75b1f6151d589837: function () {
+		__wbg_window_f2557cc78490aceb: function () {
 			return handleError(function () {
 				const ret = window.window;
 				return addHeapObject(ret);
 			}, arguments);
 		},
-		__wbg_globalThis_e2d2385b94c810da: function () {
+		__wbg_globalThis_7f206bda628d5286: function () {
 			return handleError(function () {
 				const ret = globalThis.globalThis;
 				return addHeapObject(ret);
 			}, arguments);
 		},
-		__wbg_global_3c19477360f9b641: function () {
+		__wbg_global_ba75c50d1cf384f4: function () {
 			return handleError(function () {
 				const ret = global.global;
 				return addHeapObject(ret);
@@ -225,26 +225,26 @@ const imports = {
 			const ret = getObject(arg0) === undefined;
 			return ret;
 		},
-		__wbg_buffer_e8e1791d59230f6e: function (arg0) {
+		__wbg_buffer_3f3d764d4747d564: function (arg0) {
 			const ret = getObject(arg0).buffer;
 			return addHeapObject(ret);
 		},
-		__wbg_new_d256fd368dc8455c: function (arg0) {
+		__wbg_new_8c3f0052272a457a: function (arg0) {
 			const ret = new Uint8Array(getObject(arg0));
 			return addHeapObject(ret);
 		},
-		__wbg_set_ff6a229de2633e38: function (arg0, arg1, arg2) {
+		__wbg_set_83db9690f9353e79: function (arg0, arg1, arg2) {
 			getObject(arg0).set(getObject(arg1), arg2 >>> 0);
 		},
-		__wbg_length_8c589b0fd9987662: function (arg0) {
+		__wbg_length_9e1ae1900cb0fbd5: function (arg0) {
 			const ret = getObject(arg0).length;
 			return ret;
 		},
-		__wbg_newwithlength_dc0752ff6d0d8cc2: function (arg0) {
+		__wbg_newwithlength_f5933855e4f48a19: function (arg0) {
 			const ret = new Uint8Array(arg0 >>> 0);
 			return addHeapObject(ret);
 		},
-		__wbg_subarray_fbf3eb17f25d3dd4: function (arg0, arg1, arg2) {
+		__wbg_subarray_58ad4efbb5bcb886: function (arg0, arg1, arg2) {
 			const ret = getObject(arg0).subarray(arg1 >>> 0, arg2 >>> 0);
 			return addHeapObject(ret);
 		},

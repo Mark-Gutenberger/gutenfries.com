@@ -25,3 +25,24 @@ body {
 		background-position: 100% 50%;
 	}
 }
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-color: #3b82f6 /* blue-500 */ white;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+	background: white;
+	border-radius: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #3b82f6 /* blue-500 */;
+	border-radius: 6px;
+}

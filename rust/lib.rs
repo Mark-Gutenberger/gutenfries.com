@@ -33,21 +33,15 @@
 extern crate wasm_bindgen;
 
 pub mod background_generator;
-pub mod markdown_parser;
 mod printf;
 
 pub mod rust {
 	extern crate wasm_bindgen;
 
-	use wasm_bindgen::prelude::*;
-
-	use crate::printf::printf;
-
-	#[wasm_bindgen]
-	pub fn greet(name: &str) {
-		printf!("Hello from {}!", name);
-	}
-
+	/*
 	#[wasm_bindgen(start)]
-	pub fn main() {}
+	pub fn main() {
+		printf!("main entrypoint");
+	}
+	*/
 }

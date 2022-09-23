@@ -37,3 +37,21 @@ const ErrorNoVersion = ({ url }: UnknownPageProps) => {
 };
 
 export default ErrorNoVersion;
+
+/*
+call a local api like so:
+	useEffect(() => {
+		const getTheme = async () => {
+			const url = `/api/${API_VERSION}/theme-generator`;
+			const response = await fetch(url);
+
+			try {
+				const data: string[] = await response.json();
+				setTheme(data);
+			} catch (e) {
+				console.log(e);
+			}
+		};
+		getTheme();
+	}, []);
+*/

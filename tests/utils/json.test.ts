@@ -1,5 +1,5 @@
 import { readJson, writeJson } from '@/utils/json.ts';
-import { assertEquals } from 'testing/asserts.ts';
+import { assertEquals } from '$testing/asserts.ts';
 
 Deno.test({
 	name: '`readJson()` unit test',

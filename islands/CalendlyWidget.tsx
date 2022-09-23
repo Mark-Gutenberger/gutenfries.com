@@ -10,7 +10,7 @@ interface CalendlyWidgetProps {
 }
 
 function CalendlyWidget({ minWidth, height, url }: CalendlyWidgetProps) {
-	const [isExpanded, setIsExpanded] = useState(false);
+	const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
 	// if minWidth or height is a number, convert it to a string with 'px' at the end
 	minWidth = typeof minWidth === 'number' ? `${minWidth}px` : minWidth;

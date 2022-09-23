@@ -1,6 +1,6 @@
 import { version } from '@/utils/version.ts';
 import { readJson } from '@/utils/json.ts';
-import { assertEquals } from 'testing/asserts.ts';
+import { assertEquals } from '$testing/asserts.ts';
 
 Deno.test({
 	name: '`version` unit test',

@@ -1,5 +1,5 @@
 import { body } from '@/routes/api/v1/theme-generator.ts';
-import { assert } from 'testing/asserts.ts';
+import { assert } from '$testing/asserts.ts';
 import * as colors from 'twind/colors';
 
 Deno.test({
