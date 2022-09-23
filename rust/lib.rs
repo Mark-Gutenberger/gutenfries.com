@@ -33,14 +33,10 @@
 extern crate wasm_bindgen;
 
 pub mod background_generator;
-pub mod markdown_parser;
 mod printf;
 
 pub mod rust {
 	extern crate wasm_bindgen;
-	use wasm_bindgen::prelude::*;
-
-	use crate::printf::printf;
 
 	/*
 	#[wasm_bindgen(start)]

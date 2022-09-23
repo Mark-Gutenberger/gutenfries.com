@@ -1,4 +1,4 @@
-import { assert } from 'testing/asserts.ts';
+import { assert } from '$testing/asserts.ts';
 import { body } from '@/routes/api/v1/random-uuid.ts';
 import { v4 } from '$std/uuid/mod.ts';
 

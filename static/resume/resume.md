@@ -19,13 +19,13 @@
 [![deno-tests](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-tests.yml)
 [![rust-tests](https://github.com/gutenfries/gutenfries.com/actions/workflows/rust-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.com/actions/workflows/rust-tests.yml)
 [![Production](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-deploy-dev.yml/badge.svg)](https://gutenfries.deno.dev)
-[![made with fresh](static/images/fresh-badge-dark.svg)](https://fresh.deno.dev)
+[![made with fresh](../images/fresh-badge-dark.svg)](https://fresh.deno.dev)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
 	<a href="https://github.com/gutenfries/gutenfries.com">
-		<img src="static/icons/logo.svg" alt="Logo" width="80" height="80">
+		<img src="../icons/logo.svg" alt="Logo" width="80" height="80">
 	</a>
 	<h1 align="center">gutenfries.com</h1>
 	<p align="center">
@@ -67,7 +67,7 @@
 
 <!-- TODO(@gutenfries): add screenshot -->
 
-![gutenfries.com Screen Shot](static/images/screenshot.png)
+![gutenfries.com Screen Shot](../images/screenshot.png)
 
 This is my website, built on [Fresh](https://fresh.deno.dev).
 

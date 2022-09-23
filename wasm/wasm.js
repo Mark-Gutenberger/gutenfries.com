@@ -100,25 +100,6 @@ function getInt32Memory0() {
 	return cachedInt32Memory0;
 }
 /**
- * @param {string} input
- * @returns {string}
- */
-export function parse_markdown(input) {
-	try {
-		const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-		const ptr0 = passStringToWasm0(input, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-		const len0 = WASM_VECTOR_LEN;
-		wasm.parse_markdown(retptr, ptr0, len0);
-		var r0 = getInt32Memory0()[retptr / 4 + 0];
-		var r1 = getInt32Memory0()[retptr / 4 + 1];
-		return getStringFromWasm0(r0, r1);
-	} finally {
-		wasm.__wbindgen_add_to_stack_pointer(16);
-		wasm.__wbindgen_free(r0, r1);
-	}
-}
-
-/**
  * wraps `random_tw_colors_internal` function
  * @param {number} n
  * @param {number} tolerance
