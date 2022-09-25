@@ -26,26 +26,26 @@ function Resume() {
 	const rendered = html(tokenized);
 
 	return (
-		<div className='bg-gray-200'>
-			<div className='top-0 flex items-center place-content-center p-5 pt-[6.25rem] h-screen w-screen'>
-				<div className='p-2.5 w-full h-full flex flex-col relative w-full rounded-xl'>
-					{rendered && (
-						<>
-							<link
-								rel='stylesheet'
-								href={asset('/resume/github-markdown.css')}
-							/>
+		<>
+			<link
+				rel='stylesheet'
+				href={asset('/resume/github-markdown.css')}
+			/>
+			<div className='bg-gray-200'>
+				<div className='top-0 flex items-center place-content-center p-5 pt-[6.25rem] h-screen w-screen'>
+					<div className='p-2.5 w-full h-full flex flex-col relative w-full rounded-xl'>
+						{rendered && (
 							<div className='w-full h-full flex flex-col overflow-y-auto relative w-full rounded-md shadow-2xl'>
 								<article
 									className={`${'markdown-body'} p-2.5 rounded-md`}
 									dangerouslySetInnerHTML={{ __html: rendered }}
 								/>
 							</div>
-						</>
-					)}
+						)}
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 export default Resume;
