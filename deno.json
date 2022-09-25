@@ -6,8 +6,7 @@
 		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen",
 		"production": "deno task build; deno task start",
 		"start": "deno run -A --unstable main.ts",
-		"build": "cargo build --target wasm32-unknown-unknown --release; mkdir -p wasm; wasm-bindgen ./target/wasm32-unknown-unknown/release/rust.wasm --out-dir ./wasm/ --out-name wasm --target deno --typescript; deno task build-resume ;deno fmt",
-		"build-resume": "py ./static/resume/build.py",
+		"build": "cargo build --target wasm32-unknown-unknown --release; mkdir -p wasm; wasm-bindgen ./target/wasm32-unknown-unknown/release/rust.wasm --out-dir ./wasm/ --out-name wasm --target deno --typescript; deno fmt",
 		"clean": "cargo clean && rm -rf ./wasm",
 		"test": "deno test --allow-all --no-check --unstable --doc --allow-none; cargo test"
 	},
