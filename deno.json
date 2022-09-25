@@ -9,11 +9,7 @@
 		"build": "cargo build --target wasm32-unknown-unknown --release; mkdir -p wasm; wasm-bindgen ./target/wasm32-unknown-unknown/release/rust.wasm --out-dir ./wasm/ --out-name wasm --target deno --typescript; deno task build-resume ;deno fmt",
 		"build-resume": "py ./static/resume/build.py",
 		"clean": "cargo clean && rm -rf ./wasm",
-		"test": "deno test --allow-all --no-check --unstable --doc --allow-none; cargo test",
-		"docker-build": "docker build --build-arg GIT_REVISION=$(git rev-parse HEAD) -t gutenfries.com .",
-		"docker-run": "docker run --rm -it -p 80:80 gutenfries.com:latest",
-		"docker-tag": "docker tag gutenfries.com gutenfries.azurecr.io/gutenfries.com:$(deno run -A ./utils/version.ts)",
-		"docker-push": "echo 'you have to do this by hand'"
+		"test": "deno test --allow-all --no-check --unstable --doc --allow-none; cargo test"
 	},
 	"importMap": "import_map.json",
 	"lint": {

@@ -3,40 +3,40 @@
 <a name="readme-top"></a>
 
 <!--
-*** Thanks for checking out gutenfries.com. If you have a suggestion
+*** Thanks for checking out gutenfries.deno.dev. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
 *** or simply open an issue with the tag "enhancement".
 *** Don't forget to give the project a star!
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-[![GitHub Repo Size](https://img.shields.io/github/repo-size/gutenfries/gutenfries.com)]()
-[![GitHub Contributors](https://img.shields.io/github/contributors/gutenfries/gutenfries.com)](https://github.com/gutenfries/gutenfries.com/graphs/contributors)
-[![GitHub Stars](https://img.shields.io/github/stars/gutenfries/gutenfries.com)](https://github.com/gutenfries/gutenfries.com/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/gutenfries/gutenfries.com)](https://github.com/gutenfries/gutenfries.com/network/members)
-[![GitHub Issues](https://img.shields.io/github/issues/gutenfries/gutenfries.com.svg)](https://github.com/gutenfries/gutenfries.com/issues)
-[![MIT License](https://img.shields.io/github/license/gutenfries/gutenfries.com.svg)](https://github.com/gutenfries/gutenfries.com/blob/main/LICENSE.md)
-[![deno-tests](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-tests.yml)
-[![rust-tests](https://github.com/gutenfries/gutenfries.com/actions/workflows/rust-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.com/actions/workflows/rust-tests.yml)
-[![Production](https://github.com/gutenfries/gutenfries.com/actions/workflows/deno-deploy-dev.yml/badge.svg)](https://gutenfries.deno.dev)
+[![GitHub Repo Size](https://img.shields.io/github/repo-size/gutenfries/gutenfries.deno.dev)]()
+[![GitHub Contributors](https://img.shields.io/github/contributors/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev/graphs/contributors)
+[![GitHub Stars](https://img.shields.io/github/stars/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/gutenfries/gutenfries.deno.dev.svg)](https://github.com/gutenfries/gutenfries.deno.dev/issues)
+[![MIT License](https://img.shields.io/github/license/gutenfries/gutenfries.deno.dev.svg)](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md)
+[![deno-tests](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml)
+[![rust-tests](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/rust-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/rust-tests.yml)
+[![Production](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-deploy-dev.yml/badge.svg)](https://gutenfries.deno.dev)
 [![made with fresh](static/images/fresh-badge-dark.svg)](https://fresh.deno.dev)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-	<a href="https://github.com/gutenfries/gutenfries.com">
+	<a href="https://github.com/gutenfries/gutenfries.deno.dev">
 		<img src="static/icons/logo.svg" alt="Logo" width="80" height="80">
 	</a>
-	<h1 align="center">gutenfries.com</h1>
+	<h1 align="center">gutenfries.deno.dev</h1>
 	<p align="center">
 	Welcome to the repository for my site!
 		<br/>
 		<br/>
 		<a href="https://gutenfries.deno.dev">Production</a>
 		·
-		<a href="https://github.com/gutenfries/gutenfries.com/issues">Report Bug</a>
+		<a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Report Bug</a>
 		·
-		<a href="https://github.com/gutenfries/gutenfries.com/issues">Request Feature</a>
+		<a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Request Feature</a>
 	</p>
 </div>
 
@@ -67,7 +67,7 @@
 
 <!-- TODO(@gutenfries): add screenshot -->
 
-![gutenfries.com Screen Shot](static/images/screenshot.png)
+![gutenfries.deno.dev Screen Shot](static/images/screenshot.png)
 
 This is my website, built on [Fresh](https://fresh.deno.dev).
 
@@ -151,7 +151,7 @@ curl -fsSL https://deno.land/x/install/install.sh | sh
 1. Clone the repo.
 
    ```sh
-   git clone https://github.com/gutenfries/gutenfries.com.git
+   git clone https://github.com/gutenfries/gutenfries.deno.dev.git
    ```
 
 2. There is no step two. _No_ dependency installation. Rust and Deno are God-tier languages.
@@ -179,7 +179,7 @@ curl -fsSL https://deno.land/x/install/install.sh | sh
 - ### Potential
 - [ ] Blog
 
-See the [open issues](https://github.com/gutenfries/gutenfries.com/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/gutenfries/gutenfries.deno.dev/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -204,7 +204,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Open sourced under the MIT License. See [LICENSE.md](https://github.com/gutenfries/gutenfries.com/blob/main/LICENSE.md) for more information.
+Open sourced under the MIT License. See [LICENSE.md](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -214,13 +214,11 @@ Open sourced under the MIT License. See [LICENSE.md](https://github.com/gutenfri
 
 Marcus Gutenberger
 
-<!-- TODO(@gutenfries): add this when appropriate -->
-<!-- -   [gutenfries.deno.dev](https://gutenfries.deno.dev) -->
-
+- [gutenfries.deno.dev](https://gutenfries.deno.dev)
 - [@gutenfries](https://twitter.com/gutenfries)
 - [gutenfries@gmail.com](mailto:gutenfries@gmail.com)
 
-Project Link: [https://github.com/gutenfries/gutenfries.com](https://github.com/gutenfires/gutenfries.com)
+Project Link: [https://github.com/gutenfries/gutenfries.deno.dev](https://github.com/gutenfires/gutenfries.deno.dev)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

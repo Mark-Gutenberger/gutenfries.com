@@ -4,7 +4,7 @@ version = "0.0.0"                                           # dont put a version
 edition = "2018"
 license = "GPL-3.0"
 authors = ["mark gutenberger <gutenfries@gmail.com>"]
-repository = "https://github.com/gutenfries/gutenfries.com"
+repository = "https://github.com/gutenfries/gutenfries.deno.dev"
 
 
 [lib]
