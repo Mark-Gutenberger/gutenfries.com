@@ -69,7 +69,6 @@ const SearchBar = () => {
 							Search
 						</label>
 						<div className='flex-grow h-10 flex relative'>
-							{/* <> */}
 							<div className='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
 								<svg
 									name='Search SVG'
@@ -90,8 +89,12 @@ const SearchBar = () => {
 							<input
 								type='text'
 								value={query ? query : ''}
-								onChange={(e) => setQuery((e.target as HTMLInputElement).value)}
-								onKeyPress={(e) => handleKeyPress(e)}
+								onChange={(e) => {
+									setQuery((e.target as HTMLInputElement).value);
+								}}
+								onKeyPress={(e) => {
+									handleKeyPress(e);
+								}}
 								id='search'
 								name='search'
 								className='min-w-full bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
@@ -114,7 +117,6 @@ const SearchBar = () => {
 									</ul>
 								)
 								: null}
-							{/* </> */}
 						</div>
 						<button
 							aria-label='Minimize Search Bar'
@@ -146,7 +148,9 @@ const SearchBar = () => {
 					<button
 						aria-label='Expand Search Bar'
 						className='rounded p-2 mx-3 hover:bg-gray-700'
-						onClick={() => setSearchBarIsExpanded(true)}
+						onClick={() => {
+							setSearchBarIsExpanded(true);
+						}}
 					>
 						<svg
 							name='Search SVG'

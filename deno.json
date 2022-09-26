@@ -5,7 +5,9 @@
 	"tasks": {
 		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen",
 		"start": "deno run -A --unstable main.ts",
-		"build": "cargo build --target wasm32-unknown-unknown --release; mkdir -p wasm; wasm-bindgen ./target/wasm32-unknown-unknown/release/rust.wasm --out-dir ./wasm/ --out-name wasm --target deno --typescript; deno fmt",
+		"build": "deno task build-deno-wasm; deno task build-websafe-wasm; deno fmt",
+		"build-deno-wasm": "cargo build --target wasm32-unknown-unknown --release; mkdir -p wasm; wasm-bindgen ./target/wasm32-unknown-unknown/release/rust.wasm --out-dir ./wasm/ --out-name wasm --target deno --typescript",
+		"build-websafe-wasm": "cargo build --target wasm32-unknown-unknown --release; mkdir -p wasm/websafe; wasm-bindgen ./target/wasm32-unknown-unknown/release/rust.wasm --out-dir ./wasm/websafe --out-name wasm --target web --typescript",
 		"clean": "cargo clean && rm -rf ./wasm",
 		"test": "deno test --allow-all --no-check --unstable --doc --allow-none; cargo test"
 	},
