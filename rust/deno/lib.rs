@@ -17,18 +17,24 @@
 //! This project adheres to the [Rust Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct).
 //! By participating, you are expected to uphold this code.
 
+// import wasm_bindgen tooling
 extern crate wasm_bindgen;
-
+// declare modules here
 pub mod background_generator;
+// load printf macro for public use
 mod printf;
 
-pub mod rust {
+/*
+pub mod deno {
 	extern crate wasm_bindgen;
+	use wasm_bindgen::prelude::*;
 
-	/*
+	use crate::printf;
+
+	// main entrypoint, if needed
 	#[wasm_bindgen(start)]
 	pub fn main() {
 		printf!("main entrypoint");
 	}
-	*/
 }
+*/

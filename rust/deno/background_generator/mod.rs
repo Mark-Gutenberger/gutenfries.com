@@ -6,7 +6,7 @@ pub mod background_generator {
 	use getrandom::getrandom;
 	use wasm_bindgen::prelude::*;
 
-	use crate::background_generator::{
+	use super::{
 		colors::colors::{methods::*, *},
 		hex::hex::*,
 	};
