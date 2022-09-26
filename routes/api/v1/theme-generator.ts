@@ -1,6 +1,6 @@
 import { Handlers } from '$fresh/server.ts';
 import { random_tw_colors } from '@/wasm/wasm.js';
-import { parseColors } from '@/rust/background_generator/typescript/parseColors.ts';
+import { parseColors } from '@/rust/deno/background_generator/typescript/parseColors.ts';
 
 const handler: Handlers = {
 	GET(_req, _ctx) {

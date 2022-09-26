@@ -1,6 +1,6 @@
 #[cfg(test)]
 pub mod colors {
-	pub use crate::background_generator::colors::colors::{methods::*, *};
+	use crate::background_generator::colors::colors::methods::*;
 
 	#[test]
 	fn test_color_to_hex() {
