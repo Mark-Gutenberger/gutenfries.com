@@ -1,51 +1,128 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { Fragment, h } from 'preact';
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 
-function SearchBar() {
-	const [isExpanded, setIsExpanded] = useState<boolean>(false);
+interface SearchResult {
+	title: string;
+	url: string;
+}
+
+const SEARCH_RESULTS: SearchResult[] = [
+	{ title: 'First result', url: 'https://example.com/first' },
+	{ title: 'Second result', url: 'https://example.com/second' },
+	{ title: 'Third result', url: 'https://example.com/third' },
+	{ title: 'Fourth result', url: 'https://example.com/fourth' },
+	{ title: 'Fifth result', url: 'https://example.com/fifth' },
+	{ title: 'Sixth result', url: 'https://example.com/sixth' },
+	{ title: 'Seventh result', url: 'https://example.com/seventh' },
+	{ title: 'Eighth result', url: 'https://example.com/eighth' },
+	{ title: 'Ninth result', url: 'https://example.com/ninth' },
+	{ title: 'Tenth result', url: 'https://example.com/tenth' },
+];
+
+const SearchBar = () => {
+	const [searchBarIsExpanded, setSearchBarIsExpanded] = useState<boolean>(false);
+	const [resultIsActive, setResultIsActive] = useState<boolean>(false);
+	const [query, setQuery] = useState<string>('');
+	const [pressToggle, setPressToggle] = useState<boolean>(false);
+	const [result, setResult] = useState<SearchResult[]>([{
+		title: 'No results found',
+		url: 'https://example.com',
+	}] as SearchResult[]);
+
+	useEffect(() => {
+		search(query);
+	}, [pressToggle]);
+
+	useEffect(() => {
+		console.log(result);
+	}, [result]);
+
+	// TODO(@gutenfries): Replace with actual search
+	// this is just a POC algorithm
+	const search = (query_: string): void => {
+		if (query_.length > 0) {
+			setResultIsActive(true);
+			setResult(
+				SEARCH_RESULTS.filter((result) =>
+					result.title.toLowerCase().includes(query_.toLowerCase())
+				),
+			);
+		} else {
+			setResultIsActive(false);
+		}
+	};
+
+	const handleKeyPress = (e: KeyboardEvent) => {
+		if (e.key === 'Enter') {
+			setPressToggle(!pressToggle);
+		}
+	};
 
 	return (
 		<div className='overflow-hidden flex w-full justify-end items-center'>
-			{isExpanded
+			{searchBarIsExpanded
 				? (
 					<>
-						<form className='flex w-full items-center'>
-							<label for='voice-search' className='hidden sr-only'>
-								Search
-							</label>
-							<div className='flex-grow flex relative'>
-								<div className='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
-									<svg
-										name='Search'
-										strokeWidth='2'
-										className='fill-current text-gray-500 cursor-pointer dark:text-gray-300'
-										xmlns='http://www.w3.org/2000/svg'
-										viewBox='0 0 24 24'
-										width='24'
-										height='24'
+						<label for='search' className='hidden sr-only'>
+							Search
+						</label>
+						<div className='flex-grow h-10 flex relative'>
+							{/* <> */}
+							<div className='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
+								<svg
+									name='Search SVG'
+									strokeWidth='2'
+									className='fill-current text-gray-500 cursor-pointer dark:text-gray-300'
+									xmlns='http://www.w3.org/2000/svg'
+									viewBox='0 0 24 24'
+									width='24'
+									height='24'
+								>
+									<path
+										fill-rule='evenodd'
+										d='M10.25 2a8.25 8.25 0 105.28 14.59l5.69 5.69a.75.75 0 101.06-1.06l-5.69-5.69A8.25 8.25 0 0010.25 2zM3.5 10.25a6.75 6.75 0 1113.5 0 6.75 6.75 0 01-13.5 0z'
 									>
-										<path
-											fill-rule='evenodd'
-											d='M10.25 2a8.25 8.25 0 105.28 14.59l5.69 5.69a.75.75 0 101.06-1.06l-5.69-5.69A8.25 8.25 0 0010.25 2zM3.5 10.25a6.75 6.75 0 1113.5 0 6.75 6.75 0 01-13.5 0z'
-										>
-										</path>
-									</svg>
-								</div>
-								<input
-									id='voice-search'
-									type='text'
-									className='min-w-full bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-									placeholder='Search for anything...'
-									required
-								/>
+									</path>
+								</svg>
 							</div>
-						</form>
+							<input
+								type='text'
+								value={query ? query : ''}
+								onChange={(e) => setQuery((e.target as HTMLInputElement).value)}
+								onKeyPress={(e) => handleKeyPress(e)}
+								id='search'
+								name='search'
+								className='min-w-full bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+								placeholder='Search for anything...'
+								required
+							/>
+							{resultIsActive
+								? (
+									<ul className='p-1 rounded-md fixed mt-10 z-10 w-5/12 bg-gray-700 dark:bg-gray-50'>
+										{result.map((result) => (
+											<li>
+												<a
+													href={result.url}
+													className='w-auto m-1 block h-auto bg-gray-50 relative dark:bg-gray-700 dark:text-white shadow-2xl text-gray-900 text-sm rounded-lg pl-10 p-2.5'
+												>
+													{result.title}
+												</a>
+											</li>
+										))}
+									</ul>
+								)
+								: null}
+							{/* </> */}
+						</div>
 						<button
 							aria-label='Minimize Search Bar'
 							className='rounded p-2 mx-3 hover:bg-gray-700 relative'
-							onClick={() => setIsExpanded(false)}
+							onClick={() => {
+								setResultIsActive(false);
+								setSearchBarIsExpanded(false);
+							}}
 						>
 							<svg
 								name='X'
@@ -69,10 +146,10 @@ function SearchBar() {
 					<button
 						aria-label='Expand Search Bar'
 						className='rounded p-2 mx-3 hover:bg-gray-700'
-						onClick={() => setIsExpanded(true)}
+						onClick={() => setSearchBarIsExpanded(true)}
 					>
 						<svg
-							name='Search'
+							name='Search SVG'
 							strokeWidth='2'
 							className='fill-current text-gray-300 hover:text-white cursor-pointer'
 							xmlns='http://www.w3.org/2000/svg'
@@ -90,6 +167,6 @@ function SearchBar() {
 				)}
 		</div>
 	);
-}
+};
 
 export default SearchBar;
