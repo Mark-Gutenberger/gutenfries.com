@@ -7,8 +7,6 @@ extern "C" {
 	pub fn log(s: &str);
 }
 
-#[macro_export]
-
 /// prints a formatted string to the console (stdout equivalent)
 /// first argument is a string literal (ex ```"Hi {}"```).
 ///
@@ -32,18 +30,20 @@ extern "C" {
 /// printf!("Hi, my name is Robert");
 /// ```
 /// output: `Hi, my name is Robert`
+#[macro_export]
+#[allow(clippy::crate_in_macro_def)]
 macro_rules! printf {
 		// case 1: 1 argument; only a raw string is passed
 		($a:expr) => {
-			super::printf::log($a.to_string().as_str());
+			crate::printf::log($a.to_string().as_str());
 		};
 		// case 2: 2 arguments; a string literal and a raw variable is passed
 		($a:expr, $b:expr$(,)?) => {
-			super::printf::log(&format!($a, $b));
+			crate::printf::log(&format!($a, $b));
 		};
 		// case 3: n arguments; a string literal and n raw variables are passed
 		($a:expr, $($b:expr$(,)?),+) => {
-			super::printf::log(&format!($a, $($b),+));
+			crate::printf::log(&format!($a, $($b),+));
 		};
 	}
 

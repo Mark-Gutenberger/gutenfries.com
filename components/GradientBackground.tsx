@@ -1,7 +1,9 @@
 /** @jsx h */
 import { ComponentChildren, h } from 'preact';
-import { random_tw_colors } from '@/wasm/wasm.js';
-import { parseColors } from '@/rust/deno/background_generator/typescript/parseColors.ts';
+import { instantiate, random_tw_colors } from '@/wasm/background_generator.generated.js';
+import { parseColors } from '@/rust/background_generator/src/typescript/parseColors.ts';
+
+await instantiate();
 
 function GradientBackground() {
 	const randomColors = random_tw_colors(3, 100, 'tailwind');

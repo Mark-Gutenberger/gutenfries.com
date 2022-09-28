@@ -5,21 +5,32 @@
 	"tasks": {
 		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen",
 		"start": "deno run -A --unstable main.ts",
-		"build": "deno task build-deno-wasm && deno task build-websafe-wasm && deno fmt",
-		"build-deno-wasm": "cargo build  --manifest-path ./rust/Cargo.toml --target wasm32-unknown-unknown --release && mkdir -p wasm && wasm-bindgen ./rust/target/wasm32-unknown-unknown/release/deno.wasm --out-dir ./wasm/ --out-name wasm --target deno --typescript",
-		"build-websafe-wasm": "cargo build --manifest-path ./rust/Cargo.toml --target wasm32-unknown-unknown --release && mkdir -p wasm/websafe && wasm-bindgen ./rust/target/wasm32-unknown-unknown/release/websafe.wasm --out-dir ./wasm/websafe --out-name wasm --target web --typescript",
-		"clean": "cargo clean --manifest-path ./rust/Cargo.toml && rm -rf ./wasm",
-		"test": "deno test --allow-all --no-check --unstable --doc --allow-none && cargo test"
+		"wasmbuild-build-background_generator": "deno run -A https://deno.land/x/wasmbuild@0.9.0/main.ts --all-features --out ./wasm -p background_generator",
+		"wasmbuild-build-search": "deno run -A https://deno.land/x/wasmbuild@0.9.0/main.ts --all-features --out ./wasm -p search",
+		"build": "deno task wasmbuild-build-background_generator && deno task wasmbuild-build-search && deno fmt",
+		"clean": "cargo clean && rm -rf ./wasm",
+		"test": "deno test --allow-all --no-check --unstable --doc --allow-none && cargo test",
+		"lint": "deno lint && cargo clippy"
 	},
 	"importMap": "import_map.json",
 	"lint": {
 		"rules": {
-			"tags": ["recommended"],
-			"include": ["ban-untagged-todo"],
-			"exclude": ["no-unused-vars"]
+			"tags": [
+				"recommended"
+			],
+			"include": [
+				"ban-untagged-todo"
+			],
+			"exclude": [
+				"no-unused-vars"
+			]
 		},
 		"files": {
-			"exclude": ["static/", "target/", "wasm/"]
+			"exclude": [
+				"static/",
+				"target/",
+				"wasm/"
+			]
 		}
 	},
 	"fmt": {
@@ -31,7 +42,10 @@
 			"singleQuote": true
 		},
 		"files": {
-			"exclude": ["static/", "target/"]
+			"exclude": [
+				"static/",
+				"target/"
+			]
 		}
 	}
 }

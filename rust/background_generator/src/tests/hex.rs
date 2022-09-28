@@ -1,7 +1,7 @@
 #[cfg(test)]
 
-pub mod hex {
-	use crate::background_generator::hex::hex::*;
+pub mod hex_tests {
+	use crate::src::hex::*;
 
 	#[test]
 	fn test_compare_hex_rgb() {
@@ -18,10 +18,10 @@ pub mod hex {
 	fn test_compare_hex_tolerance() {
 		let color_1 = "#3b82f6";
 		let color_2 = "#3b82f6";
-		assert!(compare_hex_tolerance(color_1, color_2, 0) == true);
+		assert!(compare_hex_tolerance(color_1, color_2, 0));
 
 		let color_1 = "#000000";
 		let color_2 = "#ffffff";
-		assert!(compare_hex_tolerance(color_1, color_2, 255) == true);
+		assert!(compare_hex_tolerance(color_1, color_2, 255));
 	}
 }

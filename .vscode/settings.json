@@ -16,5 +16,11 @@
 	},
 	"[markdown]": {
 		"editor.defaultFormatter": "denoland.vscode-deno"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "denoland.vscode-deno"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "denoland.vscode-deno"
 	}
 }

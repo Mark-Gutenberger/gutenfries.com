@@ -1,240 +1,135 @@
-<!-- Improved compatibility of back-to-top link: -->
-
-<a name="readme-top"></a>
-
-<!--
-*** Thanks for checking out gutenfries.deno.dev. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-[![GitHub Repo Size](https://img.shields.io/github/repo-size/gutenfries/gutenfries.deno.dev)]()
-[![GitHub Contributors](https://img.shields.io/github/contributors/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev/graphs/contributors)
-[![GitHub Stars](https://img.shields.io/github/stars/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev/network/members)
-[![GitHub Issues](https://img.shields.io/github/issues/gutenfries/gutenfries.deno.dev.svg)](https://github.com/gutenfries/gutenfries.deno.dev/issues)
-[![MIT License](https://img.shields.io/github/license/gutenfries/gutenfries.deno.dev.svg)](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md)
-[![deno-tests](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml)
-[![rust-tests](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/rust-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/rust-tests.yml)
-[![Production](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-deploy-dev.yml/badge.svg)](https://gutenfries.deno.dev)
-[![made with fresh](static/images/fresh-badge-dark.svg)](https://fresh.deno.dev)
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-	<a href="https://github.com/gutenfries/gutenfries.deno.dev">
-		<img src="static/icons/logo.svg" alt="Logo" width="80" height="80">
-	</a>
-	<h1 align="center">gutenfries.deno.dev</h1>
-	<p align="center">
-	Welcome to the repository for my site!
-		<br/>
-		<br/>
-		<a href="https://gutenfries.deno.dev">Production</a>
-		·
-		<a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Report Bug</a>
-		·
-		<a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Request Feature</a>
-	</p>
-</div>
-
-<!-- TABLE OF CONTENTS -->
-<details>
-	<summary>Table of Contents</summary>
-	<ol>
-		<li>
-			<a href="#getting-started">Getting Started</a>
-			<ul>
-				<li><a href="#built-with">Built With</a></li>
-				<li><a href="#prerequisites">Prerequisites</a></li>
-				<li><a href="#installation">Installation</a></li>
-			</ul>
-		</li>
-		<li><a href="#usage">Usage</a></li>
-		<li><a href="#roadmap">Roadmap</a></li>
-		<li><a href="#contributing">Contributing</a></li>
-		<li><a href="#license">License</a></li>
-		<li><a href="#contact">Contact</a></li>
-		<li><a href="#acknowledgments">Acknowledgments</a></li>
-	</ol>
-</details>
+Johnny Coder
 
-<!-- Overview -->
+---
 
-## Overview
+> In this style, the resume starts with a blockquote, where
 
-<!-- TODO(@gutenfries): add screenshot -->
+> you can briefly list your specialties, or include a salient
 
-![gutenfries.deno.dev Screen Shot](static/images/screenshot.png)
+> quote. Ending a line with a backslash forces a line break.
 
-This is my website, built on [Fresh](https://fresh.deno.dev).
+----
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Education
 
-### Built With
+---------
 
-- [Deno](https://deno.land/) - A secure runtime for JavaScript and TypeScript
-- [Deno Deploy](https://deno.com/deploy) (Deployment)
-- [Fresh](https://fresh.deno.dev) (Deno framework)
-- [Preact](https://preactjs.org/) (JSX Library)
-- [Tailwind CSS](https://tailwindcss.com/) ([Twind](https://twind.dev/)) (Styling)
-- [GitHub Actions](https://github.com/featuers/actions) (CI/CD)
-- [Rust](https://www.rust-lang.org/) (wasm FFI)
-  - [wasm-bindgen](https://rustwasm.github.io/wasm-bindgen/) (wasm FFI tooling)
+2010-2014 (expected)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+: **PhD, Computer Science**; Awesome University (MyTown)
 
-<!-- GETTING STARTED -->
+*Thesis title: Deep Learning Approaches to the Self-Awesomeness
 
-## Getting Started
+Estimation Problem*
 
-Go ahead and clone the repo if you would like to be involved in development.
+2007-2010
 
-### Prerequisites
+: **BSc, Computer Science and Electrical Engineering**; University of
 
-The environment required to get rust working correctly for this use case can be quite tricky, especially on windows. With that said, these are the system prerequisites:
+HomeTown (HomeTown)
 
-- [Rust](https://www.rust-lang.org/tools/install)
+*Minor: Awesomeology*
 
-You may or may not already have rust installed on your system, but you need to have the nightly toolchain installed. You can check if you have it installed by running:
+Experience
 
-```sh
-rustup toolchain list
-```
+----------
 
-If you do not have the nightly toolchain installed, you can install it by running:
+**Your Most Recent Work Experience:**
 
-```sh
-rustup toolchain install nightly
-```
+Short text containing the type of work done, results obtained,
 
-If you need to install rust, you can do so by running:
+lessons learned and other remarks. Can also include lists and
 
-```sh
-curl -sSf https://sh.rustup.rs | sh -s -- -y --nightly-toolchain 1.65.0
-export PATH="$PATH:/home/rust/.cargo/bin"
-```
+links:
 
-Additionally, you will need to install the wasm-bindgen-cli tooling. You can do so by running:
+* First item
 
-```sh
-cargo install wasm-bindgen-cli
-```
+* Item with [link]([http://www.example.com](http://www.example.com)). Links will work both in
 
-That _should_ take care of the rust requirements.
-I have found windows to be rather finicky with the rust environment, so if you run into issues, please let me know and I'll get back to you if I can help.
+the html and pdf versions.
 
-- [Deno](https://deno.land/manual/getting_started/installation)
+**That Other Job You Had**
 
-Again, you may or may not already have deno installed on your system, You will need >v1.24.0 (v1.25.3 recommended) You can check if you have it installed by running:
+Also with a short description.
 
-```sh
-deno --version
-```
+Technical Experience
 
-If you need to update deno, you can do so by running:
+--------------------
 
-```sh
-deno upgrade # will update to the latest stable version
-```
+My Cool Side Project
 
-If you do not have deno installed, you can install it by running:
+: For items which don't have a clear time ordering, a definition
 
-```sh
-curl -fsSL https://deno.land/x/install/install.sh | sh
-```
+list can be used to have named items.
 
-### Installation
+* These items can also contain lists, but you need to mind the
 
-1. Clone the repo.
+indentation levels in the markdown source.
 
-   ```sh
-   git clone https://github.com/gutenfries/gutenfries.deno.dev.git
-   ```
+* Second item.
 
-2. There is no step two. _No_ dependency installation. Rust and Deno are God-tier languages.
+Open Source
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+: List open source contributions here, perhaps placing emphasis on
 
-<!-- ROADMAP -->
+the project names, for example the **Linux Kernel**, where you
 
-## Roadmap
+implemented multithreading over a long weekend, or **node.js**
 
-- ### Done
-- [x] Modern gradient/glass card UI
-- [x] Modern repository structure
-- [x] CD with GitHub Actions & Deno Deploy
-- [x] CI testing
-- ### Partially Done
-- [ ] Tests
-  - [x] Typescript tests
-  - [x] Rust tests
-  - [ ] JSX/Preact tests
-- ### Planned
-- [ ] Search engine
-- [ ] Resume page
-- [ ] SEO
-- ### Potential
-- [ ] Blog
+(with [link]([http://nodejs.org](http://nodejs.org))) which was actually totally
 
-See the [open issues](https://github.com/gutenfries/gutenfries.deno.dev/issues) for a full list of proposed features (and known issues).
+your idea...
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Programming Languages
 
-<!-- CONTRIBUTING -->
+: **first-lang:** Here, we have an itemization, where we only want
 
-## Contributing
+to add descriptions to the first few items, but still want to
 
-Contributions make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are _**greatly appreciated**_.
+mention some others together at the end. A format that works well
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+here is a description list where the first few items have their
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+first word emphasized, and the last item contains the final few
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+emphasized terms. Notice the reasonably nice page break in the pdf
 
-<!-- LICENSE -->
+version, which wouldn't happen if we generated the pdf via html.
 
-## License
+: **second-lang:** Description of your experience with second-lang,
 
-Open sourced under the MIT License. See [LICENSE.md](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md) for more information.
+perhaps again including a [link] [ref], this time placing the url
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+reference elsewhere in the document to reduce clutter (see source
 
-<!-- CONTACT -->
+file).
 
-## Contact
+: **obscure-but-impressive-lang:** We both know this one's pushing
 
-Marcus Gutenberger
+it.
 
-- [gutenfries.deno.dev](https://gutenfries.deno.dev)
-- [@gutenfries](https://twitter.com/gutenfries)
-- [gutenfries@gmail.com](mailto:gutenfries@gmail.com)
+: Basic knowledge of **C**, **x86 assembly**, **forth**, **Common Lisp**
 
-Project Link: [https://github.com/gutenfries/gutenfries.deno.dev](https://github.com/gutenfires/gutenfries.deno.dev)
+[ref]: [https://github.com/githubuser/superlongprojectname](https://github.com/githubuser/superlongprojectname)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Extra Section, Call it Whatever You Want
 
-<!-- ACKNOWLEDGMENTS -->
+----------------------------------------
 
-## Acknowledgments
+* Human Languages:
 
-Helpful resources used to get this project off the ground:
+* English (native speaker)
 
-- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-- [Octo Icons](https://primer.style/octicons/)
-- [Fresh docs](https://fresh.deno.dev/docs)
-- [Preact docs](https://preactjs.com/guide/v10/getting-started)
-- [Deno docs](https://deno.land/manual)
-- [Deno Deploy docs](https://deno.com/deploy/docs)
-- [Rust docs](https://doc.rust-lang.org/book/)
-- [wasm-bindgen docs](https://rustwasm.github.io/wasm-bindgen/)
+* ???
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+* This is what a nested list looks like.
+
+* Random tidbit
+
+* Other sort of impressive-sounding thing you did
+
+----
+
+> <email@example.com> • +00 (0)00 000 0000 • XX years old\
+
+> address - Mytown, Mycountry

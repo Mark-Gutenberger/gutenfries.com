@@ -7,8 +7,8 @@ pub mod background_generator {
 	use wasm_bindgen::prelude::*;
 
 	use super::{
-		colors::colors::{methods::*, *},
-		hex::hex::*,
+		colors::{methods::*, *},
+		hex::*,
 	};
 
 	// #[wasm_bindgen]
@@ -26,7 +26,7 @@ pub mod background_generator {
 		let color_index = rng[0] as usize % COLORS_ARRAY.len();
 		let color: String = COLORS_ARRAY[color_index].to_string();
 
-		String::from(color)
+		color
 	}
 
 	// #[wasm_bindgen]
@@ -44,7 +44,7 @@ pub mod background_generator {
 		let color_shade_index = rng[0] as usize % COLOR_SHADES_ARRAY.len();
 		let shade: String = COLOR_SHADES_ARRAY[color_shade_index].to_string();
 
-		String::from(shade)
+		shade
 	}
 
 	// #[wasm_bindgen]
@@ -66,7 +66,7 @@ pub mod background_generator {
 		let color_shade_index = rng[0] as usize % COLOR_SHADES_ARRAY_DARK.len();
 		let shade: String = COLOR_SHADES_ARRAY_DARK[color_shade_index].to_string();
 
-		String::from(shade)
+		shade
 	}
 
 	// #[wasm_bindgen]
@@ -88,7 +88,7 @@ pub mod background_generator {
 		let color_shade_index = rng[0] as usize % COLOR_SHADES_ARRAY_LIGHT.len();
 		let shade: String = COLOR_SHADES_ARRAY_LIGHT[color_shade_index].to_string();
 
-		String::from(shade)
+		shade
 	}
 
 	// #[wasm_bindgen]
@@ -101,7 +101,7 @@ pub mod background_generator {
 	/// output: `blue-600`
 	pub fn random_tw_color() -> String {
 		let color_string = format!("{}-{}", random_color(), random_shade());
-		String::from(color_string)
+		color_string
 	}
 
 	// #[wasm_bindgen]
@@ -114,7 +114,7 @@ pub mod background_generator {
 	/// output: `blue-600`
 	pub fn random_tw_color_dark() -> String {
 		let color_string = format!("{}-{}", random_color(), random_shade_dark());
-		String::from(color_string)
+		color_string
 	}
 
 	// #[wasm_bindgen]
@@ -127,7 +127,7 @@ pub mod background_generator {
 	/// output: `blue-600`
 	pub fn random_tw_color_light() -> String {
 		let color_string = format!("{}-{}", random_color(), random_shade_light());
-		String::from(color_string)
+		color_string
 	}
 
 	/// generates ```n``` random tw colors from the tailwind css v2 palette, where ```n``` is the
@@ -157,7 +157,8 @@ pub mod background_generator {
 	/// let colors = random_tw_colors(3, 100, "hex");
 	/// ```
 	/// output: `#0000ff;#ff0000;#00ff00`
-	pub fn random_tw_colors_internal(n: i32, tolerance: u32, format: &str) -> String {
+	#[wasm_bindgen]
+	pub fn random_tw_colors(n: i32, tolerance: u32, format: &str) -> String {
 		// determine what format to return the colors in
 		let format = String::from(format);
 
@@ -199,12 +200,6 @@ pub mod background_generator {
 			}
 		}
 
-		return return_colors;
-	}
-
-	#[wasm_bindgen]
-	/// wraps `random_tw_colors_internal` function
-	pub fn random_tw_colors(n: i32, tolerance: u32, format: &str) -> String {
-		random_tw_colors_internal(n, tolerance, format)
+		return_colors
 	}
 }

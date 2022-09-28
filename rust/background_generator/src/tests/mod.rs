@@ -3,12 +3,10 @@ pub mod colors;
 pub mod hex;
 
 #[cfg(test)]
-pub mod background_generator {
+pub mod background_generator_tests {
 
 	// import background_generator
-	pub use crate::background_generator::{
-		background_generator::*, colors::colors::*, hex::hex::*,
-	};
+	pub use crate::src::{background_generator::*, colors::*, hex::*};
 
 	// methods in background_generator/mod.rs
 	#[test]
@@ -78,7 +76,7 @@ pub mod background_generator {
 		const TOLERANCE: u32 = 100;
 		const FORMAT: &str = "hex";
 
-		let tw_colors = random_tw_colors_internal(NUM_COLORS, TOLERANCE, FORMAT);
+		let tw_colors = random_tw_colors(NUM_COLORS, TOLERANCE, FORMAT);
 
 		///Parses a string of colors, separated by semi-colons, into an array.
 		/// ## Arguments:
@@ -128,7 +126,7 @@ pub mod background_generator {
 		const TOLERANCE_2: u32 = 200;
 		const FORMAT_2: &str = "tailwind";
 
-		let tw_colors_2 = random_tw_colors_internal(NUM_COLORS_2, TOLERANCE_2, FORMAT_2);
+		let tw_colors_2 = random_tw_colors(NUM_COLORS_2, TOLERANCE_2, FORMAT_2);
 
 		let parsed_colors_2 = parse_colors(tw_colors_2);
 
