@@ -47,5 +47,9 @@
 				"target/"
 			]
 		}
-	}
+	} "test": {
+    "files": {
+      "exclude": ["wasm/"]
+    }
+  }
 }
