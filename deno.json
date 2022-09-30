@@ -7,7 +7,7 @@
 		"start": "deno run -A --unstable main.ts",
 		"wasmbuild-build-background_generator": "deno run -A https://deno.land/x/wasmbuild@0.9.0/main.ts --all-features --out ./wasm -p background_generator",
 		"wasmbuild-build-search": "deno run -A https://deno.land/x/wasmbuild@0.9.0/main.ts --all-features --out ./wasm -p search",
-		"build": "deno task wasmbuild-build-background_generator && deno task wasmbuild-build-search && deno fmt",
+		"build": "deno task wasmbuild-build-background_generator && deno task wasmbuild-build-search && deno run -A --unstable https://deno.land/x/minifier/cli.ts ./wasm/* && deno fmt",
 		"clean": "cargo clean && rm -rf ./wasm",
 		"test": "deno test --allow-all --no-check --unstable --doc --allow-none && cargo test",
 		"lint": "deno lint && cargo clippy"
@@ -47,5 +47,9 @@
 				"target/"
 			]
 		}
-	}
+	} "test": {
+    "files": {
+      "exclude": ["wasm/"]
+    }
+  }
 }
