@@ -68,8 +68,7 @@
 <!-- TODO(@gutenfries): add screenshot -->
 
 ![gutenfries.deno.dev Screen Shot](static/images/screenshot.png)
-
-This is my website, built on [Fresh](https://fresh.deno.dev).
+<small>This is my website, built on <a href="https://fresh.deno.dev">Fresh</a>.</small>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,7 +81,7 @@ This is my website, built on [Fresh](https://fresh.deno.dev).
 - [Tailwind CSS](https://tailwindcss.com/) ([Twind](https://twind.dev/)) (Styling)
 - [GitHub Actions](https://github.com/featuers/actions) (CI/CD)
 - [Rust](https://www.rust-lang.org/) (wasm FFI)
-  - [wasm-bindgen](https://rustwasm.github.io/wasm-bindgen/) (wasm FFI tooling)
+  - [wasmbuild](https://github.com/denoland/wasmbuild) (wasm FFI tooling)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,15 +115,6 @@ If you need to install rust, you can do so by running:
 curl -sSf https://sh.rustup.rs | sh -s -- -y --nightly-toolchain 1.65.0
 export PATH="$PATH:/home/rust/.cargo/bin"
 ```
-
-Additionally, you will need to install the wasm-bindgen-cli tooling. You can do so by running:
-
-```sh
-cargo install wasm-bindgen-cli
-```
-
-That _should_ take care of the rust requirements.
-I have found windows to be rather finicky with the rust environment, so if you run into issues, please let me know and I'll get back to you if I can help.
 
 - [Deno](https://deno.land/manual/getting_started/installation)
 
@@ -160,7 +150,7 @@ curl -fsSL https://deno.land/x/install/install.sh | sh
 
 <!-- ROADMAP -->
 
-## Roadmap
+## Roadmap :construction:
 
 - ### Done
 - [x] Modern gradient/glass card UI
@@ -171,10 +161,10 @@ curl -fsSL https://deno.land/x/install/install.sh | sh
 - [ ] Tests
   - [x] Typescript tests
   - [x] Rust tests
-  - [ ] JSX/Preact tests
-- ### Planned
+- [ ] JSX/Preact tests
 - [ ] Search engine
 - [ ] Resume page
+- ### Planned
 - [ ] SEO
 - ### Potential
 - [ ] Blog
@@ -185,7 +175,7 @@ See the [open issues](https://github.com/gutenfries/gutenfries.deno.dev/issues) 
 
 <!-- CONTRIBUTING -->
 
-## Contributing
+## Contributing :handshake:
 
 Contributions make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are _**greatly appreciated**_.
 
@@ -202,7 +192,7 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- LICENSE -->
 
-## License
+## License :page_facing_up:
 
 Open sourced under the MIT License. See [LICENSE.md](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md) for more information.
 
@@ -210,21 +200,21 @@ Open sourced under the MIT License. See [LICENSE.md](https://github.com/gutenfri
 
 <!-- CONTACT -->
 
-## Contact
+## Contact :mailbox:
 
-Marcus Gutenberger
+### Contributors :sparkles:
 
-- [gutenfries.deno.dev](https://gutenfries.deno.dev)
-- [@gutenfries](https://twitter.com/gutenfries)
-- [gutenfries@gmail.com](mailto:gutenfries@gmail.com)
+- Mark Gutenberger
 
-Project Link: [https://github.com/gutenfries/gutenfries.deno.dev](https://github.com/gutenfires/gutenfries.deno.dev)
+  - :earth_americas: [gutenfries.deno.dev](https://gutenfries.deno.dev)
+  - :bird: [@gutenfries](https://twitter.com/gutenfries)
+  - :mailbox: [gutenfries@gmail.com](mailto:gutenfries@gmail.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 
-## Acknowledgments
+## Acknowledgments :pray:
 
 Helpful resources used to get this project off the ground:
 
@@ -235,6 +225,6 @@ Helpful resources used to get this project off the ground:
 - [Deno docs](https://deno.land/manual)
 - [Deno Deploy docs](https://deno.com/deploy/docs)
 - [Rust docs](https://doc.rust-lang.org/book/)
-- [wasm-bindgen docs](https://rustwasm.github.io/wasm-bindgen/)
+- [wasmbuild repo](https://github.com/denoland/wasmbuild/docs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
