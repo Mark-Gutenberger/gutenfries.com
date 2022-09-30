@@ -1,5 +1,9 @@
 ###
 ## proj specific rules:
+
+# test output
+*.test.json
+
 # to exclude Obsidian workspace settings (including plugin and hotkey configurations)
 .obsidian
 

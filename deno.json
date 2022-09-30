@@ -47,9 +47,14 @@
 				"target/"
 			]
 		}
-	} "test": {
-    "files": {
-      "exclude": ["wasm/"]
-    }
-  }
+	},
+	"test": {
+		"files": {
+			"exclude": [
+				"static/",
+				"target/",
+				"wasm/"
+			]
+		}
+	}
 }
