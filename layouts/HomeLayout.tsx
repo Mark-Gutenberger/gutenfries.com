@@ -16,15 +16,23 @@ interface HomeLayoutProps {
 function HomeLayout({ pageProps_, children }: HomeLayoutProps) {
 	return (
 		<>
-			<div
-				className={`overscroll-none ${`font-rounded`} pointer-events-auto h-screen w-screen`}
+			<Head pageProps_={pageProps_} />
+			<a
+				className='text-center text-white absolute t-0 inset-x-0 m-[1.25] p-[1.25] h-auto w-100% rounded-md border-none shadow-md -z-20 focus:z-30 focus:bg-gray-500'
+				href='#main-content'
+				onClick={() => {
+					const mainContent = document.getElementById('main-content');
+					if (mainContent) {
+						mainContent.scrollIntoView({ behavior: 'smooth' });
+					}
+				}}
 			>
-				<Head pageProps_={pageProps_} />
-				<main>
-					<Navbar pageProps_={pageProps_} />
-					<GradientBackground />
-					<GlassCard>{children}</GlassCard>
-				</main>
+				Skip to main content
+			</a>
+			<div className='overscroll-none font-rounded pointer-events-auto h-screen w-screen'>
+				<Navbar pageProps_={pageProps_} />
+				<GradientBackground />
+				<GlassCard isMain={true}>{children}</GlassCard>
 			</div>
 		</>
 	);

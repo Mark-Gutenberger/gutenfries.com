@@ -63,7 +63,7 @@ function Head({ pageProps_ }: HeadProps) {
 			</link>
 
 			{/* client-side stylesheets */}
-			<link rel='stylesheet' href={asset('/global.css')}></link>
+			<link rel='stylesheet' href={asset('/styles/global.css')}></link>
 		</FreshHead>
 	);
 }

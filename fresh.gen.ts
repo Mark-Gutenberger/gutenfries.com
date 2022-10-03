@@ -15,7 +15,7 @@ import * as $8 from './routes/api/v1/version.ts';
 import * as $9 from './routes/api/v1/wasm.ts';
 import * as $10 from './routes/contact.tsx';
 import * as $11 from './routes/home.tsx';
-import * as $12 from './routes/index.tsx';
+import * as $12 from './routes/index.ts';
 import * as $13 from './routes/resume/index.tsx';
 import * as $$0 from './islands/CalendlyWidget.tsx';
 import * as $$1 from './islands/Resume.tsx';
@@ -35,7 +35,7 @@ const manifest = {
 		'./routes/api/v1/wasm.ts': $9,
 		'./routes/contact.tsx': $10,
 		'./routes/home.tsx': $11,
-		'./routes/index.tsx': $12,
+		'./routes/index.ts': $12,
 		'./routes/resume/index.tsx': $13,
 	},
 	islands: {
