@@ -14,14 +14,10 @@ interface ResumeLayoutProps {
 function ResumeLayout({ pageProps_, children }: ResumeLayoutProps) {
 	return (
 		<>
-			<div
-				className={`overscroll-none ${`font-rounded`} pointer-events-auto h-screen w-screen`}
-			>
-				<Head pageProps_={pageProps_} />
-				<main>
-					<Navbar pageProps_={pageProps_} />
-					{children}
-				</main>
+			<Head pageProps_={pageProps_} />
+			<div className='overscroll-none font-rounded pointer-events-auto h-screen w-screen'>
+				<Navbar pageProps_={pageProps_} />
+				{children}
 			</div>
 		</>
 	);
