@@ -1,4 +1,4 @@
-Johnny Coder
+# Johnny Coder
 
 ---
 
@@ -10,7 +10,7 @@ Johnny Coder
 
 ----
 
-Education
+## Education
 
 ---------
 
@@ -30,7 +30,9 @@ HomeTown (HomeTown)
 
 *Minor: Awesomeology*
 
-Experience
+----------
+
+## Experience
 
 ----------
 
@@ -52,7 +54,9 @@ the html and pdf versions.
 
 Also with a short description.
 
-Technical Experience
+--------------------
+
+## Technical Experience
 
 --------------------
 
@@ -112,7 +116,9 @@ it.
 
 [ref]: [https://github.com/githubuser/superlongprojectname](https://github.com/githubuser/superlongprojectname)
 
-Extra Section, Call it Whatever You Want
+----------------------------------------
+
+## Extra Section, Call it Whatever You Want
 
 ----------------------------------------
 

@@ -4,7 +4,7 @@
 	"apiVersion": "v1",
 	"tasks": {
 		"start": "deno run -A --unstable main.ts",
-		"dev": "deno run -A --unstable --watch=static/,routes/ dev.ts --no-clear-screen",
+		"dev": "deno run -A --unstable --watch=components/,routes/,islands/,wasm/,layouts/ dev.ts --no-clear-screen",
 		"test": "deno test --allow-all --no-check --unstable --doc --allow-none && cargo test",
 		"lint": "deno lint && cargo clippy",
 		"fmt": "deno fmt && cargo fmt --all --verbose",
