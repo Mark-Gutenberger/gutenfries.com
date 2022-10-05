@@ -11,13 +11,6 @@ import manifest from '@/fresh.gen.ts';
 import twindPlugin from '$fresh/plugins/twind.ts';
 import twindConfig from '@/twind.config.ts';
 
-// execute `deno task build-resume`
-await Deno.run({
-	cmd: ['deno', 'task', 'build-resume'],
-	stdout: 'inherit',
-	stderr: 'inherit',
-}).status();
-
 await start(manifest, {
 	plugins: [
 		twindPlugin(twindConfig),
