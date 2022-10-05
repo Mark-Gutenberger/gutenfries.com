@@ -10,8 +10,8 @@
 		"fmt": "deno fmt && cargo fmt --all --verbose",
 		"build": "deno task wasmbuild-build-background_generator && deno task wasmbuild-build-search && deno fmt",
 		"build-resume": "deno run -A --unstable ./scripts/build-resume.ts",
-		"wasmbuild-build-background_generator": "deno run -A https://deno.land/x/wasmbuild@0.9.0/main.ts --all-features --out ./wasm -p background_generator && deno bundle --unstable --no-config ./wasm/background_generator.generated.js ./wasm/background_generator.generated.min.js && rm -rf ./wasm/background_generator.generated.js",
-		"wasmbuild-build-search": "deno run -A https://deno.land/x/wasmbuild@0.9.0/main.ts --all-features --out ./wasm -p search && deno bundle --unstable --no-config ./wasm/search.generated.js ./wasm/search.generated.min.js && rm -rf ./wasm/search.generated.js",
+		"wasmbuild-build-background_generator": "deno run -A https://deno.land/x/wasmbuild@0.9.0/main.ts --all-features --out ./wasm -p background_generator",
+		"wasmbuild-build-search": "deno run -A https://deno.land/x/wasmbuild@0.9.0/main.ts --all-features --out ./wasm -p search",
 		"clean": "cargo clean && rm -rf ./wasm"
 	},
 	"importMap": "import_map.json",
