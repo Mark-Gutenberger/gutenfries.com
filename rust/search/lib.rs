@@ -1,3 +1,4 @@
+#![allow(clippy::tabs_in_doc_comments)]
 #![allow(dead_code)]
 
 // import wasm_bindgen tooling

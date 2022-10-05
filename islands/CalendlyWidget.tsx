@@ -38,7 +38,7 @@ function CalendlyWidget({ minWidth, height, url }: CalendlyWidgetProps) {
 							/>
 						</div>
 						<button
-							className='fixed bottom-0 left-0 mb-10 ml-10 flex items-center justify-center p-2.5 text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg outline-none border-none hover:text-gray-300'
+							className='fixed bottom-0 left-0 mb-10 ml-10 flex items-center justify-center p-2.5 text-white bg-[#006bff] hover:bg-transparent border-4 border-transparent hover:border-[#006bff] backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg  hover:text-gray-300'
 							onClick={() => setIsExpanded(false)}
 						>
 							<svg
@@ -61,7 +61,7 @@ function CalendlyWidget({ minWidth, height, url }: CalendlyWidgetProps) {
 				)
 				: (
 					<button
-						className='fixed bottom-0 right-0 mb-10 mr-10 flex items-center justify-center w-56 p-2.5 text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg outline-none border-none hover:text-gray-300'
+						className='fixed bottom-0 right-0 mb-10 mr-10 flex items-center justify-center p-2 text-white bg-[#006bff] hover:bg-transparent border-4 border-transparent hover:border-[#006bff] backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg  hover:text-gray-300'
 						onClick={() => setIsExpanded(true)}
 					>
 						Book a coffee chat

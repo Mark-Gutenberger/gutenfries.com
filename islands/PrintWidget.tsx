@@ -22,7 +22,7 @@ function PrintWidget({ src }: PrintWidgetProps) {
 
 	return (
 		<div>
-			<button className='fixed bottom-0 right-0 mb-10 mr-10 flex items-center justify-center w-auto p-2.5 text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg outline-none border-none hover:text-gray-300'>
+			<button className='fixed bottom-0 right-0 mb-[3.75rem] mr-[3.75rem] flex items-center justify-center py-2 px-4 text-white bg-[#006bff] hover:bg-transparent border-4 border-transparent hover:border-[#006bff] backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg  hover:text-gray-300'>
 				Print
 			</button>
 		</div>

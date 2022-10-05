@@ -39,7 +39,7 @@ function Resume() {
 						seamless
 						autoFocus={false}
 						id='print-resume'
-						className='h-full w-full pt-20 z-10'
+						className='h-full w-full pt-[84px] z-10'
 						srcDoc={resume}
 						title='Resume'
 					/>
