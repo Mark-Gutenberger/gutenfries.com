@@ -62,8 +62,9 @@ function Head({ pageProps_ }: HeadProps) {
 			>
 			</link>
 
-			{/* client-side stylesheets */}
-			<link rel='stylesheet' type='text/css' href={asset('/styles/global.css')}></link>
+			<style type='text/css'>
+				{`*, html {overscroll-behavior: none;}html, body {position: fixed;overflow: auto;}* {scrollbar-color: #3b82f6 #d1d5db ;z-index: 100;}*::-webkit-scrollbar {width: 16px;z-index: 100;}*::-webkit-scrollbar-track {background: #d1d5db ;border-radius: 6px;z-index: 99;}*::-webkit-scrollbar-thumb {background-color: #3b82f6 ;border-radius: 6px;z-index: 100;}`}
+			</style>
 		</FreshHead>
 	);
 }

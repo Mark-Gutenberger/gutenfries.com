@@ -38,8 +38,8 @@ function Navbar({ pageProps_ }: NavbarProps) {
 	// }
 
 	return (
-		<header className='flex absolute w-full shadow-lg p-4 bg-gray-800 z-10'>
-			<nav className='h-auto flex justify-start text-gray-300 text-xl border-none'>
+		<header className='flex absolute w-full shadow-lg bg-gray-800 z-50'>
+			<nav className='h-auto flex justify-start text-gray-300 text-xl border-none py-4 pl-4 pr-2'>
 				{routes.map((item) => (
 					<a
 						key={item.name}
@@ -47,8 +47,8 @@ function Navbar({ pageProps_ }: NavbarProps) {
 						className={classNames(
 							item.current
 								? 'bg-gray-900 text-white'
-								: 'text-gray-300 hover:bg-gray-700 hover:text-white',
-							'rounded-md text-md font-medium p-3 mx-1 sm:inline-block',
+								: 'text-gray-300 hover:bg-gray-700 active:bg-gray-900 hover:text-white',
+							'rounded-lg text-md font-medium p-3 mx-1 block',
 						)}
 						aria-current={item.current ? 'page' : undefined}
 					>

@@ -67,23 +67,6 @@ const SearchBar = () => {
 								Search
 							</label>
 							<div className='flex-grow h-10 flex relative'>
-								<div className='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
-									<svg
-										name='Search SVG'
-										strokeWidth='2'
-										className='fill-current text-gray-500 cursor-pointer dark:text-gray-300'
-										xmlns='http://www.w3.org/2000/svg'
-										viewBox='0 0 24 24'
-										width='24'
-										height='24'
-									>
-										<path
-											fill-rule='evenodd'
-											d='M10.25 2a8.25 8.25 0 105.28 14.59l5.69 5.69a.75.75 0 101.06-1.06l-5.69-5.69A8.25 8.25 0 0010.25 2zM3.5 10.25a6.75 6.75 0 1113.5 0 6.75 6.75 0 01-13.5 0z'
-										>
-										</path>
-									</svg>
-								</div>
 								<input
 									type='text'
 									value={query ? query : ''}
@@ -95,13 +78,13 @@ const SearchBar = () => {
 									}}
 									id='search'
 									name='search'
-									className='min-w-full bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+									className='min-w-full bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
 									placeholder='Search for anything...'
 									required
 								/>
 								{resultIsActive
 									? (
-										<ul className='p-1 rounded-md fixed mt-10 z-10 w-5/12 bg-gray-700 dark:bg-gray-50'>
+										<ul className='p-1 rounded-lg fixed mt-10 z-10 w-5/12 bg-gray-700 dark:bg-gray-50'>
 											{result.map((result) => (
 												<li>
 													<a
@@ -118,7 +101,7 @@ const SearchBar = () => {
 							</div>
 							<button
 								aria-label='Minimize Search Bar'
-								className='rounded p-2 mx-3 hover:bg-gray-700 relative'
+								className='rounded-lg p-2 mr-6 ml-2 hover:bg-gray-700 active:bg-gray-900 relative'
 								onClick={() => {
 									setResultIsActive(false);
 									setSearchBarIsExpanded(false);
@@ -126,7 +109,7 @@ const SearchBar = () => {
 							>
 								<svg
 									name='X'
-									strokeWidth='2'
+									strokeWidth='3'
 									className='fill-current text-gray-300 hover:text-white cursor-pointer'
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 24 24'
@@ -145,14 +128,14 @@ const SearchBar = () => {
 					: (
 						<button
 							aria-label='Expand Search Bar'
-							className='rounded p-2 mx-3 hover:bg-gray-700'
+							className='rounded-lg p-2 mr-6 hover:bg-gray-700 active:bg-gray-900'
 							onClick={() => {
 								setSearchBarIsExpanded(true);
 							}}
 						>
 							<svg
 								name='Search SVG'
-								strokeWidth='2'
+								strokeWidth='3'
 								className='fill-current text-gray-300 hover:text-white cursor-pointer'
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
