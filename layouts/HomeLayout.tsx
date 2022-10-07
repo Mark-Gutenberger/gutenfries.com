@@ -20,7 +20,16 @@ function HomeLayout({ pageProps_, children }: HomeLayoutProps) {
 			<div className='overscroll-none font-rounded pointer-events-auto h-screen w-screen'>
 				<Navbar pageProps_={pageProps_} />
 				<GradientBackground />
-				<GlassCard isMain={true}>{children}</GlassCard>
+				<GlassCard isMain={true}>
+					<noscript>
+						<div className='flex flex-col items-center justify-center h-full'>
+							<h2 className='text-4xl font-bold text-center text-white'>
+								Please enable JavaScript to use this website.
+							</h2>
+						</div>
+					</noscript>
+					{children}
+				</GlassCard>
 			</div>
 		</>
 	);

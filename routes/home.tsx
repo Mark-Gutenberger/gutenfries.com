@@ -9,8 +9,8 @@ function HomePage(pageProps_: PageProps) {
 			<h1 className='animate-fade-in-0.5 text-5xl font-bold text-center mt-5'>
 				Hi
 			</h1>
-			<h2 className='animate-fade-in-0.5 text-3xl font-bold text-center mt-5'>
-				I'm <span className='text-blue-500'>@fresh</span>
+			<h2 className='animate-fade-in-1 text-3xl font-bold text-center mt-5'>
+				I'm Mark
 			</h2>
 		</HomeLayout>
 	);

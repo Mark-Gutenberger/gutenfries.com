@@ -1,131 +1,100 @@
-# Joe Mama
+# Mark Gutenberger
+
+<!-- ![Photo of Mark Gutenberger](/static/images/mark-gutenberger-01.jpg) -->
+
 ---
 
-> In this style, the resume starts with a blockquote, where
-
-> you can briefly list your specialties, or include a salient
-
-> quote. Ending a line with a backslash forces a line break.
+> Hi, I'm Mark.
+\
+>I am a musician & software developer from [WI, USA](https://www.google.com/maps/place/Wisconsin/).
+>I have a passion for creating, and I love to learn new things.
+>I am currently working on a few projects, and I am always looking for new opportunities to learn and grow.
 
 ----
 
 ## Education
 
----------
+### Pulaski High School
 
-2010-2014 (expected)
+site: [Pulaski High School](https://www.pulaskischools.org/)
 
-: **PhD, Computer Science**; Awesome University (MyTown)
+- Graduated _(expected)_ **2023**
+- Focal Areas of Study: **Mechanical Engineering**, **Computer Science**, **Music**, **Math**, **English & Communications**
+- AP Classes: **AP Psychology**
+- College Classes: **Into to Diversity**, **Oral & Intrapersonal Communication**, **American Literature**, **Intro to Computer Science**
+- Activities: **Marching Band**, **Concert Band**, **Jazz Band**, and **Choir**
+- Clubs: **Math Club**, **Jazz Club**, **SkillsUSA**, **Forensics**
+- ACT Score: **26** (Math: 28, Reading: 22, Science: 24, English: 27)
+- Highlights:
+	- **State Qualifier** in **Speach & Broadcasting** for **Forensics** _(2021)_
+	- **State Qualifier** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Snare Drum Solo) _(2021)_
+	- **State Runner-Up** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Percussion Ensemble) _(2021)_
+	- Member of the acclaimed **Red Raider Jazz Band** (Acceptance by audition only) _(2021-2022)_
 
-*Thesis title: Deep Learning Approaches to the Self-Awesomeness
 
-Estimation Problem*
-
-2007-2010
-
-: **BSc, Computer Science and Electrical Engineering**; University of
-
-HomeTown (HomeTown)
-
-*Minor: Awesomeology*
-
-----------
-
+---
 ## Experience
 
-----------
+`TODO`
 
-**Your Most Recent Work Experience:**
-
-Short text containing the type of work done, results obtained,
-
-lessons learned and other remarks. Can also include lists and
-
-links:
-
-* First item
-
-* Item with [link]([http://www.example.com](http://www.example.com)). Links will work both in
-
-the html and pdf versions.
-
-**That Other Job You Had**
-
-Also with a short description.
-
---------------------
+---
 
 ## Technical Experience
 
---------------------
+`TODO`
 
-My Cool Side Project
+---
 
-: For items which don't have a clear time ordering, a definition
+## Skills
 
-list can be used to have named items.
+### Human Languages
 
-* These items can also contain lists, but you need to mind the
+* English _(native speaker)_
+* German _(actively learning further)_
 
-indentation levels in the markdown source.
+### Programming Languages
 
-* Second item.
+- **JavaScript** & **TypeScript**
+	- **Deno**
+	- **Node.js**
+- **HTML** & **CSS**
+- **Rust**
+- **C** & **C++**
+- **C#**
+- **PowerShell**
+- **Bash**
 
-Open Source
+### Frameworks & Libraries
 
-: List open source contributions here, perhaps placing emphasis on
+- **React** (as well as **Preact**)
+- **Next.js**
+- **Express**
+- **TailwindCSS**
+- **Deno Fresh**
 
-the project names, for example the **Linux Kernel**, where you
+### Tools & Software
 
-implemented multithreading over a long weekend, or **node.js**
+- **Git**
+- **GitHub**
+- **Visual Studio** & **Visual Studio Code**
+- Vim (**Neovim**)
+- **Postman**
+- **Docker**
+- **MySQL** & **PostgreSQL**
+- **MongoDB**
+- **Prisma**
+- **Heroku**
+- **Netlify**
+- **Vercel**
+- **Deno Deploy**
+- **GitHub Pages**
+- **Azure**
 
-(with [link]([http://nodejs.org](http://nodejs.org))) which was actually totally
+---
 
-your idea...
-
-Programming Languages
-
-: **first-lang:** Here, we have an itemization, where we only want
-to add descriptions to the first few items, but still want to
-mention some others together at the end. A format that works well
-here is a description list where the first few items have their
-first word emphasized, and the last item contains the final few
-emphasized terms. Notice the reasonably nice page break in the pdf
-version, which wouldn't happen if we generated the pdf via html.
-
-: **second-lang:** Description of your experience with second-lang,
-perhaps again including a [link] [ref], this time placing the url
-reference elsewhere in the document to reduce clutter (see source
-file).
-
-: **obscure-but-impressive-lang:** We both know this one's pushing
-
-it.
-
-: Basic knowledge of **C**, **x86 assembly**, **forth**, **Common Lisp**
-
-[ref]: [https://github.com/githubuser/superlongprojectname](https://github.com/githubuser/superlongprojectname)
-
-----------------------------------------
-
-## Extra Section, Call it Whatever You Want
-
-----------------------------------------
-
-* Human Languages:
-
-* English (native speaker)
-
-* ???
-
-* This is what a nested list looks like.
-
-* Random tidbit
-
-* Other sort of impressive-sounding thing you did
-
-----
-
-> <email@example.com> • +00 (0)00 000 0000 • XX years old\
-
-> address - Mytown, Mycountry
+> Mark Gutenberger | [+1-(920)-284-3760](tel:+1-(920)-284-3760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)
+\
+> [230 E Glendale Ave, Appleton, WI 54915](https://www.google.com/maps/place/230+E+Glendale+Ave,+Appleton,+WI+54911/)
+\
+> [GitHub](https://github.com/gutenfries) | [Peerlist](https://peerlist.io/gutenfries) | [LinkedIn](https://www.linkedin.com/in/gutenfries/) | [Twitter](https://twitter.com/gutenfries)
+---

@@ -3,7 +3,10 @@ import init, { minify } from 'minify-html';
 
 const resumeMarkdown = await Deno.readTextFile('./static/resume/resume.md');
 
-const resumeTokenized = tokens(resumeMarkdown, {
+// find any occurance of '/static' and remove it
+const sanatizedResumeMarkdown = resumeMarkdown.replace(/\/static/g, '');
+
+const resumeTokenized = tokens(sanatizedResumeMarkdown, {
 	strikethrough: true,
 	tables: true,
 	tasklists: true,
@@ -13,6 +16,11 @@ const resumeTokenized = tokens(resumeMarkdown, {
 
 const resumeHTML = html(resumeTokenized);
 
+const sanatizedResumeHTML = resumeHTML.replace(
+	/<img /g,
+	'<img loading="lazy" style="width: 80vw; max-width: 50rem;" ',
+);
+
 // GFM CSS
 const resumeCSS = await Deno.readTextFile('./static/resume/github-markdown.min.css');
 // Global scrollbar CSS
@@ -20,7 +28,7 @@ const globalCSS =
 	`* {scrollbar-color: #3b82f6 #d1d5db ;z-index: 100;}*::-webkit-scrollbar {width: 16px;z-index: 100;}*::-webkit-scrollbar-track {background: #d1d5db ;border-radius: 6px;z-index: 99;}*::-webkit-scrollbar-thumb {background-color: #3b82f6 ;border-radius: 6px;z-index: 100;}`;
 
 const resumeCode =
-	`<style>${globalCSS}${resumeCSS}</style><article class='markdown-body' style='padding:30px 30px 30px 30px'>${resumeHTML}</article>`;
+	`<style>${globalCSS}${resumeCSS}</style><article class='markdown-body' style='padding:30px 30px 30px 30px'>${sanatizedResumeHTML}</article>`;
 
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
