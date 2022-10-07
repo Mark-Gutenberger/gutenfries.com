@@ -14,7 +14,7 @@ interface Routes {
 
 const routes: Routes[] = [
 	{ name: 'Home', href: '/home', current: false },
-	// { name: 'About', href: '/about', current: false },
+        { name: 'About', href: '/about', current: false },
 	{ name: 'Contact', href: '/contact', current: false },
 	{ name: 'Resume', href: '/resume', current: false },
 ];
