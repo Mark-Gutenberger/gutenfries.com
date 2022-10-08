@@ -1,0 +1,45 @@
+*,
+html {
+	overscroll-behavior: none;
+}
+html,
+body {
+	position: fixed;
+	overflow: auto;
+}
+* {
+	scrollbar-color: #3b82f6 #d1d5db;
+	z-index: 100;
+}
+*::-webkit-scrollbar {
+	width: 16px;
+	z-index: 100;
+}
+*::-webkit-scrollbar-track {
+	background: #d1d5db;
+	border-radius: 6px;
+	z-index: 99;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #3b82f6;
+	border-radius: 6px;
+	z-index: 100;
+}
+
+img:before {
+	display: none;
+}
+
+img:after {
+	content: 'Uh Oh! Image not found: "' attr(alt) '"';
+	display: block;
+	position: absolute;
+	padding: 5%;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	background-color: #27272a;
+	z-index: 10;
+	border-radius: 0.5rem;
+}
