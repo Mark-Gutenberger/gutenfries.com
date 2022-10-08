@@ -1,42 +1,30 @@
-# FROM denoland/deno:latest
-FROM denoland/deno:1.25.0
+FROM denoland/deno:debian-1.26.1
 
+# for deno & deno deploy
 ARG GIT_REVISION
 ENV DENO_DEPLOYMENT_ID=${GIT_REVISION}
+
+# USER root
 
 WORKDIR /app
 
 COPY . .
 
-# # Update default packages
-# RUN apt-get -qq update
+# Update default packages
+RUN apt-get -qq update
 
-# # Get Ubuntu packages
-# RUN apt-get install -y -q \
-# 	build-essential \
-# 	curl \
-# 	pkg-config \
-# 	libssl-dev
+# Install dependencies
+RUN apt-get -qq install -y \
+	curl
 
-# # NOTE: no need to run update again at this point
-# # RUN apt-get update
-
-# # Get Rust; NOTE: using sh for better compatibility with other base images
-# RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain nightly -y
-# # Add .cargo/bin to PATH
-# ENV PATH="/root/.cargo/bin:${PATH}"
-# # Check cargo is visible
-# RUN cargo --help
-# # Add wasm32 target
-# RUN rustup target add wasm32-unknown-unknown
-# # Install wasm-bindgen
-# RUN cargo install -f wasm-bindgen-cli
-# # Check to see if wasm-bindgen is visible
-# RUN wasm-bindgen --help
+# Get Rust nightly && wasm-32
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly
+ENV PATH="/root/.cargo/bin:${PATH}"
+RUN rustup target add wasm32-unknown-unknown
 
 # Cache deno dependencies
 RUN deno cache main.ts --import-map=import_map.json
 
 EXPOSE 80
 
-CMD ["task", "production"]
+CMD ["task", "start"]

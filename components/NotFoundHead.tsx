@@ -1,17 +1,17 @@
 /** @jsx h */
 import { h } from 'preact';
-import { PageProps } from '$fresh/server.ts';
+import { UnknownPageProps } from '$fresh/server.ts';
 import { asset, Head as FreshHead } from '$fresh/runtime.ts';
 
-interface HeadProps {
-	pageProps_: PageProps;
+interface NotFoundHeadProps {
+	notFoundPageProps_: UnknownPageProps;
 }
 
-function Head({ pageProps_ }: HeadProps) {
-	const ogImageUrl = new URL(asset('/images/screenshot.png'), pageProps_.url).href;
+function NotFoundHead({ notFoundPageProps_ }: NotFoundHeadProps) {
+	const ogImageUrl = new URL(asset('/images/screenshot.png'), notFoundPageProps_.url).href;
 
 	let pipe: string;
-	if (pageProps_.url.pathname.slice(1) != '') {
+	if (notFoundPageProps_.url.pathname.slice(1) != '') {
 		pipe = '|';
 	} else {
 		pipe = '';
@@ -20,7 +20,7 @@ function Head({ pageProps_ }: HeadProps) {
 	return (
 		<FreshHead>
 			<title>
-				{pageProps_.url.pathname.slice(1)} {pipe} Marcus Gutenberger
+				{notFoundPageProps_.url.pathname.slice(1)} {pipe} Marcus Gutenberger
 			</title>
 
 			<link rel='icon' href={asset('/icons/favicon.ico')}></link>
@@ -43,14 +43,14 @@ function Head({ pageProps_ }: HeadProps) {
 			/>
 			<meta
 				property='og:title'
-				content={`${pageProps_.url.pathname.slice(1)} ${pipe} Marcus Gutenberger`}
+				content={`${notFoundPageProps_.url.pathname.slice(1)} ${pipe} Marcus Gutenberger`}
 			/>
 			<meta
 				property='og:description'
 				content='Marcus Gutenberger is a software engineer and designer'
 			/>
 			<meta property='og:type' content='website' />
-			<meta property='og:url' content={pageProps_.url.href} />
+			<meta property='og:url' content={notFoundPageProps_.url.href} />
 			<meta property='og:image' content={ogImageUrl} />
 
 			{/* google fonts */}
@@ -69,4 +69,4 @@ function Head({ pageProps_ }: HeadProps) {
 	);
 }
 
-export { Head };
+export { NotFoundHead };

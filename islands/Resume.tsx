@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from 'preact';
-import { asset } from '$fresh/runtime.ts';
 import { useEffect, useState } from 'preact/hooks';
+import { asset } from '$fresh/runtime.ts';
 
 import useKeyPress from '@/hooks/handleKeyPress.ts';
 import printiFrame from '@/hooks/printiFrame.ts';
@@ -31,10 +31,11 @@ function Resume() {
 
 	return (
 		// show loader until resume is loaded
-		<div className='bg-gray-300 flex flex-col items-center justify-center h-full w-full'>
+		<div className='bg-gray-300 flex items-center flex-col justify-center h-full w-full'>
 			{resume
 				? (
 					// show resume
+
 					<iframe
 						seamless
 						autoFocus={false}

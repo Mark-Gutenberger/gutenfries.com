@@ -1,13 +1,13 @@
 /** @jsx h */
 import { h } from 'preact';
-import { HomeLayout } from '@/layouts/HomeLayout.tsx';
+import { MainLayout } from '@/layouts/MainLayout.tsx';
 import { PageProps } from '$fresh/server.ts';
 import { SocialLinks } from '@/components/SocialLinks.tsx';
 import CalendlyWidget from '@/islands/CalendlyWidget.tsx';
 
 function ContactPage(pageProps_: PageProps) {
 	return (
-		<HomeLayout
+		<MainLayout
 			pageProps_={pageProps_}
 		>
 			<CalendlyWidget
@@ -16,25 +16,23 @@ function ContactPage(pageProps_: PageProps) {
 				url='https://calendly.com/gutenfries/coffee-chat'
 			/>
 			<br />
-			<h1 className='animate-fade-in-0.5 text-5xl font-bold text-center mt-2.5'>
+			<h2 className='animate-fade-in-0.5 text-5xl font-bold text-center my-8'>
 				Hi
-			</h1>
+			</h2>
 			<br />
-			<p className='animate-fade-in-1 text-lg text-center'>
-				I'd love to get in touch with you! Check out my social links below, or even schedule
-				a chat with me.
+			<p className='animate-fade-in-0.5 text-xl text-center mt-8'>
+				I'd love to get in touch with you!
 			</p>
-			<div className='animate-fade-in-0.5 flex flex-col items-center justify-center my-16'>
+			<p className='animate-fade-in-0.5 text-xl text-center mb-8'>
+				Check out my social links below, or even schedule a chat with me.
+			</p>
+			<h3 className='animate-fade-in-1 text-3xl font-bold text-center my-8'>
+				@gutenfries
+			</h3>
+			<div className='animate-fade-in-0.5 flex flex-col items-center justify-center my-8'>
 				<SocialLinks />
 			</div>
-
-			<p className='animate-fade-in-1 text-lg text-center'>
-				If there is a platform that I didn't mention that you'd like to get in touch with me
-				on, search for me <span className='animate-fade-in-1 font-bold'>@gutenfries</span>
-				{' '}
-				on any platform.
-			</p>
-		</HomeLayout>
+		</MainLayout>
 	);
 }
 
