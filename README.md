@@ -65,9 +65,8 @@
 
 ## Overview
 
-<!-- TODO(@gutenfries): add screenshot -->
+![gutenfries.deno.dev Screenshot](static/images/Screenshot-2022-10-08-125559.png)
 
-![gutenfries.deno.dev Screen Shot](static/images/screenshot.png)
 <small>This is my website, built on <a href="https://fresh.deno.dev">Fresh</a>.</small>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
