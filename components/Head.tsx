@@ -1,15 +1,13 @@
 /** @jsx h */
 import { h } from 'preact';
-import { PageProps } from '$fresh/server.ts';
+import { PageProps, UnknownPageProps } from '$fresh/server.ts';
 import { asset, Head as FreshHead } from '$fresh/runtime.ts';
 
 interface HeadProps {
-	pageProps_: PageProps;
+	pageProps_: PageProps | UnknownPageProps;
 }
 
 function Head({ pageProps_ }: HeadProps) {
-	const ogImageUrl = new URL(asset('/images/screenshot.png'), pageProps_.url).href;
-
 	let pipe: string;
 	if (pageProps_.url.pathname.slice(1) != '') {
 		pipe = '|';
@@ -20,12 +18,10 @@ function Head({ pageProps_ }: HeadProps) {
 	return (
 		<FreshHead>
 			<title>
-				{pageProps_.url.pathname.slice(1)} {pipe} Marcus Gutenberger
+				{pageProps_.url.pathname.slice(1)} {pipe} Mark Gutenberger
 			</title>
 
 			<link rel='icon' href={asset('/icons/favicon.ico')}></link>
-
-			{/* if your browser supports it, why not? */}
 
 			{/* Chrome, Firefox OS and Opera */}
 			<meta name='theme-color' content='#27272a' />
@@ -36,22 +32,30 @@ function Head({ pageProps_ }: HeadProps) {
 			<meta name='apple-mobile-web-app-capable' content='yes' />
 			<meta name='apple-mobile-web-app-status-bar-style' content='#27272a' />
 
-			{/* Open Graph meta data */}
-			<meta
-				name='description'
-				content='Marcus Gutenberger is a software engineer and designer'
-			/>
-			<meta
-				property='og:title'
-				content={`${pageProps_.url.pathname.slice(1)} ${pipe} Marcus Gutenberger`}
-			/>
-			<meta
-				property='og:description'
-				content='Marcus Gutenberger is a software engineer and designer'
-			/>
+			<meta name='description' content='Mark Gutenberger - Software Developer' />
+
+			{/* Open Graph / Facebook */}
 			<meta property='og:type' content='website' />
 			<meta property='og:url' content={pageProps_.url.href} />
-			<meta property='og:image' content={ogImageUrl} />
+			<meta
+				property='og:title'
+				content={`${pageProps_.url.pathname.slice(1)} ${pipe} Mark Gutenberger`}
+			/>
+			<meta property='og:description' content='Mark Gutenberger - Software Developer' />
+			<meta
+				property='og:image'
+				content={asset('images/gutenfries.deno.dev_home_1200x328.png')}
+			/>
+
+			{/* Twitter */}
+			<meta property='twitter:card' content='summary_large_image' />
+			<meta property='twitter:url' content='https://gutenfries.deno.dev/home' />
+			<meta property='twitter:title' content='home | Mark Gutenberger' />
+			<meta property='twitter:description' content='Mark Gutenberger - Software Developer' />
+			<meta
+				property='twitter:image'
+				content={asset('images/gutenfries.deno.dev_home_1200x328.png')}
+			/>
 
 			{/* google fonts */}
 			<link rel='preconnect' href='https://fonts.googleapis.com'></link>

@@ -92,6 +92,12 @@ site: [Pulaski High School](https://www.pulaskischools.org/)
 
 ---
 
+## References
+
+- 
+
+---
+
 > Mark Gutenberger | [+1-(920)-284-3760](tel:+1-(920)-284-3760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)
 \
 > [230 E Glendale Ave, Appleton, WI 54915](https://www.google.com/maps/place/230+E+Glendale+Ave,+Appleton,+WI+54911/)

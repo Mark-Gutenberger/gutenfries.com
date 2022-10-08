@@ -1,7 +1,7 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { Fragment, h } from 'preact';
-import { NotFoundHead } from '@/components/NotFoundHead.tsx';
+import { Head } from '@/components/Head.tsx';
 import { UnknownPageProps } from '$fresh/server.ts';
 import { Navbar } from '@/components/Navbar.tsx';
 import { GradientBackground } from '@/components/GradientBackground.tsx';
@@ -16,7 +16,7 @@ interface NotFoundLayoutProps {
 function NotFoundLayout({ notFoundPageProps_, children }: NotFoundLayoutProps) {
 	return (
 		<>
-			<NotFoundHead notFoundPageProps_={notFoundPageProps_} />
+			<Head pageProps_={notFoundPageProps_} />
 			<div className='overscroll-none font-rounded pointer-events-auto h-screen w-screen'>
 				<Navbar pageProps_={notFoundPageProps_} />
 				<GradientBackground />
