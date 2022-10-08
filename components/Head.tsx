@@ -8,6 +8,9 @@ interface HeadProps {
 }
 
 function Head({ pageProps_ }: HeadProps) {
+	const ogImageUrl =
+		new URL(asset('images/gutenfries.deno.dev_home_1200x328.png'), pageProps_.url).href;
+
 	let pipe: string;
 	if (pageProps_.url.pathname.slice(1) != '') {
 		pipe = '|';
@@ -44,7 +47,7 @@ function Head({ pageProps_ }: HeadProps) {
 			<meta property='og:description' content='Mark Gutenberger - Software Developer' />
 			<meta
 				property='og:image'
-				content={asset('images/gutenfries.deno.dev_home_1200x328.png')}
+				content={ogImageUrl}
 			/>
 
 			{/* Twitter */}
@@ -54,7 +57,7 @@ function Head({ pageProps_ }: HeadProps) {
 			<meta property='twitter:description' content='Mark Gutenberger - Software Developer' />
 			<meta
 				property='twitter:image'
-				content={asset('images/gutenfries.deno.dev_home_1200x328.png')}
+				content={ogImageUrl}
 			/>
 
 			{/* google fonts */}
