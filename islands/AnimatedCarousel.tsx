@@ -10,7 +10,11 @@ interface AnimatedCarouselProps {
 function AnimatedCarousel({}: AnimatedCarouselProps) {
 	const [current, setCurrent] = useState(0);
 
-	return <></>;
+	return (
+		<>
+			<i />
+		</>
+	);
 }
 
 export default AnimatedCarousel;
