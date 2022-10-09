@@ -3,12 +3,12 @@ pub mod colors;
 pub mod hex;
 
 #[cfg(test)]
-pub mod background_generator_tests {
+pub mod color_generator_tests {
 
-	// import background_generator
-	pub use crate::src::{background_generator::*, colors::*, hex::*};
+	// import color_generator
+	pub use crate::src::{color_generator::*, colors::*, hex::*};
 
-	// methods in background_generator/mod.rs
+	// methods in color_generator/mod.rs
 	#[test]
 	fn test_random_color() {
 		let color = random_color();

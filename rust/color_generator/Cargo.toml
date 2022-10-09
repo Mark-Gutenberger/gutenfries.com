@@ -1,5 +1,5 @@
 [package]
-name = "background_generator"
+name = "color_generator"
 version = "0.0.0"
 edition = "2018"
 license = "GPL-3.0"

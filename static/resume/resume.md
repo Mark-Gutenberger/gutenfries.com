@@ -2,13 +2,12 @@
 
 ---
 
-> Hi, I'm Mark.
-\
->I am a musician & software developer from [WI, USA](https://www.google.com/maps/place/Wisconsin/).
->I have a passion for creating, and I love to learn new things.
->I am currently working on a few projects, and I am always looking for new opportunities to learn and grow.
+> Hi, I'm Mark.\
+> I am a musician & software developer from [WI, USA](https://www.google.com/maps/place/Wisconsin/).
+> I have a passion for creating, and I love to learn new things.
+> I am currently working on a few projects, and I am always looking for new opportunities to learn and grow.
 
-----
+---
 
 ## Education
 
@@ -26,11 +25,10 @@ site: [pulaskischools.org](https://www.pulaskischools.org/)
 - Clubs: **Math Club**, **Jazz Club**, **SkillsUSA**, **Forensics**
 - ACT Score: **26** (Math: 28, Reading: 22, Science: 24, English: 27)
 - Highlights:
-	- **State Qualifier** in **Speach & Broadcasting** for **Forensics** _(2021)_
-	- **State Qualifier** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Snare Drum Solo) _(2021)_
-	- **State Runner-Up** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Percussion Ensemble) _(2021)_
-	- Member of the acclaimed **Red Raider Jazz Band** (Acceptance by audition only) _(2021-2022)_
-
+  - **State Qualifier** in **Speach & Broadcasting** for **Forensics** _(2021)_
+  - **State Qualifier** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Snare Drum Solo) _(2021)_
+  - **State Runner-Up** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Percussion Ensemble) _(2021)_
+  - Member of the acclaimed **Red Raider Jazz Band** (Acceptance by audition only) _(2021-2022)_
 
 <!-- --- -->
 <!-- ## Experience -->
@@ -38,7 +36,6 @@ site: [pulaskischools.org](https://www.pulaskischools.org/)
 <!-- TODO -->
 
 <!-- ### Zernicke's & Landstad Dairy -->
-
 
 <!-- ### Moes Farms Inc -->
 
@@ -50,14 +47,14 @@ site: [pulaskischools.org](https://www.pulaskischools.org/)
 
 ### Human Languages
 
-* English _(native speaker)_
-* German _(actively learning further)_
+- English _(native speaker)_
+- German _(actively learning further)_
 
 ### Programming Languages
 
 - **JavaScript** & **TypeScript**
-	- **Deno**
-	- **Node.js**
+  - **Deno**
+  - **Node.js**
 - **HTML** & **CSS**
 - **Rust**
 - **C** & **C++**
@@ -96,18 +93,18 @@ site: [pulaskischools.org](https://www.pulaskischools.org/)
 ## References
 
 - Terry Manning _(High School Teacher)_
-	- [email](mailto:tlmanning@pulaskischools.org)
+  - [email](mailto:tlmanning@pulaskischools.org)
 - John Pitzen _(Comp Sci Teacher)_
-	- [email](mailto:jgpitzen@pulaskischools.org)
+  - [email](mailto:jgpitzen@pulaskischools.org)
 - Bob Pekol _(Guardian)_
-	- [email](mailto:bobpekol@icloud.com)
+  - [email](mailto:bobpekol@icloud.com)
 - Lindsey Leisgang _(Social Worker)_
-	- [email](mailto:lindsey.leisgang@shawanocounrywi.gov)
+  - [email](mailto:lindsey.leisgang@shawanocounrywi.gov)
+
 ---
 
-> Mark Gutenberger | [+1-(920)-284-3760](tel:+1-(920)-284-3760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)
-\
-> [230 E Glendale Ave, Appleton, WI 54915](https://www.google.com/maps/place/230+E+Glendale+Ave,+Appleton,+WI+54911/)
-\
+> Mark Gutenberger | [+1-(920)-284-3760](tel:+1-(920)-284-3760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)\
+> [230 E Glendale Ave, Appleton, WI 54915](https://www.google.com/maps/place/230+E+Glendale+Ave,+Appleton,+WI+54911/)\
 > [GitHub](https://github.com/gutenfries) | [Peerlist](https://peerlist.io/gutenfries) | [LinkedIn](https://www.linkedin.com/in/gutenfries/) | [Twitter](https://twitter.com/gutenfries)
+
 ---

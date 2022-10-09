@@ -20,10 +20,9 @@ import * as $13 from './routes/home.tsx';
 import * as $14 from './routes/index.ts';
 import * as $15 from './routes/resume.tsx';
 import * as $16 from './routes/sitemap.xml.ts';
-import * as $$0 from './islands/AnimatedCarousel.tsx';
-import * as $$1 from './islands/CalendlyWidget.tsx';
-import * as $$2 from './islands/Resume.tsx';
-import * as $$3 from './islands/SearchBar.tsx';
+import * as $$0 from './islands/CalendlyWidget.tsx';
+import * as $$1 from './islands/Resume.tsx';
+import * as $$2 from './islands/SearchBar.tsx';
 
 const manifest = {
 	routes: {
@@ -46,10 +45,9 @@ const manifest = {
 		'./routes/sitemap.xml.ts': $16,
 	},
 	islands: {
-		'./islands/AnimatedCarousel.tsx': $$0,
-		'./islands/CalendlyWidget.tsx': $$1,
-		'./islands/Resume.tsx': $$2,
-		'./islands/SearchBar.tsx': $$3,
+		'./islands/CalendlyWidget.tsx': $$0,
+		'./islands/Resume.tsx': $$1,
+		'./islands/SearchBar.tsx': $$2,
 	},
 	baseUrl: import.meta.url,
 	config,

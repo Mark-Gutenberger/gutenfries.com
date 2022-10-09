@@ -38,13 +38,13 @@ function CalendlyWidget({ minWidth, height, url }: CalendlyWidgetProps) {
 							/>
 						</div>
 						<button
-							className='fixed bottom-0 left-0 mb-10 ml-10 flex items-center justify-center p-2.5 text-gray-200 bg-[#006bff] hover:bg-transparent border-4 border-transparent hover:border-[#006bff] backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg hover:text-white'
+							className='fixed bottom-0 left-0 mb-10 ml-10 flex items-center justify-center p-2.5 text-gray-200 bg-gray-700 hover:bg-transparent border-4 border-transparent hover:border-gray-700 backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg hover:text-white'
 							onClick={() => setIsExpanded(false)}
 						>
 							<svg
 								name='X'
 								strokeWidth='2'
-								className='fill-current text-gray-200 hover:text-white cursor-pointer'
+								className='fill-current text-gray-200 hover:text-gray-700 cursor-pointer'
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
 								width='24'
@@ -61,7 +61,7 @@ function CalendlyWidget({ minWidth, height, url }: CalendlyWidgetProps) {
 				)
 				: (
 					<button
-						className='fixed bottom-0 right-0 mb-10 mr-10 flex items-center justify-center p-2 text-gray-200 bg-[#006bff] hover:bg-transparent border-4 border-transparent hover:border-[#006bff] backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg hover:text-white'
+						className='fixed bottom-0 right-0 mb-10 mr-10 flex items-center justify-center p-2 text-gray-200 bg-gray-700 hover:bg-transparent border-4 border-transparent hover:border-gray-700 backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg hover:text-white'
 						onClick={() => setIsExpanded(true)}
 					>
 						Book a coffee chat

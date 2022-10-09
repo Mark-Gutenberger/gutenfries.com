@@ -19,7 +19,7 @@ function HomeLayout({ pageProps_, children }: HomeLayoutProps) {
 	return (
 		<>
 			<Head pageProps_={pageProps_} />
-			<div className='overscroll-none font-rounded pointer-events-auto w-screen h-screen'>
+			<div className='font-rounded pointer-events-auto w-screen'>
 				<Navbar pageProps_={pageProps_} />
 				<GradientBackground />
 				<GlassCard isMain={true}>

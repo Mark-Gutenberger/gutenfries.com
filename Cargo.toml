@@ -1,7 +1,7 @@
 [workspace]
 
 members = [
-	"rust/background_generator/",
+	"rust/color_generator/",
 	"rust/search/"
 ]
 

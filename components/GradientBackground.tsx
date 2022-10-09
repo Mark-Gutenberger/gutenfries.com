@@ -2,8 +2,8 @@
 /** @jsxFrag Fragment */
 import { Fragment, h } from 'preact';
 
-import { instantiate, random_tw_colors } from '@/wasm/background_generator.generated.js';
-import { parseColors } from '@/rust/background_generator/src/typescript/parseColors.ts';
+import { instantiate, random_tw_colors } from '@/wasm/color_generator.generated.js';
+import { parseColors } from '@/rust/color_generator/src/typescript/parseColors.ts';
 
 await instantiate();
 

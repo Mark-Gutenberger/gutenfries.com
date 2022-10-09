@@ -17,7 +17,7 @@ function ResumeLayout({ pageProps_, children }: ResumeLayoutProps) {
 	return (
 		<>
 			<Head pageProps_={pageProps_} />
-			<div className='overscroll-none font-rounded pointer-events-auto h-screen w-screen'>
+			<div className='font-rounded pointer-events-auto h-screen w-screen'>
 				<Navbar pageProps_={pageProps_} />
 				<NoScript />
 				{children}

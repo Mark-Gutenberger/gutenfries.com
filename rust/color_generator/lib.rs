@@ -7,7 +7,7 @@ pub mod src;
 // load printf macro for public use
 mod printf;
 
-pub mod background_generator {
+pub mod color_generator {
 	extern crate wasm_bindgen;
 
 	// use wasm_bindgen::prelude::*;

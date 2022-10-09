@@ -2,7 +2,7 @@ pub mod colors;
 pub mod hex;
 pub mod tests;
 
-pub mod background_generator {
+pub mod color_generator {
 	use getrandom::getrandom;
 	use wasm_bindgen::prelude::*;
 
@@ -91,7 +91,6 @@ pub mod background_generator {
 		shade
 	}
 
-	// #[wasm_bindgen]
 	/// generates a random tw color from the tailwind css v2 palette
 	///
 	/// ## Example:
@@ -99,6 +98,7 @@ pub mod background_generator {
 	/// let color = random_tw_color();
 	/// ```
 	/// output: `blue-600`
+	#[wasm_bindgen]
 	pub fn random_tw_color() -> String {
 		let color_string = format!("{}-{}", random_color(), random_shade());
 		color_string

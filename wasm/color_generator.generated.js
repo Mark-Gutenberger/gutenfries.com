@@ -1,7 +1,7 @@
 // @generated file from wasmbuild -- do not edit
 // deno-lint-ignore-file
 // deno-fmt-ignore-file
-// source-hash: 167dfd3433b80082e39c857d7fcbddcc700b126f
+// source-hash: 38fbe0adb7c16672d3924d177f1368a476f5c178
 let wasm;
 
 const heap = new Array(32).fill(undefined);
@@ -64,6 +64,37 @@ function getArrayU8FromWasm0(ptr, len) {
 	return getUint8Memory0().subarray(ptr / 1, ptr / 1 + len);
 }
 
+let cachedInt32Memory0 = new Int32Array();
+
+function getInt32Memory0() {
+	if (cachedInt32Memory0.byteLength === 0) {
+		cachedInt32Memory0 = new Int32Array(wasm.memory.buffer);
+	}
+	return cachedInt32Memory0;
+}
+/**
+ * generates a random tw color from the tailwind css v2 palette
+ *
+ * ## Example:
+ * ```
+ * let color = random_tw_color();
+ * ```
+ * output: `blue-600`
+ * @returns {string}
+ */
+export function random_tw_color() {
+	try {
+		const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+		wasm.random_tw_color(retptr);
+		var r0 = getInt32Memory0()[retptr / 4 + 0];
+		var r1 = getInt32Memory0()[retptr / 4 + 1];
+		return getStringFromWasm0(r0, r1);
+	} finally {
+		wasm.__wbindgen_add_to_stack_pointer(16);
+		wasm.__wbindgen_free(r0, r1);
+	}
+}
+
 let WASM_VECTOR_LEN = 0;
 
 const cachedTextEncoder = new TextEncoder('utf-8');
@@ -107,15 +138,6 @@ function passStringToWasm0(arg, malloc, realloc) {
 
 	WASM_VECTOR_LEN = offset;
 	return ptr;
-}
-
-let cachedInt32Memory0 = new Int32Array();
-
-function getInt32Memory0() {
-	if (cachedInt32Memory0.byteLength === 0) {
-		cachedInt32Memory0 = new Int32Array(wasm.memory.buffer);
-	}
-	return cachedInt32Memory0;
 }
 /**
  * generates ```n``` random tw colors from the tailwind css v2 palette, where ```n``` is the
@@ -294,7 +316,7 @@ const imports = {
 	},
 };
 
-const wasm_url = new URL('background_generator_bg.wasm', import.meta.url);
+const wasm_url = new URL('color_generator_bg.wasm', import.meta.url);
 
 /**
  * Decompression callback
@@ -322,7 +344,7 @@ let lastLoadPromise;
  * @param {decompressCallback=} transform
  * @returns {Promise<{
  *   instance: WebAssembly.Instance;
- *   exports: { random_tw_colors: typeof random_tw_colors }
+ *   exports: { random_tw_color: typeof random_tw_color; random_tw_colors: typeof random_tw_colors }
  * }>}
  */
 export function instantiateWithInstance(transform) {
@@ -350,7 +372,7 @@ export function instantiateWithInstance(transform) {
 }
 
 function getWasmInstanceExports() {
-	return { random_tw_colors };
+	return { random_tw_color, random_tw_colors };
 }
 
 /** Gets if the Wasm module has been instantiated. */
