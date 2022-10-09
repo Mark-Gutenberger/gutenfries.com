@@ -1,25 +1,24 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { ComponentChildren, Fragment, h } from 'preact';
-
-import { PageProps } from '$fresh/server.ts';
+import { ErrorPageProps } from '$fresh/server.ts';
 
 import { Head } from '@/components/Head.tsx';
 import { Navbar } from '@/components/Navbar.tsx';
 import { GradientBackground } from '@/components/GradientBackground.tsx';
 import { GlassCard } from '@/components/GlassCard.tsx';
 
-interface HomeLayoutProps {
-	pageProps_: PageProps;
+interface ErrorPageLayoutProps {
+	errorPageProps_: ErrorPageProps;
 	children?: ComponentChildren;
 }
 
-function HomeLayout({ pageProps_, children }: HomeLayoutProps) {
+function ErrorPageLayout({ errorPageProps_, children }: ErrorPageLayoutProps) {
 	return (
 		<>
-			<Head pageProps_={pageProps_} />
-			<div className='overscroll-none font-rounded pointer-events-auto w-100% h-100%'>
-				<Navbar pageProps_={pageProps_} />
+			<Head pageProps_={errorPageProps_} />
+			<div className='overscroll-none font-rounded pointer-events-auto h-screen w-screen'>
+				<Navbar pageProps_={errorPageProps_} />
 				<GradientBackground />
 				<GlassCard isMain={true}>
 					<noscript>
@@ -36,4 +35,4 @@ function HomeLayout({ pageProps_, children }: HomeLayoutProps) {
 	);
 }
 
-export { HomeLayout };
+export { ErrorPageLayout };

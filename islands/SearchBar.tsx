@@ -2,7 +2,6 @@
 /** @jsxFrag Fragment */
 import { Fragment, h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
-import { asset } from '$fresh/runtime.ts';
 
 interface SearchResult {
 	title: string;
@@ -29,27 +28,19 @@ const SearchBar = () => {
 	}, []);
 
 	useEffect(() => {
-		search(query);
+		if (query.length > 0) {
+			googleSearch(query);
+		}
 	}, [pressToggle]);
 
-	useEffect(() => {
-		console.log(result);
-	}, [result]);
+	// useEffect(() => {
+	// console.log(result);
+	// }, [result]);
 
-	// TODO(@gutenfries): Replace with actual search
-	// this is just a POC algorithm
-	const search = (query_: string): void => {
-		if (query_.length > 0) {
-			setResultIsActive(true);
-			setResult(
-				searchResults.filter((result) =>
-					result.title.toLowerCase().includes(query_.toLowerCase())
-				),
-			);
-		} else {
-			setResultIsActive(false);
-		}
-	};
+	// TODO(@gutenfries): Replace with fuzzy search implementated in rust
+	function googleSearch(query_: string) {
+		window.open(`https://google.com/search?q=${query_}`, '_blank');
+	}
 
 	const handleKeyPress = (e: KeyboardEvent) => {
 		if (e.key === 'Enter') {
@@ -59,7 +50,7 @@ const SearchBar = () => {
 
 	return (
 		<>
-			<div className='overflow-hidden flex w-full justify-end items-center'>
+			<div className='overflow-hidden flex w-full justify-end items-center z-10'>
 				{searchBarIsExpanded
 					? (
 						<>
@@ -78,13 +69,13 @@ const SearchBar = () => {
 									}}
 									id='search'
 									name='search'
-									className='min-w-full bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+									className='min-w-full bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-200 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
 									placeholder='Search for anything...'
 									required
 								/>
 								{resultIsActive
 									? (
-										<ul className='p-1 rounded-lg fixed mt-10 z-10 w-5/12 bg-gray-700 dark:bg-gray-50'>
+										<ul className='p-1 rounded-lg fixed mt-10 z-20 w-5/12 bg-gray-700 dark:bg-gray-50'>
 											{result.map((result) => (
 												<li>
 													<a
@@ -110,7 +101,7 @@ const SearchBar = () => {
 								<svg
 									name='X'
 									strokeWidth='3'
-									className='fill-current text-gray-300 hover:text-white cursor-pointer'
+									className='fill-current text-gray-200 hover:text-white cursor-pointer'
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 24 24'
 									width='24'
@@ -136,7 +127,7 @@ const SearchBar = () => {
 							<svg
 								name='Search SVG'
 								strokeWidth='3'
-								className='fill-current text-gray-300 hover:text-white cursor-pointer'
+								className='fill-current text-gray-200 hover:text-white cursor-pointer'
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
 								width='24'

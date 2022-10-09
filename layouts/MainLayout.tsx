@@ -1,12 +1,13 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { Fragment, h } from 'preact';
+import { ComponentChildren, Fragment, h } from 'preact';
+
 import { PageProps } from '$fresh/server.ts';
+
 import { Head } from '@/components/Head.tsx';
 import { Navbar } from '@/components/Navbar.tsx';
 import { GradientBackground } from '@/components/GradientBackground.tsx';
 import { GlassCard } from '@/components/GlassCard.tsx';
-import { ComponentChildren } from 'preact';
 
 interface MainLayoutProps {
 	pageProps_: PageProps;
@@ -23,7 +24,7 @@ function MainLayout({ pageProps_, children }: MainLayoutProps) {
 				<GlassCard isMain={true}>
 					<noscript>
 						<div className='flex flex-col items-center justify-center h-screen'>
-							<h2 className='text-4xl font-bold text-center text-white'>
+							<h2 className='text-4xl font-bold text-center text-gray-200'>
 								Please enable JavaScript to use this website.
 							</h2>
 						</div>

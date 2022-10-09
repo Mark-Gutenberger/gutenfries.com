@@ -1,10 +1,11 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { Fragment, h } from 'preact';
+import { ComponentChildren, Fragment, h } from 'preact';
+
 import { PageProps } from '$fresh/server.ts';
+
 import { Head } from '@/components/Head.tsx';
 import { Navbar } from '@/components/Navbar.tsx';
-import { ComponentChildren } from 'preact';
 
 interface ResumeLayoutProps {
 	pageProps_: PageProps;

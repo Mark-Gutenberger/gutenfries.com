@@ -131,7 +131,7 @@ pub mod background_generator {
 	}
 
 	/// generates ```n``` random tw colors from the tailwind css v2 palette, where ```n``` is the
-	/// first argument and return the a  String, where each color is separated by a semicolon
+	/// first argument and return the a String, where each color is separated by a semicolon
 	/// Takes an optional third parameter to specify if the colors should be represented by their
 	/// tailwind name or by hex hashes
 	/// ## Arguments:
@@ -140,7 +140,7 @@ pub mod background_generator {
 	/// * ```tol``` - the tolerance of the generated colors (1-255)
 	///
 	/// * ```format``` - the format of the generated colors, eg `hex | tailwind` defaults to
-	///   `tailwind`
+	///  `tailwind`
 	///
 	/// ## Example:
 	/// ```

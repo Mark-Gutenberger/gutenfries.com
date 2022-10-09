@@ -1,6 +1,5 @@
 /** @jsx h */
-import { h } from 'preact';
-import { ComponentChildren } from 'preact';
+import { ComponentChildren, h } from 'preact';
 
 interface GlassCardProps {
 	isMain: boolean;

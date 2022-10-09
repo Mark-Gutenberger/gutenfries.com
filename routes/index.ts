@@ -1,4 +1,4 @@
-export function handler(req: Request): Response {
+export function handler(): Response {
 	return new Response('', {
 		status: 301,
 		headers: { Location: '/home' },

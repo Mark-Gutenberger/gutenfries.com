@@ -1,12 +1,12 @@
 /** @jsx h */
 import { h } from 'preact';
 
-import { PageProps, UnknownPageProps } from '$fresh/server.ts';
+import { ErrorPageProps, PageProps, UnknownPageProps } from '$fresh/server.ts';
 
 import SearchBar from '@/islands/SearchBar.tsx';
 
 interface NavbarProps {
-	pageProps_: PageProps | UnknownPageProps;
+	pageProps_: PageProps | UnknownPageProps | ErrorPageProps;
 }
 
 interface Routes {
@@ -22,6 +22,7 @@ const routes: Routes[] = [
 	{ name: 'Contact', href: '/contact', current: false, showInNav: true },
 	{ name: 'Resume', href: '/resume', current: false, showInNav: true },
 	{ name: '404', href: '/404', current: false, showInNav: false },
+	{ name: '500', href: '/500', current: false, showInNav: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -31,9 +32,8 @@ function classNames(...classes: string[]) {
 function Navbar({ pageProps_ }: NavbarProps) {
 	let route: string;
 
-	// if pageProps_.route is not in routes, set route to '404'
-	if (routes.find((r) => r.href === pageProps_.route)) {
-		route = pageProps_.route;
+	if (routes.find((r) => r.href === pageProps_.url.pathname)) {
+		route = pageProps_.url.pathname;
 	} else {
 		route = '/404';
 	}
@@ -50,7 +50,7 @@ function Navbar({ pageProps_ }: NavbarProps) {
 
 	return (
 		<header className='flex absolute w-full shadow-lg bg-gray-800 z-50'>
-			<nav className='h-auto flex justify-start text-gray-300 text-xl border-none py-4 pl-4 pr-2'>
+			<nav className='h-auto flex justify-start text-gray-200 text-xl border-none py-4 pl-4 pr-2'>
 				{/* for each route in routes where showInNav is true */}
 				{routes.map(({ name, href, current, showInNav }) => {
 					if (showInNav) {
@@ -61,7 +61,7 @@ function Navbar({ pageProps_ }: NavbarProps) {
 								className={classNames(
 									current
 										? 'bg-gray-900 text-white'
-										: 'text-gray-300 hover:bg-gray-700 active:bg-gray-900 hover:text-white',
+										: 'text-gray-200 hover:bg-gray-700 active:bg-gray-900 hover:text-white',
 									'rounded-lg text-md font-medium p-3 mx-1 block',
 								)}
 								aria-current={current ? 'page' : undefined}

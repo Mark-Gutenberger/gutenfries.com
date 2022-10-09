@@ -12,8 +12,14 @@ function ErrorPage(errorPageProps_: ErrorPageProps) {
 				<h2 className='text-4xl font-bold text-center text-gray-200'>
 					500 - Internal Server Error :(
 				</h2>
+
+				{errorPageProps_.error instanceof Error
+					? <hr className='w-1/2 my-5 rounded h-1 text-gray-200 bg-white' />
+					: null}
 				<p className='text-center text-gray-200'>
-					{(errorPageProps_.error as Error).message}
+					{errorPageProps_.error instanceof Error
+						? (errorPageProps_.error as Error).message
+						: JSON.stringify(errorPageProps_.error)}
 				</p>
 			</div>
 		</ErrorPageLayout>

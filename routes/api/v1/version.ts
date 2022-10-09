@@ -1,4 +1,5 @@
 import { Handlers } from '$fresh/server.ts';
+
 import { version } from '@/utils/version.ts';
 
 const body = version;

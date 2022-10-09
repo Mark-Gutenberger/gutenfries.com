@@ -1,10 +1,11 @@
 /** @jsx h */
 import { h } from 'preact';
-import { PageProps, UnknownPageProps } from '$fresh/server.ts';
+
+import { ErrorPageProps, PageProps, UnknownPageProps } from '$fresh/server.ts';
 import { asset, Head as FreshHead } from '$fresh/runtime.ts';
 
 interface HeadProps {
-	pageProps_: PageProps | UnknownPageProps;
+	pageProps_: PageProps | UnknownPageProps | ErrorPageProps;
 }
 
 function Head({ pageProps_ }: HeadProps) {
@@ -54,7 +55,10 @@ function Head({ pageProps_ }: HeadProps) {
 			<meta property='twitter:card' content='summary_large_image' />
 			<meta property='twitter:url' content='https://gutenfries.deno.dev/home' />
 			<meta property='twitter:title' content='home | Mark Gutenberger' />
-			<meta property='twitter:description' content='Mark Gutenberger - Software Developer' />
+			<meta
+				property='twitter:description'
+				content='Mark Gutenberger - Software Developer'
+			/>
 			<meta
 				property='twitter:image'
 				content={ogImageUrl}
@@ -69,8 +73,15 @@ function Head({ pageProps_ }: HeadProps) {
 			>
 			</link>
 
-			{/* /static/styles/{*} */}
 			<link rel='stylesheet' href={asset('/styles/global.css')}></link>
+
+			{/* console easter egg */}
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `console.log('%cHi there! 👋', 'font-size: 2rem; font-weight: bold;');`,
+				}}
+			>
+			</script>
 		</FreshHead>
 	);
 }

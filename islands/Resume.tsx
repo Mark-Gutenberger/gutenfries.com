@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
+
 import { asset } from '$fresh/runtime.ts';
 
 import useKeyPress from '@/hooks/handleKeyPress.ts';
@@ -31,7 +32,7 @@ function Resume() {
 
 	return (
 		// show loader until resume is loaded
-		<div className='bg-gray-300 flex items-center flex-col justify-center h-full w-full'>
+		<div className='bg-gray-200 flex items-center flex-col justify-center h-full w-full'>
 			{resume
 				? (
 					// show resume

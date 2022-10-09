@@ -1,7 +1,7 @@
 // @generated file from wasmbuild -- do not edit
 // deno-lint-ignore-file
 // deno-fmt-ignore-file
-// source-hash: 134595fad36bf840fac0977ae8b6d68a7f82df39
+// source-hash: 167dfd3433b80082e39c857d7fcbddcc700b126f
 let wasm;
 
 const heap = new Array(32).fill(undefined);
@@ -119,7 +119,7 @@ function getInt32Memory0() {
 }
 /**
  * generates ```n``` random tw colors from the tailwind css v2 palette, where ```n``` is the
- * first argument and return the a  String, where each color is separated by a semicolon
+ * first argument and return the a String, where each color is separated by a semicolon
  * Takes an optional third parameter to specify if the colors should be represented by their
  * tailwind name or by hex hashes
  * ## Arguments:
@@ -128,7 +128,7 @@ function getInt32Memory0() {
  * * ```tol``` - the tolerance of the generated colors (1-255)
  *
  * * ```format``` - the format of the generated colors, eg `hex | tailwind` defaults to
- *   `tailwind`
+ *  `tailwind`
  *
  * ## Example:
  * ```

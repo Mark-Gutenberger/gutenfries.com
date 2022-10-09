@@ -61,8 +61,8 @@ pub mod search {
 	/// are.
 	///
 	/// Arguments:
-	///  * `a` : the first string to compare.
-	///  * `b` : the second string to compare.
+	/// * `a` : the first string to compare.
+	/// * `b` : the second string to compare.
 	///
 	///
 	/// example:
@@ -104,8 +104,8 @@ pub mod search {
 	/// element being the word of the list and the second element the score.
 	///
 	/// Arguments:
-	///  * `s` : the string to compare.
-	///  * `list` : the list of strings to compare with `s`.
+	/// * `s` : the string to compare.
+	/// * `list` : the list of strings to compare with `s`.
 	///
 	/// example:
 	/// ```rust
@@ -132,8 +132,8 @@ pub mod search {
 	/// best matches are placed at the beginning).
 	///
 	/// Arguments:
-	///  * `s` : the string to compare.
-	///  * `list` : the list of strings to compare with `s`.
+	/// * `s` : the string to compare.
+	/// * `list` : the list of strings to compare with `s`.
 	///
 	/// example:
 	/// ```rust
@@ -160,10 +160,10 @@ pub mod search {
 	/// the specified one.
 	///
 	/// Arguments:
-	///  * `s` : the string to compare.
-	///  * `list` : the list of strings to compare with `s`.
-	///  * `threshold` : the minimum allowed score for the elements in the result: elements with
-	///    lower score will be removed.
+	/// * `s` : the string to compare.
+	/// * `list` : the list of strings to compare with `s`.
+	/// * `threshold` : the minimum allowed score for the elements in the result: elements with
+	///  lower score will be removed.
 	///
 	/// ```rust
 	/// fn test() {
@@ -189,9 +189,9 @@ pub mod search {
 	/// with a better match.
 	///
 	/// Arguments :
-	///  * `s` : the string to compare.
-	///  * `list` : the list of strings to compare with `s`.
-	///  * `n` : the number of element to retrieve.
+	/// * `s` : the string to compare.
+	/// * `list` : the list of strings to compare with `s`.
+	/// * `n` : the number of element to retrieve.
 	///
 	/// example:
 	/// ```

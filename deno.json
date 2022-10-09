@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"apiVersion": "v1",
 	"tasks": {
-		"start": "deno run -A --unstable main.ts",
+		"start": "deno run -Ar --unstable main.ts",
 		"dev": "deno run -A --unstable --watch=components/,routes/,islands/,layouts/ dev.ts --no-clear-screen",
 		"test": "deno test --allow-all --no-check --unstable --doc --allow-none && cargo test",
 		"lint": "deno lint && cargo clippy --all-targets --all-features -- -D warnings",
