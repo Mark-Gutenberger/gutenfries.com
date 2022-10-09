@@ -22,7 +22,7 @@ function MainLayout({ pageProps_, children }: MainLayoutProps) {
 				<GradientBackground />
 				<GlassCard isMain={true}>
 					<noscript>
-						<div className='flex flex-col items-center justify-center h-full'>
+						<div className='flex flex-col items-center justify-center h-screen'>
 							<h2 className='text-4xl font-bold text-center text-white'>
 								Please enable JavaScript to use this website.
 							</h2>

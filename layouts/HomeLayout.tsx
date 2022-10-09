@@ -17,12 +17,12 @@ function HomeLayout({ pageProps_, children }: HomeLayoutProps) {
 	return (
 		<>
 			<Head pageProps_={pageProps_} />
-			<div className='overscroll-none font-rounded pointer-events-auto h-screen w-screen'>
+			<div className='overscroll-none font-rounded pointer-events-auto w-100% h-100%'>
 				<Navbar pageProps_={pageProps_} />
 				<GradientBackground />
 				<GlassCard isMain={true}>
 					<noscript>
-						<div className='flex flex-col items-center justify-center h-full'>
+						<div className='flex flex-col items-center justify-center h-screen'>
 							<h2 className='text-4xl font-bold text-center text-white'>
 								Please enable JavaScript to use this website.
 							</h2>

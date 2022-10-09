@@ -1,15 +1,15 @@
+:root,
 *,
 html {
 	overscroll-behavior: none;
+	scrollbar-color: #3b82f6 #d1d5db;
+	z-index: 100;
 }
+
 html,
 body {
 	position: fixed;
 	overflow: auto;
-}
-* {
-	scrollbar-color: #3b82f6 #d1d5db;
-	z-index: 100;
 }
 *::-webkit-scrollbar {
 	width: 16px;

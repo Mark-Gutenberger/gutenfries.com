@@ -1,7 +1,5 @@
 # Mark Gutenberger
 
-<!-- ![Photo of Mark Gutenberger](/static/images/mark-gutenberger-01.jpg) -->
-
 ---
 
 > Hi, I'm Mark.
@@ -16,7 +14,9 @@
 
 ### Pulaski High School
 
-site: [Pulaski High School](https://www.pulaskischools.org/)
+> 09/2020 - 06-2023
+
+site: [pulaskischools.org](https://www.pulaskischools.org/)
 
 - Graduated _(expected)_ **2023**
 - Focal Areas of Study: **Mechanical Engineering**, **Computer Science**, **Music**, **Math**, **English & Communications**
@@ -32,16 +32,17 @@ site: [Pulaski High School](https://www.pulaskischools.org/)
 	- Member of the acclaimed **Red Raider Jazz Band** (Acceptance by audition only) _(2021-2022)_
 
 
----
-## Experience
+<!-- --- -->
+<!-- ## Experience -->
 
-`TODO`
+<!-- TODO -->
 
----
+<!-- ### Zernicke's & Landstad Dairy -->
 
-## Technical Experience
 
-`TODO`
+<!-- ### Moes Farms Inc -->
+
+<!-- ### polka -->
 
 ---
 
@@ -94,8 +95,14 @@ site: [Pulaski High School](https://www.pulaskischools.org/)
 
 ## References
 
-- 
-
+- Terry Manning _(High School Teacher)_
+	- [email](mailto:tlmanning@pulaskischools.org)
+- John Pitzen _(Comp Sci Teacher)_
+	- [email](mailto:jgpitzen@pulaskischools.org)
+- Bob Pekol _(Guardian)_
+	- [email](mailto:bobpekol@icloud.com)
+- Lindsey Leisgang _(Social Worker)_
+	- [email](mailto:lindsey.leisgang@shawanocounrywi.gov)
 ---
 
 > Mark Gutenberger | [+1-(920)-284-3760](tel:+1-(920)-284-3760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)
