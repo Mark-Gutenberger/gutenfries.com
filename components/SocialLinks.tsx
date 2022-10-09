@@ -3,7 +3,7 @@ import { h } from 'preact';
 
 function SocialLinks() {
 	return (
-		<div className='bg-opacity-20 bg-gray-500 px-2.5 rounded-md m-2.5 flex flex-row justify-center'>
+		<div className='bg-opacity-20 bg-gray-500 px-2.5 rounded-md m-2.5 flex flex-wrap justify-center'>
 			<a
 				className='mx-1.5 outline-none text-gray-200 hover:bg-purple-700 hover:shadow-2xl hover:text-white p-2.5 rounded-md text-3xl'
 				href='mailto:gutenfries@gmail.com'

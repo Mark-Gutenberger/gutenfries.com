@@ -16,7 +16,7 @@
 
 		"fresh_validation": "https://deno.land/x/fresh_validation@0.1.1/mod.ts",
 		"fresh_session": "https://deno.land/x/fresh_session@0.1.7/mod.ts",
-		"fresh_seo": "https://raw.githubusercontent.com/sinyo-matu/fresh-seo/removeDayjsDep/mod.ts",
+		"fresh_seo": "https://deno.land/x/fresh_seo@0.1.2/mod.ts",
 
 		"rusty_markdown": "https://deno.land/x/rusty_markdown@v0.4.1/mod.ts",
 		"minifier": "https://deno.land/x/minifier@v1.1.1/mod.ts",
