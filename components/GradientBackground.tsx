@@ -21,7 +21,7 @@ function GradientBackground() {
 					theme[1]
 				} to-${
 					theme[2]
-				} flex items-center place-content-center p-5 pt-[6.25rem] h-screen w-screen`}
+				} flex items-center place-content-center p-5 pt-[6.25rem] h-full w-full`}
 			/>
 		</>
 	);
