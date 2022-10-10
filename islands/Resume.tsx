@@ -32,7 +32,7 @@ function Resume() {
 
 	return (
 		// show loader until resume is loaded
-		<div className='bg-gray-200 flex items-center flex-col justify-center h-full w-full'>
+		<div className=' bg-gray-200 flex items-center flex-col justify-center h-full w-full'>
 			{resume
 				? (
 					// show resume

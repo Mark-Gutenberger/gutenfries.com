@@ -55,7 +55,7 @@ const SearchBar = () => {
 					? (
 						<button
 							aria-label='Expand Search Bar'
-							className='rounded-lg p-2 mr-6 hover:bg-gray-700 active:bg-gray-900'
+							className='focus:ring-blue-500 focus:border-blue-500 rounded-lg p-2 mr-6 hover:bg-gray-700 active:bg-gray-900'
 							onClick={() => {
 								setSearchBarIsExpanded(true);
 							}}
@@ -94,19 +94,19 @@ const SearchBar = () => {
 									}}
 									id='search'
 									name='search'
-									className='min-w-full bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-200 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+									className='min-w-full bg-gray-300 active:bg-white hover:bg-white text-gray-700 active:text-gray-800 hover:text-gray-800 placeholder-gray-700 active:placeholder-gray-800 hover:placeholder-gray-800 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5'
 									placeholder='Search for anything...'
 									required
 								/>
 								{
 									/* {resultIsActive
 									? (
-										<ul className='p-1 rounded-lg fixed mt-10 z-20 w-5/12 bg-gray-800 dark:bg-gray-50'>
+										<ul className='p-1 rounded-lg fixed mt-10 z-20 w-5/12 bg-gray-800'>
 											{result.map((result) => (
 												<li>
 													<a
 														href={result.url}
-														className='w-auto m-1 block h-auto bg-gray-50 relative dark:bg-gray-800 dark:text-white shadow-2xl text-gray-900 text-sm rounded-lg pl-10 p-2.5'
+														className='w-auto m-1 block h-auto bg-gray-50 relative shadow-2xl text-gray-900 text-sm rounded-lg pl-10 p-2.5'
 													>
 														{result.title}
 													</a>
@@ -119,7 +119,7 @@ const SearchBar = () => {
 							</div>
 							<button
 								aria-label='Minimize Search Bar'
-								className='rounded-lg p-2 mr-6 ml-2 hover:bg-gray-700 active:bg-gray-900 relative'
+								className='focus:ring-blue-500 focus:border-blue-500 rounded-lg p-2 mr-6 ml-2 hover:bg-gray-700 active:bg-gray-900 relative'
 								onClick={() => {
 									// setResultIsActive(false);
 									setSearchBarIsExpanded(false);

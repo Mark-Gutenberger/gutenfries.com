@@ -9,17 +9,17 @@ import { HomeLayout } from '@/layouts/HomeLayout.tsx';
 function HomePage(pageProps_: PageProps) {
 	return (
 		<HomeLayout pageProps_={pageProps_}>
-			<section className='text-gray-800 body-font'>
+			<section className='snap-start text-gray-800 body-font'>
 				<div className='container mx-auto flex px-5 py-24 md:flex-row flex-col items-center'>
 					<div className='lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
-						<h1 className='title-font text-6xl text-underline mb-4 font-medium text-gray-300'>
+						<h1 className='animate-fade-in-0.5 title-font text-6xl text-underline mb-4 font-medium text-gray-300'>
 							Hi there
 						</h1>
 						<br className='hidden lg:inline-block' />
-						<h2 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300'>
+						<h2 className='animate-fade-in-0.5 title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300'>
 							I'm Mark Gutenberger
 						</h2>
-						<p className='text-lg text-gray-300 mb-8'>
+						<p className='animate-fade-in-1 text-lg text-gray-300 mb-8'>
 							I am a{' '}
 							<u>
 								<strong>musician</strong>
@@ -30,14 +30,16 @@ function HomePage(pageProps_: PageProps) {
 							</u>{' '}
 							from WI, USA.
 						</p>
-						<div className='flex justify-center'>
-							<button className='inline-flex text-gray-800 bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded-lg text-lg'>
+						{
+							/* 	<div className='flex justify-center'>
+							<button className='animate-fade-in-0.5 inline-flex text-gray-800 hover:text-gray-700 bg-gray-300 border-0 py-2 px-6  hover:bg-white rounded-lg text-lg'>
 								Two Buttons
 							</button>
-							<button className='ml-4 inline-flex text-gray-800 bg-gray-300 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded-lg text-lg'>
+							<button className='animate-fade-in-0.5 ml-4 inline-flex text-gray-300 hover:text-white bg-gray-800 border-0 py-2 px-6  hover:bg-gray-700 rounded-lg text-lg'>
 								That Do Nothing
 							</button>
-						</div>
+						</div> */
+						}
 					</div>
 					<div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6'>
 						<img
@@ -48,7 +50,7 @@ function HomePage(pageProps_: PageProps) {
 					</div>
 				</div>
 			</section>
-			<section className='text-gray-800 body-font border-gray-300'>
+			<section className='snap-start text-gray-800 body-font border-gray-300'>
 				<div className='container px-5 py-24 mx-auto'>
 					<div className='flex flex-col text-center w-full mb-20'>
 						<h1 className='text-xs text-blue-500 tracking-widest font-medium title-font mb-1'>
@@ -209,7 +211,7 @@ function HomePage(pageProps_: PageProps) {
 					</div>
 				</div>
 			</section>
-			<section className='text-gray-800 body-font  border-gray-300'>
+			<section className='snap-start text-gray-800 body-font  border-gray-300'>
 				<div className='container px-5 py-24 mx-auto flex flex-wrap'>
 					<div className='lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden'>
 						<img
@@ -340,7 +342,7 @@ function HomePage(pageProps_: PageProps) {
 					</div>
 				</div>
 			</section>
-			<section className='text-gray-800 body-font  border-gray-300'>
+			<section className='snap-start text-gray-800 body-font  border-gray-300'>
 				<div className='container px-5 py-24 mx-auto'>
 					<div className='flex flex-wrap w-full mb-20 flex-col items-center text-center'>
 						<h1 className='sm:text-4xl text-2xl font-medium title-font mb-2 text-gray-300'>
@@ -504,13 +506,13 @@ function HomePage(pageProps_: PageProps) {
 							</div>
 						</div>
 					</div>
-					<button className='flex mx-auto mt-16 text-gray-800 bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded-lg text-lg'>
+					<button className='flex mx-auto mt-16 text-gray-800 bg-blue-500 border-0 py-2 px-8  hover:bg-blue-600 rounded-lg text-lg'>
 						Button
 					</button>
 				</div>
 			</section>
 			{
-				/* 	<section className='text-gray-800 body-font  border-gray-300'>
+				/* 	<section className='snap-start text-gray-800 body-font  border-gray-300'>
 				<div className='container px-5 py-24 mx-auto'>
 					<div className='flex flex-col text-center w-full mb-20'>
 						<h1 className='sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-300'>
@@ -672,7 +674,7 @@ function HomePage(pageProps_: PageProps) {
 				</div>
 			</section> */
 			}
-			<section className='text-gray-800 body-font overflow-hidden  border-gray-300'>
+			<section className='snap-start text-gray-800 body-font overflow-hidden  border-gray-300'>
 				<div className='container px-5 py-24 mx-auto flex flex-wrap'>
 					<div className='lg:w-1/4 mt-48 hidden lg:block'>
 						<div className='mt-px  border-gray-300 border-b border-l rounded-tl-lg rounded-bl-lg overflow-hidden'>
@@ -706,7 +708,7 @@ function HomePage(pageProps_: PageProps) {
 						</div>
 					</div>
 					<div className='flex lg:w-3/4 w-full flex-wrap lg:border border-gray-300 rounded-lg'>
-						<div className='lg:w-1/3 lg:mt-px w-full mb-10 lg:mb-0 border-2 border-gray-300 lg:border-none rounded-lg lg:rounded-none'>
+						<div className='lg:w-1/3 lg:mt-px w-full mb-10 lg:mb-0 border-2 border-gray-300  rounded-lg lg:rounded-none'>
 							<div className='px-2 text-center h-48 flex flex-col items-center justify-center'>
 								<h3 className='tracking-widest'>START</h3>
 								<h1 className='text-5xl text-gray-300 font-medium leading-none mb-4 mt-2'>
@@ -818,7 +820,7 @@ function HomePage(pageProps_: PageProps) {
 								</svg>
 							</p>
 							<div className=' border-gray-300 p-6 text-center rounded-bl-lg'>
-								<button className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded-lg'>
+								<button className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full  hover:bg-blue-600 rounded-lg'>
 									Button
 									<svg
 										fill='none'
@@ -957,7 +959,7 @@ function HomePage(pageProps_: PageProps) {
 								</svg>
 							</p>
 							<div className='p-6 text-center  border-gray-300'>
-								<button className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded-lg'>
+								<button className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full  hover:bg-blue-600 rounded-lg'>
 									Button
 									<svg
 										fill='none'
@@ -976,7 +978,7 @@ function HomePage(pageProps_: PageProps) {
 								</p>
 							</div>
 						</div>
-						<div className='lg:w-1/3 w-full lg:mt-px border-2 border-gray-300 lg:border-none rounded-lg lg:rounded-none'>
+						<div className='lg:w-1/3 w-full lg:mt-px border-2 border-gray-300  rounded-lg lg:rounded-none'>
 							<div className='px-2 text-center h-48 flex flex-col items-center justify-center'>
 								<h3 className='tracking-widest'>BUSINESS</h3>
 								<h1 className='text-5xl text-gray-300 font-medium flex items-center justify-center leading-none mb-4 mt-2'>
@@ -1091,7 +1093,7 @@ function HomePage(pageProps_: PageProps) {
 								</svg>
 							</p>
 							<div className='p-6 text-center  border-gray-300'>
-								<button className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded-lg'>
+								<button className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full  hover:bg-blue-600 rounded-lg'>
 									Button
 									<svg
 										fill='none'
@@ -1113,7 +1115,7 @@ function HomePage(pageProps_: PageProps) {
 					</div>
 				</div>
 			</section>
-			<section className='text-gray-800 body-font  border-gray-300'>
+			<section className='snap-start text-gray-800 body-font  border-gray-300'>
 				<div className='container px-5 py-24 mx-auto'>
 					<div className='xl:w-1/2 lg:w-3/4 w-full mx-auto text-center'>
 						<svg
@@ -1147,7 +1149,7 @@ function HomePage(pageProps_: PageProps) {
 				</div>
 			</section>
 			{
-				/* <section className='text-gray-800 body-font relative'>
+				/* <section className='snap-start text-gray-800 body-font relative'>
 				<div className='absolute inset-0 bg-gray-300'>
 					<iframe
 						width='100%'
@@ -1171,16 +1173,16 @@ function HomePage(pageProps_: PageProps) {
 							Post-ironic portland shabby chic echo park, banjo fashion axe
 						</p>
 						<input
-							className='bg-gray-800 rounded-lg border border-gray-400 focus:outline-none focus:border-blue-500 text-base px-4 py-2 mb-4'
+							className='bg-gray-800 rounded-lg border border-gray-400  focus:border-blue-500 text-base px-4 py-2 mb-4'
 							placeholder='Email'
 							type='email'
 						/>
 						<textarea
-							className='bg-gray-800 rounded-lg border border-gray-400 focus:outline-none h-32 focus:border-blue-500 text-base px-4 py-2 mb-4 resize-none'
+							className='bg-gray-800 rounded-lg border border-gray-400  h-32 focus:border-blue-500 text-base px-4 py-2 mb-4 resize-none'
 							placeholder='Message'
 						>
 						</textarea>
-						<button className='text-gray-800 bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded-lg text-lg'>
+						<button className='text-gray-800 bg-blue-500 border-0 py-2 px-6  hover:bg-blue-600 rounded-lg text-lg'>
 							Button
 						</button>
 						<p className='text-lg text-gray-300 text-xs text-gray-500 mt-3'>

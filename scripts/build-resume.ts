@@ -25,7 +25,7 @@ const sanatizedResumeHTML = resumeHTML.replace(
 const resumeCSS = await Deno.readTextFile('./static/resume/github-markdown.min.css');
 // Global scrollbar CSS
 const globalCSS =
-	`:root, *, html {scrollbar-color: #27272a #d1d5db;z-index: 100;}*::-webkit-scrollbar {width: 16px;z-index: 100;}*::-webkit-scrollbar-track {background: #d1d5db;border-radius: 6px;z-index: 99;}*::-webkit-scrollbar-thumb {background-color: #27272a;border-radius: 6px;z-index: 100;}img:before {display: none;}img:after {content: 'Uh Oh! Image not found: "' attr(alt) '"';display: block;position: absolute;padding: 5%;top: 50%;left: 50%;text-align: center;transform: translate(-50%, -50%);background-color: #27272a;z-index: 10;border-radius: 0.5rem;}`;
+	`:root, *, html {scrollbar-color: #27272a #d1d5db;z-index: 100;}*::-webkit-scrollbar {width: 0.666rem;z-index: 100;}*::-webkit-scrollbar-track {background: #d1d5db;border-radius: 6px;z-index: 99;}*::-webkit-scrollbar-thumb {background-color: #27272a;border-radius: 6px;z-index: 100;}img:before {display: none;}img:after {content: 'Uh Oh! Image not found: "' attr(alt) '"';display: block;position: absolute;padding: 5%;top: 50%;left: 50%;text-align: center;transform: translate(-50%, -50%);background-color: #27272a;z-index: 10;border-radius: 0.5rem;}`;
 
 const resumeCode =
 	`<style>${globalCSS}${resumeCSS}</style><article class='markdown-body' style='padding:30px 30px 30px 30px'>${sanatizedResumeHTML}</article>`;

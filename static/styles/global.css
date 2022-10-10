@@ -12,7 +12,7 @@ body {
 	overflow: auto;
 }
 *::-webkit-scrollbar {
-	width: 16px;
+	width: 0.666rem;
 	z-index: 100;
 }
 *::-webkit-scrollbar-track {
@@ -42,4 +42,52 @@ img:after {
 	background-color: #27272a;
 	z-index: 10;
 	border-radius: 0.5rem;
+}
+
+.snap-normal {
+	scroll-snap-stop: normal;
+}
+
+.snap-always {
+	scroll-snap-stop: always;
+}
+
+.snap-start {
+	scroll-snap-align: start;
+}
+
+.snap-end {
+	scroll-snap-align: end;
+}
+
+.snap-center {
+	scroll-snap-align: center;
+}
+
+.snap-align-none {
+	scroll-snap-align: none;
+}
+
+.snap-none {
+	scroll-snap-type: none;
+}
+
+.snap-mandatory {
+	--tw-scroll-snap-strictness: mandatory;
+}
+
+.snap-proximity {
+	--tw-scroll-snap-strictness: proximity;
+}
+
+.snap-x {
+	scroll-snap-type: x var(--tw-scroll-snap-strictness);
+}
+
+.snap-y {
+	scroll-snap-type: y var(--tw-scroll-snap-strictness);
+}
+
+.snap-both {
+	scroll-snap-type: both var(--tw-scroll-snap-strictness);
 }

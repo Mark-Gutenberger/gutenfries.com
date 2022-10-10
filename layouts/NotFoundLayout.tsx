@@ -19,7 +19,7 @@ function NotFoundLayout({ notFoundPageProps_, children }: NotFoundLayoutProps) {
 	return (
 		<>
 			<Head pageProps_={notFoundPageProps_} />
-			<div className='font-rounded pointer-events-auto h-screen w-screen'>
+			<div className='font-rounded pointer-events-auto w-screen'>
 				<Navbar pageProps_={notFoundPageProps_} />
 				<GradientBackground />
 				<GlassCard isMain={true}>

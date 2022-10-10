@@ -18,7 +18,7 @@ function ErrorPageLayout({ errorPageProps_, children }: ErrorPageLayoutProps) {
 	return (
 		<>
 			<Head pageProps_={errorPageProps_} />
-			<div className='font-rounded pointer-events-auto h-screen w-screen'>
+			<div className='font-rounded pointer-events-auto w-screen'>
 				<Navbar pageProps_={errorPageProps_} />
 				<GradientBackground />
 				<GlassCard isMain={true}>

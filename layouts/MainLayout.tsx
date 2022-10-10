@@ -19,7 +19,7 @@ function MainLayout({ pageProps_, children }: MainLayoutProps) {
 	return (
 		<>
 			<Head pageProps_={pageProps_} />
-			<div className='font-rounded pointer-events-auto h-screen w-screen'>
+			<div className='font-rounded pointer-events-auto w-screen'>
 				<Navbar pageProps_={pageProps_} />
 				<GradientBackground />
 				<GlassCard isMain={true}>
