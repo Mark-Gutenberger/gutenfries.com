@@ -17,14 +17,14 @@ function ResumeLayout({ PageProps, children }: ResumeLayoutProps) {
 	return (
 		<>
 			<Head PageProps={PageProps} />
-			<a
-				href='#main-content'
-				className='sr-only focus:not-sr-only'
-			>
-				Skip to main content
-			</a>
 			<div className='font-rounded pointer-events-auto'>
-				<Navbar PageProps={PageProps} />
+				<a
+					href='#print-resume'
+					className='sr-only focus:not-sr-only'
+				>
+					Skip to main content
+				</a>
+				<Navbar PageProps={PageProps} sticky={true} />
 				<NoScript />
 				{children}
 			</div>

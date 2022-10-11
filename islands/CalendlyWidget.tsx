@@ -2,7 +2,8 @@
 /** @jsxFrag Fragment */
 import { Fragment, h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
-import Icons from '../components/Icons.tsx';
+
+import Icons from '@/components/Icons.tsx';
 
 interface CalendlyWidgetProps {
 	minWidth: string | number;
@@ -42,6 +43,7 @@ function CalendlyWidget({ minWidth, height, url }: CalendlyWidgetProps) {
 							onClick={() => setIsExpanded(false)}
 						>
 							<Icons.Close className='fill-current text-white hover:text-gray-700 cursor-pointer' />
+							<span className='sr-only'>Close</span>
 						</button>
 					</>
 				)

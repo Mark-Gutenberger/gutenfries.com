@@ -19,13 +19,13 @@ function ErrorPageLayout({ PageProps, children }: ErrorPageLayoutProps) {
 	return (
 		<>
 			<Head PageProps={PageProps} />
-			<a
-				href='#main-content'
-				className='sr-only focus:not-sr-only'
-			>
-				Skip to main content
-			</a>
 			<div className='font-rounded pointer-events-auto w-screen'>
+				<a
+					href='#main-content'
+					className='sr-only focus:not-sr-only'
+				>
+					Skip to main content
+				</a>
 				<Navbar PageProps={PageProps} />
 				<GradientBackground />
 				<GlassCard isMain={true}>

@@ -39,14 +39,15 @@ function Resume() {
 					<article
 						seamless
 						autoFocus={false}
-						id='print-resume main-content'
-						className='z-0 w-full h-full flex flex-col p-10 mt-[10.5rem] relative overflow-y-scroll scroll-smooth'
+						id='print-resume'
+						// mt-[10.5rem]
+						className='z-0 w-full h-full flex flex-col p-10 relative overflow-y-scroll scroll-smooth'
 						dangerouslySetInnerHTML={{ __html: resume }}
 					/>
 				)
 				: (
 					// show loader
-					<div className='z-0 flex mt-[10.5rem] flex-col items-center bg-gray-300 justify-center h-screen w-screen'>
+					<div className='z-0 flex flex-col items-center bg-gray-300 justify-center h-screen w-screen'>
 						<div className='motion-safe:animate-bounce'>
 							<div className='motion-safe:animate-pulse'>
 								<Icons.Loader_3 className='motion-safe:animate-spin w-32 h-32' />
