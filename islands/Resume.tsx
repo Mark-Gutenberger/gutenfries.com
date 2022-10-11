@@ -41,7 +41,7 @@ function Resume() {
 						autoFocus={false}
 						id='print-resume'
 						// mt-[10.5rem]
-						className='z-0 w-full h-full flex flex-col p-10 relative overflow-y-scroll scroll-smooth'
+						className='z-0 w-full h-full flex flex-col p-10 pb-24 relative overflow-y-scroll scroll-smooth'
 						dangerouslySetInnerHTML={{ __html: resume }}
 					/>
 				)
