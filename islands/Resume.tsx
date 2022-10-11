@@ -46,7 +46,7 @@ function Resume() {
 				)
 				: (
 					// show loader
-					<div className='flex flex-col items-center bg-gray-300 justify-center h-screen w-screen'>
+					<div className='z-0 flex mt-[10.5rem] flex-col items-center bg-gray-300 justify-center h-screen w-screen'>
 						<div className='motion-safe:animate-bounce'>
 							<div className='motion-safe:animate-pulse'>
 								<Icons.Loader_3 className='motion-safe:animate-spin w-32 h-32' />
