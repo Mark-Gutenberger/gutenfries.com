@@ -6,11 +6,13 @@ import { PageProps } from '$fresh/server.ts';
 
 import { HomeLayout } from '@/layouts/HomeLayout.tsx';
 
+import Icons from '@/components/Icons.tsx';
+
 function HomePage(pageProps_: PageProps) {
 	return (
 		<HomeLayout pageProps_={pageProps_}>
 			<section className='snap-start text-gray-800 body-font'>
-				<div className='container mx-auto flex px-5 py-24 md:flex-row flex-col items-center'>
+				<div className='container mx-auto flex px-5 pb-32 pt-8 md:flex-row flex-col items-center'>
 					<div className='lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
 						<h1 className='animate-fade-in-0.5 title-font text-6xl text-underline mb-4 font-medium text-gray-300'>
 							Hi there
@@ -32,10 +34,10 @@ function HomePage(pageProps_: PageProps) {
 						</p>
 						{
 							/* 	<div className='flex justify-center'>
-							<button className='animate-fade-in-0.5 inline-flex text-gray-800 hover:text-gray-700 bg-gray-300 border-0 py-2 px-6  hover:bg-white rounded-lg text-lg'>
+							<button type='button' className='animate-fade-in-0.5 inline-flex text-gray-800 hover:text-gray-700 bg-gray-300 border-0 py-2 px-6  hover:bg-white rounded-lg text-lg'>
 								Two Buttons
 							</button>
-							<button className='animate-fade-in-0.5 ml-4 inline-flex text-gray-300 hover:text-white bg-gray-800 border-0 py-2 px-6  hover:bg-gray-700 rounded-lg text-lg'>
+							<button type='button' className='animate-fade-in-0.5 ml-4 inline-flex text-gray-300 hover:text-white bg-gray-800 border-0 py-2 px-6  hover:bg-gray-700 rounded-lg text-lg'>
 								That Do Nothing
 							</button>
 						</div> */
@@ -51,7 +53,7 @@ function HomePage(pageProps_: PageProps) {
 				</div>
 			</section>
 			<section className='snap-start text-gray-800 body-font border-gray-300'>
-				<div className='container px-5 py-24 mx-auto'>
+				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-col text-center w-full mb-20'>
 						<h1 className='text-xs text-blue-500 tracking-widest font-medium title-font mb-1'>
 							subtext that says something
@@ -65,21 +67,7 @@ function HomePage(pageProps_: PageProps) {
 							<div className='flex rounded-lg h-full bg-gray-800 p-8 flex-col'>
 								<div className='flex items-center mb-3'>
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
-										<svg
-											// source: [Octoicons](https://primer.style/octicons/)
-											className='h-5 w-5'
-											stroke='currentColor'
-											xmlns='http://www.w3.org/2000/svg'
-											viewBox='0 0 24 24'
-											width='24'
-											height='24'
-										>
-											<path
-												fill-rule='evenodd'
-												d='M0 3.75C0 2.784.784 2 1.75 2h20.5c.966 0 1.75.784 1.75 1.75v16.5A1.75 1.75 0 0122.25 22H1.75A1.75 1.75 0 010 20.25V3.75zm1.75-.25a.25.25 0 00-.25.25V5.5h4v-2H1.75zM7 3.5v2h4v-2H7zm5.5 0v2h10V3.75a.25.25 0 00-.25-.25H12.5zm10 3.5h-21v13.25c0 .138.112.25.25.25h20.5a.25.25 0 00.25-.25V7z'
-											>
-											</path>
-										</svg>
+										<Icons.App className='w-5 h-5' />
 									</div>
 									<h1 className='text-gray-300 text-lg title-font font-medium'>
 										Personal Website
@@ -95,20 +83,7 @@ function HomePage(pageProps_: PageProps) {
 										href='https://github.com/gutenfries/gutenfries.deno.dev'
 									>
 										Learn More
-										<svg
-											stroke='currentColor'
-											fill='currentColor'
-											className='w-4 h-4 ml-2'
-											xmlns='http://www.w3.org/2000/svg'
-											viewBox='0 0 24 24'
-											width='24'
-											height='24'
-										>
-											<path d='M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z'>
-											</path>
-											<path d='M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z'>
-											</path>
-										</svg>
+										<Icons.ExternalLink className='w-4 h-4 ml-2' />
 									</a>
 								</div>
 							</div>
@@ -117,19 +92,7 @@ function HomePage(pageProps_: PageProps) {
 							<div className='flex rounded-lg h-full bg-gray-800 p-8 flex-col'>
 								<div className='flex items-center mb-3'>
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
-										<svg
-											fill='none'
-											stroke='currentColor'
-											stroke-linecap='round'
-											stroke-linejoin='round'
-											stroke-width='2'
-											className='w-5 h-5'
-											viewBox='0 0 24 24'
-										>
-											<path d='M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2'>
-											</path>
-											<circle cx='12' cy='7' r='4'></circle>
-										</svg>
+										<Icons.User className='w-5 h-5' />
 									</div>
 									<h1 className='text-gray-300 text-lg title-font font-medium'>
 										The Catalyzer
@@ -142,20 +105,7 @@ function HomePage(pageProps_: PageProps) {
 									</p>
 									<a className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'>
 										Learn More
-										<svg
-											stroke='currentColor'
-											fill='currentColor'
-											className='w-4 h-4 ml-2'
-											xmlns='http://www.w3.org/2000/svg'
-											viewBox='0 0 24 24'
-											width='24'
-											height='24'
-										>
-											<path d='M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z'>
-											</path>
-											<path d='M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z'>
-											</path>
-										</svg>
+										<Icons.ExternalLink className='w-4 h-4 ml-2' />
 									</a>
 								</div>
 							</div>
@@ -164,20 +114,7 @@ function HomePage(pageProps_: PageProps) {
 							<div className='flex rounded-lg h-full bg-gray-800 p-8 flex-col'>
 								<div className='flex items-center mb-3'>
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
-										<svg
-											fill='none'
-											stroke='currentColor'
-											stroke-linecap='round'
-											stroke-linejoin='round'
-											stroke-width='2'
-											className='w-5 h-5'
-											viewBox='0 0 24 24'
-										>
-											<circle cx='6' cy='6' r='3'></circle>
-											<circle cx='6' cy='18' r='3'></circle>
-											<path d='M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12'>
-											</path>
-										</svg>
+										<Icons.Accessibility className='w-5 h-5' />
 									</div>
 									<h1 className='text-gray-300 text-lg title-font font-medium'>
 										Neptune
@@ -190,20 +127,7 @@ function HomePage(pageProps_: PageProps) {
 									</p>
 									<a className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'>
 										Learn More
-										<svg
-											stroke='currentColor'
-											fill='currentColor'
-											className='w-4 h-4 ml-2'
-											xmlns='http://www.w3.org/2000/svg'
-											viewBox='0 0 24 24'
-											width='24'
-											height='24'
-										>
-											<path d='M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z'>
-											</path>
-											<path d='M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z'>
-											</path>
-										</svg>
+										<Icons.ExternalLink className='w-4 h-4 ml-2' />
 									</a>
 								</div>
 							</div>
@@ -212,7 +136,7 @@ function HomePage(pageProps_: PageProps) {
 				</div>
 			</section>
 			<section className='snap-start text-gray-800 body-font  border-gray-300'>
-				<div className='container px-5 py-24 mx-auto flex flex-wrap'>
+				<div className='container px-5 py-32 mx-auto flex flex-wrap'>
 					<div className='lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden'>
 						<img
 							alt='feature'
@@ -343,7 +267,7 @@ function HomePage(pageProps_: PageProps) {
 				</div>
 			</section>
 			<section className='snap-start text-gray-800 body-font  border-gray-300'>
-				<div className='container px-5 py-24 mx-auto'>
+				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-wrap w-full mb-20 flex-col items-center text-center'>
 						<h1 className='sm:text-4xl text-2xl font-medium title-font mb-2 text-gray-300'>
 							Pitchfork Kickstarter Taxidermy
@@ -506,14 +430,17 @@ function HomePage(pageProps_: PageProps) {
 							</div>
 						</div>
 					</div>
-					<button className='flex mx-auto mt-16 text-gray-800 bg-blue-500 border-0 py-2 px-8  hover:bg-blue-600 rounded-lg text-lg'>
+					<button
+						type='button'
+						className='flex mx-auto mt-16 text-gray-800 bg-blue-500 border-0 py-2 px-8  hover:bg-blue-600 rounded-lg text-lg'
+					>
 						Button
 					</button>
 				</div>
 			</section>
 			{
 				/* 	<section className='snap-start text-gray-800 body-font  border-gray-300'>
-				<div className='container px-5 py-24 mx-auto'>
+				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-col text-center w-full mb-20'>
 						<h1 className='sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-300'>
 							Our Team
@@ -675,7 +602,7 @@ function HomePage(pageProps_: PageProps) {
 			</section> */
 			}
 			<section className='snap-start text-gray-800 body-font overflow-hidden  border-gray-300'>
-				<div className='container px-5 py-24 mx-auto flex flex-wrap'>
+				<div className='container px-5 py-32 mx-auto flex flex-wrap'>
 					<div className='lg:w-1/4 mt-48 hidden lg:block'>
 						<div className='mt-px  border-gray-300 border-b border-l rounded-tl-lg rounded-bl-lg overflow-hidden'>
 							<p className='text-lg text-gray-300 bg-gray-800 text-gray-300 h-12 text-center px-4 flex items-center justify-start -mt-px'>
@@ -820,7 +747,10 @@ function HomePage(pageProps_: PageProps) {
 								</svg>
 							</p>
 							<div className=' border-gray-300 p-6 text-center rounded-bl-lg'>
-								<button className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full  hover:bg-blue-600 rounded-lg'>
+								<button
+									type='button'
+									className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full  hover:bg-blue-600 rounded-lg'
+								>
 									Button
 									<svg
 										fill='none'
@@ -959,7 +889,10 @@ function HomePage(pageProps_: PageProps) {
 								</svg>
 							</p>
 							<div className='p-6 text-center  border-gray-300'>
-								<button className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full  hover:bg-blue-600 rounded-lg'>
+								<button
+									type='button'
+									className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full  hover:bg-blue-600 rounded-lg'
+								>
 									Button
 									<svg
 										fill='none'
@@ -1093,7 +1026,10 @@ function HomePage(pageProps_: PageProps) {
 								</svg>
 							</p>
 							<div className='p-6 text-center  border-gray-300'>
-								<button className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full  hover:bg-blue-600 rounded-lg'>
+								<button
+									type='button'
+									className='flex items-center mt-auto text-gray-800 bg-blue-500 border-0 py-2 px-4 w-full  hover:bg-blue-600 rounded-lg'
+								>
 									Button
 									<svg
 										fill='none'
@@ -1116,7 +1052,7 @@ function HomePage(pageProps_: PageProps) {
 				</div>
 			</section>
 			<section className='snap-start text-gray-800 body-font  border-gray-300'>
-				<div className='container px-5 py-24 mx-auto'>
+				<div className='container px-5 py-32 mx-auto'>
 					<div className='xl:w-1/2 lg:w-3/4 w-full mx-auto text-center'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -1164,7 +1100,7 @@ function HomePage(pageProps_: PageProps) {
 					>
 					</iframe>
 				</div>
-				<div className='container px-5 py-24 mx-auto flex'>
+				<div className='container px-5 py-32 mx-auto flex'>
 					<div className='lg:w-1/3 md:w-1/2 bg-gray-800 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10'>
 						<h1 className='text-gray-300 text-lg mb-1 font-medium title-font'>
 							Feedback
@@ -1182,7 +1118,7 @@ function HomePage(pageProps_: PageProps) {
 							placeholder='Message'
 						>
 						</textarea>
-						<button className='text-gray-800 bg-blue-500 border-0 py-2 px-6  hover:bg-blue-600 rounded-lg text-lg'>
+						<button type='button' className='text-gray-800 bg-blue-500 border-0 py-2 px-6  hover:bg-blue-600 rounded-lg text-lg'>
 							Button
 						</button>
 						<p className='text-lg text-gray-300 text-xs text-gray-500 mt-3'>
@@ -1194,7 +1130,7 @@ function HomePage(pageProps_: PageProps) {
 			</section> */
 			}
 			<footer className='text-gray-800 body-font'>
-				<div className='container px-5 py-24 mx-auto'>
+				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-wrap md:text-left text-center -mb-10 -mx-4'>
 						<div className='lg:w-1/6 md:w-1/2 w-full px-4'>
 							<h1 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>

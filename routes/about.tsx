@@ -10,10 +10,10 @@ function AboutPage(pageProps_: PageProps) {
 		<MainLayout
 			pageProps_={pageProps_}
 		>
-			<h1 className='animate-fade-in-0.5 text-5xl font-bold text-center mt-5 text-gray-200'>
+			<h1 className='animate-fade-in-0.5 text-5xl font-bold text-center mt-5 text-white'>
 				How I made this site
 			</h1>
-			<p className='animate-fade-in-0.5 text-xl text-center mt-8 text-gray-200'>
+			<p className='animate-fade-in-0.5 text-xl text-center mt-8 text-white'>
 				Blah blah blah, update this later
 			</p>
 		</MainLayout>

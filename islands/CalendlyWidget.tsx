@@ -2,6 +2,7 @@
 /** @jsxFrag Fragment */
 import { Fragment, h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
+import Icons from '../components/Icons.tsx';
 
 interface CalendlyWidgetProps {
 	minWidth: string | number;
@@ -21,7 +22,7 @@ function CalendlyWidget({ minWidth, height, url }: CalendlyWidgetProps) {
 		const script = document.createElement('script');
 		script.setAttribute('src', '/calendly/widget.min.js');
 		script.setAttribute('type', 'text/javascript');
-		script.setAttribute('async', 'true');
+		// script.setAttribute('async', 'true');
 		head?.appendChild(script);
 	}, [isExpanded === true]);
 
@@ -30,38 +31,24 @@ function CalendlyWidget({ minWidth, height, url }: CalendlyWidgetProps) {
 			{isExpanded
 				? (
 					<>
-						<div className='p-2.5'>
-							<div
-								className={`${`calendly-inline-widget`} shadow-md rounded-lg`}
-								data-url={url}
-								style={{ minWidth: minWidth, height: height }}
-							/>
-						</div>
+						<div
+							className='p-2.5 calendly-inline-widget shadow-md rounded-lg'
+							data-url={url}
+							style={{ minWidth: minWidth, height: height }}
+						/>
 						<button
-							className='fixed bottom-0 left-0 mb-10 ml-10 flex items-center justify-center p-2.5 text-gray-200 bg-gray-700 hover:bg-transparent border-4 border-transparent hover:border-gray-700 backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg hover:text-white'
+							type='button'
+							className='fixed bottom-0 left-0 mb-10 ml-10 flex items-center justify-center p-2.5 text-white bg-gray-700 hover:bg-transparent border-4 border-transparent hover:border-gray-700 backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg hover:text-white'
 							onClick={() => setIsExpanded(false)}
 						>
-							<svg
-								name='X'
-								strokeWidth='2'
-								className='fill-current text-gray-200 hover:text-gray-700 cursor-pointer'
-								xmlns='http://www.w3.org/2000/svg'
-								viewBox='0 0 24 24'
-								width='24'
-								height='24'
-							>
-								<path
-									fill-rule='evenodd'
-									d='M5.72 5.72a.75.75 0 011.06 0L12 10.94l5.22-5.22a.75.75 0 111.06 1.06L13.06 12l5.22 5.22a.75.75 0 11-1.06 1.06L12 13.06l-5.22 5.22a.75.75 0 01-1.06-1.06L10.94 12 5.72 6.78a.75.75 0 010-1.06z'
-								>
-								</path>
-							</svg>
+							<Icons.Close className='fill-current text-white hover:text-gray-700 cursor-pointer' />
 						</button>
 					</>
 				)
 				: (
 					<button
-						className='fixed bottom-0 right-0 mb-10 mr-10 flex items-center justify-center p-2 text-gray-200 bg-gray-700 hover:bg-transparent border-4 border-transparent hover:border-gray-700 backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg hover:text-white'
+						type='button'
+						className='fixed bottom-0 right-0 mb-10 mr-10 flex items-center justify-center p-2 text-white bg-gray-700 hover:bg-transparent border-4 border-transparent hover:border-gray-700 backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg hover:text-white'
 						onClick={() => setIsExpanded(true)}
 					>
 						Book a coffee chat
