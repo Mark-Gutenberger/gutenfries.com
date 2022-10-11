@@ -8,10 +8,10 @@ import { SocialLinks } from '@/components/SocialLinks.tsx';
 
 import CalendlyWidget from '@/islands/CalendlyWidget.tsx';
 
-function ContactPage(pageProps_: PageProps) {
+function ContactPage(PageProps: PageProps) {
 	return (
 		<MainLayout
-			pageProps_={pageProps_}
+			PageProps={PageProps}
 		>
 			<CalendlyWidget
 				minWidth={200}

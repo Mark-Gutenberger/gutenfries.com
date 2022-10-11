@@ -34,7 +34,6 @@ site: [pulaskischools.org](https://www.pulaskischools.org/)
 phone: [+1 (715)-853-3011](tel:7158533011)
 
 - **Farm Hand** _(Seasonal)_
-	- Cover
 
 
 

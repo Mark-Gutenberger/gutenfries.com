@@ -4,13 +4,13 @@ import { h } from 'preact';
 import { asset } from '$fresh/runtime.ts';
 import { PageProps } from '$fresh/server.ts';
 
-import { HomeLayout } from '@/layouts/HomeLayout.tsx';
+import { MainLayout } from '@/layouts/MainLayout.tsx';
 
 import Icons from '@/components/Icons.tsx';
 
-function HomePage(pageProps_: PageProps) {
+function HomePage(PageProps: PageProps) {
 	return (
-		<HomeLayout pageProps_={pageProps_}>
+		<MainLayout PageProps={PageProps}>
 			<section className='snap-start text-gray-800 body-font'>
 				<div className='container mx-auto flex px-5 pb-32 pt-8 md:flex-row flex-col items-center'>
 					<div className='lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
@@ -55,12 +55,12 @@ function HomePage(pageProps_: PageProps) {
 			<section className='snap-start text-gray-800 body-font border-gray-300'>
 				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-col text-center w-full mb-20'>
-						<h1 className='text-xs text-blue-500 tracking-widest font-medium title-font mb-1'>
+						<h2 className='text-xs text-blue-500 tracking-widest font-medium title-font mb-1'>
 							subtext that says something
-						</h1>
-						<h1 className='sm:text-4xl text-2xl font-medium title-font text-gray-300'>
+						</h2>
+						<h2 className='sm:text-4xl text-2xl font-medium title-font text-gray-300'>
 							Projects I've Worked On
-						</h1>
+						</h2>
 					</div>
 					<div className='flex flex-wrap -m-4'>
 						<div className='p-4 md:w-1/3'>
@@ -69,9 +69,9 @@ function HomePage(pageProps_: PageProps) {
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
 										<Icons.App className='w-5 h-5' />
 									</div>
-									<h1 className='text-gray-300 text-lg title-font font-medium'>
+									<h2 className='text-gray-300 text-lg title-font font-medium'>
 										Personal Website
-									</h1>
+									</h2>
 								</div>
 								<div className='flex-grow'>
 									<p className='text-lg text-gray-300 text-base'>
@@ -94,9 +94,9 @@ function HomePage(pageProps_: PageProps) {
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
 										<Icons.User className='w-5 h-5' />
 									</div>
-									<h1 className='text-gray-300 text-lg title-font font-medium'>
+									<h2 className='text-gray-300 text-lg title-font font-medium'>
 										The Catalyzer
-									</h1>
+									</h2>
 								</div>
 								<div className='flex-grow'>
 									<p className='text-lg text-gray-300 text-base'>
@@ -116,9 +116,9 @@ function HomePage(pageProps_: PageProps) {
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
 										<Icons.Accessibility className='w-5 h-5' />
 									</div>
-									<h1 className='text-gray-300 text-lg title-font font-medium'>
+									<h2 className='text-gray-300 text-lg title-font font-medium'>
 										Neptune
-									</h1>
+									</h2>
 								</div>
 								<div className='flex-grow'>
 									<p className='text-lg text-gray-300 text-base'>
@@ -160,9 +160,9 @@ function HomePage(pageProps_: PageProps) {
 								</svg>
 							</div>
 							<div className='flex-grow'>
-								<h1 className='text-gray-300 text-lg title-font font-medium mb-3'>
+								<h2 className='text-gray-300 text-lg title-font font-medium mb-3'>
 									Shooting Stars
-								</h1>
+								</h2>
 								<p className='text-lg text-gray-300 text-base'>
 									Blue bottle crucifix vinyl post-ironic four dollar toast vegan
 									taxidermy. Gastropub indxgo juice poutine.
@@ -178,7 +178,7 @@ function HomePage(pageProps_: PageProps) {
 										className='w-4 h-4 ml-2'
 										viewBox='0 0 24 24'
 									>
-										<path d='M5 12h14M12 5l7 7-7 7'></path>
+										<path d='M5 12h24M12 5l7 7-7 7'></path>
 									</svg>
 								</a>
 							</div>
@@ -201,9 +201,9 @@ function HomePage(pageProps_: PageProps) {
 								</svg>
 							</div>
 							<div className='flex-grow'>
-								<h1 className='text-gray-300 text-lg title-font font-medium mb-3'>
+								<h2 className='text-gray-300 text-lg title-font font-medium mb-3'>
 									The Catalyzer
-								</h1>
+								</h2>
 								<p className='text-lg text-gray-300 text-base'>
 									Blue bottle crucifix vinyl post-ironic four dollar toast vegan
 									taxidermy. Gastropub indxgo juice poutine.
@@ -219,7 +219,7 @@ function HomePage(pageProps_: PageProps) {
 										className='w-4 h-4 ml-2'
 										viewBox='0 0 24 24'
 									>
-										<path d='M5 12h14M12 5l7 7-7 7'></path>
+										<path d='M5 12h24M12 5l7 7-7 7'></path>
 									</svg>
 								</a>
 							</div>
@@ -240,9 +240,9 @@ function HomePage(pageProps_: PageProps) {
 								</svg>
 							</div>
 							<div className='flex-grow'>
-								<h1 className='text-gray-300 text-lg title-font font-medium mb-3'>
+								<h2 className='text-gray-300 text-lg title-font font-medium mb-3'>
 									Neptune
-								</h1>
+								</h2>
 								<p className='text-lg text-gray-300 text-base'>
 									Blue bottle crucifix vinyl post-ironic four dollar toast vegan
 									taxidermy. Gastropub indxgo juice poutine.
@@ -258,7 +258,7 @@ function HomePage(pageProps_: PageProps) {
 										className='w-4 h-4 ml-2'
 										viewBox='0 0 24 24'
 									>
-										<path d='M5 12h14M12 5l7 7-7 7'></path>
+										<path d='M5 12h24M12 5l7 7-7 7'></path>
 									</svg>
 								</a>
 							</div>
@@ -269,9 +269,9 @@ function HomePage(pageProps_: PageProps) {
 			<section className='snap-start text-gray-800 body-font  border-gray-300'>
 				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-wrap w-full mb-20 flex-col items-center text-center'>
-						<h1 className='sm:text-4xl text-2xl font-medium title-font mb-2 text-gray-300'>
+						<h2 className='sm:text-4xl text-2xl font-medium title-font mb-2 text-gray-300'>
 							Pitchfork Kickstarter Taxidermy
-						</h1>
+						</h2>
 						<p className='text-lg text-gray-300 lg:w-1/2 w-full text-base'>
 							Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
 							gentrify, subway tile poke farm-to-table.
@@ -293,9 +293,9 @@ function HomePage(pageProps_: PageProps) {
 										<path d='M22 12h-4l-3 9L9 3l-3 9H2'></path>
 									</svg>
 								</div>
-								<h1 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
 									Shooting Stars
-								</h1>
+								</h2>
 								<p className='text-lg text-gray-300 text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
@@ -320,9 +320,9 @@ function HomePage(pageProps_: PageProps) {
 										</path>
 									</svg>
 								</div>
-								<h1 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
 									The Catalyzer
-								</h1>
+								</h2>
 								<p className='text-lg text-gray-300 text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
@@ -345,9 +345,9 @@ function HomePage(pageProps_: PageProps) {
 										<circle cx='12' cy='7' r='4'></circle>
 									</svg>
 								</div>
-								<h1 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
 									Neptune
-								</h1>
+								</h2>
 								<p className='text-lg text-gray-300 text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
@@ -370,9 +370,9 @@ function HomePage(pageProps_: PageProps) {
 										</path>
 									</svg>
 								</div>
-								<h1 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
 									Melanchole
-								</h1>
+								</h2>
 								<p className='text-lg text-gray-300 text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
@@ -395,9 +395,9 @@ function HomePage(pageProps_: PageProps) {
 										</path>
 									</svg>
 								</div>
-								<h1 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
 									Bunker
-								</h1>
+								</h2>
 								<p className='text-lg text-gray-300 text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
@@ -420,9 +420,9 @@ function HomePage(pageProps_: PageProps) {
 										</path>
 									</svg>
 								</div>
-								<h1 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
 									Ramona Falls
-								</h1>
+								</h2>
 								<p className='text-lg text-gray-300 text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
@@ -442,9 +442,9 @@ function HomePage(pageProps_: PageProps) {
 				/* 	<section className='snap-start text-gray-800 body-font  border-gray-300'>
 				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-col text-center w-full mb-20'>
-						<h1 className='sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-300'>
+						<h2 className='sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-300'>
 							Our Team
-						</h1>
+						</h2>
 						<p className='text-lg text-gray-300 lg:w-2/3 mx-auto text-base'>
 							Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
 							gentrify, subway tile poke farm-to-table. Franzen you probably haven't
@@ -460,9 +460,9 @@ function HomePage(pageProps_: PageProps) {
 									src='https://dummyimage.com/80x80/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h1 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 title-font font-medium'>
 										Holden Caulfield
-									</h1>
+									</h2>
 									<p className='text-lg text-gray-300'>
 										UI Designer
 									</p>
@@ -477,9 +477,9 @@ function HomePage(pageProps_: PageProps) {
 									src='https://dummyimage.com/84x84/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h1 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 title-font font-medium'>
 										Henry Letham
-									</h1>
+									</h2>
 									<p className='text-lg text-gray-300'>CTO</p>
 								</div>
 							</div>
@@ -492,9 +492,9 @@ function HomePage(pageProps_: PageProps) {
 									src='https://dummyimage.com/88x88/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h1 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 title-font font-medium'>
 										Oskar Blinde
-									</h1>
+									</h2>
 									<p className='text-lg text-gray-300'>Founder</p>
 								</div>
 							</div>
@@ -507,9 +507,9 @@ function HomePage(pageProps_: PageProps) {
 									src='https://dummyimage.com/90x90/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h1 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 title-font font-medium'>
 										John Doe
-									</h1>
+									</h2>
 									<p className='text-lg text-gray-300'>DevOps</p>
 								</div>
 							</div>
@@ -522,9 +522,9 @@ function HomePage(pageProps_: PageProps) {
 									src='https://dummyimage.com/94x94/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h1 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 title-font font-medium'>
 										Martin Eden
-									</h1>
+									</h2>
 									<p className='text-lg text-gray-300'>
 										Software Engineer
 									</p>
@@ -539,9 +539,9 @@ function HomePage(pageProps_: PageProps) {
 									src='https://dummyimage.com/98x98/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h1 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 title-font font-medium'>
 										Boris Kitua
-									</h1>
+									</h2>
 									<p className='text-lg text-gray-300'>
 										UX Researcher
 									</p>
@@ -556,9 +556,9 @@ function HomePage(pageProps_: PageProps) {
 									src='https://dummyimage.com/100x90/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h1 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 title-font font-medium'>
 										Atticus Finch
-									</h1>
+									</h2>
 									<p className='text-lg text-gray-300'>
 										QA Engineer
 									</p>
@@ -573,9 +573,9 @@ function HomePage(pageProps_: PageProps) {
 									src='https://dummyimage.com/104x94/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h1 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 title-font font-medium'>
 										Alper Kamu
-									</h1>
+									</h2>
 									<p className='text-lg text-gray-300'>System</p>
 								</div>
 							</div>
@@ -588,9 +588,9 @@ function HomePage(pageProps_: PageProps) {
 									src='https://dummyimage.com/108x98/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h1 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 title-font font-medium'>
 										Rodrigo Monchi
-									</h1>
+									</h2>
 									<p className='text-lg text-gray-300'>
 										Product Manager
 									</p>
@@ -638,9 +638,9 @@ function HomePage(pageProps_: PageProps) {
 						<div className='lg:w-1/3 lg:mt-px w-full mb-10 lg:mb-0 border-2 border-gray-300  rounded-lg lg:rounded-none'>
 							<div className='px-2 text-center h-48 flex flex-col items-center justify-center'>
 								<h3 className='tracking-widest'>START</h3>
-								<h1 className='text-5xl text-gray-300 font-medium leading-none mb-4 mt-2'>
+								<h2 className='text-5xl text-gray-300 font-medium leading-none mb-4 mt-2'>
 									Free
-								</h1>
+								</h2>
 								<span className='text-sm text-gray-600'>Next 3 months</span>
 							</div>
 							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center  border-gray-300'>
@@ -761,7 +761,7 @@ function HomePage(pageProps_: PageProps) {
 										className='w-4 h-4 ml-auto'
 										viewBox='0 0 24 24'
 									>
-										<path d='M5 12h14M12 5l7 7-7 7'></path>
+										<path d='M5 12h24M12 5l7 7-7 7'></path>
 									</svg>
 								</button>
 								<p className='text-lg text-gray-300 text-xs text-gray-500 mt-3'>
@@ -775,10 +775,10 @@ function HomePage(pageProps_: PageProps) {
 							</span>
 							<div className='px-2 text-center h-48 flex flex-col items-center justify-center'>
 								<h3 className='tracking-widest'>PRO</h3>
-								<h1 className='text-5xl text-gray-300 font-medium flex items-center justify-center leading-none mb-4 mt-2'>
+								<h2 className='text-5xl text-gray-300 font-medium flex items-center justify-center leading-none mb-4 mt-2'>
 									$38
 									<span className='text-gray-600 text-base ml-1'>/mo</span>
-								</h1>
+								</h2>
 								<span className='text-sm text-gray-600'>
 									Charging $456 per year
 								</span>
@@ -903,7 +903,7 @@ function HomePage(pageProps_: PageProps) {
 										className='w-4 h-4 ml-auto'
 										viewBox='0 0 24 24'
 									>
-										<path d='M5 12h14M12 5l7 7-7 7'></path>
+										<path d='M5 12h24M12 5l7 7-7 7'></path>
 									</svg>
 								</button>
 								<p className='text-lg text-gray-300 text-xs text-gray-500 mt-3'>
@@ -914,10 +914,10 @@ function HomePage(pageProps_: PageProps) {
 						<div className='lg:w-1/3 w-full lg:mt-px border-2 border-gray-300  rounded-lg lg:rounded-none'>
 							<div className='px-2 text-center h-48 flex flex-col items-center justify-center'>
 								<h3 className='tracking-widest'>BUSINESS</h3>
-								<h1 className='text-5xl text-gray-300 font-medium flex items-center justify-center leading-none mb-4 mt-2'>
+								<h2 className='text-5xl text-gray-300 font-medium flex items-center justify-center leading-none mb-4 mt-2'>
 									$54
 									<span className='text-gray-600 text-base ml-1'>/mo</span>
-								</h1>
+								</h2>
 								<span className='text-sm text-gray-600'>
 									Charging $648 per year
 								</span>
@@ -1040,7 +1040,7 @@ function HomePage(pageProps_: PageProps) {
 										className='w-4 h-4 ml-auto'
 										viewBox='0 0 24 24'
 									>
-										<path d='M5 12h14M12 5l7 7-7 7'></path>
+										<path d='M5 12h24M12 5l7 7-7 7'></path>
 									</svg>
 								</button>
 								<p className='text-lg text-gray-300 text-xs text-gray-500 mt-3'>
@@ -1060,7 +1060,7 @@ function HomePage(pageProps_: PageProps) {
 							className='inline-block w-8 h-8 text-gray-400 mb-8'
 							viewBox='0 0 975.036 975.036'
 						>
-							<path d='M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z'>
+							<path d='M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h245.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h245.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z'>
 							</path>
 						</svg>
 						<p className='text-lg text-gray-300 text-lg'>
@@ -1075,9 +1075,9 @@ function HomePage(pageProps_: PageProps) {
 						</p>
 						<span className='inline-block h-1 w-10 rounded-lg bg-blue-500 mt-8 mb-6'>
 						</span>
-						<h1 className='text-gray-300 font-medium title-font tracking-wider text-sm'>
+						<h2 className='text-gray-300 font-medium title-font tracking-wider text-sm'>
 							HOLDEN CAULFIELD
-						</h1>
+						</h2>
 						<p className='text-lg text-gray-300'>
 							Senior Product Designer
 						</p>
@@ -1102,9 +1102,9 @@ function HomePage(pageProps_: PageProps) {
 				</div>
 				<div className='container px-5 py-32 mx-auto flex'>
 					<div className='lg:w-1/3 md:w-1/2 bg-gray-800 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10'>
-						<h1 className='text-gray-300 text-lg mb-1 font-medium title-font'>
+						<h2 className='text-gray-300 text-lg mb-1 font-medium title-font'>
 							Feedback
-						</h1>
+						</h2>
 						<p className='text-lg text-gray-300 mb-5 text-gray-600'>
 							Post-ironic portland shabby chic echo park, banjo fashion axe
 						</p>
@@ -1132,175 +1132,187 @@ function HomePage(pageProps_: PageProps) {
 			<footer className='text-gray-800 body-font'>
 				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-wrap md:text-left text-center -mb-10 -mx-4'>
-						<div className='lg:w-1/6 md:w-1/2 w-full px-4'>
-							<h1 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
+						<section className='snap-start lg:w-1/6 md:w-1/2 w-full px-4'>
+							<h2 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
 								CATEGORIES
-							</h1>
+							</h2>
 							<nav className='list-none mb-10'>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										First Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Second Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Third Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Fourth Link
-									</a>
-								</li>
+								<ul>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											First Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Second Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Third Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Fourth Link
+										</a>
+									</li>
+								</ul>
 							</nav>
-						</div>
-						<div className='lg:w-1/6 md:w-1/2 w-full px-4'>
-							<h1 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
+						</section>
+						<section className='snap-start lg:w-1/6 md:w-1/2 w-full px-4'>
+							<h2 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
 								CATEGORIES
-							</h1>
+							</h2>
 							<nav className='list-none mb-10'>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										First Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Second Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Third Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Fourth Link
-									</a>
-								</li>
+								<ul>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											First Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Second Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Third Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Fourth Link
+										</a>
+									</li>
+								</ul>
 							</nav>
-						</div>
-						<div className='lg:w-1/6 md:w-1/2 w-full px-4'>
-							<h1 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
+						</section>
+						<section className='snap-start lg:w-1/6 md:w-1/2 w-full px-4'>
+							<h2 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
 								CATEGORIES
-							</h1>
+							</h2>
 							<nav className='list-none mb-10'>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										First Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Second Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Third Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Fourth Link
-									</a>
-								</li>
+								<ul>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											First Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Second Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Third Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Fourth Link
+										</a>
+									</li>
+								</ul>
 							</nav>
-						</div>
-						<div className='lg:w-1/6 md:w-1/2 w-full px-4'>
-							<h1 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
+						</section>
+						<section className='snap-start lg:w-1/6 md:w-1/2 w-full px-4'>
+							<h2 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
 								CATEGORIES
-							</h1>
+							</h2>
 							<nav className='list-none mb-10'>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										First Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Second Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Third Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Fourth Link
-									</a>
-								</li>
+								<ul>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											First Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Second Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Third Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Fourth Link
+										</a>
+									</li>
+								</ul>
 							</nav>
-						</div>
-						<div className='lg:w-1/6 md:w-1/2 w-full px-4'>
-							<h1 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
+						</section>
+						<section className='snap-start lg:w-1/6 md:w-1/2 w-full px-4'>
+							<h2 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
 								CATEGORIES
-							</h1>
+							</h2>
 							<nav className='list-none mb-10'>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										First Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Second Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Third Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Fourth Link
-									</a>
-								</li>
+								<ul>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											First Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Second Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Third Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Fourth Link
+										</a>
+									</li>
+								</ul>
 							</nav>
-						</div>
-						<div className='lg:w-1/6 md:w-1/2 w-full px-4'>
-							<h1 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
+						</section>
+						<section className='snap-start lg:w-1/6 md:w-1/2 w-full px-4'>
+							<h2 className='title-font font-bold text-md text-blue-500 tracking-widest mb-3'>
 								CATEGORIES
-							</h1>
+							</h2>
 							<nav className='list-none mb-10'>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										First Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Second Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Third Link
-									</a>
-								</li>
-								<li>
-									<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
-										Fourth Link
-									</a>
-								</li>
+								<ul>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											First Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Second Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Third Link
+										</a>
+									</li>
+									<li>
+										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+											Fourth Link
+										</a>
+									</li>
+								</ul>
 							</nav>
-						</div>
+						</section>
 					</div>
 				</div>
 
-				<div className='bg-gray-800 rounded-lg'>
+				<section className='snap-end bg-gray-800 rounded-lg'>
 					<div className='container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row'>
 						<p className='text-lg text-gray-300 text-sm text-center sm:text-left'>
-							© {new Date().getFullYear()} Mark Gutenberger —
+							© {new Date().getFullYear()} Mark Gutenberger -
 							<a
 								href='https://twitter.com/knyttneve'
 								className='text-white ml-1'
@@ -1314,9 +1326,9 @@ function HomePage(pageProps_: PageProps) {
 							Created with {'<'}3
 						</span>
 					</div>
-				</div>
+				</section>
 			</footer>
-		</HomeLayout>
+		</MainLayout>
 	);
 }
 

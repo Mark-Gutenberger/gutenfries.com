@@ -39,8 +39,8 @@ function Resume() {
 					<article
 						seamless
 						autoFocus={false}
-						id='print-resume'
-						className='z-0 w-full h-full flex flex-col p-10 pt-28 relative overflow-auto scroll-smooth'
+						id='print-resume main-content'
+						className='z-0 w-full h-full flex flex-col p-10 mt-[10.5rem] relative overflow-y-scroll scroll-smooth'
 						dangerouslySetInnerHTML={{ __html: resume }}
 					/>
 				)

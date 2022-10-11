@@ -7,7 +7,7 @@ import { ErrorPageProps, PageProps, UnknownPageProps } from '$fresh/server.ts';
 import SearchBar from '@/islands/SearchBar.tsx';
 
 interface NavbarProps {
-	pageProps_: PageProps | UnknownPageProps | ErrorPageProps;
+	PageProps: PageProps | UnknownPageProps | ErrorPageProps;
 }
 
 interface Routes {
@@ -30,11 +30,11 @@ function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
-function Navbar({ pageProps_ }: NavbarProps) {
+function Navbar({ PageProps }: NavbarProps) {
 	let route: string;
 
-	if (routes.find((r) => r.href === pageProps_.url.pathname)) {
-		route = pageProps_.url.pathname;
+	if (routes.find((r) => r.href === PageProps.url.pathname)) {
+		route = PageProps.url.pathname;
 	} else {
 		route = '/404';
 	}

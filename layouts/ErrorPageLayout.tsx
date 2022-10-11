@@ -1,7 +1,8 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { ComponentChildren, Fragment, h } from 'preact';
-import { ErrorPageProps } from '$fresh/server.ts';
+
+import { ErrorPageProps, UnknownPageProps } from '$fresh/server.ts';
 
 import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
@@ -10,16 +11,22 @@ import { GradientBackground } from '@/components/GradientBackground.tsx';
 import { GlassCard } from '@/components/GlassCard.tsx';
 
 interface ErrorPageLayoutProps {
-	errorPageProps_: ErrorPageProps;
+	PageProps: ErrorPageProps | UnknownPageProps;
 	children?: ComponentChildren;
 }
 
-function ErrorPageLayout({ errorPageProps_, children }: ErrorPageLayoutProps) {
+function ErrorPageLayout({ PageProps, children }: ErrorPageLayoutProps) {
 	return (
 		<>
-			<Head pageProps_={errorPageProps_} />
+			<Head PageProps={PageProps} />
+			<a
+				href='#main-content'
+				className='sr-only focus:not-sr-only'
+			>
+				Skip to main content
+			</a>
 			<div className='font-rounded pointer-events-auto w-screen'>
-				<Navbar pageProps_={errorPageProps_} />
+				<Navbar PageProps={PageProps} />
 				<GradientBackground />
 				<GlassCard isMain={true}>
 					<NoScript />

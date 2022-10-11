@@ -9,16 +9,22 @@ import { NoScript } from '@/components/NoScript.tsx';
 import { Navbar } from '@/components/Navbar.tsx';
 
 interface ResumeLayoutProps {
-	pageProps_: PageProps;
+	PageProps: PageProps;
 	children?: ComponentChildren;
 }
 
-function ResumeLayout({ pageProps_, children }: ResumeLayoutProps) {
+function ResumeLayout({ PageProps, children }: ResumeLayoutProps) {
 	return (
 		<>
-			<Head pageProps_={pageProps_} />
+			<Head PageProps={PageProps} />
+			<a
+				href='#main-content'
+				className='sr-only focus:not-sr-only'
+			>
+				Skip to main content
+			</a>
 			<div className='font-rounded pointer-events-auto'>
-				<Navbar pageProps_={pageProps_} />
+				<Navbar PageProps={PageProps} />
 				<NoScript />
 				{children}
 			</div>

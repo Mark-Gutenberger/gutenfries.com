@@ -7,9 +7,9 @@ import { ResumeLayout } from '@/layouts/ResumeLayout.tsx';
 
 import Resume from '@/islands/Resume.tsx';
 
-function ResumePage(pageProps_: PageProps) {
+function ResumePage(PageProps: PageProps) {
 	return (
-		<ResumeLayout pageProps_={pageProps_}>
+		<ResumeLayout PageProps={PageProps}>
 			<Resume />
 		</ResumeLayout>
 	);

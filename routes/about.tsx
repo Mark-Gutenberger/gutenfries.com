@@ -5,10 +5,10 @@ import { PageProps } from '$fresh/server.ts';
 
 import { MainLayout } from '@/layouts/MainLayout.tsx';
 
-function AboutPage(pageProps_: PageProps) {
+function AboutPage(PageProps: PageProps) {
 	return (
 		<MainLayout
-			pageProps_={pageProps_}
+			PageProps={PageProps}
 		>
 			<h1 className='animate-fade-in-0.5 text-5xl font-bold text-center mt-5 text-white'>
 				How I made this site

@@ -5,15 +5,15 @@ import { ErrorPageProps, PageProps, UnknownPageProps } from '$fresh/server.ts';
 import { asset, Head as FreshHead } from '$fresh/runtime.ts';
 
 interface HeadProps {
-	pageProps_: PageProps | UnknownPageProps | ErrorPageProps;
+	PageProps: PageProps | UnknownPageProps | ErrorPageProps;
 }
 
-function Head({ pageProps_ }: HeadProps) {
+function Head({ PageProps }: HeadProps) {
 	const ogImageUrl =
-		new URL(asset('images/gutenfries.deno.dev_home_1200x328.png'), pageProps_.url).href;
+		new URL(asset('images/gutenfries.deno.dev_home_1200x328.png'), PageProps.url).href;
 
 	let pipe: string;
-	if (pageProps_.url.pathname.slice(1) != '') {
+	if (PageProps.url.pathname.slice(1) != '') {
 		pipe = '|';
 	} else {
 		pipe = '';
@@ -22,7 +22,7 @@ function Head({ pageProps_ }: HeadProps) {
 	return (
 		<FreshHead>
 			<title>
-				{pageProps_.url.pathname.slice(1)} {pipe} Mark Gutenberger
+				{PageProps.url.pathname.slice(1)} {pipe} Mark Gutenberger
 			</title>
 
 			<link rel='icon' href={asset('/icons/favicon.ico')}></link>
@@ -40,10 +40,10 @@ function Head({ pageProps_ }: HeadProps) {
 
 			{/* Open Graph / Facebook */}
 			<meta property='og:type' content='website' />
-			<meta property='og:url' content={pageProps_.url.href} />
+			<meta property='og:url' content={PageProps.url.href} />
 			<meta
 				property='og:title'
-				content={`${pageProps_.url.pathname.slice(1)} ${pipe} Mark Gutenberger`}
+				content={`${PageProps.url.pathname.slice(1)} ${pipe} Mark Gutenberger`}
 			/>
 			<meta property='og:description' content='Mark Gutenberger - Software Developer' />
 			<meta

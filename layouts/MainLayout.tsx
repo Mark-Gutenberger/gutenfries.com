@@ -11,16 +11,22 @@ import { GradientBackground } from '@/components/GradientBackground.tsx';
 import { GlassCard } from '@/components/GlassCard.tsx';
 
 interface MainLayoutProps {
-	pageProps_: PageProps;
+	PageProps: PageProps;
 	children?: ComponentChildren;
 }
 
-function MainLayout({ pageProps_, children }: MainLayoutProps) {
+function MainLayout({ PageProps, children }: MainLayoutProps) {
 	return (
 		<>
-			<Head pageProps_={pageProps_} />
+			<Head PageProps={PageProps} />
+			<a
+				href='#main-content'
+				className='sr-only focus:not-sr-only'
+			>
+				Skip to main content
+			</a>
 			<div className='font-rounded pointer-events-auto w-screen'>
-				<Navbar pageProps_={pageProps_} />
+				<Navbar PageProps={PageProps} />
 				<GradientBackground />
 				<GlassCard isMain={true}>
 					<NoScript />

@@ -1,19 +1,19 @@
 /** @jsx h */
 import { h } from 'preact';
 
+import { ErrorPageLayout } from '@/layouts/ErrorPageLayout.tsx';
+
 import { UnknownPageProps } from '$fresh/server.ts';
 
-import { NotFoundLayout } from '@/layouts/NotFoundLayout.tsx';
-
-function NotFoundPage(notFoundPageProps_: UnknownPageProps) {
+function NotFoundPage(PageProps: UnknownPageProps) {
 	return (
-		<NotFoundLayout notFoundPageProps_={notFoundPageProps_}>
+		<ErrorPageLayout PageProps={PageProps}>
 			<div className='flex flex-col items-center justify-center h-screen'>
 				<h2 className='text-4xl font-bold text-center text-white'>
 					404 - Page not found :(
 				</h2>
 			</div>
-		</NotFoundLayout>
+		</ErrorPageLayout>
 	);
 }
 
