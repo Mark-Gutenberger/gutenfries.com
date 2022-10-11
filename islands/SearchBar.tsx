@@ -45,7 +45,7 @@ const SearchBar = () => {
 	}
 
 	const handleKeyPress = (e: KeyboardEvent) => {
-		if (e.key === 'Enter') {
+		if (e.key === 'Enter' || 'Return') {
 			setPressToggle(!pressToggle);
 		}
 	};
