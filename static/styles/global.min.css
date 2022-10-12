@@ -4,17 +4,14 @@ html {
 	overscroll-behavior: none;
 	z-index: 100;
 }
-
 html,
 body {
 	position: fixed;
 	overflow: auto;
 }
-
 img:before {
 	display: none;
 }
-
 img:after {
 	content: 'Uh Oh! Image not found: "' attr(alt) '"';
 	display: block;
@@ -28,53 +25,41 @@ img:after {
 	z-index: 10;
 	border-radius: 0.5rem;
 }
-
 .snap-normal {
 	-moz-scroll-snap-stop: normal;
 	scroll-snap-stop: normal;
 }
-
 .snap-always {
 	-moz-scroll-snap-stop: always;
 	scroll-snap-stop: always;
 }
-
 .snap-start {
 	scroll-snap-align: start;
 }
-
 .snap-end {
 	scroll-snap-align: end;
 }
-
 .snap-center {
 	scroll-snap-align: center;
 }
-
 .snap-align-none {
 	scroll-snap-align: none;
 }
-
 .snap-none {
 	scroll-snap-type: none;
 }
-
 .snap-mandatory {
 	--tw-scroll-snap-strictness: mandatory;
 }
-
 .snap-proximity {
 	--tw-scroll-snap-strictness: proximity;
 }
-
 .snap-x {
 	scroll-snap-type: x var(--tw-scroll-snap-strictness);
 }
-
 .snap-y {
 	scroll-snap-type: y var(--tw-scroll-snap-strictness);
 }
-
 .snap-both {
 	scroll-snap-type: both var(--tw-scroll-snap-strictness);
 }

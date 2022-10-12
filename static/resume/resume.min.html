@@ -3,145 +3,124 @@
 	line-height: 2;
 	font-weight: 600;
 }
-
 @media print {
-	article > *,
-	article > *:before,
-	article > *:after {
-		background: transparent !important;
-		color: #262626 !important;
-		box-shadow: none !important;
-		text-shadow: none !important;
+	article *,
+	article *:before,
+	article *:after {
+		background: transparent;
+		color: #262626;
+		box-shadow: none;
+		text-shadow: none;
 	}
-
-	article > a,
-	article > a:visited {
+	article a,
+	article a:visited {
 		text-decoration: underline;
 	}
-
-	article > a[href]:after {
+	article a[href]:after {
 		content: ' (' attr(href) ')';
 	}
-
-	article > abbr[title]:after {
+	article abbr[title]:after {
 		content: ' (' attr(title) ')';
 	}
-
-	article > a[href^='#']:after,
-	article > a[href^='javascript:']:after {
+	article a[href^='#']:after,
+	article a[href^='javascript:']:after {
 		content: '';
 	}
-
-	article > pre,
-	article > blockquote {
+	article pre,
+	article blockquote {
 		border: 1px solid #3f3f46;
 		page-break-inside: avoid;
 	}
-
-	article > thead {
+	article thead {
 		display: table-header-group;
 	}
-
-	article > tr,
-	article > img {
+	article tr,
+	article img {
 		page-break-inside: avoid;
 	}
-
-	article > img {
-		max-width: 100% !important;
+	article img {
+		max-width: 100%;
 	}
-
-	article > p,
-	article > h2,
-	article > h3 {
+	article p,
+	article h2,
+	article h3 {
 		orphans: 3;
 		widows: 3;
 	}
-
-	article > h2,
-	article > h3 {
+	article h2,
+	article h3 {
 		page-break-after: avoid;
 	}
 }
-
-article > pre,
-article > code {
+article pre,
+article code {
 	font-family: Menlo, Monaco, 'Courier New', monospace;
 }
-
-article > pre {
+article pre {
 	padding: 0.5rem;
 	line-height: 1.25;
 	overflow-x: scroll;
 }
-
-article > a,
-article > a:visited {
-	color: #3b82f6;
+article a,
+article a:visited {
+	font-style: italic;
+	text-decoration: underline;
+	text-decoration-color: #3b82f6;
+	text-decoration-thickness: 0.125rem; /* color: #3b82f6; */
 }
-
-article > a:hover,
-article > a:focus,
-article > a:active {
-	color: #3b82f6;
+article a:hover,
+article a:focus,
+article a:active {
+	font-style: italic;
+	text-decoration: underline;
+	text-decoration-color: #3b82f6;
+	text-decoration-thickness: 0.125rem; /* color: #3b82f6; */
 }
-
 article > p {
 	font-size: 1rem;
 	margin-bottom: 1.3rem;
 }
-
-article > h1,
-article > h2,
-article > h3,
-article > h4 {
+article h1,
+article h2,
+article h3,
+article h4 {
 	margin: 1.414rem 0 0.5rem;
 	font-weight: inherit;
 	line-height: 1.42;
 }
-
-article > h1 {
+article h1 {
+	text-align: center;
 	margin-top: 0;
 	font-size: 3.998rem;
 }
-
-article > h2 {
+article h2 {
 	font-size: 2.827rem;
 }
-
-article > h3 {
+article h3 {
 	font-size: 1.333rem;
 }
-
-article > h4 {
+article h4 {
 	font-size: 1.414rem;
 }
-
-article > h5 {
+article h5 {
 	font-size: 1.121rem;
 }
-
-article > h6 {
+article h6 {
 	font-size: 0.88rem;
 }
-
-article > small {
-	font-size: 0.707em;
+article small {
+	font-size: 0.707rem;
 }
-
-/* https://github.com/mrmrs/fluidity */
-
-article > img,
-article > canvas,
-article > iframe,
-article > video,
-article > svg,
-article > select,
-article > textarea {
+article img,
+article canvas,
+article iframe,
+article video,
+article svg,
+article select,
+article textarea {
 	max-width: 100%;
 }
-
-article > body {
+article body {
 	color: #3f3f46;
 	font-weight: 300;
 	margin: 0 auto;
@@ -149,32 +128,28 @@ article > body {
 	line-height: 1.45;
 	padding: 0.25rem;
 }
-
-article > h1,
-article > h2,
-article > h3 {
-	border-bottom: 2px solid #3f3f46;
+article h1,
+article h2,
+article h3 {
+	border-bottom: 0.125rem solid #3f3f46;
 	margin-bottom: 1.15rem;
 	padding-bottom: 0.5rem;
-	text-align: center;
 	font-weight: bold;
 }
-
-article > blockquote {
-	border-left: 8px solid #3f3f46;
+article blockquote {
+	border-left: 0.5rem solid #3f3f46;
 	padding: 0.5rem;
 	margin: 0.5rem;
 }
-
-article > hr {
+article hr {
 	border: 0;
-	border-bottom: 1px solid #3f3f46;
+	border-bottom: 0.125rem solid #3f3f46;
 	margin: 1.5rem 0;
 }
-
-article > pre,
-article > code {
+article pre,
+article code {
 	background-color: #3f3f46;
+	color: #d4d4d4;
 }
 </style><h1>Mark Gutenberger</h1>
 <blockquote>
@@ -183,6 +158,7 @@ I am a musician &amp; software developer from <a href="https://www.google.com/ma
 I have a passion for creating, and I love to learn new things.
 I am currently working on a few projects, and I am always looking for new opportunities to learn and grow.</p>
 </blockquote>
+<hr />
 <h2>Education</h2>
 <h3>Pulaski High School</h3>
 <blockquote>
@@ -210,9 +186,15 @@ I am currently working on a few projects, and I am always looking for new opport
 </blockquote>
 <p>phone: <a href="tel:7158533011">+1 (715)-853-3011</a></p>
 <ul>
-<li><strong>Farm Hand</strong> <em>(Seasonal)</em></li>
+<li><strong>Farm Hand</strong> <em>(Seasonal)</em>
+<ul>
+<li>Covered silage pits &amp; piles</li>
+<li>Picked rocks &amp; debris from fields</li>
+<li>Performed general maintenance on farm equipment</li>
 </ul>
-<!-- ### Moes Farms Inc -->
+</li>
+</ul>
+<h3>Moes Farms Inc</h3>
 <!-- ### polka -->
 <h2>Skills</h2>
 <h3>Human Languages</h3>
@@ -277,8 +259,10 @@ I am currently working on a few projects, and I am always looking for new opport
 </ul>
 </li>
 </ul>
+<hr />
 <blockquote>
 <p>Mark Gutenberger | <a href="tel:19202843760">+1-(920)-284-3760</a> | <a href="mailto:gutenfries@gmail.com">gutenfries@gmail.com</a> | <a href="https://gutenfries.deno.dev">gutenfries.deno.dev</a><br />
 <a href="https://www.google.com/maps/place/230+E+Glendale+Ave,+Appleton,+WI+54911/">230 E Glendale Ave, Appleton, WI 54915</a><br />
 <a href="https://github.com/gutenfries">GitHub</a> | <a href="https://peerlist.io/gutenfries">Peerlist</a> | <a href="https://www.linkedin.com/in/gutenfries/">LinkedIn</a> | <a href="https://twitter.com/gutenfries">Twitter</a></p>
 </blockquote>
+<hr />

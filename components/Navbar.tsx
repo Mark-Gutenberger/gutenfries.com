@@ -74,7 +74,7 @@ function Navbar({ PageProps, sticky }: NavbarProps) {
 									className={classNames(
 										current
 											? 'bg-gray-900 text-white'
-											: 'text-white hover:bg-gray-700 active:bg-gray-900 hover:text-white',
+											: 'text-gray-300 hover:bg-gray-700 active:bg-gray-900 hover:text-white',
 										'rounded-lg text-md font-medium p-3 mx-1 block',
 									)}
 									aria-current={current ? 'page' : undefined}

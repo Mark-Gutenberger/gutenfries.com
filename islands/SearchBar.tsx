@@ -63,7 +63,7 @@ const SearchBar = () => {
 								setSearchBarIsExpanded(true);
 							}}
 						>
-							<Icons.Search className='text-white hover:text-white cursor-pointer' />
+							<Icons.Search className='text-gray-300 hover:text-white cursor-pointer' />
 						</button>
 					)
 					: (
@@ -115,7 +115,7 @@ const SearchBar = () => {
 									setSearchBarIsExpanded(false);
 								}}
 							>
-								<Icons.Close className='fill-current text-white hover:text-white cursor-pointer' />
+								<Icons.Close className='fill-current text-gray-300 hover:text-white cursor-pointer' />
 							</button>
 						</>
 					)}

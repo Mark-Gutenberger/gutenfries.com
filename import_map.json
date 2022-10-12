@@ -13,6 +13,8 @@
 
 		"twind": "https://esm.sh/twind@0.16.17",
 		"twind/": "https://esm.sh/twind@0.16.17/",
+		"postcss": "https://deno.land/x/postcss@8.3.0.1/mod.js",
+		"autoprefixer": "https://deno.land/x/postcss_autoprefixer@0.2.8/mod.js",
 
 		"fresh_validation": "https://deno.land/x/fresh_validation@0.1.1/mod.ts",
 		"fresh_session": "https://deno.land/x/fresh_session@0.1.7/mod.ts",

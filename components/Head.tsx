@@ -73,7 +73,7 @@ function Head({ PageProps }: HeadProps) {
 			>
 			</link>
 
-			<link rel='stylesheet' href={asset('/styles/global.css')}></link>
+			<link rel='stylesheet' href={asset('/styles/global.min.css')}></link>
 
 			{/* console easter egg */}
 			<script

@@ -14,14 +14,16 @@ function HomePage(PageProps: PageProps) {
 			<section className='snap-start text-gray-800 body-font'>
 				<div className='container mx-auto flex px-5 pb-32 pt-8 md:flex-row flex-col items-center'>
 					<div className='lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
-						<h1 className='animate-fade-in-0.5 title-font text-6xl text-underline mb-4 font-medium text-gray-300'>
-							Hi there
+						<h1 className='animate-fade-in-0.5 title-font text-6xl mb-4 font-medium text-gray-300 hover:text-white'>
+							<u>
+								Hi there
+							</u>
 						</h1>
 						<br className='hidden lg:inline-block' />
-						<h2 className='animate-fade-in-0.5 title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300'>
+						<h2 className='animate-fade-in-0.5 title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300 hover:text-white'>
 							I'm Mark Gutenberger
 						</h2>
-						<p className='animate-fade-in-1 text-lg text-gray-300 mb-8'>
+						<p className='animate-fade-in-1 text-lg text-gray-300 hover:text-white mb-8'>
 							I am a{' '}
 							<u>
 								<strong>musician</strong>
@@ -37,7 +39,7 @@ function HomePage(PageProps: PageProps) {
 							<button type='button' className='animate-fade-in-0.5 inline-flex text-gray-800 hover:text-gray-700 bg-gray-300 border-0 py-2 px-6  hover:bg-white rounded-lg text-lg'>
 								Two Buttons
 							</button>
-							<button type='button' className='animate-fade-in-0.5 ml-4 inline-flex text-gray-300 hover:text-white bg-gray-800 border-0 py-2 px-6  hover:bg-gray-700 rounded-lg text-lg'>
+							<button type='button' className='animate-fade-in-0.5 ml-4 inline-flex text-gray-300 hover:text-white hover:text-white bg-gray-800 border-0 py-2 px-6  hover:bg-gray-700 rounded-lg text-lg'>
 								That Do Nothing
 							</button>
 						</div> */
@@ -58,7 +60,7 @@ function HomePage(PageProps: PageProps) {
 						<h2 className='text-xs text-blue-500 tracking-widest font-medium title-font mb-1'>
 							subtext that says something
 						</h2>
-						<h2 className='sm:text-4xl text-2xl font-medium title-font text-gray-300'>
+						<h2 className='sm:text-4xl text-2xl font-medium title-font text-gray-300 hover:text-white'>
 							Projects I've Worked On
 						</h2>
 					</div>
@@ -69,12 +71,12 @@ function HomePage(PageProps: PageProps) {
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
 										<Icons.App className='w-5 h-5' />
 									</div>
-									<h2 className='text-gray-300 text-lg title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium'>
 										Personal Website
 									</h2>
 								</div>
 								<div className='flex-grow'>
-									<p className='text-lg text-gray-300 text-base'>
+									<p className='text-lg text-gray-300 hover:text-white text-base'>
 										I have worked extensively on my personal website,
 										chronically adding to it and improving it.
 									</p>
@@ -94,12 +96,12 @@ function HomePage(PageProps: PageProps) {
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
 										<Icons.User className='w-5 h-5' />
 									</div>
-									<h2 className='text-gray-300 text-lg title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium'>
 										The Catalyzer
 									</h2>
 								</div>
 								<div className='flex-grow'>
-									<p className='text-lg text-gray-300 text-base'>
+									<p className='text-lg text-gray-300 hover:text-white text-base'>
 										Blue bottle crucifix vinyl post-ironic four dollar toast
 										vegan taxidermy. Gastropub indxgo juice poutine.
 									</p>
@@ -116,12 +118,12 @@ function HomePage(PageProps: PageProps) {
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
 										<Icons.Accessibility className='w-5 h-5' />
 									</div>
-									<h2 className='text-gray-300 text-lg title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium'>
 										Neptune
 									</h2>
 								</div>
 								<div className='flex-grow'>
-									<p className='text-lg text-gray-300 text-base'>
+									<p className='text-lg text-gray-300 hover:text-white text-base'>
 										Blue bottle crucifix vinyl post-ironic four dollar toast
 										vegan taxidermy. Gastropub indxgo juice poutine.
 									</p>
@@ -160,10 +162,10 @@ function HomePage(PageProps: PageProps) {
 								</svg>
 							</div>
 							<div className='flex-grow'>
-								<h2 className='text-gray-300 text-lg title-font font-medium mb-3'>
+								<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium mb-3'>
 									Shooting Stars
 								</h2>
-								<p className='text-lg text-gray-300 text-base'>
+								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Blue bottle crucifix vinyl post-ironic four dollar toast vegan
 									taxidermy. Gastropub indxgo juice poutine.
 								</p>
@@ -201,10 +203,10 @@ function HomePage(PageProps: PageProps) {
 								</svg>
 							</div>
 							<div className='flex-grow'>
-								<h2 className='text-gray-300 text-lg title-font font-medium mb-3'>
+								<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium mb-3'>
 									The Catalyzer
 								</h2>
-								<p className='text-lg text-gray-300 text-base'>
+								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Blue bottle crucifix vinyl post-ironic four dollar toast vegan
 									taxidermy. Gastropub indxgo juice poutine.
 								</p>
@@ -240,10 +242,10 @@ function HomePage(PageProps: PageProps) {
 								</svg>
 							</div>
 							<div className='flex-grow'>
-								<h2 className='text-gray-300 text-lg title-font font-medium mb-3'>
+								<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium mb-3'>
 									Neptune
 								</h2>
-								<p className='text-lg text-gray-300 text-base'>
+								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Blue bottle crucifix vinyl post-ironic four dollar toast vegan
 									taxidermy. Gastropub indxgo juice poutine.
 								</p>
@@ -269,10 +271,10 @@ function HomePage(PageProps: PageProps) {
 			<section className='snap-start text-gray-800 body-font  border-gray-300'>
 				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-wrap w-full mb-20 flex-col items-center text-center'>
-						<h2 className='sm:text-4xl text-2xl font-medium title-font mb-2 text-gray-300'>
+						<h2 className='sm:text-4xl text-2xl font-medium title-font mb-2 text-gray-300 hover:text-white'>
 							Pitchfork Kickstarter Taxidermy
 						</h2>
-						<p className='text-lg text-gray-300 lg:w-1/2 w-full text-base'>
+						<p className='text-lg text-gray-300 hover:text-white lg:w-1/2 w-full text-base'>
 							Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
 							gentrify, subway tile poke farm-to-table.
 						</p>
@@ -293,10 +295,10 @@ function HomePage(PageProps: PageProps) {
 										<path d='M22 12h-4l-3 9L9 3l-3 9H2'></path>
 									</svg>
 								</div>
-								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 hover:text-white font-medium title-font mb-2'>
 									Shooting Stars
 								</h2>
-								<p className='text-lg text-gray-300 text-base'>
+								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -320,10 +322,10 @@ function HomePage(PageProps: PageProps) {
 										</path>
 									</svg>
 								</div>
-								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 hover:text-white font-medium title-font mb-2'>
 									The Catalyzer
 								</h2>
-								<p className='text-lg text-gray-300 text-base'>
+								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -345,10 +347,10 @@ function HomePage(PageProps: PageProps) {
 										<circle cx='12' cy='7' r='4'></circle>
 									</svg>
 								</div>
-								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 hover:text-white font-medium title-font mb-2'>
 									Neptune
 								</h2>
-								<p className='text-lg text-gray-300 text-base'>
+								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -370,10 +372,10 @@ function HomePage(PageProps: PageProps) {
 										</path>
 									</svg>
 								</div>
-								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 hover:text-white font-medium title-font mb-2'>
 									Melanchole
 								</h2>
-								<p className='text-lg text-gray-300 text-base'>
+								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -395,10 +397,10 @@ function HomePage(PageProps: PageProps) {
 										</path>
 									</svg>
 								</div>
-								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 hover:text-white font-medium title-font mb-2'>
 									Bunker
 								</h2>
-								<p className='text-lg text-gray-300 text-base'>
+								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -420,10 +422,10 @@ function HomePage(PageProps: PageProps) {
 										</path>
 									</svg>
 								</div>
-								<h2 className='text-lg text-gray-300 font-medium title-font mb-2'>
+								<h2 className='text-lg text-gray-300 hover:text-white font-medium title-font mb-2'>
 									Ramona Falls
 								</h2>
-								<p className='text-lg text-gray-300 text-base'>
+								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -442,10 +444,10 @@ function HomePage(PageProps: PageProps) {
 				/* 	<section className='snap-start text-gray-800 body-font  border-gray-300'>
 				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-col text-center w-full mb-20'>
-						<h2 className='sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-300'>
+						<h2 className='sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-300 hover:text-white'>
 							Our Team
 						</h2>
-						<p className='text-lg text-gray-300 lg:w-2/3 mx-auto text-base'>
+						<p className='text-lg text-gray-300 hover:text-white lg:w-2/3 mx-auto text-base'>
 							Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
 							gentrify, subway tile poke farm-to-table. Franzen you probably haven't
 							heard of them.
@@ -460,10 +462,10 @@ function HomePage(PageProps: PageProps) {
 									src='https://dummyimage.com/80x80/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h2 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white title-font font-medium'>
 										Holden Caulfield
 									</h2>
-									<p className='text-lg text-gray-300'>
+									<p className='text-lg text-gray-300 hover:text-white'>
 										UI Designer
 									</p>
 								</div>
@@ -477,10 +479,10 @@ function HomePage(PageProps: PageProps) {
 									src='https://dummyimage.com/84x84/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h2 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white title-font font-medium'>
 										Henry Letham
 									</h2>
-									<p className='text-lg text-gray-300'>CTO</p>
+									<p className='text-lg text-gray-300 hover:text-white'>CTO</p>
 								</div>
 							</div>
 						</div>
@@ -492,10 +494,10 @@ function HomePage(PageProps: PageProps) {
 									src='https://dummyimage.com/88x88/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h2 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white title-font font-medium'>
 										Oskar Blinde
 									</h2>
-									<p className='text-lg text-gray-300'>Founder</p>
+									<p className='text-lg text-gray-300 hover:text-white'>Founder</p>
 								</div>
 							</div>
 						</div>
@@ -507,10 +509,10 @@ function HomePage(PageProps: PageProps) {
 									src='https://dummyimage.com/90x90/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h2 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white title-font font-medium'>
 										John Doe
 									</h2>
-									<p className='text-lg text-gray-300'>DevOps</p>
+									<p className='text-lg text-gray-300 hover:text-white'>DevOps</p>
 								</div>
 							</div>
 						</div>
@@ -522,10 +524,10 @@ function HomePage(PageProps: PageProps) {
 									src='https://dummyimage.com/94x94/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h2 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white title-font font-medium'>
 										Martin Eden
 									</h2>
-									<p className='text-lg text-gray-300'>
+									<p className='text-lg text-gray-300 hover:text-white'>
 										Software Engineer
 									</p>
 								</div>
@@ -539,10 +541,10 @@ function HomePage(PageProps: PageProps) {
 									src='https://dummyimage.com/98x98/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h2 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white title-font font-medium'>
 										Boris Kitua
 									</h2>
-									<p className='text-lg text-gray-300'>
+									<p className='text-lg text-gray-300 hover:text-white'>
 										UX Researcher
 									</p>
 								</div>
@@ -556,10 +558,10 @@ function HomePage(PageProps: PageProps) {
 									src='https://dummyimage.com/100x90/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h2 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white title-font font-medium'>
 										Atticus Finch
 									</h2>
-									<p className='text-lg text-gray-300'>
+									<p className='text-lg text-gray-300 hover:text-white'>
 										QA Engineer
 									</p>
 								</div>
@@ -573,10 +575,10 @@ function HomePage(PageProps: PageProps) {
 									src='https://dummyimage.com/104x94/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h2 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white title-font font-medium'>
 										Alper Kamu
 									</h2>
-									<p className='text-lg text-gray-300'>System</p>
+									<p className='text-lg text-gray-300 hover:text-white'>System</p>
 								</div>
 							</div>
 						</div>
@@ -588,10 +590,10 @@ function HomePage(PageProps: PageProps) {
 									src='https://dummyimage.com/108x98/edf2f7/a5afbd'
 								/>
 								<div className='flex-grow'>
-									<h2 className='text-gray-300 title-font font-medium'>
+									<h2 className='text-gray-300 hover:text-white title-font font-medium'>
 										Rodrigo Monchi
 									</h2>
-									<p className='text-lg text-gray-300'>
+									<p className='text-lg text-gray-300 hover:text-white'>
 										Product Manager
 									</p>
 								</div>
@@ -605,31 +607,31 @@ function HomePage(PageProps: PageProps) {
 				<div className='container px-5 py-32 mx-auto flex flex-wrap'>
 					<div className='lg:w-1/4 mt-48 hidden lg:block'>
 						<div className='mt-px  border-gray-300 border-b border-l rounded-tl-lg rounded-bl-lg overflow-hidden'>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-300 h-12 text-center px-4 flex items-center justify-start -mt-px'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-300 hover:text-white h-12 text-center px-4 flex items-center justify-start -mt-px'>
 								Fingerstache disrupt
 							</p>
-							<p className='text-lg text-gray-300 text-gray-300 h-12 text-center px-4 flex items-center justify-start'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-300 hover:text-white h-12 text-center px-4 flex items-center justify-start'>
 								Franzen hashtag
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-300 h-12 text-center px-4 flex items-center justify-start'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-300 hover:text-white h-12 text-center px-4 flex items-center justify-start'>
 								Tilde art party
 							</p>
-							<p className='text-lg text-gray-300 text-gray-300 h-12 text-center px-4 flex items-center justify-start'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-300 hover:text-white h-12 text-center px-4 flex items-center justify-start'>
 								Banh mi cornhole
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-300 h-12 text-center px-4 flex items-center justify-start'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-300 hover:text-white h-12 text-center px-4 flex items-center justify-start'>
 								Waistcoat squid hexagon
 							</p>
-							<p className='text-lg text-gray-300 text-gray-300 h-12 text-center px-4 flex items-center justify-start'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-300 hover:text-white h-12 text-center px-4 flex items-center justify-start'>
 								Pinterest occupy authentic
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-300 h-12 text-center px-4 flex items-center justify-start'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-300 hover:text-white h-12 text-center px-4 flex items-center justify-start'>
 								Brooklyn helvetica
 							</p>
-							<p className='text-lg text-gray-300 text-gray-300 h-12 text-center px-4 flex items-center justify-start'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-300 hover:text-white h-12 text-center px-4 flex items-center justify-start'>
 								Long Feature Two
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-300 h-12 text-center px-4 flex items-center justify-start'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-300 hover:text-white h-12 text-center px-4 flex items-center justify-start'>
 								Feature One
 							</p>
 						</div>
@@ -638,15 +640,15 @@ function HomePage(PageProps: PageProps) {
 						<div className='lg:w-1/3 lg:mt-px w-full mb-10 lg:mb-0 border-2 border-gray-300  rounded-lg lg:rounded-none'>
 							<div className='px-2 text-center h-48 flex flex-col items-center justify-center'>
 								<h3 className='tracking-widest'>START</h3>
-								<h2 className='text-5xl text-gray-300 font-medium leading-none mb-4 mt-2'>
+								<h2 className='text-5xl text-gray-300 hover:text-white font-medium leading-none mb-4 mt-2'>
 									Free
 								</h2>
 								<span className='text-sm text-gray-600'>Next 3 months</span>
 							</div>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center  border-gray-300'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center  border-gray-300'>
 								Schlitz single-origin
 							</p>
-							<p className='text-lg text-gray-300 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-600 text-center h-12 flex items-center justify-center'>
 								<span className='w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-gray-800 rounded-full flex-shrink-0'>
 									<svg
 										fill='none'
@@ -661,7 +663,7 @@ function HomePage(PageProps: PageProps) {
 									</svg>
 								</span>
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<span className='w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-gray-800 rounded-full flex-shrink-0'>
 									<svg
 										fill='none'
@@ -676,10 +678,10 @@ function HomePage(PageProps: PageProps) {
 									</svg>
 								</span>
 							</p>
-							<p className='text-lg text-gray-300 h-12 text-gray-600 px-6 text-center flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white h-12 text-gray-600 px-6 text-center flex items-center justify-center'>
 								Feature
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<span className='w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-gray-800 rounded-full flex-shrink-0'>
 									<svg
 										fill='none'
@@ -694,7 +696,7 @@ function HomePage(PageProps: PageProps) {
 									</svg>
 								</span>
 							</p>
-							<p className='text-lg text-gray-300 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -707,7 +709,7 @@ function HomePage(PageProps: PageProps) {
 									<path d='M18 6L6 18M6 6l12 12'></path>
 								</svg>
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -720,7 +722,7 @@ function HomePage(PageProps: PageProps) {
 									<path d='M18 6L6 18M6 6l12 12'></path>
 								</svg>
 							</p>
-							<p className='text-lg text-gray-300 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -733,7 +735,7 @@ function HomePage(PageProps: PageProps) {
 									<path d='M18 6L6 18M6 6l12 12'></path>
 								</svg>
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -764,7 +766,7 @@ function HomePage(PageProps: PageProps) {
 										<path d='M5 12h24M12 5l7 7-7 7'></path>
 									</svg>
 								</button>
-								<p className='text-lg text-gray-300 text-xs text-gray-500 mt-3'>
+								<p className='text-lg text-gray-300 hover:text-white text-xs text-gray-500 mt-3'>
 									Literally you probably haven't heard of them jean shorts.
 								</p>
 							</div>
@@ -775,7 +777,7 @@ function HomePage(PageProps: PageProps) {
 							</span>
 							<div className='px-2 text-center h-48 flex flex-col items-center justify-center'>
 								<h3 className='tracking-widest'>PRO</h3>
-								<h2 className='text-5xl text-gray-300 font-medium flex items-center justify-center leading-none mb-4 mt-2'>
+								<h2 className='text-5xl text-gray-300 hover:text-white font-medium flex items-center justify-center leading-none mb-4 mt-2'>
 									$38
 									<span className='text-gray-600 text-base ml-1'>/mo</span>
 								</h2>
@@ -783,10 +785,10 @@ function HomePage(PageProps: PageProps) {
 									Charging $456 per year
 								</span>
 							</div>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center  border-gray-300'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center  border-gray-300'>
 								Schlitz single-origin
 							</p>
-							<p className='text-lg text-gray-300 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-600 text-center h-12 flex items-center justify-center'>
 								<span className='w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-gray-800 rounded-full flex-shrink-0'>
 									<svg
 										fill='none'
@@ -801,7 +803,7 @@ function HomePage(PageProps: PageProps) {
 									</svg>
 								</span>
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<span className='w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-gray-800 rounded-full flex-shrink-0'>
 									<svg
 										fill='none'
@@ -816,10 +818,10 @@ function HomePage(PageProps: PageProps) {
 									</svg>
 								</span>
 							</p>
-							<p className='text-lg text-gray-300 h-12 text-gray-600 text-center flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white h-12 text-gray-600 text-center flex items-center justify-center'>
 								Feature
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<span className='w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-gray-800 rounded-full flex-shrink-0'>
 									<svg
 										fill='none'
@@ -834,7 +836,7 @@ function HomePage(PageProps: PageProps) {
 									</svg>
 								</span>
 							</p>
-							<p className='text-lg text-gray-300 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-600 text-center h-12 flex items-center justify-center'>
 								<span className='w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-gray-800 rounded-full flex-shrink-0'>
 									<svg
 										fill='none'
@@ -849,7 +851,7 @@ function HomePage(PageProps: PageProps) {
 									</svg>
 								</span>
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -862,7 +864,7 @@ function HomePage(PageProps: PageProps) {
 									<path d='M18 6L6 18M6 6l12 12'></path>
 								</svg>
 							</p>
-							<p className='text-lg text-gray-300 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -875,7 +877,7 @@ function HomePage(PageProps: PageProps) {
 									<path d='M18 6L6 18M6 6l12 12'></path>
 								</svg>
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -906,7 +908,7 @@ function HomePage(PageProps: PageProps) {
 										<path d='M5 12h24M12 5l7 7-7 7'></path>
 									</svg>
 								</button>
-								<p className='text-lg text-gray-300 text-xs text-gray-500 mt-3'>
+								<p className='text-lg text-gray-300 hover:text-white text-xs text-gray-500 mt-3'>
 									Literally you probably haven't heard of them jean shorts.
 								</p>
 							</div>
@@ -914,7 +916,7 @@ function HomePage(PageProps: PageProps) {
 						<div className='lg:w-1/3 w-full lg:mt-px border-2 border-gray-300  rounded-lg lg:rounded-none'>
 							<div className='px-2 text-center h-48 flex flex-col items-center justify-center'>
 								<h3 className='tracking-widest'>BUSINESS</h3>
-								<h2 className='text-5xl text-gray-300 font-medium flex items-center justify-center leading-none mb-4 mt-2'>
+								<h2 className='text-5xl text-gray-300 hover:text-white font-medium flex items-center justify-center leading-none mb-4 mt-2'>
 									$54
 									<span className='text-gray-600 text-base ml-1'>/mo</span>
 								</h2>
@@ -922,10 +924,10 @@ function HomePage(PageProps: PageProps) {
 									Charging $648 per year
 								</span>
 							</div>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center  border-gray-300'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center  border-gray-300'>
 								Schlitz single-origin
 							</p>
-							<p className='text-lg text-gray-300 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-600 text-center h-12 flex items-center justify-center'>
 								<span className='w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-gray-800 rounded-full flex-shrink-0'>
 									<svg
 										fill='none'
@@ -940,7 +942,7 @@ function HomePage(PageProps: PageProps) {
 									</svg>
 								</span>
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<span className='w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-gray-800 rounded-full flex-shrink-0'>
 									<svg
 										fill='none'
@@ -955,10 +957,10 @@ function HomePage(PageProps: PageProps) {
 									</svg>
 								</span>
 							</p>
-							<p className='text-lg text-gray-300 h-12 text-gray-600 text-center flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white h-12 text-gray-600 text-center flex items-center justify-center'>
 								Feature
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<span className='w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-gray-800 rounded-full flex-shrink-0'>
 									<svg
 										fill='none'
@@ -973,7 +975,7 @@ function HomePage(PageProps: PageProps) {
 									</svg>
 								</span>
 							</p>
-							<p className='text-lg text-gray-300 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -986,7 +988,7 @@ function HomePage(PageProps: PageProps) {
 									<path d='M18 6L6 18M6 6l12 12'></path>
 								</svg>
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -999,7 +1001,7 @@ function HomePage(PageProps: PageProps) {
 									<path d='M18 6L6 18M6 6l12 12'></path>
 								</svg>
 							</p>
-							<p className='text-lg text-gray-300 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -1012,7 +1014,7 @@ function HomePage(PageProps: PageProps) {
 									<path d='M18 6L6 18M6 6l12 12'></path>
 								</svg>
 							</p>
-							<p className='text-lg text-gray-300 bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
+							<p className='text-lg text-gray-300 hover:text-white bg-gray-800 text-gray-600 text-center h-12 flex items-center justify-center'>
 								<svg
 									fill='none'
 									stroke='currentColor'
@@ -1043,7 +1045,7 @@ function HomePage(PageProps: PageProps) {
 										<path d='M5 12h24M12 5l7 7-7 7'></path>
 									</svg>
 								</button>
-								<p className='text-lg text-gray-300 text-xs text-gray-500 mt-3'>
+								<p className='text-lg text-gray-300 hover:text-white text-xs text-gray-500 mt-3'>
 									Literally you probably haven't heard of them jean shorts.
 								</p>
 							</div>
@@ -1063,7 +1065,7 @@ function HomePage(PageProps: PageProps) {
 							<path d='M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h245.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h245.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z'>
 							</path>
 						</svg>
-						<p className='text-lg text-gray-300 text-lg'>
+						<p className='text-lg text-gray-300 hover:text-white text-lg'>
 							Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki
 							taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman
 							taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny
@@ -1075,10 +1077,10 @@ function HomePage(PageProps: PageProps) {
 						</p>
 						<span className='inline-block h-1 w-10 rounded-lg bg-blue-500 mt-8 mb-6'>
 						</span>
-						<h2 className='text-gray-300 font-medium title-font tracking-wider text-sm'>
+						<h2 className='text-gray-300 hover:text-white font-medium title-font tracking-wider text-sm'>
 							HOLDEN CAULFIELD
 						</h2>
-						<p className='text-lg text-gray-300'>
+						<p className='text-lg text-gray-300 hover:text-white'>
 							Senior Product Designer
 						</p>
 					</div>
@@ -1102,10 +1104,10 @@ function HomePage(PageProps: PageProps) {
 				</div>
 				<div className='container px-5 py-32 mx-auto flex'>
 					<div className='lg:w-1/3 md:w-1/2 bg-gray-800 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10'>
-						<h2 className='text-gray-300 text-lg mb-1 font-medium title-font'>
+						<h2 className='text-gray-300 hover:text-white text-lg mb-1 font-medium title-font'>
 							Feedback
 						</h2>
-						<p className='text-lg text-gray-300 mb-5 text-gray-600'>
+						<p className='text-lg text-gray-300 hover:text-white mb-5 text-gray-600'>
 							Post-ironic portland shabby chic echo park, banjo fashion axe
 						</p>
 						<input
@@ -1121,7 +1123,7 @@ function HomePage(PageProps: PageProps) {
 						<button type='button' className='text-gray-800 bg-blue-500 border-0 py-2 px-6  hover:bg-blue-600 rounded-lg text-lg'>
 							Button
 						</button>
-						<p className='text-lg text-gray-300 text-xs text-gray-500 mt-3'>
+						<p className='text-lg text-gray-300 hover:text-white text-xs text-gray-500 mt-3'>
 							Chicharrones blog helvetica normcore iceland tousled brook viral
 							artisan.
 						</p>
@@ -1139,22 +1141,22 @@ function HomePage(PageProps: PageProps) {
 							<nav className='list-none mb-10'>
 								<ul>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											First Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Second Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Third Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Fourth Link
 										</a>
 									</li>
@@ -1168,22 +1170,22 @@ function HomePage(PageProps: PageProps) {
 							<nav className='list-none mb-10'>
 								<ul>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											First Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Second Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Third Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Fourth Link
 										</a>
 									</li>
@@ -1197,22 +1199,22 @@ function HomePage(PageProps: PageProps) {
 							<nav className='list-none mb-10'>
 								<ul>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											First Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Second Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Third Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Fourth Link
 										</a>
 									</li>
@@ -1226,22 +1228,22 @@ function HomePage(PageProps: PageProps) {
 							<nav className='list-none mb-10'>
 								<ul>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											First Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Second Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Third Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Fourth Link
 										</a>
 									</li>
@@ -1255,22 +1257,22 @@ function HomePage(PageProps: PageProps) {
 							<nav className='list-none mb-10'>
 								<ul>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											First Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Second Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Third Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Fourth Link
 										</a>
 									</li>
@@ -1284,22 +1286,22 @@ function HomePage(PageProps: PageProps) {
 							<nav className='list-none mb-10'>
 								<ul>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											First Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Second Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Third Link
 										</a>
 									</li>
 									<li>
-										<a className='text-gray-300 hover:text-white text-underline cursor-pointer'>
+										<a className='text-gray-300 hover:text-white hover:text-white text-underline cursor-pointer'>
 											Fourth Link
 										</a>
 									</li>
@@ -1311,7 +1313,7 @@ function HomePage(PageProps: PageProps) {
 
 				<section className='snap-end bg-gray-800 rounded-lg'>
 					<div className='container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row'>
-						<p className='text-lg text-gray-300 text-sm text-center sm:text-left'>
+						<p className='text-lg text-gray-300 hover:text-white text-sm text-center sm:text-left'>
 							© {new Date().getFullYear()} Mark Gutenberger -
 							<a
 								href='https://twitter.com/knyttneve'
