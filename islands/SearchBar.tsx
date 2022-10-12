@@ -45,7 +45,7 @@ const SearchBar = () => {
 	}
 
 	const handleKeyPress = (e: KeyboardEvent) => {
-		if (e.key === 'Enter') {
+		if (e.key === 'Enter' || 'Return') {
 			setPressToggle(!pressToggle);
 		}
 	};
@@ -63,7 +63,7 @@ const SearchBar = () => {
 								setSearchBarIsExpanded(true);
 							}}
 						>
-							<Icons.Search className='text-white hover:text-white cursor-pointer' />
+							<Icons.Search className='text-gray-300 hover:text-white cursor-pointer' />
 						</button>
 					)
 					: (
@@ -83,7 +83,7 @@ const SearchBar = () => {
 									}}
 									id='search'
 									name='search'
-									className='min-w-full bg-gray-300 active:bg-white hover:bg-white text-gray-700 active:text-gray-800 hover:text-gray-800 placeholder-gray-700 active:placeholder-gray-800 hover:placeholder-gray-800 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5'
+									className='min-w-full bg-white text-gray-700 active:text-gray-800 hover:text-gray-800 placeholder-gray-700 active:placeholder-gray-800 hover:placeholder-gray-800 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5'
 									placeholder='Search for anything...'
 									required
 								/>
@@ -115,7 +115,7 @@ const SearchBar = () => {
 									setSearchBarIsExpanded(false);
 								}}
 							>
-								<Icons.Close className='fill-current text-white hover:text-white cursor-pointer' />
+								<Icons.Close className='fill-current text-gray-300 hover:text-white cursor-pointer' />
 							</button>
 						</>
 					)}

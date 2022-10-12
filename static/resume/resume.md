@@ -6,6 +6,8 @@
 > I have a passion for creating, and I love to learn new things.
 > I am currently working on a few projects, and I am always looking for new opportunities to learn and grow.
 
+---
+
 
 ## Education
 
@@ -34,10 +36,15 @@ site: [pulaskischools.org](https://www.pulaskischools.org/)
 phone: [+1 (715)-853-3011](tel:7158533011)
 
 - **Farm Hand** _(Seasonal)_
+	- Covered silage pits & piles
+	- Picked rocks & debris from fields
+	- Performed general maintenance on farm equipment
+
+
+### Moes Farms Inc
 
 
 
-<!-- ### Moes Farms Inc -->
 
 <!-- ### polka -->
 
@@ -92,8 +99,10 @@ phone: [+1 (715)-853-3011](tel:7158533011)
 - Lindsey Leisgang _(Social Worker)_
   - [email](mailto:lindsey.leisgang@shawanocounrywi.gov)
 
+---
 
 > Mark Gutenberger | [+1-(920)-284-3760](tel:19202843760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)\
 > [230 E Glendale Ave, Appleton, WI 54915](https://www.google.com/maps/place/230+E+Glendale+Ave,+Appleton,+WI+54911/)\
 > [GitHub](https://github.com/gutenfries) | [Peerlist](https://peerlist.io/gutenfries) | [LinkedIn](https://www.linkedin.com/in/gutenfries/) | [Twitter](https://twitter.com/gutenfries)
 
+---

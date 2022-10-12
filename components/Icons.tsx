@@ -15,9 +15,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				class='icon icon-tabler icon-tabler-app-window'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -41,8 +40,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -66,8 +65,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -90,8 +89,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -115,8 +114,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -139,8 +138,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -163,8 +162,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -187,8 +186,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -211,8 +210,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -238,9 +237,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				class='icon icon-tabler icon-tabler-brand-codepen'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -267,8 +265,8 @@ class Icons {
 				stroke={_.stroke ?? 'none'}
 				fill={_.fill ?? 'currentColor'}
 				viewBox='0 0 24 24'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				xmlns='http://www.w3.org/2000/svg'
 				alt='Wakatime'
 			>
@@ -289,8 +287,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -313,8 +311,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -338,8 +336,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -368,8 +366,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -392,8 +390,8 @@ class Icons {
 				stroke={_.stroke ?? 'currentColor'}
 				fill={_.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
-				width='24'
-				height='24'
+				width={24}
+				height={24}
 				viewBox='0 0 24 24'
 				stroke-width='2'
 				stroke-linecap='round'
@@ -405,6 +403,56 @@ class Icons {
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<line x1='18' y1='6' x2='6' y2='18'></line>
 				<line x1='6' y1='6' x2='18' y2='18'></line>
+			</svg>
+		);
+	};
+
+	static BorderAll = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='BorderAll'
+			>
+				<title>BorderAll</title>
+				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<rect x='4' y='4' width='16' height='16' rx='2'></rect>
+				<line x1='4' y1='12' x2='20' y2='12'></line>
+				<line x1='12' y1='4' x2='12' y2='20'></line>
+			</svg>
+		);
+	};
+
+	static Terminal = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Terminal'
+			>
+				<title>Terminal</title>
+				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M8 9l3 3l-3 3'></path>
+				<line x1='13' y1='15' x2='16' y2='15'></line>
+				<rect x='3' y='4' width='18' height='16' rx='2'></rect>
 			</svg>
 		);
 	};

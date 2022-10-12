@@ -2,7 +2,8 @@
 /** @jsxFrag Fragment */
 import { Fragment, h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
-import Icons from '../components/Icons.tsx';
+
+import Icons from '@/components/Icons.tsx';
 
 interface CalendlyWidgetProps {
 	minWidth: string | number;
@@ -38,17 +39,18 @@ function CalendlyWidget({ minWidth, height, url }: CalendlyWidgetProps) {
 						/>
 						<button
 							type='button'
-							className='fixed bottom-0 left-0 mb-10 ml-10 flex items-center justify-center p-2.5 text-white bg-gray-700 hover:bg-transparent border-4 border-transparent hover:border-gray-700 backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg hover:text-white'
+							className='fixed bottom-0 left-0 mb-10 ml-10 flex items-center justify-center p-2.5 bg-gray-700 hover:bg-transparent border-4 border-transparent hover:border-gray-700 backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg text-gray-300 hover:text-white'
 							onClick={() => setIsExpanded(false)}
 						>
 							<Icons.Close className='fill-current text-white hover:text-gray-700 cursor-pointer' />
+							<span className='sr-only'>Close</span>
 						</button>
 					</>
 				)
 				: (
 					<button
 						type='button'
-						className='fixed bottom-0 right-0 mb-10 mr-10 flex items-center justify-center p-2 text-white bg-gray-700 hover:bg-transparent border-4 border-transparent hover:border-gray-700 backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg hover:text-white'
+						className='fixed bottom-0 right-0 mb-10 mr-10 flex items-center justify-center p-2 bg-gray-700 hover:bg-transparent border-4 border-transparent hover:border-gray-700 backdrop-filter backdrop-blur-md text-xl font-semibold rounded-lg shadow-lg text-gray-300 hover:text-white'
 						onClick={() => setIsExpanded(true)}
 					>
 						Book a coffee chat
