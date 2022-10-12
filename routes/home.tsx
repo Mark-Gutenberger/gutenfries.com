@@ -14,10 +14,8 @@ function HomePage(PageProps: PageProps) {
 			<section className='snap-start text-gray-800 body-font'>
 				<div className='container mx-auto flex px-5 pb-32 pt-8 md:flex-row flex-col items-center'>
 					<div className='lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
-						<h1 className='animate-fade-in-0.5 title-font text-6xl mb-4 font-medium text-gray-300 hover:text-white'>
-							<u>
-								Hi there
-							</u>
+						<h1 className='sm:text-8xl text-4xl font-medium title-font text-gray-300 hover:text-white'>
+							Hi there
 						</h1>
 						<br className='hidden lg:inline-block' />
 						<h2 className='animate-fade-in-0.5 title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300 hover:text-white'>
@@ -25,13 +23,12 @@ function HomePage(PageProps: PageProps) {
 						</h2>
 						<p className='animate-fade-in-1 text-lg text-gray-300 hover:text-white mb-8'>
 							I am a{' '}
-							<u>
-								<strong>musician</strong>
-							</u>{' '}
+							<strong className='text-underline decoration-blue-500'>musician</strong>
+							{' '}
 							and{' '}
-							<u>
-								<strong>software developer</strong>
-							</u>{' '}
+							<strong className='text-underline decoration-blue-500'>
+								software developer
+							</strong>{' '}
 							from WI, USA.
 						</p>
 						{
@@ -57,12 +54,12 @@ function HomePage(PageProps: PageProps) {
 			<section className='snap-start text-gray-800 body-font border-gray-300'>
 				<div className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-col text-center w-full mb-20'>
-						<h2 className='text-xs text-blue-500 tracking-widest font-medium title-font mb-1'>
-							subtext that says something
-						</h2>
 						<h2 className='sm:text-4xl text-2xl font-medium title-font text-gray-300 hover:text-white'>
-							Projects I've Worked On
+							My Projects
 						</h2>
+						<p className='text-xs text-blue-500 tracking-widest font-medium title-font mt-1'>
+							Some things I have built and am working on
+						</p>
 					</div>
 					<div className='flex flex-wrap -m-4'>
 						<div className='p-4 md:w-1/3'>
@@ -78,14 +75,14 @@ function HomePage(PageProps: PageProps) {
 								<div className='flex-grow'>
 									<p className='text-lg text-gray-300 hover:text-white text-base'>
 										I have worked extensively on my personal website,
-										chronically adding to it and improving it.
+										continually improving it.
 									</p>
 									<a
 										className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-7000'
 										href='https://github.com/gutenfries/gutenfries.deno.dev'
 									>
 										Learn More
-										<Icons.ExternalLink className='w-4 h-4 ml-2' />
+										<Icons.ExternalLink className='w-4 h-4 ml-1' />
 									</a>
 								</div>
 							</div>
@@ -94,20 +91,24 @@ function HomePage(PageProps: PageProps) {
 							<div className='flex rounded-lg h-full bg-gray-800 p-8 flex-col'>
 								<div className='flex items-center mb-3'>
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
-										<Icons.User className='w-5 h-5' />
+										<Icons.BorderAll className='w-5 h-5' />
 									</div>
 									<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium'>
-										The Catalyzer
+										C++ Tetris
 									</h2>
 								</div>
 								<div className='flex-grow'>
 									<p className='text-lg text-gray-300 hover:text-white text-base'>
-										Blue bottle crucifix vinyl post-ironic four dollar toast
-										vegan taxidermy. Gastropub indxgo juice poutine.
+										I created Tetris in C++ using std and ncurses, utilizing the
+										Object-Oriented language features.
 									</p>
-									<a className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'>
+
+									<a
+										href='https://github.com/gutenfries/cpp-tetris'
+										className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'
+									>
 										Learn More
-										<Icons.ExternalLink className='w-4 h-4 ml-2' />
+										<Icons.ExternalLink className='w-4 h-4 ml-1' />
 									</a>
 								</div>
 							</div>
@@ -116,20 +117,22 @@ function HomePage(PageProps: PageProps) {
 							<div className='flex rounded-lg h-full bg-gray-800 p-8 flex-col'>
 								<div className='flex items-center mb-3'>
 									<div className='w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-gray-800 flex-shrink-0'>
-										<Icons.Accessibility className='w-5 h-5' />
+										<Icons.Terminal className='w-5 h-5' />
 									</div>
 									<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium'>
-										Neptune
+										Rust Dino Game
 									</h2>
 								</div>
 								<div className='flex-grow'>
 									<p className='text-lg text-gray-300 hover:text-white text-base'>
-										Blue bottle crucifix vinyl post-ironic four dollar toast
-										vegan taxidermy. Gastropub indxgo juice poutine.
+										I am currently building a dino game from scratch, in Rust.
 									</p>
-									<a className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'>
+									<a
+										href='https://github.com/gutenfries/dino_rs'
+										className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'
+									>
 										Learn More
-										<Icons.ExternalLink className='w-4 h-4 ml-2' />
+										<Icons.ExternalLink className='w-4 h-4 ml-1' />
 									</a>
 								</div>
 							</div>
@@ -148,63 +151,33 @@ function HomePage(PageProps: PageProps) {
 					</div>
 					<div className='flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center'>
 						<div className='flex flex-col mb-10 lg:items-start items-center'>
-							<div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-5'>
-								<svg
-									fill='none'
-									stroke='currentColor'
-									stroke-linecap='round'
-									stroke-linejoin='round'
-									stroke-width='2'
-									className='w-6 h-6'
-									viewBox='0 0 24 24'
-								>
-									<path d='M22 12h-4l-3 9L9 3l-3 9H2'></path>
-								</svg>
-							</div>
 							<div className='flex-grow'>
-								<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium mb-3'>
-									Shooting Stars
+								<h2 className='sm:text-8xl text-4xl font-medium title-font text-gray-300 hover:text-white'>
+									About Me
+								</h2>
+							</div>
+						</div>
+						<div className='flex flex-col mb-10 lg:items-start items-center'>
+							<div className='flex-grow'>
+								<h2 className='text-gray-300 hover:text-white sm:text-4xl text-2lg title-font font-medium mb-3'>
+									I am a software developer
 								</h2>
 								<p className='text-lg text-gray-300 hover:text-white text-base'>
-									Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-									taxidermy. Gastropub indxgo juice poutine.
+									I am a software developer, currently searching for fitting work.
+									I mainly work with web technologies, C++, and Rust, but am
+									always striving to learn something new.
+									{/* TODO */}
 								</p>
 								<a className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'>
 									Learn More
-									<svg
-										fill='none'
-										stroke='currentColor'
-										stroke-linecap='round'
-										stroke-linejoin='round'
-										stroke-width='2'
-										className='w-4 h-4 ml-2'
-										viewBox='0 0 24 24'
-									>
-										<path d='M5 12h24M12 5l7 7-7 7'></path>
-									</svg>
+									<Icons.ExternalLink className='w-4 h-4 ml-1' />
 								</a>
 							</div>
 						</div>
 						<div className='flex flex-col mb-10 lg:items-start items-center'>
-							<div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-5'>
-								<svg
-									fill='none'
-									stroke='currentColor'
-									stroke-linecap='round'
-									stroke-linejoin='round'
-									stroke-width='2'
-									className='w-6 h-6'
-									viewBox='0 0 24 24'
-								>
-									<circle cx='6' cy='6' r='3'></circle>
-									<circle cx='6' cy='18' r='3'></circle>
-									<path d='M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12'>
-									</path>
-								</svg>
-							</div>
 							<div className='flex-grow'>
-								<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium mb-3'>
-									The Catalyzer
+								<h2 className='text-gray-300 hover:text-white sm:text-4xl text-2lg title-font font-medium mb-3'>
+									I am also a musician
 								</h2>
 								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Blue bottle crucifix vinyl post-ironic four dollar toast vegan
@@ -212,38 +185,14 @@ function HomePage(PageProps: PageProps) {
 								</p>
 								<a className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'>
 									Learn More
-									<svg
-										fill='none'
-										stroke='currentColor'
-										stroke-linecap='round'
-										stroke-linejoin='round'
-										stroke-width='2'
-										className='w-4 h-4 ml-2'
-										viewBox='0 0 24 24'
-									>
-										<path d='M5 12h24M12 5l7 7-7 7'></path>
-									</svg>
+									<Icons.ExternalLink className='w-4 h-4 ml-1' />
 								</a>
 							</div>
 						</div>
 						<div className='flex flex-col mb-10 lg:items-start items-center'>
-							<div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-5'>
-								<svg
-									fill='none'
-									stroke='currentColor'
-									stroke-linecap='round'
-									stroke-linejoin='round'
-									stroke-width='2'
-									className='w-6 h-6'
-									viewBox='0 0 24 24'
-								>
-									<path d='M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2'></path>
-									<circle cx='12' cy='7' r='4'></circle>
-								</svg>
-							</div>
 							<div className='flex-grow'>
-								<h2 className='text-gray-300 hover:text-white text-lg title-font font-medium mb-3'>
-									Neptune
+								<h2 className='text-gray-300 hover:text-white sm:text-4xl text-2lg title-font font-medium mb-3'>
+									Something else
 								</h2>
 								<p className='text-lg text-gray-300 hover:text-white text-base'>
 									Blue bottle crucifix vinyl post-ironic four dollar toast vegan
@@ -251,17 +200,7 @@ function HomePage(PageProps: PageProps) {
 								</p>
 								<a className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'>
 									Learn More
-									<svg
-										fill='none'
-										stroke='currentColor'
-										stroke-linecap='round'
-										stroke-linejoin='round'
-										stroke-width='2'
-										className='w-4 h-4 ml-2'
-										viewBox='0 0 24 24'
-									>
-										<path d='M5 12h24M12 5l7 7-7 7'></path>
-									</svg>
+									<Icons.ExternalLink className='w-4 h-4 ml-1' />
 								</a>
 							</div>
 						</div>
