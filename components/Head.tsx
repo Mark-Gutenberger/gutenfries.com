@@ -64,15 +64,8 @@ function Head({ PageProps }: HeadProps) {
 				content={ogImageUrl}
 			/>
 
-			{/* google fonts */}
-			<link rel='preconnect' href='https://fonts.googleapis.com'></link>
-			<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true'></link>
-			<link
-				href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
-				rel='stylesheet'
-			>
-			</link>
-
+			<link rel='stylesheet' href={asset('/styles/nunito.min.css')}></link>
+			<link rel='stylesheet' href={asset('/styles/tailwind-extended.min.css')}></link>
 			<link rel='stylesheet' href={asset('/styles/global.min.css')}></link>
 
 			{/* console easter egg */}

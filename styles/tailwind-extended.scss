@@ -1,34 +1,8 @@
-:root,
-*,
-html {
-	overscroll-behavior: none;
-	z-index: 100;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html,
-body {
-	position: fixed;
-	overflow: auto;
-}
-
-img:before {
-	display: none;
-}
-
-img:after {
-	content: 'Uh Oh! Image not found: "' attr(alt) '"';
-	display: block;
-	position: absolute;
-	padding: 5%;
-	top: 50%;
-	left: 50%;
-	text-align: center;
-	transform: translate(-50%, -50%);
-	background-color: #27272a;
-	z-index: 10;
-	border-radius: 0.5rem;
-}
-
+// @layer components {
 .snap-normal {
 	-moz-scroll-snap-stop: normal;
 	scroll-snap-stop: normal;
@@ -754,3 +728,4 @@ img:after {
 .decoration-rose-900 {
 	text-decoration-color: #881337;
 }
+// }

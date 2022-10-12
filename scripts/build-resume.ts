@@ -15,7 +15,7 @@ const resumeTokenized = tokens(sanatizedResumeMarkdown, {
 
 const resumeHTML = html(resumeTokenized);
 
-const resumeCSS = await Deno.readTextFile('./static/resume/resume.min.css');
+const resumeCSS = await Deno.readTextFile('./static/styles/resume.min.css');
 
 const resumeHTMLWithCSS = `<style>${resumeCSS}</style>${resumeHTML}`;
 
