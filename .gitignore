@@ -696,7 +696,7 @@ google-services.json
 *.hprof
 *.db
 *.avi
-*.pdf
+# *.pdf
 *.ps
 *.mid
 *.midi

@@ -19,9 +19,7 @@ function GradientBackground() {
 			<div
 				className={`background-animate bg-gradient-to-r from-${theme[0]} via-${
 					theme[1]
-				} to-${
-					theme[2]
-				} flex items-center place-content-center h-screen w-screen`}
+				} to-${theme[2]} flex items-center place-content-center h-screen w-screen`}
 			/>
 		</>
 	);
