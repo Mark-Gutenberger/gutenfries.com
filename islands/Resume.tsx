@@ -7,7 +7,7 @@ import { asset } from '$fresh/runtime.ts';
 import Icons from '@/components/Icons.tsx';
 
 import useKeyPress from '@/hooks/handleKeyPress.ts';
-import printiFrame from '@/hooks/printiFrame.ts';
+// import printiFrame from '@/hooks/printiFrame.ts';
 
 // TODO(#): Fix the issue where if you click on the iframe, the default print method is still used.
 function Resume() {
@@ -26,7 +26,9 @@ function Resume() {
 		// prevent default print behavior
 		event.preventDefault();
 		// print the iframe
-		printiFrame('print-resume');
+		// printiFrame('print-resume');
+		// open /resume/resume.min.html in a new tab
+		window.open(asset('/resume/resume.min.html'), '_blank');
 	};
 
 	// listen for ctrl+p (or ctrl+P)
@@ -41,7 +43,7 @@ function Resume() {
 						autoFocus={false}
 						id='print-resume'
 						// mt-[10.5rem]
-						className='z-0 w-full h-full flex flex-col p-10 pb-24 relative overflow-y-scroll scroll-smooth'
+						className='z-0 w-full h-full flex flex-col p-10 pb-24 m-0 overflow-y-scroll overflow-x-none scroll-smooth'
 						dangerouslySetInnerHTML={{ __html: resume }}
 					/>
 				)
