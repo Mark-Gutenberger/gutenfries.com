@@ -29,7 +29,7 @@ const Page = ({ data }: PageProps<User | null>) => {
 
 	return (
 		<>
-			<img src={data.avatar_url} width={64} height={64} />
+			<img alt={data.name} src={data.avatar_url} width={64} height={64} />
 			<h1>{data.name}</h1>
 			<p>{data.login}</p>
 		</>

@@ -2,12 +2,16 @@ import sass from 'denoscss';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
 
+// compile sass to css
+
 const compiler = sass(['styles']);
 
 compiler.to_file({
 	destDir: 'static/styles',
 	format: 'compressed',
 });
+
+// autoprefix css
 
 const instance = autoprefixer(
 	{

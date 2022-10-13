@@ -1,8 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-// @layer components {
 .snap-normal {
 	-moz-scroll-snap-stop: normal;
 	scroll-snap-stop: normal;
@@ -728,4 +723,3 @@
 .decoration-rose-900 {
 	text-decoration-color: #881337;
 }
-// }

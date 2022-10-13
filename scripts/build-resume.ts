@@ -14,10 +14,12 @@ const resumeTokenized = tokens(sanatizedResumeMarkdown, {
 });
 
 const resumeHTML = html(resumeTokenized);
+const sanatizedResumeHTML = resumeHTML.replace(/’/g, '\'');
 
 const resumeCSS = await Deno.readTextFile('./static/styles/resume.min.css');
 
-const resumeHTMLWithCSS = `<style>${resumeCSS}</style>${resumeHTML}`;
+const resumeHTMLWithCSS =
+	`<!DOCTYPE html><style>${resumeCSS}</style><article>${sanatizedResumeHTML}</article>`;
 
 await Deno.writeTextFile(
 	'./static/resume/resume.min.html',
