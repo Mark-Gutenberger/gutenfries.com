@@ -11,10 +11,11 @@ function AboutPage(PageProps: PageProps) {
 			PageProps={PageProps}
 		>
 			<h1 className='animate-fade-in-0.5 text-5xl font-bold text-center mt-5 text-white'>
-				How I made this site
+				Coming Soon!
 			</h1>
 			<p className='animate-fade-in-0.5 text-xl text-center mt-8 text-white'>
-				Blah blah blah, update this later
+				This Page will contain information about the project, the technologies used, and
+				other aspects of the engineering involved.
 			</p>
 		</MainLayout>
 	);
