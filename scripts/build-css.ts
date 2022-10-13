@@ -17,9 +17,19 @@ const instance = autoprefixer(
 	{
 		overrideBrowserslist: [
 			'last 2 versions',
-			'ie >= 11',
+			'IE >= 10',
 			'Firefox ESR',
-			'not dead',
+			'Chrome > 19',
+			'Opera 12',
+			'Firefox > 19',
+			'Android 2.3',
+			'Android >= 4',
+			'iOS >= 6',
+			'Safari 16',
+			'Safari 14',
+			'Safari 15',
+			'Edge 16',
+			'Edge 17',
 		],
 	},
 );
