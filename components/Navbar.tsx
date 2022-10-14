@@ -5,11 +5,9 @@ import { Fragment, h } from 'preact';
 import { ErrorPageProps, PageProps, UnknownPageProps } from '$fresh/server.ts';
 
 import SearchBar from '@/islands/SearchBar.tsx';
-import { useEffect } from 'https://esm.sh/v95/preact@10.11.0/hooks/src/index.d.ts';
 
 interface NavbarProps {
 	PageProps: PageProps | UnknownPageProps | ErrorPageProps;
-	sticky?: boolean;
 }
 
 interface Routes {
@@ -32,7 +30,7 @@ function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
-function Navbar({ PageProps, sticky }: NavbarProps) {
+function Navbar({ PageProps }: NavbarProps) {
 	let route: string;
 
 	if (routes.find((r) => r.href === PageProps.url.pathname)) {
@@ -58,11 +56,7 @@ function Navbar({ PageProps, sticky }: NavbarProps) {
 				Skip to content
 			</a> */
 			}
-			<header
-				className={`flex ${
-					sticky ? 'sticky' : 'absolute'
-				} w-screen shadow-lg bg-gray-800 z-50`}
-			>
+			<header className='w-full shadow-lg bg-gray-800 flex flex-row'>
 				<nav className='h-auto flex justify-start text-white text-xl  py-4 pl-4 pr-2'>
 					{/* for each route in routes where showInNav is true */}
 					{routes.map(({ name, href, current, showInNav }) => {

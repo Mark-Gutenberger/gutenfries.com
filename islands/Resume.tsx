@@ -35,7 +35,7 @@ function Resume() {
 	useKeyPress(['p', 'P'], onKeyPress, 'ctrl');
 
 	return (
-		<main className='top-0 flex items-center place-content-center w-screen h-screen'>
+		<main className='top-0 flex items-center place-content-center w-screen h-[86vh] sm:h-[90vh] xl:h-[100vh]'>
 			{resume
 				? (
 					<article
