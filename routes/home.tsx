@@ -14,7 +14,7 @@ function HomePage(PageProps: PageProps) {
 			<section className='snap-start text-gray-800 body-font'>
 				<div className='container mx-auto flex px-5 pb-32 pt-8 md:flex-row flex-col items-center'>
 					<div className='lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
-						<h1 className='animate-fade-in-0.5 sm:text-8xl text-4xl font-medium title-font text-gray-300 hover:text-white'>
+						<h1 className='animate-fade-in-0.5 sm:text-8xl text-6xl font-medium title-font text-gray-300 hover:text-white'>
 							Hi there
 						</h1>
 						<br className='hidden lg:inline-block' />

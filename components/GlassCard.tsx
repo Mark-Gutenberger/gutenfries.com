@@ -8,7 +8,7 @@ interface GlassCardProps {
 
 const GlassCard = ({ isMain, children }: GlassCardProps) => {
 	return (
-		<div className='top-0 absolute flex items-center place-content-center p-5 pt-[6.25rem] w-screen h-screen z-0'>
+		<div className='top-0 absolute flex items-center place-content-center p-5 pt-[6.25rem] w-screen h-[86vh] sm:h-[90vh] xl:h-[100vh] z-0'>
 			{isMain
 				? (
 					<main
