@@ -25,16 +25,15 @@ site: [pulaskischools.org](https://www.pulaskischools.org/)
 
 ## Experience
 
-### Zernicke's & Landstad Dairy
+### The Ryan Kautzer Band
 
-> 05/2015 - 07/2017 _(seasonal)_
+> 09/2019 - present _(volunteer)_
 
-phone: [+1 (715)-853-3011](tel:7158533011)
+phone: [+1 (920)-883-5222](tel:9208835222)
 
--   **Farm Hand** _(seasonal)_
-    -   Covered silage pits & piles
-    -   Picked rocks & debris from fields
-    -   Performed general maintenance on farm equipment
+-   **Musician & Performer**
+    -   Played Banjo, Guitar, and Drumset for the polka band
+    -   Performed at various venues
 
 ### Moe's Farms, Inc.
 
@@ -54,15 +53,16 @@ phone: [+1 (715)-853-3011](tel:7158533011)
 
 -   Recieved several pay raises for work ethic & performance
 
-### The Ryan Kautzer Band
+### Zernicke's & Landstad Dairy
 
-> 09/2019 - present _(volunteer)_
+> 05/2015 - 07/2017 _(seasonal)_
 
-phone: [+1 (920)-883-5222](tel:9208835222)
+phone: [+1 (715)-853-3011](tel:7158533011)
 
--   **Musician & Performer**
-    -   Played Banjo, Guitar, and Drumset for the polka band
-    -   Performed at various venues
+-   **Farm Hand** _(seasonal)_
+    -   Covered silage pits & piles
+    -   Picked rocks & debris from fields
+    -   Performed general maintenance on farm equipment
 
 ## Skills
 
