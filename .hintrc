@@ -12,6 +12,14 @@
           "img[loading]"
         ]
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "text-decoration-thickness"
+        ]
+      }
     ]
   }
 }

@@ -1,8 +1,7 @@
 [workspace]
 
 members = [
-	"rust/color_generator/",
-	"rust/search/"
+  "rust/search/",
 ]
 
 [profile.release]

@@ -21,11 +21,19 @@ function Head({ PageProps }: HeadProps) {
 
 	return (
 		<FreshHead>
+			{/* load fonts first to prevent font-jiggle */}
+			<link rel='preconnect' href='https://fonts.googleapis.com' />
+			<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
+			<link
+				href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700'
+				rel='stylesheet'
+			/>
+
 			<title>
 				{PageProps.url.pathname.slice(1)} {pipe} Mark Gutenberger
 			</title>
 
-			<link rel='icon' href={asset('/icons/favicon.ico')}></link>
+			<link rel='icon' href={asset('/images/penguin-icon.png')}></link>
 
 			{/* Chrome, Firefox OS and Opera */}
 			<meta name='theme-color' content='#27272a' />
@@ -52,7 +60,7 @@ function Head({ PageProps }: HeadProps) {
 			/>
 
 			{/* Twitter */}
-			<meta property='twitter:card' content='summary_large_image' />
+			{/* <meta property='twitter:card' content='summary_large_image' /> */}
 			<meta property='twitter:url' content='https://gutenfries.deno.dev/home' />
 			<meta property='twitter:title' content='home | Mark Gutenberger' />
 			<meta
@@ -64,9 +72,7 @@ function Head({ PageProps }: HeadProps) {
 				content={ogImageUrl}
 			/>
 
-			<link rel='stylesheet' href={asset('/styles/nunito.min.css')}></link>
-			<link rel='stylesheet' href={asset('/styles/tailwind-extended.min.css')}></link>
-			<link rel='stylesheet' href={asset('/styles/global.min.css')}></link>
+			<link rel='stylesheet' href={asset('/styles/global.css')}></link>
 
 			{/* console easter egg */}
 			<script

@@ -24,7 +24,7 @@ function ResumeLayout({ PageProps, children }: ResumeLayoutProps) {
 				>
 					Skip to main content
 				</a>
-				<Navbar PageProps={PageProps} />
+				<Navbar active='resume' />
 				<NoScript />
 				{children}
 			</div>

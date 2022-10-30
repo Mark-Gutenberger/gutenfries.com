@@ -1,87 +1,76 @@
 /** @jsx h */
-/** @jsxFrag Fragment */
-import { Fragment, h } from 'preact';
-
-import { ErrorPageProps, PageProps, UnknownPageProps } from '$fresh/server.ts';
+import { h } from 'preact';
 
 import SearchBar from '@/islands/SearchBar.tsx';
 
-interface NavbarProps {
-	PageProps: PageProps | UnknownPageProps | ErrorPageProps;
-}
-
-interface Routes {
+interface Route {
 	name: string;
 	href: string | undefined;
-	current: boolean;
 	showInNav: boolean;
 }
 
-const routes: Routes[] = [
-	{ name: 'Home', href: '/home', current: false, showInNav: true },
-	{ name: 'About', href: '/about', current: false, showInNav: true },
-	{ name: 'Contact', href: '/contact', current: false, showInNav: true },
-	{ name: 'Resume', href: '/resume', current: false, showInNav: true },
-	{ name: '404', href: '/404', current: false, showInNav: false },
-	{ name: '500', href: '/500', current: false, showInNav: false },
+const routes: Route[] = [
+	{
+		name: 'Home',
+		href: '/home',
+		showInNav: true,
+	},
+	{
+		name: 'Blog',
+		href: '/blog',
+		showInNav: true,
+	},
+	{
+		name: 'Resume',
+		href: '/resume',
+		showInNav: true,
+	},
+	{
+		name: '404',
+		href: '/404',
+		showInNav: false,
+	},
+	{
+		name: '500',
+		href: '/500',
+		showInNav: false,
+	},
 ];
 
 function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
-function Navbar({ PageProps }: NavbarProps) {
-	let route: string;
-
-	if (routes.find((r) => r.href === PageProps.url.pathname)) {
-		route = PageProps.url.pathname;
-	} else {
-		route = '/404';
-	}
-
-	routes.forEach(() => {
-		// make all values false
-		for (let i = 0; i < routes.length; i++) {
-			routes[i].current = false;
-		}
-	});
-
-	const routeIndex = routes.findIndex(({ href }) => href === route);
-	routes[routeIndex].current = true;
-
+function Navbar(props: { active?: string }) {
 	return (
-		<>
-			{
-				/* <a href='' className='sr-only focus:not-sr-only'>
-				Skip to content
-			</a> */
-			}
-			<header className='w-full shadow-lg bg-gray-800 flex flex-row'>
-				<nav className='h-auto flex justify-start text-white text-xl  py-4 pl-4 pr-2'>
-					{/* for each route in routes where showInNav is true */}
-					{routes.map(({ name, href, current, showInNav }) => {
-						if (showInNav) {
-							return (
+		<nav className='fixed z-50 w-full shadow-lg bg-gray-800 flex flex-row h-20'>
+			<ul className='flex justify-start text-white text-xl py-4 pl-4 pr-2'>
+				{routes.map((item: Route) => {
+					if (item.showInNav) {
+						return (
+							<li>
 								<a
-									key={name}
-									href={href}
+									key={item.name}
+									href={item.href}
 									className={classNames(
-										current
+										props.active?.toLowerCase() ===
+												item.name.toLowerCase()
 											? 'bg-gray-900 text-white'
 											: 'text-gray-300 hover:bg-gray-700 active:bg-gray-900 hover:text-white',
 										'rounded-lg text-md font-medium p-3 mx-1 block',
 									)}
-									aria-current={current ? 'page' : undefined}
+									aria-current={props.active?.toLowerCase() ===
+										item.name.toLowerCase()}
 								>
-									{name}
+									{item.name}
 								</a>
-							);
-						}
-					})}
-				</nav>
-				<SearchBar />
-			</header>
-		</>
+							</li>
+						);
+					}
+				})}
+			</ul>
+			<SearchBar />
+		</nav>
 	);
 }
 
