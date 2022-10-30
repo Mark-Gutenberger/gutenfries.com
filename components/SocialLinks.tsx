@@ -12,22 +12,27 @@ function SocialLinks() {
 				target='_blank'
 				rel='noopener noreferrer'
 			>
+				<span className='sr-only'>Email</span>
 				<Icons.Mail />
 			</a>
-			<a
+			{
+				/* 	<a
 				className='mx-1.5  text-white hover:bg-blue-500 hover:shadow-2xl hover:text-white p-2.5 rounded-md text-3xl'
 				href='https://twitter.com/gutenfries'
 				target='_blank'
 				rel='noopener noreferrer'
 			>
+				<span className='sr-only'>Twitter</span>
 				<Icons.Twitter />
-			</a>
+			</a> */
+			}
 			<a
 				className='mx-1.5  text-white hover:bg-green-700 hover:shadow-2xl hover:text-white p-2.5 rounded-md text-3xl'
 				href='https://peerlist.io/gutenfries'
 				target='_blank'
 				rel='noopener noreferrer'
 			>
+				<span className='sr-only'>Peerlist</span>
 				<Icons.Peerlist />
 			</a>
 			<a
@@ -36,6 +41,7 @@ function SocialLinks() {
 				target='_blank'
 				rel='noopener noreferrer'
 			>
+				<span className='sr-only'>Linkedin</span>
 				<Icons.LinkedIn />
 			</a>
 			<a
@@ -44,6 +50,7 @@ function SocialLinks() {
 				target='_blank'
 				rel='noopener noreferrer'
 			>
+				<span className='sr-only'>Github</span>
 				<Icons.Github />
 			</a>
 			<a
@@ -52,6 +59,7 @@ function SocialLinks() {
 				target='_blank'
 				rel='noopener noreferrer'
 			>
+				<span className='sr-only'>Codepen</span>
 				<Icons.Codepen />
 			</a>
 			<a
@@ -60,6 +68,7 @@ function SocialLinks() {
 				target='_blank'
 				rel='noopener noreferrer'
 			>
+				<span className='sr-only'>Wakatime</span>
 				<Icons.Wakatime />
 			</a>
 		</div>

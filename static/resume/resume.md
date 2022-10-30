@@ -1,7 +1,6 @@
 # Mark Gutenberger
 
-> Hi, I'm Mark.\
-> I'm a musician & software developer from [WI, USA](https://www.google.com/maps/place/Wisconsin/).
+> Musician & software developer from [WI, USA](https://www.google.com/maps/place/Wisconsin/).
 
 ---
 
@@ -95,8 +94,8 @@ phone: [+1 (715)-853-3011](tel:7158533011)
 
 ---
 
-> Mark Gutenberger | [+1 (920)-284-3760](tel:19202843760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)\
+> Mark Gutenberger | [+1 (920)-268-4810](tel:19202684810) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)\
 > [230 E Glendale Ave, Appleton, WI 54915](https://www.google.com/maps/place/230+E+Glendale+Ave,+Appleton,+WI+54911/)\
-> [GitHub](https://github.com/gutenfries) | [Peerlist](https://peerlist.io/gutenfries) | [LinkedIn](https://www.linkedin.com/in/gutenfries/) | [Twitter](https://twitter.com/gutenfries)
+> [GitHub](https://github.com/gutenfries) | [Peerlist](https://peerlist.io/gutenfries) | [LinkedIn](https://www.linkedin.com/in/gutenfries/)
 
 ---
