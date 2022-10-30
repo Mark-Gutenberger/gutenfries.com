@@ -7,7 +7,6 @@ import { ErrorPageProps, UnknownPageProps } from '$fresh/server.ts';
 import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { Navbar } from '@/components/Navbar.tsx';
-import { GradientBackground } from '@/components/GradientBackground.tsx';
 import { GlassCard } from '@/components/GlassCard.tsx';
 
 interface ErrorPageLayoutProps {
@@ -19,19 +18,16 @@ function ErrorPageLayout({ PageProps, children }: ErrorPageLayoutProps) {
 	return (
 		<>
 			<Head PageProps={PageProps} />
-			<div className='font-rounded pointer-events-auto w-screen'>
+			<div className='pointer-events-auto font-[fira]'>
 				<a
 					href='#main-content'
 					className='sr-only focus:not-sr-only'
 				>
 					Skip to main content
 				</a>
-				<Navbar PageProps={PageProps} />
-				<GradientBackground />
-				<GlassCard isMain={true}>
-					<NoScript />
-					{children}
-				</GlassCard>
+				<Navbar active='404' />
+
+				<NoScript />
 			</div>
 		</>
 	);

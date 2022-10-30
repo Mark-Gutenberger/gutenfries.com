@@ -22,6 +22,7 @@
 		"fresh_seo": "https://deno.land/x/fresh_seo@0.1.2/mod.ts",
 
 		"rusty_markdown": "https://deno.land/x/rusty_markdown@v0.4.1/mod.ts",
+		"gfm": "https://deno.land/x/gfm@0.1.22/mod.ts",
 		"minifier": "https://deno.land/x/minifier@v1.1.1/mod.ts",
 		"puppeteer": "https://deno.land/x/puppeteer@16.2.0/mod.ts",
 		"minify-html": "https://wilsonl.in/minify-html/deno/0.10.1/index.js"

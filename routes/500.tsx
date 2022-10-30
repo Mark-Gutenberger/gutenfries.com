@@ -1,28 +1,38 @@
 /** @jsx h */
-import { h } from 'preact';
-
-import { ErrorPageLayout } from '@/layouts/ErrorPageLayout.tsx';
+/** @jsxFrag Fragment */
+import { Fragment, h } from 'preact';
 
 import { ErrorPageProps } from '$fresh/server.ts';
 
+import { Head } from '@/components/Head.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
+import { Navbar } from '@/components/Navbar.tsx';
+
 function ErrorPage(PageProps: ErrorPageProps) {
 	return (
-		<ErrorPageLayout PageProps={PageProps}>
-			<div className='flex flex-col items-center justify-center h-screen'>
-				<h2 className='text-4xl font-bold text-center text-white'>
-					500 - Internal Server Error :(
-				</h2>
+		<>
+			<Head PageProps={PageProps} />
+			<div className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
+				<Navbar active='404' />
 
-				{PageProps.error instanceof Error
-					? <hr className='w-1/2 my-5 rounded h-1 text-white bg-white' />
-					: null}
-				<p className='text-center text-white'>
+				<NoScript />
+
+				<div className='flex flex-col items-center justify-center h-screen'>
+					<h2 className='text-4xl font-bold text-center text-white'>
+						HTTP Error 500 - Internal Server Error :(
+					</h2>
+
 					{PageProps.error instanceof Error
-						? (PageProps.error as Error).message
-						: JSON.stringify(PageProps.error)}
-				</p>
+						? <hr className='w-1/2 my-5 rounded h-1 text-white bg-white' />
+						: null}
+					<p className='text-center text-white'>
+						{PageProps.error instanceof Error
+							? (PageProps.error as Error).message
+							: JSON.stringify(PageProps.error)}
+					</p>
+				</div>
 			</div>
-		</ErrorPageLayout>
+		</>
 	);
 }
 
