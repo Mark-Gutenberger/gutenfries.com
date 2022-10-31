@@ -182,46 +182,44 @@ function Footer() {
 				</ul>
 			</section>
 
-			<section className='p-4 shadow-lg bg-gray-800'>
-				<div className='container mx-auto py-4 px-5 flex flex-wrap flex-row sm:flex-row'>
-					<p className='text-lg text-sm text-center sm:text-left text-gray-400'>
-						<a
-							href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md'
-							className='ml-1'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							© {new Date().getFullYear()} Mark Gutenberger - <u>@gutenfries</u>
-						</a>
-					</p>
-					{/* centered made with deno badge */}
-					<span className='inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start'>
-						<a
-							href='https://fresh.deno.dev/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							<span className='sr-only'>
-								Made with Fresh
-							</span>
-							<img
-								src={asset('images/made-with-fresh.svg')}
-								alt='Made with Fresh'
-							/>
-						</a>
-					</span>
-					<span className='sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-400 text-sm'>
-						Created with {'<'}3 and
-						<a
-							href='https://deno.land'
-							className='ml-1'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							<u>Deno</u>
-						</a>
-					</span>
-				</div>
+			<section className='w-full mx-auto p-4 flex flex-wrap flex-col sm:flex-row shadow-lg bg-gray-800'>
+				<p className='text-lg text-sm text-center sm:text-left text-gray-400'>
+					<a
+						href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md'
+						className='ml-1'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						© {new Date().getFullYear()} Mark Gutenberger - <u>@gutenfries</u>
+					</a>
+				</p>
+				{/* centered made with deno badge */}
+				<span className='inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start'>
+					<a
+						href='https://fresh.deno.dev/'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<span className='sr-only'>
+							Made with Fresh
+						</span>
+						<img
+							src={asset('images/made-with-fresh.svg')}
+							alt='Made with Fresh'
+						/>
+					</a>
+				</span>
+				<span className='sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-400 text-sm'>
+					Created with {'<'}3 and
+					<a
+						href='https://deno.land'
+						className='ml-1'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<u>Deno</u>
+					</a>
+				</span>
 			</section>
 		</footer>
 	);
