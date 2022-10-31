@@ -43,7 +43,7 @@ function IndexPage(PageProps: PageProps) {
 									'"Designer"',
 								]}
 								code={[
-									'// src/bio.rs',
+									'// like this theme? Try it! <https://github.com/gutenfries/10x-dark-theme>',
 									'pub struct Mark {',
 									'	name: &str,',
 									'	email: String,',
