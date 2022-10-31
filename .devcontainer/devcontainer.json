@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/rust
 {
-	"name": "Rust",
+	"name": "Container",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
@@ -38,15 +38,15 @@
 				"tamasfe.even-better-toml",
 				"serayuzgur.crates",
 				"denoland.vscode-deno",
-				"ms-vscode.vscode-typescript-next",
 				"GitHub.copilot-nightly",
-				"mgmcdermott.vscode-language-babel",
 				"EditorConfig.EditorConfig",
 				"cschleiden.vscode-github-actions",
 				"bierner.github-markdown-preview",
 				"GitHub.vscode-pull-request-github",
 				"eamodio.gitlens",
-				"znck.grammarly"
+				"znck.grammarly",
+				"miguelsolorio.symbols",
+				"gutenfries.10x-dark-theme"
 			]
 		}
 	},

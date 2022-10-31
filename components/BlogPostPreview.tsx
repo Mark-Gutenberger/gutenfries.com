@@ -6,7 +6,10 @@ function BlogPostPreview(props: { post: Post }) {
 	const { post } = props;
 	return (
 		<li className='border-t'>
-			<a href={`/blog/${post.slug}`} className='py-12 group grid sm:grid-cols-3'>
+			<a
+				href={`/blog/${post.slug}`}
+				className='py-12 group grid sm:grid-cols-3 text-gray-800 dark:text-gray-100'
+			>
 				<time>
 					{new Date(post.publishedAt).toLocaleDateString('en-us', {
 						year: 'numeric',

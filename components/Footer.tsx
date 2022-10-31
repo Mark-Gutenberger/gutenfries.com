@@ -6,12 +6,12 @@ import { asset } from '$fresh/runtime.ts';
 function Footer() {
 	return (
 		<footer className='text-gray-800 dark:text-gray-100'>
-			<div className='container px-5 py-32 mx-auto'>
-				<div className='flex flex-wrap md:text-left text-center -mb-10 -mx-4'>
-					<section className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h2 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+			<section className='container px-5 py-24 mx-auto'>
+				<ul className='flex flex-wrap md:text-left text-center -mb-10 -mx-4'>
+					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
+						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
 							CATEGORIES
-						</h2>
+						</h3>
 						<nav className='list-none mb-10'>
 							<ul>
 								<li>
@@ -36,11 +36,11 @@ function Footer() {
 								</li>
 							</ul>
 						</nav>
-					</section>
-					<section className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h2 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+					</li>
+					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
+						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
 							CATEGORIES
-						</h2>
+						</h3>
 						<nav className='list-none mb-10'>
 							<ul>
 								<li>
@@ -65,11 +65,11 @@ function Footer() {
 								</li>
 							</ul>
 						</nav>
-					</section>
-					<section className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h2 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+					</li>
+					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
+						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
 							CATEGORIES
-						</h2>
+						</h3>
 						<nav className='list-none mb-10'>
 							<ul>
 								<li>
@@ -94,11 +94,11 @@ function Footer() {
 								</li>
 							</ul>
 						</nav>
-					</section>
-					<section className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h2 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+					</li>
+					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
+						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
 							CATEGORIES
-						</h2>
+						</h3>
 						<nav className='list-none mb-10'>
 							<ul>
 								<li>
@@ -123,11 +123,11 @@ function Footer() {
 								</li>
 							</ul>
 						</nav>
-					</section>
-					<section className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h2 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+					</li>
+					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
+						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
 							CATEGORIES
-						</h2>
+						</h3>
 						<nav className='list-none mb-10'>
 							<ul>
 								<li>
@@ -152,11 +152,11 @@ function Footer() {
 								</li>
 							</ul>
 						</nav>
-					</section>
-					<section className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h2 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+					</li>
+					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
+						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
 							CATEGORIES
-						</h2>
+						</h3>
 						<nav className='list-none mb-10'>
 							<ul>
 								<li>
@@ -181,20 +181,20 @@ function Footer() {
 								</li>
 							</ul>
 						</nav>
-					</section>
-				</div>
-			</div>
+					</li>
+				</ul>
+			</section>
 
-			<section className='p-4 bg-gray-800 rounded-lg'>
+			<section className='p-4 shadow-lg bg-gray-800'>
 				<div className='container mx-auto py-4 px-5 flex flex-wrap flex-row sm:flex-row'>
-					<p className='text-lg text-sm text-center sm:text-left'>
+					<p className='text-lg text-sm text-center sm:text-left text-gray-400'>
 						<a
 							href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md'
 							className='ml-1'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							© {new Date().getFullYear()} Mark Gutenberger - @gutenfries
+							© {new Date().getFullYear()} Mark Gutenberger - <u>@gutenfries</u>
 						</a>
 					</p>
 					{/* centered made with deno badge */}
@@ -221,7 +221,7 @@ function Footer() {
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							Deno
+							<u>Deno</u>
 						</a>
 					</span>
 				</div>

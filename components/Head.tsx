@@ -77,7 +77,10 @@ function Head({ PageProps }: HeadProps) {
 			{/* console easter egg */}
 			<script
 				dangerouslySetInnerHTML={{
-					__html: `console.log('%cHi there! 👋', 'font-size: 2rem; font-weight: bold;');`,
+					__html: `
+						console.log('%cHi there! 👋', 'font-size: 2rem; font-weight: bold;');
+						console.log('If you\\'re looking this far, please consider staring the repo on GitHub! 😊 \\nhttps://github.com/gutenfries/gutenfries.deno.dev');
+						`,
 				}}
 			>
 			</script>

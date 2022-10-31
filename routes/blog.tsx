@@ -5,8 +5,11 @@ import { Handlers, PageProps } from '$fresh/server.ts';
 
 import { listPosts, Post } from '@/utils/blogPosts.ts';
 
-import { Container } from '@/components/Container.tsx';
+import { Footer } from '@/components/Footer.tsx';
 import { BlogPostPreview } from '@/components/BlogPostPreview.tsx';
+import { Head } from '@/components/Head.tsx';
+import { Navbar } from '@/components/Navbar.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
 
 interface State {
 	locales: string[];
@@ -27,20 +30,28 @@ export default function Home(props: PageProps<Data>) {
 	const { posts } = props.data;
 	return (
 		<>
-			<header className='bg-yellow-200 relative min-h-[30vh]'>
-				<Container>
-					<h1 className='text-4xl lg:text-8xl font-bold absolute bottom-6 flex items-center'>
-						Joe mama
-					</h1>
-				</Container>
-			</header>
-			<main>
-				<Container>
-					<ul className='mt-16'>
-						{posts.map((post) => <BlogPostPreview post={post} />)}
-					</ul>
-				</Container>
-			</main>
+			<Head PageProps={props} />
+			<div className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
+				<a
+					href='#main-content'
+					className='sr-only focus:not-sr-only text-red-500 outline-none focus:outline-none '
+				>
+					Skip to main content
+				</a>
+				<Navbar active='blog' />
+
+				<NoScript />
+				<main id='main-content'>
+					<section className='p-4 pt-20'>
+						{/* <Container> */}
+						<ul className='mt-16'>
+							{posts.map((post) => <BlogPostPreview post={post} />)}
+						</ul>
+						{/* </Container> */}
+					</section>
+				</main>
+				<Footer />
+			</div>
 		</>
 	);
 }
