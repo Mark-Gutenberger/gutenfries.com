@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
-
 import { ErrorPageProps, PageProps, UnknownPageProps } from '$fresh/server.ts';
 import { asset, Head as FreshHead } from '$fresh/runtime.ts';
 
@@ -27,6 +24,7 @@ function Head({ PageProps }: HeadProps) {
 			<link
 				href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700'
 				rel='stylesheet'
+				type='text/css'
 			/>
 
 			<title>

@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
-
 function NoScript() {
 	return (
 		<noscript>

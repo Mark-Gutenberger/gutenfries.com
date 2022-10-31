@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
 import { PageProps } from '$fresh/server.ts';
 import { asset } from '$fresh/runtime.ts';
 
@@ -43,7 +41,8 @@ function IndexPage(PageProps: PageProps) {
 										'"Designer"',
 									]}
 									code={[
-										'// like this theme? Try it! https://github.com/gutenfries/10x-dark-theme',
+										'// like the theme? Try it! ',
+										'// https://github.com/gutenfries/10x-dark-theme',
 										'pub struct Mark {',
 										'	name: &str,',
 										'	email: String,',
@@ -54,11 +53,10 @@ function IndexPage(PageProps: PageProps) {
 										'	pub fn about() -> Mark {',
 										'		Mark {',
 										'			name: "Mark Gutenberger",',
-										'			email: "gutenfries@gmail.com".to_string(),',
+										'			email: String::from("gutenfries@gmail.com"),',
 										'			loves_dinosaurs: true,',
 										'			expertise: vec![',
-										'				"Rust", "C/C++",',
-										'				"Deno", "Node",',
+										'				"Rust", "C/C++", "Deno",',
 										'				"(P)react", "HTML & CSS",',
 										'			],',
 										'		}',

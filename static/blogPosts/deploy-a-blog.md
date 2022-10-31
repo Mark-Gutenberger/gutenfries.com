@@ -20,11 +20,11 @@ npm run start
 ```
 
 ```js
-console.log("Hello World");
+console.log('Hello World');
 ```
 
 ```ts
-console.log("Hello World");
+console.log('Hello World');
 ```
 
 ```json

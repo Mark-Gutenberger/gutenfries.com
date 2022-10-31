@@ -1,7 +1,3 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { Fragment, h } from 'preact';
-
 import { Handlers, PageProps } from '$fresh/server.ts';
 
 interface User {

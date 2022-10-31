@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
-
 import Icons from '@/components/Icons.tsx';
 
 function SocialLinks() {

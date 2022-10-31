@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
 import type { ComponentChildren } from 'preact';
 
 type Props = {

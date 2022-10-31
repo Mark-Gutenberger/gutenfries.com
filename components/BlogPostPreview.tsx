@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
 import { Post } from '@/utils/blogPosts.ts';
 
 function BlogPostPreview(props: { post: Post }) {

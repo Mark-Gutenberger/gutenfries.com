@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
-
 import { SocialLinks } from '@/components/SocialLinks.tsx';
 import CalendlyWidget from '@/islands/CalendlyWidget.tsx';
 

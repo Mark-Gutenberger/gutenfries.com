@@ -40,5 +40,9 @@
 		"files": {
 			"exclude": ["target/", "wasm/"]
 		}
+	},
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "preact"
 	}
 }

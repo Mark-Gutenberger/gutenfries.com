@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
-
 import { asset } from '$fresh/runtime.ts';
 
 function Footer() {

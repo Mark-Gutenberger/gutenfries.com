@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
-
 import SearchBar from '@/islands/SearchBar.tsx';
 
 interface Route {

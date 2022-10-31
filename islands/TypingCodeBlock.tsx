@@ -1,6 +1,3 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { Fragment, h } from 'preact';
 import { useEffect } from 'preact/hooks';
 
 import { asset } from '$fresh/runtime.ts';

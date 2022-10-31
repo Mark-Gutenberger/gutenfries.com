@@ -1,6 +1,3 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { Fragment, h } from 'preact';
 import { ErrorPageProps } from '$fresh/server.ts';
 import { asset } from '$fresh/runtime.ts';
 

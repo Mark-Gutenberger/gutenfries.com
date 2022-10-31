@@ -1,30 +1,25 @@
 {
 	"imports": {
 		"@/": "./",
+		"$fresh/": "https://deno.land/x/fresh@1.1.2/",
 
-		"$fresh/": "https://deno.land/x/fresh@1.1.1/",
 		"$std/": "https://deno.land/std@0.150.0/",
 		"$testing/": "https://deno.land/std@0.150.0/testing/",
 
 		"preact": "https://esm.sh/preact@10.11.0",
 		"preact/": "https://esm.sh/preact@10.11.0/",
 		"preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.4",
-		"@preact/signal-core": "https://esm.sh/*@preact/signals-core@1.0.1",
+		"@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1",
+		"@preact/signals": "https://esm.sh/*@preact/signals@1.0.3",
 
 		"twind": "https://esm.sh/twind@0.16.17",
 		"twind/": "https://esm.sh/twind@0.16.17/",
-		"postcss": "https://deno.land/x/postcss@8.3.0.1/mod.js",
-		"denoscss": "https://deno.land/x/denosass@1.0.4/mod.ts",
-		"autoprefixer": "https://deno.land/x/postcss_autoprefixer@0.2.8/mod.js",
 
 		"fresh_validation": "https://deno.land/x/fresh_validation@0.1.1/mod.ts",
 		"fresh_session": "https://deno.land/x/fresh_session@0.1.7/mod.ts",
 		"fresh_seo": "https://deno.land/x/fresh_seo@0.1.2/mod.ts",
 
 		"rusty_markdown": "https://deno.land/x/rusty_markdown@v0.4.1/mod.ts",
-		"gfm": "https://deno.land/x/gfm@0.1.22/mod.ts",
-		"minifier": "https://deno.land/x/minifier@v1.1.1/mod.ts",
-		"puppeteer": "https://deno.land/x/puppeteer@16.2.0/mod.ts",
-		"minify-html": "https://wilsonl.in/minify-html/deno/0.10.1/index.js"
+		"gfm": "https://deno.land/x/gfm@0.1.22/mod.ts"
 	}
 }
