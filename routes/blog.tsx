@@ -1,9 +1,10 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { Fragment, h } from 'preact';
-
 import { Handlers, PageProps } from '$fresh/server.ts';
+
 import { listPosts, Post } from '@/utils/blogPosts.ts';
+
 import { Container } from '@/components/Container.tsx';
 import { BlogPostPreview } from '@/components/BlogPostPreview.tsx';
 

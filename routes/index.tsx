@@ -1,6 +1,5 @@
 /** @jsx h */
 import { h } from 'preact';
-
 import { PageProps } from '$fresh/server.ts';
 import { asset } from '$fresh/runtime.ts';
 

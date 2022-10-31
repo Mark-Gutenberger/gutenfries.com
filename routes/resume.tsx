@@ -2,14 +2,13 @@
 /** @jsxFrag Fragment */
 import { Fragment, h } from 'preact';
 import { Handlers, PageProps } from '$fresh/server.ts';
+
 import * as gfm from 'gfm';
 import { readFile } from '@/utils/readFile.ts';
-import { Container } from '@/components/Container.tsx';
-import { Navbar } from '../components/Navbar.tsx';
-import { NoScript } from '../components/NoScript.tsx';
-import { Head } from '../components/Head.tsx';
-// import { ResumeLayout } from '@/layouts/ResumeLayout.tsx';
-// import Resume from '@/islands/Resume.tsx';
+
+import { Navbar } from '@/components/Navbar.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
+import { Head } from '@/components/Head.tsx';
 
 interface Data {
 	resume: string | null;
@@ -41,7 +40,6 @@ function ResumePage(props: PageProps<Data>) {
 				{resume
 					? (
 						<>
-							{/* <Container> */}
 							<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
 							<article
 								className='rounded-lg p-10 mt-12 markdown-body'
@@ -49,23 +47,17 @@ function ResumePage(props: PageProps<Data>) {
 									__html: gfm.render(resume),
 								}}
 							/>
-							{/* </Container> */}
 						</>
 					)
 					: (
 						<>
-							{/* <Container> */}
 							<h1 className='roded-lg font-bold text-5xl pt-20'>404</h1>
 							<p className='mt-4'>Resume not found</p>
-							{/* </Container> */}
 						</>
 					)}
 			</section>
 		</div>
 	);
-	// <ResumeLayout PageProps={PageProps}>
-	// <Resume />
-	// </ResumeLayout>
 }
 
 export default ResumePage;

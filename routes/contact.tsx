@@ -1,13 +1,10 @@
 /** @jsx h */
 import { h } from 'preact';
 
-import { PageProps } from '$fresh/server.ts';
-
 import { SocialLinks } from '@/components/SocialLinks.tsx';
-
 import CalendlyWidget from '@/islands/CalendlyWidget.tsx';
 
-function ContactPage(PageProps: PageProps) {
+function ContactPage() {
 	return (
 		<div>
 			<CalendlyWidget
