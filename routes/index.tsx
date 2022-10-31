@@ -634,7 +634,7 @@ function IndexPage(PageProps: PageProps) {
 						<p className='text-lg text-sm text-center sm:text-left'>
 							© {new Date().getFullYear()} Mark Gutenberger -
 							<a
-								href='https://twitter.com/knyttneve'
+								href='https://github.com/gutenfries'
 								className='ml-1'
 								target='_blank'
 								rel='noopener noreferrer'
