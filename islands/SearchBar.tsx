@@ -52,7 +52,7 @@ const SearchBar = () => {
 
 	return (
 		<>
-			<div className='overflow-hidden sm:flex hidden w-full min-w-64 max-w-full justify-end items-center'>
+			<div className='overflow-hidden sm:flex hidden w-full min-w-max max-w-full justify-end items-center'>
 				{!searchBarIsExpanded
 					? (
 						<button

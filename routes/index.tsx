@@ -27,7 +27,7 @@ function IndexPage(PageProps: PageProps) {
 			<main id='main-content'>
 				<section className='p-4 pt-20 text-gray-800 dark:text-gray-100'>
 					<div className='container mx-auto flex px-5 pb-32 pt-8 lg:flex-row flex-col items-center'>
-						<div className='lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
+						<div className='lg:flex-grow lg:w-3/5 md:w-3/5 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
 							<h1 className='md:text-7xl text-6xl mb-4'>
 								Mark Gutenberger
 							</h1>
@@ -43,7 +43,7 @@ function IndexPage(PageProps: PageProps) {
 										'"Designer"',
 									]}
 									code={[
-										'// like this theme? Try it! <https://github.com/gutenfries/10x-dark-theme>',
+										'// like this theme? Try it! https://github.com/gutenfries/10x-dark-theme',
 										'pub struct Mark {',
 										'	name: &str,',
 										'	email: String,',
@@ -90,7 +90,7 @@ function IndexPage(PageProps: PageProps) {
 								Some things I have built and am working on
 							</p>
 						</div>
-						<div className='flex flex-wrap -m-4'>
+						<div className='flex flex-wrap -m-4 text-gray-100 dark:border-gray-300'>
 							<div className='p-4 md:w-1/3'>
 								<div className='flex rounded-lg h-full bg-gray-800 p-8 flex-col'>
 									<div className='flex items-center mb-3'>
@@ -110,7 +110,7 @@ function IndexPage(PageProps: PageProps) {
 											className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'
 											href='https://github.com/gutenfries/gutenfries.deno.dev'
 										>
-											Learn More
+											Source Code
 											<Icons.ExternalLink className='w-4 h-4 ml-1' />
 										</a>
 									</div>
@@ -136,7 +136,7 @@ function IndexPage(PageProps: PageProps) {
 											href='https://github.com/gutenfries/cpp-tetris'
 											className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'
 										>
-											Learn More
+											Source Code
 											<Icons.ExternalLink className='w-4 h-4 ml-1' />
 										</a>
 									</div>
@@ -162,7 +162,7 @@ function IndexPage(PageProps: PageProps) {
 											href='https://github.com/gutenfries/dino_rs'
 											className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'
 										>
-											Learn More
+											Source Code
 											<Icons.ExternalLink className='w-4 h-4 ml-1' />
 										</a>
 									</div>
@@ -194,9 +194,8 @@ function IndexPage(PageProps: PageProps) {
 										Software Development
 									</h3>
 									<p className='text-lg text-base'>
-										I am a software developer, currently searching for fitting
-										work. I mainly work with web technologies, as well as C++
-										and Rust, but am always trying to learn something new.
+										I am a software developer, working mostly with web
+										technologies, as well as systems langauges, C/C++ and Rust.
 									</p>
 									{
 										/* <a className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'>

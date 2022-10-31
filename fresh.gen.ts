@@ -22,9 +22,8 @@ import * as $15 from './routes/index.tsx';
 import * as $16 from './routes/resume.tsx';
 import * as $17 from './routes/sitemap.xml.ts';
 import * as $$0 from './islands/CalendlyWidget.tsx';
-import * as $$1 from './islands/Resume.tsx';
-import * as $$2 from './islands/SearchBar.tsx';
-import * as $$3 from './islands/TypingCodeBlock.tsx';
+import * as $$1 from './islands/SearchBar.tsx';
+import * as $$2 from './islands/TypingCodeBlock.tsx';
 
 const manifest = {
 	routes: {
@@ -49,9 +48,8 @@ const manifest = {
 	},
 	islands: {
 		'./islands/CalendlyWidget.tsx': $$0,
-		'./islands/Resume.tsx': $$1,
-		'./islands/SearchBar.tsx': $$2,
-		'./islands/TypingCodeBlock.tsx': $$3,
+		'./islands/SearchBar.tsx': $$1,
+		'./islands/TypingCodeBlock.tsx': $$2,
 	},
 	baseUrl: import.meta.url,
 	config,
