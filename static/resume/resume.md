@@ -4,24 +4,6 @@
 
 ---
 
-## Education
-
-### Pulaski High School
-
-> 09/2020 - 06/2023
-
-site: [pulaskischools.org](https://www.pulaskischools.org/)
-
--   Graduated _(expected)_ **2023**
--   College & AP Classes: **AP Psychology**, <!-- **Into to Diversity**, --> **Oral & Intrapersonal Communication**, <!-- **American Literature**, --> **Intro to Computer Science**
--   Clubs & Activities: **Marching Band**, **Concert Band**, **Jazz Band**, **Choir**, **[SkillsUSA](https://www.skillsusa.org/)**, **Math Club**, **Forensics**
-<!-- - ACT Score: **26** (Math: 28, Reading: 22, Science: 24, English: 27) -->
--   Highlights:
-    -   **State Qualifier** in **Speach & Broadcasting** for **Forensics** _(2021)_
-    -   **State Qualifier** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Snare Drum Solo) _(2021)_
-    -   **State Runner-Up** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Percussion Ensemble) _(2021)_
-    <!-- - Member of the acclaimed **Red Raider Jazz Band** (Acceptance by audition only) _(2021-2022)_ -->
-
 ## Experience
 
 ### The Ryan Kautzer Band
@@ -63,6 +45,24 @@ phone: [+1 (715)-853-3011](tel:7158533011)
     -   Picked rocks & debris from fields
     -   Performed general maintenance on farm equipment
 
+## Education
+
+### Pulaski High School
+
+> 09/2020 - 06/2023
+
+site: [pulaskischools.org](https://www.pulaskischools.org/)
+
+-   Graduated _(expected)_ **2023**
+-   College & AP Classes: **AP Psychology**, <!-- **Into to Diversity**, --> **Oral & Intrapersonal Communication**, <!-- **American Literature**, --> **Intro to Computer Science**
+-   Clubs & Activities: **Marching Band**, **Concert Band**, **Jazz Band**, **Choir**, **[SkillsUSA](https://www.skillsusa.org/)**, **Math Club**, **Forensics**
+<!-- - ACT Score: **26** (Math: 28, Reading: 22, Science: 24, English: 27) -->
+-   Highlights:
+    -   **State Qualifier** in **Speach & Broadcasting** for **Forensics** _(2021)_
+    -   **State Qualifier** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Snare Drum Solo) _(2021)_
+    -   **State Runner-Up** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Percussion Ensemble) _(2021)_
+    <!-- - Member of the acclaimed **Red Raider Jazz Band** (Acceptance by audition only) _(2021-2022)_ -->
+
 ## Skills
 
 ### Human Languages
@@ -84,13 +84,13 @@ phone: [+1 (715)-853-3011](tel:7158533011)
 ## References
 
 -   Terry Manning _(High School Teacher)_
-    -   [email](mailto:tlmanning@pulaskischools.org)
+    -   <tlmanning@pulaskischools.org>
 -   John Pitzen _(Comp Sci Teacher)_
-    -   [email](mailto:jgpitzen@pulaskischools.org)
+    -   <jgpitzen@pulaskischools.org>
 -   Bob Pekol _(Guardian)_
-    -   [email](mailto:bobpekol@icloud.com)
+    -   <bobpekol@icloud.com>
 -   Lindsey Leisgang _(Social Worker)_
-    -   [email](mailto:lindsey.leisgang@shawanocounrywi.gov)
+    -   <lindsey.leisgang@shawanocounrywi.gov>
 
 ---
 

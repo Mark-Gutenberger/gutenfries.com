@@ -41,23 +41,23 @@ function ResumePage(props: PageProps<Data>) {
 				{resume
 					? (
 						<>
-							<Container>
-								<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
-								<article
-									className='mt-12 markdown-body'
-									dangerouslySetInnerHTML={{
-										__html: gfm.render(resume),
-									}}
-								/>
-							</Container>
+							{/* <Container> */}
+							<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
+							<article
+								className='rounded-lg p-10 mt-12 markdown-body'
+								dangerouslySetInnerHTML={{
+									__html: gfm.render(resume),
+								}}
+							/>
+							{/* </Container> */}
 						</>
 					)
 					: (
 						<>
-							<Container>
-								<h1 className='font-bold text-5xl pt-20'>404</h1>
-								<p className='mt-4'>Post not found</p>
-							</Container>
+							{/* <Container> */}
+							<h1 className='roded-lg font-bold text-5xl pt-20'>404</h1>
+							<p className='mt-4'>Resume not found</p>
+							{/* </Container> */}
 						</>
 					)}
 			</section>
