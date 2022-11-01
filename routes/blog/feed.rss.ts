@@ -83,7 +83,7 @@ class RssFeedContext {
 	}
 
 	render() {
-		return new Response(this.generate().replace(/\t/g, ''), {
+		return new Response(this.generate().replace(/\t/g, '').replace(/(\r\n|\n|\r)/gm, ''), {
 			headers: {
 				'Content-Type': 'application/xml',
 				'Cache-Control': 'no-cache',
