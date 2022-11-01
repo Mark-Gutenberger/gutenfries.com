@@ -57,7 +57,7 @@ class RssFeedContext {
 		const xmlHeaders = '<?xml version="1.0" encoding="UTF-8"?>';
 		const rssVersion = '2.0';
 		return `${xmlHeaders}
-			<rss version="${rssVersion}">
+			<rss version="${rssVersion}" xmlns:atom="http://www.w3.org/2005/Atom">
 				<channel>
 					<title>Mark Gutenberger's Blog</title>
 					<link>https://gutenfries.deno.dev/blog</link>
@@ -71,8 +71,9 @@ class RssFeedContext {
 					return `<item>
 							<title>${pathName}</title>
 							<link>${this.#url}${pathName}</link>
+							<guid>${this.#url}${pathName}</guid>
 							<description>${pathName}</description>
-						</item>`;
+						</item>\n`;
 				})
 				.join('')
 		}
@@ -83,7 +84,7 @@ class RssFeedContext {
 	render() {
 		return new Response(this.generate().replace(/\t/g, ''), {
 			headers: {
-				'Content-Type': 'application/xml+rss',
+				'Content-Type': 'application/xml',
 				'Cache-Control': 'no-cache',
 			},
 		});
