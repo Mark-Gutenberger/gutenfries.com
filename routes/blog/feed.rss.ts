@@ -83,8 +83,8 @@ class RssFeedContext {
 	render() {
 		return new Response(this.generate().replace(/\t/g, ''), {
 			headers: {
-				// allow a user to view the rss feed (from the server) as xml, if it is viewed in a broser
-				'Content-Type': IS_BROWSER ? 'application/xml+rss' : 'text/xml',
+				'Content-Type': 'application/xml+rss',
+				'Cache-Control': 'no-cache',
 			},
 		});
 	}
