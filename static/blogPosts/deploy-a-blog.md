@@ -1,6 +1,7 @@
 ---
 title: How to deploy your blog to Deno Deploy
 published_at: 2022-09-24
+description: A step-by-step guide on how to deploy your blog to Deno Deploy
 ---
 
 # h1 Heading

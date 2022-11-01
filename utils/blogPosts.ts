@@ -5,6 +5,7 @@ export interface Post {
 	title: string;
 	publishedAt: Date;
 	content: string;
+	description: string;
 }
 
 export async function loadPost(slug: string): Promise<Post | null> {
@@ -22,9 +23,10 @@ export async function loadPost(slug: string): Promise<Post | null> {
 	const publishedAt = new Date(params.published_at);
 	return {
 		slug,
-		title: params.title,
+		title: params.title ?? 'Error: No Title',
 		publishedAt,
-		content: body,
+		content: body ?? 'Error: No Content',
+		description: params.description ?? 'Error: No Description',
 	};
 }
 

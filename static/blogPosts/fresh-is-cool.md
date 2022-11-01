@@ -1,6 +1,7 @@
 ---
 title: Why you should use Fresh on your next project
 published_at: 2022-09-24
+description: Fresh is a new framework for building web applications in Go. It's fast, simple, and fun to use.
 ---
 
 # h1 Heading
