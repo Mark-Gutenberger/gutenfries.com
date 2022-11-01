@@ -9,10 +9,11 @@ import * as $2 from './routes/_404.tsx';
 import * as $3 from './routes/_500.tsx';
 import * as $4 from './routes/blog.tsx';
 import * as $5 from './routes/blog/[slug].tsx';
-import * as $6 from './routes/home.ts';
-import * as $7 from './routes/index.tsx';
-import * as $8 from './routes/resume.tsx';
-import * as $9 from './routes/sitemap.xml.ts';
+import * as $6 from './routes/blog/feed.rss.ts';
+import * as $7 from './routes/home.ts';
+import * as $8 from './routes/index.tsx';
+import * as $9 from './routes/resume.tsx';
+import * as $10 from './routes/sitemap.xml.ts';
 import * as $$0 from './islands/CalendlyWidget.tsx';
 import * as $$1 from './islands/SearchBar.tsx';
 import * as $$2 from './islands/TypingCodeBlock.tsx';
@@ -25,10 +26,11 @@ const manifest = {
 		'./routes/_500.tsx': $3,
 		'./routes/blog.tsx': $4,
 		'./routes/blog/[slug].tsx': $5,
-		'./routes/home.ts': $6,
-		'./routes/index.tsx': $7,
-		'./routes/resume.tsx': $8,
-		'./routes/sitemap.xml.ts': $9,
+		'./routes/blog/feed.rss.ts': $6,
+		'./routes/home.ts': $7,
+		'./routes/index.tsx': $8,
+		'./routes/resume.tsx': $9,
+		'./routes/sitemap.xml.ts': $10,
 	},
 	islands: {
 		'./islands/CalendlyWidget.tsx': $$0,
