@@ -59,6 +59,7 @@ class RssFeedContext {
 		return `${xmlHeaders}
 			<rss version="${rssVersion}" xmlns:atom="http://www.w3.org/2005/Atom">
 				<channel>
+					<atom:link href="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" />
 					<title>Mark Gutenberger's Blog</title>
 					<link>https://gutenfries.deno.dev/blog</link>
 					<description>Mark Gutenberger's Blog</description>
