@@ -183,7 +183,7 @@ function Footer() {
 			</section>
 
 			<section className='w-full mx-auto p-4 flex flex-wrap flex-col sm:flex-row shadow-lg bg-gray-800'>
-				<p className='text-lg text-sm text-center sm:text-left text-gray-400'>
+				<span className='text-lg mt-2 text-sm text-center sm:text-left text-gray-400'>
 					<a
 						href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md'
 						className='ml-1'
@@ -192,7 +192,7 @@ function Footer() {
 					>
 						© {new Date().getFullYear()} Mark Gutenberger - <u>@gutenfries</u>
 					</a>
-				</p>
+				</span>
 				{/* centered made with deno badge */}
 				<span className='inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start'>
 					<a
@@ -209,7 +209,7 @@ function Footer() {
 						/>
 					</a>
 				</span>
-				<span className='sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-400 text-sm'>
+				<span className='sm:ml-auto mt-2 sm:w-auto w-full sm:text-left text-center text-gray-400 text-sm'>
 					Created with {'<'}3 and
 					<a
 						href='https://deno.land'
