@@ -65,6 +65,11 @@ class RssFeedContext {
 					<description>Mark Gutenberger's Blog</description>
 					<copyright>© Mark Gutenberger - @gutenfries</copyright>
 					<language>en-us</language>
+					<image>
+						<url>https://gutenfries.deno.dev/images/penguin-icon.png</url>
+						<title>Mark Gutenberger's Blog</title>
+						<link>https://gutenfries.deno.dev/blog</link>
+					</image>
 					${
 			this.#routes
 				.map((route) => {
