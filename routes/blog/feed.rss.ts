@@ -60,14 +60,15 @@ class RssFeedContext {
 			<rss version="${rssVersion}" xmlns:atom="http://www.w3.org/2005/Atom">
 				<channel>
 					<atom:link href="${this.#url}/feed.rss" rel="self" type="application/rss+xml" />
-					<title>Mark Gutenberger's Blog</title>
+					<title><![CDATA[ Mark Gutenberger's Blog ]]></title>
 					<link>https://gutenfries.deno.dev/blog</link>
-					<description>Mark Gutenberger's Blog</description>
+					<description><![CDATA[ Mark Gutenberger's Blog ]]></description>
 					<copyright>© Mark Gutenberger - @gutenfries</copyright>
 					<language>en-us</language>
+					<generator>https://gutenfries.deno.dev</generator>
 					<image>
 						<url>https://gutenfries.deno.dev/images/penguin-icon.png</url>
-						<title>Mark Gutenberger's Blog</title>
+						<title><![CDATA[ Mark Gutenberger's Blog ]]></title>
 						<link>https://gutenfries.deno.dev/blog</link>
 					</image>
 					${
@@ -75,10 +76,10 @@ class RssFeedContext {
 				.map((route) => {
 					const { pathName } = route;
 					return `<item>
-							<title>${pathName}</title>
+							<title><![CDATA[ ${pathName} ]]></title>
 							<link>${this.#url}${pathName}</link>
-							<guid>${this.#url}${pathName}</guid>
-							<description>${pathName}</description>
+							<guid isPermaLink="true">${this.#url}${pathName}</guid>
+							<description><![CDATA[ ${pathName}]]></description>
 						</item>\n`;
 				})
 				.join('')
