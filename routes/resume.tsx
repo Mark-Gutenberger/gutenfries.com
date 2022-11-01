@@ -17,6 +17,9 @@ export const handler: Handlers<Data> = {
 		// cache the resume for 1 day
 		asset('resume/resume.md');
 		const resume = await readFile('./static/resume/resume.md');
+		if (!resume) {
+			return ctx.renderNotFound();
+		}
 		return ctx.render({ ...ctx.state, resume });
 	},
 };
@@ -24,41 +27,44 @@ export const handler: Handlers<Data> = {
 function ResumePage(props: PageProps<Data>) {
 	const resume = props.data.resume;
 	return (
-		<div className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
+		<>
 			<Head PageProps={props} />
-			<a
-				href='#main-content'
-				className='sr-only focus:not-sr-only text-red-500 outline-none focus:outline-none '
-			>
-				Skip to main content
-			</a>
+			<div className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
+				<a
+					href='#main-content'
+					className='sr-only focus:not-sr-only text-red-500 outline-none focus:outline-none '
+				>
+					Skip to main content
+				</a>
 
-			<Navbar active='resume' />
+				<Navbar active='resume' />
 
-			<NoScript />
-			<main id='main-content'>
-				<section className='p-4 pt-20'>
-					{resume
-						? (
-							<>
-								<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
-								<article
-									className='rounded-lg p-10 mt-12 markdown-body'
-									dangerouslySetInnerHTML={{
-										__html: gfm.render(resume),
-									}}
-								/>
-							</>
-						)
-						: (
-							<>
-								<h1 className='roded-lg font-bold text-5xl pt-20'>404</h1>
-								<p className='mt-4'>Resume not found</p>
-							</>
-						)}
-				</section>
-			</main>
-		</div>
+				<NoScript />
+				<main id='main-content'>
+					<section className='p-4 pt-20'>
+						{resume
+							? (
+								<>
+									<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
+									<article
+										className='rounded-lg p-10 mt-12 markdown-body'
+										dangerouslySetInnerHTML={{
+											__html: gfm.render(resume),
+										}}
+									/>
+								</>
+							)
+							: (
+								<>
+									<h1 className='rounded-lg font-bold text-5xl pt-20'>
+										Loading...
+									</h1>
+								</>
+							)}
+					</section>
+				</main>
+			</div>
+		</>
 	);
 }
 

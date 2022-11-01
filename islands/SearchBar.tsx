@@ -32,17 +32,13 @@ const SearchBar = () => {
 		}
 	}, [pressToggle]);
 
-	// useEffect(() => {
-	// console.log(result);
-	// }, [result]);
-
 	// TODO(@gutenfries): Replace with fuzzy search implementated in rust
 	function googleSearch(query_: string) {
 		window.open(`https://google.com/search?q=${query_}`, '_blank');
 	}
 
 	const handleKeyPress = (e: KeyboardEvent) => {
-		if (e.key === 'Enter' || 'Return') {
+		if (e.key === 'Enter' || 'Return' || ' ') {
 			setPressToggle(!pressToggle);
 		}
 	};
