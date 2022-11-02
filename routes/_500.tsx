@@ -19,7 +19,7 @@ function ErrorPage(PageProps: ErrorPageProps) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 font-[fira] text-gray-900 dark:text-gray-50 text-center flex flex-col justify-center h-screen'
+				className='bg-gray-100 dark:bg-gray-900 font-[fira] text-gray-900 dark:text-gray-50 text-center flex flex-col justify-center h-screen overflow-x-hidden'
 			>
 				<span>
 					<h2>HTTP Error 500</h2>
