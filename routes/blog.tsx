@@ -28,27 +28,18 @@ export default function Home(props: PageProps<Data>) {
 	return (
 		<>
 			<Head PageProps={props} />
-			<div className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
-				<a
-					href='#main-content'
-					className='sr-only focus:not-sr-only text-red-500 outline-none focus:outline-none '
-				>
-					Skip to main content
-				</a>
-				<Navbar active='blog' />
-
-				<NoScript />
-				<main id='main-content'>
-					<section className='p-4 pt-20'>
-						{/* <Container> */}
-						<ul className='mt-16'>
-							{posts.map((post) => <BlogPostPreview post={post} />)}
-						</ul>
-						{/* </Container> */}
-					</section>
-				</main>
-				<Footer />
-			</div>
+			<Navbar active='blog' />
+			<NoScript />
+			<main id='main-content' className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
+				<section className='p-4 pt-20'>
+					{/* <Container> */}
+					<ul className='mt-16'>
+						{posts.map((post) => <BlogPostPreview post={post} />)}
+					</ul>
+					{/* </Container> */}
+				</section>
+			</main>
+			<Footer />
 		</>
 	);
 }

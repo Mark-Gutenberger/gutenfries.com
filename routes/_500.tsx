@@ -9,58 +9,49 @@ function ErrorPage(PageProps: ErrorPageProps) {
 	return (
 		<>
 			<Head PageProps={PageProps} />
-			<section className='bg-gray-100 dark:bg-gray-900 font-[fira] text-gray-900 dark:text-gray-50 text-center'>
-				<a
-					href='#main-content'
-					className='sr-only focus:not-sr-only text-red-500 outline-none focus:outline-none '
-				>
-					Skip to main content
-				</a>
+			<Navbar active='404' />
 
-				<Navbar active='404' />
+			<NoScript />
+			<link
+				rel='stylesheet'
+				href={asset('/styles/glitch.css')}
+			/>
 
-				<NoScript />
-				<link
-					rel='stylesheet'
-					href={asset('/styles/glitch.css')}
-				/>
-				<div className='flex flex-col items-center justify-center h-screen'>
-					<main id='main-content flex-col'>
-						<span>
-							<h2>HTTP Error 500</h2>
-							<h2>HTTP Error 500</h2>
-							<h2>HTTP Error 500</h2>
-						</span>
-						<br />
-						<br />
-						<span>
-							<h3>Internal Server Error</h3>
-							<h3>Internal Server Error</h3>
-							<h3>Internal Server Error</h3>
-						</span>
+			<main
+				id='main-content'
+				className='bg-gray-100 dark:bg-gray-900 font-[fira] text-gray-900 dark:text-gray-50 text-center flex flex-col justify-center h-screen'
+			>
+				<span>
+					<h2>HTTP Error 500</h2>
+					<h2>HTTP Error 500</h2>
+					<h2>HTTP Error 500</h2>
+				</span>
+				<br />
+				<br />
+				<span>
+					<h3>Internal Server Error</h3>
+					<h3>Internal Server Error</h3>
+					<h3>Internal Server Error</h3>
+				</span>
 
-						{PageProps.error instanceof Error
-							? (
-								<>
-									<br />
-									<br />
-									<span>
-										<hr />
-										<hr />
-										<hr />
-									</span>
-									<br />
-								</>
-							)
-							: null}
-						<p className='text-center text-gray-300'>
-							{PageProps.error instanceof Error
-								? (PageProps.error as Error).message
-								: null}
-						</p>
-					</main>
-				</div>
-			</section>
+				{PageProps.error instanceof Error
+					? (
+						<>
+							<br />
+							<br />
+							<span>
+								<hr />
+								<hr />
+								<hr />
+							</span>
+							<br />
+						</>
+					)
+					: null}
+				<p className='text-center text-gray-300'>
+					{PageProps.error instanceof Error ? (PageProps.error as Error).message : null}
+				</p>
+			</main>
 		</>
 	);
 }

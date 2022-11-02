@@ -29,41 +29,32 @@ function ResumePage(props: PageProps<Data>) {
 	return (
 		<>
 			<Head PageProps={props} />
-			<div className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
-				<a
-					href='#main-content'
-					className='sr-only focus:not-sr-only text-red-500 outline-none focus:outline-none '
-				>
-					Skip to main content
-				</a>
+			<Navbar active='resume' />
+			<NoScript />
 
-				<Navbar active='resume' />
-
-				<NoScript />
-				<main id='main-content'>
-					<section className='p-4 pt-20'>
-						{resume
-							? (
-								<>
-									<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
-									<article
-										className='rounded-lg p-10 mt-12 markdown-body'
-										dangerouslySetInnerHTML={{
-											__html: gfm.render(resume),
-										}}
-									/>
-								</>
-							)
-							: (
-								<>
-									<h1 className='rounded-lg font-bold text-5xl pt-20'>
-										Loading...
-									</h1>
-								</>
-							)}
-					</section>
-				</main>
-			</div>
+			<main id='main-content' className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
+				<section className='p-4 pt-20'>
+					{resume
+						? (
+							<>
+								<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
+								<article
+									className='rounded-lg p-10 mt-12 markdown-body'
+									dangerouslySetInnerHTML={{
+										__html: gfm.render(resume),
+									}}
+								/>
+							</>
+						)
+						: (
+							<>
+								<h1 className='rounded-lg font-bold text-5xl pt-20'>
+									Loading...
+								</h1>
+							</>
+						)}
+				</section>
+			</main>
 		</>
 	);
 }
