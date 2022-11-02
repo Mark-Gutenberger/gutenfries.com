@@ -91,7 +91,7 @@ class RssFeed {
 							<link>${this.#url}${route}</link>
 							<pubDate>${post.publishedAt.toUTCString()}</pubDate>
 							<guid isPermaLink="true">${this.#url}${route}</guid>
-							<description>${truncate(post.description, 100)}</description>
+							<description>${truncate(post.content, 500)}</description>
 						</item>\n`;
 				})
 				.join('')
