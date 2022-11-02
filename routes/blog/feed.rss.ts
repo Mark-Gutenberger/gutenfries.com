@@ -1,7 +1,5 @@
-// TODO(#): Get data from the post
-
 import { Handlers } from '$fresh/server.ts';
-import { listPosts, loadPost, Post } from '@/utils/blogPosts.ts';
+import { listPosts, loadPost } from '@/utils/blogPosts.ts';
 
 export const handler: Handlers = {
 	async GET() {
@@ -91,7 +89,7 @@ class RssFeed {
 							<link>${this.#url}${route}</link>
 							<pubDate>${post.publishedAt.toUTCString()}</pubDate>
 							<guid isPermaLink="true">${this.#url}${route}</guid>
-							<description>${truncate(post.content, 500)}</description>
+							<description>${truncate(post.description, 100)}</description>
 						</item>\n`;
 				})
 				.join('')
