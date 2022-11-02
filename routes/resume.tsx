@@ -15,7 +15,7 @@ interface Data {
 export const handler: Handlers<Data> = {
 	async GET(_req, ctx) {
 		// cache the resume for 1 day
-		asset('resume/resume.md');
+		asset('/resume/resume.md');
 		const resume = await readFile('./static/resume/resume.md');
 		if (!resume) {
 			return ctx.renderNotFound();

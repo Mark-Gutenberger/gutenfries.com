@@ -114,8 +114,8 @@ function TypingCodeBlock(
 					}
 				`}
 			</style>
-			<script src={asset('prism/prism.js')} />
-			<link rel='stylesheet' href={asset('prism/10x-dark.css')} />
+			<script src={asset('/prism/prism.js')} />
+			<link rel='stylesheet' href={asset('/prism/10x-dark.css')} />
 			<pre className='text-base'>
 				<code className={`language-${language}`}>
 					{content + '\n'}

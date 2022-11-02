@@ -204,7 +204,7 @@ function Footer() {
 							Made with Fresh
 						</span>
 						<img
-							src={asset('images/made-with-fresh.svg')}
+							src={asset('/images/made-with-fresh.svg')}
 							alt='Made with Fresh'
 						/>
 					</a>

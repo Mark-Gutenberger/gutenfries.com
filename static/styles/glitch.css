@@ -51,6 +51,23 @@ h4:nth-child(3) {
 	animation: Glitch3 2.5s infinite;
 }
 
+hr {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	animation: Glitch1 2.5s infinite;
+}
+
+hr:nth-child(2) {
+	color: var(--glitch-red);
+	animation: Glitch3 2.5s infinite;
+}
+
+hr:nth-child(3) {
+	color: var(--glitch-blue);
+	animation: Glitch2 2.5s infinite;
+}
+
 @keyframes Glitch1 {
 	0% {
 		transform: none;

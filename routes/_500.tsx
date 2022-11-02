@@ -22,28 +22,38 @@ function ErrorPage(PageProps: ErrorPageProps) {
 				<NoScript />
 				<link
 					rel='stylesheet'
-					href={asset('styles/glitch.css')}
+					href={asset('/styles/glitch.css')}
 				/>
 				<div className='flex flex-col items-center justify-center h-screen'>
-					<main id='main-content'>
+					<main id='main-content flex-col'>
 						<span>
-							<h2>
-								HTTP Error 500 - Internal Server Error :(
-							</h2>
-							<h2>
-								HTTP Error 500 - Internal Server Error :(
-							</h2>
-							<h2>
-								HTTP Error 500 - Internal Server Error :(
-							</h2>
+							<h2>HTTP Error 500</h2>
+							<h2>HTTP Error 500</h2>
+							<h2>HTTP Error 500</h2>
+						</span>
+						<br />
+						<br />
+						<span>
+							<h3>Internal Server Error</h3>
+							<h3>Internal Server Error</h3>
+							<h3>Internal Server Error</h3>
 						</span>
 
 						{PageProps.error instanceof Error
 							? (
-								<hr className='w-1/2 my-5 rounded h-1 dark:text-gray-50 text-gray-900 bg-white' />
+								<>
+									<br />
+									<br />
+									<span>
+										<hr />
+										<hr />
+										<hr />
+									</span>
+									<br />
+								</>
 							)
 							: null}
-						<p className='text-center text-gray-50'>
+						<p className='text-center text-gray-300'>
 							{PageProps.error instanceof Error
 								? (PageProps.error as Error).message
 								: null}

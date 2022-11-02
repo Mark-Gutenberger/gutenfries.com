@@ -7,7 +7,7 @@ interface HeadProps {
 
 function Head({ PageProps }: HeadProps) {
 	const ogImageUrl =
-		new URL(asset('images/gutenfries.deno.dev_home_1200x328.png'), PageProps.url).href;
+		new URL(asset('/images/gutenfries.deno.dev_home_1200x328.png'), PageProps.url).href;
 
 	let pipe: string;
 	if (PageProps.url.pathname.slice(1) != '') {
@@ -76,7 +76,7 @@ function Head({ PageProps }: HeadProps) {
 			<script
 				dangerouslySetInnerHTML={{
 					__html: `
-						console.log('%cHi there! 👋', 'font-size: 2rem; font-weight: bold;');
+						// console.log('%cHi there! 👋', 'font-size: 2rem; font-weight: bold;');
 						console.log('If you\\'re looking this far, please consider staring the repo on GitHub! 😊 \\nhttps://github.com/gutenfries/gutenfries.deno.dev');
 						`,
 				}}
