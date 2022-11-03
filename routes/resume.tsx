@@ -32,13 +32,16 @@ function ResumePage(props: PageProps<Data>) {
 			<Navbar active='resume' />
 			<NoScript />
 
-			<main id='main-content' className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
+			<main id='main-content' className='font-[fira]'>
 				<section className='p-4 pt-20'>
 					{resume
 						? (
 							<>
 								<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
 								<article
+									data-color-mode='auto'
+									data-light-theme='light'
+									data-dark-theme='dark'
 									className='rounded-lg p-10 mt-12 markdown-body'
 									dangerouslySetInnerHTML={{
 										__html: gfm.render(resume),
