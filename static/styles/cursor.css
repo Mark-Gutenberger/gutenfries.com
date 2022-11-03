@@ -1,3 +1,14 @@
+.txt-cursor {
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 0.2ch solid skyblue;
+	animation: blink 0.75s steps(1) infinite normal;
+}
+
+code {
+	font-family: 'Fira Code', monospace;
+}
+
 @keyframes blink {
 	0% {
 		opacity: 0;
@@ -8,13 +19,4 @@
 	100% {
 		opacity: 0;
 	}
-}
-.txt-cursor {
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 0.2ch solid skyblue;
-	animation: blink 0.75s steps(1) infinite normal;
-}
-code {
-	font-family: 'Fira Code', monospace;
 }

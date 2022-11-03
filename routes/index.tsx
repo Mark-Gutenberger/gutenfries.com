@@ -77,9 +77,11 @@ function IndexPage(PageProps: PageProps) {
 							<h2 className='sm:text-4xl text-3xl'>
 								My Projects
 							</h2>
-							<p className='text-xs text-blue-500 tracking-widest mt-1'>
+							{
+								/* <p className='text-xs text-blue-500 tracking-widest mt-1'>
 								Some things I have built and am working on
-							</p>
+							</p> */
+							}
 						</div>
 						<div className='flex flex-wrap -m-4 text-gray-100 dark:border-gray-300'>
 							<div className='p-4 md:w-1/3'>
@@ -94,8 +96,8 @@ function IndexPage(PageProps: PageProps) {
 									</div>
 									<div className='flex-grow'>
 										<p className='text-lg text-base'>
-											I have worked extensively on my personal website,
-											continually improving it.
+											I built my personal website with Deno, Preact, twind
+											(tailwind ext), Fresh, and a lot of time & creativity.
 										</p>
 										<a
 											className='mt-3 text-blue-500 inline-flex items-center hover:text-blue-600 active:text-gray-700'
@@ -120,7 +122,7 @@ function IndexPage(PageProps: PageProps) {
 									<div className='flex-grow'>
 										<p className='text-lg text-base'>
 											I created Tetris in C++ using std and ncurses, utilizing
-											the Object-Oriented language features.
+											the Object-Oriented language features of C++.
 										</p>
 
 										<a
@@ -145,9 +147,8 @@ function IndexPage(PageProps: PageProps) {
 									</div>
 									<div className='flex-grow'>
 										<p className='text-lg text-base'>
-											I am currently building a dino game from scratch, in
-											Rust. I plan to target this for web in the future as
-											well.
+											I built the chrome dino game in rust, using lib-bracket
+											as the graphics library.
 										</p>
 										<a
 											href='https://github.com/gutenfries/dino_rs'
@@ -167,8 +168,8 @@ function IndexPage(PageProps: PageProps) {
 						<div className='lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden'>
 							<img
 								alt='feature'
-								className='object-cover object-center h-full w-full'
-								src='https://dummyimage.com/600x600/edf2f7/a5afbd'
+								className='object-cover rounded-lg object-center h-full w-full'
+								src='httasdfcgbgf/edf2f7/a5afbd'
 							/>
 						</div>
 						<div className='flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center'>
@@ -412,33 +413,18 @@ function IndexPage(PageProps: PageProps) {
 				<section className='p-4 text-gray-800 dark:text-gray-100 border-gray-300'>
 					<div className='container px-5 py-32 mx-auto'>
 						<div className='xl:w-1/2 lg:w-3/4 w-full mx-auto text-center'>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								fill='currentColor'
-								className='inline-block w-8 h-8 text-gray-400 mb-8'
-								viewBox='0 0 975.036 975.036'
-							>
-								<path d='M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h245.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h245.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z'>
-								</path>
-							</svg>
+							<Icons.BlockQuote className='inline-block w-8 h-8 mb-8' />
 							<p className='text-lg text-lg'>
-								Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki
-								taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman
-								taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid
-								fanny pack vaporware. Man bun next level coloring book skateboard
-								four loko knausgaard. Kitsch keffiyeh master cleanse direct trade
-								blue juice before they sold out gentrify plaid gastropub normcore
-								XOXO 90's pickled cblue jean shorts. Slow-carb next level
-								shoblueitch ethical authentic, yr scenester sriracha forage franzen
-								organic drinking vinegar.
+								This is a large blockquote of someone saying something great about
+								me, or potentially me stating my mission in development.
 							</p>
 							<span className='inline-block h-1 w-10 rounded-lg bg-blue-500 mt-8 mb-6'>
 							</span>
 							<h2 className='tracking-wider text-sm'>
-								HOLDEN CAULFIELD
+								Someone's Name
 							</h2>
 							<p className='text-lg'>
-								Senior Product Designer
+								Someone's Title
 							</p>
 						</div>
 					</div>
