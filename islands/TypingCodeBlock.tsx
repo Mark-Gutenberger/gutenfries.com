@@ -93,6 +93,13 @@ function TypingCodeBlock(
 
 	return (
 		<>
+			<script
+				src={asset('/prism/prism.js')}
+			/>
+			<link
+				rel='stylesheet'
+				href={asset('/prism/10x-dark.css')}
+			/>
 			<style jsx>
 				{`
 					@keyframes blink {
@@ -114,8 +121,6 @@ function TypingCodeBlock(
 					}
 				`}
 			</style>
-			<script src={asset('/prism/prism.js')} />
-			<link rel='stylesheet' href={asset('/prism/10x-dark.css')} />
 			<pre className='text-base'>
 				<code className={`language-${language}`}>
 					{content + '\n'}

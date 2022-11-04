@@ -13,8 +13,11 @@ function IndexPage(PageProps: PageProps) {
 	return (
 		<>
 			<Head PageProps={PageProps} />
+
 			<Navbar active='home' />
+
 			<NoScript />
+
 			<main id='main-content' className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
 				<section className='p-4 pt-20 text-gray-800 dark:text-gray-100'>
 					<div className='container mx-auto flex px-5 pb-32 pt-8 lg:flex-row flex-col items-center'>

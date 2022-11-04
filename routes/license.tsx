@@ -33,31 +33,29 @@ function ResumePage(props: PageProps<Data>) {
 			<Navbar active='license' />
 			<NoScript />
 
-			<main id='main-content' className='font-[fira]'>
-				<section className='p-4 pt-20'>
-					{license
-						? (
-							<>
-								<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
-								<article
-									data-color-mode='auto'
-									data-light-theme='light'
-									data-dark-theme='dark'
-									className='rounded-lg p-10 mt-12 markdown-body'
-									dangerouslySetInnerHTML={{
-										__html: gfm.render(license),
-									}}
-								/>
-							</>
-						)
-						: (
-							<>
-								<h1 className='rounded-lg font-bold text-5xl pt-20'>
-									Loading...
-								</h1>
-							</>
-						)}
-				</section>
+			<main id='main-content' className='font-[fira] p-4 pt-20'>
+				{license
+					? (
+						<>
+							<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
+							<article
+								data-color-mode='auto'
+								data-light-theme='light'
+								data-dark-theme='dark'
+								className='rounded-lg p-10 mt-12 markdown-body'
+								dangerouslySetInnerHTML={{
+									__html: gfm.render(license),
+								}}
+							/>
+						</>
+					)
+					: (
+						<>
+							<h1 className='rounded-lg font-bold text-5xl pt-20'>
+								Loading...
+							</h1>
+						</>
+					)}
 			</main>
 			<Footer />
 		</>

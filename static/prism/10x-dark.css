@@ -427,3 +427,22 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 .prism-previewer-easing.prism-previewer-easing circle {
 	fill: transparent;
 }
+
+.token.space,
+.token.tab:not(:empty) {
+	position: relative;
+}
+.token.cr:before,
+.token.lf:before,
+.token.space:before,
+.token.tab:not(:empty):before {
+	color: grey;
+	opacity: 0.6;
+	position: absolute;
+}
+.token.tab:not(:empty):before {
+	content: '\2192';
+}
+.token.space:before {
+	content: '\00B7';
+}
