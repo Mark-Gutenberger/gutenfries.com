@@ -13,7 +13,7 @@ export const handler: Handlers = {
 		);
 
 		for (const post of posts) {
-			sitemap.add(post.slug);
+			sitemap.add(`/blog/${post.slug}`);
 		}
 
 		sitemap.add('/LICENSE.md');
