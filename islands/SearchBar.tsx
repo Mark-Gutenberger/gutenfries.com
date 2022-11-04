@@ -1,30 +1,10 @@
 import { useEffect, useState } from 'preact/hooks';
-
 import Icons from '@/components/Icons.tsx';
-
-// interface SearchResult {
-// 	title: string;
-// 	url: string;
-// }
 
 const SearchBar = () => {
 	const [searchBarIsExpanded, setSearchBarIsExpanded] = useState<boolean>(false);
-	// const [resultIsActive, setResultIsActive] = useState<boolean>(false);
 	const [query, setQuery] = useState<string>('');
 	const [pressToggle, setPressToggle] = useState<boolean>(false);
-	// const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-	// const [result, setResult] = useState<SearchResult[]>([{
-	// title: 'No results found',
-	// url: 'https://example.com',
-	// }] as SearchResult[]);
-
-	/* useEffect(() => {
-		(async () => {
-			const searchResultsRaw = await fetch('/data/search.json');
-			const searchResults = await searchResultsRaw.json();
-			setSearchResults(searchResults.body);
-		})();
-	}, []); */
 
 	useEffect(() => {
 		if (query.length > 0) {
@@ -46,28 +26,15 @@ const SearchBar = () => {
 	return (
 		<>
 			<div className='overflow-hidden hidden sm:visible sm:flex w-full justify-end items-center'>
-				{!searchBarIsExpanded
+				{searchBarIsExpanded
 					? (
-						<button
-							type='button'
-							aria-label='Expand Search Bar'
-							className='focus:ring-blue-500 focus:border-blue-500 rounded-lg p-2 mr-6 hover:bg-gray-700 active:bg-gray-900'
-							onClick={() => {
-								setSearchBarIsExpanded(true);
-							}}
-						>
-							<Icons.Search className='text-gray-300 hover:text-gray-50 cursor-pointer' />
-						</button>
-					)
-					: (
 						<>
 							<label for='search' className='sr-only'>
 								Search
 							</label>
-							<div className='flex-grow h-10 flex relative'>
+							<form className='flex-grow h-10 flex' method='get'>
 								<input
 									type='text'
-									value={query}
 									onChange={(e) => {
 										setQuery((e.target as HTMLInputElement).value);
 									}}
@@ -80,38 +47,26 @@ const SearchBar = () => {
 									placeholder='Search for anything...'
 									required
 								/>
-								{
-									/* {resultIsActive
-									? (
-										<ul className='p-1 rounded-lg fixed mt-10 z-20 w-5/12 bg-gray-800'>
-											{result.map((result) => (
-												<li>
-													<a
-														href={result.url}
-														className='w-auto m-1 block h-auto bg-gray-50 relative shadow-2xl text-gray-900 text-sm rounded-lg pl-10 p-2.5'
-													>
-														{result.title}
-													</a>
-												</li>
-											))}
-										</ul>
-									)
-									: null} */
-								}
-							</div>
-							<button
-								type='button'
-								aria-label='Minimize Search Bar'
-								className='focus:ring-blue-500 focus:border-blue-500 rounded-lg p-2 mr-6 ml-2 hover:bg-gray-700 active:bg-gray-900 relative'
-								onClick={() => {
-									// setResultIsActive(false);
-									setSearchBarIsExpanded(false);
-								}}
-							>
-								<Icons.Close className='fill-current text-gray-300 hover:text-gray-50 cursor-pointer' />
-							</button>
+							</form>
 						</>
-					)}
+					)
+					: null}
+				<button
+					type='button'
+					aria-label={searchBarIsExpanded ? 'Minimize search bar' : 'Expand search bar'}
+					className='focus:ring-blue-500 focus:border-blue-500 rounded-lg p-2 m-6 hover:bg-gray-700 active:bg-gray-900'
+					onClick={() => {
+						setSearchBarIsExpanded(!searchBarIsExpanded);
+					}}
+				>
+					{!searchBarIsExpanded
+						? (
+							<Icons.Search className='text-gray-300 hover:text-gray-50 cursor-pointer' />
+						)
+						: (
+							<Icons.Close className='fill-current text-gray-300 hover:text-gray-50 cursor-pointer' />
+						)}
+				</button>
 			</div>
 		</>
 	);

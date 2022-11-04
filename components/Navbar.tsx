@@ -48,7 +48,7 @@ function Navbar(props: { active?: string }) {
 				Skip to main content
 			</a>
 			<nav className='fixed z-50 w-full shadow-lg bg-gray-800 flex flex-row h-20'>
-				<ul className='flex text-gray-50 text-xl py-4 pl-4 pr-2'>
+				<ul className='flex text-gray-50 text-xl p-4'>
 					{routes.map((item: Route) => {
 						if (item.showInNav) {
 							return (
@@ -61,7 +61,7 @@ function Navbar(props: { active?: string }) {
 													item.name.toLowerCase()
 												? 'bg-gray-900 text-gray-50'
 												: 'text-gray-300 hover:bg-gray-700 active:bg-gray-900 hover:text-gray-50',
-											'rounded-lg text-xl font-medium p-3 mx-1 block',
+											'rounded-lg text-xl font-medium p-3 mx-3 block',
 										)}
 										aria-current={props.active?.toLowerCase() ===
 											item.name.toLowerCase()}
