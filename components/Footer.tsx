@@ -1,34 +1,48 @@
 import { asset } from '$fresh/runtime.ts';
+import Icons from '@/components/Icons.tsx';
 
 function Footer() {
 	return (
-		<footer className='text-gray-800 dark:text-gray-100'>
-			<section className='container px-5 py-24 mx-auto'>
-				<ul className='flex flex-wrap md:text-left text-center -mb-10 -mx-4'>
+		<footer className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100'>
+			<section className='container p-12 pt-20 mx-auto'>
+				<ul className='flex flex-wrap text-center -mb-10 -mx-4'>
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
 						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
-							CATEGORIES
+							SOCIAL
 						</h3>
-						<nav className='list-none mb-10'>
+						<nav className='list-none mb-5'>
 							<ul>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										First Link
+									<a
+										href='https://instagram.com/gutenfries'
+										className='hover:text-underline items-center'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Instagram</span>
+										<Icons.Instagram className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Second Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://twitter.com/gutenfries'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Twitter</span>
+										<Icons.Twitter className='inline-block h-5 h-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Third Link
-									</a>
-								</li>
-								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Fourth Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://tiktok.com/@gutenfries'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>TikTok</span>
+										<Icons.TikTok className='inline-block h-5 h-5' />
 									</a>
 								</li>
 							</ul>
@@ -36,28 +50,94 @@ function Footer() {
 					</li>
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
 						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
-							CATEGORIES
+							CONTACT
 						</h3>
-						<nav className='list-none mb-10'>
+						<nav className='list-none mb-5'>
 							<ul>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										First Link
+									<a
+										className='hover:text-underline items-center'
+										href='mailto:gutenfries@gmail.com'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										<span className='mr-1'>Email</span>
+										<Icons.Mail className='inline-block h-5 h-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Second Link
+									<a
+										className='hover:text-underline items-center'
+										href='tel:+19202843760'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										<span className='mr-1'>Mobile Phone</span>
+										<Icons.Phone className='inline-block h-5 h-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Third Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://calendly.com/gutenfries'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										<span className='mr-1'>Calendly</span>
+										<Icons.Calendar className='inline-block h-5 h-5' />
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</li>
+
+					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
+						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+							PROFESSIONAL
+						</h3>
+						<nav className='list-none mb-5'>
+							<ul>
+								<li>
+									<a
+										className='hover:text-underline items-center'
+										href='https://linkedin.com/in/gutenfries'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>LinkedIn</span>
+										<Icons.LinkedIn className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Fourth Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://peerlist.io/gutenfries'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Peerlist</span>
+										<Icons.Peerlist className='inline-block h-5 w-5' />
+									</a>
+								</li>
+								<li>
+									<a
+										className='hover:text-underline items-center'
+										href='/resume'
+										target='_blank'
+									>
+										<span className='mr-1'>Resume</span>
+										<Icons.FileText className='inline-block h-5 w-5' />
+									</a>
+								</li>
+								<li>
+									<a
+										className='hover:text-underline items-center'
+										href='https://g.dev/notgutenfries'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Google Dev</span>
+										<Icons.GooglePlay className='inline-block h-5 w-5' />
 									</a>
 								</li>
 							</ul>
@@ -65,28 +145,90 @@ function Footer() {
 					</li>
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
 						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
-							CATEGORIES
+							CODE
 						</h3>
-						<nav className='list-none mb-10'>
+						<nav className='list-none mb-5'>
 							<ul>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										First Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://github.com'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>GitHub</span>
+										<Icons.GitHub className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Second Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://wakatime.com/@gutenfries'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Wakatime</span>
+										<Icons.Wakatime className='inline-block h-4 w-4' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Third Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://codepen.io/gutenfries'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Codepen</span>
+										<Icons.Codepen className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Fourth Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://marketplace.visualstudio.com/publishers/gutenfries'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Visual Studio Marketplace</span>
+										<Icons.VisualStudio className='inline-block h-5 w-5' />
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</li>
+
+					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
+						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+							OTHER
+						</h3>
+						<nav className='list-none mb-5'>
+							<ul>
+								<li>
+									<a className='hover:text-underline items-center' href='/blog'>
+										<span className='mr-1'>Blog</span>
+										<Icons.Article className='inline-block h-5 w-5' />
+									</a>
+								</li>
+								<li>
+									<a
+										className='hover:text-underline items-center'
+										href='https://open.spotify.com/user/toxxf9ydhuutj64csrjyio7oq?si=08312a08a8b24068'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Spotify</span>
+										<Icons.Spotify className='inline-block h-5 w-5' />
+									</a>
+								</li>
+								<li>
+									<a
+										className='hover:text-underline items-center'
+										href='/LICENSE.md'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>License</span>
+										<Icons.FileCertificate className='inline-block h-5 w-5' />
 									</a>
 								</li>
 							</ul>
@@ -94,86 +236,63 @@ function Footer() {
 					</li>
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
 						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
-							CATEGORIES
+							RESOURCES
 						</h3>
-						<nav className='list-none mb-10'>
+						<nav className='list-none mb-5'>
 							<ul>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										First Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://deno.land'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Deno</span>
+										<Icons.Deno className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Second Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://deno.dev'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Deno Deploy</span>
+										<Icons.World className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Third Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://preactjs.com'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Preact</span>
+										<Icons.React className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Fourth Link
-									</a>
-								</li>
-							</ul>
-						</nav>
-					</li>
-					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
-							CATEGORIES
-						</h3>
-						<nav className='list-none mb-10'>
-							<ul>
-								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										First Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://tailwindcss.com'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Tailwind CSS</span>
+										<Icons.Tailwind className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Second Link
-									</a>
-								</li>
-								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Third Link
-									</a>
-								</li>
-								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Fourth Link
-									</a>
-								</li>
-							</ul>
-						</nav>
-					</li>
-					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
-							CATEGORIES
-						</h3>
-						<nav className='list-none mb-10'>
-							<ul>
-								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										First Link
-									</a>
-								</li>
-								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Second Link
-									</a>
-								</li>
-								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Third Link
-									</a>
-								</li>
-								<li>
-									<a className='hover:text-underline cursor-pointer'>
-										Fourth Link
+									<a
+										className='hover:text-underline items-center'
+										href='https://tabler-icons.io'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Tabler Icons</span>
+										<Icons.Tabler className='inline-block h-5 w-5' />
 									</a>
 								</li>
 							</ul>

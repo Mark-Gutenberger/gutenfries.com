@@ -45,7 +45,7 @@ const SearchBar = () => {
 
 	return (
 		<>
-			<div className='overflow-hidden sm:flex hidden w-full min-w-max max-w-full justify-end items-center'>
+			<div className='overflow-hidden hidden sm:visible sm:flex w-full justify-end items-center'>
 				{!searchBarIsExpanded
 					? (
 						<button
@@ -61,7 +61,7 @@ const SearchBar = () => {
 					)
 					: (
 						<>
-							<label for='search' className='hidden sr-only'>
+							<label for='search' className='sr-only'>
 								Search
 							</label>
 							<div className='flex-grow h-10 flex relative'>
@@ -76,7 +76,7 @@ const SearchBar = () => {
 									}}
 									id='search'
 									name='search'
-									className='min-w-full bg-white text-gray-700 active:text-gray-800 hover:text-gray-800 placeholder-gray-700 active:placeholder-gray-800 hover:placeholder-gray-800 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5'
+									className='w-full bg-gray-100 text-gray-700 active:text-gray-800 hover:text-gray-800 placeholder-gray-700 active:placeholder-gray-800 hover:placeholder-gray-800 rounded-lg ml-2.5 block p-2.5'
 									placeholder='Search for anything...'
 									required
 								/>

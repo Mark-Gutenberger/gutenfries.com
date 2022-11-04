@@ -21,7 +21,7 @@ class Icons {
 				alt='App'
 			>
 				<title>App</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<rect x='3' y='5' width='18' height='14' rx='2'></rect>
 				<path d='M6 8h.01'></path>
@@ -46,7 +46,7 @@ class Icons {
 				alt='External Link'
 			>
 				<title>External Link</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<path d='M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5'></path>
 				<line x1='10' y1='14' x2='20' y2='4'></line>
@@ -71,7 +71,7 @@ class Icons {
 				alt='User'
 			>
 				<title>User</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<circle cx='12' cy='7' r='4'></circle>
 				<path d='M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2'></path>
@@ -95,7 +95,7 @@ class Icons {
 				alt='Accessibility'
 			>
 				<title>Accessibility</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<circle cx='12' cy='12' r='9'></circle>
 				<path d='M10 16.5l2 -3l2 3m-2 -3v-2l3 -1m-6 0l3 1'></path>
@@ -120,7 +120,7 @@ class Icons {
 				alt='Mail'
 			>
 				<title>Mail</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<rect x='3' y='5' width='18' height='14' rx='2'></rect>
 				<polyline points='3 7 12 13 21 7'></polyline>
@@ -144,7 +144,7 @@ class Icons {
 				alt='Twitter'
 			>
 				<title>Twitter</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<path d='M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z'>
 				</path>
@@ -168,7 +168,7 @@ class Icons {
 				alt='Peerlist'
 			>
 				<title>Peerlist</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/) (modified)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io) (modified)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<rect x='4' y='4' width='16' height='16' rx='5'></rect>
 				<path d='M10 12h2a2 2 0 1 0 0 -4h-2v8'></path>
@@ -192,7 +192,7 @@ class Icons {
 				alt='Github'
 			>
 				<title>Github</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<path d='M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5'>
 				</path>
@@ -216,7 +216,7 @@ class Icons {
 				alt='LinkedIn'
 			>
 				<title>LinkedIn</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<rect x='4' y='4' width='16' height='16' rx='2'></rect>
 				<line x1='8' y1='11' x2='8' y2='16'></line>
@@ -243,7 +243,7 @@ class Icons {
 				alt='Codepen'
 			>
 				<title>Codepen</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<path d='M3 15l9 6l9 -6l-9 -6l-9 6'></path>
 				<path d='M3 9l9 6l9 -6l-9 -6l-9 6'></path>
@@ -290,10 +290,10 @@ class Icons {
 				stroke-width='2'
 				stroke-linecap='round'
 				stroke-linejoin='round'
-				alt='Loader_1'
+				alt='Loading'
 			>
-				<title>Loader_1</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<title>Loading</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<path d='M3 12a9 9 0 0 0 9 9a9 9 0 0 0 9 -9a9 9 0 0 0 -9 -9'></path>
 				<path d='M17 12a5 5 0 1 0 -5 5'></path>
@@ -314,10 +314,10 @@ class Icons {
 				stroke-width='2'
 				stroke-linecap='round'
 				stroke-linejoin='round'
-				alt='Loader_2'
+				alt='Loading'
 			>
-				<title>Loader_2</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<title>Loading</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<line x1='12' y1='6' x2='12' y2='3'></line>
 				<line x1='6' y1='12' x2='3' y2='12'></line>
@@ -339,10 +339,10 @@ class Icons {
 				stroke-width='2'
 				stroke-linecap='round'
 				stroke-linejoin='round'
-				alt='Loader_3'
+				alt='Loading'
 			>
-				<title>Loader_3</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<title>Loading</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<line x1='12' y1='6' x2='12' y2='3'></line>
 				<line x1='16.25' y1='7.75' x2='18.4' y2='5.6'></line>
@@ -372,7 +372,7 @@ class Icons {
 				alt='Search'
 			>
 				<title>Search</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<circle cx='10' cy='10' r='7'></circle>
 				<line x1='21' y1='21' x2='15' y2='15'></line>
@@ -396,7 +396,7 @@ class Icons {
 				alt='Close'
 			>
 				<title>Close</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<line x1='18' y1='6' x2='6' y2='18'></line>
 				<line x1='6' y1='6' x2='18' y2='18'></line>
@@ -417,10 +417,10 @@ class Icons {
 				stroke-width='2'
 				stroke-linecap='round'
 				stroke-linejoin='round'
-				alt='BorderAll'
+				alt='Border All'
 			>
 				<title>BorderAll</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<rect x='4' y='4' width='16' height='16' rx='2'></rect>
 				<line x1='4' y1='12' x2='20' y2='12'></line>
@@ -445,7 +445,7 @@ class Icons {
 				alt='Terminal'
 			>
 				<title>Terminal</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
 				<path d='M8 9l3 3l-3 3'></path>
 				<line x1='13' y1='15' x2='16' y2='15'></line>
@@ -469,8 +469,8 @@ class Icons {
 				stroke-linejoin='round'
 				alt='BlockQuote'
 			>
-				<title>BlockQuote</title>
-				<desc>source: [Tabler Icons](https://tablericons.com/)</desc>
+				<title>Block Quote</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
 				<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 				<path d='M6 15h15' />
 				<path d='M21 19h-15' />
@@ -478,6 +478,501 @@ class Icons {
 				<path d='M21 7h-6' />
 				<path d='M9 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2' />
 				<path d='M3 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2' />
+			</svg>
+		);
+	};
+
+	static Instagram = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Instagram'
+			>
+				<title>Instagram</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<rect x='4' y='4' width='16' height='16' rx='4'></rect>
+				<circle cx='12' cy='12' r='3'></circle>
+				<line x1='16.5' y1='7.5' x2='16.5' y2='7.501'></line>
+			</svg>
+		);
+	};
+
+	static File = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='File'
+			>
+				<title>File</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M14 3v4a1 1 0 0 0 1 1h4'></path>
+				<path d='M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z'>
+				</path>
+			</svg>
+		);
+	};
+
+	static FileText = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='File Text'
+			>
+				<title>File Text</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M14 3v4a1 1 0 0 0 1 1h4'></path>
+				<path d='M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z'>
+				</path>
+				<path d='M9 17h6'></path>
+				<path d='M9 13h6'></path>
+			</svg>
+		);
+	};
+
+	static GitHub = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='GitHub'
+			>
+				<title>GitHub</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5'>
+				</path>
+			</svg>
+		);
+	};
+
+	static GooglePlay = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Google Play'
+			>
+				<title>Google Play</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M4 3.71v16.58a0.7 .7 0 0 0 1.05 .606l14.622 -8.42a0.55 .55 0 0 0 0 -.953l-14.622 -8.419a0.7 .7 0 0 0 -1.05 .607z'>
+				</path>
+				<line x1='15' y1='9' x2='4.5' y2='20.5'></line>
+				<line x1='4.5' y1='3.5' x2='15' y2='15'></line>
+			</svg>
+		);
+	};
+
+	static VSCode = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='VSCode'
+			>
+				<title>VSCode</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M16 3v18l4 -2.5v-13z'></path>
+				<path d='M9.165 13.903l-4.165 3.597l-2 -1l4.333 -4.5m1.735 -1.802l6.932 -7.198v5l-4.795 4.141'>
+				</path>
+				<path d='M16 16.5l-11 -10l-2 1l13 13.5'></path>
+			</svg>
+		);
+	};
+
+	static VisualStudio = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Visual Studio'
+			>
+				<title>Visual Studio</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M4 8l2 -1l10 13l4 -2v-12l-4 -2l-10 13l-2 -1z'></path>
+			</svg>
+		);
+	};
+
+	static Phone = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Phone'
+			>
+				<title>Phone</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2'>
+				</path>
+			</svg>
+		);
+	};
+
+	static TikTok = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='TikTok'
+			>
+				<title>TikTok</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5'></path>
+			</svg>
+		);
+	};
+
+	static Article = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Article'
+			>
+				<title>Article</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<rect x='3' y='4' width='18' height='16' rx='2'></rect>
+				<path d='M7 8h10'></path>
+				<path d='M7 12h10'></path>
+				<path d='M7 16h10'></path>
+			</svg>
+		);
+	};
+
+	static Certificate = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Certificate'
+			>
+				<title>Certificate</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<circle cx='15' cy='15' r='3'></circle>
+				<path d='M13 17.5v4.5l2 -1.5l2 1.5v-4.5'></path>
+				<path d='M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73'>
+				</path>
+				<line x1='6' y1='9' x2='18' y2='9'></line>
+				<line x1='6' y1='12' x2='9' y2='12'></line>
+				<line x1='6' y1='15' x2='8' y2='15'></line>
+			</svg>
+		);
+	};
+
+	static FileCertificate = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='File Certificate'
+			>
+				<title>File Certificate</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M14 3v4a1 1 0 0 0 1 1h4'></path>
+				<path d='M5 8v-3a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-5'></path>
+				<circle cx='6' cy='14' r='3'></circle>
+				<path d='M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5'></path>
+			</svg>
+		);
+	};
+
+	static Spotify = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Spotify'
+			>
+				<title>Spotify</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<circle cx='12' cy='12' r='9'></circle>
+				<path d='M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527'></path>
+				<path d='M9 15c1.5 -1 4 -1 5 .5'></path>
+				<path d='M7 9c2 -1 6 -2 10 .5'></path>
+			</svg>
+		);
+	};
+
+	static Tabler = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Tabler'
+			>
+				<title>Tabler</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M8 9l3 3l-3 3'></path>
+				<line x1='13' y1='15' x2='16' y2='15'></line>
+				<rect x='4' y='4' width='16' height='16' rx='4'></rect>
+			</svg>
+		);
+	};
+
+	static Tailwind = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Tailwind'
+			>
+				<title>Tailwind</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z'>
+				</path>
+			</svg>
+		);
+	};
+
+	static Deno = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Deno'
+			>
+				<title>Deno</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<circle cx='12' cy='12' r='9'></circle>
+				<path d='M13.47 20.882l-1.47 -5.882c-2.649 -.088 -5 -1.624 -5 -3.5c0 -1.933 2.239 -3.5 5 -3.5s4 1 5 3c.024 .048 .69 2.215 2 6.5'>
+				</path>
+				<path d='M12 11h.01'></path>
+			</svg>
+		);
+	};
+
+	static World = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='World'
+			>
+				<title>World</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<circle cx='12' cy='12' r='9'></circle>
+				<line x1='3.6' y1='9' x2='20.4' y2='9'></line>
+				<line x1='3.6' y1='15' x2='20.4' y2='15'></line>
+				<path d='M11.5 3a17 17 0 0 0 0 18'></path>
+				<path d='M12.5 3a17 17 0 0 1 0 18'></path>
+			</svg>
+		);
+	};
+
+	static Calendar = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Calendar'
+			>
+				<title>Calendar</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<rect x='4' y='5' width='16' height='16' rx='2'></rect>
+				<line x1='16' y1='3' x2='16' y2='7'></line>
+				<line x1='8' y1='3' x2='8' y2='7'></line>
+				<line x1='4' y1='11' x2='20' y2='11'></line>
+				<line x1='11' y1='15' x2='12' y2='15'></line>
+				<line x1='12' y1='15' x2='12' y2='18'></line>
+			</svg>
+		);
+	};
+
+	static React = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='React'
+			>
+				<title>React</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102'>
+				</path>
+				<path d='M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102'>
+				</path>
+				<path d='M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -1.998'>
+				</path>
+				<path d='M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 1.999'>
+				</path>
+				<path d='M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896'>
+				</path>
+				<path d='M11.998 18.574c1.926 1.893 3.821 2.768 5.002 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897'>
+				</path>
+				<path d='M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z'></path>
 			</svg>
 		);
 	};
