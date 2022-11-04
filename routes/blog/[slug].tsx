@@ -3,8 +3,8 @@ import { Handlers, PageProps } from '$fresh/server.ts';
 import * as gfm from 'gfm';
 
 import 'https://esm.sh/prismjs@1.27.0/components/prism-typescript?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-bash?no-check';
 import 'https://esm.sh/prismjs@1.27.0/components/prism-rust?no-check';
+import 'https://esm.sh/prismjs@1.27.0/components/prism-bash?no-check';
 
 import { Navbar } from '@/components/Navbar.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
@@ -21,12 +21,30 @@ export const handler: Handlers<Data> = {
 		if (!post) {
 			return ctx.renderNotFound();
 		}
-		return ctx.render({ ...ctx.state, post });
+		const html = gfm.render(post.content);
+		const paragraphs = html.split('</p>');
+		// every two paragraphs
+		for (let i = 0; i < paragraphs.length; i += 2) {
+			const p = paragraphs[i];
+			const ad = `<ins
+					class="adsbygoogle"
+					data-ad-client="ca-pub-5497887777167174"
+					data-ad-slot="1062273062"
+					data-ad-format="fluid"
+					data-ad-layout="in-article"
+					style="display:block;text-align:center"
+				>
+				</ins>`;
+			paragraphs[i] = p + '</p>' + ad;
+		}
+
+		return ctx.render({ post: { ...post, content: paragraphs.join('') } });
 	},
 };
 
 export default function PostPage(props: PageProps<Data>) {
 	const { post } = props.data;
+
 	return (
 		<>
 			<Head PageProps={props} />
@@ -55,10 +73,14 @@ export default function PostPage(props: PageProps<Data>) {
 						data-light-theme='light'
 						data-dark-theme='dark'
 						className='rounded-b-lg shadow-xl p-10 markdown-body'
-						dangerouslySetInnerHTML={{ __html: gfm.render(post.content) }}
+						dangerouslySetInnerHTML={{ __html: post.content }}
 					/>
 				</section>
 			</main>
+			{/* inject ads */}
+			<script>
+				{`(adsbygoogle = window.adsbygoogle || []).push({});`}
+			</script>
 		</>
 	);
 }
