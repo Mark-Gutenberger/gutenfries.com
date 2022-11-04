@@ -5,37 +5,37 @@ import * as gfm from 'gfm';
 import { readFile } from '@/utils/readFile.ts';
 
 import { Navbar } from '@/components/Navbar.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
 import { Footer } from '@/components/Footer.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
 import { Head } from '@/components/Head.tsx';
 
 interface Data {
-	resume: string | null;
+	privPolicy: string | null;
 }
 
 export const handler: Handlers<Data> = {
 	async GET(_req, ctx) {
-		// cache the resume for 1 day
-		asset('/resume/resume.md');
-		const resume = await readFile('./static/resume/resume.md');
-		if (!resume) {
+		// cache for 1 day
+		asset('/privacy-policy.md');
+		const privPolicy = await readFile('./static/privacy-policy.md');
+		if (!privPolicy) {
 			return ctx.renderNotFound();
 		}
-		return ctx.render({ ...ctx.state, resume });
+		return ctx.render({ ...ctx.state, privPolicy });
 	},
 };
 
 function ResumePage(props: PageProps<Data>) {
-	const resume = props.data.resume;
+	const privPolicy = props.data.privPolicy;
 	return (
 		<>
 			<Head PageProps={props} />
-			<Navbar active='resume' />
+			<Navbar active='privPolicy' />
 			<NoScript />
 
 			<main id='main-content' className='font-[fira]'>
 				<section className='p-4 pt-20'>
-					{resume
+					{privPolicy
 						? (
 							<>
 								<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
@@ -45,7 +45,7 @@ function ResumePage(props: PageProps<Data>) {
 									data-dark-theme='dark'
 									className='rounded-lg p-10 mt-12 markdown-body'
 									dangerouslySetInnerHTML={{
-										__html: gfm.render(resume),
+										__html: gfm.render(privPolicy),
 									}}
 								/>
 							</>

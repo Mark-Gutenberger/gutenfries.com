@@ -16,9 +16,6 @@ export const handler: Handlers = {
 			sitemap.add(`/blog/${post.slug}`);
 		}
 
-		sitemap.add('/LICENSE.md');
-		sitemap.add('/robots.txt');
-
 		return sitemap.render();
 	},
 };

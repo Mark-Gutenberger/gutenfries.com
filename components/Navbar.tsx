@@ -1,4 +1,5 @@
 import SearchBar from '@/islands/SearchBar.tsx';
+import { classNames } from '@/utils/helpers.ts';
 
 interface Route {
 	name: string;
@@ -33,10 +34,6 @@ const routes: Route[] = [
 		showInNav: false,
 	},
 ];
-
-function classNames(...classes: string[]) {
-	return classes.filter(Boolean).join(' ');
-}
 
 function Navbar(props: { active?: string }) {
 	return (

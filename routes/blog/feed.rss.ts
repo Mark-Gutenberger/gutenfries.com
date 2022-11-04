@@ -1,5 +1,6 @@
 import { Handlers } from '$fresh/server.ts';
 import { listPosts, loadPost } from '@/utils/blogPosts.ts';
+import { truncate } from '@/utils/helpers.ts';
 
 export const handler: Handlers = {
 	async GET() {
@@ -14,16 +15,6 @@ export const handler: Handlers = {
 		return await sitemap.render();
 	},
 };
-
-/**
- *  trunacate to 100 chacacters and add ellipsis
- */
-function truncate(str: string, length: number) {
-	if (str.length >= length) {
-		return str.substring(0, length) + '...';
-	}
-	return str;
-}
 
 class RssFeed {
 	#url: string;
@@ -52,13 +43,16 @@ class RssFeed {
 	 * Creates a `Promise<string>` with the rss feed as string of rss+xml
 	 */
 	async generate(): Promise<string> {
-		await loadPost;
 		// find the last post that has been updated
 		const posts = await listPosts();
-		const lastUpdated =
-			posts.map((post) => post.publishedAt).sort((a, b) => b.getTime() - a.getTime())[0];
-		const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-		return `${xmlHeader}
+
+		const lastUpdated = posts.map(
+			(post) => post.publishedAt,
+		).sort(
+			(a, b) => b.getTime() - a.getTime(),
+		)[0];
+
+		return `<?xml version="1.0" encoding="UTF-8"?>
 			<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 				<channel>
 					<atom:link href="${this.#url}feed.rss" rel="self" type="application/rss+xml" />

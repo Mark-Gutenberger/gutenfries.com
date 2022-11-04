@@ -45,6 +45,17 @@ function Footer() {
 										<Icons.TikTok className='inline-block h-5 h-5' />
 									</a>
 								</li>
+								<li>
+									<a
+										className='hover:text-underline items-center'
+										href='https://open.spotify.com/user/toxxf9ydhuutj64csrjyio7oq?si=08312a08a8b24068'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Spotify</span>
+										<Icons.Spotify className='inline-block h-5 w-5' />
+									</a>
+								</li>
 							</ul>
 						</nav>
 					</li>
@@ -72,7 +83,7 @@ function Footer() {
 										target='_blank'
 										rel='noopener noreferrer'
 									>
-										<span className='mr-1'>Mobile Phone</span>
+										<span className='mr-1'>Mobile</span>
 										<Icons.Phone className='inline-block h-5 h-5' />
 									</a>
 								</li>
@@ -212,23 +223,34 @@ function Footer() {
 								<li>
 									<a
 										className='hover:text-underline items-center'
-										href='https://open.spotify.com/user/toxxf9ydhuutj64csrjyio7oq?si=08312a08a8b24068'
+										href='https://github.com/gutenfries/gutenfries.deno.dev'
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Spotify</span>
-										<Icons.Spotify className='inline-block h-5 w-5' />
+										<span className='mr-1'>Source Code</span>
+										<Icons.Code className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
 									<a
 										className='hover:text-underline items-center'
-										href='/LICENSE.md'
+										href='/license'
 										target='_blank'
 										rel='noopener'
 									>
 										<span className='mr-1'>License</span>
 										<Icons.FileCertificate className='inline-block h-5 w-5' />
+									</a>
+								</li>
+								<li>
+									<a
+										className='hover:text-underline items-center'
+										href='/privacy-policy'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>Privacy Policy</span>
+										<Icons.Cookie className='inline-block h-5 w-5' />
 									</a>
 								</li>
 							</ul>
