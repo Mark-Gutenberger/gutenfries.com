@@ -7,6 +7,7 @@ import 'https://esm.sh/prismjs@1.27.0/components/prism-rust?no-check';
 import 'https://esm.sh/prismjs@1.27.0/components/prism-bash?no-check';
 
 import { Navbar } from '@/components/Navbar.tsx';
+import { Footer } from '@/components/Footer.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { Head } from '@/components/Head.tsx';
 import { loadPost, Post } from '@/utils/blogPosts.ts';
@@ -77,6 +78,9 @@ export default function PostPage(props: PageProps<Data>) {
 					/>
 				</section>
 			</main>
+
+			<Footer />
+
 			{/* inject ads */}
 			<script>
 				{`(adsbygoogle = window.adsbygoogle || []).push({});`}
