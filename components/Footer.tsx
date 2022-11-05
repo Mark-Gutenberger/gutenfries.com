@@ -15,7 +15,7 @@ function Footer() {
 								<li>
 									<a
 										href='https://instagram.com/gutenfries'
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										target='_blank'
 										rel='noopener'
 									>
@@ -27,7 +27,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://twitter.com/gutenfries'
 										target='_blank'
 										rel='noopener'
@@ -40,7 +40,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://tiktok.com/@gutenfries'
 										target='_blank'
 										rel='noopener'
@@ -53,7 +53,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://open.spotify.com/user/toxxf9ydhuutj64csrjyio7oq?si=08312a08a8b24068'
 										target='_blank'
 										rel='noopener'
@@ -75,7 +75,7 @@ function Footer() {
 							<ul>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='mailto:gutenfries@gmail.com'
 										target='_blank'
 										rel='noopener'
@@ -88,7 +88,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='tel:+19202843760'
 										target='_blank'
 										rel='noopener'
@@ -101,7 +101,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://calendly.com/gutenfries'
 										target='_blank'
 										rel='noopener'
@@ -124,7 +124,7 @@ function Footer() {
 							<ul>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://linkedin.com/in/gutenfries'
 										target='_blank'
 										rel='noopener'
@@ -137,7 +137,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://peerlist.io/gutenfries'
 										target='_blank'
 										rel='noopener'
@@ -150,7 +150,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='/resume'
 										target='_blank'
 									>
@@ -162,7 +162,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://g.dev/notgutenfries'
 										target='_blank'
 										rel='noopener'
@@ -184,7 +184,7 @@ function Footer() {
 							<ul>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://github.com'
 										target='_blank'
 										rel='noopener'
@@ -197,7 +197,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://wakatime.com/@gutenfries'
 										target='_blank'
 										rel='noopener'
@@ -210,7 +210,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://codepen.io/gutenfries'
 										target='_blank'
 										rel='noopener'
@@ -224,7 +224,7 @@ function Footer() {
 								{
 									/* <li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://marketplace.visualstudio.com/publishers/gutenfries'
 										target='_blank'
 										rel='noopener'
@@ -248,7 +248,7 @@ function Footer() {
 							<ul>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='/blog'
 									>
 										<span className='mr-1'>
@@ -259,7 +259,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='/blog/feed.rss'
 									>
 										<span className='mr-1'>
@@ -270,7 +270,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://github.com/gutenfries/gutenfries.deno.dev'
 										target='_blank'
 										rel='noopener'
@@ -283,7 +283,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='/license'
 										target='_blank'
 										rel='noopener'
@@ -296,7 +296,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='/privacy-policy'
 										target='_blank'
 										rel='noopener'
@@ -318,7 +318,7 @@ function Footer() {
 							<ul>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://deno.land'
 										target='_blank'
 										rel='noopener'
@@ -331,7 +331,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://deno.dev'
 										target='_blank'
 										rel='noopener'
@@ -344,7 +344,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://preactjs.com'
 										target='_blank'
 										rel='noopener'
@@ -357,7 +357,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://tailwindcss.com'
 										target='_blank'
 										rel='noopener'
@@ -370,7 +370,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className='hover:text-underline items-center'
+										className='hover:text-underline flex items-center justify-center'
 										href='https://tabler-icons.io'
 										target='_blank'
 										rel='noopener'

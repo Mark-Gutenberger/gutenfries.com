@@ -80,16 +80,16 @@ function IndexPage(PageProps: PageProps) {
 				<section className='p-4'>
 					<div className='container px-5 py-32 mx-auto'>
 						<div className='flex flex-col w-full mb-20 text-center'>
-							<h2 className='text-3xl sm:text-4xl'>
+							<h2 className='flex items-center justify-center text-3xl sm:text-4xl'>
 								Recent Activity
-								<Icons.Activity className='inline-block ml-2 sm:h-9 w-7' />
+								<Icons.Activity className='inline-block ml-2 sm:h-9 sm:w-9 h-7 w-7' />
 							</h2>
 						</div>
 						<div className='flex flex-wrap -m-4 text-gray-100 dark:border-gray-300'>
 							<div className='p-4 md:w-1/3'>
 								<div className='flex flex-col h-full p-8 bg-gray-800 rounded-lg'>
 									<div className='flex items-center mb-3'>
-										<div className='inline-flex items-center justify-center flex-shrink-0 w-8 h-8 mr-3 bg-blue-500 rounded-full'>
+										<div className='flex items-center justify-center flex-shrink-0 w-8 h-8 mr-3 bg-blue-500 rounded-full'>
 											<Icons.App className='w-5 h-5' />
 										</div>
 										<h3 className='text-lg'>
@@ -102,11 +102,11 @@ function IndexPage(PageProps: PageProps) {
 											(tailwind ext), Fresh, and a lot of time & creativity.
 										</p>
 										<a
-											className='inline-flex items-center mt-3 text-blue-500 hover:text-blue-600 active:text-gray-700'
+											className='flex items-center mt-3 text-blue-500 hover:text-blue-600 active:text-gray-700'
 											href='https://github.com/gutenfries/gutenfries.deno.dev'
 										>
 											Source Code
-											<Icons.ExternalLink className='w-4 h-4 ml-1' />
+											<Icons.ExternalLink className='inline-block w-4 h-4 ml-1' />
 										</a>
 									</div>
 								</div>
@@ -114,7 +114,7 @@ function IndexPage(PageProps: PageProps) {
 							<div className='p-4 md:w-1/3'>
 								<div className='flex flex-col h-full p-8 bg-gray-800 rounded-lg'>
 									<div className='flex items-center mb-3'>
-										<div className='inline-flex items-center justify-center flex-shrink-0 w-8 h-8 mr-3 bg-blue-500 rounded-full'>
+										<div className='flex items-center justify-center flex-shrink-0 w-8 h-8 mr-3 bg-blue-500 rounded-full'>
 											<Icons.BorderAll className='w-5 h-5' />
 										</div>
 										<h3 className='text-lg'>
@@ -132,7 +132,7 @@ function IndexPage(PageProps: PageProps) {
 											className='inline-flex items-center mt-3 text-blue-500 hover:text-blue-600 active:text-gray-700'
 										>
 											Source Code
-											<Icons.ExternalLink className='w-4 h-4 ml-1' />
+											<Icons.ExternalLink className='inline-block w-4 h-4 ml-1' />
 										</a>
 									</div>
 								</div>
@@ -140,7 +140,7 @@ function IndexPage(PageProps: PageProps) {
 							<div className='p-4 md:w-1/3'>
 								<div className='flex flex-col h-full p-8 bg-gray-800 rounded-lg'>
 									<div className='flex items-center mb-3'>
-										<div className='inline-flex items-center justify-center flex-shrink-0 w-8 h-8 mr-3 bg-blue-500 rounded-full'>
+										<div className='flex items-center justify-center flex-shrink-0 w-8 h-8 mr-3 bg-blue-500 rounded-full'>
 											<Icons.Terminal className='w-5 h-5' />
 										</div>
 										<h3 className='text-lg'>
@@ -166,7 +166,7 @@ function IndexPage(PageProps: PageProps) {
 											className='inline-flex items-center mt-3 text-blue-500 hover:text-blue-600 active:text-gray-700'
 										>
 											Source Code
-											<Icons.ExternalLink className='w-4 h-4 ml-1' />
+											<Icons.ExternalLink className='inline-block w-4 h-4 ml-1' />
 										</a>
 									</div>
 								</div>
@@ -213,7 +213,7 @@ function IndexPage(PageProps: PageProps) {
 									{
 										/* <a className='inline-flex items-center mt-3 text-blue-500 hover:text-blue-600 active:text-gray-700'>
 									Learn More
-									<Icons.ExternalLink className='w-4 h-4 ml-1' />
+									<Icons.ExternalLink className='inline-block w-4 h-4 ml-1' />
 								</a> */
 									}
 								</div>
@@ -232,7 +232,7 @@ function IndexPage(PageProps: PageProps) {
 									{
 										/* <a className='inline-flex items-center mt-3 text-blue-500 hover:text-blue-600 active:text-gray-700'>
 									Learn More
-									<Icons.ExternalLink className='w-4 h-4 ml-1' />
+									<Icons.ExternalLink className='inline-block w-4 h-4 ml-1' />
 								</a> */
 									}
 								</div>
@@ -250,7 +250,7 @@ function IndexPage(PageProps: PageProps) {
 									{
 										/* <a className='inline-flex items-center mt-3 text-blue-500 hover:text-blue-600 active:text-gray-700'>
 									Learn More
-									<Icons.ExternalLink className='w-4 h-4 ml-1' />
+									<Icons.ExternalLink className='inline-block w-4 h-4 ml-1' />
 								</a> */
 									}
 								</div>
@@ -272,7 +272,7 @@ function IndexPage(PageProps: PageProps) {
 						<div className='flex flex-wrap -m-4'>
 							<div className='p-4 xl:w-1/3 md:w-1/2'>
 								<div className='p-6 border rounded-lg'>
-									<div className='inline-flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
+									<div className='flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
 										<svg
 											fill='none'
 											stroke='currentColor'
@@ -296,7 +296,7 @@ function IndexPage(PageProps: PageProps) {
 							</div>
 							<div className='p-4 xl:w-1/3 md:w-1/2'>
 								<div className='p-6 border rounded-lg'>
-									<div className='inline-flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
+									<div className='flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
 										<svg
 											fill='none'
 											stroke='currentColor'
@@ -323,7 +323,7 @@ function IndexPage(PageProps: PageProps) {
 							</div>
 							<div className='p-4 xl:w-1/3 md:w-1/2'>
 								<div className='p-6 border rounded-lg'>
-									<div className='inline-flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
+									<div className='flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
 										<svg
 											fill='none'
 											stroke='currentColor'
@@ -349,7 +349,7 @@ function IndexPage(PageProps: PageProps) {
 							</div>
 							<div className='p-4 xl:w-1/3 md:w-1/2'>
 								<div className='p-6 border rounded-lg'>
-									<div className='inline-flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
+									<div className='flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
 										<svg
 											fill='none'
 											stroke='currentColor'
@@ -374,7 +374,7 @@ function IndexPage(PageProps: PageProps) {
 							</div>
 							<div className='p-4 xl:w-1/3 md:w-1/2'>
 								<div className='p-6 border rounded-lg'>
-									<div className='inline-flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
+									<div className='flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
 										<svg
 											fill='none'
 											stroke='currentColor'
@@ -399,7 +399,7 @@ function IndexPage(PageProps: PageProps) {
 							</div>
 							<div className='p-4 xl:w-1/3 md:w-1/2'>
 								<div className='p-6 border rounded-lg'>
-									<div className='inline-flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
+									<div className='flex items-center justify-center w-10 h-10 mb-4 text-blue-500 bg-blue-100 rounded-full'>
 										<svg
 											fill='none'
 											stroke='currentColor'

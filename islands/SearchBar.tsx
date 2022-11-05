@@ -54,7 +54,7 @@ const SearchBar = () => {
 				<button
 					type='button'
 					aria-label={searchBarIsExpanded ? 'Minimize search bar' : 'Expand search bar'}
-					className='p-2 m-6 rounded-lg focus:ring-blue-500 focus:border-blue-500 hover:bg-gray-700 active:bg-gray-900'
+					className='p-2 m-6 rounded-lg focus:ring-blue-500 focus:border-blue-500 hover:bg-gray-700 active:bg-gray-900 flex items-center justify-center'
 					onClick={() => {
 						setSearchBarIsExpanded(!searchBarIsExpanded);
 					}}

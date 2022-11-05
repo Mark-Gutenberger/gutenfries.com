@@ -8,7 +8,7 @@ import { Navbar } from '@/components/Navbar.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
-import Icons from '../utils/Icons.tsx';
+import Icons from '@/utils/Icons.tsx';
 
 interface Data {
 	resume: string | null;
