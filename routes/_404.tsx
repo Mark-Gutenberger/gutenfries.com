@@ -20,7 +20,7 @@ function NotFoundPage(PageProps: UnknownPageProps) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 font-[fira] text-gray-900 dark:text-gray-50 text-center flex flex-col items-center justify-center h-screen'
+				className='bg-gray-100 dark:bg-gray-900 font-[fira] text-gray-900 dark:text-gray-200 text-center flex flex-col items-center justify-center h-screen'
 			>
 				<span>
 					<h1>HTTP Error 404</h1>

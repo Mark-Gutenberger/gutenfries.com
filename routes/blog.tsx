@@ -32,11 +32,13 @@ export default function Home(props: PageProps<Data>) {
 			<NoScript />
 			<main id='main-content' className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
 				<section className='p-4 pt-20'>
-					{/* <Container> */}
 					<ul className='mt-16'>
-						{posts.map((post) => <BlogPostPreview post={post} />)}
+						{posts.map((post) => (
+							<li className='border-t'>
+								<BlogPostPreview post={post} />
+							</li>
+						))}
 					</ul>
-					{/* </Container> */}
 				</section>
 			</main>
 			<Footer />

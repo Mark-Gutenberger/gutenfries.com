@@ -1,9 +1,9 @@
 import { asset } from '$fresh/runtime.ts';
-import Icons from '@/components/Icons.tsx';
+import Icons from '@/utils/Icons.tsx';
 
 function Footer() {
 	return (
-		<footer className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100'>
+		<footer className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200'>
 			<section className='container p-12 pt-20 mx-auto'>
 				<ul className='flex flex-wrap text-center -mb-10 -mx-4'>
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
@@ -70,7 +70,7 @@ function Footer() {
 										className='hover:text-underline items-center'
 										href='mailto:gutenfries@gmail.com'
 										target='_blank'
-										rel='noopener noreferrer'
+										rel='noopener'
 									>
 										<span className='mr-1'>Email</span>
 										<Icons.Mail className='inline-block h-5 h-5' />
@@ -81,7 +81,7 @@ function Footer() {
 										className='hover:text-underline items-center'
 										href='tel:+19202843760'
 										target='_blank'
-										rel='noopener noreferrer'
+										rel='noopener'
 									>
 										<span className='mr-1'>Mobile</span>
 										<Icons.Phone className='inline-block h-5 h-5' />
@@ -92,7 +92,7 @@ function Footer() {
 										className='hover:text-underline items-center'
 										href='https://calendly.com/gutenfries'
 										target='_blank'
-										rel='noopener noreferrer'
+										rel='noopener'
 									>
 										<span className='mr-1'>Calendly</span>
 										<Icons.Calendar className='inline-block h-5 h-5' />
@@ -329,7 +329,7 @@ function Footer() {
 						href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md'
 						className='ml-1'
 						target='_blank'
-						rel='noopener noreferrer'
+						rel='noopener'
 					>
 						© {new Date().getFullYear()} Mark Gutenberger - <u>@gutenfries</u>
 					</a>
@@ -339,7 +339,7 @@ function Footer() {
 					<a
 						href='https://fresh.deno.dev/'
 						target='_blank'
-						rel='noopener noreferrer'
+						rel='noopener'
 					>
 						<span className='sr-only'>
 							Made with Fresh
@@ -356,7 +356,7 @@ function Footer() {
 						href='https://deno.land'
 						className='ml-1'
 						target='_blank'
-						rel='noopener noreferrer'
+						rel='noopener'
 					>
 						<u>Deno</u>
 					</a>

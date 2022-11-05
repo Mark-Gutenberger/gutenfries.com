@@ -31,7 +31,7 @@ function Head({ PageProps }: HeadProps) {
 				{PageProps.url.pathname.slice(1)} {pipe} Mark Gutenberger
 			</title>
 
-			<link rel='icon' href={asset('/images/penguin-icon.png')}></link>
+			<link rel='icon' href={asset('/images/code.svg')}></link>
 
 			{/* Chrome, Firefox OS and Opera */}
 			<meta name='theme-color' content='#27272a' />

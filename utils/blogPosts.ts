@@ -33,6 +33,9 @@ export async function loadPost(slug: string): Promise<Post | null> {
 export async function listPosts(): Promise<Post[]> {
 	const promises = [];
 	for await (const entry of Deno.readDir('./static/blogPosts')) {
+		// Skip non-markdown files
+		if (!entry.name.endsWith('.md')) continue;
+		// remove the .md extension
 		const slug = entry.name.replace('.md', '');
 		promises.push(loadPost(slug));
 	}

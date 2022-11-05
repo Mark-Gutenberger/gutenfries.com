@@ -40,12 +40,12 @@ function Navbar(props: { active?: string }) {
 		<>
 			<a
 				href='#main-content'
-				className='sr-only focus:not-sr-only text-red-500 outline-none focus:outline-none '
+				className='text-red-500 outline-none sr-only focus:not-sr-only focus:outline-none '
 			>
 				Skip to main content
 			</a>
-			<nav className='fixed z-50 w-full shadow-lg bg-gray-800 flex flex-row h-20'>
-				<ul className='flex text-gray-50 text-xl p-4'>
+			<nav className='fixed z-50 flex flex-row w-full h-20 bg-gray-800 shadow-lg'>
+				<ul className='flex p-4 text-xl text-gray-200'>
 					{routes.map((item: Route) => {
 						if (item.showInNav) {
 							return (
@@ -56,8 +56,8 @@ function Navbar(props: { active?: string }) {
 										className={classNames(
 											props.active?.toLowerCase() ===
 													item.name.toLowerCase()
-												? 'bg-gray-900 text-gray-50'
-												: 'text-gray-300 hover:bg-gray-700 active:bg-gray-900 hover:text-gray-50',
+												? 'bg-gray-900 text-gray-200'
+												: 'text-gray-300 hover:bg-gray-700 active:bg-gray-900 hover:text-gray-200',
 											'rounded-lg text-xl font-medium p-3 mx-3 block',
 										)}
 										aria-current={props.active?.toLowerCase() ===

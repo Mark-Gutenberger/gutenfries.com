@@ -1,7 +1,7 @@
 :root {
 	--mono-1: #c5cdd9;
-	--mono-2: hsl(220, 9%, 55%);
-	--mono-3: hsl(220, 10%, 40%);
+	--mono-2: rgb(130, 137, 151);
+	--mono-3: rgb(92, 99, 112);
 	--hue-1: #4ddbc1;
 	--hue-2: #6cb6eb;
 	--hue-3: #d38aea;
@@ -10,13 +10,20 @@
 	--hue-6: #e2b35e;
 	--syntax-fg: var(--mono-1);
 	--syntax-bg: #2b2d3a;
-	--syntax-gutter: #3f445b;
-	--syntax-guide: #3f445b;
+	--syntax-gutter: rgb(63, 68, 91);
+	--syntax-guide: var(--syntax-gutter);
 	--syntax-accent: #d38aea;
-	--syntax-selection-color: #3f445b;
-	--syntax-gutter-background-color-selected: #3f445b;
-	--syntax-cursor-line: #6cb6eb;
+	--syntax-selection-color: rgba(135, 206, 235, 0.5);
+	--syntax-cursor-line: rgb(135, 206, 235);
+	--syntax-gutter-background-color-selected: var(--syntax-selection-color);
 	--shaddow-color: #00000070;
+}
+
+.txt-cursor {
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 0.2ch solid var(--syntax-selection-color);
+	animation: blink 0.75s steps(1) infinite normal;
 }
 
 code[class*='language-'],
@@ -243,37 +250,9 @@ pre[class*='language-'] {
 
 /* Show Invisibles plugin overrides */
 .token.token.tab:not(:empty):before,
-.token.token.cr:before,
-.token.token.lf:before,
 .token.token.space:before {
 	color: var(--syntax-guide);
 	text-shadow: none;
-}
-
-/* Toolbar plugin overrides */
-/* Space out all buttons and move them away from the right edge of the code block */
-div.code-toolbar > .toolbar.toolbar > .toolbar-item {
-	margin-right: 0.4em;
-}
-
-/* Styling the buttons */
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > button,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > span {
-	background: var(--syntax-gutter-background-color-selected);
-	color: var(--mono-2);
-	padding: 0.1em 0.4em;
-	border-radius: 0.3em;
-}
-
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
-	background: var(--syntax-selection-color);
-	color: var(--mono-1);
 }
 
 /* Line Highlight plugin overrides */
@@ -432,8 +411,6 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 .token.tab:not(:empty) {
 	position: relative;
 }
-.token.cr:before,
-.token.lf:before,
 .token.space:before,
 .token.tab:not(:empty):before {
 	color: grey;
@@ -445,4 +422,16 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 }
 .token.space:before {
 	content: '\00B7';
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }

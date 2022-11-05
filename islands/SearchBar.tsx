@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'preact/hooks';
-import Icons from '@/components/Icons.tsx';
+import Icons from '@/utils/Icons.tsx';
 
 const SearchBar = () => {
 	const [searchBarIsExpanded, setSearchBarIsExpanded] = useState<boolean>(false);
@@ -25,14 +25,14 @@ const SearchBar = () => {
 
 	return (
 		<>
-			<div className='overflow-hidden hidden sm:visible sm:flex w-full justify-end items-center'>
+			<div className='items-center justify-end hidden w-full overflow-hidden sm:visible sm:flex'>
 				{searchBarIsExpanded
 					? (
 						<>
 							<label for='search' className='sr-only'>
 								Search
 							</label>
-							<form className='flex-grow h-10 flex' method='get'>
+							<form className='flex flex-grow h-10' method='get'>
 								<input
 									type='text'
 									onChange={(e) => {
@@ -43,7 +43,7 @@ const SearchBar = () => {
 									}}
 									id='search'
 									name='search'
-									className='w-full bg-gray-100 text-gray-700 active:text-gray-800 hover:text-gray-800 placeholder-gray-700 active:placeholder-gray-800 hover:placeholder-gray-800 rounded-lg ml-2.5 block p-2.5'
+									className='w-full bg-gray-100 text-gray-800 active:text-gray-900 hover:text-gray-900 placeholder-gray-800 active:placeholder-gray-900 hover:placeholder-gray-900 rounded-lg ml-2.5 block p-2.5'
 									placeholder='Search for anything...'
 									required
 								/>
@@ -54,17 +54,17 @@ const SearchBar = () => {
 				<button
 					type='button'
 					aria-label={searchBarIsExpanded ? 'Minimize search bar' : 'Expand search bar'}
-					className='focus:ring-blue-500 focus:border-blue-500 rounded-lg p-2 m-6 hover:bg-gray-700 active:bg-gray-900'
+					className='p-2 m-6 rounded-lg focus:ring-blue-500 focus:border-blue-500 hover:bg-gray-700 active:bg-gray-900'
 					onClick={() => {
 						setSearchBarIsExpanded(!searchBarIsExpanded);
 					}}
 				>
 					{!searchBarIsExpanded
 						? (
-							<Icons.Search className='text-gray-300 hover:text-gray-50 cursor-pointer' />
+							<Icons.Search className='text-gray-300 cursor-pointer hover:text-gray-200' />
 						)
 						: (
-							<Icons.Close className='fill-current text-gray-300 hover:text-gray-50 cursor-pointer' />
+							<Icons.Close className='text-gray-300 cursor-pointer fill-current hover:text-gray-200' />
 						)}
 				</button>
 			</div>

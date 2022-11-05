@@ -100,27 +100,10 @@ function TypingCodeBlock(
 				rel='stylesheet'
 				href={asset('/prism/10x-dark.css')}
 			/>
-			<style jsx>
-				{`
-					@keyframes blink {
-						0% {
-							opacity: 0;
-						}
-						50% {
-							opacity: 1;
-						}
-						100% {
-							opacity: 0;
-						}
-					}
-					.txt-cursor {
-						white-space: nowrap;
-						overflow: hidden;
-						border-right: 0.2ch solid skyblue;
-						animation: blink 0.75s steps(1) infinite normal;
-					}
-				`}
-			</style>
+			<link
+				rel='stylesheet'
+				href={asset('/styles/cursor.css')}
+			/>
 			<pre className='text-base'>
 				<code className={`language-${language}`}>
 					{content + '\n'}
