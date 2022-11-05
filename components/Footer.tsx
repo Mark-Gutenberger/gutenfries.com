@@ -19,7 +19,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Instagram</span>
+										<span className='mr-1'>
+											Instagram
+										</span>
 										<Icons.Instagram className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -30,7 +32,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Twitter</span>
+										<span className='mr-1'>
+											Twitter
+										</span>
 										<Icons.Twitter className='inline-block h-5 h-5' />
 									</a>
 								</li>
@@ -41,7 +45,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>TikTok</span>
+										<span className='mr-1'>
+											TikTok
+										</span>
 										<Icons.TikTok className='inline-block h-5 h-5' />
 									</a>
 								</li>
@@ -52,7 +58,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Spotify</span>
+										<span className='mr-1'>
+											Spotify
+										</span>
 										<Icons.Spotify className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -72,7 +80,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Email</span>
+										<span className='mr-1'>
+											Email
+										</span>
 										<Icons.Mail className='inline-block h-5 h-5' />
 									</a>
 								</li>
@@ -83,7 +93,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Mobile</span>
+										<span className='mr-1'>
+											Mobile
+										</span>
 										<Icons.Phone className='inline-block h-5 h-5' />
 									</a>
 								</li>
@@ -94,7 +106,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Calendly</span>
+										<span className='mr-1'>
+											Calendly
+										</span>
 										<Icons.Calendar className='inline-block h-5 h-5' />
 									</a>
 								</li>
@@ -115,7 +129,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>LinkedIn</span>
+										<span className='mr-1'>
+											LinkedIn
+										</span>
 										<Icons.LinkedIn className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -126,7 +142,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Peerlist</span>
+										<span className='mr-1'>
+											Peerlist
+										</span>
 										<Icons.Peerlist className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -136,7 +154,9 @@ function Footer() {
 										href='/resume'
 										target='_blank'
 									>
-										<span className='mr-1'>Resume</span>
+										<span className='mr-1'>
+											Resume
+										</span>
 										<Icons.FileText className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -147,7 +167,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Google Dev</span>
+										<span className='mr-1'>
+											Google Dev
+										</span>
 										<Icons.GooglePlay className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -167,7 +189,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>GitHub</span>
+										<span className='mr-1'>
+											GitHub
+										</span>
 										<Icons.GitHub className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -178,7 +202,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Wakatime</span>
+										<span className='mr-1'>
+											Wakatime
+										</span>
 										<Icons.Wakatime className='inline-block h-4 w-4' />
 									</a>
 								</li>
@@ -189,21 +215,27 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Codepen</span>
+										<span className='mr-1'>
+											Codepen
+										</span>
 										<Icons.Codepen className='inline-block h-5 w-5' />
 									</a>
 								</li>
-								<li>
+								{
+									/* <li>
 									<a
 										className='hover:text-underline items-center'
 										href='https://marketplace.visualstudio.com/publishers/gutenfries'
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Visual Studio Marketplace</span>
+										<span className='mr-1'>
+											Visual Studio Marketplace
+										</span>
 										<Icons.VisualStudio className='inline-block h-5 w-5' />
 									</a>
-								</li>
+								</li> */
+								}
 							</ul>
 						</nav>
 					</li>
@@ -215,9 +247,25 @@ function Footer() {
 						<nav className='list-none mb-5'>
 							<ul>
 								<li>
-									<a className='hover:text-underline items-center' href='/blog'>
-										<span className='mr-1'>Blog</span>
+									<a
+										className='hover:text-underline items-center'
+										href='/blog'
+									>
+										<span className='mr-1'>
+											Blog
+										</span>
 										<Icons.Article className='inline-block h-5 w-5' />
+									</a>
+								</li>
+								<li>
+									<a
+										className='hover:text-underline items-center'
+										href='/blog/feed.rss'
+									>
+										<span className='mr-1'>
+											Feed
+										</span>
+										<Icons.RSS className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -227,7 +275,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Source Code</span>
+										<span className='mr-1'>
+											Source Code
+										</span>
 										<Icons.Code className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -238,7 +288,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>License</span>
+										<span className='mr-1'>
+											License
+										</span>
 										<Icons.FileCertificate className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -249,7 +301,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Privacy Policy</span>
+										<span className='mr-1'>
+											Privacy Policy
+										</span>
 										<Icons.Cookie className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -269,7 +323,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Deno</span>
+										<span className='mr-1'>
+											Deno
+										</span>
 										<Icons.Deno className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -280,7 +336,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Deno Deploy</span>
+										<span className='mr-1'>
+											Deno Deploy
+										</span>
 										<Icons.World className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -291,7 +349,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Preact</span>
+										<span className='mr-1'>
+											Preact
+										</span>
 										<Icons.React className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -302,7 +362,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Tailwind CSS</span>
+										<span className='mr-1'>
+											Tailwind CSS
+										</span>
 										<Icons.Tailwind className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -313,7 +375,9 @@ function Footer() {
 										target='_blank'
 										rel='noopener'
 									>
-										<span className='mr-1'>Tabler Icons</span>
+										<span className='mr-1'>
+											Tabler Icons
+										</span>
 										<Icons.Tabler className='inline-block h-5 w-5' />
 									</a>
 								</li>
@@ -324,17 +388,14 @@ function Footer() {
 			</section>
 
 			<section className='w-full mx-auto p-4 flex flex-wrap flex-col sm:flex-row shadow-lg bg-gray-800'>
-				<span className='text-lg mt-2 text-sm text-center sm:text-left text-gray-400'>
+				<span className='hover:text-underline text-lg mt-2 text-sm text-center sm:text-left text-gray-400'>
 					<a
-						href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md'
+						href='/license0'
 						className='ml-1'
-						target='_blank'
-						rel='noopener'
 					>
-						© {new Date().getFullYear()} Mark Gutenberger - <u>@gutenfries</u>
+						© {new Date().getFullYear()} Mark Gutenberger - @gutenfries
 					</a>
 				</span>
-				{/* centered made with deno badge */}
 				<span className='inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start'>
 					<a
 						href='https://fresh.deno.dev/'
@@ -350,7 +411,7 @@ function Footer() {
 						/>
 					</a>
 				</span>
-				<span className='sm:ml-auto mt-2 sm:w-auto w-full sm:text-left text-center text-gray-400 text-sm'>
+				<span className='hover:text-underline sm:ml-auto mt-2 sm:w-auto w-full sm:text-left text-center text-gray-400 text-sm'>
 					Created with {'<'}3 and
 					<a
 						href='https://deno.land'
@@ -358,7 +419,7 @@ function Footer() {
 						target='_blank'
 						rel='noopener'
 					>
-						<u>Deno</u>
+						Deno
 					</a>
 				</span>
 			</section>

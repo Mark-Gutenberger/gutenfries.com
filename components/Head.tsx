@@ -109,15 +109,6 @@ function Head({ PageProps }: HeadProps) {
 					gtag('config', 'G-DNT0Y7Z3PN');
 				`}
 			</script>
-
-			{/* Google ads */}
-			<script
-				src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5497887777167174'
-				crossOrigin='anonymous'
-				async
-				defer
-			>
-			</script>
 		</FreshHead>
 	);
 }

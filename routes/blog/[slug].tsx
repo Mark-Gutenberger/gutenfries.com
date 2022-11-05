@@ -25,17 +25,33 @@ import 'https://esm.sh/prismjs@1.27.0/components/prism-toml?no-check';
 
 interface Data {
 	post: Post;
+	showAds: boolean;
 }
 
 export const handler: Handlers<Data> = {
-	async GET(_req, ctx) {
+	async GET(req, ctx) {
 		const post = await loadPost(ctx.params.slug);
+		const url = new URL(req.url);
+		const showAds = url.searchParams.get('showAds') ? true : false;
+
 		if (!post) {
 			return ctx.renderNotFound();
 		}
-		const html = gfm.render(post.content, {
+
+		const content = gfm.render(post.content, {
 			allowIframes: true,
 		});
+
+		if (!showAds) {
+			return ctx.render({
+				post: {
+					...post,
+					content: content,
+				},
+				showAds: false,
+			});
+		}
+
 		const ad = `<ins
 						class="adsbygoogle"
 						data-ad-client="ca-pub-5497887777167174"
@@ -44,13 +60,15 @@ export const handler: Handlers<Data> = {
 						data-ad-layout="in-article"
 						style="display:block;text-align:center"
 					></ins>`;
-		const contentWithAds = html.replaceAll('<p>PLACE AD HERE</p>', ad);
+		const contentWithAds = content.replaceAll('<p>PLACE AD HERE</p>', ad);
+
 		return ctx.render(
 			{
 				post: {
 					...post,
 					content: contentWithAds,
 				},
+				showAds: true,
 			},
 		);
 	},
@@ -58,10 +76,25 @@ export const handler: Handlers<Data> = {
 
 export default function PostPage(props: PageProps<Data>) {
 	const { post } = props.data;
+	const { showAds } = props.data;
 
 	return (
 		<>
 			<Head PageProps={props} />
+
+			{/* Google ads */}
+			{showAds
+				? (
+					<script
+						src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5497887777167174'
+						crossOrigin='anonymous'
+						async
+						// defer
+					>
+					</script>
+				)
+				: null}
+
 			<Navbar active='blog' />
 
 			<NoScript />
@@ -93,9 +126,13 @@ export default function PostPage(props: PageProps<Data>) {
 			<Footer />
 
 			{/* inject ads */}
-			<script>
-				{`(adsbygoogle = window.adsbygoogle || []).push({});`}
-			</script>
+			{showAds
+				? (
+					<script>
+						{`(adsbygoogle = window.adsbygoogle || []).push({});`}
+					</script>
+				)
+				: null}
 		</>
 	);
 }
