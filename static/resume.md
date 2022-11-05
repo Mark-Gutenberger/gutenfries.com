@@ -90,7 +90,7 @@ site: [pulaskischools.org](https://www.pulaskischools.org/)
 -   Bob Pekol _(Guardian)_
     -   <bobpekol@icloud.com>
 -   Lindsey Leisgang _(Social Worker)_
-    -   <lindsey.leisgang@shawanocounrywi.gov>
+    -   <lindsey.leisgang@shawanocountywi.gov>
 
 ---
 
