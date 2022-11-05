@@ -100,10 +100,6 @@ function TypingCodeBlock(
 				rel='stylesheet'
 				href={asset('/prism/10x-dark.css')}
 			/>
-			<link
-				rel='stylesheet'
-				href={asset('/styles/cursor.css')}
-			/>
 			<pre className='text-base'>
 				<code className={`language-${language}`}>
 					{content + '\n'}

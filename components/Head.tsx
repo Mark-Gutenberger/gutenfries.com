@@ -6,8 +6,10 @@ interface HeadProps {
 }
 
 function Head({ PageProps }: HeadProps) {
-	const ogImageUrl =
-		new URL(asset('/images/gutenfries.deno.dev_home_1200x328.png'), PageProps.url).href;
+	const OGImageUrl = new URL(asset('/images/screenshot.png'), PageProps.url).href;
+	const OGDescription =
+		'pub struct Mark { name: &str, email: String, loves_dinosaurs: bool, expertise: Vec<&str>, } ...';
+	const OGTitle = 'Mark Gutenberger';
 
 	let pipe: string;
 	if (PageProps.url.pathname.slice(1) != '') {
@@ -27,12 +29,50 @@ function Head({ PageProps }: HeadProps) {
 				type='text/css'
 			/>
 
+			{/* <!-- Primary Meta Tags --> */}
 			<title>
 				{PageProps.url.pathname.slice(1)} {pipe} Mark Gutenberger
 			</title>
+			<meta
+				name='title'
+				content={`${PageProps.url.pathname.slice(1)} ${pipe} Mark Gutenberger`}
+			/>
+			<meta
+				name='description'
+				content={OGDescription}
+			>
+			</meta>
 
-			<link rel='icon' href={asset('/images/code.svg')}></link>
+			{/* <!-- Open Graph / Facebook --> */}
+			<meta property='og:type' content='website' />
+			<meta property='og:url' content={PageProps.url.hostname} />
+			<meta property='og:title' content={OGTitle} />
+			<meta
+				property='og:description'
+				content={OGDescription}
+			/>
+			<meta
+				property='og:image'
+				content={OGImageUrl}
+			/>
 
+			{/* <!-- Twitter --> */}
+			<meta property='twitter:card' content='summary_large_image' />
+			<meta property='twitter:url' content={PageProps.url.hostname} />
+			<meta
+				property='twitter:title'
+				content={OGTitle}
+			/>
+			<meta
+				property='twitter:description'
+				content={OGDescription}
+			/>
+			<meta
+				property='twitter:image'
+				content={OGImageUrl}
+			/>
+
+			{/* Window theme color */}
 			{/* Chrome, Firefox OS and Opera */}
 			<meta name='theme-color' content='#27272a' />
 			{/* Windows Phone */}
@@ -42,35 +82,11 @@ function Head({ PageProps }: HeadProps) {
 			<meta name='apple-mobile-web-app-capable' content='yes' />
 			<meta name='apple-mobile-web-app-status-bar-style' content='#27272a' />
 
-			<meta name='description' content='Mark Gutenberger - Software Developer' />
-
-			{/* Open Graph / Facebook */}
-			<meta property='og:type' content='website' />
-			<meta property='og:url' content={PageProps.url.href} />
-			<meta
-				property='og:title'
-				content={`${PageProps.url.pathname.slice(1)} ${pipe} Mark Gutenberger`}
-			/>
-			<meta property='og:description' content='Mark Gutenberger - Software Developer' />
-			<meta
-				property='og:image'
-				content={ogImageUrl}
-			/>
-
-			{/* Twitter */}
-			{/* <meta property='twitter:card' content='summary_large_image' /> */}
-			<meta property='twitter:url' content='https://gutenfries.deno.dev/home' />
-			<meta property='twitter:title' content='home | Mark Gutenberger' />
-			<meta
-				property='twitter:description'
-				content='Mark Gutenberger - Software Developer'
-			/>
-			<meta
-				property='twitter:image'
-				content={ogImageUrl}
-			/>
-
+			{/* styles */}
 			<link rel='stylesheet' href={asset('/styles/global.css')}></link>
+
+			{/* favicon */}
+			<link rel='icon' href={asset('/images/code.svg')}></link>
 
 			{/* console easter egg */}
 			<script
