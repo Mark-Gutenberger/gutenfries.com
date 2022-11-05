@@ -38,46 +38,44 @@ function ResumePage(props: PageProps<Data>) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-[fira]'
+				className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-[fira] p-4 pt-20'
 			>
-				<section className='p-4 pt-20'>
-					{resume
-						? (
-							<>
-								<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
-								<article
-									data-color-mode='auto'
-									data-light-theme='light'
-									data-dark-theme='dark'
-									className='rounded-lg p-10 mt-12 markdown-body'
-									dangerouslySetInnerHTML={{
-										__html: gfm.render(resume),
-									}}
-								/>
+				{resume
+					? (
+						<>
+							<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
+							<article
+								data-color-mode='auto'
+								data-light-theme='light'
+								data-dark-theme='dark'
+								className='rounded-lg p-10 mt-12 markdown-body'
+								dangerouslySetInnerHTML={{
+									__html: gfm.render(resume),
+								}}
+							/>
 
-								<div className='flex justify-center'>
-									<a
-										href='/resume.pdf'
-										className='px-6 py-2 mx-auto my-16 text-lg bg-blue-500 rounded-lg hover:bg-blue-600 active:bg-blue-700'
-									>
-										<span className='flex items-center justify-center'>
-											<span className='mr-1'>
-												Download
-											</span>
-											<Icons.FileDownload className='inline-block h-6 w-6' />
+							<div className='flex justify-center'>
+								<a
+									href='/resume.pdf'
+									className='px-6 py-2 mx-auto my-16 text-lg bg-blue-500 rounded-lg hover:bg-blue-600 active:bg-blue-700'
+								>
+									<span className='flex items-center justify-center'>
+										<span className='mr-1'>
+											Download
 										</span>
-									</a>
-								</div>
-							</>
-						)
-						: (
-							<>
-								<h1 className='rounded-lg font-bold text-5xl pt-20'>
-									Loading...
-								</h1>
-							</>
-						)}
-				</section>
+										<Icons.FileDownload className='inline-block h-6 w-6' />
+									</span>
+								</a>
+							</div>
+						</>
+					)
+					: (
+						<>
+							<h1 className='rounded-lg font-bold text-5xl pt-20'>
+								Loading...
+							</h1>
+						</>
+					)}
 			</main>
 			<Footer />
 		</>

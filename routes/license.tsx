@@ -16,8 +16,9 @@ interface Data {
 export const handler: Handlers<Data> = {
 	async GET(_req, ctx) {
 		// cache for 1 day
-		asset('/license.md');
-		const license = await readFile('./static/license.md');
+		asset('/mit-license.md');
+
+		const license = await readFile('./static/mit-license.md');
 		if (!license) {
 			return ctx.renderNotFound();
 		}
