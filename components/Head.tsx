@@ -45,7 +45,7 @@ function Head({ PageProps }: HeadProps) {
 
 			{/* <!-- Open Graph / Facebook --> */}
 			<meta property='og:type' content='website' />
-			<meta property='og:url' content={PageProps.url.hostname} />
+			<meta property='og:url' content={PageProps.url.host} />
 			<meta property='og:title' content={OGTitle} />
 			<meta
 				property='og:description'
@@ -58,7 +58,7 @@ function Head({ PageProps }: HeadProps) {
 
 			{/* <!-- Twitter --> */}
 			<meta property='twitter:card' content='summary_large_image' />
-			<meta property='twitter:url' content={PageProps.url.hostname} />
+			<meta property='twitter:url' content={PageProps.url.host} />
 			<meta
 				property='twitter:title'
 				content={OGTitle}
