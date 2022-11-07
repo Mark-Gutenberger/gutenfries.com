@@ -103,7 +103,7 @@ export default function PostPage(props: PageProps<Data>) {
 				id='main-content'
 				className='font-[fira] bg-gray-100 dark:bg-gray-900 p-4 pt-20'
 			>
-				<div className='rounded-t-lg bg-white dark:bg-[#0d1117] text-gray-900 dark:text-gray-200 text-center p-10 mt-12 shadow-xl'>
+				<div className='rounded-t-lg bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 text-center p-10 mt-12 shadow-xl'>
 					<h1 className='text-5xl font-bold'>{post.title}</h1>
 					<time className='inline-block mt-4'>
 						{new Date(post.publishedAt).toLocaleDateString('en-us', {

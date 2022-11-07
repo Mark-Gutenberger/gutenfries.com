@@ -83,7 +83,7 @@ function IndexPage(PageProps: PageProps) {
 									</h3>
 								</div>
 								<div className='flex-grow'>
-									<p className='text-base text-lg text-gray-300'>
+									<p className='text-base text-lg dark:text-gray-300 text-gray-700'>
 										I built my personal website with Deno, Preact, twind
 										(tailwind ext), Fresh, and a lot of time & creativity.
 									</p>
@@ -108,7 +108,7 @@ function IndexPage(PageProps: PageProps) {
 									</h3>
 								</div>
 								<div className='flex-grow'>
-									<p className='text-base text-lg text-gray-300'>
+									<p className='text-base text-lg dark:text-gray-300 text-gray-700'>
 										I created Tetris in C++ using std and ncurses, utilizing the
 										Object-Oriented language features of C++.
 									</p>
@@ -134,7 +134,7 @@ function IndexPage(PageProps: PageProps) {
 									</h3>
 								</div>
 								<div className='flex-grow'>
-									<p className='text-base text-lg text-gray-300'>
+									<p className='text-base text-lg dark:text-gray-300 text-gray-700'>
 										I built a mock of the chrome dino game in rust, using{' '}
 										<a
 											href='https://github.com/amethyst/bracket-lib'
@@ -260,7 +260,7 @@ function IndexPage(PageProps: PageProps) {
 								<h3 className='mb-2 text-lg'>
 									Shooting Stars
 								</h3>
-								<p className='text-base text-lg text-gray-300'>
+								<p className='text-base text-lg dark:text-gray-300 text-gray-700'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -287,7 +287,7 @@ function IndexPage(PageProps: PageProps) {
 								<h3 className='mb-2 text-lg'>
 									The Catalyzer
 								</h3>
-								<p className='text-base text-lg text-gray-300'>
+								<p className='text-base text-lg dark:text-gray-300 text-gray-700'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -313,7 +313,7 @@ function IndexPage(PageProps: PageProps) {
 								<h3 className='mb-2 text-lg'>
 									Neptune
 								</h3>
-								<p className='text-base text-lg text-gray-300'>
+								<p className='text-base text-lg dark:text-gray-300 text-gray-700'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -338,7 +338,7 @@ function IndexPage(PageProps: PageProps) {
 								<h3 className='mb-2 text-lg'>
 									Melanchole
 								</h3>
-								<p className='text-base text-lg text-gray-300'>
+								<p className='text-base text-lg dark:text-gray-300 text-gray-700'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -363,7 +363,7 @@ function IndexPage(PageProps: PageProps) {
 								<h3 className='mb-2 text-lg'>
 									Bunker
 								</h3>
-								<p className='text-base text-lg text-gray-300'>
+								<p className='text-base text-lg dark:text-gray-300 text-gray-700'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>
@@ -388,7 +388,7 @@ function IndexPage(PageProps: PageProps) {
 								<h3 className='mb-2 text-lg'>
 									Ramona Falls
 								</h3>
-								<p className='text-base text-lg text-gray-300'>
+								<p className='text-base text-lg dark:text-gray-300 text-gray-700'>
 									Fingerstache flexitarian street art 8-bit waist co, subway tile
 									poke farm.
 								</p>

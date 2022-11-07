@@ -2,10 +2,21 @@
 	--blue-500: rgb(59, 130, 246);
 	--blue-600: rgb(37, 99, 235);
 	--blue-700: rgb(29, 78, 216);
+	--gray-800: rgb(39, 39, 42);
+	--gray-900: rgb(24, 24, 27);
+	--gray-50: rgb(244, 244, 245);
+	--gray-100: rgb(229, 229, 234);
 }
 
 html {
-	background-color: rgb(24, 24, 27) !important;
+	background-color: var(--gray-50) !important;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+	html {
+		background-color: var(--gray-900) !important;
+	}
 }
 
 body {
@@ -155,11 +166,32 @@ img::after {
 	content: "HTTP Error 404: Image '" attr(alt) "' not found";
 	width: 100%;
 	height: 100%;
-	background-color: rgb(39, 39, 42);
+	background-color: var(--gray-800);
 	color: rgb(244, 244, 245);
 	display: block;
 	z-index: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+/* fix gfm default colors */
+.markdown-body,
+.markdown-body table tr {
+	background-color: var(--gray-50) !important;
+}
+.markdown-body table tr:nth-child(2n) {
+	background-color: var(--gray-100) !important;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+	/* fix gfm default colors */
+	.markdown-body,
+	.markdown-body table tr {
+		background-color: var(--gray-900) !important;
+	}
+	.markdown-body table tr:nth-child(2n) {
+		background-color: var(--gray-800) !important;
+	}
 }

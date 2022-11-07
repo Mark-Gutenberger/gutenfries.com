@@ -48,7 +48,7 @@ function ResumePage(props: PageProps<Data>) {
 								data-color-mode='auto'
 								data-light-theme='light'
 								data-dark-theme='dark'
-								className='rounded-lg p-10 mt-12 markdown-body'
+								className='rounded-lg p-10 shadow-xl mt-12 markdown-body'
 								dangerouslySetInnerHTML={{
 									__html: gfm.render(resume),
 								}}
