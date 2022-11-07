@@ -1182,6 +1182,147 @@ class Icons {
 			</svg>
 		);
 	};
+
+	static Quote = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Quote'
+			>
+				<title>Quote</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5'>
+				</path>
+				<path d='M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5'>
+				</path>
+			</svg>
+		);
+	};
+
+	static ChevronDown = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Chevron Down'
+			>
+				<title>Chevron Down</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<polyline points='6 9 12 15 18 9'></polyline>
+			</svg>
+		);
+	};
+
+	static ChevronLeft = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Chevron Left'
+			>
+				<title>Chevron Left</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<polyline points='15 6 9 12 15 18'></polyline>
+			</svg>
+		);
+	};
+
+	static ChevronRight = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Chevron Right'
+			>
+				<title>Chevron Right</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<polyline points='9 6 15 12 9 18'></polyline>
+			</svg>
+		);
+	};
+
+	static ChevronUp = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Chevron Up'
+			>
+				<title>Chevron Up</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<polyline points='6 15 12 9 18 15'></polyline>
+			</svg>
+		);
+	};
+
+	static Circle = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Circle'
+			>
+				<title>Circle</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<circle cx='12' cy='12' r='9'></circle>
+			</svg>
+		);
+	};
 }
 
 export default Icons;

@@ -21,6 +21,15 @@
 		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
 	"[jsonc]": {
-		"editor.defaultFormatter": "denoland.vscode-deno"
-	}
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.suggest.showStatusBar": true,
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"twind.attributes": [
+		"tw",
+		"className"
+		// "class" please disable twind class attribute
+	]
 }

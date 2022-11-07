@@ -96,18 +96,20 @@ function TypingCodeBlock(
 			<script
 				src={asset('/prism/prism.js')}
 			/>
+
 			<link
 				rel='stylesheet'
 				href={asset('/prism/10x-dark.css')}
 			/>
+
 			<pre className='text-base'>
 				<code className={`language-${language}`}>
 					{content + '\n'}
 					{initialTypingCode + ' '}
 				</code>
 				<code className={`language-${language}`}>
-					<span className='txt-rotate token string' data-rotate={JSON.stringify(typingCode)}></span>
-					<i className='txt-cursor' data-owner='txt-rotate'></i>
+					<span className='txt-rotate token string' data-rotate={JSON.stringify(typingCode)} />
+					<i className='txt-cursor' data-owner='txt-rotate'/>
 				</code>
 			</pre>
 		</>
