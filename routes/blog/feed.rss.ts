@@ -1,27 +1,45 @@
 import { Handlers } from '$fresh/server.ts';
-import { listPosts, loadPost } from '@/utils/blogPosts.ts';
+import { listPosts } from '@/utils/blogPosts.ts';
 import { truncate } from '@/utils/helpers.ts';
 
 export const handler: Handlers = {
 	async GET() {
 		const posts = await listPosts();
+		let postSlugs: string[];
+
+		if (posts) {
+			postSlugs = posts.map((post) => post.slug);
+		} else {
+			console.log('Error: No posts found');
+			postSlugs = [];
+		}
+
 		const sitemap = new RssFeed(
 			'https://gutenfries.deno.dev/blog/',
+			postSlugs,
 		);
-		// add all the blog urls
-		for (const post of posts) {
-			sitemap.add(post.slug);
-		}
 		return await sitemap.render();
 	},
 };
 
+/**
+ * creates a new RSS feed
+ * @param url the url of the feed
+ * @param title the title of the feed
+ */
 class RssFeed {
+	/**
+	 * base url of the website
+	 */
 	#url: string;
+	/**
+	 * routes that should be added to the rss feed
+	 */
 	#routes: string[] = [];
 
-	constructor(url: string) {
+	constructor(url: string, routes: string[] = []) {
 		this.#url = url;
+		this.#routes = routes;
 	}
 
 	/**
