@@ -178,15 +178,22 @@ function IndexPage(PageProps: PageProps) {
 					<ImageCarousel
 						images={[
 							{
-								src: 'http://fakeimg.pl/800x500/0079D8/fff/?text=One',
+								src: 'http://fakeimg.pl/800x500/0079D8/fff/?text=Coming%20Soon',
+								title: 'Image Title',
+								description:
+									'This is an image carousel which I have not yet completely implimented. It will display images relavent to the adjacent content.',
 								alt: '...',
 							},
 							{
-								src: 'http://fakeimg.pl/800x500/0079D8/fff/?text=Two',
+								src: 'http://fakeimg.pl/800x500/0079D8/fff/?text=Second%20Image',
+								title: 'Title',
+								description: 'This is an image carousel',
 								alt: '...',
 							},
 							{
-								src: 'http://fakeimg.pl/800x500/0079D8/fff/?text=Three',
+								src: 'http://fakeimg.pl/800x500/0079D8/fff/?text=Third%20Image',
+								title: 'Title',
+								description: 'This is an image carousel',
 								alt: '...',
 							},
 						]}

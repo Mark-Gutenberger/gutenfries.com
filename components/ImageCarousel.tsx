@@ -3,6 +3,8 @@ import Icons from '@/utils/Icons.tsx';
 
 interface Image {
 	src: string;
+	title: string;
+	description: string;
 	alt: string;
 }
 
@@ -37,11 +39,9 @@ function ImageCarousel(props: { images: Image[] }) {
 						alt={carouselImages[0].alt}
 					/>
 					<div className='px-6 py-4 mx-6 bg-gray-600 bg-opacity-25 rounded-b-lg shadow-lg'>
-						<h3 className='mb-2 text-xl font-bold'>The Coldest Sunset</h3>
+						<h3 className='mb-2 text-xl font-bold'>{carouselImages[0].title}</h3>
 						<p className='mb-6 text-base text-gray-700 dark:text-gray-300'>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-							quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-							nihil.
+							{carouselImages[0].description}
 						</p>
 					</div>
 				</div>
@@ -63,11 +63,9 @@ function ImageCarousel(props: { images: Image[] }) {
 						alt={carouselImages[1].alt}
 					/>
 					<div className='px-6 py-4 mx-6 bg-gray-600 bg-opacity-25 rounded-b-lg shadow-lg'>
-						<h3 className='mb-2 text-xl font-bold'>The Coldest Sunset</h3>
+						<h3 className='mb-2 text-xl font-bold'>{carouselImages[1].title}</h3>
 						<p className='mb-6 text-base text-gray-700 dark:text-gray-300'>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-							quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-							nihil.
+							{carouselImages[1].description}
 						</p>
 					</div>
 				</div>
@@ -89,11 +87,9 @@ function ImageCarousel(props: { images: Image[] }) {
 						alt={carouselImages[2].alt}
 					/>
 					<div className='px-6 py-4 mx-6 bg-gray-600 bg-opacity-25 rounded-b-lg shadow-lg'>
-						<h3 className='mb-2 text-xl font-bold'>The Coldest Sunset</h3>
+						<h3 className='mb-2 text-xl font-bold'>{carouselImages[2].title}</h3>
 						<p className='mb-6 text-base text-gray-700 dark:text-gray-300'>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-							quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-							nihil.
+							{carouselImages[2].description}
 						</p>
 					</div>
 				</div>
