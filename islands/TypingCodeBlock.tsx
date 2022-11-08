@@ -2,15 +2,30 @@ import { useEffect } from 'preact/hooks';
 
 import { asset } from '$fresh/runtime.ts';
 
-// yay object oriented programming
+/**
+ * Creates a class that rotates the text in a given element and period,
+ * as if the text were being typed
+ */
 class RotateText {
-	el: Element;
-	toRotate: string[];
-	period: number;
-	txt: string;
-	loopNum: number;
-	isDeleting: boolean;
-	textToRotate: string[];
+	/**
+	 * The element to rotate the text in
+	 */
+	private el: Element;
+	/**
+	 * The text to rotate, represented as a string array
+	 * in the order they should be rotated
+	 */
+	private toRotate: string[];
+	/**
+	 * The period of time to wait before rotating the next string, in ms
+	 */
+	private period: number;
+
+	// internal members
+	private txt: string;
+	private loopNum: number;
+	private isDeleting: boolean;
+	private textToRotate: string[];
 
 	constructor(el: Element, toRotate: string[], period: number) {
 		this.el = el;
@@ -29,9 +44,9 @@ class RotateText {
 
 		if (this.isDeleting) {
 			this.txt = fullTxt.substring(0, this.txt.length - 1);
-		} else {
-			this.txt = fullTxt.substring(0, this.txt.length + 1);
 		}
+
+		this.txt = fullTxt.substring(0, this.txt.length + 1);
 
 		this.el.innerHTML = '<span className="wrap">' + this.txt + '</span>';
 
@@ -44,18 +59,26 @@ class RotateText {
 		if (!this.isDeleting && this.txt === fullTxt) {
 			delta = this.period;
 			this.isDeleting = true;
-		} else if (this.isDeleting && this.txt === '') {
+		} else if (this.isDeleting && this.txt.length === 0) {
 			this.isDeleting = false;
 			this.loopNum++;
 			delta = 500;
 		}
 
-		setTimeout(() => this.tick(), delta);
+		setTimeout(
+			() => this.tick(),
+			delta,
+		);
 	}
 }
 
 function TypingCodeBlock(
-	{ code, typingCode, initialTypingCode, language }: {
+	{
+		code,
+		typingCode,
+		initialTypingCode,
+		language,
+	}: {
 		code: string[];
 		typingCode: string[];
 		initialTypingCode: string;
@@ -66,27 +89,14 @@ function TypingCodeBlock(
 
 	useEffect(() => {
 		const elements = document.getElementsByClassName('txt-rotate');
-		if (elements.length < 1) {
-			const textToRotate = elements[0].getAttribute('data-rotate');
-			const period = elements[0].getAttribute('data-period');
-			if (textToRotate) {
-				new RotateText(elements[0], JSON.parse(textToRotate), parseInt(period ?? '2000'));
-			}
-		} else if (elements.length > 0) {
-			for (let i = 0; i < elements.length; i++) {
-				const textToRotate = elements[i].getAttribute('data-rotate');
-				const period = elements[i].getAttribute('data-period');
-				if (textToRotate) {
-					new RotateText(
-						elements[i],
-						JSON.parse(textToRotate),
-						parseInt(period ?? '2000'),
-					);
-				}
-			}
-		} else {
-			console.log(
-				'Hello, We have been trying to reach you about your car\'s extended warranty.',
+		for (let i = 0; i < elements.length; i++) {
+			const textToRotate = elements[i].getAttribute('data-rotate');
+			const period = elements[i].getAttribute('data-period');
+
+			new RotateText(
+				elements[i],
+				JSON.parse(textToRotate ?? 'Error: No text to rotate'),
+				parseInt(period ?? '2000'),
 			);
 		}
 	}, []);
@@ -103,13 +113,21 @@ function TypingCodeBlock(
 			/>
 
 			<pre className='text-base'>
+
 				<code className={`language-${language}`}>
 					{content + '\n'}
 					{initialTypingCode + ' '}
 				</code>
+
 				<code className={`language-${language}`}>
-					<span className='txt-rotate token string' data-rotate={JSON.stringify(typingCode)} />
-					<i className='txt-cursor' data-owner='txt-rotate'/>
+					<span
+						class='txt-rotate token string'
+						data-rotate={JSON.stringify(typingCode)}
+					/>
+					<i
+						class='txt-cursor'
+						data-owner='txt-rotate'
+					/>
 				</code>
 			</pre>
 		</>

@@ -4,7 +4,7 @@ import Icons from '@/utils/Icons.tsx';
 function Footer() {
 	return (
 		<footer className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200'>
-			<section className='container m-12 pt-20 mx-auto'>
+			<section className='container p-12 pt-20 mx-auto'>
 				<ul className='flex flex-wrap text-center -mb-10 -mx-4'>
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
 						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
