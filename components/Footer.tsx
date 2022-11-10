@@ -392,7 +392,7 @@ function Footer() {
 			<section className='w-full mx-auto p-4 flex flex-wrap flex-col sm:flex-row shadow-lg bg-gray-800'>
 				<span className='hover:text-underline text-lg mt-2 text-sm text-center sm:text-left text-gray-400'>
 					<a
-						href='/license0'
+						href='/license'
 						className='ml-1'
 					>
 						© {new Date().getFullYear()} Mark Gutenberger - @gutenfries
