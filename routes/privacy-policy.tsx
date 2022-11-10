@@ -33,7 +33,7 @@ function ResumePage(props: PageProps<Data>) {
 			<Navbar active='privPolicy' />
 			<NoScript />
 
-			<main id='main-content' className='font-[fira] p-4 pt-20'>
+			<main id='main-content' class='font-[fira]' className='p-4 pt-20'>
 				{privPolicy
 					? (
 						<>
@@ -42,7 +42,8 @@ function ResumePage(props: PageProps<Data>) {
 								data-color-mode='auto'
 								data-light-theme='light'
 								data-dark-theme='dark'
-								className='rounded-lg shadow-xl p-10 mt-12 markdown-body'
+								class='markdown-body'
+								className='p-10 mt-12 rounded-lg shadow-xl'
 								dangerouslySetInnerHTML={{
 									__html: gfm.render(privPolicy),
 								}}
@@ -51,7 +52,7 @@ function ResumePage(props: PageProps<Data>) {
 					)
 					: (
 						<>
-							<h1 className='rounded-lg font-bold text-5xl pt-20'>
+							<h1 className='pt-20 text-5xl font-bold rounded-lg'>
 								Loading...
 							</h1>
 						</>

@@ -44,7 +44,7 @@ function Navbar(props: { active?: string }) {
 			>
 				Skip to main content
 			</a>
-			<nav className='fixed z-50 flex flex-row w-full h-20 bg-gray-800 shadow-lg'>
+			<nav className='fixed z-50 flex flex-row justify-around w-full h-20 bg-gray-800 shadow-lg md:justify-start'>
 				<ul className='flex p-4 text-xl text-gray-200'>
 					{routes.map((item: Route) => {
 						if (item.showInNav) {

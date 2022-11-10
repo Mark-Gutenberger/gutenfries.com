@@ -1323,6 +1323,117 @@ class Icons {
 			</svg>
 		);
 	};
+
+	static Package = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Package'
+			>
+				<title>Package</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<polyline points='12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3'></polyline>
+				<line x1='12' y1='12' x2='20' y2='7.5'></line>
+				<line x1='12' y1='12' x2='12' y2='21'></line>
+				<line x1='12' y1='12' x2='4' y2='7.5'></line>
+				<line x1='16' y1='5.25' x2='8' y2='9.75'></line>
+			</svg>
+		);
+	};
+
+	static Flutter = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Flutter'
+			>
+				<title>Flutter</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M7 14l-3 -3l8 -8h6z'></path>
+				<path d='M14 21l-5 -5l5 -5h5l-5 5l5 5z'></path>
+			</svg>
+		);
+	};
+
+	static Docker = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='Docker'
+			>
+				<title>Docker</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M22 12.54c-1.804 -.345 -2.701 -1.08 -3.523 -2.94c-.487 .696 -1.102 1.568 -.92 2.4c.028 .238 -.32 1.002 -.557 1h-14c0 5.208 3.164 7 6.196 7c4.124 .022 7.828 -1.376 9.854 -5c1.146 -.101 2.296 -1.505 2.95 -2.46z'>
+				</path>
+				<path d='M5 10h3v3h-3z'></path>
+				<path d='M8 10h3v3h-3z'></path>
+				<path d='M11 10h3v3h-3z'></path>
+				<path d='M8 7h3v3h-3z'></path>
+				<path d='M11 7h3v3h-3z'></path>
+				<path d='M11 4h3v3h-3z'></path>
+				<path d='M4.571 18c1.5 0 2.047 -.074 2.958 -.78'></path>
+				<line x1='10' y1='16' x2='10' y2='16.01'></line>
+			</svg>
+		);
+	};
+
+	static C = (_: IconProps) => {
+		return (
+			<svg
+				className={_.className ?? undefined}
+				stroke={_.stroke ?? 'currentColor'}
+				fill={_.fill ?? 'none'}
+				xmlns='http://www.w3.org/2000/svg'
+				width={24}
+				height={24}
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				alt='C'
+			>
+				<title>C</title>
+				<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path d='M18 9a5 5 0 0 0 -5 -5h-2a5 5 0 0 0 -5 5v6a5 5 0 0 0 5 5h2a5 5 0 0 0 5 -5'>
+				</path>
+			</svg>
+		);
+	};
+
+	Icon(_icon: string) {
+		return null;
+	}
 }
 
 export default Icons;

@@ -82,7 +82,7 @@ function Head({ PageProps }: HeadProps) {
 			<meta name='apple-mobile-web-app-capable' content='yes' />
 			<meta name='apple-mobile-web-app-status-bar-style' content='#27272a' />
 
-			{/* styles */}
+			{/* global styles */}
 			<link rel='stylesheet' href={asset('/styles/global.css')}></link>
 
 			{/* favicon */}
@@ -92,7 +92,6 @@ function Head({ PageProps }: HeadProps) {
 			<script
 				dangerouslySetInnerHTML={{
 					__html: `
-						// console.log('%cHi there! 👋', 'font-size: 2rem; font-weight: bold;');
 						console.log('If you\\'re looking this far, please consider staring the repo on GitHub! 😊 \\nhttps://github.com/gutenfries/gutenfries.deno.dev');
 						`,
 				}}
@@ -108,6 +107,13 @@ function Head({ PageProps }: HeadProps) {
 					gtag('js', new Date());
 					gtag('config', 'G-DNT0Y7Z3PN');
 				`}
+			</script>
+			{/* Google Ads */}
+			<script
+				async
+				src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5497887777167174'
+				crossOrigin='anonymous'
+			>
 			</script>
 		</FreshHead>
 	);

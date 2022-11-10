@@ -1,8 +1,8 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
+import { readFile } from '@/utils/readFile.ts';
 import { asset } from '$fresh/runtime.ts';
 
 import * as gfm from 'gfm';
-import { readFile } from '@/utils/readFile.ts';
 
 import { Navbar } from '@/components/Navbar.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
@@ -10,26 +10,41 @@ import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
 import Icons from '@/utils/Icons.tsx';
 
+type ActiveResumeState = 'techResume' | 'generalResume' | 'musicResume';
+type ActiveResumeURLState = 'tech' | 'general' | 'music';
+
 interface Data {
 	resume: string | null;
+	activeResume: ActiveResumeState;
 }
 
 export const handler: Handlers<Data> = {
-	async GET(_req, ctx) {
-		// cache the resume for 1 day
-		asset('/resume.pdf');
-		asset('/resume.md');
+	async GET(req, ctx) {
+		const url = new URL(req.url);
+		let activeResume = url.searchParams.get('activeResume') as ActiveResumeURLState ||
+			'tech' as ActiveResumeURLState;
 
-		const resume = await readFile('./static/resume.md');
+		// don't allow invalid activeResume values
+		if (!['tech', 'general', 'music'].includes(activeResume)) {
+			activeResume = 'tech' as ActiveResumeURLState;
+		}
+
+		const resume = await readFile(`./static/resume/resume-${activeResume}.md`);
+
 		if (!resume) {
+			console.error('Error: resume not found');
 			return ctx.renderNotFound();
 		}
-		return ctx.render({ ...ctx.state, resume });
+
+		return ctx.render({
+			...ctx.state,
+			resume,
+			activeResume: `${activeResume}Resume` as Data['activeResume'],
+		});
 	},
 };
 
 function ResumePage(props: PageProps<Data>) {
-	const resume = props.data.resume;
 	return (
 		<>
 			<Head PageProps={props} />
@@ -38,44 +53,120 @@ function ResumePage(props: PageProps<Data>) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-[fira] p-4 pt-20'
+				class='font-[fira]'
+				className='p-4 pt-20 text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
 			>
-				{resume
+				{props.data.resume
 					? (
 						<>
-							<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
-							<article
-								data-color-mode='auto'
-								data-light-theme='light'
-								data-dark-theme='dark'
-								className='rounded-lg p-10 shadow-xl mt-12 markdown-body'
-								dangerouslySetInnerHTML={{
-									__html: gfm.render(resume),
-								}}
-							/>
+							<div className='w-full h-full p-2 pt-4 mt-4 bg-gray-300 rounded-lg shadow-xl dark:bg-gray-800'>
+								{/* navbar */}
+								<div className='flex flex-row justify-start ml-5'>
+									<a
+										type='button'
+										className={`px-6 pt-1.5 pb-1 text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+											props.data.activeResume === 'techResume'
+												? 'bg-blue-500'
+												: 'bg-gray-900'
+										}`}
+										href='/resume?activeResume=tech'
+									>
+										Tech
+									</a>
+									<a
+										type='button'
+										className={`px-6 pt-1.5 pb-1 text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+											props.data.activeResume === 'musicResume'
+												? 'bg-blue-500'
+												: 'bg-gray-900'
+										}`}
+										href='/resume?activeResume=music'
+									>
+										Music
+									</a>
+									<a
+										type='button'
+										className={`px-6 pt-1.5 pb-1 text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+											props.data.activeResume === 'generalResume'
+												? 'bg-blue-500'
+												: 'bg-gray-900'
+										}`}
+										href='/resume?activeResume=general'
+									>
+										General
+									</a>
+								</div>
 
-							<div className='flex justify-center'>
-								<a
-									href='/resume.pdf'
-									className='px-6 py-2 mx-auto my-16 text-lg bg-blue-500 rounded-lg hover:bg-blue-600 active:bg-blue-700'
-								>
-									<span className='flex items-center justify-center'>
-										<span className='mr-1'>
-											Download
-										</span>
-										<Icons.FileDownload className='inline-block h-6 w-6' />
-									</span>
-								</a>
+								{/* resume */}
+								<section>
+									<style
+										dangerouslySetInnerHTML={{
+											__html: gfm.CSS,
+										}}
+									/>
+									<article
+										data-color-mode='auto'
+										data-light-theme='light'
+										data-dark-theme='dark'
+										class='markdown-body'
+										className='p-10 rounded-lg shadow-xl'
+										dangerouslySetInnerHTML={{
+											__html: gfm.render(props.data.resume),
+										}}
+									/>
+								</section>
 							</div>
 						</>
 					)
 					: (
 						<>
-							<h1 className='rounded-lg font-bold text-5xl pt-20'>
-								Loading...
-							</h1>
+							<h1 className='pt-20 text-5xl font-bold rounded-lg'>Loading...</h1>
 						</>
 					)}
+
+				<div className='flex justify-center'>
+					<h3 className='mt-4 text-4xl text-center'>
+						Download Resume
+					</h3>
+				</div>
+				<div className='flex flex-wrap justify-center w-full mx-auto md:w-2/3'>
+					<button
+						type='button'
+						href={asset('/resume/resume-tech.pdf')}
+						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
+					>
+						<span className='flex items-center justify-center'>
+							<span className='mr-1'>
+								Tech
+							</span>
+							<Icons.FileDownload className='inline-block w-6 h-6' />
+						</span>
+					</button>
+					<button
+						type='button'
+						href={asset('/resume/resume-music.pdf')}
+						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
+					>
+						<span className='flex items-center justify-center'>
+							<span className='mr-1'>
+								Music
+							</span>
+							<Icons.FileDownload className='inline-block w-6 h-6' />
+						</span>
+					</button>
+					<button
+						type='button'
+						href={asset('/resume/resume-general.pdf')}
+						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
+					>
+						<span className='flex items-center justify-center'>
+							<span className='mr-1'>
+								General
+							</span>
+							<Icons.FileDownload className='inline-block w-6 h-6' />
+						</span>
+					</button>
+				</div>
 			</main>
 			<Footer />
 		</>
