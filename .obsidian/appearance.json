@@ -2,5 +2,8 @@
   "translucency": true,
   "accentColor": "#3b82f6",
   "theme": "system",
-  "monospaceFontFamily": "FiraCode Nerd Font"
+  "monospaceFontFamily": "FiraCode Nerd Font",
+  "interfaceFontFamily": "Segoe UI",
+  "textFontFamily": "Fira Sans",
+  "nativeMenus": true
 }

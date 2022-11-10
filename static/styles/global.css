@@ -180,6 +180,16 @@ img::after {
 	background-color: var(--gray-100) !important;
 }
 
+.markdown-body blockquote {
+	border-left: 0.25em solid var(--blue-500) !important;
+}
+
+.markdown-body hr {
+	background-color: var(--blue-500) !important;
+	margin: 1rem 0 !important ;
+	height: 0.125rem !important ;
+}
+
 /* dark mode */
 @media (prefers-color-scheme: dark) {
 	/* fix gfm default colors */

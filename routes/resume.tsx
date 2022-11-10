@@ -59,43 +59,50 @@ function ResumePage(props: PageProps<Data>) {
 				{props.data.resume
 					? (
 						<>
-							<div className='w-full h-full p-2 pt-4 mt-4 bg-gray-300 rounded-lg shadow-xl dark:bg-gray-800'>
+							<div className='w-full h-full p-2 pt-4 mt-4'>
 								{/* navbar */}
-								<div className='flex flex-row justify-start ml-5'>
-									<a
-										type='button'
-										className={`px-6 pt-1.5 pb-1 text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
-											props.data.activeResume === 'techResume'
-												? 'bg-blue-500'
-												: 'bg-gray-900'
-										}`}
-										href='/resume?activeResume=tech'
-									>
-										Tech
-									</a>
-									<a
-										type='button'
-										className={`px-6 pt-1.5 pb-1 text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
-											props.data.activeResume === 'musicResume'
-												? 'bg-blue-500'
-												: 'bg-gray-900'
-										}`}
-										href='/resume?activeResume=music'
-									>
-										Music
-									</a>
-									<a
-										type='button'
-										className={`px-6 pt-1.5 pb-1 text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
-											props.data.activeResume === 'generalResume'
-												? 'bg-blue-500'
-												: 'bg-gray-900'
-										}`}
-										href='/resume?activeResume=general'
-									>
-										General
-									</a>
-								</div>
+
+								<ul className='flex flex-row justify-start ml-5'>
+									<li>
+										<a
+											type='button'
+											className={`px-6 border-tl border-r border-gray-900 dark:border-gray-300 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+												props.data.activeResume === 'techResume'
+													? 'bg-blue-500'
+													: 'bg-gray-800'
+											}`}
+											href='/resume?activeResume=tech'
+										>
+											Tech
+										</a>
+									</li>
+									<li>
+										<a
+											type='button'
+											className={`px-6 border-tl border-r border-gray-900 dark:border-gray-300 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+												props.data.activeResume === 'musicResume'
+													? 'bg-blue-500'
+													: 'bg-gray-800'
+											}`}
+											href='/resume?activeResume=music'
+										>
+											Music
+										</a>
+									</li>
+									<li>
+										<a
+											type='button'
+											className={`px-6 border-tl border-r border-gray-900 dark:border-gray-300 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+												props.data.activeResume === 'generalResume'
+													? 'bg-blue-500'
+													: 'bg-gray-800'
+											}`}
+											href='/resume?activeResume=general'
+										>
+											General
+										</a>
+									</li>
+								</ul>
 
 								{/* resume */}
 								<section>

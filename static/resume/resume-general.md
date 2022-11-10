@@ -23,13 +23,11 @@ phone: [+1 (920)-883-5222](tel:9208835222)
 > 08/2016 - 11/2019 _(seasonal)_
 
 -   **Pumpkin Harvester** _(seasonal)_
-
     -   Harvested pumpkins from fields
     -   Loaded pumpkins onto trucks
     -   Operated farm equipment
 
 -   **Potato Harvester** _(seasonal)_
-
     -   Harvested potatoes from fields
     -   Loaded potatoes onto trucks
     -   Operated farm equipment

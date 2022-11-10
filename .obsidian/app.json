@@ -7,5 +7,7 @@
     "landscape": false,
     "margin": "0",
     "downscalePercent": 80
-  }
+  },
+  "showFrontmatter": true,
+  "spellcheck": true
 }
