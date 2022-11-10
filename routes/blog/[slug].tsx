@@ -101,7 +101,6 @@ export default function PostPage(props: PageProps<Data>) {
 
 			<main
 				id='main-content'
-				class='font-[fira]'
 				className='p-4 pt-20 bg-gray-100 dark:bg-gray-900'
 			>
 				<div className='p-10 mt-12 text-center text-gray-900 bg-gray-100 rounded-t-lg shadow-xl dark:bg-gray-900 dark:text-gray-200'>

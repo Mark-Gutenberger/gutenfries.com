@@ -34,7 +34,7 @@ function ResumePage(props: PageProps<Data>) {
 			<Navbar active='license' />
 			<NoScript />
 
-			<main id='main-content' class='font-[fira]' className='p-4 pt-20'>
+			<main id='main-content' className='p-4 pt-20'>
 				{license
 					? (
 						<>

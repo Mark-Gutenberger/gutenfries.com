@@ -8,6 +8,10 @@
 	--gray-100: rgb(229, 229, 234);
 }
 
+* {
+	font-family: 'Fira', 'Fira Sans', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
 html {
 	background-color: var(--gray-50) !important;
 }
@@ -188,10 +192,6 @@ img::after {
 	/* background-color: var(--blue-500) !important; */
 	margin: 1rem 0 !important ;
 	height: 0.125em !important ;
-}
-
-.markdown-body {
-	font-family: 'Fira', 'Fira Sans', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
 
 /* dark mode */

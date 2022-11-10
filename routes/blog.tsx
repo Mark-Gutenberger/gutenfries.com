@@ -30,7 +30,7 @@ export default function Home(props: PageProps<Data>) {
 			<Head PageProps={props} />
 			<Navbar active='blog' />
 			<NoScript />
-			<main id='main-content' className='bg-gray-100 dark:bg-gray-900 font-[fira]'>
+			<main id='main-content' className='bg-gray-100 dark:bg-gray-900'>
 				<section className='p-4 pt-20'>
 					<ul className='mt-16'>
 						{posts.map((post) => (

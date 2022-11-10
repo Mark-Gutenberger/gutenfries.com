@@ -22,7 +22,6 @@ function IndexPage(PageProps: PageProps) {
 			<main
 				id='main-content'
 				className='text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
-				class='font-[fira]'
 			>
 				<section className='container flex flex-col items-center px-8 pb-32 mx-auto pt-28 lg:flex-row'>
 					<h1 className='w-3/5 mx-auto mb-12 text-5xl font-semibold text-center md:text-6xl lg:text-7xl'>

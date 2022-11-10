@@ -53,7 +53,6 @@ function ResumePage(props: PageProps<Data>) {
 
 			<main
 				id='main-content'
-				class='font-[fira]'
 				className='p-4 pt-20 text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
 			>
 				{props.data.resume
