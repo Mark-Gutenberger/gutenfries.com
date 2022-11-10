@@ -190,6 +190,10 @@ img::after {
 	height: 0.125em !important ;
 }
 
+.markdown-body {
+	font-family: 'Fira', 'Fira Sans', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
 /* dark mode */
 @media (prefers-color-scheme: dark) {
 	/* fix gfm default colors */
