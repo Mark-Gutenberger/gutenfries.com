@@ -15,6 +15,9 @@ export const handler: Handlers = {
 		for (const post of posts) {
 			sitemap.add(`/blog/${post.slug}`);
 		}
+		sitemap.add('/resume?activeResume=techResume');
+		sitemap.add('/resume?activeResume=musicResume');
+		sitemap.add('/resume?activeResume=generalResume');
 
 		return sitemap.render();
 	},
