@@ -139,7 +139,7 @@ function ResumePage(props: PageProps<Data>) {
 				<div className='flex flex-wrap justify-center w-full mx-auto md:w-2/3'>
 					<button
 						type='button'
-						href={asset('/resume/resume-tech.pdf')}
+						href='/resume/resume-tech.pdf'
 						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
 					>
 						<span className='flex items-center justify-center'>
@@ -151,7 +151,7 @@ function ResumePage(props: PageProps<Data>) {
 					</button>
 					<button
 						type='button'
-						href={asset('/resume/resume-music.pdf')}
+						href='/resume/resume-music.pdf'
 						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
 					>
 						<span className='flex items-center justify-center'>
@@ -163,7 +163,7 @@ function ResumePage(props: PageProps<Data>) {
 					</button>
 					<button
 						type='button'
-						href={asset('/resume/resume-general.pdf')}
+						href='/resume/resume-general.pdf'
 						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
 					>
 						<span className='flex items-center justify-center'>
