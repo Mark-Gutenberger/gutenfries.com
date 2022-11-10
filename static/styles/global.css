@@ -8,10 +8,6 @@
 	--gray-100: rgb(229, 229, 234);
 }
 
-* {
-	font-family: 'Fira', 'Fira Sans', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-}
-
 html {
 	background-color: var(--gray-50) !important;
 }

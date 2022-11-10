@@ -46,6 +46,9 @@ export default {
 			},
 			fontFamily: {
 				sans: [
+					'Fira',
+					'Fira Sans',
+					'Inter',
 					'ui-sans-serif',
 					'system-ui',
 					'-apple-system',
@@ -61,7 +64,14 @@ export default {
 					'"Segoe UI Symbol"',
 					'"Noto Color Emoji"',
 				],
-				serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+				serif: [
+					'ui-serif',
+					'Georgia',
+					'Cambria',
+					'"Times New Roman"',
+					'Times',
+					'serif',
+				],
 				mono: [
 					'Fira Code',
 					'ui-monospace',
