@@ -25,50 +25,24 @@ import 'https://esm.sh/prismjs@1.27.0/components/prism-toml?no-check';
 
 interface Data {
 	post: Post;
-	showAds: boolean;
 }
 
 export const handler: Handlers<Data> = {
-	async GET(req, ctx) {
+	async GET(_req, ctx) {
 		const post = await loadPost(ctx.params.slug);
-		const url = new URL(req.url);
-		const showAds = url.searchParams.get('showAds') ? true : false;
 
 		if (!post) {
 			return ctx.renderNotFound();
 		}
 
-		const content = gfm.render(post.content, {
-			allowIframes: true,
-		});
-
-		if (!showAds) {
-			return ctx.render({
-				post: {
-					...post,
-					content: content,
-				},
-				showAds: false,
-			});
-		}
-
-		const ad = `<ins
-						class="adsbygoogle"
-						data-ad-client="ca-pub-5497887777167174"
-						data-ad-slot="1062273062"
-						data-ad-format="auto"
-						data-ad-layout="in-article"
-						style="display:block;text-align:center"
-					></ins>`;
-		const contentWithAds = content.replaceAll('<p>PLACE AD HERE</p>', ad);
+		const content = gfm.render(post.content);
 
 		return ctx.render(
 			{
 				post: {
 					...post,
-					content: contentWithAds,
+					content,
 				},
-				showAds: true,
 			},
 		);
 	},
@@ -76,24 +50,10 @@ export const handler: Handlers<Data> = {
 
 export default function PostPage(props: PageProps<Data>) {
 	const { post } = props.data;
-	const { showAds } = props.data;
 
 	return (
 		<>
 			<Head PageProps={props} />
-
-			{/* Google ads */}
-			{showAds
-				? (
-					<script
-						src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5497887777167174'
-						crossOrigin='anonymous'
-						async
-						// defer
-					>
-					</script>
-				)
-				: null}
 
 			<Navbar active='blog' />
 
@@ -125,15 +85,6 @@ export default function PostPage(props: PageProps<Data>) {
 			</main>
 
 			<Footer />
-
-			{/* inject ads */}
-			{showAds
-				? (
-					<script>
-						{`(adsbygoogle = window.adsbygoogle || []).push({});`}
-					</script>
-				)
-				: null}
 		</>
 	);
 }
