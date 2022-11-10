@@ -185,9 +185,9 @@ img::after {
 }
 
 .markdown-body hr {
-	background-color: var(--blue-500) !important;
+	/* background-color: var(--blue-500) !important; */
 	margin: 1rem 0 !important ;
-	height: 0.125rem !important ;
+	height: 0.125em !important ;
 }
 
 /* dark mode */

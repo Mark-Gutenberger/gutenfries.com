@@ -1,9 +1,6 @@
 # Mark Gutenberger
-
-## basic
-
+---
 > Musician & software developer from WI, USA.
-
 ---
 
 ## Experience

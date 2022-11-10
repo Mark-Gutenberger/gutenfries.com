@@ -66,7 +66,7 @@ function ResumePage(props: PageProps<Data>) {
 									<li>
 										<a
 											type='button'
-											className={`px-6 border-tl border-r border-gray-900 dark:border-gray-300 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+											className={`px-6 border-tl dark:border-blue-500 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
 												props.data.activeResume === 'techResume'
 													? 'bg-blue-500'
 													: 'bg-gray-800'
@@ -79,7 +79,7 @@ function ResumePage(props: PageProps<Data>) {
 									<li>
 										<a
 											type='button'
-											className={`px-6 border-tl border-r border-gray-900 dark:border-gray-300 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+											className={`px-6 border-tl dark:border-blue-500 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
 												props.data.activeResume === 'musicResume'
 													? 'bg-blue-500'
 													: 'bg-gray-800'
@@ -92,7 +92,7 @@ function ResumePage(props: PageProps<Data>) {
 									<li>
 										<a
 											type='button'
-											className={`px-6 border-tl border-r border-gray-900 dark:border-gray-300 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+											className={`px-6 border-tl border-r dark:border-blue-500 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
 												props.data.activeResume === 'generalResume'
 													? 'bg-blue-500'
 													: 'bg-gray-800'
