@@ -1,7 +1,4 @@
 # Mark Gutenberger
----
-> Musician & software developer from WI, USA.
----
 
 ## Experience
 
@@ -11,25 +8,21 @@
 
 phone: [+1 (920)-883-5222](tel:9208835222)
 
--   **Musician & Performer**
-    -   Played Banjo, Guitar, and Drumset for the polka band
-    -   Performed at various venues
+- **Musician & Performer**
+	- Played Banjo, Guitar, and Drumset for the polka band
+	- Performed at various venues
 
 ### Moe's Farms, Inc.
 
 > 08/2016 - 11/2019 _(seasonal)_
 
--   **Pumpkin Harvester** _(seasonal)_
-    -   Harvested pumpkins from fields
-    -   Loaded pumpkins onto trucks
-    -   Operated farm equipment
+- **Pumpkin Harvester** _(seasonal)_
+	- Was responsible for harvesting pumpkins from fields
+	- Was responsible for operating farm equipment
 
--   **Potato Harvester** _(seasonal)_
-    -   Harvested potatoes from fields
-    -   Loaded potatoes onto trucks
-    -   Operated farm equipment
-
--   Recieved several pay raises for work ethic & performance
+- **Potato Harvester** _(seasonal)_
+	- Was responsible for harvesting potatoes from fields
+	- Was responsible for operating farm equipment
 
 ### Zernicke's & Landstad Dairy
 
@@ -37,10 +30,10 @@ phone: [+1 (920)-883-5222](tel:9208835222)
 
 phone: [+1 (715)-853-3011](tel:7158533011)
 
--   **Farm Hand** _(seasonal)_
-    -   Covered silage pits & piles
-    -   Picked rocks & debris from fields
-    -   Performed general maintenance on farm equipment
+- **Farm Hand** _(seasonal)_
+	- Covered silage pits & piles
+	- Picked rocks & debris from fields
+	- Performed general maintenance on farm equipment
 
 ## Education
 
@@ -50,48 +43,29 @@ phone: [+1 (715)-853-3011](tel:7158533011)
 
 site: [pulaskischools.org](https://www.pulaskischools.org/)
 
--   Graduated _(expected)_ **2023**
--   College & AP Classes: **AP Psychology**, <!-- **Into to Diversity**, --> **Oral & Intrapersonal Communication**, <!-- **American Literature**, --> **Intro to Computer Science**
--   Clubs & Activities: **Marching Band**, **Concert Band**, **Jazz Band**, **Choir**, **[SkillsUSA](https://www.skillsusa.org/)**, **Math Club**, **Forensics**
-<!-- - ACT Score: **26** (Math: 28, Reading: 22, Science: 24, English: 27) -->
--   Highlights:
-    -   **State Qualifier** in **Speach & Broadcasting** for **Forensics** _(2021)_
-    -   **State Qualifier** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Snare Drum Solo) _(2021)_
-    -   **State Runner-Up** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Percussion Ensemble) _(2021)_
-    <!-- - Member of the acclaimed **Red Raider Jazz Band** (Acceptance by audition only) _(2021-2022)_ -->
+- Graduated _(expected)_ **2023**
+- College & AP Classes: **AP Psychology**,  **Oral & Intrapersonal Communication**,  **Intro to Computer Science**
+- Clubs & Activities: **Marching Band**, **Concert Band**, **Jazz Band**, **Choir**, **[SkillsUSA](https://www.skillsusa.org/)**, **Math Club**, **Forensics**
+- Highlights:
+	- **State Qualifier** in **Speech & Broadcasting** for **Forensics** _(2021)_
+	- **State Qualifier** in **Music** for **WSMA Solo & Ensemble** (_Class A_ Snare Drum Solo) _(2021)_
+	- **State Runner-Up** in **Music** for **WSMA Solo & Ensemble** (_Class A_ Percussion Ensemble) _(2021)_
 
-## Skills
+## Languages
 
-### Human Languages
-
--   English _(native speaker)_
--   German _(intermediate)_
-
-|   <h3>Tools & Software</h3>    |     <h3>Programming Languages </h3>     | <h3> Frameworks & Libraries </h3> |
-| :----------------------------: | :-------------------------------------: | :-------------------------------: |
-|      **Git** & **GitHub**      | **TypeScript** (**Deno** & **Node.js**) |      **React** (**Preact**)       |
-| **Visual Studio** & **VSCode** |           **HTML** & **CSS**            |            **Next.js**            |
-|        Vim (**Neovim**)        |                **Rust**                 |          **Deno Fresh**           |
-|           **Docker**           |             **C** & **C++**             |            **Express**            |
-|         **PostgreSQL**         |                 **C#**                  |          **TailwindCSS**          |
-|        **Deno Deploy**         |             **PowerShell**              |
-|        **GitHub Pages**        |                **Bash**                 |
-|           **Azure**            |                                         |
+- English _(native speaker)_
+- German _(intermediate)_
 
 ## References
 
--   Terry Manning _(High School Teacher)_
-    -   <tlmanning@pulaskischools.org>
--   John Pitzen _(Comp Sci Teacher)_
-    -   <jgpitzen@pulaskischools.org>
--   Bob Pekol _(Guardian)_
-    -   <bobpekol@icloud.com>
--   Lindsey Leisgang _(Social Worker)_
-    -   <lindsey.leisgang@shawanocountywi.gov>
+- Terry Manning _(High School Teacher)_
+	- <tlmanning@pulaskischools.org>
+- Bob Pekol _(Guardian)_
+	- <bobpekol@icloud.com>
+- Lindsey Leisgang _(Social Worker)_
+	- <lindsey.leisgang@shawanocountywi.gov>
 
 ---
-
 > Mark Gutenberger | [+1 (920)-284-3760](tel:19202843760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)\
 > [GitHub](https://github.com/gutenfries) | [Peerlist](https://peerlist.io/gutenfries) | [LinkedIn](https://www.linkedin.com/in/gutenfries/)
-
 ---

@@ -42,20 +42,18 @@ email (director Michael Guerrero): <maguerrero@pulaskischools.org>
 
 ### Pulaski High School
 
-> 09/2020 - 06/2023
+> 09/2020 - 06/2023 _(expected)_
 
 site: [pulaskischools.org](https://www.pulaskischools.org/)
 
--   Graduated _(expected)_ **2023**
--   Relavent Coursework & Involvements: **Marching Band**, **Concert Band**, **Jazz Band**, **Choir**, **Forensics**, **Oral & Intrapersonal Communication** _(College Class)_
--   Highlights:
-    -   **State Qualifier** in **Speach & Broadcasting** for **Forensics** _(2021)_
-    -   **State Qualifier** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Snare Drum Solo) _(2021)_
-    -   **State Runner-Up** in **Music** for **WSMA Solo & Ensamble** (_Class A_ Percussion Ensemble) _(2021)_
+-   Relevant Coursework & Involvements: **Marching Band**, **Concert Band**, **Jazz Band**, **Choir**, **Forensics**, **Oral & Intrapersonal Communication** _(College Class)_
+-   **State Qualifier** in **Speech & Broadcasting** for **Forensics** _(2021)_
+-   **State Qualifier** in **Music** for **WSMA Solo & Ensemble** (_Class A_ Snare Drum Solo) _(2021)_
+-   **State Runner-Up** in **Music** for **WSMA Solo & Ensemble** (_Class A_ Percussion Ensemble) _(2021)_
 
 ## Skills
 
-### Intruments
+### Instruments
 
 -   **Guitar** _(Highly proficient)_
 -   **Drums & Percussion** _(Highly proficient)_
@@ -72,7 +70,7 @@ site: [pulaskischools.org](https://www.pulaskischools.org/)
 
 -   Tom Busch _(High School Marching Director)_
     -   <dtbusch@pulaskischools.org>
--   Michael Guerrero _(High School Jazz Diector)_
+-   Michael Guerrero _(High School Jazz Director)_
     -   <maguerrero@pulaskischools.org>
 -   Bob Pekol _(Guardian)_
     -   <bobpekol@icloud.com>
