@@ -137,9 +137,9 @@ function ResumePage(props: PageProps<Data>) {
 					</h3>
 				</div>
 				<div className='flex flex-wrap justify-center w-full mx-auto md:w-2/3'>
-					<button
+					<a
 						type='button'
-						href='/resume/resume-tech.pdf'
+						href={asset('/resume/resume-tech.pdf')}
 						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
 					>
 						<span className='flex items-center justify-center'>
@@ -148,10 +148,10 @@ function ResumePage(props: PageProps<Data>) {
 							</span>
 							<Icons.FileDownload className='inline-block w-6 h-6' />
 						</span>
-					</button>
-					<button
+					</a>
+					<a
 						type='button'
-						href='/resume/resume-music.pdf'
+						href={asset('/resume/resume-music.pdf')}
 						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
 					>
 						<span className='flex items-center justify-center'>
@@ -160,10 +160,10 @@ function ResumePage(props: PageProps<Data>) {
 							</span>
 							<Icons.FileDownload className='inline-block w-6 h-6' />
 						</span>
-					</button>
-					<button
+					</a>
+					<a
 						type='button'
-						href='/resume/resume-general.pdf'
+						href={asset('/resume/resume-general.pdf')}
 						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
 					>
 						<span className='flex items-center justify-center'>
@@ -172,7 +172,7 @@ function ResumePage(props: PageProps<Data>) {
 							</span>
 							<Icons.FileDownload className='inline-block w-6 h-6' />
 						</span>
-					</button>
+					</a>
 				</div>
 			</main>
 			<Footer />
