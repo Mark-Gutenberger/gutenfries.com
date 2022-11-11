@@ -58,17 +58,17 @@ function ResumePage(props: PageProps<Data>) {
 				{props.data.resume
 					? (
 						<>
-							<div className='w-full h-full p-2 pt-4 mt-4'>
+							<div className='w-full h-full p-2 pt-4 mt-4 bg-gray-200 rounded-lg shadow-xl dark:bg-gray-800'>
 								{/* navbar */}
 
 								<ul className='flex flex-row justify-start ml-5'>
 									<li>
 										<a
 											type='button'
-											className={`px-6 border-tl dark:border-blue-500 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+											className={`px-6 pt-1.5 pb-1 w-auto text-lg font-medium dark:text-gray-100 hover:bg-gray-300 active:bg-gray-500 active:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-900 text-gray-900 rounded-t-lg shadow-xl cursor-pointer ${
 												props.data.activeResume === 'techResume'
-													? 'bg-blue-500'
-													: 'bg-gray-800'
+													? 'dark:bg-gray-900 bg-gray-400'
+													: 'dark:bg-gray-800 bg-gray-200'
 											}`}
 											href='/resume?activeResume=tech'
 										>
@@ -78,10 +78,10 @@ function ResumePage(props: PageProps<Data>) {
 									<li>
 										<a
 											type='button'
-											className={`px-6 border-tl dark:border-blue-500 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+											className={`px-6 pt-1.5 pb-1 w-auto text-lg font-medium dark:text-gray-100 hover:bg-gray-300 active:bg-gray-500 active:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-900 text-gray-900 rounded-t-lg shadow-xl cursor-pointer ${
 												props.data.activeResume === 'musicResume'
-													? 'bg-blue-500'
-													: 'bg-gray-800'
+													? 'dark:bg-gray-900 bg-gray-400'
+													: 'dark:bg-gray-800 bg-gray-200'
 											}`}
 											href='/resume?activeResume=music'
 										>
@@ -91,10 +91,10 @@ function ResumePage(props: PageProps<Data>) {
 									<li>
 										<a
 											type='button'
-											className={`px-6 border-tl border-r dark:border-blue-500 pt-1.5 pb-1 w-auto text-lg font-medium text-gray-200 rounded-t-lg shadow-xl cursor-pointer ${
+											className={`px-6 pt-1.5 pb-1 w-auto text-lg font-medium dark:text-gray-100 hover:bg-gray-300 active:bg-gray-500 active:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-900 text-gray-900 rounded-t-lg shadow-xl cursor-pointer ${
 												props.data.activeResume === 'generalResume'
-													? 'bg-blue-500'
-													: 'bg-gray-800'
+													? 'dark:bg-gray-900 bg-gray-400'
+													: 'dark:bg-gray-800 bg-gray-200'
 											}`}
 											href='/resume?activeResume=general'
 										>
