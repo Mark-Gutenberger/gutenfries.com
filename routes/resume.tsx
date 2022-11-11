@@ -53,7 +53,7 @@ function ResumePage(props: PageProps<Data>) {
 
 			<main
 				id='main-content'
-				className='p-4 pt-20 text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
+				className='p-4 pt-20 text-gray-800 bg-gray-100 dark:text-gray-200 dark:bg-gray-900 '
 			>
 				{props.data.resume
 					? (
@@ -139,7 +139,7 @@ function ResumePage(props: PageProps<Data>) {
 					<a
 						type='button'
 						href={asset('/resume/resume-tech.pdf')}
-						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
+						className='px-6 py-2 mx-auto my-8 text-lg text-gray-100 bg-blue-500 rounded-lg dark:text-gray-800 sm:my-16 hover:bg-blue-600 active:bg-blue-700'
 					>
 						<span className='flex items-center justify-center'>
 							<span className='mr-1'>
@@ -151,7 +151,7 @@ function ResumePage(props: PageProps<Data>) {
 					<a
 						type='button'
 						href={asset('/resume/resume-music.pdf')}
-						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
+						className='px-6 py-2 mx-auto my-8 text-lg text-gray-100 bg-blue-500 rounded-lg dark:text-gray-800 sm:my-16 hover:bg-blue-600 active:bg-blue-700'
 					>
 						<span className='flex items-center justify-center'>
 							<span className='mr-1'>
@@ -163,7 +163,7 @@ function ResumePage(props: PageProps<Data>) {
 					<a
 						type='button'
 						href={asset('/resume/resume-general.pdf')}
-						className='px-6 py-2 mx-auto my-8 text-lg bg-blue-500 rounded-lg sm:my-16 hover:bg-blue-600 active:bg-blue-700'
+						className='px-6 py-2 mx-auto my-8 text-lg text-gray-100 bg-blue-500 rounded-lg dark:text-gray-800 sm:my-16 hover:bg-blue-600 active:bg-blue-700'
 					>
 						<span className='flex items-center justify-center'>
 							<span className='mr-1'>
