@@ -12,12 +12,18 @@ export const handler: Handlers = {
 			manifest,
 		);
 
+		// add all blog posts
 		for (const post of posts) {
 			sitemap.add(`/blog/${post.slug}`);
 		}
+
+		// add all resumes
 		sitemap.add('/resume?activeResume=techResume');
 		sitemap.add('/resume?activeResume=musicResume');
 		sitemap.add('/resume?activeResume=generalResume');
+
+		// remove the /home route, as it is a HTTP 307 redirect to /
+		sitemap.remove('/home');
 
 		return sitemap.render();
 	},

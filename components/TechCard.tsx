@@ -1,15 +1,15 @@
-import { VNode } from 'preact';
+import { ComponentChildren, JSX, VNode } from 'preact';
 
 function TechCard({
 	tech,
-	description,
 	icon,
 	techLink,
+	children,
 }: {
 	tech: string;
-	description: string;
-	icon: Element | VNode;
+	icon: JSX.Element | VNode;
 	techLink: string;
+	children: ComponentChildren;
 }) {
 	return (
 		<div className='p-4 xl:w-1/3 md:w-1/2'>
@@ -30,7 +30,7 @@ function TechCard({
 				</a>
 
 				<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
-					{description}
+					{children}
 				</p>
 			</div>
 		</div>

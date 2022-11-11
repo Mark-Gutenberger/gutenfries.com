@@ -5,6 +5,7 @@ import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { Navbar } from '@/components/Navbar.tsx';
 import { Footer } from '@/components/Footer.tsx';
+import { Link } from '@/components/Primitive/Link.tsx';
 import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
 import { TechCard } from '@/components/TechCard.tsx';
 import Icons from '@/utils/Icons.tsx';
@@ -166,43 +167,97 @@ function IndexPage(PageProps: PageProps) {
 							tech='Rust'
 							techLink='https://www.rust-lang.org/'
 							icon={<Icons.Package />}
-							description='TODO'
-						/>
-
-						<TechCard
-							tech='Deno'
-							techLink='https://deno.land/'
-							icon={<Icons.Deno />}
-							description='TODO'
-						/>
-
-						<TechCard
-							tech='(P)React'
-							techLink='https://preactjs.org/'
-							icon={<Icons.React />}
-							description='TODO'
-						/>
-
-						<TechCard
-							tech='Flutter'
-							techLink='https://flutter.dev/'
-							icon={<Icons.Flutter />}
-							description='TODO'
-						/>
-
-						<TechCard
-							tech='Docker'
-							techLink='https://www.docker.com/'
-							icon={<Icons.Docker />}
-							description='TODO'
-						/>
+						>
+							I am quite passionate about Rust and I am highly proficient at using it.
+							I have several
+							<Link
+								href='https://github.com/gutenfries?tab=repositories&language=rust'
+								ext
+							>
+								open source projects
+							</Link>
+							written in rust, an even
+							<Link href='https://github.com/gutenfries/gutenfries.deno.dev' ext>
+								this website
+							</Link>
+							is a little bit rusty.
+						</TechCard>
 
 						<TechCard
 							tech='C/C++'
 							techLink='https://www.cplusplus.com/'
 							icon={<Icons.C />}
-							description='TODO'
-						/>
+						>
+							TODO
+						</TechCard>
+
+						<TechCard
+							tech='Docker'
+							techLink='https://www.docker.com/'
+							icon={<Icons.Docker />}
+						>
+							TODO
+						</TechCard>
+
+						<TechCard
+							tech='Deno'
+							techLink='https://deno.land/'
+							icon={<Icons.Deno />}
+						>
+							I am passionate about Deno and am highly proficient at using it. I have
+							s
+							<Link
+								href='https://github.com/gutenfries'
+								ext
+							>
+								contributed to the Deno code base
+							</Link>
+							as well as created a number of deno projects, mostly availabe on GitHub.
+						</TechCard>
+
+						<TechCard
+							tech='(P)React'
+							techLink='https://preactjs.org/'
+							icon={<Icons.React />}
+						>
+							I am quite familiar with
+							<Link
+								href='https://reactjs.org/'
+								ext
+							>
+								React
+							</Link>
+							and
+							<Link
+								href='https://preactjs.org/'
+								ext
+							>
+								Preact
+							</Link>
+							ecosystems and best practices.
+							<Link
+								href='https://github.com/gutenfries/gutenfries.deno.dev'
+								ext
+							>
+								This website
+							</Link>
+							is built with Preact, utilizing the
+							<Link
+								href='https://fresh.deno.dev/'
+								ext
+							>
+								Fresh
+							</Link>
+							Deno framework.
+						</TechCard>
+
+						<TechCard
+							tech='Flutter'
+							techLink='https://flutter.dev/'
+							icon={<Icons.Flutter />}
+						>
+							TODO
+						</TechCard>
 					</div>
 				</section>
 				<section className='container px-5 py-32 mx-auto'>
