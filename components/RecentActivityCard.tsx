@@ -23,7 +23,7 @@ function RecentActivityCard({
 				</h3>
 			</div>
 			<div className='flex-grow'>
-				<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
+				<p className='text-base text-lg text-gray-300'>
 					{description}
 				</p>
 
