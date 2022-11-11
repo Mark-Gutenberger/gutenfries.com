@@ -74,16 +74,17 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Contact :mailbox:
 
-### Contributors :sparkles:
-
-- Mark Gutenberger
-
-  - :earth_americas: [gutenfries.deno.dev](https://gutenfries.deno.dev)
-  - :mailbox: [gutenfries@gmail.com](mailto:gutenfries@gmail.com)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- ### Contributors :sparkles: -->
+<!--  -->
+<!-- - Mark Gutenberger -->
+<!--  -->
+  <!-- - :earth_americas: [gutenfries.deno.dev](https://gutenfries.deno.dev) -->
+  <!-- - :mailbox: [gutenfries@gmail.com](mailto:gutenfries@gmail.com) -->
+<!--  -->
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 ## Acknowledgments :pray:
 
