@@ -39,6 +39,8 @@
 
 ## Google Lighthouse Stats
 
+_(May take a while to render)_
+
 <picture>
 	<source media="(prefers-color-scheme: dark)" srcset="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo&theme=dark">
 	<source media="(prefers-color-scheme: light)" srcset="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo">
@@ -75,7 +77,7 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Contact :mailbox:
+<!-- ## Contact :mailbox: -->
 
 <!-- ### Contributors :sparkles: -->
 <!--  -->
