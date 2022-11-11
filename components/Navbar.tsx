@@ -56,9 +56,9 @@ function Navbar(props: { active?: string }) {
 										className={classNames(
 											props.active?.toLowerCase() ===
 													item.name.toLowerCase()
-												? 'bg-gray-900 text-gray-200'
-												: 'text-gray-300 hover:bg-gray-700 active:bg-gray-900 hover:text-gray-200',
-											'rounded-lg text-xl font-medium p-3 mx-3 block',
+												? 'bg-gray-400 dark:bg-gray-900 dark:text-gray-200 text-gray-900'
+												: 'dark:text-gray-300 text-gray-800 dark:bg-gray-800 bg-gray-200 text-gray-900',
+											'rounded-lg text-xl font-medium p-3 mx-3 block hover:bg-gray-700 active:bg-gray-900 hover:text-gray-200',
 										)}
 										aria-current={props.active?.toLowerCase() ===
 											item.name.toLowerCase()}

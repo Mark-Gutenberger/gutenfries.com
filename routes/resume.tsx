@@ -44,6 +44,26 @@ export const handler: Handlers<Data> = {
 	},
 };
 
+interface ResumeNavItem {
+	resume: string;
+	href: string;
+}
+
+const resumeNavItems: ResumeNavItem[] = [
+	{
+		resume: 'Tech',
+		href: '/resume?activeResume=tech',
+	},
+	{
+		resume: 'General',
+		href: '/resume?activeResume=general',
+	},
+	{
+		resume: 'Music',
+		href: '/resume?activeResume=music',
+	},
+];
+
 function ResumePage(props: PageProps<Data>) {
 	return (
 		<>
@@ -62,45 +82,22 @@ function ResumePage(props: PageProps<Data>) {
 								{/* navbar */}
 
 								<ul className='flex flex-row justify-start ml-5'>
-									<li>
-										<a
-											type='button'
-											className={`px-6 pt-1.5 pb-1 w-auto text-lg font-medium dark:text-gray-100 hover:bg-gray-300 active:bg-gray-500 active:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-900 text-gray-900 rounded-t-lg shadow-xl cursor-pointer ${
-												props.data.activeResume === 'techResume'
-													? 'dark:bg-gray-900 bg-gray-400'
-													: 'dark:bg-gray-800 bg-gray-200'
-											}`}
-											href='/resume?activeResume=tech'
-										>
-											Tech
-										</a>
-									</li>
-									<li>
-										<a
-											type='button'
-											className={`px-6 pt-1.5 pb-1 w-auto text-lg font-medium dark:text-gray-100 hover:bg-gray-300 active:bg-gray-500 active:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-900 text-gray-900 rounded-t-lg shadow-xl cursor-pointer ${
-												props.data.activeResume === 'musicResume'
-													? 'dark:bg-gray-900 bg-gray-400'
-													: 'dark:bg-gray-800 bg-gray-200'
-											}`}
-											href='/resume?activeResume=music'
-										>
-											Music
-										</a>
-									</li>
-									<li>
-										<a
-											type='button'
-											className={`px-6 pt-1.5 pb-1 w-auto text-lg font-medium dark:text-gray-100 hover:bg-gray-300 active:bg-gray-500 active:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-900 text-gray-900 rounded-t-lg shadow-xl cursor-pointer ${
-												props.data.activeResume === 'generalResume'
-													? 'dark:bg-gray-900 bg-gray-400'
-													: 'dark:bg-gray-800 bg-gray-200'
-											}`}
-											href='/resume?activeResume=general'
-										>
-											General
-										</a>
-									</li>
+									{resumeNavItems.map((item) => (
+										<li>
+											<a
+												type='button'
+												className={`px-6 pt-1.5 pb-1 w-auto text-lg font-medium dark:text-gray-100 hover:bg-gray-700 hover:text-gray-200 active:bg-gray-900 active:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-900 text-gray-900 rounded-t-lg shadow-xl cursor-pointer ${
+													props.data.activeResume ===
+															`${item.resume.toLowerCase()}Resume`
+														? 'dark:bg-gray-900 bg-gray-400'
+														: 'dark:bg-gray-800 bg-gray-200'
+												}`}
+												href={item.href}
+											>
+												{item.resume}
+											</a>
+										</li>
+									))}
 								</ul>
 
 								{/* resume */}
