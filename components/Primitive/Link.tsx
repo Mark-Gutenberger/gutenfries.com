@@ -11,16 +11,30 @@ interface LinkProps {
 	u?: boolean;
 	/**
 	 * children to render inside the link
+	 * @default href
 	 */
 	children?: ComponentChildren;
 	/**
 	 * whether the link is ext or not
+	 * @default false
 	 */
 	ext?: boolean;
 	/**
 	 * whether to add spaces before and after the link or not
+	 * @default false
+	 * @see noEndSpace @see noStartSpace
 	 */
-	noSpace?: boolean;
+	noSpaces?: boolean;
+	/**
+	 * whether or not to add a space to the end of the link
+	 * @default flase
+	 */
+	noEndSpace?: boolean;
+	/**
+	 * whether or not to add a space to the start of the link
+	 * @default false
+	 */
+	noStartSpace?: boolean;
 }
 
 /**
@@ -41,9 +55,15 @@ export const Link = ({
 	children,
 	u,
 	ext,
-	noSpace,
+	noSpaces,
+	noEndSpace,
+	noStartSpace,
 }: LinkProps): JSX.Element => {
-	if (!noSpace) {
+	if (noEndSpace) {
+		children = ` ${children}`;
+	} else if (noStartSpace) {
+		children = `${children} `;
+	} else if (!noSpaces) {
 		children = ` ${children} `;
 	}
 

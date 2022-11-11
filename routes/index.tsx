@@ -152,11 +152,6 @@ function IndexPage(PageProps: PageProps) {
 				</section>
 				<section className='container px-5 py-32 mx-auto'>
 					<div className='flex flex-col flex-wrap items-center w-full mb-20 text-center'>
-						{
-							/* <h2 className='text-6xl font-semibold lg:text-7xl'>
-							Technologies
-						</h2> */
-						}
 						<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
 							Technologies
 							<Icons.PC className='inline-block w-16 h-16 ml-4 sm:h-14 sm:w-14' />
@@ -188,15 +183,54 @@ function IndexPage(PageProps: PageProps) {
 							techLink='https://www.cplusplus.com/'
 							icon={<Icons.C />}
 						>
-							TODO
+							I am quite comfortable using both C and C++ and have used both languages
+							independently, as well as with
+							<Link
+								href='https://www.rust-lang.org/'
+								noEndSpace
+								ext
+							>
+								Rust
+							</Link>
+
+							, utilizing the concepts of
+							<Link
+								href='https://wikipedia.org/wiki/Application_binary_interface'
+								ext
+							>
+								ABI
+							</Link>
+							and
+							<Link
+								href='https://wikipedia.org/wiki/Foreign_function_interface'
+								ext
+							>
+								FFI
+							</Link>. I am also familiar with common C/C++ tooling, such as
+							<Link
+								href='https://www.gnu.org/software/make/'
+								ext
+							>
+								Make
+							</Link>
+							and
+							<Link
+								href='https://cmake.org/'
+								ext
+							>
+								CMake
+							</Link>.
 						</TechCard>
 
 						<TechCard
-							tech='Docker'
-							techLink='https://www.docker.com/'
-							icon={<Icons.Docker />}
+							tech='Flutter'
+							techLink='https://flutter.dev/'
+							icon={<Icons.Flutter />}
 						>
-							TODO
+							I have used Flutter to build a few mobile apps, and have also used rust
+							through the Flutter FFI to build a flutter application with rust in the
+							backend. I am familiar with the Flutter tooling, ecosystem, and best
+							practices.
 						</TechCard>
 
 						<TechCard
@@ -252,11 +286,19 @@ function IndexPage(PageProps: PageProps) {
 						</TechCard>
 
 						<TechCard
-							tech='Flutter'
-							techLink='https://flutter.dev/'
-							icon={<Icons.Flutter />}
+							tech='Docker'
+							techLink='https://www.docker.com/'
+							icon={<Icons.Docker />}
 						>
-							TODO
+							I am proficient at using Docker and have used it in several projects,
+							including
+							<Link
+								href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/Dockerfile'
+								ext
+								noEndSpace
+							>
+								this website
+							</Link>.
 						</TechCard>
 					</div>
 				</section>
