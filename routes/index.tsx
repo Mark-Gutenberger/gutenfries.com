@@ -65,7 +65,7 @@ function IndexPage(PageProps: PageProps) {
 				<section className='container px-5 py-32 mx-auto'>
 					<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
 						Recent Activity
-						<Icons.Activity className='inline-block w-16 h-16 ml-4 sm:h-14 sm:w-14' />
+						<Icons.Activity className='hidden sm:inline-block ml-4 h-14 w-14' />
 					</h2>
 
 					<div className='hidden h-10 mx-auto mb-10 border-t-2 border-blue-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
@@ -154,7 +154,7 @@ function IndexPage(PageProps: PageProps) {
 					<div className='flex flex-col flex-wrap items-center w-full mb-20 text-center'>
 						<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
 							Technologies
-							<Icons.PC className='inline-block w-16 h-16 ml-4 sm:h-14 sm:w-14' />
+							<Icons.PC className='hidden sm:inline-block ml-4 h-14 w-14' />
 						</h2>
 					</div>
 					<div className='flex flex-wrap -m-4'>
@@ -239,7 +239,6 @@ function IndexPage(PageProps: PageProps) {
 							icon={<Icons.Deno />}
 						>
 							I am passionate about Deno and am highly proficient at using it. I have
-							s
 							<Link
 								href='https://github.com/gutenfries'
 								ext
