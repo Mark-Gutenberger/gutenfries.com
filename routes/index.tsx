@@ -10,6 +10,8 @@ import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
 import { TechCard } from '@/components/TechCard.tsx';
 import Icons from '@/utils/Icons.tsx';
 import TypingCodeBlock from '@/islands/TypingCodeBlock.tsx';
+import { asset } from 'https://deno.land/x/fresh@1.1.2/runtime.ts';
+import ImageSection from '../islands/ImageSection.tsx';
 
 function IndexPage(PageProps: PageProps) {
 	return (
@@ -98,19 +100,23 @@ function IndexPage(PageProps: PageProps) {
 					</div>
 				</section>
 				<section className='container flex flex-wrap px-10 py-32 mx-auto'>
-					<div className='w-full mb-64 overflow-hidden lg:my-auto lg:w-1/2 xl:py-12 xl:mb-10'>
-						<img
-							className='w-full rounded-lg shadow-lg'
-							src='https://tailwindcss.com/img/card-top.jpg'
-							alt='Sunset in the mountains'
-						/>
-						<div className='px-6 py-4 mx-6 bg-gray-600 bg-opacity-25 rounded-b-lg shadow-lg'>
-							<h3 className='mb-2 text-xl font-bold'>Image Title</h3>
-							<p className='text-base text-gray-700 dark:text-gray-300'>
-								Text explaining that I have not yet finished this...
-							</p>
-						</div>
-					</div>
+					<ImageSection
+						images={[
+							{
+								src: asset('/images/music/stock/snare-line.jpg'),
+								alt: 'drum corps snare line',
+								title: 'Drum Corps & Snareline',
+								description:
+									'I am passionate about corps snareline & rudimental drumming and have been marching for several years.',
+							},
+							{
+								src: asset('/images/dev/stock/rust-code.png'),
+								alt: 'drum corps snare line',
+								title: 'TITLE',
+								description: 'DESC 2',
+							},
+						]}
+					/>
 					<div className='flex flex-col flex-wrap mb-10 text-center lg:py-6 lg:w-1/2 lg:pl-12 lg:text-left'>
 						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
 							<h2 className='text-6xl font-semibold lg:text-7xl'>
@@ -305,12 +311,26 @@ function IndexPage(PageProps: PageProps) {
 					<p className='flex items-center justify-center w-full mx-auto xl:w-1/2 lg:w-3/4'>
 						<Icons.Quote className='inline-block w-8 h-8 mb-8' />
 						<blockquote className='text-lg text-center'>
-							My mission in development is ...
+							My mission in software engineering is to solve unique problems with
+							technology. I am passionate about
+							<Link
+								href='https://rust-lang.org/'
+								ext
+							>
+								Rust
+							</Link>
+							and love using it to write fast, safe, and reliable software. I believe
+							that technology should be accessible to everyone, and I am committed to
+							creating software that is usable by anyone, without sacrificing
+							performance, quality, or security.
 						</blockquote>
 						<hr className='w-2/5 h-0 mx-auto my-5 bg-blue-500 border-blue-500 rounded-lg border-1' />
-						<h2 className='text-xl text-center'>
+						<h2 className='text-3xl text-center'>
 							Mark Gutenberger
 						</h2>
+						<p className='text-lg text-center'>
+							Software Engineer
+						</p>
 					</p>
 				</section>
 			</main>
