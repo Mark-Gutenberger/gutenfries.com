@@ -1,5 +1,5 @@
-import { PageProps } from '$fresh/server.ts';
-// import { asset } from '$fresh/runtime.ts';
+import { Handlers, PageProps } from '$fresh/server.ts';
+import { asset } from '$fresh/runtime.ts';
 
 import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
@@ -10,10 +10,33 @@ import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
 import { TechCard } from '@/components/TechCard.tsx';
 import Icons from '@/utils/Icons.tsx';
 import TypingCodeBlock from '@/islands/TypingCodeBlock.tsx';
-import { asset } from 'https://deno.land/x/fresh@1.1.2/runtime.ts';
-import ImageSection from '../islands/ImageSection.tsx';
+import ImageSection from '@/islands/ImageSection.tsx';
 
-function IndexPage(PageProps: PageProps) {
+type Content = 'tech' | 'music';
+interface Data {
+	content: Content;
+}
+
+export const handler: Handlers<Data> = {
+	GET(req, ctx) {
+		const url = new URL(req.url);
+		let content = url.searchParams.get('content') as Content ?? 'tech' as Content;
+
+		// don't allow invalid values
+		if (!['tech', 'music'].includes(content)) {
+			content = 'tech';
+		}
+
+		return ctx.render({
+			...ctx.state,
+			content,
+		});
+	},
+};
+
+function IndexPage(PageProps: PageProps<Data>) {
+	const { content } = PageProps.data;
+
 	return (
 		<>
 			<Head PageProps={PageProps} />
