@@ -16,8 +16,9 @@ import * as $9 from './routes/license.tsx';
 import * as $10 from './routes/privacy-policy.tsx';
 import * as $11 from './routes/resume.tsx';
 import * as $12 from './routes/sitemap.xml.ts';
-import * as $$0 from './islands/SearchBar.tsx';
-import * as $$1 from './islands/TypingCodeBlock.tsx';
+import * as $$0 from './islands/ImageSection.tsx';
+import * as $$1 from './islands/SearchBar.tsx';
+import * as $$2 from './islands/TypingCodeBlock.tsx';
 
 const manifest = {
 	routes: {
@@ -36,8 +37,9 @@ const manifest = {
 		'./routes/sitemap.xml.ts': $12,
 	},
 	islands: {
-		'./islands/SearchBar.tsx': $$0,
-		'./islands/TypingCodeBlock.tsx': $$1,
+		'./islands/ImageSection.tsx': $$0,
+		'./islands/SearchBar.tsx': $$1,
+		'./islands/TypingCodeBlock.tsx': $$2,
 	},
 	baseUrl: import.meta.url,
 	config,
