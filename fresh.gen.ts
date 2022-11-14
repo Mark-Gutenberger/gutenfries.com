@@ -19,7 +19,8 @@ import * as $12 from './routes/sitemap.xml.ts';
 import * as $$0 from './islands/ImageSection.tsx';
 import * as $$1 from './islands/SearchBar.tsx';
 import * as $$2 from './islands/SnareAnimation.tsx';
-import * as $$3 from './islands/TypingCodeBlock.tsx';
+import * as $$3 from './islands/Theme.tsx';
+import * as $$4 from './islands/TypingCodeBlock.tsx';
 
 const manifest = {
 	routes: {
@@ -41,7 +42,8 @@ const manifest = {
 		'./islands/ImageSection.tsx': $$0,
 		'./islands/SearchBar.tsx': $$1,
 		'./islands/SnareAnimation.tsx': $$2,
-		'./islands/TypingCodeBlock.tsx': $$3,
+		'./islands/Theme.tsx': $$3,
+		'./islands/TypingCodeBlock.tsx': $$4,
 	},
 	baseUrl: import.meta.url,
 	config,
