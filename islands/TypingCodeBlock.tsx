@@ -112,7 +112,7 @@ function TypingCodeBlock(
 				href={asset('/prism/10x-dark.css')}
 			/>
 
-			<pre className='text-base'>
+			<pre className='text-base w-full h-full'>
 
 				<code className={`language-${language}`}>
 					{content + '\n'}

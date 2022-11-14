@@ -5,31 +5,48 @@ import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { Navbar } from '@/components/Navbar.tsx';
 import { Footer } from '@/components/Footer.tsx';
-import { Link } from '@/components/Primitive/Link.tsx';
+import { Link } from '@/components/JSX/Link.tsx';
+import { ContentPicker } from '@/components/ContentPicker.tsx';
 import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
 import { TechCard } from '@/components/TechCard.tsx';
 import Icons from '@/utils/Icons.tsx';
 import TypingCodeBlock from '@/islands/TypingCodeBlock.tsx';
+import SnareAnimation from '@/islands/SnareAnimation.tsx';
 import ImageSection from '@/islands/ImageSection.tsx';
 
-type Content = 'tech' | 'music';
+type Content = 'tech' | 'music' | 'undefined' | undefined;
 interface Data {
 	content: Content;
+	showContentPicker: boolean;
 }
 
 export const handler: Handlers<Data> = {
 	GET(req, ctx) {
 		const url = new URL(req.url);
-		let content = url.searchParams.get('content') as Content ?? 'tech' as Content;
+		const urlContent = url.searchParams.get('content') as Content ?? undefined as Content;
+
+		let content = urlContent ?? undefined;
+		let showContentPicker = true;
+
+		if (content && ['tech', 'music', 'undefined'].includes(content)) {
+			showContentPicker = false;
+		}
 
 		// don't allow invalid values
-		if (!['tech', 'music'].includes(content)) {
-			content = 'tech';
+		if (content && !['tech', 'music'].includes(content)) {
+			// pick random
+			content = ['tech', 'music'][Math.floor(Math.random() * 2)] as Content;
+		} else if (!content) {
+			// pick random
+			content = ['tech', 'music'][Math.floor(Math.random() * 2)] as Content;
 		}
+
+		console.log({ content });
 
 		return ctx.render({
 			...ctx.state,
 			content,
+			showContentPicker,
 		});
 	},
 };
@@ -45,6 +62,10 @@ function IndexPage(PageProps: PageProps<Data>) {
 
 			<NoScript />
 
+			<ContentPicker
+				hide={!PageProps.data.showContentPicker}
+			/>
+
 			<main
 				id='main-content'
 				className='text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
@@ -54,74 +75,45 @@ function IndexPage(PageProps: PageProps<Data>) {
 						Mark Gutenberger
 					</h1>
 					<div className='w-5/6 lg:w-1/2 md:w-full'>
-						<TypingCodeBlock
-							language='rust'
-							initialTypingCode='const MARK: &str ='
-							typingCode={[
-								'"Software Developer"',
-								'"Musician"',
-								'"Designer"',
-							]}
-							code={[
-								'// like the theme? Try it!',
-								'// https://github.com/gutenfries/10x-dark-theme',
-								'pub struct Mark {',
-								'	email: String,',
-								'	loves_dinosaurs: bool,',
-								'	skills: Vec<&str>,',
-								'}',
-								'impl Mark {',
-								'	pub fn about() -> Mark {',
-								'		Mark {',
-								'			email: String::from("gutenfries@gmail.com"),',
-								'			loves_dinosaurs: true,',
-								'			skills: vec![',
-								'				"Rust", "C/C++",',
-								'				"Deno", "Flutter",',
-								'				"(P)react", "HTML & CSS",',
-								'			],',
-								'		}',
-								'	}',
-								'}',
-							]}
-						/>
+						{/* display if content === tech */}
+						{content === 'tech' && (
+							<TypingCodeBlock
+								language='rust'
+								initialTypingCode='const MARK: &str ='
+								typingCode={[
+									'"Software Developer"',
+									'"Musician"',
+									'"Designer"',
+								]}
+								code={[
+									'// like the theme? Try it!',
+									'// https://github.com/gutenfries/10x-dark-theme',
+									'pub struct Mark {',
+									'	email: String,',
+									'	loves_dinosaurs: bool,',
+									'	skills: Vec<&str>,',
+									'}',
+									'impl Mark {',
+									'	pub fn about() -> Mark {',
+									'		Mark {',
+									'			email: String::from("gutenfries@gmail.com"),',
+									'			loves_dinosaurs: true,',
+									'			skills: vec![',
+									'				"Rust", "C/C++",',
+									'				"Deno", "Flutter",',
+									'				"(P)react", "HTML & CSS",',
+									'			],',
+									'		}',
+									'	}',
+									'}',
+								]}
+							/>
+						)}
+						{/* display if content === music */}
+						{content === 'music' && <SnareAnimation />}
 					</div>
 				</section>
-				<section className='container px-5 py-32 mx-auto'>
-					<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
-						Recent Activity
-						<Icons.Activity className='hidden sm:inline-block ml-4 h-14 w-14' />
-					</h2>
 
-					<div className='hidden h-10 mx-auto mb-10 border-t-2 border-blue-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
-
-					<div className='flex flex-wrap -m-4 text-gray-100 dark:border-gray-300'>
-						<div className='p-4 md:w-1/3'>
-							<RecentActivityCard
-								title='Personal Website'
-								description='I built my personal website with Fresh, Deno, Preact, twind (tailwind lib), and time.'
-								source='https://github.com/gutenfries/gutenfries.deno.dev'
-								icon={<Icons.App />}
-							/>
-						</div>
-						<div className='p-4 md:w-1/3'>
-							<RecentActivityCard
-								title='C++ Tetris'
-								description='I created Tetris in C++ using std and ncurses, utilizing the Object-Oriented language features of C++.'
-								source='https://github.com/gutenfries/cpp-tetris'
-								icon={<Icons.BorderAll />}
-							/>
-						</div>
-						<div className='p-4 md:w-1/3'>
-							<RecentActivityCard
-								title='Rust Dino Game'
-								description='I built a mock of the chrome dino game in rust, using lib-bracket as the graphics library.'
-								source='https://github.com/gutenfries/dino_rs'
-								icon={<Icons.Terminal />}
-							/>
-						</div>
-					</div>
-				</section>
 				<section className='container flex flex-wrap px-10 py-32 mx-auto'>
 					<ImageSection
 						images={[
@@ -176,6 +168,41 @@ function IndexPage(PageProps: PageProps<Data>) {
 								understand what makes a great product and how to design, market,
 								monetize, and distribute it.
 							</p>
+						</div>
+					</div>
+				</section>
+				<section className='container px-5 py-32 mx-auto'>
+					<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
+						Recent Activity
+						<Icons.Activity className='hidden sm:inline-block ml-4 h-14 w-14' />
+					</h2>
+
+					<div className='hidden h-10 mx-auto mb-10 border-t-2 border-blue-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
+
+					<div className='flex flex-wrap -m-4 text-gray-100 dark:border-gray-300'>
+						<div className='p-4 md:w-1/3'>
+							<RecentActivityCard
+								title='Personal Website'
+								description='I built my personal website with Fresh, Deno, Preact, twind (tailwind lib), and time.'
+								source='https://github.com/gutenfries/gutenfries.deno.dev'
+								icon={<Icons.App />}
+							/>
+						</div>
+						<div className='p-4 md:w-1/3'>
+							<RecentActivityCard
+								title='C++ Tetris'
+								description='I created Tetris in C++ using std and ncurses, utilizing the Object-Oriented language features of C++.'
+								source='https://github.com/gutenfries/cpp-tetris'
+								icon={<Icons.BorderAll />}
+							/>
+						</div>
+						<div className='p-4 md:w-1/3'>
+							<RecentActivityCard
+								title='Rust Dino Game'
+								description='I built a mock of the chrome dino game in rust, using lib-bracket as the graphics library.'
+								source='https://github.com/gutenfries/dino_rs'
+								icon={<Icons.Terminal />}
+							/>
 						</div>
 					</div>
 				</section>
