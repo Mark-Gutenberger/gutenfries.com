@@ -7,12 +7,12 @@ interface IconProps {
 }
 
 class Icons {
-	static App = (_: IconProps): JSX.Element => {
+	public static App = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -32,12 +32,12 @@ class Icons {
 		);
 	};
 
-	static ExternalLink = (_: IconProps): JSX.Element => {
+	public static ExternalLink = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -57,12 +57,12 @@ class Icons {
 		);
 	};
 
-	static User = (_: IconProps): JSX.Element => {
+	public static User = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -81,12 +81,12 @@ class Icons {
 		);
 	};
 
-	static Accessibility = (_: IconProps): JSX.Element => {
+	public static Accessibility = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -106,12 +106,12 @@ class Icons {
 		);
 	};
 
-	static Mail = (_: IconProps): JSX.Element => {
+	public static Mail = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -130,12 +130,12 @@ class Icons {
 		);
 	};
 
-	static Twitter = (_: IconProps): JSX.Element => {
+	public static Twitter = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -154,12 +154,12 @@ class Icons {
 		);
 	};
 
-	static Peerlist = (_: IconProps): JSX.Element => {
+	public static Peerlist = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -178,12 +178,12 @@ class Icons {
 		);
 	};
 
-	static Github = (_: IconProps): JSX.Element => {
+	public static Github = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -202,12 +202,12 @@ class Icons {
 		);
 	};
 
-	static LinkedIn = (_: IconProps): JSX.Element => {
+	public static LinkedIn = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -229,12 +229,12 @@ class Icons {
 		);
 	};
 
-	static Codepen = (_: IconProps): JSX.Element => {
+	public static Codepen = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -257,12 +257,12 @@ class Icons {
 		);
 	};
 
-	static Wakatime = (_: IconProps): JSX.Element => {
+	public static Wakatime = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'none'}
-				fill={_.fill ?? 'currentColor'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'none'}
+				fill={_?.fill ?? 'currentColor'}
 				viewBox='0 0 24 24'
 				width={24}
 				height={24}
@@ -279,12 +279,12 @@ class Icons {
 		);
 	};
 
-	static Loader_1 = (_: IconProps): JSX.Element => {
+	public static Loader_1 = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -303,12 +303,12 @@ class Icons {
 		);
 	};
 
-	static Loader_2 = (_: IconProps): JSX.Element => {
+	public static Loader_2 = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -328,12 +328,12 @@ class Icons {
 		);
 	};
 
-	static Loader_3 = (_: IconProps): JSX.Element => {
+	public static Loader_3 = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -358,12 +358,12 @@ class Icons {
 		);
 	};
 
-	static Search = (_: IconProps): JSX.Element => {
+	public static Search = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -382,12 +382,12 @@ class Icons {
 		);
 	};
 
-	static Close = (_: IconProps): JSX.Element => {
+	public static Close = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -406,12 +406,12 @@ class Icons {
 		);
 	};
 
-	static BorderAll = (_: IconProps): JSX.Element => {
+	public static BorderAll = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -431,12 +431,12 @@ class Icons {
 		);
 	};
 
-	static Terminal = (_: IconProps): JSX.Element => {
+	public static Terminal = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -456,12 +456,12 @@ class Icons {
 		);
 	};
 
-	static BlockQuote = (_: IconProps): JSX.Element => {
+	public static BlockQuote = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -484,12 +484,12 @@ class Icons {
 		);
 	};
 
-	static Instagram = (_: IconProps): JSX.Element => {
+	public static Instagram = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -509,12 +509,12 @@ class Icons {
 		);
 	};
 
-	static File = (_: IconProps): JSX.Element => {
+	public static File = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -534,12 +534,12 @@ class Icons {
 		);
 	};
 
-	static FileText = (_: IconProps): JSX.Element => {
+	public static FileText = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -561,12 +561,12 @@ class Icons {
 		);
 	};
 
-	static GitHub = (_: IconProps): JSX.Element => {
+	public static GitHub = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -585,12 +585,12 @@ class Icons {
 		);
 	};
 
-	static GooglePlay = (_: IconProps): JSX.Element => {
+	public static GooglePlay = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -611,12 +611,12 @@ class Icons {
 		);
 	};
 
-	static VSCode = (_: IconProps): JSX.Element => {
+	public static VSCode = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -637,12 +637,12 @@ class Icons {
 		);
 	};
 
-	static VisualStudio = (_: IconProps): JSX.Element => {
+	public static VisualStudio = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -660,12 +660,12 @@ class Icons {
 		);
 	};
 
-	static Phone = (_: IconProps): JSX.Element => {
+	public static Phone = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -684,12 +684,12 @@ class Icons {
 		);
 	};
 
-	static TikTok = (_: IconProps): JSX.Element => {
+	public static TikTok = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -707,12 +707,12 @@ class Icons {
 		);
 	};
 
-	static Article = (_: IconProps): JSX.Element => {
+	public static Article = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -733,12 +733,12 @@ class Icons {
 		);
 	};
 
-	static Certificate = (_: IconProps): JSX.Element => {
+	public static Certificate = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -762,12 +762,12 @@ class Icons {
 		);
 	};
 
-	static FileCertificate = (_: IconProps): JSX.Element => {
+	public static FileCertificate = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -788,12 +788,12 @@ class Icons {
 		);
 	};
 
-	static Spotify = (_: IconProps): JSX.Element => {
+	public static Spotify = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -814,12 +814,12 @@ class Icons {
 		);
 	};
 
-	static Tabler = (_: IconProps): JSX.Element => {
+	public static Tabler = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -839,12 +839,12 @@ class Icons {
 		);
 	};
 
-	static Tailwind = (_: IconProps): JSX.Element => {
+	public static Tailwind = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -863,12 +863,12 @@ class Icons {
 		);
 	};
 
-	static Deno = (_: IconProps): JSX.Element => {
+	public static Deno = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -889,12 +889,12 @@ class Icons {
 		);
 	};
 
-	static World = (_: IconProps): JSX.Element => {
+	public static World = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -916,12 +916,12 @@ class Icons {
 		);
 	};
 
-	static Calendar = (_: IconProps): JSX.Element => {
+	public static Calendar = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -944,12 +944,12 @@ class Icons {
 		);
 	};
 
-	static React = (_: IconProps): JSX.Element => {
+	public static React = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -979,12 +979,12 @@ class Icons {
 		);
 	};
 
-	static Code = (_: IconProps): JSX.Element => {
+	public static Code = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1004,12 +1004,12 @@ class Icons {
 		);
 	};
 
-	static Cookie = (_: IconProps): JSX.Element => {
+	public static Cookie = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1033,12 +1033,12 @@ class Icons {
 		);
 	};
 
-	static PC = (_: IconProps): JSX.Element => {
+	public static PC = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1061,12 +1061,12 @@ class Icons {
 		);
 	};
 
-	static History = (_: IconProps): JSX.Element => {
+	public static History = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1085,12 +1085,12 @@ class Icons {
 		);
 	};
 
-	static Activity = (_: IconProps): JSX.Element => {
+	public static Activity = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1108,12 +1108,12 @@ class Icons {
 		);
 	};
 
-	static Home = (_: IconProps): JSX.Element => {
+	public static Home = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1133,12 +1133,12 @@ class Icons {
 		);
 	};
 
-	static FileDownload = (_: IconProps): JSX.Element => {
+	public static FileDownload = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1160,12 +1160,12 @@ class Icons {
 		);
 	};
 
-	static RSS = (_: IconProps): JSX.Element => {
+	public static RSS = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1185,12 +1185,12 @@ class Icons {
 		);
 	};
 
-	static Quote = (_: IconProps): JSX.Element => {
+	public static Quote = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1211,12 +1211,12 @@ class Icons {
 		);
 	};
 
-	static ChevronDown = (_: IconProps): JSX.Element => {
+	public static ChevronDown = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1234,12 +1234,12 @@ class Icons {
 		);
 	};
 
-	static ChevronLeft = (_: IconProps): JSX.Element => {
+	public static ChevronLeft = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1257,12 +1257,12 @@ class Icons {
 		);
 	};
 
-	static ChevronRight = (_: IconProps): JSX.Element => {
+	public static ChevronRight = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1280,12 +1280,12 @@ class Icons {
 		);
 	};
 
-	static ChevronUp = (_: IconProps): JSX.Element => {
+	public static ChevronUp = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1303,12 +1303,12 @@ class Icons {
 		);
 	};
 
-	static Circle = (_: IconProps): JSX.Element => {
+	public static Circle = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1326,12 +1326,12 @@ class Icons {
 		);
 	};
 
-	static Package = (_: IconProps): JSX.Element => {
+	public static Package = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1353,12 +1353,12 @@ class Icons {
 		);
 	};
 
-	static Flutter = (_: IconProps): JSX.Element => {
+	public static Flutter = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1377,12 +1377,12 @@ class Icons {
 		);
 	};
 
-	static Docker = (_: IconProps): JSX.Element => {
+	public static Docker = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}
@@ -1409,12 +1409,12 @@ class Icons {
 		);
 	};
 
-	static C = (_: IconProps): JSX.Element => {
+	public static C = (_?: IconProps): JSX.Element => {
 		return (
 			<svg
-				className={_.className ?? undefined}
-				stroke={_.stroke ?? 'currentColor'}
-				fill={_.fill ?? 'none'}
+				className={_?.className ?? undefined}
+				stroke={_?.stroke ?? 'currentColor'}
+				fill={_?.fill ?? 'none'}
 				xmlns='http://www.w3.org/2000/svg'
 				width={24}
 				height={24}

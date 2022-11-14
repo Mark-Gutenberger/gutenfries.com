@@ -45,8 +45,6 @@ export const handler: Handlers<Data> = {
 			content = 'music';
 		}
 
-		console.log({ content });
-
 		return ctx.render({
 			...ctx.state,
 			content,
