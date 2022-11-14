@@ -1,3 +1,5 @@
+import { JSX } from 'preact';
+
 interface IconProps {
 	className?: string;
 	stroke?: string;
@@ -5,7 +7,7 @@ interface IconProps {
 }
 
 class Icons {
-	static App = (_: IconProps) => {
+	static App = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -30,7 +32,7 @@ class Icons {
 		);
 	};
 
-	static ExternalLink = (_: IconProps) => {
+	static ExternalLink = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -55,7 +57,7 @@ class Icons {
 		);
 	};
 
-	static User = (_: IconProps) => {
+	static User = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -79,7 +81,7 @@ class Icons {
 		);
 	};
 
-	static Accessibility = (_: IconProps) => {
+	static Accessibility = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -104,7 +106,7 @@ class Icons {
 		);
 	};
 
-	static Mail = (_: IconProps) => {
+	static Mail = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -128,7 +130,7 @@ class Icons {
 		);
 	};
 
-	static Twitter = (_: IconProps) => {
+	static Twitter = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -152,7 +154,7 @@ class Icons {
 		);
 	};
 
-	static Peerlist = (_: IconProps) => {
+	static Peerlist = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -176,7 +178,7 @@ class Icons {
 		);
 	};
 
-	static Github = (_: IconProps) => {
+	static Github = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -200,7 +202,7 @@ class Icons {
 		);
 	};
 
-	static LinkedIn = (_: IconProps) => {
+	static LinkedIn = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -227,7 +229,7 @@ class Icons {
 		);
 	};
 
-	static Codepen = (_: IconProps) => {
+	static Codepen = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -255,7 +257,7 @@ class Icons {
 		);
 	};
 
-	static Wakatime = (_: IconProps) => {
+	static Wakatime = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -277,7 +279,7 @@ class Icons {
 		);
 	};
 
-	static Loader_1 = (_: IconProps) => {
+	static Loader_1 = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -301,7 +303,7 @@ class Icons {
 		);
 	};
 
-	static Loader_2 = (_: IconProps) => {
+	static Loader_2 = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -326,7 +328,7 @@ class Icons {
 		);
 	};
 
-	static Loader_3 = (_: IconProps) => {
+	static Loader_3 = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -356,7 +358,7 @@ class Icons {
 		);
 	};
 
-	static Search = (_: IconProps) => {
+	static Search = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -380,7 +382,7 @@ class Icons {
 		);
 	};
 
-	static Close = (_: IconProps) => {
+	static Close = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -404,7 +406,7 @@ class Icons {
 		);
 	};
 
-	static BorderAll = (_: IconProps) => {
+	static BorderAll = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -429,7 +431,7 @@ class Icons {
 		);
 	};
 
-	static Terminal = (_: IconProps) => {
+	static Terminal = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -454,7 +456,7 @@ class Icons {
 		);
 	};
 
-	static BlockQuote = (_: IconProps) => {
+	static BlockQuote = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -482,7 +484,7 @@ class Icons {
 		);
 	};
 
-	static Instagram = (_: IconProps) => {
+	static Instagram = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -507,7 +509,7 @@ class Icons {
 		);
 	};
 
-	static File = (_: IconProps) => {
+	static File = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -532,7 +534,7 @@ class Icons {
 		);
 	};
 
-	static FileText = (_: IconProps) => {
+	static FileText = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -559,7 +561,7 @@ class Icons {
 		);
 	};
 
-	static GitHub = (_: IconProps) => {
+	static GitHub = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -583,7 +585,7 @@ class Icons {
 		);
 	};
 
-	static GooglePlay = (_: IconProps) => {
+	static GooglePlay = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -609,7 +611,7 @@ class Icons {
 		);
 	};
 
-	static VSCode = (_: IconProps) => {
+	static VSCode = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -635,7 +637,7 @@ class Icons {
 		);
 	};
 
-	static VisualStudio = (_: IconProps) => {
+	static VisualStudio = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -658,7 +660,7 @@ class Icons {
 		);
 	};
 
-	static Phone = (_: IconProps) => {
+	static Phone = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -682,7 +684,7 @@ class Icons {
 		);
 	};
 
-	static TikTok = (_: IconProps) => {
+	static TikTok = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -705,7 +707,7 @@ class Icons {
 		);
 	};
 
-	static Article = (_: IconProps) => {
+	static Article = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -731,7 +733,7 @@ class Icons {
 		);
 	};
 
-	static Certificate = (_: IconProps) => {
+	static Certificate = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -760,7 +762,7 @@ class Icons {
 		);
 	};
 
-	static FileCertificate = (_: IconProps) => {
+	static FileCertificate = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -786,7 +788,7 @@ class Icons {
 		);
 	};
 
-	static Spotify = (_: IconProps) => {
+	static Spotify = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -812,7 +814,7 @@ class Icons {
 		);
 	};
 
-	static Tabler = (_: IconProps) => {
+	static Tabler = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -837,7 +839,7 @@ class Icons {
 		);
 	};
 
-	static Tailwind = (_: IconProps) => {
+	static Tailwind = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -861,7 +863,7 @@ class Icons {
 		);
 	};
 
-	static Deno = (_: IconProps) => {
+	static Deno = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -887,7 +889,7 @@ class Icons {
 		);
 	};
 
-	static World = (_: IconProps) => {
+	static World = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -914,7 +916,7 @@ class Icons {
 		);
 	};
 
-	static Calendar = (_: IconProps) => {
+	static Calendar = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -942,7 +944,7 @@ class Icons {
 		);
 	};
 
-	static React = (_: IconProps) => {
+	static React = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -977,7 +979,7 @@ class Icons {
 		);
 	};
 
-	static Code = (_: IconProps) => {
+	static Code = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1002,7 +1004,7 @@ class Icons {
 		);
 	};
 
-	static Cookie = (_: IconProps) => {
+	static Cookie = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1031,7 +1033,7 @@ class Icons {
 		);
 	};
 
-	static PC = (_: IconProps) => {
+	static PC = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1059,7 +1061,7 @@ class Icons {
 		);
 	};
 
-	static History = (_: IconProps) => {
+	static History = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1083,7 +1085,7 @@ class Icons {
 		);
 	};
 
-	static Activity = (_: IconProps) => {
+	static Activity = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1106,7 +1108,7 @@ class Icons {
 		);
 	};
 
-	static Home = (_: IconProps) => {
+	static Home = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1131,7 +1133,7 @@ class Icons {
 		);
 	};
 
-	static FileDownload = (_: IconProps) => {
+	static FileDownload = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1158,7 +1160,7 @@ class Icons {
 		);
 	};
 
-	static RSS = (_: IconProps) => {
+	static RSS = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1183,7 +1185,7 @@ class Icons {
 		);
 	};
 
-	static Quote = (_: IconProps) => {
+	static Quote = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1209,7 +1211,7 @@ class Icons {
 		);
 	};
 
-	static ChevronDown = (_: IconProps) => {
+	static ChevronDown = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1232,7 +1234,7 @@ class Icons {
 		);
 	};
 
-	static ChevronLeft = (_: IconProps) => {
+	static ChevronLeft = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1255,7 +1257,7 @@ class Icons {
 		);
 	};
 
-	static ChevronRight = (_: IconProps) => {
+	static ChevronRight = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1278,7 +1280,7 @@ class Icons {
 		);
 	};
 
-	static ChevronUp = (_: IconProps) => {
+	static ChevronUp = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1301,7 +1303,7 @@ class Icons {
 		);
 	};
 
-	static Circle = (_: IconProps) => {
+	static Circle = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1324,7 +1326,7 @@ class Icons {
 		);
 	};
 
-	static Package = (_: IconProps) => {
+	static Package = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1351,7 +1353,7 @@ class Icons {
 		);
 	};
 
-	static Flutter = (_: IconProps) => {
+	static Flutter = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1375,7 +1377,7 @@ class Icons {
 		);
 	};
 
-	static Docker = (_: IconProps) => {
+	static Docker = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1407,7 +1409,7 @@ class Icons {
 		);
 	};
 
-	static C = (_: IconProps) => {
+	static C = (_: IconProps): JSX.Element => {
 		return (
 			<svg
 				className={_.className ?? undefined}
@@ -1430,10 +1432,6 @@ class Icons {
 			</svg>
 		);
 	};
-
-	Icon(_icon: string) {
-		return null;
-	}
 }
 
 export default Icons;
