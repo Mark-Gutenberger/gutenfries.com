@@ -15,13 +15,13 @@ const ContentPicker = ({ hide }: { hide: boolean }) => {
 				{/* close button */}
 				<div className='flex justify-end mt-4 mr-4 flex-grow'>
 					<div className='flex flex-row w-full -mr-12 flex justify-center items-center'>
-						<h2 className='my-2 text-3xl'>
+						<h2 className='my-2 text-3xl text-gray-900 dark:text-gray-100'>
 							What kind of content are you looking for?
 						</h2>
 					</div>
 					<a
 						href='/?content=undefined'
-						className='text-black'
+						className='text-gray-900 dark:text-gray-100'
 					>
 						<Icons.Close />
 						<span className='sr-only'>Close</span>
