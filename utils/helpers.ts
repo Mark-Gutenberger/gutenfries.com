@@ -1,18 +1,17 @@
 /**
- * Joined two or more JSX classNames
- * @param {string[]} classes
- * @returns {string} {className}
+ * joins two or more JSX `className` properties
  */
 function classNames(...classes: string[]): string {
 	return classes.filter(Boolean).join(' ');
 }
 
 /**
- *  trunacate to 100 chacacters and add ellipsis
+ * trunacates a string to a given length
  */
-function truncate(str: string, length: number): string {
+function truncate(str: string, length: number, addElipses?: boolean): string {
+	const elipses = addElipses ? '...' : '';
 	if (str.length >= length) {
-		return str.substring(0, length) + '...';
+		return str.substring(0, length) + elipses;
 	}
 	return str;
 }

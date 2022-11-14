@@ -1,12 +1,19 @@
-export async function readFile(path: string): Promise<string | null> {
+/**
+ * Reads a file from a given file path and returns it as `Promise<string>`
+ * If the file does not exist, it returns `Promise<null>` and an error is thrown
+ */
+async function readFile(path: string): Promise<string | null> {
 	let text: string;
 	try {
 		text = await Deno.readTextFile(path);
-	} catch (err) {
-		if (err instanceof Deno.errors.NotFound) {
+	} catch (e) {
+		if (e instanceof Deno.errors.NotFound) {
 			return null;
 		}
-		throw err;
+		console.error({ e });
+		throw e;
 	}
 	return text;
 }
+
+export { readFile };

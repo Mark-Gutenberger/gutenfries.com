@@ -25,20 +25,24 @@ export const handler: Handlers<Data> = {
 		const url = new URL(req.url);
 		const urlContent = url.searchParams.get('content') as Content ?? undefined as Content;
 
+		// variable reassignment because using 'as' is not fully type safe
 		let content = urlContent ?? undefined;
+		// default value
 		let showContentPicker = true;
 
+		// if content is defined, hide the content picker
 		if (content && ['tech', 'music', 'undefined'].includes(content)) {
 			showContentPicker = false;
 		}
 
-		// don't allow invalid values
+		// if content is does not contain a valid value, set it
 		if (content && !['tech', 'music'].includes(content)) {
-			// pick random
-			content = ['tech', 'music'][Math.floor(Math.random() * 2)] as Content;
+			// pick music, as the first thing they will see is the swanky CSS animation
+			content = 'music';
+			// if content is undefined
 		} else if (!content) {
-			// pick random
-			content = ['tech', 'music'][Math.floor(Math.random() * 2)] as Content;
+			// ...
+			content = 'music';
 		}
 
 		console.log({ content });
@@ -81,9 +85,9 @@ function IndexPage(PageProps: PageProps<Data>) {
 								language='rust'
 								initialTypingCode='const MARK: &str ='
 								typingCode={[
-									'"Software Developer"',
-									'"Musician"',
-									'"Designer"',
+									'"Software Engineer"',
+									'"Web Developer"',
+									'"Graphic Designer"',
 								]}
 								code={[
 									'// like the theme? Try it!',

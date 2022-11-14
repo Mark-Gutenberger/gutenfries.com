@@ -1,19 +1,23 @@
+/**
+ * Reads JSON from a given file path and returns it as a parsed `Promise<Record<string, unknown>>`
+ */
 async function readJson(filePath: string): Promise<Record<string, unknown>> {
 	try {
 		return JSON.parse(await Deno.readTextFile(filePath));
 	} catch (e) {
-		console.log(filePath + ': ' + e.message);
-		return e;
+		console.error({ e });
+		return e as Record<string, unknown>;
 	}
 }
 
-// deno-lint-ignore no-explicit-any
-async function writeJson(filePath: string, o: any): Promise<void> {
+/**
+ * Writes JSON to a given file path, given a file path and an object to write
+ */
+async function writeJson(filePath: string, content: Record<string, unknown>): Promise<void> {
 	try {
-		await Deno.writeTextFile(filePath, JSON.stringify(o));
+		await Deno.writeTextFile(filePath, JSON.stringify(content));
 	} catch (e) {
-		console.log(filePath + ': ' + e.message);
-		return e;
+		console.error({ e });
 	}
 }
 
