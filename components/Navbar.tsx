@@ -1,5 +1,6 @@
-import SearchBar from '@/islands/SearchBar.tsx';
 import { classNames } from '@/utils/helpers.ts';
+import SearchBar from '@/islands/SearchBar.tsx';
+import Theme from '@/islands/Theme.tsx';
 
 interface Route {
 	name: string;
@@ -45,6 +46,7 @@ function Navbar(props: { active?: string }) {
 				Skip to main content
 			</a>
 			<nav className='fixed z-50 flex flex-row justify-around w-full h-20 bg-gray-800 shadow-lg md:justify-start'>
+				<Theme />
 				<ul className='flex p-4 text-xl text-gray-200'>
 					{routes.map((item: Route) => {
 						if (item.showInNav) {
