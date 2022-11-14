@@ -83,9 +83,9 @@ function IndexPage(PageProps: PageProps<Data>) {
 								language='rust'
 								initialTypingCode='const MARK: &str ='
 								typingCode={[
-									'"Software Developer"',
-									'"Musician"',
-									'"Designer"',
+									'"Software Engineer"',
+									'"Web Developer"',
+									'"Graphic Designer"',
 								]}
 								code={[
 									'// like the theme? Try it!',
