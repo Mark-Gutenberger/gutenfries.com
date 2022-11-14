@@ -35,6 +35,10 @@ interface LinkProps {
 	 * @default false
 	 */
 	noStartSpace?: boolean;
+	/**
+	 * extra styles to apply to the link
+	 */
+	className?: string;
 }
 
 /**
@@ -58,6 +62,7 @@ export const Link = ({
 	noSpaces,
 	noEndSpace,
 	noStartSpace,
+	className,
 }: LinkProps): JSX.Element => {
 	if (noEndSpace) {
 		children = ` ${children}`;
@@ -77,7 +82,7 @@ export const Link = ({
 			href={href}
 			className={`text-blue-500 hover:text-blue-600 active:text-blue-700${(u
 				? ' underline'
-				: '')}`}
+				: '')} ${className ?? ''}`}
 			target={ext ? '_blank' : undefined}
 			rel={ext ? 'noopener' : undefined}
 		>

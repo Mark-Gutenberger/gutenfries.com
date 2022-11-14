@@ -1,0 +1,275 @@
+:root {
+	--tap-r: -15deg;
+	--tap-l: 15deg;
+	--rest-r: -5deg;
+	--rest-l: 5deg;
+	--full-r: 85deg;
+	--full-l: -85deg;
+	--mid-r: 30deg;
+	--mid-l: -30deg;
+}
+
+.left-stick {
+	transform: rotate(var(--rest-l));
+	animation: LeftHand 3.5s ease-in infinite;
+	animation-delay: 0.5 s;
+}
+
+.right-stick {
+	transform: rotate(var(--rest-r));
+	animation: RightHand 3.5s ease-in infinite;
+	animation-delay: 0.5s;
+}
+
+@keyframes RightHand {
+	0% {
+		transform: rotate(var(--rest-r));
+	}
+	/* R 16th diddle */
+	1% {
+		transform: rotate(var(--tap-r));
+	}
+	2% {
+		transform: rotate(var(--rest-r));
+	}
+	3% {
+		transform: rotate(var(--tap-r));
+	}
+	4% {
+		transform: rotate(var(--rest-r));
+	}
+	/* end R 16th diddle */
+	/* L 16th diddle */
+	/* end L 16th diddle */
+	/* R 8th */
+	9% {
+		transform: rotate(var(--mid-r));
+	}
+	10% {
+		transform: rotate(var(--rest-r));
+	}
+	/* end R 8th */
+	13% {
+		transform: rotate(var(--rest-r));
+	}
+	/* L 8th flam */
+	17% {
+		transform: rotate(var(--tap-r));
+	}
+	18% {
+		transform: rotate(var(--rest-r));
+	}
+	/* end L 8th flam */
+	21% {
+		transform: rotate(var(--rest-r));
+	}
+	/* R 8th flam */
+	25% {
+		transform: rotate(var(--full-r));
+	}
+	26% {
+		transform: rotate(var(--rest-r));
+	}
+	/* end R 8th flam */
+	29% {
+		transform: rotate(var(--rest-r));
+	}
+	/* R 16th diddle */
+	33% {
+		transform: rotate(var(--tap-r));
+	}
+	34% {
+		transform: rotate(var(--rest-r));
+	}
+	35% {
+		transform: rotate(var(--tap-r));
+	}
+	36% {
+		transform: rotate(var(--rest-r));
+	}
+	/* end R 16th diddle */
+	/* L 16th diddle */
+	/* end L 16th diddle */
+	39% {
+		transform: rotate(var(--rest-r));
+	}
+	/* R 8th */
+	43% {
+		transform: rotate(var(--mid-r));
+	}
+	44% {
+		transform: rotate(var(--rest-r));
+	}
+	/* end R 8th */
+	47% {
+		transform: rotate(var(--rest-r));
+	}
+	/* L 8th flam */
+	51% {
+		transform: rotate(var(--tap-r));
+	}
+	52% {
+		transform: rotate(var(--rest-r));
+	}
+	/* end L 8th flam */
+	55% {
+		transform: rotate(var(--rest-r));
+	}
+	/* R 8th flam */
+	59% {
+		transform: rotate(var(--full-r));
+	}
+	60% {
+		transform: rotate(var(--rest-r));
+	}
+	/* end R 8th flam */
+	63% {
+		transform: rotate(var(--rest-r));
+	}
+	/* R 16 diddle */
+	67% {
+		transform: rotate(var(--tap-r));
+	}
+	68% {
+		transform: rotate(var(--rest-r));
+	}
+	69% {
+		transform: rotate(var(--tap-r));
+	}
+	70% {
+		transform: rotate(var(--rest-r));
+	}
+	/* end R 16th diddle */
+	/* L 16th diddle */
+	/* end L 16th diddle */
+	83% {
+		transform: rotate(var(--rest-r));
+	}
+	/* R 8th */
+	87% {
+		transform: rotate(var(--full-r));
+	}
+	88% {
+		transform: rotate(var(--rest-r));
+	}
+	100% {
+		transform: rotate(var(--rest-r));
+	}
+}
+
+@keyframes LeftHand {
+	0% {
+		transform: rotate(var(--rest-l));
+	}
+	/* R 16th diddle */
+	/* end R 16th diddle */
+	4% {
+		transform: rotate(var(--rest-l));
+	}
+	/* L 16th diddle */
+	5% {
+		transform: rotate(var(--tap-l));
+	}
+	6% {
+		transform: rotate(var(--rest-l));
+	}
+	7% {
+		transform: rotate(var(--tap-l));
+	}
+	8% {
+		transform: rotate(var(--rest-l));
+	}
+	/* end L 16th diddle */
+	13% {
+		transform: rotate(var(--rest-l));
+	}
+	/* L 8th flam */
+	17% {
+		transform: rotate(var(--full-l));
+	}
+	18% {
+		transform: rotate(var(--rest-l));
+	}
+	/* end L 8th flam */
+	21% {
+		transform: rotate(var(--rest-l));
+	}
+	/* R 8th flam */
+	25% {
+		transform: rotate(var(--tap-l));
+	}
+	26% {
+		transform: rotate(var(--rest-l));
+	}
+	/* end R 8th flam */
+	/* R 16th diddle */
+	29% {
+		transform: rotate(var(--rest-l));
+	}
+	/* end R 16th diddle */
+	33% {
+		transform: rotate(var(--rest-l));
+	}
+	/* L 16th diddle */
+	37% {
+		transform: rotate(var(--tap-l));
+	}
+	38% {
+		transform: rotate(var(--rest-l));
+	}
+	39% {
+		transform: rotate(var(--tap-l));
+	}
+	40% {
+		transform: rotate(var(--rest-l));
+	}
+	/* end L 16th diddle */
+	/* R 8th */
+	/* end R 8th */
+	47% {
+		transform: rotate(var(--rest-l));
+	}
+	/* L 8th flam */
+	51% {
+		transform: rotate(var(--full-l));
+	}
+	52% {
+		transform: rotate(var(--rest-l));
+	}
+	/* end L 8th flam */
+	55% {
+		transform: rotate(var(--tap-l));
+	}
+	/* R 8th flam */
+	59% {
+		transform: rotate(var(--tap-l));
+	}
+	60% {
+		transform: rotate(var(--rest-l));
+	}
+	/* end R 8th flam */
+	/* R 16 diddle */
+	/* end R 16th diddle */
+	73% {
+		transform: rotate(var(--rest-l));
+	}
+	/* L 16th diddle */
+	77% {
+		transform: rotate(var(--tap-l));
+	}
+	78% {
+		transform: rotate(var(--rest-l));
+	}
+	79% {
+		transform: rotate(var(--tap-l));
+	}
+	80% {
+		transform: rotate(var(--rest-l));
+	}
+	/* end L 16th diddle */
+	/* R 8th */
+	/* end R 8th */
+	100% {
+		transform: rotateZ(var(--rest-l));
+	}
+}
