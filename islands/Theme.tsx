@@ -2,129 +2,56 @@ import { useEffect, useState } from 'preact/hooks';
 import Icons from '@/utils/Icons.tsx';
 
 const Theme = () => {
-	const [theme, setTheme] = useState<'light' | 'dark' | 'system'>();
-	const [sysTheme, setSysTheme] = useState<boolean>(true);
-	const [isOpen, setIsOpen] = useState(false);
+	const [darkMode, setDarkMode] = useState<boolean>(true);
 
-	function CheckTheme(): void {
+	useEffect(() => {
 		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+		// ONLY run this once
 		if (
 			localStorage.theme === 'dark' ||
 			(!('theme' in localStorage) &&
 				window.matchMedia('(prefers-color-scheme: dark)').matches)
 		) {
-			setTheme('dark');
+			setDarkMode(true);
 		} else {
-			setTheme('light');
+			setDarkMode(false);
 		}
 
-		setSysTheme(true);
-	}
-
-	useEffect(() => {
-		CheckTheme();
+		if (darkMode) {
+			document.documentElement.classList.add('dark');
+			localStorage.theme = 'dark';
+		} else {
+			document.documentElement.classList.remove('dark');
+			localStorage.theme = 'light';
+		}
 	}, []);
 
 	useEffect(() => {
-		if (theme === 'dark') {
+		if (darkMode) {
 			document.documentElement.classList.add('dark');
 			localStorage.theme = 'dark';
-		} else if (theme === 'light') {
+		} else {
 			document.documentElement.classList.remove('dark');
 			localStorage.theme = 'light';
-		} else if (theme === 'system') {
-			localStorage.removeItem('theme');
-			CheckTheme();
 		}
-	}, [theme]);
+	}, [darkMode]);
 
 	return (
-		<div>
-			{isOpen && (
-				<>
-					<a
-						type='button'
-						className='flex p-4 cursor-pointer justify-center items-center bg-gray-800 w-20 h-20'
-						onClick={() => {
-							setTheme('dark');
-							setSysTheme(false);
-							setIsOpen(false);
-						}}
-					>
-						<Icons.Moon
-							className={`w-8 h-8 text-gray-200 active:text-purple-500 ${
-								theme === 'dark' ? 'text-purple-500' : ''
-							}`}
-						/>
-					</a>
-					<a
-						type='button'
-						className='flex p-4 cursor-pointer justify-center items-center bg-gray-800 w-20 h-20'
-						onClick={() => {
-							setTheme('light');
-							setSysTheme(false);
-							setIsOpen(false);
-						}}
-					>
-						<Icons.Sun
-							className={`w-8 h-8 text-gray-200 active:text-yellow-500 ${
-								theme === 'light' ? 'text-yellow-500' : ''
-							}`}
-						/>
-					</a>
-					<a
-						type='button'
-						className='flex p-4 rounded-b-lg cursor-pointer justify-center items-center bg-gray-800 w-20 h-20'
-						onClick={() => {
-							setTheme('system');
-							setSysTheme(true);
-							setIsOpen(false);
-						}}
-					>
-						<Icons.DesktopComputer
-							className={`active:text-gray-500 w-8 h-8 text-gray-200 ${
-								sysTheme === true ? 'text-gray-500' : ''
-							}`}
-						/>
-					</a>
-				</>
-			)}
-			{!isOpen && (
-				<>
-					<a
-						type='button'
-						className='flex p-4 cursor-pointer justify-center items-center bg-gray-800 w-20 h-20'
-						onClick={() => {
-							setIsOpen(true);
-						}}
-					>
-						{theme === 'dark' && !sysTheme
-							? (
-								<Icons.Moon
-									className={`w-8 h-8 text-gray-200 active:text-purple-500 ${
-										theme === 'dark' ? 'text-purple-500' : ''
-									}`}
-								/>
-							)
-							: theme === 'light' && !sysTheme
-							? (
-								<Icons.Sun
-									className={`w-8 h-8 text-gray-200 active:text-yellow-500 ${
-										theme === 'light' ? 'text-yellow-500' : ''
-									}`}
-								/>
-							)
-							: (
-								<Icons.DesktopComputer
-									className={`active:text-gray-500 w-8 h-8 text-gray-200 ${
-										sysTheme === true ? 'text-gray-500' : ''
-									}`}
-								/>
-							)}
-					</a>
-				</>
-			)}
-		</div>
+		<a
+			type='button'
+			className='flex p-4 cursor-pointer justify-center items-center bg-gray-800 w-20 h-20'
+			onClick={() => {
+				setDarkMode(!darkMode);
+			}}
+		>
+			{darkMode
+				? (
+					<Icons.Moon className='w-8 h-8 text-gray-200 active:text-purple-500 hover:text-purple-300' />
+				)
+				: (
+					<Icons.Sun className='w-8 h-8 text-gray-200 active:text-yellow-500 hover:text-yellow-300' />
+				)}
+		</a>
 	);
 };
 
