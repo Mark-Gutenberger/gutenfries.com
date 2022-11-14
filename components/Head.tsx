@@ -40,8 +40,7 @@ function Head({ PageProps }: HeadProps) {
 			<meta
 				name='description'
 				content={OGDescription}
-			>
-			</meta>
+			/>
 
 			{/* <!-- Open Graph / Facebook --> */}
 			<meta property='og:type' content='website' />
@@ -83,31 +82,32 @@ function Head({ PageProps }: HeadProps) {
 			<meta name='apple-mobile-web-app-status-bar-style' content='#27272a' />
 
 			{/* global styles */}
-			<link rel='stylesheet' href={asset('/styles/global.css')}></link>
+			<link rel='stylesheet' href={asset('/styles/global.css')} />
 
 			{/* favicon */}
-			<link rel='icon' href={asset('/images/code.svg')}></link>
+			<link rel='icon' href={asset('/images/code.svg')} />
 
 			{/* console easter egg */}
 			<script
 				dangerouslySetInnerHTML={{
 					__html: `
-						console.log('If you\\'re looking this far, please consider staring the repo on GitHub! 😊 \\nhttps://github.com/gutenfries/gutenfries.deno.dev');
+							console.log('If you\\'re looking this far, please consider staring the repo on GitHub! 😊 \\nhttps://github.com/gutenfries/gutenfries.deno.dev');
 						`,
 				}}
-			>
-			</script>
+			/>
 
 			{/* Google Analytics */}
 			<script async src='https://www.googletagmanager.com/gtag/js?id=G-DNT0Y7Z3PN'></script>
-			<script>
-				{`
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-					gtag('config', 'G-DNT0Y7Z3PN');
-				`}
-			</script>
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+							gtag('config', 'G-DNT0Y7Z3PN');
+					`,
+				}}
+			/>
 		</FreshHead>
 	);
 }
