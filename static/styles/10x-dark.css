@@ -31,7 +31,7 @@ pre[class*='language-'] {
 	background: var(--syntax-bg);
 	color: var(--mono-1);
 	text-shadow: 0 1px var(--shaddow-color);
-	font-family: 'Fira Code', 'Fira Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	font-family: 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier, monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -93,12 +93,11 @@ pre[class*='language-'] {
 	color: var(--mono-3);
 }
 
-.token.doctype,
-.token.punctuation,
 .token.entity {
 	color: var(--mono-1);
 }
 
+.token.doctype,
 .token.attr-name,
 .token.class-name,
 .token.constant,
@@ -137,6 +136,7 @@ pre[class*='language-'] {
 
 .token.url,
 .token.operator,
+.token.punctuation,
 .token.boolean {
 	color: var(--hue-1);
 }

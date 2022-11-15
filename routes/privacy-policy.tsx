@@ -37,7 +37,7 @@ function ResumePage(props: PageProps<Data>) {
 				{privPolicy
 					? (
 						<>
-							<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
+							<link rel='stylesheet' href={asset('/styles/markdown.css')} />
 							<article
 								data-color-mode='auto'
 								data-light-theme='light'

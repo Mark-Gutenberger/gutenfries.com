@@ -1,4 +1,5 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
+import { asset } from '$fresh/runtime.ts';
 
 import * as gfm from 'gfm';
 
@@ -11,6 +12,8 @@ import { loadPost, Post } from '@/utils/blogPosts.ts';
 // any langue I am likely to use
 import 'https://esm.sh/prismjs@1.27.0/components/prism-typescript?no-check';
 import 'https://esm.sh/prismjs@1.27.0/components/prism-javascript?no-check';
+import 'https://esm.sh/prismjs@1.27.0/components/prism-scss?no-check';
+import 'https://esm.sh/prismjs@1.27.0/components/prism-css?no-check';
 import 'https://esm.sh/prismjs@1.27.0/components/prism-jsx?no-check';
 import 'https://esm.sh/prismjs@1.27.0/components/prism-tsx?no-check';
 import 'https://esm.sh/prismjs@1.27.0/components/prism-rust?no-check';
@@ -73,7 +76,7 @@ export default function PostPage(props: PageProps<Data>) {
 						})}
 					</time>
 				</div>
-				<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
+				<link rel='stylesheet' href={asset('/styles/markdown.css')} />
 				<article
 					data-color-mode='auto'
 					data-light-theme='light'

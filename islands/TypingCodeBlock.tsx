@@ -104,12 +104,12 @@ function TypingCodeBlock(
 	return (
 		<>
 			<script
-				src={asset('/prism/prism.js')}
+				src={asset('/js/prism.js')}
 			/>
 
 			<link
 				rel='stylesheet'
-				href={asset('/prism/10x-dark.css')}
+				href={asset('/styles/10x-dark.css')}
 			/>
 
 			<pre className='text-base w-full h-full'>
