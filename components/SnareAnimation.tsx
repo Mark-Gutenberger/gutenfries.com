@@ -39,4 +39,4 @@ const SnareAnimation = () => {
 	);
 };
 
-export default SnareAnimation;
+export { SnareAnimation };

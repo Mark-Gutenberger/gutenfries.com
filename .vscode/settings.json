@@ -14,15 +14,6 @@
 	"[javascriptreact]": {
 		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
-	"[markdown]": {
-		"editor.defaultFormatter": "denoland.vscode-deno"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[jsonc]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
 	"editor.suggest.showStatusBar": true,
 	"editor.quickSuggestions": {
 		"strings": true
