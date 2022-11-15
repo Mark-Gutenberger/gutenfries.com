@@ -4,7 +4,7 @@ import * as colors from 'twind/colors';
 export default {
 	selfURL: import.meta.url,
 	mode: 'silent',
-	darkMode: 'class',
+	// darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
