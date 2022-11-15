@@ -11,7 +11,7 @@ import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
 import { TechCard } from '@/components/TechCard.tsx';
 import Icons from '@/utils/Icons.tsx';
 import TypingCodeBlock from '@/islands/TypingCodeBlock.tsx';
-import SnareAnimation from '@/islands/SnareAnimation.tsx';
+import { SnareAnimation } from '@/components/SnareAnimation.tsx';
 import ImageSection from '@/islands/ImageSection.tsx';
 
 type Content = 'tech' | 'music' | 'undefined' | undefined;

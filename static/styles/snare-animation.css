@@ -1,8 +1,8 @@
 :root {
-	--tap-r: -15deg;
-	--tap-l: 15deg;
 	--rest-r: -5deg;
 	--rest-l: 5deg;
+	--tap-r: -15deg;
+	--tap-l: 15deg;
 	--full-r: 85deg;
 	--full-l: -85deg;
 	--mid-r: 30deg;
