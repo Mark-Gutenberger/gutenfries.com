@@ -38,7 +38,7 @@ function ResumePage(props: PageProps<Data>) {
 				{license
 					? (
 						<>
-							<style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
+							<link rel='stylesheet' href={asset('/styles/markdown.css')} />
 							<article
 								data-color-mode='auto'
 								data-light-theme='light'
