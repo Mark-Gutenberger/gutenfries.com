@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'preact/hooks';
+
 import Icons from '@/utils/Icons.tsx';
 
 const SearchBar = () => {
-	const [searchBarIsExpanded, setSearchBarIsExpanded] = useState<boolean>(false);
+	const [searchBarIsExpanded, setSearchBarIsExpanded] = useState<boolean>(
+		false,
+	);
 	const [query, setQuery] = useState<string>('');
 	const [pressToggle, setPressToggle] = useState<boolean>(false);
 

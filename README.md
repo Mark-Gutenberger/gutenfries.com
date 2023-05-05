@@ -20,49 +20,48 @@
 [![rust-tests](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/rust-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/rust-tests.yml)
 
 <p align='center'>
-	<picture>
-		<img width="100" height="100" alt='logo' src='static/images/code.svg'/>
-	</picture>
+ <picture>
+  <img width="100" height="100" alt='logo' src='static/images/code.svg'/>
+ </picture>
 </p>
 
 <div align="center">
-	<h1 align="center">gutenfries.deno.dev</h1>
-		<a href="https://gutenfries.deno.dev">Production</a>
-		·
-		<a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Report Bug</a>
-		·
-		<a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Request Feature</a>
-		<hr />
+ <h1 align="center">gutenfries.deno.dev</h1>
+  <a href="https://gutenfries.deno.dev">Production</a>
+  ·
+  <a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Request Feature</a>
+  <hr />
 </div>
 
-![[https://gutenfries.deno.dev](https://gutenfries.deno.dev) screenshot](static/images/screenshot.png)
+![screenshot](static/images/screenshot.png)
 
 ## Google Lighthouse Stats
 
 _(May take a while to render)_
 
 <picture>
-	<source media="(prefers-color-scheme: dark)" srcset="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo&theme=dark">
-	<source media="(prefers-color-scheme: light)" srcset="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo">
-	<img alt="Google Lighthouse Stats" src="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo">
+ <source media="(prefers-color-scheme: dark)" srcset="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo&theme=dark">
+ <source media="(prefers-color-scheme: light)" srcset="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo">
+ <img alt="Google Lighthouse Stats" src="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo">
 
 </picture>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-## Tech Stack :computer:
+## Tech Stack :computer
 
 - [Deno Fresh](https://fresh.deno.dev/) :lemon: (Deno Web Framework)
 - [Deno Deploy](https://deno.com/deploy/) :desktop_computer: (Serverless Deployment)
 - [Tabler Icons](https://tabler-icons.io/) :pen: (SVG Icons)
 - [Tailwind CSS](https://tailwindcss.com/) :paintbrush: (Styling)
-	- [Twind](https://twind.dev/) (CSS-In-JS Solution)
+  - [Twind](https://twind.dev/) (CSS-In-JS Solution)
 - [Preact](https://preactjs.com/) :page_facing_up: (JSX Rendering)
 - [Rust](https://www.rust-lang.org/) :gear: (Serverless Functions)
 - [GitHub Actions](https://github.com/features/actions) :octocat: (CI & CD)
 
-## Contributing :handshake:
+## Contributing :handshake
 
 Contributions make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are _**greatly appreciated**_.
 
@@ -83,12 +82,12 @@ Don't forget to give the project a star! Thanks again!
 <!--  -->
 <!-- - Mark Gutenberger -->
 <!--  -->
-  <!-- - :earth_americas: [gutenfries.deno.dev](https://gutenfries.deno.dev) -->
-  <!-- - :mailbox: [gutenfries@gmail.com](mailto:gutenfries@gmail.com) -->
+<!-- - :earth_americas: [gutenfries.deno.dev](https://gutenfries.deno.dev) -->
+<!-- - :mailbox: [gutenfries@gmail.com](mailto:gutenfries@gmail.com) -->
 <!--  -->
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-## Acknowledgments :pray:
+## Acknowledgments :pray
 
 Helpful resources used to get this project off the ground:
 
@@ -97,14 +96,14 @@ Helpful resources used to get this project off the ground:
 - [Deno docs](https://deno.land/manual)
 - [Deno Deploy docs](https://deno.com/deploy/docs)
 - [Rust docs](https://doc.rust-lang.org/book/)
-- [wasmbuild repo](https://github.com/denoland/wasmbuild/docs)
+- [wasmbuild repo](https://github.com/denoland/wasmbuild)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## License :page_facing_up:
+## License :page_facing_up
+
 Open-sourced under the MIT License. See [LICENSE.md](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 copyright (c) 2022 Mark Gutenberger
