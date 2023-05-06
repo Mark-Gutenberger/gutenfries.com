@@ -1,13 +1,12 @@
-import * as gfm from 'gfm';
-
 import { Handlers, PageProps } from '$fresh/server.ts';
+import { Navbar, Routes } from '@/components/Navbar.tsx';
 import { loadPost, Post } from '@/utils/blogPosts.ts';
 
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
-import { Navbar } from '@/components/Navbar.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
+import { render as renderGFM } from 'gfm';
 
 interface Data {
 	post: Post;
@@ -21,7 +20,7 @@ export const handler: Handlers<Data> = {
 			return ctx.renderNotFound();
 		}
 
-		const content = gfm.render(post.content);
+		const content = renderGFM(post.content);
 
 		return ctx.render(
 			{
@@ -41,7 +40,7 @@ export default function PostPage(props: PageProps<Data>) {
 		<>
 			<Head PageProps={props} />
 
-			<Navbar active='blog' />
+			<Navbar active={Routes.blog} />
 
 			<NoScript />
 

@@ -8,16 +8,17 @@ import { NoScript } from '@/components/NoScript.tsx';
 import Resume from '../islands/Resume.tsx';
 import { asset } from '$fresh/runtime.ts';
 import { readFile } from '@/utils/readFile.ts';
+import { render as renderGFM } from 'gfm';
 
 interface Data {
-	resumes: (string | null)[];
+	resumes: string[];
 }
 
 export const handler: Handlers<Data> = {
 	async GET(_req, ctx) {
 		const resumes = [
-			await readFile(`./static/resume/resume-tech.md`),
-			await readFile(`./static/resume/resume-music.md`),
+			renderGFM(await readFile(`./static/resume/resume-tech.md`) ?? ''),
+			renderGFM(await readFile(`./static/resume/resume-music.md`) ?? ''),
 		];
 
 		try {

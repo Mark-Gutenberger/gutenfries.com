@@ -34,7 +34,7 @@ impl Mark {
 			loves_dinosaurs: true,
 			skills: vec![
 				"Rust", "C/C++",
-				"Deno", "Flutter",
+				"TypeScript", "Flutter",
 				"(P)react", "HTML & CSS",
 			],
 		}

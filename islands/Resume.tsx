@@ -1,5 +1,3 @@
-import * as gfm from 'gfm';
-
 import { asset } from '$fresh/runtime.ts';
 import { useState } from 'preact/hooks';
 
@@ -22,9 +20,11 @@ enum ActiveResume {
 	music,
 }
 
-export default function Resume(
-	{ resumes }: { resumes: (string | null)[] },
-) {
+export interface ResumeProps {
+	resumes: string[];
+}
+
+export default function Resume({ resumes }: ResumeProps) {
 	const [activeResume, setActiveResume] = useState<ActiveResume>(ActiveResume.tech);
 
 	return (
@@ -32,63 +32,51 @@ export default function Resume(
 			{/* navbar */}
 			<ul className='flex flex-row justify-start ml-5'>
 				<li>
-					<button
+					<a
 						type='button'
-						aria-label='Show Tech resume'
+						aria-label='Show tech resume'
 						className={`px-6 pt-1.5 pb-1 w-auto text-lg font-medium dark:text-gray-100 hover:bg-gray-700 hover:text-gray-200 active:bg-gray-900 active:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-900 text-gray-900 rounded-t-lg shadow-xl cursor-pointer ${
 							activeResume === ActiveResume.tech
 								? 'dark:bg-gray-900 bg-gray-400'
 								: 'dark:bg-gray-800 bg-gray-200'
 						}`}
 						onClick={() => {
-							console.log(activeResume);
 							setActiveResume(ActiveResume.tech);
 						}}
 					>
 						Tech
-					</button>
+					</a>
 				</li>
 				<li>
-					<button
+					<a
 						type='button'
-						aria-label='Show Music resume'
+						aria-label='Show music resume'
 						className={`px-6 pt-1.5 pb-1 w-auto text-lg font-medium dark:text-gray-100 hover:bg-gray-700 hover:text-gray-200 active:bg-gray-900 active:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-900 text-gray-900 rounded-t-lg shadow-xl cursor-pointer ${
 							activeResume === ActiveResume.music
 								? 'dark:bg-gray-900 bg-gray-400'
 								: 'dark:bg-gray-800 bg-gray-200'
 						}`}
 						onClick={() => {
-							console.log(activeResume);
 							setActiveResume(ActiveResume.music);
 						}}
 					>
 						Music
-					</button>
+					</a>
 				</li>
 			</ul>
-			{resumes
-				? (
-					<section>
-						<link rel='stylesheet' href={asset('/styles/markdown.css')} />
-						<article
-							data-color-mode='auto'
-							data-light-theme='light'
-							data-dark-theme='dark'
-							class='markdown-body'
-							className='p-10 rounded-lg shadow-xl'
-							dangerouslySetInnerHTML={{
-								__html: gfm.render(
-									resumes[activeResume] ?? 'Eternally Loading...',
-								),
-							}}
-						/>
-					</section>
-				)
-				: (
-					<h1 className='pt-20 text-center text-5xl font-bold rounded-lg'>
-						Loading...
-					</h1>
-				)}
+
+			<section>
+				<link rel='stylesheet' href={asset('/styles/markdown.css')} />
+				<article
+					data-color-mode='auto'
+					data-light-theme='light'
+					data-dark-theme='dark'
+					className='p-10 rounded-lg shadow-xl markdown-body'
+					dangerouslySetInnerHTML={{
+						__html: resumes[activeResume] ?? 'Loading...',
+					}}
+				/>
+			</section>
 		</div>
 	);
 }

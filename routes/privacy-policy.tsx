@@ -1,5 +1,3 @@
-import * as gfm from 'gfm';
-
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { Navbar, Routes } from '@/components/Navbar.tsx';
 
@@ -8,6 +6,7 @@ import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
 import { readFile } from '@/utils/readFile.ts';
+import { render as renderGFM } from 'gfm';
 
 interface Data {
 	privPolicy: string | null;
@@ -45,7 +44,7 @@ function ResumePage(props: PageProps<Data>) {
 								class='markdown-body'
 								className='p-10 mt-12 rounded-lg shadow-xl'
 								dangerouslySetInnerHTML={{
-									__html: gfm.render(privPolicy),
+									__html: renderGFM(privPolicy),
 								}}
 							/>
 						</>
