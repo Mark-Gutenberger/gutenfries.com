@@ -1,5 +1,5 @@
-import { asset } from '$fresh/runtime.ts';
 import Icons from '@/utils/Icons.tsx';
+import { asset } from '$fresh/runtime.ts';
 
 function Footer() {
 	return (
@@ -389,7 +389,7 @@ function Footer() {
 				</ul>
 			</section>
 
-			<section className='w-full mx-auto p-4 flex flex-wrap flex-col sm:flex-row shadow-lg bg-gray-800'>
+			<section className='w-full mr-auto p-4 flex flex-wrap flex-col sm:flex-row shadow-lg bg-gray-800'>
 				<span className='hover:text-underline text-lg mt-2 text-sm text-center sm:text-left text-gray-400'>
 					<a
 						href='/license'
@@ -398,7 +398,7 @@ function Footer() {
 						© {new Date().getFullYear()} Mark Gutenberger - @gutenfries
 					</a>
 				</span>
-				<span className='inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start'>
+				<span className='inline-flex sm:mx-auto sm:mt-0 mt-2 justify-center sm:justify-start'>
 					<a
 						href='https://fresh.deno.dev/'
 						target='_blank'
