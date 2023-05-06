@@ -1,6 +1,20 @@
 
-<!-- Improved compatibility of back-to-top link: -->
 <a name="readme-top"></a>
+<p align='center'>
+ <picture>
+  <img width="100" height="100" alt='logo' src='static/images/code.svg'/>
+ </picture>
+</p>
+
+<div align="center">
+  <h1>gutenfries.deno.dev</h1>
+  <a href="https://gutenfries.deno.dev">Production</a>
+  ·
+  <a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Request Feature</a>
+  <hr />
+</div>
 
 <!--
 *** Thanks for checking out gutenfries.deno.dev. If you have a suggestion
@@ -18,24 +32,6 @@
 [![MIT License](https://img.shields.io/github/license/gutenfries/gutenfries.deno.dev.svg)](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md)
 [![deno-tests](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml)
 
-<p align='center'>
- <picture>
-  <img width="100" height="100" alt='logo' src='static/images/code.svg'/>
- </picture>
-</p>
-
-<div align="center">
-
-# gutenfries.deno.dev
-
-  <a href="https://gutenfries.deno.dev">Production</a>
-  ·
-  <a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Report Bug</a>
-  ·
-  <a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Request Feature</a>
-  <hr />
-</div>
-
 ![screenshot](static/images/screenshot.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -50,31 +46,7 @@
 * [Preact](https://preactjs.com/) :page_facing_up: (JSX Rendering)
 * [GitHub Actions](https://github.com/features/actions) :octocat: (CI & CD)
 
-## Contributing :handshake:
-
-Contributions make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ## Contact :mailbox: -->
-
-<!-- ### Contributors :sparkles: -->
-<!--  -->
-<!-- - Mark Gutenberger -->
-<!--  -->
-<!-- - :earth_americas: [gutenfries.deno.dev](https://gutenfries.deno.dev) -->
-<!-- - :mailbox: [gutenfries@gmail.com](mailto:gutenfries@gmail.com) -->
-<!--  -->
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 ## Acknowledgments :pray:
 
@@ -93,4 +65,4 @@ Open-sourced under the MIT License. See [LICENSE.md](https://github.com/gutenfri
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-copyright (c) 2022 Mark Gutenberger
+> copyright (c) 2022 Mark Gutenberger
