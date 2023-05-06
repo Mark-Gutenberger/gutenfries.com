@@ -1,5 +1,5 @@
-<!-- Improved compatibility of back-to-top link: -->
 
+<!-- Improved compatibility of back-to-top link: -->
 <a name="readme-top"></a>
 
 <!--
@@ -10,7 +10,7 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-[![GitHub Repo Size](https://img.shields.io/github/repo-size/gutenfries/gutenfries.deno.dev)]()
+[![Repo Size](https://img.shields.io/github/repo-size/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev)
 [![GitHub Contributors](https://img.shields.io/github/contributors/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev/graphs/contributors)
 [![GitHub Stars](https://img.shields.io/github/stars/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev/network/members)
@@ -25,7 +25,9 @@
 </p>
 
 <div align="center">
- <h1 align="center">gutenfries.deno.dev</h1>
+
+# gutenfries.deno.dev
+
   <a href="https://gutenfries.deno.dev">Production</a>
   ·
   <a href="https://github.com/gutenfries/gutenfries.deno.dev/issues">Report Bug</a>
@@ -36,32 +38,21 @@
 
 ![screenshot](static/images/screenshot.png)
 
-## Google Lighthouse Stats
-
-_(May take a while to render)_
-
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo&theme=dark">
- <source media="(prefers-color-scheme: light)" srcset="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo">
- <img alt="Google Lighthouse Stats" src="https://pagespeed-insights.herokuapp.com?url=https://gutenfries.deno.dev&categories=performance,accessibility,best-practices,seo">
-
-</picture>
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Tech Stack :computer
+## Tech Stack :computer:
 
-- [Deno Fresh](https://fresh.deno.dev/) :lemon: (Deno Web Framework)
-- [Deno Deploy](https://deno.com/deploy/) :desktop_computer: (Serverless Deployment)
-- [Tabler Icons](https://tabler-icons.io/) :pen: (SVG Icons)
-- [Tailwind CSS](https://tailwindcss.com/) :paintbrush: (Styling)
-  - [Twind](https://twind.dev/) (CSS-In-JS Solution)
-- [Preact](https://preactjs.com/) :page_facing_up: (JSX Rendering)
-- [GitHub Actions](https://github.com/features/actions) :octocat: (CI & CD)
+* [Deno Fresh](https://fresh.deno.dev/) :lemon: (Deno Web Framework)
+* [Deno Deploy](https://deno.com/deploy/) :desktop_computer: (Serverless Deployment)
+* [Tabler Icons](https://tabler-icons.io/) :pen: (SVG Icons)
+* [Tailwind CSS](https://tailwindcss.com/) :paintbrush: (Styling)
+  * [Twind](https://twind.dev/) (CSS-In-JS Solution)
+* [Preact](https://preactjs.com/) :page_facing_up: (JSX Rendering)
+* [GitHub Actions](https://github.com/features/actions) :octocat: (CI & CD)
 
-## Contributing :handshake
+## Contributing :handshake:
 
-Contributions make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are _**greatly appreciated**_.
+Contributions make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -85,18 +76,18 @@ Don't forget to give the project a star! Thanks again!
 <!--  -->
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-## Acknowledgments :pray
+## Acknowledgments :pray:
 
 Helpful resources used to get this project off the ground:
 
-- [Fresh docs](https://fresh.deno.dev/docs)
-- [Preact docs](https://preactjs.com/guide/v10/getting-started)
-- [Deno docs](https://deno.land/manual)
-- [Deno Deploy docs](https://deno.com/deploy/docs)
+* [Fresh docs](https://fresh.deno.dev/docs)
+* [Preact docs](https://preactjs.com/guide/v10/getting-started)
+* [Deno docs](https://deno.land/manual)
+* [Deno Deploy docs](https://deno.com/deploy/docs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## License :page_facing_up
+## License :page_facing_up:
 
 Open-sourced under the MIT License. See [LICENSE.md](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md) for more information.
 
