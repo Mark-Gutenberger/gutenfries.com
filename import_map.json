@@ -6,9 +6,9 @@
 		"$std/": "https://deno.land/std@0.150.0/",
 		"$testing/": "https://deno.land/std@0.150.0/testing/",
 
-		"preact": "https://esm.sh/preact@10.13.1",
-		"preact/": "https://esm.sh/preact@10.13.1/",
-		"preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.6",
+		"preact": "https://esm.sh/preact@10.13.2",
+		"preact/": "https://esm.sh/preact@10.13.2/",
+		"preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.0.3",
 		"@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3",
 		"@preact/signals": "https://esm.sh/*@preact/signals@1.1.3",
 

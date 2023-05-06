@@ -1,127 +1,49 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { readFile } from '@/utils/readFile.ts';
-import { asset } from '$fresh/runtime.ts';
+import { Navbar, Routes } from '@/components/Navbar.tsx';
 
-import * as gfm from 'gfm';
-
-import { Navbar } from '@/components/Navbar.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
 import Icons from '@/utils/Icons.tsx';
-
-type ActiveResumeState = 'techResume' | 'generalResume' | 'musicResume';
-type ActiveResumeURLState = 'tech' | 'general' | 'music';
+import { NoScript } from '@/components/NoScript.tsx';
+import Resume from '../islands/Resume.tsx';
+import { asset } from '$fresh/runtime.ts';
+import { readFile } from '@/utils/readFile.ts';
 
 interface Data {
-	resume: string | null;
-	activeResume: ActiveResumeState;
+	resumes: (string | null)[];
 }
 
 export const handler: Handlers<Data> = {
-	async GET(req, ctx) {
-		const url = new URL(req.url);
-		let activeResume = url.searchParams.get('activeResume') as ActiveResumeURLState ||
-			'tech' as ActiveResumeURLState;
+	async GET(_req, ctx) {
+		const resumes = [
+			await readFile(`./static/resume/resume-tech.md`),
+			await readFile(`./static/resume/resume-music.md`),
+		];
 
-		// don't allow invalid activeResume values
-		if (!['tech', 'general', 'music'].includes(activeResume)) {
-			activeResume = 'tech' as ActiveResumeURLState;
-		}
-
-		const resume = await readFile(`./static/resume/resume-${activeResume}.md`);
-
-		if (!resume) {
-			console.error('Error: resume not found');
+		try {
+			return ctx.render({
+				...ctx.state,
+				resumes,
+			});
+		} catch (e) {
+			console.error(e);
 			return ctx.renderNotFound();
 		}
-
-		return ctx.render({
-			...ctx.state,
-			resume,
-			activeResume: `${activeResume}Resume` as Data['activeResume'],
-		});
 	},
 };
 
-interface ResumeNavItem {
-	resume: string;
-	href: string;
-}
-
-const resumeNavItems: ResumeNavItem[] = [
-	{
-		resume: 'Tech',
-		href: '/resume?activeResume=tech',
-	},
-	{
-		resume: 'General',
-		href: '/resume?activeResume=general',
-	},
-	{
-		resume: 'Music',
-		href: '/resume?activeResume=music',
-	},
-];
-
-function ResumePage(props: PageProps<Data>) {
+export default function ResumePage(props: PageProps<Data>) {
 	return (
 		<>
 			<Head PageProps={props} />
-			<Navbar active='resume' />
+			<Navbar active={Routes.resume} />
 			<NoScript />
 
 			<main
 				id='main-content'
 				className='p-4 pt-20 text-gray-800 bg-gray-100 dark:text-gray-200 dark:bg-gray-900 '
 			>
-				{props.data.resume
-					? (
-						<>
-							<div className='w-full h-full p-2 pt-4 mt-4 bg-gray-200 rounded-lg shadow-xl dark:bg-gray-800'>
-								{/* navbar */}
-
-								<ul className='flex flex-row justify-start ml-5'>
-									{resumeNavItems.map((item) => (
-										<li>
-											<a
-												type='button'
-												className={`px-6 pt-1.5 pb-1 w-auto text-lg font-medium dark:text-gray-100 hover:bg-gray-700 hover:text-gray-200 active:bg-gray-900 active:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-900 text-gray-900 rounded-t-lg shadow-xl cursor-pointer ${
-													props.data.activeResume ===
-															`${item.resume.toLowerCase()}Resume`
-														? 'dark:bg-gray-900 bg-gray-400'
-														: 'dark:bg-gray-800 bg-gray-200'
-												}`}
-												href={item.href}
-											>
-												{item.resume}
-											</a>
-										</li>
-									))}
-								</ul>
-
-								{/* resume */}
-								<section>
-									<link rel='stylesheet' href={asset('/styles/markdown.css')} />
-									<article
-										data-color-mode='auto'
-										data-light-theme='light'
-										data-dark-theme='dark'
-										class='markdown-body'
-										className='p-10 rounded-lg shadow-xl'
-										dangerouslySetInnerHTML={{
-											__html: gfm.render(props.data.resume),
-										}}
-									/>
-								</section>
-							</div>
-						</>
-					)
-					: (
-						<>
-							<h1 className='pt-20 text-5xl font-bold rounded-lg'>Loading...</h1>
-						</>
-					)}
+				<Resume resumes={props.data.resumes} />
 
 				<div className='flex justify-center'>
 					<h3 className='mt-4 text-4xl text-center'>
@@ -153,23 +75,9 @@ function ResumePage(props: PageProps<Data>) {
 							<Icons.FileDownload className='inline-block w-6 h-6' />
 						</span>
 					</a>
-					<a
-						type='button'
-						href={asset('/resume/resume-general.pdf')}
-						className='px-6 py-2 mx-auto my-8 text-lg text-gray-100 bg-blue-500 rounded-lg dark:text-gray-800 sm:my-16 hover:bg-blue-600 active:bg-blue-700'
-					>
-						<span className='flex items-center justify-center'>
-							<span className='mr-1'>
-								General
-							</span>
-							<Icons.FileDownload className='inline-block w-6 h-6' />
-						</span>
-					</a>
 				</div>
 			</main>
 			<Footer />
 		</>
 	);
 }
-
-export default ResumePage;

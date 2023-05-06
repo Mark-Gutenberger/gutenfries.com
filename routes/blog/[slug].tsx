@@ -1,30 +1,13 @@
-import { Handlers, PageProps } from '$fresh/server.ts';
-import { asset } from '$fresh/runtime.ts';
-
 import * as gfm from 'gfm';
 
-import { Navbar } from '@/components/Navbar.tsx';
-import { Footer } from '@/components/Footer.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
-import { Head } from '@/components/Head.tsx';
+import { Handlers, PageProps } from '$fresh/server.ts';
 import { loadPost, Post } from '@/utils/blogPosts.ts';
 
-// any langue I am likely to use
-import 'https://esm.sh/prismjs@1.27.0/components/prism-typescript?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-javascript?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-scss?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-css?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-jsx?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-tsx?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-rust?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-bash?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-diff?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-json?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-c?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-cpp?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-dart?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-yaml?no-check';
-import 'https://esm.sh/prismjs@1.27.0/components/prism-toml?no-check';
+import { Footer } from '@/components/Footer.tsx';
+import { Head } from '@/components/Head.tsx';
+import { Navbar } from '@/components/Navbar.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
+import { asset } from '$fresh/runtime.ts';
 
 interface Data {
 	post: Post;

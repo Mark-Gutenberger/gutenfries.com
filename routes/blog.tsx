@@ -1,11 +1,10 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-
+import { Navbar, Routes } from '@/components/Navbar.tsx';
 import { listPosts, Post } from '@/utils/blogPosts.ts';
 
-import { Footer } from '@/components/Footer.tsx';
 import { BlogPostPreview } from '@/components/BlogPostPreview.tsx';
+import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
-import { Navbar } from '@/components/Navbar.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 
 interface State {
@@ -28,7 +27,7 @@ export default function Home(props: PageProps<Data>) {
 	return (
 		<>
 			<Head PageProps={props} />
-			<Navbar active='blog' />
+			<Navbar active={Routes.blog} />
 			<NoScript />
 			<main id='main-content' className='bg-gray-100 dark:bg-gray-900'>
 				<section className='p-4 pt-20'>

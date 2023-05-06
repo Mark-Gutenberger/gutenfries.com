@@ -1,13 +1,13 @@
-import { Handlers, PageProps } from '$fresh/server.ts';
-import { asset } from '$fresh/runtime.ts';
-
 import * as gfm from 'gfm';
-import { readFile } from '@/utils/readFile.ts';
 
-import { Navbar } from '@/components/Navbar.tsx';
+import { Handlers, PageProps } from '$fresh/server.ts';
+import { Navbar, Routes } from '@/components/Navbar.tsx';
+
 import { Footer } from '@/components/Footer.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
 import { Head } from '@/components/Head.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
+import { asset } from '$fresh/runtime.ts';
+import { readFile } from '@/utils/readFile.ts';
 
 interface Data {
 	privPolicy: string | null;
@@ -30,7 +30,7 @@ function ResumePage(props: PageProps<Data>) {
 	return (
 		<>
 			<Head PageProps={props} />
-			<Navbar active='privPolicy' />
+			<Navbar active={Routes.privPolicy} />
 			<NoScript />
 
 			<main id='main-content' className='p-4 pt-20'>

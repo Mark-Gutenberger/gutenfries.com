@@ -1,42 +1,58 @@
-import { classNames } from '@/utils/helpers.ts';
 import SearchBar from '@/islands/SearchBar.tsx';
+import { classNames } from '@/utils/helpers.ts';
 // import Theme from '@/islands/Theme.tsx';
 
 interface Route {
-	name: string;
-	href: string | undefined;
-	showInNav: boolean;
+	displayName?: string;
+	id: Routes;
+	href: string;
+}
+
+export enum Routes {
+	home,
+	blog,
+	resume,
+	license,
+	notFound,
+	serverError,
+	privPolicy,
 }
 
 const routes: Route[] = [
 	{
-		name: 'Home',
+		id: Routes.home,
 		href: '/home',
-		showInNav: true,
+		displayName: 'Home',
 	},
 	{
-		name: 'Blog',
+		id: Routes.blog,
 		href: '/blog',
-		showInNav: true,
+		displayName: 'Blog',
 	},
 	{
-		name: 'Resume',
+		id: Routes.resume,
 		href: '/resume',
-		showInNav: true,
+		displayName: 'Resume',
 	},
 	{
-		name: '404',
+		id: Routes.license,
+		href: '/license',
+	},
+	{
+		id: Routes.privPolicy,
+		href: '/privacy-policy',
+	},
+	{
+		id: Routes.notFound,
 		href: '/404',
-		showInNav: false,
 	},
 	{
-		name: '500',
+		id: Routes.serverError,
 		href: '/500',
-		showInNav: false,
 	},
 ];
 
-function Navbar(props: { active?: string }) {
+function Navbar(props: { active: Routes }) {
 	return (
 		<>
 			<a
@@ -49,23 +65,22 @@ function Navbar(props: { active?: string }) {
 				{/* <Theme /> */}
 				<ul className='flex p-4 text-xl text-gray-200'>
 					{routes.map((item: Route) => {
-						if (item.showInNav) {
+						// if the route has a displayName, render it
+						if (item.displayName) {
 							return (
 								<li>
 									<a
-										key={item.name}
+										key={item.id}
 										href={item.href}
 										className={classNames(
-											props.active?.toLowerCase() ===
-													item.name.toLowerCase()
+											props.active === item.id
 												? 'bg-gray-400 dark:bg-gray-900 dark:text-gray-200 text-gray-900'
 												: 'dark:text-gray-300 text-gray-800 dark:bg-gray-800 bg-gray-200 text-gray-900',
 											'rounded-lg text-xl font-medium p-3 mx-3 block hover:bg-gray-700 active:bg-gray-900 hover:text-gray-200',
 										)}
-										aria-current={props.active?.toLowerCase() ===
-											item.name.toLowerCase()}
+										aria-current={props.active === item.id ? 'page' : undefined}
 									>
-										{item.name}
+										{item.displayName}
 									</a>
 								</li>
 							);

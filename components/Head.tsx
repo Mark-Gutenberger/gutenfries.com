@@ -95,19 +95,6 @@ function Head({ PageProps }: HeadProps) {
 						`,
 				}}
 			/>
-
-			{/* Google Analytics */}
-			<script async src='https://www.googletagmanager.com/gtag/js?id=G-DNT0Y7Z3PN'></script>
-			<script
-				dangerouslySetInnerHTML={{
-					__html: `
-							window.dataLayer = window.dataLayer || [];
-							function gtag(){dataLayer.push(arguments);}
-							gtag('js', new Date());
-							gtag('config', 'G-DNT0Y7Z3PN');
-					`,
-				}}
-			/>
 		</FreshHead>
 	);
 }

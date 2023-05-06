@@ -17,7 +17,6 @@
 [![GitHub Issues](https://img.shields.io/github/issues/gutenfries/gutenfries.deno.dev.svg)](https://github.com/gutenfries/gutenfries.deno.dev/issues)
 [![MIT License](https://img.shields.io/github/license/gutenfries/gutenfries.deno.dev.svg)](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md)
 [![deno-tests](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml)
-[![rust-tests](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/rust-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/rust-tests.yml)
 
 <p align='center'>
  <picture>
@@ -58,7 +57,6 @@ _(May take a while to render)_
 - [Tailwind CSS](https://tailwindcss.com/) :paintbrush: (Styling)
   - [Twind](https://twind.dev/) (CSS-In-JS Solution)
 - [Preact](https://preactjs.com/) :page_facing_up: (JSX Rendering)
-- [Rust](https://www.rust-lang.org/) :gear: (Serverless Functions)
 - [GitHub Actions](https://github.com/features/actions) :octocat: (CI & CD)
 
 ## Contributing :handshake
@@ -95,8 +93,6 @@ Helpful resources used to get this project off the ground:
 - [Preact docs](https://preactjs.com/guide/v10/getting-started)
 - [Deno docs](https://deno.land/manual)
 - [Deno Deploy docs](https://deno.com/deploy/docs)
-- [Rust docs](https://doc.rust-lang.org/book/)
-- [wasmbuild repo](https://github.com/denoland/wasmbuild)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

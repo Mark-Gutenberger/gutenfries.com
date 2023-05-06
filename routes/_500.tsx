@@ -1,15 +1,15 @@
-import { ErrorPageProps } from '$fresh/server.ts';
-import { asset } from '$fresh/runtime.ts';
+import { Navbar, Routes } from '@/components/Navbar.tsx';
 
+import { ErrorPageProps } from '$fresh/server.ts';
 import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
-import { Navbar } from '@/components/Navbar.tsx';
+import { asset } from '$fresh/runtime.ts';
 
 function ErrorPage(PageProps: ErrorPageProps) {
 	return (
 		<>
 			<Head PageProps={PageProps} />
-			<Navbar active='404' />
+			<Navbar active={Routes.notFound} />
 
 			<NoScript />
 			<link

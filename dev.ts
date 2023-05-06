@@ -1,3 +1,6 @@
+import 'preact/debug';
+import 'preact/devtools';
+
 import dev from '$fresh/dev.ts';
 
 // start dev server

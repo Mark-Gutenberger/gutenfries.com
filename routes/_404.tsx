@@ -1,15 +1,15 @@
-import { UnknownPageProps } from '$fresh/server.ts';
-import { asset } from '$fresh/runtime.ts';
+import { Navbar, Routes } from '@/components/Navbar.tsx';
 
 import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
-import { Navbar } from '@/components/Navbar.tsx';
+import { UnknownPageProps } from '$fresh/server.ts';
+import { asset } from '$fresh/runtime.ts';
 
 function NotFoundPage(PageProps: UnknownPageProps) {
 	return (
 		<>
 			<Head PageProps={PageProps} />
-			<Navbar />
+			<Navbar active={Routes.serverError} />
 
 			<NoScript />
 
