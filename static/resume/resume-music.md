@@ -1,4 +1,4 @@
-# Mark Gutenberger
+# Marc Gutenberger
 
 ---
 > Jazz & Marching Arts Musician
@@ -8,13 +8,13 @@
 
 ### The Ryan Kautzer Polka Band
 
-> 09/2020 - present _(volunteer)_
+> 09/2020 - present *(volunteer)*
 
 phone: [+1 (920)-883-5222](tel:9208835222)
 
--   **Musician**
-    -   Played Banjo, Guitar, and Drumset for the polka band
-    -   Performed at various venues
+* **Musician**
+  * Played Banjo, Guitar, and Drumset for the polka band
+  * Performed at various venues
 
 ### Red Raider Marching Band
 
@@ -23,9 +23,9 @@ phone: [+1 (920)-883-5222](tel:9208835222)
 email (director Tom Busch): <dtbusch@pulaskischools.org>
 website: [pulaskimusicboosters.net](https://pulaskimusicboosters.net/)
 
--   **Marching Performer**
-    -   Marched in bass line
-    -   Marched in across the country for many competitions and events, including but not limited to **[Disney World](https://www.disneycampus.com/programs/performing-arts/marching-band/)** and **[Pasadena Tournament of Roses](https://tournamentofroses.com/tournament-of-roses-announces-2023-rose-parade-marching-bands/)**.
+* **Marching Performer**
+  * Marched in bass line
+  * Marched in across the country for many competitions and events, including but not limited to **[Disney World](https://www.disneycampus.com/programs/performing-arts/marching-band/)** and **[Pasadena Tournament of Roses](https://tournamentofroses.com/tournament-of-roses-announces-2023-rose-parade-marching-bands/)**.
 
 ### Red Raider Jazz Band
 
@@ -33,51 +33,51 @@ website: [pulaskimusicboosters.net](https://pulaskimusicboosters.net/)
 
 email (director Michael Guerrero): <maguerrero@pulaskischools.org>
 
--   **Auxiliary Percussionist**
-    -   Acceptance by audition only
-    -   Played percussive instruments, as well as drumset and second guitar for the band.
-    -   Performed at various venues
+* **Auxiliary Percussionist**
+  * Acceptance by audition only
+  * Played percussive instruments, as well as drumset and second guitar for the band.
+  * Performed at various venues
 
 ## Education
 
 ### Pulaski High School
 
-> 09/2020 - 06/2023 _(expected)_
+> 09/2020 - 06/2023 *(expected)*
 
 site: [pulaskischools.org](https://www.pulaskischools.org/)
 
--   Relevant Coursework & Involvements: **Marching Band**, **Concert Band**, **Jazz Band**, **Choir**, **Forensics**, **Oral & Intrapersonal Communication** _(College Class)_
--   **State Qualifier** in **Speech & Broadcasting** for **Forensics** _(2021)_
--   **State Qualifier** in **Music** for **WSMA Solo & Ensemble** (_Class A_ Snare Drum Solo) _(2021)_
--   **State Runner-Up** in **Music** for **WSMA Solo & Ensemble** (_Class A_ Percussion Ensemble) _(2021)_
+* Relevant Coursework & Involvements: **Marching Band**, **Concert Band**, **Jazz Band**, **Choir**, **Forensics**, **Oral & Intrapersonal Communication** *(College Class)*
+* **State Qualifier** in **Speech & Broadcasting** for **Forensics** *(2021)*
+* **State Qualifier** in **Music** for **WSMA Solo & Ensemble** (*Class A* Snare Drum Solo) *(2021)*
+* **State Runner-Up** in **Music** for **WSMA Solo & Ensemble** (*Class A* Percussion Ensemble) *(2021)*
 
 ## Skills
 
 ### Instruments
 
--   **Guitar** _(Highly proficient)_
--   **Drums & Percussion** _(Highly proficient)_
--   **Bass** _(Proficient)_
--   **Banjo** _(Proficient)_
--   **Piano** _(Intermediate)_
+* **Guitar** *(Highly proficient)*
+* **Drums & Percussion** *(Highly proficient)*
+* **Bass** *(Proficient)*
+* **Banjo** *(Proficient)*
+* **Piano** *(Intermediate)*
 
 ### Languages
 
--   **English** _(native speaker)_
--   **German** _(intermediate)_
+* **English** *(native speaker)*
+* **German** *(intermediate)*
 
 ## References
 
--   Tom Busch _(High School Marching Director)_
-    -   <dtbusch@pulaskischools.org>
--   Michael Guerrero _(High School Jazz Director)_
-    -   <maguerrero@pulaskischools.org>
--   Bob Pekol _(Guardian)_
-    -   <bobpekol@icloud.com>
--   Lindsey Leisgang _(Social Worker)_
-    -   <lindsey.leisgang@shawanocountywi.gov>
+* Tom Busch *(High School Marching Director)*
+  * <dtbusch@pulaskischools.org>
+* Michael Guerrero *(High School Jazz Director)*
+  * <maguerrero@pulaskischools.org>
+* Bob Pekol *(Guardian)*
+  * <bobpekol@icloud.com>
+* Lindsey Leisgang *(Social Worker)*
+  * <lindsey.leisgang@shawanocountywi.gov>
 
 ---
-> Mark Gutenberger | [+1 (920)-284-3760](tel:19202843760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)\
+> Marc Gutenberger | [+1 (920)-284-3760](tel:19202843760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)\
 > [GitHub](https://github.com/gutenfries) | [Peerlist](https://peerlist.io/gutenfries) | [LinkedIn](https://www.linkedin.com/in/gutenfries/)
 ---

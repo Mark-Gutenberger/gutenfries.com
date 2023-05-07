@@ -8,8 +8,8 @@ interface HeadProps {
 function Head({ PageProps }: HeadProps) {
 	const OGImageUrl = new URL(asset('/images/screenshot.png'), PageProps.url).href;
 	const OGDescription =
-		'pub struct Mark { name: &str, email: String, loves_dinosaurs: bool, expertise: Vec<&str>, } ...';
-	const OGTitle = 'Mark Gutenberger';
+		'pub struct Marc { name: &str, email: String, loves_dinosaurs: bool, expertise: Vec<&str>, } ...';
+	const OGTitle = 'Marc Gutenberger';
 
 	let pipe: string;
 	if (PageProps.url.pathname.slice(1) != '') {
@@ -24,18 +24,18 @@ function Head({ PageProps }: HeadProps) {
 			<link rel='preconnect' href='https://fonts.googleapis.com' />
 			<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
 			<link
-				href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700'
+				href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700'
 				rel='stylesheet'
 				type='text/css'
 			/>
 
 			{/* <!-- Primary Meta Tags --> */}
 			<title>
-				{PageProps.url.pathname.slice(1)} {pipe} Mark Gutenberger
+				{PageProps.url.pathname.slice(1)} {pipe} Marc Gutenberger
 			</title>
 			<meta
 				name='title'
-				content={`${PageProps.url.pathname.slice(1)} ${pipe} Mark Gutenberger`}
+				content={`${PageProps.url.pathname.slice(1)} ${pipe} Marc Gutenberger`}
 			/>
 			<meta
 				name='description'

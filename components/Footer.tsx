@@ -25,19 +25,7 @@ function Footer() {
 										<Icons.Instagram className='inline-block h-5 w-5' />
 									</a>
 								</li>
-								<li>
-									<a
-										className='hover:text-underline flex items-center justify-center'
-										href='https://twitter.com/gutenfries'
-										target='_blank'
-										rel='noopener'
-									>
-										<span className='mr-1'>
-											Twitter
-										</span>
-										<Icons.Twitter className='inline-block h-5 h-5' />
-									</a>
-								</li>
+
 								<li>
 									<a
 										className='hover:text-underline flex items-center justify-center'
@@ -51,8 +39,7 @@ function Footer() {
 										<Icons.TikTok className='inline-block h-5 h-5' />
 									</a>
 								</li>
-								{
-									/* <li>
+								<li>
 									<a
 										className='hover:text-underline flex items-center justify-center'
 										href='https://open.spotify.com/user/toxxf9ydhuutj64csrjyio7oq?si=08312a08a8b24068'
@@ -64,8 +51,20 @@ function Footer() {
 										</span>
 										<Icons.Spotify className='inline-block h-5 w-5' />
 									</a>
-								</li> */
-								}
+								</li>
+								<li>
+									<a
+										className='hover:text-underline flex items-center justify-center'
+										href='https://discord.com/users/1007032871892025435'
+										target='_blank'
+										rel='noopener'
+									>
+										<span className='mr-1'>
+											Discord
+										</span>
+										<Icons.Discord className='inline-block h-5 w-5' />
+									</a>
+								</li>
 							</ul>
 						</nav>
 					</li>
@@ -165,7 +164,7 @@ function Footer() {
 								<li>
 									<a
 										className='hover:text-underline flex items-center justify-center'
-										href='https://g.dev/notgutenfries'
+										href='https://g.dev/gutenfries'
 										target='_blank'
 										rel='noopener'
 									>
@@ -223,21 +222,6 @@ function Footer() {
 										<Icons.Codepen className='inline-block h-5 w-5' />
 									</a>
 								</li>
-								{
-									/* <li>
-									<a
-										className='hover:text-underline flex items-center justify-center'
-										href='https://marketplace.visualstudio.com/publishers/gutenfries'
-										target='_blank'
-										rel='noopener'
-									>
-										<span className='mr-1'>
-											Visual Studio Marketplace
-										</span>
-										<Icons.VisualStudio className='inline-block h-5 w-5' />
-									</a>
-								</li> */
-								}
 							</ul>
 						</nav>
 					</li>
@@ -395,7 +379,7 @@ function Footer() {
 						href='/license'
 						className='ml-1'
 					>
-						© {new Date().getFullYear()} Mark Gutenberger - @gutenfries
+						© {new Date().getFullYear()} Marc Gutenberger - @gutenfries
 					</a>
 				</span>
 				<span className='inline-flex sm:mx-auto sm:mt-0 mt-2 justify-center sm:justify-start'>

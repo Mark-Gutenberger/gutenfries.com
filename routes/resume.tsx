@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
 import Icons from '@/utils/Icons.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
-import Resume from '../islands/Resume.tsx';
+import Resume from '@/islands/Resume.tsx';
 import { asset } from '$fresh/runtime.ts';
 import { readFile } from '@/utils/readFile.ts';
 import { render as renderGFM } from 'gfm';

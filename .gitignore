@@ -1,6 +1,6 @@
 ###################################################
 ############## The Ultimate Gitignore #############
-### Copyright (c) Mark Gutenberger under the MIT ##
+### Copyright (c) Marc Gutenberger under the MIT ##
 ###################################################
 
 .obsidian/
@@ -506,7 +506,7 @@ Generated\ Files/
 TestResult.xml
 nunit-*.xml
 dlldata.c
-BenchmarkDotNet.Artifacts/
+BenchmarcDotNet.Artifacts/
 project.lock.json
 project.fragment.lock.json
 artifacts/

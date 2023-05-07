@@ -65,4 +65,4 @@ Open-sourced under the MIT License. See [LICENSE.md](https://github.com/gutenfri
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-> copyright (c) 2022 Mark Gutenberger
+> copyright (c) 2022 Marc Gutenberger

@@ -1,5 +1,6 @@
-import { Options } from '$fresh/plugins/twind.ts';
 import * as colors from 'twind/colors';
+
+import { Options } from '$fresh/plugins/twind.ts';
 
 export default {
 	selfURL: import.meta.url,
@@ -47,19 +48,20 @@ export default {
 			},
 			fontFamily: {
 				sans: [
-					'Fira',
-					'Fira Sans',
-					'Inter',
+					'"Source Sans Pro"',
+					'Poppins',
+					'"Open Sans"',
+					'Roboto',
+					'Arial',
+					'sans-serif',
 					'ui-sans-serif',
 					'system-ui',
 					'-apple-system',
 					'BlinkMacSystemFont',
 					'"Segoe UI"',
-					'Roboto',
+					'Inter',
 					'"Helvetica Neue"',
-					'Arial',
 					'"Noto Sans"',
-					'sans-serif',
 					'"Apple Color Emoji"',
 					'"Segoe UI Emoji"',
 					'"Segoe UI Symbol"',

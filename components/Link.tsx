@@ -1,4 +1,4 @@
-import { ComponentChildren, JSX } from 'preact';
+import { ComponentChildren } from 'preact';
 
 interface LinkProps {
 	/**
@@ -54,7 +54,9 @@ interface LinkProps {
  * // link to an internal page with underline
  * <Link href='/about' u>About</Link>
  */
-export const Link = ({ href, children, u, ext, noSpaces, noEndSpace, noStartSpace, className }: LinkProps): JSX.Element => {
+export const Link = (
+	{ href, children, u, ext, noSpaces, noEndSpace, noStartSpace, className }: LinkProps,
+) => {
 	if (noEndSpace) {
 		children = ` ${children}`;
 	} else if (noStartSpace) {
@@ -73,7 +75,9 @@ export const Link = ({ href, children, u, ext, noSpaces, noEndSpace, noStartSpac
 	return (
 		<a
 			href={href}
-			className={`text-blue-500 hover:text-blue-600 active:text-blue-700${u ? ' underline' : ''} ${className ?? ''}`}
+			className={`text-blue-500 hover:text-blue-600 active:text-blue-700${
+				u ? ' underline' : ''
+			} ${className ?? ''}`}
 			target={ext ? '_blank' : undefined}
 			rel={ext ? 'noopener' : undefined}
 		>

@@ -20,7 +20,7 @@ enum ActiveResume {
 	music,
 }
 
-export interface ResumeProps {
+interface ResumeProps {
 	resumes: string[];
 }
 

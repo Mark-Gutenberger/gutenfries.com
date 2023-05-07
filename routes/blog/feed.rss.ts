@@ -74,10 +74,10 @@ class RssFeed {
 			<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 				<channel>
 					<atom:link href="${this.#url}feed.rss" rel="self" type="application/rss+xml" />
-					<title>Mark Gutenberger's Blog</title>
+					<title>Marc Gutenberger's Blog</title>
 					<link>${this.#url}</link>
-					<description>Mark Gutenberger's Blog</description>
-					<copyright>Copyright © Mark Gutenberger gutenfries@gmail.com under the MIT License https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md</copyright>
+					<description>Marc Gutenberger's Blog</description>
+					<copyright>Copyright © Marc Gutenberger gutenfries@gmail.com under the MIT License https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md</copyright>
 					<language>en-us</language>
 					<generator>Deno Fresh SSR</generator>
 					<lastBuildDate>${lastUpdated.toUTCString()}</lastBuildDate>
@@ -86,7 +86,7 @@ class RssFeed {
 					<webMaster>gutenfries@gmail.com</webMaster>
 					<image>
 						<url>https://gutenfries.deno.dev/images/penguin-icon.png</url>
-						<title>Mark Gutenberger's Blog</title>
+						<title>Marc Gutenberger's Blog</title>
 						<link>${this.#url}</link>
 					</image>
 					${

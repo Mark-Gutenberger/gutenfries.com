@@ -1,9 +1,10 @@
 import { Navbar, Routes } from '@/components/Navbar.tsx';
 
+import ContentCard from '../components/ContentCard.tsx';
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
 import Icons from '@/utils/Icons.tsx';
-import ImageSection from '@/islands/ImageSection.tsx';
+import ImageCard from '@/components/ImageCard.tsx';
 import { Link } from '@/components/Link.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { PageProps } from '$fresh/server.ts';
@@ -22,14 +23,14 @@ function IndexPage(PageProps: PageProps) {
 	];
 	const code = `// like the theme? Try it!
 // https://github.com/gutenfries/10x-dark-theme
-pub struct Mark {
+pub struct Marc {
 	email: String,
 	loves_dinosaurs: bool,
 	skills: Vec<&str>,
 }
-impl Mark {
-	pub fn about() -> Mark {
-		Mark {
+impl Marc {
+	pub fn about() -> Marc {
+		Marc {
 			email: String::from("gutenfries@gmail.com"),
 			loves_dinosaurs: true,
 			skills: vec![
@@ -40,7 +41,7 @@ impl Mark {
 		}
 	}
 }
-const MARK: &str =`;
+const MARC: &str =`;
 
 	return (
 		<>
@@ -56,7 +57,7 @@ const MARK: &str =`;
 			>
 				<section className='container flex flex-col items-center px-8 pb-32 mx-auto pt-28 lg:flex-row'>
 					<h1 className='w-3/5 mx-auto mb-12 text-2xl sm:text-5xl font-semibold text-center md:text-6xl lg:text-7xl'>
-						Mark Gutenberger
+						Marc Gutenberger
 					</h1>
 					<div className='w-5/6 lg:w-1/2 md:w-full'>
 						<TypingCodeBlock
@@ -68,23 +69,13 @@ const MARK: &str =`;
 				</section>
 
 				<section className='container flex flex-wrap px-10 py-32 mx-auto'>
-					<ImageSection
-						images={[
-							{
-								src: asset('/images/music/stock/snare-line.jpg'),
-								alt: 'drum corps snare line',
-								title: 'Drum Corps & Snareline',
-								description:
-									'I am passionate about corps snareline & rudimental drumming and have been marching for several years.',
-							},
-							{
-								src: asset('/images/dev/stock/rust-code.png'),
-								alt: 'drum corps snare line',
-								title: 'TITLE',
-								description: 'DESC 2',
-							},
-						]}
-					/>
+					<ContentCard
+						title='Drum Corps & Snareline'
+						description='I am passionate about corps snareline & rudimental drumming and have been marching for several years.'
+					>
+						<SnareAnimation />
+					</ContentCard>
+
 					<div className='flex flex-col flex-wrap mb-10 text-center lg:py-6 lg:w-1/2 lg:pl-12 lg:text-left'>
 						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
 							<h2 className='text-6xl font-semibold lg:text-7xl'>
@@ -98,8 +89,8 @@ const MARK: &str =`;
 							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
 								I am a software developer and I love to to solve unique and
 								difficult problems. I work with web technologies and systems
-								programming. I work fluently in Rust, Typescript, and C/C++, and
-								have a passion for Rust and Deno, and especially the two together.
+								programming. I am fluent in Rust, Typescript, and Dart, and I
+								passion for the Rust programming language.
 							</p>
 						</div>
 						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
@@ -332,7 +323,7 @@ const MARK: &str =`;
 						</blockquote>
 						<hr className='w-2/5 h-0 mx-auto my-5 bg-blue-500 border-blue-500 rounded-lg border-1' />
 						<h2 className='text-3xl text-center'>
-							Mark Gutenberger
+							Marc Gutenberger
 						</h2>
 						<p className='text-lg text-center'>
 							Software Engineer
