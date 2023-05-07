@@ -85,7 +85,7 @@ class RssFeed {
 					<managingEditor>gutenfries@gmail.com</managingEditor>
 					<webMaster>gutenfries@gmail.com</webMaster>
 					<image>
-						<url>https://gutenfries.deno.dev/images/penguin-icon.png</url>
+						<url>https://gutenfries.deno.dev/images/code.svg</url>
 						<title>Marc Gutenberger's Blog</title>
 						<link>${this.#url}</link>
 					</image>

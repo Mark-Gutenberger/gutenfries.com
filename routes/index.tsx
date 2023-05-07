@@ -1,10 +1,9 @@
 import { Navbar, Routes } from '@/components/Navbar.tsx';
 
-import ContentCard from '../components/ContentCard.tsx';
+import ContentCard from '@/components/ContentCard.tsx';
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
 import Icons from '@/utils/Icons.tsx';
-import ImageCard from '@/components/ImageCard.tsx';
 import { Link } from '@/components/Link.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { PageProps } from '$fresh/server.ts';
@@ -12,7 +11,6 @@ import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
 import { SnareAnimation } from '@/components/SnareAnimation.tsx';
 import { TechCard } from '@/components/TechCard.tsx';
 import TypingCodeBlock from '@/islands/TypingCodeBlock.tsx';
-import { asset } from '$fresh/runtime.ts';
 
 function IndexPage(PageProps: PageProps) {
 	const typingCode = [
@@ -56,36 +54,46 @@ const MARC: &str =`;
 				className='text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
 			>
 				<section className='container flex flex-col items-center px-8 pb-32 mx-auto pt-28 lg:flex-row'>
-					<h1 className='w-3/5 mx-auto mb-12 text-2xl sm:text-5xl font-semibold text-center md:text-6xl lg:text-7xl'>
+					<h1 className='w-3/5 mx-auto mb-12 font-semibold text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
 						Marc Gutenberger
 					</h1>
 					<div className='w-5/6 lg:w-1/2 md:w-full'>
-						<TypingCodeBlock
-							lang='rust'
-							code={code}
-							typingCode={typingCode}
-						/>
+						<TypingCodeBlock lang='rust' code={code} typingCode={typingCode} />
 					</div>
 				</section>
 
 				<section className='container flex flex-wrap px-10 py-32 mx-auto'>
 					<ContentCard
 						title='Drum Corps & Snareline'
-						description='I am passionate about corps snareline & rudimental drumming and have been marching for several years.'
+						description={
+							<>
+								<span>
+									I have a great passion for the marching arts. I marched
+									throughout high school and recieved a contract to march at
+									<Link href='https://www.rivercityrhythm.org/'>
+										River City Rhythm Drum & Bugle Corps
+									</Link>
+									for the 2023 DCI season.
+								</span>
+								<br />
+								<span>
+									To learn how I made this animation from scratch, check out{' '}
+									<Link href='/blog/create-a-css-drum-animation'>my blog</Link>
+								</span>
+							</>
+						}
 					>
 						<SnareAnimation />
 					</ContentCard>
 
 					<div className='flex flex-col flex-wrap mb-10 text-center lg:py-6 lg:w-1/2 lg:pl-12 lg:text-left'>
 						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
-							<h2 className='text-6xl font-semibold lg:text-7xl'>
+							<h2 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold'>
 								About Me
 							</h2>
 						</div>
 						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
-							<h3 className='mb-3 text-3xl sm:text-4xl'>
-								Software Development
-							</h3>
+							<h3 className='mb-3 text-3xl sm:text-4xl'>Software Development</h3>
 							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
 								I am a software developer and I love to to solve unique and
 								difficult problems. I work with web technologies and systems
@@ -94,9 +102,7 @@ const MARC: &str =`;
 							</p>
 						</div>
 						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
-							<h3 className='mb-3 text-3xl sm:text-4xl'>
-								Music
-							</h3>
+							<h3 className='mb-3 text-3xl sm:text-4xl'>Music</h3>
 							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
 								I am musician and performer. I am a rudimental drummer, and I also
 								play string instruments like guitar and bass, as well as piano. I am
@@ -104,9 +110,7 @@ const MARC: &str =`;
 							</p>
 						</div>
 						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
-							<h3 className='mb-3 text-3xl sm:text-4xl'>
-								Design & Marketing
-							</h3>
+							<h3 className='mb-3 text-3xl sm:text-4xl'>Design & Marketing</h3>
 							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
 								I have a passion for quality design and marketing and love to
 								understand what makes a great product and how to design, market,

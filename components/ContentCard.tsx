@@ -3,7 +3,7 @@ import { ComponentChildren } from 'preact';
 interface ContentCardProps {
 	children: ComponentChildren;
 	title: string;
-	description: string;
+	description: ComponentChildren;
 }
 
 export default function ContentCard({ children, title, description }: ContentCardProps) {
