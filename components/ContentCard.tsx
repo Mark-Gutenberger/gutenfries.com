@@ -11,7 +11,7 @@ export default function ContentCard({ children, title, description }: ContentCar
 		<div className='w-full mb-64 lg:my-auto lg:w-1/2 xl:py-12 xl:mb-10'>
 			{children}
 			<div className='px-6 py-4 mx-6 bg-gray-600 bg-opacity-25 rounded-b-lg shadow-lg'>
-				<h3 className='mb-2 sm:text-xl text-lg font-bold'>{title}</h3>
+				<h2 className='mb-2 sm:text-xl text-lg font-bold'>{title}</h2>
 				<p className='sm:text-base text-sm text-gray-700 dark:text-gray-300'>
 					{description}
 				</p>
