@@ -65,9 +65,7 @@ export function Link(
 		children = ` ${children} `;
 	}
 
-	{
-		/* display the href value if text is failed to be passed to the component. */
-	}
+	// display the href value if text is failed to be passed to the component.
 	if (!children) {
 		children = href;
 	}
@@ -75,7 +73,7 @@ export function Link(
 	return (
 		<a
 			href={href}
-			className={`text-purple-500 hover:text-purple-600 active:text-purple-700${
+			className={`text-purple-500 hover:underline hover:text-purple-600 active:text-purple-700${
 				u ? ' underline' : ''
 			} ${className ?? ''}`}
 			target={internal ? undefined : '_blank'}
