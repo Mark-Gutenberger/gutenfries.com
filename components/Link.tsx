@@ -20,25 +20,14 @@ interface LinkProps {
 	 */
 	internal?: boolean;
 	/**
-	 * whether to add spaces before and after the link or not
-	 * @default false
-	 * @see noEndSpace @see noStartSpace
-	 */
-	noSpaces?: boolean;
-	/**
-	 * whether or not to add a space to the end of the link
-	 * @default flase
-	 */
-	noEndSpace?: boolean;
-	/**
-	 * whether or not to add a space to the start of the link
-	 * @default false
-	 */
-	noStartSpace?: boolean;
-	/**
 	 * extra styles to apply to the link
 	 */
 	className?: string;
+	/**
+	 * whether to color the link or not
+	 * @default true
+	 */
+	color?: boolean;
 }
 
 /**
@@ -55,16 +44,8 @@ interface LinkProps {
  * <Link href='/about' u internal>About</Link>
  */
 export function Link(
-	{ href, children, u, internal, noSpaces, noEndSpace, noStartSpace, className }: LinkProps,
+	{ href, children, u, internal, className, color }: LinkProps,
 ) {
-	if (noEndSpace) {
-		children = ` ${children}`;
-	} else if (noStartSpace) {
-		children = `${children} `;
-	} else if (!noSpaces) {
-		children = ` ${children} `;
-	}
-
 	// display the href value if text is failed to be passed to the component.
 	if (!children) {
 		children = href;
@@ -73,9 +54,11 @@ export function Link(
 	return (
 		<a
 			href={href}
-			className={`text-purple-500 hover:underline hover:text-purple-600 active:text-purple-700${
-				u ? ' underline' : ''
-			} ${className ?? ''}`}
+			className={`hover:underline ${u ? 'underline' : ''} ${className ?? ''} ${
+				// if `color` is undefined or true, color the link
+				color ?? true
+					? 'hover:text-purple-600 active:text-purple-700 text-purple-500'
+					: ''}`}
 			target={internal ? undefined : '_blank'}
 			rel={internal ? undefined : 'noopener noreferrer'}
 		>

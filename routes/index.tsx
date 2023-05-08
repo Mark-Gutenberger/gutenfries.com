@@ -1,6 +1,7 @@
 import {
 	IconActivity,
 	IconC,
+	IconCPP,
 	IconDeno,
 	IconDocker,
 	IconFlutter,
@@ -12,6 +13,7 @@ import {
 	IconReact,
 	IconRust,
 	IconShoe,
+	IconStack,
 } from '@/components/Icons.tsx';
 import { Navbar, Routes } from '@/components/Navbar.tsx';
 
@@ -83,10 +85,10 @@ const MARC: &str =`;
 							<>
 								<span>
 									I have a great passion for the marching arts. I marched
-									throughout high school and recieved a contract to march at
+									throughout high school and recieved a contract to march at{' '}
 									<Link href='https://www.rivercityrhythm.org/'>
 										River City Rhythm Drum & Bugle Corps
-									</Link>
+									</Link>{' '}
 									for the 2023 DCI season.
 								</span>
 								<br />
@@ -94,7 +96,7 @@ const MARC: &str =`;
 									To learn how I made this animation from scratch, check out{' '}
 									<Link internal href='/blog/create-a-css-drum-animation'>
 										my blog
-									</Link>
+									</Link>.
 								</span>
 							</>
 						}
@@ -113,6 +115,7 @@ const MARC: &str =`;
 							<h3 className='mb-3 text-3xl sm:text-4xl'>Software Engineering</h3>
 							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
 								I'm a software engineer with a passion for buiding software with the
+								{' '}
 								<Link href='https://www.rust-lang.org/'>
 									Rust programming language
 								</Link>. I love solving unique and challenging problems, and I am
@@ -147,7 +150,7 @@ const MARC: &str =`;
 								icon={<IconMedal />}
 							>
 								I recieved the{' '}
-								<Link href='https://www.skillsusa.org/'>SkillsUSA</Link>
+								<Link href='https://www.skillsusa.org/'>SkillsUSA</Link>{' '}
 								State Software Engineering Award for best performance across a
 								written test, 3 written programs, and a technical interview. The
 								attendence to the competition was 150+ college and high school
@@ -159,7 +162,7 @@ const MARC: &str =`;
 								title='2023 DCI Contract'
 								icon={<IconShoe />}
 							>
-								I auditioned and recieved a contract to march the
+								I auditioned and recieved a contract to march the{' '}
 								<Link href='https://rivercityrhythm.org'>River City Rhythm</Link>
 								{' '}
 								snareline for the 2023 DCI Season, however had to respectfully
@@ -178,10 +181,11 @@ const MARC: &str =`;
 								from the{' '}
 								<Link href='https://www.rust-lang.org/'>
 									Rust
-								</Link>programming language. The project has has almost{' '}
+								</Link>{' '}
+								programming language. The project has has almost{' '}
 								<Link href='https://github.com/dart-sys/dart-sys/graphs/traffic'>
 									100 dependent repositories
-								</Link>, and several dependent
+								</Link>, and several dependent{' '}
 								<Link href='https://crates.io'>crates.io</Link>{' '}
 								packages, ammassing over 100,000 monthly downloads.
 							</RecentActivityCard>
@@ -191,8 +195,8 @@ const MARC: &str =`;
 
 				<section className='container px-5 py-32 mx-auto'>
 					<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
-						Technologies
-						<IconPC className='hidden sm:inline-block ml-4 h-14 w-14' />
+						Tech Stack
+						<IconStack className='hidden sm:inline-block ml-4 h-14 w-14' />
 					</h2>
 
 					<hr className='hidden h-10 mx-auto mb-10 border-t-2 border-purple-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
@@ -201,31 +205,26 @@ const MARC: &str =`;
 						<TechCard
 							tech='Rust'
 							techLink='https://www.rust-lang.org/'
-							icon={<IconPackage />}
+							icon={<IconRust />}
 						>
-							I am quite passionate about Rust and I am highly proficient at using it.
-							I have several
-							<Link href='https://github.com/gutenfries?tab=repositories&language=rust'>
-								open source projects
-							</Link>
-							written in rust, an even
-							<Link href='https://github.com/gutenfries/gutenfries.deno.dev'>
-								this website
-							</Link>
-							is a little bit rusty.
+							My 'Main' language is Rust. I've been writing Rust code for several
+							years, and I am very competent and familiar with with the{' '}
+							<Link href='https://crates.io'>ecosystem</Link>{' '}
+							and advanced language features. I have written numerous applications in
+							the Rust language; some form the ground up, and others upon existing
+							codebases. Many of these codebases are Open-Sourced and available on
+							{' '}
+							<Link href='https://github.com/gutenfries'>GitHub</Link>
 						</TechCard>
 
 						<TechCard
-							tech='C/C++'
+							tech='C++'
 							techLink='https://www.cplusplus.com/'
-							icon={<IconC />}
+							icon={<IconCPP />}
 						>
 							I am quite comfortable using both C and C++ and have used both languages
 							independently, as well as with
-							<Link
-								href='https://www.rust-lang.org/'
-								noEndSpace
-							>
+							<Link href='https://www.rust-lang.org/'>
 								Rust
 							</Link>
 
@@ -300,10 +299,7 @@ const MARC: &str =`;
 						>
 							I am proficient at using Docker and have used it in several projects,
 							including
-							<Link
-								href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/Dockerfile'
-								noEndSpace
-							>
+							<Link href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/Dockerfile'>
 								this website
 							</Link>.
 						</TechCard>

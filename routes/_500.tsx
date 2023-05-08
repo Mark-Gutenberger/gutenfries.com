@@ -22,16 +22,16 @@ function ErrorPage(PageProps: ErrorPageProps) {
 				className='bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 text-center flex flex-col justify-center h-screen overflow-x-hidden'
 			>
 				<span>
-					<h2>HTTP Error 500</h2>
-					<h2>HTTP Error 500</h2>
-					<h2>HTTP Error 500</h2>
+					<h2>Error 500</h2>
+					<h2>Error 500</h2>
+					<h2>Error 500</h2>
 				</span>
 				<br />
 				<br />
 				<span>
-					<h3>Internal Server Error</h3>
-					<h3>Internal Server Error</h3>
-					<h3>Internal Server Error</h3>
+					<h3>Server Error</h3>
+					<h3>Server Error</h3>
+					<h3>Server Error</h3>
 				</span>
 
 				{PageProps.error instanceof Error
@@ -48,9 +48,23 @@ function ErrorPage(PageProps: ErrorPageProps) {
 						</>
 					)
 					: null}
-				<p className='text-center text-gray-300'>
-					{PageProps.error instanceof Error ? (PageProps.error as Error).message : null}
-				</p>
+				<span>
+					<p>
+						{PageProps.error instanceof Error
+							? (PageProps.error as Error).message
+							: null}
+					</p>
+					<p>
+						{PageProps.error instanceof Error
+							? (PageProps.error as Error).message
+							: null}
+					</p>
+					<p>
+						{PageProps.error instanceof Error
+							? (PageProps.error as Error).message
+							: null}
+					</p>
+				</span>
 			</main>
 		</>
 	);

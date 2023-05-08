@@ -1556,3 +1556,122 @@ export const IconRust = (_?: IconProps): JSX.Element => (
 		<path d='M5 16h4'></path>
 	</svg>
 );
+
+export const IconStack = (_?: IconProps): JSX.Element => (
+	<svg
+		className={_?.className ?? undefined}
+		stroke={_?.stroke ?? 'currentColor'}
+		fill={_?.fill ?? 'none'}
+		xmlns='http://www.w3.org/2000/svg'
+		width={24}
+		height={24}
+		viewBox='0 0 24 24'
+		stroke-width='2'
+		stroke-linecap='round'
+		stroke-linejoin='round'
+		alt='Stack'
+	>
+		<title>Stack</title>
+		<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+		<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+		<path d='M12 6l-8 4l8 4l8 -4l-8 -4'></path>
+		<path d='M4 14l8 4l8 -4'></path>
+	</svg>
+);
+
+export const IconLeetCode = (_?: IconProps): JSX.Element => (
+	<svg
+		className={_?.className ?? undefined}
+		stroke={_?.stroke ?? 'currentColor'}
+		fill={_?.fill ?? 'none'}
+		xmlns='http://www.w3.org/2000/svg'
+		width={24}
+		height={24}
+		viewBox='0 0 24 24'
+		stroke-width='2'
+		stroke-linecap='round'
+		stroke-linejoin='round'
+		alt='LeetCode'
+	>
+		<title>LeetCode</title>
+		<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+		<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+		<path d='M12 13h7.5'></path>
+		<path d='M9.424 7.268l4.999 -4.999'></path>
+		<path d='M16.633 16.644l-2.402 2.415a3.189 3.189 0 0 1 -4.524 0l-3.77 -3.787a3.223 3.223 0 0 1 0 -4.544l3.77 -3.787a3.189 3.189 0 0 1 4.524 0l2.302 2.313'>
+		</path>
+	</svg>
+);
+
+export const IconCPP = (_?: IconProps): JSX.Element => (
+	<svg
+		className={_?.className ?? undefined}
+		stroke={_?.stroke ?? 'currentColor'}
+		fill={_?.fill ?? 'none'}
+		xmlns='http://www.w3.org/2000/svg'
+		width={24}
+		height={24}
+		viewBox='0 0 24 24'
+		stroke-width='2'
+		stroke-linecap='round'
+		stroke-linejoin='round'
+		alt='C++'
+	>
+		<title>C++</title>
+		<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+		<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+		<path d='M18 12h4'></path>
+		<path d='M20 10v4'></path>
+		<path d='M11 12h4'></path>
+		<path d='M13 10v4'></path>
+		<path d='M9 9a3 3 0 0 0 -3 -3h-.5a3.5 3.5 0 0 0 -3.5 3.5v5a3.5 3.5 0 0 0 3.5 3.5h.5a3 3 0 0 0 3 -3'>
+		</path>
+	</svg>
+);
+
+export const IconAmongUs = (_?: IconProps): JSX.Element => (
+	<svg
+		className={_?.className ?? undefined}
+		stroke={_?.stroke ?? 'currentColor'}
+		fill={_?.fill ?? 'none'}
+		xmlns='http://www.w3.org/2000/svg'
+		width={24}
+		height={24}
+		viewBox='0 0 24 24'
+		stroke-width='2'
+		stroke-linecap='round'
+		stroke-linejoin='round'
+		alt='Among Us'
+	>
+		<title>Among Us</title>
+		<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+		<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+		<path d='M10.646 12.774c-1.939 .396 -4.467 .317 -6.234 -.601c-2.454 -1.263 -1.537 -4.66 1.423 -4.982c2.254 -.224 3.814 -.354 5.65 .214c.835 .256 1.93 .569 1.355 3.281c-.191 1.067 -1.07 1.904 -2.194 2.088z'>
+		</path>
+		<path d='M5.84 7.132c.083 -.564 .214 -1.12 .392 -1.661c.456 -.936 1.095 -2.068 3.985 -2.456a22.464 22.464 0 0 1 2.867 .08c1.776 .14 2.643 1.234 3.287 3.368c.339 1.157 .46 2.342 .629 3.537v11l-12.704 -.019c-.552 -2.386 -.262 -5.894 .204 -8.481'>
+		</path>
+		<path d='M17 10c.991 .163 2.105 .383 3.069 .67c.255 .13 .52 .275 .534 .505c.264 3.434 .57 7.448 .278 9.825h-3.881'>
+		</path>
+	</svg>
+);
+
+export const IconSlice = (_?: IconProps): JSX.Element => (
+	<svg
+		className={_?.className ?? undefined}
+		stroke={_?.stroke ?? 'currentColor'}
+		fill={_?.fill ?? 'none'}
+		xmlns='http://www.w3.org/2000/svg'
+		width={24}
+		height={24}
+		viewBox='0 0 24 24'
+		stroke-width='2'
+		stroke-linecap='round'
+		stroke-linejoin='round'
+		alt='Slice'
+	>
+		<title>Slice</title>
+		<desc>source: [Tabler Icons](https://tabler-icons.io)</desc>
+		<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+		<path d='M3 19l15 -15l3 3l-6 6l2 2a14 14 0 0 1 -14 4'></path>
+	</svg>
+);
