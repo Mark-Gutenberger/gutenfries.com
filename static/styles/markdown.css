@@ -12,8 +12,8 @@
 	--color-border-default: var(--gray-200);
 	--color-border-muted: var(--gray-300);
 	--color-neutral-muted: var(--gray-600);
-	--color-accent-fg: var(--blue-500);
-	--color-accent-emphasis: var(--blue-500);
+	--color-accent-fg: var(--purple-500);
+	--color-accent-emphasis: var(--purple-500);
 	--color-danger-fg: var(--red-500);
 }
 @media (prefers-color-scheme: light) {
@@ -26,8 +26,8 @@
 		--color-border-default: var(--gray-200);
 		--color-border-muted: var(--gray-300);
 		--color-neutral-muted: var(--gray-600);
-		--color-accent-fg: var(--blue-500);
-		--color-accent-emphasis: var(--blue-500);
+		--color-accent-fg: var(--purple-500);
+		--color-accent-emphasis: var(--purple-500);
 		--color-danger-fg: var(--red-500);
 	}
 }
@@ -41,8 +41,8 @@
 		--color-border-default: var(--gray-200);
 		--color-border-muted: var(--gray-300);
 		--color-neutral-muted: var(--gray-600);
-		--color-accent-fg: var(--blue-500);
-		--color-accent-emphasis: var(--blue-500);
+		--color-accent-fg: var(--purple-500);
+		--color-accent-emphasis: var(--purple-500);
 		--color-danger-fg: var(--red-500);
 	}
 }
@@ -56,8 +56,8 @@
 	--color-border-default: var(--gray-800);
 	--color-border-muted: var(--gray-700);
 	--color-neutral-muted: var(--gray-600);
-	--color-accent-fg: var(--blue-500);
-	--color-accent-emphasis: var(--blue-500);
+	--color-accent-fg: var(--purple-500);
+	--color-accent-emphasis: var(--purple-500);
 	--color-danger-fg: var(--red-500);
 }
 @media (prefers-color-scheme: light) {
@@ -70,8 +70,8 @@
 		--color-border-default: var(--gray-800);
 		--color-border-muted: var(--gray-700);
 		--color-neutral-muted: var(--gray-600);
-		--color-accent-fg: var(--blue-500);
-		--color-accent-emphasis: var(--blue-500);
+		--color-accent-fg: var(--purple-500);
+		--color-accent-emphasis: var(--purple-500);
 		--color-danger-fg: var(--red-500);
 	}
 }
@@ -85,8 +85,8 @@
 		--color-border-default: var(--gray-800);
 		--color-border-muted: var(--gray-700);
 		--color-neutral-muted: var(--gray-600);
-		--color-accent-fg: var(--blue-500);
-		--color-accent-emphasis: var(--blue-500);
+		--color-accent-fg: var(--purple-500);
+		--color-accent-emphasis: var(--purple-500);
 		--color-danger-fg: var(--red-500);
 	}
 }
@@ -148,7 +148,7 @@
 }
 
 .markdown-body blockquote {
-	border-left: 0.25em solid var(--blue-500);
+	border-left: 0.25em solid var(--purple-500);
 	color: var(--color-fg-muted);
 	padding: 0 1em;
 }

@@ -3,7 +3,7 @@ import { Navbar, Routes } from '@/components/Navbar.tsx';
 
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
-import Icons from '@/utils/Icons.tsx';
+import { IconFileDownload } from '@/components/Icons.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import Resume from '@/islands/Resume.tsx';
 import { asset } from '$fresh/runtime.ts';
@@ -55,25 +55,25 @@ export default function ResumePage(props: PageProps<Data>) {
 					<a
 						type='button'
 						href={asset('/resume/resume-tech.pdf')}
-						className='px-6 py-2 mx-auto my-8 text-lg text-gray-100 bg-blue-500 rounded-lg dark:text-gray-800 sm:my-16 hover:bg-blue-600 active:bg-blue-700'
+						className='px-6 py-2 mx-auto my-8 text-lg text-gray-100 bg-purple-500 rounded-lg dark:text-gray-800 sm:my-16 hover:bg-purple-600 active:bg-purple-700'
 					>
 						<span className='flex items-center justify-center'>
 							<span className='mr-1'>
 								Tech
 							</span>
-							<Icons.FileDownload className='inline-block w-6 h-6' />
+							<IconFileDownload className='inline-block w-6 h-6' />
 						</span>
 					</a>
 					<a
 						type='button'
 						href={asset('/resume/resume-music.pdf')}
-						className='px-6 py-2 mx-auto my-8 text-lg text-gray-100 bg-blue-500 rounded-lg dark:text-gray-800 sm:my-16 hover:bg-blue-600 active:bg-blue-700'
+						className='px-6 py-2 mx-auto my-8 text-lg text-gray-100 bg-purple-500 rounded-lg dark:text-gray-800 sm:my-16 hover:bg-purple-600 active:bg-purple-700'
 					>
 						<span className='flex items-center justify-center'>
 							<span className='mr-1'>
 								Music
 							</span>
-							<Icons.FileDownload className='inline-block w-6 h-6' />
+							<IconFileDownload className='inline-block w-6 h-6' />
 						</span>
 					</a>
 				</div>

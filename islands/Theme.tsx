@@ -1,5 +1,5 @@
+import { IconMoon, IconSun } from '@/components/Icons.tsx';
 import { useEffect, useState } from 'preact/hooks';
-import Icons from '@/utils/Icons.tsx';
 
 const Theme = () => {
 	const [darkMode, setDarkMode] = useState<boolean>(true);
@@ -46,10 +46,10 @@ const Theme = () => {
 		>
 			{darkMode
 				? (
-					<Icons.Moon className='w-8 h-8 text-gray-200 active:text-purple-500 hover:text-purple-300' />
+					<IconMoon className='w-8 h-8 text-gray-200 active:text-purple-500 hover:text-purple-300' />
 				)
 				: (
-					<Icons.Sun className='w-8 h-8 text-gray-200 active:text-yellow-500 hover:text-yellow-300' />
+					<IconSun className='w-8 h-8 text-gray-200 active:text-yellow-500 hover:text-yellow-300' />
 				)}
 		</a>
 	);

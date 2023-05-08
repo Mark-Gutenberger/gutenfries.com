@@ -1,9 +1,23 @@
+import {
+	IconActivity,
+	IconC,
+	IconDeno,
+	IconDocker,
+	IconFlutter,
+	IconLamp,
+	IconMedal,
+	IconPackage,
+	IconPC,
+	IconQuote,
+	IconReact,
+	IconRust,
+	IconShoe,
+} from '@/components/Icons.tsx';
 import { Navbar, Routes } from '@/components/Navbar.tsx';
 
 import ContentCard from '@/components/ContentCard.tsx';
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
-import Icons from '@/utils/Icons.tsx';
 import { Link } from '@/components/Link.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { PageProps } from '$fresh/server.ts';
@@ -78,7 +92,9 @@ const MARC: &str =`;
 								<br />
 								<span>
 									To learn how I made this animation from scratch, check out{' '}
-									<Link href='/blog/create-a-css-drum-animation'>my blog</Link>
+									<Link internal href='/blog/create-a-css-drum-animation'>
+										my blog
+									</Link>
 								</span>
 							</>
 						}
@@ -89,32 +105,29 @@ const MARC: &str =`;
 					<div className='flex flex-col flex-wrap mb-10 text-center lg:py-6 lg:w-1/2 lg:pl-12 lg:text-left'>
 						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
 							<h2 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold'>
-								About Me
+								Highlights
+								<IconLamp className='hidden sm:inline-block ml-4 h-14 w-14' />
 							</h2>
 						</div>
 						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
-							<h3 className='mb-3 text-3xl sm:text-4xl'>Software Development</h3>
+							<h3 className='mb-3 text-3xl sm:text-4xl'>Software Engineering</h3>
 							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
-								I am a software developer and I love to to solve unique and
-								difficult problems. I work with web technologies and systems
-								programming. I am fluent in Rust, Typescript, and Dart, and I
-								passion for the Rust programming language.
+								I'm a software engineer with a passion for buiding software with the
+								<Link href='https://www.rust-lang.org/'>
+									Rust programming language
+								</Link>. I love solving unique and challenging problems, and I am
+								always looking for new opportunities to learn and grow upon my
+								skills. I also am proficient in TypeScript, C/C++, and Dart,
+								including web and mobile development.
 							</p>
 						</div>
 						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
 							<h3 className='mb-3 text-3xl sm:text-4xl'>Music</h3>
 							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
-								I am musician and performer. I am a rudimental drummer, and I also
-								play string instruments like guitar and bass, as well as piano. I am
-								passionate about Jazz, Marching Arts, and Music Composition.
-							</p>
-						</div>
-						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
-							<h3 className='mb-3 text-3xl sm:text-4xl'>Design & Marketing</h3>
-							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
-								I have a passion for quality design and marketing and love to
-								understand what makes a great product and how to design, market,
-								monetize, and distribute it.
+								I share a great passion for music, especially percussive arts, and I
+								have been drumming for over 5 years. I love jazz, funk, and metal
+								genres and have been members of many ensembles and bands throughout
+								my music career. I also play guitar and bass proficiently.
 							</p>
 						</div>
 					</div>
@@ -122,64 +135,81 @@ const MARC: &str =`;
 				<section className='container px-5 py-32 mx-auto'>
 					<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
 						Recent Activity
-						<Icons.Activity className='hidden sm:inline-block ml-4 h-14 w-14' />
+						<IconActivity className='hidden sm:inline-block ml-4 h-14 w-14' />
 					</h2>
 
-					<div className='hidden h-10 mx-auto mb-10 border-t-2 border-blue-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
+					<hr className='hidden h-10 mx-auto mb-10 border-t-2 border-purple-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
 
 					<div className='flex flex-wrap -m-4 text-gray-100 dark:border-gray-300'>
 						<div className='p-4 md:w-1/3'>
 							<RecentActivityCard
-								title='Personal Website'
-								description='I built my personal website with Fresh, Deno, Preact, twind (tailwind lib), and time.'
-								source='https://github.com/gutenfries/gutenfries.deno.dev'
-								icon={<Icons.App />}
-							/>
+								title='SkillsUSA Medal'
+								icon={<IconMedal />}
+							>
+								I recieved the{' '}
+								<Link href='https://www.skillsusa.org/'>SkillsUSA</Link>
+								State Software Engineering Award for best performance across a
+								written test, 3 written programs, and a technical interview. The
+								attendence to the competition was 150+ college and high school
+								students from acrss the state.
+							</RecentActivityCard>
 						</div>
 						<div className='p-4 md:w-1/3'>
 							<RecentActivityCard
-								title='C++ Tetris'
-								description='I created Tetris in C++ using std and ncurses, utilizing the Object-Oriented language features of C++.'
-								source='https://github.com/gutenfries/cpp-tetris'
-								icon={<Icons.BorderAll />}
-							/>
+								title='2023 DCI Contract'
+								icon={<IconShoe />}
+							>
+								I auditioned and recieved a contract to march the
+								<Link href='https://rivercityrhythm.org'>River City Rhythm</Link>
+								{' '}
+								snareline for the 2023 DCI Season, however had to respectfully
+								decline due to finances and previous outstanding commitments.
+							</RecentActivityCard>
 						</div>
 						<div className='p-4 md:w-1/3'>
 							<RecentActivityCard
-								title='Rust Dino Game'
-								description='I built a mock of the chrome dino game in rust, using lib-bracket as the graphics library.'
-								source='https://github.com/gutenfries/dino_rs'
-								icon={<Icons.Terminal />}
-							/>
+								title='Engineer lead at Dart-Sys'
+								icon={<IconFlutter />}
+							>
+								I recently took on the role of lead engineer at{' '}
+								<Link href='https://github.com/dart-sys'>Dart-Sys</Link>, a startup
+								that provides raw metal access to the{' '}
+								<Link href='https://dart.dev/overview#platform'>Dart VM</Link>{' '}
+								from the{' '}
+								<Link href='https://www.rust-lang.org/'>
+									Rust
+								</Link>programming language. The project has has almost{' '}
+								<Link href='https://github.com/dart-sys/dart-sys/graphs/traffic'>
+									100 dependent repositories
+								</Link>, and several dependent
+								<Link href='https://crates.io'>crates.io</Link>{' '}
+								packages, ammassing over 100,000 monthly downloads.
+							</RecentActivityCard>
 						</div>
 					</div>
 				</section>
+
 				<section className='container px-5 py-32 mx-auto'>
-					<div className='flex flex-col flex-wrap items-center w-full mb-20 text-center'>
-						<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
-							Technologies
-							<Icons.PC className='hidden sm:inline-block ml-4 h-14 w-14' />
-						</h2>
-					</div>
+					<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
+						Technologies
+						<IconPC className='hidden sm:inline-block ml-4 h-14 w-14' />
+					</h2>
+
+					<hr className='hidden h-10 mx-auto mb-10 border-t-2 border-purple-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
+
 					<div className='flex flex-wrap -m-4'>
 						<TechCard
 							tech='Rust'
 							techLink='https://www.rust-lang.org/'
-							icon={<Icons.Package />}
+							icon={<IconPackage />}
 						>
 							I am quite passionate about Rust and I am highly proficient at using it.
 							I have several
-							<Link
-								href='https://github.com/gutenfries?tab=repositories&language=rust'
-								ext
-							>
+							<Link href='https://github.com/gutenfries?tab=repositories&language=rust'>
 								open source projects
 							</Link>
 							written in rust, an even
-							<Link
-								href='https://github.com/gutenfries/gutenfries.deno.dev'
-								ext
-							>
+							<Link href='https://github.com/gutenfries/gutenfries.deno.dev'>
 								this website
 							</Link>
 							is a little bit rusty.
@@ -188,43 +218,30 @@ const MARC: &str =`;
 						<TechCard
 							tech='C/C++'
 							techLink='https://www.cplusplus.com/'
-							icon={<Icons.C />}
+							icon={<IconC />}
 						>
 							I am quite comfortable using both C and C++ and have used both languages
 							independently, as well as with
 							<Link
 								href='https://www.rust-lang.org/'
 								noEndSpace
-								ext
 							>
 								Rust
 							</Link>
 
 							, utilizing the concepts of
-							<Link
-								href='https://wikipedia.org/wiki/Application_binary_interface'
-								ext
-							>
+							<Link href='https://wikipedia.org/wiki/Application_binary_interface'>
 								ABI
 							</Link>
 							and
-							<Link
-								href='https://wikipedia.org/wiki/Foreign_function_interface'
-								ext
-							>
+							<Link href='https://wikipedia.org/wiki/Foreign_function_interface'>
 								FFI
 							</Link>. I am also familiar with common C/C++ tooling, such as
-							<Link
-								href='https://www.gnu.org/software/make/'
-								ext
-							>
+							<Link href='https://www.gnu.org/software/make/'>
 								Make
 							</Link>
 							and
-							<Link
-								href='https://cmake.org/'
-								ext
-							>
+							<Link href='https://cmake.org/'>
 								CMake
 							</Link>.
 						</TechCard>
@@ -232,7 +249,7 @@ const MARC: &str =`;
 						<TechCard
 							tech='Flutter'
 							techLink='https://flutter.dev/'
-							icon={<Icons.Flutter />}
+							icon={<IconFlutter />}
 						>
 							I have used Flutter to build a few mobile apps, and have also used rust
 							through the Flutter FFI to build a flutter application with rust in the
@@ -243,13 +260,10 @@ const MARC: &str =`;
 						<TechCard
 							tech='Deno'
 							techLink='https://deno.land/'
-							icon={<Icons.Deno />}
+							icon={<IconDeno />}
 						>
 							I am passionate about Deno and am highly proficient at using it. I have
-							<Link
-								href='https://github.com/gutenfries'
-								ext
-							>
+							<Link href='https://github.com/gutenfries'>
 								contributed to the Deno code base
 							</Link>
 							as well as created a number of deno projects, mostly availabe on GitHub.
@@ -258,34 +272,22 @@ const MARC: &str =`;
 						<TechCard
 							tech='(P)React'
 							techLink='https://preactjs.org/'
-							icon={<Icons.React />}
+							icon={<IconReact />}
 						>
 							I am quite familiar with
-							<Link
-								href='https://reactjs.org/'
-								ext
-							>
+							<Link href='https://reactjs.org/'>
 								React
 							</Link>
 							and
-							<Link
-								href='https://preactjs.org/'
-								ext
-							>
+							<Link href='https://preactjs.org/'>
 								Preact
 							</Link>
 							ecosystems and best practices.
-							<Link
-								href='https://github.com/gutenfries/gutenfries.deno.dev'
-								ext
-							>
+							<Link href='https://github.com/gutenfries/gutenfries.deno.dev'>
 								This website
 							</Link>
 							is built with Preact, utilizing the
-							<Link
-								href='https://fresh.deno.dev/'
-								ext
-							>
+							<Link href='https://fresh.deno.dev/'>
 								Fresh
 							</Link>
 							Deno framework.
@@ -294,13 +296,12 @@ const MARC: &str =`;
 						<TechCard
 							tech='Docker'
 							techLink='https://www.docker.com/'
-							icon={<Icons.Docker />}
+							icon={<IconDocker />}
 						>
 							I am proficient at using Docker and have used it in several projects,
 							including
 							<Link
 								href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/Dockerfile'
-								ext
 								noEndSpace
 							>
 								this website
@@ -310,14 +311,11 @@ const MARC: &str =`;
 				</section>
 				<section className='container px-5 py-32 mx-auto'>
 					<p className='flex items-center justify-center w-full mx-auto xl:w-1/2 lg:w-3/4'>
-						<Icons.Quote className='inline-block w-8 h-8 mb-8' />
+						<IconQuote className='inline-block w-8 h-8 mb-8' />
 						<blockquote className='text-lg text-center'>
 							My mission in software engineering is to solve unique problems with
 							technology. I am passionate about
-							<Link
-								href='https://rust-lang.org/'
-								ext
-							>
+							<Link href='https://rust-lang.org/'>
 								Rust
 							</Link>
 							and love using it to write fast, safe, and reliable software. I believe
@@ -325,7 +323,7 @@ const MARC: &str =`;
 							creating software that is usable by anyone, without sacrificing
 							performance, quality, or security.
 						</blockquote>
-						<hr className='w-2/5 h-0 mx-auto my-5 bg-blue-500 border-blue-500 rounded-lg border-1' />
+						<hr className='w-2/5 h-0 mx-auto my-5 bg-purple-500 border-purple-500 rounded-lg border-1' />
 						<h2 className='text-3xl text-center'>
 							Marc Gutenberger
 						</h2>

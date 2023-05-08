@@ -1,4 +1,5 @@
-import Icons from '@/utils/Icons.tsx';
+import { IconClose, IconSearch } from '@/components/Icons.tsx';
+
 import { useState } from 'preact/hooks';
 
 const SearchBar = () => {
@@ -40,13 +41,13 @@ const SearchBar = () => {
 			<button
 				type='button'
 				aria-label={searchBarIsExpanded ? 'Minimize search bar' : 'Expand search bar'}
-				className='flex items-center justify-center w-10 h-10 px-2 m-6 rounded-lg focus:ring-blue-500 focus:border-blue-500 hover:bg-gray-700 active:bg-gray-900'
+				className='flex items-center justify-center w-10 h-10 px-2 m-6 rounded-lg focus:ring-purple-500 focus:border-purple-500 hover:bg-gray-700 active:bg-gray-900'
 				onClick={() => setSearchBarIsExpanded(!searchBarIsExpanded)}
 			>
 				{!searchBarIsExpanded
-					? <Icons.Search className='text-gray-300 cursor-pointer hover:text-gray-200' />
+					? <IconSearch className='text-gray-300 cursor-pointer hover:text-gray-200' />
 					: (
-						<Icons.Close className='text-gray-300 cursor-pointer fill-current hover:text-gray-200' />
+						<IconClose className='text-gray-300 cursor-pointer fill-current hover:text-gray-200' />
 					)}
 			</button>
 		</div>

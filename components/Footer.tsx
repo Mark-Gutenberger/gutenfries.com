@@ -1,4 +1,30 @@
-import Icons from '@/utils/Icons.tsx';
+import {
+	IconArticle,
+	IconCalendar,
+	IconCode,
+	IconCodepen,
+	IconCookie,
+	IconDeno,
+	IconDiscord,
+	IconFileCertificate,
+	IconFileText,
+	IconGitHub,
+	IconGooglePlay,
+	IconInstagram,
+	IconLinkedIn,
+	IconMail,
+	IconPeerlist,
+	IconPhone,
+	IconReact,
+	IconRSS,
+	IconSpotify,
+	IconTabler,
+	IconTailwind,
+	IconTikTok,
+	IconWakatime,
+	IconWorld,
+} from '@/components/Icons.tsx';
+
 import { asset } from '$fresh/runtime.ts';
 
 function Footer() {
@@ -7,7 +33,7 @@ function Footer() {
 			<section className='container p-12 pt-20 mx-auto'>
 				<ul className='flex flex-wrap text-center -mb-10 -mx-4'>
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+						<h3 className='font-bold text-lg text-purple-500 tracking-widest mb-3'>
 							SOCIAL
 						</h3>
 						<nav className='list-none mb-5'>
@@ -22,7 +48,7 @@ function Footer() {
 										<span className='mr-1'>
 											Instagram
 										</span>
-										<Icons.Instagram className='inline-block h-5 w-5' />
+										<IconInstagram className='inline-block h-5 w-5' />
 									</a>
 								</li>
 
@@ -36,7 +62,7 @@ function Footer() {
 										<span className='mr-1'>
 											TikTok
 										</span>
-										<Icons.TikTok className='inline-block h-5 h-5' />
+										<IconTikTok className='inline-block h-5 h-5' />
 									</a>
 								</li>
 								<li>
@@ -49,7 +75,7 @@ function Footer() {
 										<span className='mr-1'>
 											Spotify
 										</span>
-										<Icons.Spotify className='inline-block h-5 w-5' />
+										<IconSpotify className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -62,14 +88,14 @@ function Footer() {
 										<span className='mr-1'>
 											Discord
 										</span>
-										<Icons.Discord className='inline-block h-5 w-5' />
+										<IconDiscord className='inline-block h-5 w-5' />
 									</a>
 								</li>
 							</ul>
 						</nav>
 					</li>
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+						<h3 className='font-bold text-lg text-purple-500 tracking-widest mb-3'>
 							CONTACT
 						</h3>
 						<nav className='list-none mb-5'>
@@ -84,7 +110,7 @@ function Footer() {
 										<span className='mr-1'>
 											Email
 										</span>
-										<Icons.Mail className='inline-block h-5 h-5' />
+										<IconMail className='inline-block h-5 h-5' />
 									</a>
 								</li>
 								<li>
@@ -97,7 +123,7 @@ function Footer() {
 										<span className='mr-1'>
 											Mobile
 										</span>
-										<Icons.Phone className='inline-block h-5 h-5' />
+										<IconPhone className='inline-block h-5 h-5' />
 									</a>
 								</li>
 								<li>
@@ -110,7 +136,7 @@ function Footer() {
 										<span className='mr-1'>
 											Calendly
 										</span>
-										<Icons.Calendar className='inline-block h-5 h-5' />
+										<IconCalendar className='inline-block h-5 h-5' />
 									</a>
 								</li>
 							</ul>
@@ -118,7 +144,7 @@ function Footer() {
 					</li>
 
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+						<h3 className='font-bold text-lg text-purple-500 tracking-widest mb-3'>
 							PROFESSIONAL
 						</h3>
 						<nav className='list-none mb-5'>
@@ -133,7 +159,7 @@ function Footer() {
 										<span className='mr-1'>
 											LinkedIn
 										</span>
-										<Icons.LinkedIn className='inline-block h-5 w-5' />
+										<IconLinkedIn className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -146,7 +172,7 @@ function Footer() {
 										<span className='mr-1'>
 											Peerlist
 										</span>
-										<Icons.Peerlist className='inline-block h-5 w-5' />
+										<IconPeerlist className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -158,7 +184,7 @@ function Footer() {
 										<span className='mr-1'>
 											Resume
 										</span>
-										<Icons.FileText className='inline-block h-5 w-5' />
+										<IconFileText className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -171,14 +197,14 @@ function Footer() {
 										<span className='mr-1'>
 											Google Dev
 										</span>
-										<Icons.GooglePlay className='inline-block h-5 w-5' />
+										<IconGooglePlay className='inline-block h-5 w-5' />
 									</a>
 								</li>
 							</ul>
 						</nav>
 					</li>
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+						<h3 className='font-bold text-lg text-purple-500 tracking-widest mb-3'>
 							CODE
 						</h3>
 						<nav className='list-none mb-5'>
@@ -193,7 +219,7 @@ function Footer() {
 										<span className='mr-1'>
 											GitHub
 										</span>
-										<Icons.GitHub className='inline-block h-5 w-5' />
+										<IconGitHub className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -206,7 +232,7 @@ function Footer() {
 										<span className='mr-1'>
 											Wakatime
 										</span>
-										<Icons.Wakatime className='inline-block h-4 w-4' />
+										<IconWakatime className='inline-block h-4 w-4' />
 									</a>
 								</li>
 								<li>
@@ -219,7 +245,7 @@ function Footer() {
 										<span className='mr-1'>
 											Codepen
 										</span>
-										<Icons.Codepen className='inline-block h-5 w-5' />
+										<IconCodepen className='inline-block h-5 w-5' />
 									</a>
 								</li>
 							</ul>
@@ -227,7 +253,7 @@ function Footer() {
 					</li>
 
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+						<h3 className='font-bold text-lg text-purple-500 tracking-widest mb-3'>
 							OTHER
 						</h3>
 						<nav className='list-none mb-5'>
@@ -240,7 +266,7 @@ function Footer() {
 										<span className='mr-1'>
 											Blog
 										</span>
-										<Icons.Article className='inline-block h-5 w-5' />
+										<IconArticle className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -251,7 +277,7 @@ function Footer() {
 										<span className='mr-1'>
 											Feed
 										</span>
-										<Icons.RSS className='inline-block h-5 w-5' />
+										<IconRSS className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -264,7 +290,7 @@ function Footer() {
 										<span className='mr-1'>
 											Source Code
 										</span>
-										<Icons.Code className='inline-block h-5 w-5' />
+										<IconCode className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -277,7 +303,7 @@ function Footer() {
 										<span className='mr-1'>
 											License
 										</span>
-										<Icons.FileCertificate className='inline-block h-5 w-5' />
+										<IconFileCertificate className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -290,14 +316,14 @@ function Footer() {
 										<span className='mr-1'>
 											Privacy Policy
 										</span>
-										<Icons.Cookie className='inline-block h-5 w-5' />
+										<IconCookie className='inline-block h-5 w-5' />
 									</a>
 								</li>
 							</ul>
 						</nav>
 					</li>
 					<li className='p-4 lg:w-1/6 md:w-1/2 w-full px-4'>
-						<h3 className='font-bold text-lg text-blue-500 tracking-widest mb-3'>
+						<h3 className='font-bold text-lg text-purple-500 tracking-widest mb-3'>
 							RESOURCES
 						</h3>
 						<nav className='list-none mb-5'>
@@ -312,7 +338,7 @@ function Footer() {
 										<span className='mr-1'>
 											Deno
 										</span>
-										<Icons.Deno className='inline-block h-5 w-5' />
+										<IconDeno className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -325,7 +351,7 @@ function Footer() {
 										<span className='mr-1'>
 											Deno Deploy
 										</span>
-										<Icons.World className='inline-block h-5 w-5' />
+										<IconWorld className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -338,7 +364,7 @@ function Footer() {
 										<span className='mr-1'>
 											Preact
 										</span>
-										<Icons.React className='inline-block h-5 w-5' />
+										<IconReact className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -351,7 +377,7 @@ function Footer() {
 										<span className='mr-1'>
 											Tailwind CSS
 										</span>
-										<Icons.Tailwind className='inline-block h-5 w-5' />
+										<IconTailwind className='inline-block h-5 w-5' />
 									</a>
 								</li>
 								<li>
@@ -364,7 +390,7 @@ function Footer() {
 										<span className='mr-1'>
 											Tabler Icons
 										</span>
-										<Icons.Tabler className='inline-block h-5 w-5' />
+										<IconTabler className='inline-block h-5 w-5' />
 									</a>
 								</li>
 							</ul>

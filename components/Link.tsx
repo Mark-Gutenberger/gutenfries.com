@@ -15,10 +15,10 @@ interface LinkProps {
 	 */
 	children?: ComponentChildren;
 	/**
-	 * whether the link is ext or not
+	 * whether the link is internal or not
 	 * @default false
 	 */
-	ext?: boolean;
+	internal?: boolean;
 	/**
 	 * whether to add spaces before and after the link or not
 	 * @default false
@@ -48,15 +48,15 @@ interface LinkProps {
  *
  * @example
  * // link to an internal page
- * <Link href='/about'>About</Link>
+ * <Link internal href='/about'>About</Link>
  * // link to an external page
  * <Link href='https://google.com' ext>About</Link>
  * // link to an internal page with underline
- * <Link href='/about' u>About</Link>
+ * <Link href='/about' u internal>About</Link>
  */
-export const Link = (
-	{ href, children, u, ext, noSpaces, noEndSpace, noStartSpace, className }: LinkProps,
-) => {
+export function Link(
+	{ href, children, u, internal, noSpaces, noEndSpace, noStartSpace, className }: LinkProps,
+) {
 	if (noEndSpace) {
 		children = ` ${children}`;
 	} else if (noStartSpace) {
@@ -75,13 +75,13 @@ export const Link = (
 	return (
 		<a
 			href={href}
-			className={`text-blue-500 hover:text-blue-600 active:text-blue-700${
+			className={`text-purple-500 hover:text-purple-600 active:text-purple-700${
 				u ? ' underline' : ''
 			} ${className ?? ''}`}
-			target={ext ? '_blank' : undefined}
-			rel={ext ? 'noopener' : undefined}
+			target={internal ? undefined : '_blank'}
+			rel={internal ? undefined : 'noopener noreferrer'}
 		>
 			{children}
 		</a>
 	);
-};
+}
