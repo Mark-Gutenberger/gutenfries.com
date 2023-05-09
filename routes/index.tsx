@@ -154,7 +154,7 @@ const MARC: &str =`;
 								State Software Engineering Award for best performance across a
 								written test, 3 written programs, and a technical interview. The
 								attendence to the competition was 150+ college and high school
-								students from acrss the state.
+								students from across the state.
 							</RecentActivityCard>
 						</div>
 						<div className='p-4 md:w-1/3'>
@@ -226,8 +226,12 @@ const MARC: &str =`;
 							<Link href='https://wikipedia.org/wiki/C%2B%2B20'>
 								C++20 language features
 							</Link>
-							, as well as the C++ standard library. I am versed in C++ best
-							practices, including the use of smart pointers,{'  '}
+							, as well as the C++ standard library. I am well versed in C++ best
+							practices, as well as advanced features, such as{' '}
+							<Link href='https://wikipedia.org/wiki/Smart_pointer'>
+								smart pointers
+							</Link>{' '}
+							and{' '}
 							<Link href='https://wikipedia.org/wiki/Resource_acquisition_is_initialization'>
 								RAII
 							</Link>. I am familiar with C++ ecosystems, such as{' '}
@@ -289,14 +293,14 @@ const MARC: &str =`;
 							techLink='https://preactjs.org/'
 							icon={<IconReact />}
 						>
-							I am quite familiar with
+							I am quite familiar with{' '}
 							<Link href='https://reactjs.org/'>
 								React
-							</Link>
-							and
+							</Link>{' '}
+							and{' '}
 							<Link href='https://preactjs.org/'>
 								Preact
-							</Link>
+							</Link>{' '}
 							ecosystems and best practices in both the Deno and Node.js runtimes.
 							This website is built using Preact.
 						</TechCard>
