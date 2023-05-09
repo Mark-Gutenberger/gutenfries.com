@@ -222,24 +222,19 @@ const MARC: &str =`;
 							techLink='https://www.cplusplus.com/'
 							icon={<IconCPP />}
 						>
-							I am quite comfortable using both C and C++ and have used both languages
-							independently, as well as with
-							<Link href='https://www.rust-lang.org/'>
-								Rust
+							I am very familiar with the{' '}
+							<Link href='https://wikipedia.org/wiki/C%2B%2B20'>
+								C++20 language features
 							</Link>
-
-							, utilizing the concepts of
-							<Link href='https://wikipedia.org/wiki/Application_binary_interface'>
-								ABI
-							</Link>
-							and
-							<Link href='https://wikipedia.org/wiki/Foreign_function_interface'>
-								FFI
-							</Link>. I am also familiar with common C/C++ tooling, such as
+							, as well as the C++ standard library. I am versed in C++ best
+							practices, including the use of smart pointers,{'  '}
+							<Link href='https://wikipedia.org/wiki/Resource_acquisition_is_initialization'>
+								RAII
+							</Link>. I am familiar with C++ ecosystems, such as{' '}
 							<Link href='https://www.gnu.org/software/make/'>
 								Make
-							</Link>
-							and
+							</Link>{' '}
+							and{' '}
 							<Link href='https://cmake.org/'>
 								CMake
 							</Link>.
@@ -250,10 +245,18 @@ const MARC: &str =`;
 							techLink='https://flutter.dev/'
 							icon={<IconFlutter />}
 						>
-							I have used Flutter to build a few mobile apps, and have also used rust
-							through the Flutter FFI to build a flutter application with rust in the
-							backend. I am familiar with the Flutter tooling, ecosystem, and best
-							practices.
+							I have used Flutter to build a multiplatform application that keeps
+							score for a game called{' '}
+							<Link href='https://wikipedia.org/wiki/Mille_Bornes'>
+								Mille Bournes
+							</Link>. The application features state management,{' '}
+							<Link href='https://developer.microsoft.com/fluentui'>
+								Fluent UI
+							</Link>, and persistent storage. The application runs on all desktop,
+							mobile, and web platforms. the codebase is available on{' '}
+							<Link href='https://github.com/gutenfries/mille'>
+								GitHub
+							</Link>.
 						</TechCard>
 
 						<TechCard
@@ -261,11 +264,24 @@ const MARC: &str =`;
 							techLink='https://deno.land/'
 							icon={<IconDeno />}
 						>
-							I am passionate about Deno and am highly proficient at using it. I have
-							<Link href='https://github.com/gutenfries'>
-								contributed to the Deno code base
-							</Link>
-							as well as created a number of deno projects, mostly availabe on GitHub.
+							I have a passion for the Deno ECMAScript runtime. I have contributed to
+							the Deno core project, and have written multiple applications using the
+							Deno runtime.{' '}
+							<Link href='https://github.com/gutenfries/gutenfries.deno.dev'>
+								This website
+							</Link>{' '}
+							is built with Deno, utilizing the{' '}
+							<Link href='https://fresh.deno.dev/'>
+								Fresh
+							</Link>{' '}
+							Deno web framework. Another featured project is a{' '}
+							<Link href='https://wikipedia.org/wiki/Fibonacci_sequence'>
+								Fibonacci Sequence
+							</Link>{' '}
+							REST API, which is available on{' '}
+							<Link href='https://github.com/gutenfries/fibby'>
+								GitHub
+							</Link>.
 						</TechCard>
 
 						<TechCard
@@ -281,27 +297,20 @@ const MARC: &str =`;
 							<Link href='https://preactjs.org/'>
 								Preact
 							</Link>
-							ecosystems and best practices.
-							<Link href='https://github.com/gutenfries/gutenfries.deno.dev'>
-								This website
-							</Link>
-							is built with Preact, utilizing the
-							<Link href='https://fresh.deno.dev/'>
-								Fresh
-							</Link>
-							Deno framework.
+							ecosystems and best practices in both the Deno and Node.js runtimes.
+							This website is built using Preact.
 						</TechCard>
-
 						<TechCard
 							tech='Docker'
 							techLink='https://www.docker.com/'
 							icon={<IconDocker />}
 						>
-							I am proficient at using Docker and have used it in several projects,
-							including
-							<Link href='https://github.com/gutenfries/gutenfries.deno.dev/blob/main/Dockerfile'>
+							I am very familiar with Docker, and have used it to containerize many
+							applications, including{' '}
+							<Link href='https://github.com/gutenfries/gutenfries.deno.dev'>
 								this website
-							</Link>.
+							</Link>. I am familiar with how to build and deploy Docker containers,
+							and have used Docker in production environments.
 						</TechCard>
 					</div>
 				</section>
@@ -310,10 +319,10 @@ const MARC: &str =`;
 						<IconQuote className='inline-block w-8 h-8 mb-8' />
 						<blockquote className='text-lg text-center'>
 							My mission in software engineering is to solve unique problems with
-							technology. I am passionate about
+							technology. I am passionate about{' '}
 							<Link href='https://rust-lang.org/'>
 								Rust
-							</Link>
+							</Link>{' '}
 							and love using it to write fast, safe, and reliable software. I believe
 							that technology should be accessible to everyone, and I am committed to
 							creating software that is usable by anyone, without sacrificing
