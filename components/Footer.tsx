@@ -399,18 +399,18 @@ function Footer() {
 				</ul>
 			</section>
 
-			<section className='w-full mr-auto p-4 flex flex-wrap flex-col sm:flex-row shadow-lg bg-gray-800'>
-				<span className='hover:text-underline text-lg mt-2 text-sm text-center sm:text-left text-gray-400'>
+			<section className='w-full mx-auto p-4 flex flex-wrap flex-col sm:flex-row items-center justify-between shadow-lg bg-gray-800'>
+				<span className='w-1/3 hover:text-underline text-lg mt-2 text-sm text-center md:text-left text-gray-400'>
 					<Link
 						color={false}
 						href='/license'
 						className='ml-1'
 						internal
 					>
-						© {new Date().getFullYear()} Marc Gutenberger - @gutenfries
+						© {new Date().getFullYear()} Marc Gutenberger
 					</Link>
 				</span>
-				<span className='inline-flex sm:mx-auto sm:mt-0 mt-2 justify-center sm:justify-start'>
+				<span className='w-1/3 inline-flex mt-2 justify-center'>
 					<Link
 						color={false}
 						href='https://fresh.deno.dev/'
@@ -424,7 +424,7 @@ function Footer() {
 						/>
 					</Link>
 				</span>
-				<span className='sm:ml-auto mt-2 sm:w-auto w-full sm:text-left text-center text-gray-400 text-sm'>
+				<span className='w-1/3 mt-2 text-sm text-center md:text-right text-gray-400'>
 					Created with {'<'}3 and
 					<Link
 						color={false}
