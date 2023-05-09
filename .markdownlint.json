@@ -6,7 +6,7 @@
 		"style": "backtick"
 	},
 	"emphasis-style": {
-		"style": "asterisk"
+		"style": "underscore"
 	},
 	"heading-style": {
 		"style": "atx"
@@ -25,7 +25,7 @@
 		"style": "asterisk"
 	},
 	"ul-style": {
-		"style": "asterisk"
+		"style": "dash"
 	},
 	"MD026": false,
 	"MD033": false,

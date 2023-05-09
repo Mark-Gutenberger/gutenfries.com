@@ -1,83 +1,49 @@
 # Marc Gutenberger
 
----
-> Jazz & Marching Arts Musician
----
-
-## Experience
-
-### The Ryan Kautzer Polka Band
-
-> 09/2020 - present *(volunteer)*
-
-phone: [+1 (920)-883-5222](tel:9208835222)
-
-* **Musician**
-  * Played Banjo, Guitar, and Drumset for the polka band
-  * Performed at various venues
-
-### Red Raider Marching Band
-
-> 09/2020 - 10/2022
-
-email (director Tom Busch): <dtbusch@pulaskischools.org>
-website: [pulaskimusicboosters.net](https://pulaskimusicboosters.net/)
-
-* **Marching Performer**
-  * Marched in bass line
-  * Marched in across the country for many competitions and events, including but not limited to **[Disney World](https://www.disneycampus.com/programs/performing-arts/marching-band/)** and **[Pasadena Tournament of Roses](https://tournamentofroses.com/tournament-of-roses-announces-2023-rose-parade-marching-bands/)**.
-
-### Red Raider Jazz Band
-
-> 03/2021 - 10/2022
-
-email (director Michael Guerrero): <maguerrero@pulaskischools.org>
-
-* **Auxiliary Percussionist**
-  * Acceptance by audition only
-  * Played percussive instruments, as well as drumset and second guitar for the band.
-  * Performed at various venues
-
-## Education
-
-### Pulaski High School
-
-> 09/2020 - 06/2023 *(expected)*
-
-site: [pulaskischools.org](https://www.pulaskischools.org/)
-
-* Relevant Coursework & Involvements: **Marching Band**, **Concert Band**, **Jazz Band**, **Choir**, **Forensics**, **Oral & Intrapersonal Communication** *(College Class)*
-* **State Qualifier** in **Speech & Broadcasting** for **Forensics** *(2021)*
-* **State Qualifier** in **Music** for **WSMA Solo & Ensemble** (*Class A* Snare Drum Solo) *(2021)*
-* **State Runner-Up** in **Music** for **WSMA Solo & Ensemble** (*Class A* Percussion Ensemble) *(2021)*
+[gutenfries@gmail.com](mailto:gutenfries@gmail.com) | [+1 (920)-284-3760](tel:+19202843760) | [gutenfries.deno.dev](https://gutenfries.deno.dev)
 
 ## Skills
 
-### Instruments
+- Rudimental Corps-Style Drumming (4 years)
+  - high school marching band, indoor drumline, and DCI
+  - took weekly private lessons for 3 years
+- Drumset (4 years)
+  - jazz, metal, and funk genres
+- Guitar (6 years)
+  - jazz, rock, and metal genres
+- Bass Guitar (2 years)
+  - jazz, rock, and metal genres
 
-* **Guitar** *(Highly proficient)*
-* **Drums & Percussion** *(Highly proficient)*
-* **Bass** *(Proficient)*
-* **Banjo** *(Proficient)*
-* **Piano** *(Intermediate)*
+## Professional Experience
 
-### Languages
+### River City Rhythm Drum & Bugle Corps
 
-* **English** *(native speaker)*
-* **German** *(intermediate)*
+- Snareline Contract (2023 DCI season)
 
-## References
+### The Ryan Kautzer Polka Band
 
-* Tom Busch *(High School Marching Director)*
-  * <dtbusch@pulaskischools.org>
-* Michael Guerrero *(High School Jazz Director)*
-  * <maguerrero@pulaskischools.org>
-* Bob Pekol *(Guardian)*
-  * <bobpekol@icloud.com>
-* Lindsey Leisgang *(Social Worker)*
-  * <lindsey.leisgang@shawanocountywi.gov>
+- Banjo, Guitar, and Drumset player (09/2020 - present, volunteer)
+- Utilized improvisation skills and learning by rote/ear to perform fluidly
+- Set up PA and sound equipment for gigs
 
----
-> Marc Gutenberger | [+1 (920)-284-3760](tel:19202843760) | <gutenfries@gmail.com> | [gutenfries.deno.dev](https://gutenfries.deno.dev)\
-> [GitHub](https://github.com/gutenfries) | [Peerlist](https://peerlist.io/gutenfries) | [LinkedIn](https://www.linkedin.com/in/gutenfries/)
----
+### Red Raider Marching Band
+
+- Marched bassline (2019-2020) and snareline (2021-2022) (2019 - 2022)
+- Marched in various competitions across the US, including Disney World, Waseca Classic, and the Pasadena Tournament of Roses.
+
+### Red Raider Jazz Band
+
+- Guitarist (2019-2021) and Drumset player (2021-2022) (2019 - 2022)
+- Performed across the state of Wisconsin at various venues and events
+- Utilized music theory and improvisation to perform fluently within the jazz idiom
+
+### PHS Pit Orchestra
+
+- Guitarist (2022 - 2023)
+- Performed original broadway compositions and arrangements
+- Utilized sight reading and versatility to perform fluently in a pit orchestra setting
+
+## Activities and Honors
+
+- WSMA Solo & Ensemble (2022) - [Class A] Rudimental Snare Drum Solo and Percussion Ensemble - State qualifier and performer
+- WSMA Solo & Ensemble (2023) - [Class A] Choral Solo and 2 Choral Ensembles - State qualifier and performer
