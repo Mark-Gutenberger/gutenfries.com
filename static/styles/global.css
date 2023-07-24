@@ -134,7 +134,7 @@ ins {
 
 /* Firefox */
 * {
-	scrollbar-color: var(--purple-600) rgba(107, 114, 128, 0.6);
+	scrollbar-color: var(--purple-500) rgba(107, 114, 128, 0.6);
 }
 
 img::before {

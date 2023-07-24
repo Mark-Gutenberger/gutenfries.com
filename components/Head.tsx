@@ -1,5 +1,5 @@
-import { ErrorPageProps, PageProps, UnknownPageProps } from '$fresh/server.ts';
 import { asset, Head as FreshHead } from '$fresh/runtime.ts';
+import { ErrorPageProps, PageProps, UnknownPageProps } from '$fresh/server.ts';
 
 interface HeadProps {
 	PageProps: PageProps | UnknownPageProps | ErrorPageProps;
@@ -24,7 +24,7 @@ function Head({ PageProps }: HeadProps) {
 			<link rel='preconnect' href='https://fonts.googleapis.com' />
 			<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
 			<link
-				href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700'
+				href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700'
 				rel='stylesheet'
 				type='text/css'
 			/>

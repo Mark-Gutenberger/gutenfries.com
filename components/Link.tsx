@@ -54,7 +54,7 @@ export function Link(
 	return (
 		<a
 			href={href}
-			className={`hover:underline ${u ? 'underline' : ''} ${className ?? ''} ${
+			className={`hover:underline font-medium ${u ? 'underline' : ''} ${className ?? ''} ${
 				// if `color` is undefined or true, color the link
 				color ?? true
 					? 'hover:text-purple-600 active:text-purple-700 text-purple-500'
