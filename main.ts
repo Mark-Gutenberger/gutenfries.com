@@ -4,15 +4,10 @@
 /// <reference lib="dom.asynciterable" />
 /// <reference lib="deno.ns" />
 
-import manifest from '@/fresh.gen.ts';
-import { start } from '$fresh/server.ts';
-import twindConfig from '@/twind.config.ts';
 import twindPlugin from '$fresh/plugins/twind.ts';
+import { start } from '$fresh/server.ts';
 
-await start(manifest, {
-	plugins: [
-		twindPlugin(twindConfig),
-	],
-	port: 80,
-	// experimentalDenoServe: true,
-});
+import manifest from '@/fresh.gen.ts';
+import twindConfig from '@/twind.config.ts';
+
+await start(manifest, { plugins: [twindPlugin(twindConfig)] });

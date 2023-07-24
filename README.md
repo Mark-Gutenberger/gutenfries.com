@@ -38,13 +38,13 @@
 
 ## Tech Stack :computer:
 
-* [Deno Fresh](https://fresh.deno.dev/) :lemon: (Deno Web Framework)
-* [Deno Deploy](https://deno.com/deploy/) :desktop_computer: (Serverless Deployment)
-* [Tabler Icons](https://tabler-icons.io/) :pen: (SVG Icons)
-* [Tailwind CSS](https://tailwindcss.com/) :paintbrush: (Styling)
-  * [Twind](https://twind.dev/) (CSS-In-JS Solution)
-* [Preact](https://preactjs.com/) :page_facing_up: (JSX Rendering)
-* [GitHub Actions](https://github.com/features/actions) :octocat: (CI & CD)
+- [Deno Fresh](https://fresh.deno.dev/) :lemon: (Deno Web Framework)
+- [Deno Deploy](https://deno.com/deploy/) :desktop_computer: (Serverless Deployment)
+- [Tabler Icons](https://tabler-icons.io/) :pen: (SVG Icons)
+- [Tailwind CSS](https://tailwindcss.com/) :paintbrush: (Styling)
+  - [Twind](https://twind.dev/) (CSS-In-JS Solution)
+- [Preact](https://preactjs.com/) :page_facing_up: (JSX Rendering)
+- [GitHub Actions](https://github.com/features/actions) :octocat: (CI & CD)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -52,10 +52,10 @@
 
 Helpful resources used to get this project off the ground:
 
-* [Fresh docs](https://fresh.deno.dev/docs)
-* [Preact docs](https://preactjs.com/guide/v10/getting-started)
-* [Deno docs](https://deno.land/manual)
-* [Deno Deploy docs](https://deno.com/deploy/docs)
+- [Fresh docs](https://fresh.deno.dev/docs)
+- [Preact docs](https://preactjs.com/guide/v10/getting-started)
+- [Deno docs](https://deno.land/manual)
+- [Deno Deploy docs](https://deno.com/deploy/docs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
