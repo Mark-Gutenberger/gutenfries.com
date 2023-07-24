@@ -1,5 +1,7 @@
-import { IconMoon, IconSun } from '@/components/Icons.tsx';
 import { useEffect, useState } from 'preact/hooks';
+
+import IconMoon from '@tabler/icons/moon.tsx';
+import IconSun from '@tabler/icons/sun.tsx';
 
 const Theme = () => {
 	const [darkMode, setDarkMode] = useState<boolean>(true);

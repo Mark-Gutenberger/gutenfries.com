@@ -1,10 +1,10 @@
-import { Navbar, Routes } from '@/components/Navbar.tsx';
+import { asset } from '$fresh/runtime.ts';
+import { UnknownPageProps } from '$fresh/server.ts';
 
 import { Head } from '@/components/Head.tsx';
+import { Navbar, Routes } from '@/components/Navbar.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
-import { UnknownPageProps } from '$fresh/server.ts';
-import { asset } from '$fresh/runtime.ts';
-import { IconAmongUs } from '@/components/Icons.tsx';
+import IconMoodSadDizzy from '@tabler/icons/mood-sad-dizzy.tsx';
 
 function NotFoundPage(PageProps: UnknownPageProps) {
 	return (
@@ -42,13 +42,13 @@ function NotFoundPage(PageProps: UnknownPageProps) {
 				<div class='relative flex items-center justify-center'>
 					<span class='relative block'>
 						<h4 className='z-10 relative'>
-							<IconAmongUs className='w-24 h-24' />
+							<IconMoodSadDizzy className='w-24 h-24' />
 						</h4>
 						<h4 className='z-20 relative -mt-24'>
-							<IconAmongUs className='w-24 h-24' />
+							<IconMoodSadDizzy className='w-24 h-24' />
 						</h4>
 						<h4 className='z-30 relative -mt-24'>
-							<IconAmongUs className='w-24 h-24' />
+							<IconMoodSadDizzy className='w-24 h-24' />
 						</h4>
 					</span>
 				</div>

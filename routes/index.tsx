@@ -1,32 +1,27 @@
-import {
-	IconActivity,
-	IconC,
-	IconCPP,
-	IconDeno,
-	IconDocker,
-	IconFlutter,
-	IconLamp,
-	IconMedal,
-	IconPackage,
-	IconPC,
-	IconQuote,
-	IconReact,
-	IconRust,
-	IconShoe,
-	IconStack,
-} from '@/components/Icons.tsx';
-import { Navbar, Routes } from '@/components/Navbar.tsx';
+import { PageProps } from '$fresh/server.ts';
 
 import ContentCard from '@/components/ContentCard.tsx';
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
 import { Link } from '@/components/Link.tsx';
+import { Navbar, Routes } from '@/components/Navbar.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
-import { PageProps } from '$fresh/server.ts';
 import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
 import { SnareAnimation } from '@/components/SnareAnimation.tsx';
 import { TechCard } from '@/components/TechCard.tsx';
 import TypingCodeBlock from '@/islands/TypingCodeBlock.tsx';
+import IconActivity from '@tabler/icons/activity.tsx';
+import IconBrandCPP from '@tabler/icons/brand-cpp.tsx';
+import IconBrandDeno from '@tabler/icons/brand-deno.tsx';
+import IconBrandDocker from '@tabler/icons/brand-docker.tsx';
+import IconBrandFlutter from '@tabler/icons/brand-flutter.tsx';
+import IconBrandReact from '@tabler/icons/brand-react.tsx';
+import IconLamp from '@tabler/icons/lamp.tsx';
+import IconMedal from '@tabler/icons/medal.tsx';
+import IconQuote from '@tabler/icons/quote.tsx';
+import IconSettings from '@tabler/icons/settings.tsx';
+import IconShoe from '@tabler/icons/shoe.tsx';
+import IconStack from '@tabler/icons/stack.tsx';
 
 function IndexPage(PageProps: PageProps) {
 	const typingCode = [
@@ -172,7 +167,7 @@ const MARC: &str =`;
 						<div className='p-4 md:w-1/3'>
 							<RecentActivityCard
 								title='Engineer lead at Dart-Sys'
-								icon={<IconFlutter />}
+								icon={<IconBrandFlutter />}
 							>
 								I recently took on the role of lead engineer at{' '}
 								<Link href='https://github.com/dart-sys'>Dart-Sys</Link>, a startup
@@ -205,7 +200,7 @@ const MARC: &str =`;
 						<TechCard
 							tech='Rust'
 							techLink='https://www.rust-lang.org/'
-							icon={<IconRust />}
+							icon={<IconSettings />}
 						>
 							My 'Main' language is Rust. I've been writing Rust code for several
 							years, and I am very competent and familiar with with the{' '}
@@ -220,7 +215,7 @@ const MARC: &str =`;
 						<TechCard
 							tech='C++'
 							techLink='https://www.cplusplus.com/'
-							icon={<IconCPP />}
+							icon={<IconBrandCPP />}
 						>
 							I am very familiar with the{' '}
 							<Link href='https://wikipedia.org/wiki/C%2B%2B20'>
@@ -247,7 +242,7 @@ const MARC: &str =`;
 						<TechCard
 							tech='Flutter'
 							techLink='https://flutter.dev/'
-							icon={<IconFlutter />}
+							icon={<IconBrandFlutter />}
 						>
 							I have used Flutter to build a multiplatform application that keeps
 							score for a game called{' '}
@@ -266,7 +261,7 @@ const MARC: &str =`;
 						<TechCard
 							tech='Deno'
 							techLink='https://deno.land/'
-							icon={<IconDeno />}
+							icon={<IconBrandDeno />}
 						>
 							I have a passion for the Deno ECMAScript runtime. I have contributed to
 							the Deno core project, and have written multiple applications using the
@@ -291,7 +286,7 @@ const MARC: &str =`;
 						<TechCard
 							tech='(P)React'
 							techLink='https://preactjs.org/'
-							icon={<IconReact />}
+							icon={<IconBrandReact />}
 						>
 							I am quite familiar with{' '}
 							<Link href='https://reactjs.org/'>
@@ -307,7 +302,7 @@ const MARC: &str =`;
 						<TechCard
 							tech='Docker'
 							techLink='https://www.docker.com/'
-							icon={<IconDocker />}
+							icon={<IconBrandDocker />}
 						>
 							I am very familiar with Docker, and have used it to containerize many
 							applications, including{' '}

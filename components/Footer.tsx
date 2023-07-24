@@ -1,32 +1,31 @@
-import {
-	IconArticle,
-	IconCalendar,
-	IconCode,
-	IconCodepen,
-	IconCookie,
-	IconDeno,
-	IconDiscord,
-	IconFileCertificate,
-	IconFileText,
-	IconGitHub,
-	IconGooglePlay,
-	IconInstagram,
-	IconLeetCode,
-	IconLinkedIn,
-	IconMail,
-	IconPeerlist,
-	IconPhone,
-	IconReact,
-	IconRSS,
-	IconSpotify,
-	IconTabler,
-	IconTailwind,
-	IconTikTok,
-	IconWakatime,
-	IconWorld,
-} from '@/components/Icons.tsx';
-
 import { asset } from '$fresh/runtime.ts';
+
+import IconArticle from '@tabler/icons/article.tsx';
+import IconBrandCodepen from '@tabler/icons/brand-codepen.tsx';
+import IconDeno from '@tabler/icons/brand-deno.tsx';
+import IconBrandDiscord from '@tabler/icons/brand-discord.tsx';
+import IconBrandGit from '@tabler/icons/brand-git.tsx';
+import IconBrandGithub from '@tabler/icons/brand-github.tsx';
+import IconBrandGooglePlay from '@tabler/icons/brand-google-play.tsx';
+import IconBrandInstagram from '@tabler/icons/brand-instagram.tsx';
+import IconBrandLinkedIn from '@tabler/icons/brand-linkedin.tsx';
+import IconBrandReact from '@tabler/icons/brand-react.tsx';
+import IconBrandSpotify from '@tabler/icons/brand-spotify.tsx';
+import IconBrandTabler from '@tabler/icons/brand-tabler.tsx';
+import IconBrandTailwind from '@tabler/icons/brand-tailwind.tsx';
+import IconBrandTikTok from '@tabler/icons/brand-tiktok.tsx';
+import IconCalendar from '@tabler/icons/calendar.tsx';
+import IconCode from '@tabler/icons/code.tsx';
+import IconCookie from '@tabler/icons/cookie.tsx';
+import IconFileCertificate from '@tabler/icons/file-certificate.tsx';
+import IconFileText from '@tabler/icons/file-text.tsx';
+import IconLetterW from '@tabler/icons/letter-w.tsx';
+import IconMail from '@tabler/icons/mail.tsx';
+import IconPhone from '@tabler/icons/phone.tsx';
+import IconRSS from '@tabler/icons/rss.tsx';
+import IconSquareRoundedLetterP from '@tabler/icons/square-rounded-letter-p.tsx';
+import IconWorld from '@tabler/icons/world.tsx';
+
 import { Link } from './Link.tsx';
 
 function Footer() {
@@ -49,7 +48,7 @@ function Footer() {
 										<span className='mr-1'>
 											Instagram
 										</span>
-										<IconInstagram className='inline-block h-5 w-5' />
+										<IconBrandInstagram className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 
@@ -62,7 +61,7 @@ function Footer() {
 										<span className='mr-1'>
 											TikTok
 										</span>
-										<IconTikTok className='inline-block h-5 h-5' />
+										<IconBrandTikTok className='inline-block h-5 h-5' />
 									</Link>
 								</li>
 								<li>
@@ -74,7 +73,7 @@ function Footer() {
 										<span className='mr-1'>
 											Spotify
 										</span>
-										<IconSpotify className='inline-block h-5 w-5' />
+										<IconBrandSpotify className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 								<li>
@@ -86,7 +85,7 @@ function Footer() {
 										<span className='mr-1'>
 											Discord
 										</span>
-										<IconDiscord className='inline-block h-5 w-5' />
+										<IconBrandDiscord className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 							</ul>
@@ -153,7 +152,7 @@ function Footer() {
 										<span className='mr-1'>
 											LinkedIn
 										</span>
-										<IconLinkedIn className='inline-block h-5 w-5' />
+										<IconBrandLinkedIn className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 								<li>
@@ -165,7 +164,7 @@ function Footer() {
 										<span className='mr-1'>
 											Peerlist
 										</span>
-										<IconPeerlist className='inline-block h-5 w-5' />
+										<IconSquareRoundedLetterP className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 								<li>
@@ -190,7 +189,7 @@ function Footer() {
 										<span className='mr-1'>
 											Google Dev
 										</span>
-										<IconGooglePlay className='inline-block h-5 w-5' />
+										<IconBrandGooglePlay className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 							</ul>
@@ -211,7 +210,7 @@ function Footer() {
 										<span className='mr-1'>
 											GitHub
 										</span>
-										<IconGitHub className='inline-block h-5 w-5' />
+										<IconBrandGithub className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 								<li>
@@ -223,7 +222,7 @@ function Footer() {
 										<span className='mr-1'>
 											Wakatime
 										</span>
-										<IconWakatime className='inline-block h-4 w-4' />
+										<IconLetterW className='inline-block h-4 w-4' />
 									</Link>
 								</li>
 								<li>
@@ -235,7 +234,7 @@ function Footer() {
 										<span className='mr-1'>
 											Codepen
 										</span>
-										<IconCodepen className='inline-block h-5 w-5' />
+										<IconBrandCodepen className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 								<li>
@@ -247,7 +246,7 @@ function Footer() {
 										<span className='mr-1'>
 											Leetcode
 										</span>
-										<IconLeetCode className='inline-block h-5 w-5' />
+										<IconCode className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 							</ul>
@@ -295,7 +294,7 @@ function Footer() {
 										<span className='mr-1'>
 											Source Code
 										</span>
-										<IconCode className='inline-block h-5 w-5' />
+										<IconBrandGit className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 								<li>
@@ -366,7 +365,7 @@ function Footer() {
 										<span className='mr-1'>
 											Preact
 										</span>
-										<IconReact className='inline-block h-5 w-5' />
+										<IconBrandReact className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 								<li>
@@ -378,7 +377,7 @@ function Footer() {
 										<span className='mr-1'>
 											Tailwind CSS
 										</span>
-										<IconTailwind className='inline-block h-5 w-5' />
+										<IconBrandTailwind className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 								<li>
@@ -390,7 +389,7 @@ function Footer() {
 										<span className='mr-1'>
 											Tabler Icons
 										</span>
-										<IconTabler className='inline-block h-5 w-5' />
+										<IconBrandTabler className='inline-block h-5 w-5' />
 									</Link>
 								</li>
 							</ul>

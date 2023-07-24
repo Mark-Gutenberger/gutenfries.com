@@ -2,24 +2,23 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import config from './deno.json' assert { type: 'json' };
 import * as $0 from './routes/404.tsx';
 import * as $1 from './routes/500.tsx';
 import * as $2 from './routes/_404.tsx';
 import * as $3 from './routes/_500.tsx';
-import * as $4 from './routes/blog.tsx';
-import * as $5 from './routes/blog/[slug].tsx';
-import * as $6 from './routes/blog/feed.rss.ts';
-import * as $7 from './routes/home.ts';
-import * as $8 from './routes/index.tsx';
-import * as $9 from './routes/license.tsx';
-import * as $10 from './routes/privacy-policy.tsx';
-import * as $11 from './routes/resume.tsx';
-import * as $12 from './routes/sitemap.xml.ts';
+import * as $4 from './routes/_app.tsx';
+import * as $5 from './routes/blog.tsx';
+import * as $6 from './routes/blog/[slug].tsx';
+import * as $7 from './routes/blog/feed.rss.ts';
+import * as $8 from './routes/home.ts';
+import * as $9 from './routes/index.tsx';
+import * as $10 from './routes/license.tsx';
+import * as $11 from './routes/privacy-policy.tsx';
+import * as $12 from './routes/resume.tsx';
+import * as $13 from './routes/sitemap.xml.ts';
 import * as $$0 from './islands/Resume.tsx';
-import * as $$1 from './islands/SearchBar.tsx';
-import * as $$2 from './islands/Theme.tsx';
-import * as $$3 from './islands/TypingCodeBlock.tsx';
+import * as $$1 from './islands/Theme.tsx';
+import * as $$2 from './islands/TypingCodeBlock.tsx';
 
 const manifest = {
 	routes: {
@@ -27,24 +26,23 @@ const manifest = {
 		'./routes/500.tsx': $1,
 		'./routes/_404.tsx': $2,
 		'./routes/_500.tsx': $3,
-		'./routes/blog.tsx': $4,
-		'./routes/blog/[slug].tsx': $5,
-		'./routes/blog/feed.rss.ts': $6,
-		'./routes/home.ts': $7,
-		'./routes/index.tsx': $8,
-		'./routes/license.tsx': $9,
-		'./routes/privacy-policy.tsx': $10,
-		'./routes/resume.tsx': $11,
-		'./routes/sitemap.xml.ts': $12,
+		'./routes/_app.tsx': $4,
+		'./routes/blog.tsx': $5,
+		'./routes/blog/[slug].tsx': $6,
+		'./routes/blog/feed.rss.ts': $7,
+		'./routes/home.ts': $8,
+		'./routes/index.tsx': $9,
+		'./routes/license.tsx': $10,
+		'./routes/privacy-policy.tsx': $11,
+		'./routes/resume.tsx': $12,
+		'./routes/sitemap.xml.ts': $13,
 	},
 	islands: {
 		'./islands/Resume.tsx': $$0,
-		'./islands/SearchBar.tsx': $$1,
-		'./islands/Theme.tsx': $$2,
-		'./islands/TypingCodeBlock.tsx': $$3,
+		'./islands/Theme.tsx': $$1,
+		'./islands/TypingCodeBlock.tsx': $$2,
 	},
 	baseUrl: import.meta.url,
-	config,
 };
 
 export default manifest;

@@ -1,6 +1,4 @@
-import SearchBar from '@/islands/SearchBar.tsx';
 import { classNames } from '@/utils/helpers.ts';
-// import Theme from '@/islands/Theme.tsx';
 
 interface Route {
 	displayName?: string;
@@ -87,7 +85,8 @@ function Navbar(props: { active: Routes }) {
 						}
 					})}
 				</ul>
-				<SearchBar />
+
+				{/* <Theme /> */}
 			</nav>
 		</>
 	);

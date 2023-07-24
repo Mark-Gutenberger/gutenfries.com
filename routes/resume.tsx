@@ -1,14 +1,14 @@
+import { asset } from '$fresh/runtime.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { Navbar, Routes } from '@/components/Navbar.tsx';
+import { render as renderGFM } from 'gfm';
 
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
-import { IconFileDownload } from '@/components/Icons.tsx';
+import { Navbar, Routes } from '@/components/Navbar.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import Resume from '@/islands/Resume.tsx';
-import { asset } from '$fresh/runtime.ts';
 import { readFile } from '@/utils/readFile.ts';
-import { render as renderGFM } from 'gfm';
+import IconFileDownload from '@tabler/icons/file-download.tsx';
 
 interface Data {
 	resumes: string[];
