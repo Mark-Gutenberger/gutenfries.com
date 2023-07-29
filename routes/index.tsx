@@ -1,57 +1,30 @@
-import { PageProps } from '$fresh/server.ts';
+import { Navbar, Routes } from '@/components/Navbar.tsx';
 
 import ContentCard from '@/components/ContentCard.tsx';
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
-import { Link } from '@/components/Link.tsx';
-import { Navbar, Routes } from '@/components/Navbar.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
-import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
-import { SnareAnimation } from '@/components/SnareAnimation.tsx';
-import { TechCard } from '@/components/TechCard.tsx';
-import TypingCodeBlock from '@/islands/TypingCodeBlock.tsx';
 import IconActivity from '@tabler/icons/activity.tsx';
 import IconBrandCPP from '@tabler/icons/brand-cpp.tsx';
 import IconBrandDeno from '@tabler/icons/brand-deno.tsx';
 import IconBrandDocker from '@tabler/icons/brand-docker.tsx';
 import IconBrandFlutter from '@tabler/icons/brand-flutter.tsx';
 import IconBrandReact from '@tabler/icons/brand-react.tsx';
+import IconCircleFilled from '@tabler/icons/circle-filled.tsx';
 import IconLamp from '@tabler/icons/lamp.tsx';
 import IconMedal from '@tabler/icons/medal.tsx';
 import IconQuote from '@tabler/icons/quote.tsx';
 import IconSettings from '@tabler/icons/settings.tsx';
 import IconShoe from '@tabler/icons/shoe.tsx';
 import IconStack from '@tabler/icons/stack.tsx';
+import { Link } from '@/components/Link.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
+import { PageProps } from '$fresh/server.ts';
+import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
+import { SnareAnimation } from '@/components/SnareAnimation.tsx';
+import { TechCard } from '@/components/TechCard.tsx';
+import { asset } from '$fresh/runtime.ts';
 
 function IndexPage(PageProps: PageProps) {
-	const typingCode = [
-		'"Software Engineer"',
-		'"Web Developer"',
-		'"Rust Enthusiast"',
-		'"Systems Programmer"',
-	];
-	const code = `// like the theme? Try it!
-// https://github.com/gutenfries/10x-dark-theme
-pub struct Marc {
-	email: String,
-	loves_dinosaurs: bool,
-	skills: Vec<&str>,
-}
-impl Marc {
-	pub fn about() -> Marc {
-		Marc {
-			email: String::from("gutenfries@gmail.com"),
-			loves_dinosaurs: true,
-			skills: vec![
-				"Rust", "C/C++",
-				"TypeScript", "Flutter",
-				"(P)react", "HTML & CSS",
-			],
-		}
-	}
-}
-const MARC: &str =`;
-
 	return (
 		<>
 			<Head PageProps={PageProps} />
@@ -65,11 +38,38 @@ const MARC: &str =`;
 				className='text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
 			>
 				<section className='container flex flex-col items-center px-8 pb-32 mx-auto pt-28 lg:flex-row'>
-					<h1 className='w-3/5 mx-auto mb-12 font-semibold text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
-						Marc Gutenberger
-					</h1>
-					<div className='w-5/6 lg:w-1/2 md:w-full'>
-						<TypingCodeBlock lang='rust' code={code} typingCode={typingCode} />
+					<div className='p-6 flex flex-wrap justify-evenly bg-gray-800 rounded-2xl w-full h-full'>
+						<div className='rounded-3xl bg-gray-900 bg-opacity-75 flex flex-wrap md:flex-nowrap w-5/6 lg:w-1/2 md:w-full'>
+							<img
+								className='p-4 object-cover object-center rounded-full w-full md:w-1/2'
+								src={asset('/images/profile.jpg')}
+								alt='me'
+							/>
+							<span className='px-2 my-auto text-center lg:text-left'>
+								<h1 className='font-bold title-font mt-2 mb-4 text-3xl 2xl:text-4xl text-white'>
+									Marc Gutenberger
+								</h1>
+								<div className='flex flex-wrap mb-2 justify-center'>
+									<p className='text-base text-gray-300 m-2'>
+										<IconCircleFilled className='inline-block w-2 h-2 mr-3' />
+										<span>Software Engineer</span>
+									</p>
+									<p className='text-base text-gray-300 m-2'>
+										<IconCircleFilled className='inline-block w-2 h-2 mr-3' />
+										<span>Musician</span>
+									</p>
+									<p className='text-base text-gray-300 m-2'>
+										<IconCircleFilled className='inline-block w-2 h-2 mr-3' />
+										<span>Enjoyer of Dinosaurs</span>
+									</p>
+								</div>
+							</span>
+						</div>
+						<div className='w-5/6 lg:w-1/2 md:w-full'>
+							<div className='align-center justify-center'>
+								<SnareAnimation />
+							</div>
+						</div>
 					</div>
 				</section>
 
@@ -96,7 +96,38 @@ const MARC: &str =`;
 							</>
 						}
 					>
-						<SnareAnimation />
+						<div>
+							<link
+								rel='stylesheet'
+								href='https://unpkg.com/@speed-highlight/core/dist/themes/atom-dark.css'
+							/>
+							<script type='module'>
+								{`
+					import { highlightAll } from 'https://unpkg.com/@speed-highlight/core/dist/index.js';
+					highlightAll();
+					`}
+							</script>
+							<div className='text-xs sm:text-sm md:text-base w-full h-full shj-lang-rs'>
+								{`pub struct Marc {
+  email: String,
+  loves_dinosaurs: bool,
+  skills: Vec<&str>,
+}
+impl Marc {
+  pub fn about() -> Marc {
+    Marc {
+      email: String::from("gutenfries@gmail.com"),
+      loves_dinosaurs: true,
+      skills: vec![
+        "Rust", "C/C++",
+        "TypeScript", "Flutter",
+        "(P)react", "HTML & CSS",
+      ],
+    }
+  }
+}`}
+							</div>
+						</div>
 					</ContentCard>
 
 					<div className='flex flex-col flex-wrap mb-10 text-center lg:py-6 lg:w-1/2 lg:pl-12 lg:text-left'>

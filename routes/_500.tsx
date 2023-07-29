@@ -14,7 +14,7 @@ function ErrorPage(PageProps: ErrorPageProps) {
 			<NoScript />
 			<link
 				rel='stylesheet'
-				href={asset('/styles/glitch.css')}
+				href={asset('/styles/animations/glitch.css')}
 			/>
 
 			<main
@@ -22,9 +22,9 @@ function ErrorPage(PageProps: ErrorPageProps) {
 				className='bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 text-center flex flex-col justify-center h-screen overflow-x-hidden'
 			>
 				<span>
-					<h2>Error 500</h2>
-					<h2>Error 500</h2>
-					<h2>Error 500</h2>
+					<h2>Error 500:</h2>
+					<h2>Error 500:</h2>
+					<h2>Error 500:</h2>
 				</span>
 				<br />
 				<br />

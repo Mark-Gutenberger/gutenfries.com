@@ -1,4 +1,4 @@
-import { classNames } from '@/utils/helpers.ts';
+import { classNames } from '@/utils/classNames.ts';
 
 interface Route {
 	displayName?: string;

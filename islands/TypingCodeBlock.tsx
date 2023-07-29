@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'preact/hooks';
-
-import { asset } from '$fresh/runtime.ts';
+import { useEffect } from 'preact/hooks';
 
 interface TypingCodeBlockProps {
 	lang: string;
@@ -9,7 +7,7 @@ interface TypingCodeBlockProps {
 }
 
 const TypingCodeBlock = ({ lang, code, typingCode }: TypingCodeBlockProps) => {
-	const TypingCode = ({ typingCode }: { typingCode: string[] }) => {
+	/* const TypingCode = (typingCode: string[]): string => {
 		const [typingIndex, setTypingIndex] = useState(0);
 		const [typingPosition, setTypingPosition] = useState(0);
 		const [isDeleting, setIsDeleting] = useState(false);
@@ -45,23 +43,77 @@ const TypingCodeBlock = ({ lang, code, typingCode }: TypingCodeBlockProps) => {
 			return () => clearInterval(interval);
 		}, [isDeleting, isPaused, typingIndex, typingPosition, typingCode]);
 
-		return (
-			<span className='token string'>
-				{typingCode[typingIndex].substring(0, typingPosition)}
-			</span>
-		);
+		return typingCode[typingIndex].substring(0, typingPosition);
+	}; */
+	const TypingCode = (typingCode: string[]) => {
+		let typingIndex = 0;
+		let typingPosition = 0;
+		let isDeleting = false;
+		let isPaused = false;
+
+		const interval = setInterval(() => {
+			if (!isPaused) {
+				const currentTypingCode = typingCode[typingIndex];
+				const typingLength = currentTypingCode.length;
+
+				if (!isDeleting) {
+					typingPosition++;
+
+					if (typingPosition === typingLength) {
+						isPaused = true;
+						isDeleting = true;
+						setTimeout(() => (isPaused = false), 1000);
+					}
+				} else {
+					typingPosition--;
+
+					if (typingPosition === 0) {
+						typingIndex = (typingIndex + 1) % typingCode.length;
+						isPaused = true;
+						isDeleting = false;
+						setTimeout(() => (isPaused = false), 1000);
+					}
+				}
+			}
+		}, 100);
+
+		return () => {
+			clearInterval(interval);
+			return typingCode[typingIndex].substring(0, typingPosition);
+		};
 	};
+	const typing = TypingCode(typingCode);
+
+	useEffect(() => {
+		// Print the typing animation every 100ms
+		const interval = setInterval(() => {
+			const el = document.getElementById('typing-code')!;
+			const currentTyping = typing();
+			if (currentTyping === typingCode[typingCode.length - 1]) {
+				clearInterval(interval);
+			}
+			el.textContent = currentTyping;
+		}, 100);
+	}, []);
 
 	return (
-		<pre className='text-xs sm:text-sm md:text-base w-full h-full'>
-			<script src={asset('/js/prism.js')} />
-			<link rel='stylesheet' href={asset('/styles/10x-dark.css')} />
-			<code className={`language-${lang}`}>
+		<>
+			<link
+				rel='stylesheet'
+				href='https://unpkg.com/@speed-highlight/core/dist/themes/atom-dark.css'
+			/>
+			<script type='module'>
+				{`
+					import { highlightAll } from 'https://unpkg.com/@speed-highlight/core/dist/index.js';
+					highlightAll();
+					`}
+			</script>
+			<div className={`text-xs sm:text-sm md:text-base w-full h-full shj-lang-${lang}`}>
 				{code + ' '}
-				<TypingCode typingCode={typingCode} />
-			</code>
-			<span className='token operator animate-ping'>|</span>
-		</pre>
+				<code id='typing-code' />
+				<span className='shj-syn-oper animate-ping'>|</span>
+			</div>
+		</>
 	);
 };
 

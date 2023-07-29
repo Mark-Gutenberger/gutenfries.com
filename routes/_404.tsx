@@ -4,7 +4,7 @@ import { UnknownPageProps } from '$fresh/server.ts';
 import { Head } from '@/components/Head.tsx';
 import { Navbar, Routes } from '@/components/Navbar.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
-import IconMoodSadDizzy from '@tabler/icons/mood-sad-dizzy.tsx';
+import IconDirectionsOff from '@tabler/icons/directions-off.tsx';
 
 function NotFoundPage(PageProps: UnknownPageProps) {
 	return (
@@ -16,7 +16,7 @@ function NotFoundPage(PageProps: UnknownPageProps) {
 
 			<link
 				rel='stylesheet'
-				href={asset('/styles/glitch.css')}
+				href={asset('/styles/animations/glitch.css')}
 			/>
 
 			<main
@@ -24,9 +24,9 @@ function NotFoundPage(PageProps: UnknownPageProps) {
 				className='bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 text-center flex flex-col items-center justify-center h-screen'
 			>
 				<span>
-					<h1>Error 404</h1>
-					<h2>Error 404</h2>
-					<h2>Error 404</h2>
+					<h1>Error 404:</h1>
+					<h2>Error 404:</h2>
+					<h2>Error 404:</h2>
 				</span>
 				<br />
 				<br />
@@ -42,13 +42,13 @@ function NotFoundPage(PageProps: UnknownPageProps) {
 				<div class='relative flex items-center justify-center'>
 					<span class='relative block'>
 						<h4 className='z-10 relative'>
-							<IconMoodSadDizzy className='w-24 h-24' />
+							<IconDirectionsOff className='w-24 h-24' />
 						</h4>
 						<h4 className='z-20 relative -mt-24'>
-							<IconMoodSadDizzy className='w-24 h-24' />
+							<IconDirectionsOff className='w-24 h-24' />
 						</h4>
 						<h4 className='z-30 relative -mt-24'>
-							<IconMoodSadDizzy className='w-24 h-24' />
+							<IconDirectionsOff className='w-24 h-24' />
 						</h4>
 					</span>
 				</div>

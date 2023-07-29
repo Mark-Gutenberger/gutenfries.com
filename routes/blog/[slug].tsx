@@ -6,7 +6,7 @@ import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
-import { render as renderGFM } from 'gfm';
+import { renderMarkdown } from '@/utils/markdown.ts';
 
 interface Data {
 	post: Post;
@@ -20,7 +20,7 @@ export const handler: Handlers<Data> = {
 			return ctx.renderNotFound();
 		}
 
-		const content = renderGFM(post.content);
+		const content = renderMarkdown(post.content);
 
 		return ctx.render(
 			{

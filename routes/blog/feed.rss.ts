@@ -1,6 +1,6 @@
 import { Handlers } from '$fresh/server.ts';
 import { listPosts } from '@/utils/blogPosts.ts';
-import { truncate } from '@/utils/helpers.ts';
+import { truncate } from '@/utils/trunacate.ts';
 
 export const handler: Handlers = {
 	async GET() {

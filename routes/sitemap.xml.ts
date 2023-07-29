@@ -20,7 +20,6 @@ export const handler: Handlers = {
 		// add all resumes
 		sitemap.add('/resume?activeResume=techResume');
 		sitemap.add('/resume?activeResume=musicResume');
-		sitemap.add('/resume?activeResume=generalResume');
 
 		// remove the /home route, as it is a HTTP 307 redirect to /
 		sitemap.remove('/home');
