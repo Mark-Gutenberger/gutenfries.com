@@ -667,3 +667,6 @@ Sessionx.vim
 *.*~
 
 ####################################################
+
+# Fresh build directory
+_fresh/

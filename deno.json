@@ -4,7 +4,9 @@
 	"tasks": {
 		"start": "deno run -Ar --unstable main.ts",
 		"dev": "deno run -A --unstable --watch=components/,routes/,islands/,layouts/,static/ dev.ts --no-clear-screen",
-		"test": "deno test --allow-all --no-check --unstable --doc --allow-none"
+		"test": "deno test --allow-all --no-check --unstable --doc --allow-none",
+		"build": "deno run -A dev.ts build",
+		"preview": "deno run -A main.ts"
 	},
 	"lint": {
 		"rules": {
@@ -51,7 +53,7 @@
 	},
 	"imports": {
 		"@/": "./",
-		"$fresh/": "https://deno.land/x/fresh@1.3.1/",
+		"$fresh/": "https://deno.land/x/fresh@1.5.2/",
 		"$std/": "https://deno.land/std@0.150.0/",
 		"$testing/": "https://deno.land/std@0.150.0/testing/",
 		"preact": "https://esm.sh/preact@10.15.1",
@@ -67,5 +69,8 @@
 		"@tabler/icons/": "https://deno.land/x/tabler_icons_tsx@0.0.4/tsx/",
 		"gfm": "https://deno.land/x/gfm@0.1.26/mod.ts",
 		"speed_highlight_js/": "https://unpkg.com/@speed-highlight/core@1.1.11/dist/"
-	}
+	},
+	"exclude": [
+		"**/_fresh/*"
+	]
 }

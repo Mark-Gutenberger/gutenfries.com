@@ -24,7 +24,7 @@ function Head({ PageProps }: HeadProps) {
 			<link rel='preconnect' href='https://fonts.googleapis.com' />
 			<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
 			<link
-				href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700'
+				href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Sedgwick+Ave+Display&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700'
 				rel='stylesheet'
 				type='text/css'
 			/>
@@ -86,15 +86,6 @@ function Head({ PageProps }: HeadProps) {
 
 			{/* favicon */}
 			<link rel='icon' href={asset('/images/code.svg')} />
-
-			{/* console easter egg */}
-			<script
-				dangerouslySetInnerHTML={{
-					__html: `
-							console.log('If you\\'re looking this far, please consider staring the repo on GitHub! 😊 \\nhttps://github.com/gutenfries/gutenfries.deno.dev');
-						`,
-				}}
-			/>
 		</FreshHead>
 	);
 }
