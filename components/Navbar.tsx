@@ -1,4 +1,5 @@
 import { classNames } from '@/utils/classNames.ts';
+import ColorMode from '@/islands/ColorMode.tsx';
 
 interface Route {
 	displayName?: string;
@@ -59,34 +60,48 @@ function Navbar(props: { active: Routes }) {
 			>
 				Skip to main content
 			</a>
-			<nav className='fixed z-50 flex flex-row justify-around w-full h-20 bg-gray-800 shadow-lg md:justify-start'>
-				{/* <Theme /> */}
-				<ul className='flex p-4 text-xl text-gray-200'>
+			<nav className='fixed flex flex-row justify-around border border-blue-500 w-full h-20 bg-gray-800 shadow-lg md:justify-start'>
+				<ul className='flex p-4 text-xl text-gray-200 border border-red-500'>
 					{routes.map((item: Route) => {
 						// if the route has a displayName, render it
 						if (item.displayName) {
 							return (
-								<li>
+								<li className='flex items-center justify-center'>
 									<a
 										key={item.id}
 										href={item.href}
 										className={classNames(
 											props.active === item.id
-												? 'bg-gray-400 dark:bg-gray-900 dark:text-gray-200 text-gray-900'
+												? 'animation-gradient'
 												: 'dark:text-gray-300 text-gray-800 dark:bg-gray-800 bg-gray-200 text-gray-900',
-											'rounded-lg text-xl font-medium p-3 mx-3 block hover:bg-gray-700 active:bg-gray-900 hover:text-gray-200',
+											'rounded-md font-sedwick text-2xl font-bold p-3 mx-3 block overflow-hidden relative group cursor-pointer',
 										)}
 										aria-current={props.active === item.id ? 'page' : undefined}
 									>
-										{item.displayName}
+										<span
+											className={classNames(
+												props.active === item.id
+													? 'dark:bg-gray-800 bg-gray-200'
+													: 'animation-gradient',
+												'absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease',
+											)}
+										/>
+										<span
+											className={classNames(
+												props.active === item.id
+													? 'text-white'
+													: 'animation-gradient-text group-hover:text-white',
+												'relative transition duration-300 ease',
+											)}
+										>
+											{item.displayName}
+										</span>
 									</a>
 								</li>
 							);
 						}
 					})}
 				</ul>
-
-				{/* <Theme /> */}
 			</nav>
 		</>
 	);

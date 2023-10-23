@@ -5,7 +5,7 @@ import { Options } from '$fresh/plugins/twind.ts';
 export default {
 	selfURL: import.meta.url,
 	mode: 'silent',
-	// darkMode: 'class',
+	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
@@ -47,6 +47,7 @@ export default {
 				'8': '8px',
 			},
 			fontFamily: {
+				sedwick: ['Sedgwick Ave Display', 'cursive'],
 				sans: [
 					'"Source Sans Pro"',
 					'Poppins',

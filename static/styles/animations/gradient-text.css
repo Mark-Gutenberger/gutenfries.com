@@ -1,0 +1,41 @@
+@import '../colors.css';
+
+.animation-gradient-text {
+	--bg-size: 400%;
+	background: linear-gradient(90deg, var(--blue-600), var(--purple-600), var(--blue-600)) 0 0 / var(--bg-size) 100%;
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+
+.animation-gradient-border {
+	--bg-size: 400%;
+	border: 2px solid transparent;
+	border-image: linear-gradient(90deg, var(--blue-600), var(--purple-600), var(--blue-600)) 1;
+	border-image-slice: 1;
+}
+
+.animation-gradient {
+	--bg-size: 400%;
+	background: linear-gradient(90deg, var(--blue-600), var(--purple-600), var(--blue-600)) 0 0 / var(--bg-size) 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.animation-gradient {
+		animation: move-bg 8s linear infinite;
+	}
+
+	.animation-gradient-text {
+		animation: move-bg 8s linear infinite;
+	}
+
+	.animation-gradient-border {
+		animation: move-bg 8s linear infinite;
+	}
+
+	@keyframes move-bg {
+		to {
+			background-position: var(--bg-size) 0;
+		}
+	}
+}
