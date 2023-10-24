@@ -2,22 +2,22 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $0 from './src/routes/404.tsx';
-import * as $1 from './src/routes/500.tsx';
-import * as $2 from './src/routes/_404.tsx';
-import * as $3 from './src/routes/_500.tsx';
-import * as $4 from './src/routes/_app.tsx';
-import * as $5 from './src/routes/blog.tsx';
-import * as $6 from './src/routes/blog/[slug].tsx';
-import * as $7 from './src/routes/blog/feed.rss.ts';
-import * as $8 from './src/routes/home.ts';
-import * as $9 from './src/routes/index.tsx';
-import * as $10 from './src/routes/license.tsx';
-import * as $11 from './src/routes/privacy-policy.tsx';
-import * as $12 from './src/routes/resume.tsx';
-import * as $13 from './src/routes/sitemap.xml.ts';
-import * as $$0 from './src/islands/ColorMode.tsx';
-import * as $$1 from './src/islands/Resume.tsx';
+import * as $0 from './routes/404.tsx';
+import * as $1 from './routes/500.tsx';
+import * as $2 from './routes/_404.tsx';
+import * as $3 from './routes/_500.tsx';
+import * as $4 from './routes/_app.tsx';
+import * as $5 from './routes/blog.tsx';
+import * as $6 from './routes/blog/[slug].tsx';
+import * as $7 from './routes/blog/feed.rss.ts';
+import * as $8 from './routes/home.ts';
+import * as $9 from './routes/index.tsx';
+import * as $10 from './routes/license.tsx';
+import * as $11 from './routes/privacy-policy.tsx';
+import * as $12 from './routes/resume.tsx';
+import * as $13 from './routes/sitemap.xml.ts';
+import * as $$0 from './islands/ColorMode.tsx';
+import * as $$1 from './islands/Resume.tsx';
 
 const manifest = {
 	routes: {

@@ -1,9 +1,9 @@
 import { asset } from '$fresh/runtime.ts';
 import { UnknownPageProps } from '$fresh/server.ts';
 
-import { Head } from '@/components/Head.tsx';
-import { Navbar, Routes } from '@/components/Navbar.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
+import { Head } from '@/src/components/Head.tsx';
+import { Navbar, Routes } from '@/src/components/Navbar.tsx';
+import { NoScript } from '@/src/components/NoScript.tsx';
 import IconDirectionsOff from '@tabler/icons/directions-off.tsx';
 
 function NotFoundPage(PageProps: UnknownPageProps) {

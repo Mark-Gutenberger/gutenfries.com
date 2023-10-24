@@ -1,5 +1,5 @@
-import { classNames } from '@/utils/classNames.ts';
-import ColorMode from '@/islands/ColorMode.tsx';
+import { classNames } from '@/src/utils/classNames.ts';
+import ColorMode from '@/src/islands/ColorMode.tsx';
 
 interface Route {
 	displayName?: string;
@@ -60,8 +60,8 @@ function Navbar(props: { active: Routes }) {
 			>
 				Skip to main content
 			</a>
-			<nav className='fixed flex flex-row justify-around border border-blue-500 w-full h-20 bg-gray-800 shadow-lg md:justify-start'>
-				<ul className='flex p-4 text-xl text-gray-200 border border-red-500'>
+			<nav className='fixed flex flex-row justify-between w-full h-20 bg-gray-800 shadow-lg'>
+				<ul className='flex p-4 text-xl text-gray-200'>
 					{routes.map((item: Route) => {
 						// if the route has a displayName, render it
 						if (item.displayName) {
@@ -81,7 +81,7 @@ function Navbar(props: { active: Routes }) {
 										<span
 											className={classNames(
 												props.active === item.id
-													? 'dark:bg-gray-800 bg-gray-200'
+													? 'bg-gray-800'
 													: 'animation-gradient',
 												'absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease',
 											)}
@@ -102,6 +102,9 @@ function Navbar(props: { active: Routes }) {
 						}
 					})}
 				</ul>
+				<div className='pr-2 flex items-center justify-center'>
+					<ColorMode />
+				</div>
 			</nav>
 		</>
 	);

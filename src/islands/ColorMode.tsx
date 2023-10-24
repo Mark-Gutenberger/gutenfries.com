@@ -42,14 +42,14 @@ export default function ColorMode() {
 	useEffect(detectMode, []);
 
 	return (
-		<div>
-			<button
-				onClick={toggle}
-			>
-				{state.value === 'dark'
-					? <IconSun className='w-8 h-8 text-purple-600' />
-					: <IconMoon className='w-8 h-8 text-yellow-500' />}
-			</button>
-		</div>
+		<button
+			type='button'
+			className='focus:outline-none'
+			onClick={toggle}
+		>
+			{state.value === 'dark'
+				? <IconSun className='w-8 h-8 text-yellow-400' />
+				: <IconMoon className='w-8 h-8 text-purple-600' />}
+		</button>
 	);
 }

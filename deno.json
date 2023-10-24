@@ -2,11 +2,11 @@
 	"version": "1.0.0",
 	"lock": false,
 	"tasks": {
-		"start": "deno run -Ar --unstable main.ts",
-		"dev": "deno run -A --unstable --watch=components/,routes/,islands/,layouts/,static/ dev.ts --no-clear-screen",
+		"start": "deno run -Ar --unstable src/main.ts",
+		"dev": "deno run -A --unstable --watch=components/,routes/,islands/,layouts/,static/ src/dev.ts --no-clear-screen",
 		"test": "deno test --allow-all --no-check --unstable --doc --allow-none",
-		"build": "deno run -A dev.ts build",
-		"preview": "deno run -A main.ts"
+		"build": "deno run -A src/dev.ts build",
+		"preview": "deno run -A src/main.ts"
 	},
 	"lint": {
 		"rules": {

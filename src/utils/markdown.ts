@@ -1,4 +1,5 @@
 import { render as renderGFM } from 'gfm';
+import { asset } from '$fresh/runtime.ts';
 import { detectLanguage } from 'speed_highlight_js/detect.js';
 /**
  * Renders markdown to HTML via GFM and speed_highlight.js
@@ -12,8 +13,7 @@ export function renderMarkdown(markdown: string): string {
 	if (!html.includes('<code')) return html;
 
 	// inject speed_highlight.js
-	html =
-		`<link rel='stylesheet' href='https://unpkg.com/@speed-highlight/core@1.2.4/dist/themes/atom-dark.css' />
+	html = `<link rel='stylesheet' href=${asset('/styles/10x-dark.css')} />
 <script type='module'>
 import { highlightAll } from 'https://unpkg.com/@speed-highlight/core@1.2.4/dist/index.js';
 highlightAll();

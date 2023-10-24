@@ -1,6 +1,6 @@
 import { asset } from '$fresh/runtime.ts';
 
-import { Link } from '@/components/Link.tsx';
+import { Link } from './Link.tsx';
 import IconArticle from '@tabler/icons/article.tsx';
 import IconBrandCodepen from '@tabler/icons/brand-codepen.tsx';
 import IconBrandDiscord from '@tabler/icons/brand-discord.tsx';

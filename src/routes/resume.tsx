@@ -2,12 +2,12 @@ import { asset } from '$fresh/runtime.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { render as renderGFM } from 'gfm';
 
-import { Footer } from '@/components/Footer.tsx';
-import { Head } from '@/components/Head.tsx';
-import { Navbar, Routes } from '@/components/Navbar.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
-import Resume from '@/islands/Resume.tsx';
-import { readFile } from '@/utils/readFile.ts';
+import { Footer } from '@/src/components/Footer.tsx';
+import { Head } from '@/src/components/Head.tsx';
+import { Navbar, Routes } from '@/src/components/Navbar.tsx';
+import { NoScript } from '@/src/components/NoScript.tsx';
+import Resume from '@/src/islands/Resume.tsx';
+import { readFile } from '@/src/utils/readFile.ts';
 import IconFileDownload from '@tabler/icons/file-download.tsx';
 
 interface Data {
