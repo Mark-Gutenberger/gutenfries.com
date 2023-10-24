@@ -1,9 +1,9 @@
 name: Deploy
+
 on:
   push:
-    branches: [main]
   pull_request:
-    branches: main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
       contents: read # Needed to clone the repository
 
     steps:
-      - name: Clone repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Install Deno
@@ -23,11 +23,11 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Build step
-        run: "deno task build" # 📝 Update the build command(s) if necessary
+      - name: Build
+        run: "deno task build"
 
-      - name: Upload to Deno Deploy
+      - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "gutenfries" # 📝 Update the deploy project name if necessary
-          entrypoint: "./src/main.ts" # 📝 Update the entrypoint if necessary
+          project: "gutenfries"
+          entrypoint: "./src/main.ts"
