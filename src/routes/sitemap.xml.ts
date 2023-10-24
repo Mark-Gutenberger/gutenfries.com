@@ -1,6 +1,6 @@
 import { Handlers } from '$fresh/server.ts';
 import { SitemapContext } from 'fresh_seo';
-import manifest from '@/fresh.gen.ts';
+import manifest from '@/src/fresh.gen.ts';
 import { listPosts } from '@/src/utils/blogPosts.ts';
 
 export const handler: Handlers = {

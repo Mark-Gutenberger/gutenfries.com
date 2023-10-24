@@ -5,7 +5,10 @@
 /// <reference lib="deno.ns" />
 
 import { start } from '$fresh/server.ts';
-import manifest from '@/fresh.gen.ts';
+import manifest from '@/src/fresh.gen.ts';
 import config from '@/fresh.config.ts';
 
 await start(manifest, config);
+
+const solution =
+	'http://docs.google.com/gview?url=https://gutenfries.deno.dev/resume/resume-tech.pdf&embedded=true';
