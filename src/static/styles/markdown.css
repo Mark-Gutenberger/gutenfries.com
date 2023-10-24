@@ -1,5 +1,3 @@
-@import 'colors.css';
-
 :root,
 [data-color-mode='light'][data-light-theme='light'],
 [data-color-mode='dark'][data-dark-theme='light'] {

@@ -1,6 +1,6 @@
 :root {
-	--glitch-blue: #67f3da;
-	--glitch-red: #f16f6f;
+	--glitch-animation-glitch-blue: #67f3da;
+	--glitch-animation-glitch-red: #f16f6f;
 }
 
 h1,
@@ -21,32 +21,32 @@ h4 {
 }
 
 h2:nth-child(2) {
-	color: var(--glitch-blue);
+	color: var(--glitch-animation-glitch-blue);
 	animation: Glitch2 2.5s infinite;
 }
 
 h2:nth-child(3) {
-	color: var(--glitch-red);
+	color: var(--glitch-animation-glitch-red);
 	animation: Glitch3 2.5s infinite;
 }
 
 h3:nth-child(2) {
-	color: var(--glitch-blue);
+	color: var(--glitch-animation-glitch-blue);
 	animation: Glitch2 2.5s infinite;
 }
 
 h3:nth-child(3) {
-	color: var(--glitch-red);
+	color: var(--glitch-animation-glitch-red);
 	animation: Glitch3 2.5s infinite;
 }
 
 h4:nth-child(2) {
-	color: var(--glitch-blue);
+	color: var(--glitch-animation-glitch-blue);
 	animation: Glitch2 2.5s infinite;
 }
 
 h4:nth-child(3) {
-	color: var(--glitch-red);
+	color: var(--glitch-animation-glitch-red);
 	animation: Glitch3 2.5s infinite;
 }
 p {
@@ -56,12 +56,12 @@ p {
 }
 
 p:nth-child(2) {
-	color: var(--glitch-blue);
+	color: var(--glitch-animation-glitch-blue);
 	animation: Glitch2 2.5s infinite;
 }
 
 p:nth-child(3) {
-	color: var(--glitch-red);
+	color: var(--glitch-animation-glitch-red);
 	animation: Glitch3 2.5s infinite;
 }
 
@@ -73,12 +73,12 @@ hr {
 }
 
 hr:nth-child(2) {
-	color: var(--glitch-red);
+	color: var(--glitch-animation-glitch-red);
 	animation: Glitch3 2.5s infinite;
 }
 
 hr:nth-child(3) {
-	color: var(--glitch-blue);
+	color: var(--glitch-animation-glitch-blue);
 	animation: Glitch2 2.5s infinite;
 }
 
