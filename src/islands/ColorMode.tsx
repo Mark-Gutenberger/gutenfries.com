@@ -6,13 +6,13 @@ import IconSun from '@tabler/icons/sun.tsx';
 const modes = ['dark', 'light'] as const;
 
 export default function ColorMode() {
-	const initialTheme = localStorage.colorMode;
+	const initialTheme = globalThis.localStorage.colorMode;
 	const state = useSignal<(typeof modes)[number]>(initialTheme || 'light');
 
 	function detectMode() {
 		if (
-			localStorage.colorMode === 'dark' ||
-			(!('colorMode' in localStorage) &&
+			globalThis.localStorage.colorMode === 'dark' ||
+			(!('colorMode' in globalThis.localStorage) &&
 				window.matchMedia('(prefers-color-scheme: dark)').matches)
 		) {
 			document.documentElement.classList.add('dark');
@@ -26,11 +26,11 @@ export default function ColorMode() {
 	function toggle() {
 		state.value = modes[(modes.indexOf(state.value) + 1) % modes.length];
 
-		localStorage.colorMode = state.value;
+		globalThis.localStorage.colorMode = state.value;
 
 		if (
-			localStorage.colorMode === 'dark' ||
-			(!('colorMode' in localStorage) &&
+			globalThis.localStorage.colorMode === 'dark' ||
+			(!('colorMode' in globalThis.localStorage) &&
 				window.matchMedia('(prefers-color-scheme: dark)').matches)
 		) {
 			document.documentElement.classList.add('dark');
