@@ -6,7 +6,8 @@ import IconSun from '@tabler/icons/sun.tsx';
 const modes = ['dark', 'light'] as const;
 
 export default function ColorMode() {
-	const initialTheme: (typeof modes)[number] | undefined = globalThis.localStorage.colorMode;
+	const initialTheme: (typeof modes)[number] | undefined = globalThis.localStorage.colorMode ??
+		undefined;
 	const state = useSignal<(typeof modes)[number]>(initialTheme || 'light');
 
 	function detectMode() {
