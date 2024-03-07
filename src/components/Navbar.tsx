@@ -102,7 +102,8 @@ function Navbar(props: { active: Routes }) {
 						}
 					})}
 				</ul>
-				<div className='pr-2 flex items-center justify-center'>
+
+				<div className='pr-2 items-center justify-center hidden md:flex'>
 					<ColorMode />
 				</div>
 			</nav>

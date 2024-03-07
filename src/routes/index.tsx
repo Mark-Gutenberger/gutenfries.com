@@ -38,7 +38,7 @@ function IndexPage(PageProps: PageProps) {
 				className='text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
 			>
 				<section className='container flex flex-col items-center px-8 pb-32 mx-auto pt-28'>
-					<h1 className='py-64 animation-gradient-text font-sedwick text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl'>
+					<h1 className='py-64 animation-gradient-text text-center font-sedwick text-7xl sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl'>
 						Marc Gutenberger
 					</h1>
 				</section>
@@ -76,24 +76,24 @@ function IndexPage(PageProps: PageProps) {
 					highlightAll();
 					`}
 						</script>
-						<div className='text-xs sm:text-sm md:text-base w-full h-full shj-lang-rs'>
+						<div className='text-xs sm:text-sm md:text-base shj-lang-rs'>
 							{`pub struct Marc {
-  email: String,
-  loves_dinosaurs: bool,
-  skills: Vec<&str>,
+	email: String,
+	loves_dinosaurs: bool,
+	skills: Vec<&str>,
 }
 impl Marc {
-  pub fn about() -> Marc {
-    Marc {
-      email: String::from("gutenfries@gmail.com"),
-      loves_dinosaurs: true,
-      skills: vec![
-        "Rust", "C/C++",
-        "TypeScript", "Flutter",
-        "(P)react", "HTML & CSS",
-      ],
-    }
-  }
+	pub fn about() -> Marc {
+		Marc {
+			email: String::from("gutenfries@gmail.com"),
+			loves_dinosaurs: true,
+			skills: vec![
+				"Rust", "C/C++",
+				"TypeScript", "Flutter",
+				"(P)react", "HTML & CSS",
+			],
+		}
+	}
 }`}
 						</div>
 					</ContentCard>

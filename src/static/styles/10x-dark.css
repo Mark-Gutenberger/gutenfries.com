@@ -22,10 +22,12 @@
 	white-space: pre;
 	padding: 30px 20px;
 	text-shadow: none;
-	font: 18px Consolas, Courier New, Monaco, Andale Mono, Ubuntu Mono, monospace;
+	font-family: Source Sans Pro, Fira Code, Courier New, Monaco, Andale Mono, Ubuntu Mono, monospace;
 	line-height: 24px;
 	box-sizing: border-box;
 	max-width: min(100%, 100vw);
+	tab-size: 6;
+	-o-tab-size: 6;
 }
 
 [class*='shj-lang-'] > div {
