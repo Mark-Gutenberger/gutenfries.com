@@ -1,11 +1,11 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { Navbar, Routes } from '@/components/Navbar.tsx';
-import { listPosts, Post } from '@/utils/blogPosts.ts';
+import { Navbar, Routes } from '../components/Navbar.tsx';
+import { listPosts, Post } from '../utils/blogPosts.ts';
 
-import { BlogPostPreview } from '@/components/BlogPostPreview.tsx';
-import { Footer } from '@/components/Footer.tsx';
-import { Head } from '@/components/Head.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
+import { BlogPostPreview } from '../components/BlogPostPreview.tsx';
+import { Footer } from '../components/Footer.tsx';
+import { Head } from '../components/Head.tsx';
+import { NoScript } from '../components/NoScript.tsx';
 
 interface State {
 	locales: string[];

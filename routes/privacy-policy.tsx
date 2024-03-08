@@ -1,11 +1,11 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { Navbar, Routes } from '@/components/Navbar.tsx';
+import { Navbar, Routes } from '../components/Navbar.tsx';
 
-import { Footer } from '@/components/Footer.tsx';
-import { Head } from '@/components/Head.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
+import { Footer } from '../components/Footer.tsx';
+import { Head } from '../components/Head.tsx';
+import { NoScript } from '../components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
-import { readFile } from '@/utils/readFile.ts';
+import { readFile } from '../utils/readFile.ts';
 import { render as renderGFM } from 'gfm';
 
 interface Data {

@@ -37,40 +37,10 @@ function IndexPage(PageProps: PageProps) {
 				id='main-content'
 				className='text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
 			>
-				<section className='container flex flex-col items-center px-8 pb-32 mx-auto pt-28 lg:flex-row'>
-					<div className='p-6 flex flex-wrap justify-evenly bg-gray-800 rounded-2xl w-full h-full'>
-						<div className='rounded-3xl bg-gray-900 bg-opacity-75 flex flex-wrap md:flex-nowrap w-5/6 lg:w-1/2 md:w-full'>
-							<img
-								className='p-4 object-cover object-center rounded-full w-full md:w-1/2'
-								src={asset('/images/profile.jpg')}
-								alt='me'
-							/>
-							<span className='px-2 my-auto text-center lg:text-left'>
-								<h1 className='font-bold title-font mt-2 mb-4 text-3xl 2xl:text-4xl text-white'>
-									Marc Gutenberger
-								</h1>
-								<div className='flex flex-wrap mb-2 justify-center'>
-									<p className='text-base text-gray-300 m-2'>
-										<IconCircleFilled className='inline-block w-2 h-2 mr-3' />
-										<span>Software Engineer</span>
-									</p>
-									<p className='text-base text-gray-300 m-2'>
-										<IconCircleFilled className='inline-block w-2 h-2 mr-3' />
-										<span>Musician</span>
-									</p>
-									<p className='text-base text-gray-300 m-2'>
-										<IconCircleFilled className='inline-block w-2 h-2 mr-3' />
-										<span>Enjoyer of Dinosaurs</span>
-									</p>
-								</div>
-							</span>
-						</div>
-						<div className='w-5/6 lg:w-1/2 md:w-full'>
-							<div className='align-center justify-center'>
-								<SnareAnimation />
-							</div>
-						</div>
-					</div>
+				<section className='container flex flex-col items-center px-8 pb-32 mx-auto pt-28'>
+					<h1 className='py-64 animation-gradient-text text-center font-sedwick text-7xl sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl'>
+						Marc Gutenberger
+					</h1>
 				</section>
 
 				<section className='container flex flex-wrap px-10 py-32 mx-auto'>
@@ -96,37 +66,35 @@ function IndexPage(PageProps: PageProps) {
 							</>
 						}
 					>
-						<div>
-							<link
-								rel='stylesheet'
-								href='https://unpkg.com/@speed-highlight/core/dist/themes/atom-dark.css'
-							/>
-							<script type='module'>
-								{`
-					import { highlightAll } from 'https://unpkg.com/@speed-highlight/core/dist/index.js';
+						<link
+							rel='stylesheet'
+							href={asset('styles/10x-dark.css')}
+						/>
+						<script type='module'>
+							{`
+					import { highlightAll } from 'https://unpkg.com/@speed-highlight/core@1.2.4/dist/index.js';
 					highlightAll();
 					`}
-							</script>
-							<div className='text-xs sm:text-sm md:text-base w-full h-full shj-lang-rs'>
-								{`pub struct Marc {
-  email: String,
-  loves_dinosaurs: bool,
-  skills: Vec<&str>,
+						</script>
+						<div className='text-xs sm:text-sm md:text-base shj-lang-rs'>
+							{`pub struct Marc {
+	email: String,
+	loves_dinosaurs: bool,
+	skills: Vec<&str>,
 }
 impl Marc {
-  pub fn about() -> Marc {
-    Marc {
-      email: String::from("gutenfries@gmail.com"),
-      loves_dinosaurs: true,
-      skills: vec![
-        "Rust", "C/C++",
-        "TypeScript", "Flutter",
-        "(P)react", "HTML & CSS",
-      ],
-    }
-  }
+	pub fn about() -> Marc {
+		Marc {
+			email: String::from("gutenfries@gmail.com"),
+			loves_dinosaurs: true,
+			skills: vec![
+				"Rust", "C/C++",
+				"TypeScript", "Flutter",
+				"(P)react", "HTML & CSS",
+			],
+		}
+	}
 }`}
-							</div>
 						</div>
 					</ContentCard>
 

@@ -1,12 +1,12 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { Navbar, Routes } from '@/components/Navbar.tsx';
-import { loadPost, Post } from '@/utils/blogPosts.ts';
+import { Navbar, Routes } from '../../components/Navbar.tsx';
+import { loadPost, Post } from '../../utils/blogPosts.ts';
 
-import { Footer } from '@/components/Footer.tsx';
-import { Head } from '@/components/Head.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
+import { Footer } from '../../components/Footer.tsx';
+import { Head } from '../../components/Head.tsx';
+import { NoScript } from '../../components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
-import { renderMarkdown } from '@/utils/markdown.ts';
+import { renderMarkdown } from '../../utils/markdown.ts';
 
 interface Data {
 	post: Post;
@@ -68,7 +68,6 @@ export default function PostPage(props: PageProps<Data>) {
 					dangerouslySetInnerHTML={{ __html: post.content }}
 				/>
 			</main>
-
 			<Footer />
 		</>
 	);
