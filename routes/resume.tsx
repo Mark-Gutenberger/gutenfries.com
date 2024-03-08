@@ -2,13 +2,13 @@ import { asset } from '$fresh/runtime.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { render as renderGFM } from 'gfm';
 
-import { Footer } from '@/src/components/Footer.tsx';
-import { Head } from '@/src/components/Head.tsx';
-import { Navbar, Routes } from '@/src/components/Navbar.tsx';
-import { NoScript } from '@/src/components/NoScript.tsx';
-import Resume from '@/src/islands/Resume.tsx';
-import { readFile } from '@/src/utils/readFile.ts';
+import { Footer } from '../components/Footer.tsx';
+import { Head } from '../components/Head.tsx';
+import { Navbar, Routes } from '../components/Navbar.tsx';
+import { NoScript } from '../components/NoScript.tsx';
+import { readFile } from '../utils/readFile.ts';
 import IconFileDownload from '@tabler/icons/file-download.tsx';
+import freshConfig from '@/fresh.config.ts';
 
 interface Data {
 	resumes: string[];
@@ -44,9 +44,13 @@ export default function ResumePage(props: PageProps<Data>) {
 				id='main-content'
 				className='p-4 pt-20 text-gray-800 bg-gray-100 dark:text-gray-200 dark:bg-gray-900 '
 			>
-				<Resume resumes={props.data.resumes} />
+				<iframe
+					className={'w-full h-full aspect-auto'}
+					src={`https://docs.google.com/viewer?embedded=true&url=https://gutenfries.deno.dev/resume/resume-tech.pdf`}
+				/>
 
-				<div className='flex justify-center'>
+				{
+					/* <div className='flex justify-center'>
 					<h3 className='mt-4 text-4xl text-center'>
 						Download Resume
 					</h3>
@@ -76,7 +80,8 @@ export default function ResumePage(props: PageProps<Data>) {
 							<IconFileDownload className='inline-block w-6 h-6' />
 						</span>
 					</a>
-				</div>
+				</div> */
+				}
 			</main>
 			<Footer />
 		</>

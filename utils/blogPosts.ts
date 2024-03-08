@@ -33,7 +33,7 @@ interface Post {
 async function loadPost(slug: string): Promise<Post | null> {
 	let text: string;
 	try {
-		text = await Deno.readTextFile(`./src/static/blogPosts/${slug}.md`);
+		text = await Deno.readTextFile(`./static/blogPosts/${slug}.md`);
 	} catch (e) {
 		if (e instanceof Deno.errors.NotFound) {
 			return null;
@@ -63,7 +63,7 @@ async function loadPost(slug: string): Promise<Post | null> {
  */
 async function listPosts(): Promise<Post[]> {
 	const promises = [];
-	for await (const entry of Deno.readDir('./src/static/blogPosts')) {
+	for await (const entry of Deno.readDir('./static/blogPosts')) {
 		// Skip non-markdown files
 		if (!entry.name.endsWith('.md')) continue;
 		// remove the .md extension

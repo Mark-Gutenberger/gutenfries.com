@@ -1,5 +1,5 @@
-import { classNames } from '@/src/utils/classNames.ts';
-import ColorMode from '@/src/islands/ColorMode.tsx';
+import { classNames } from '../utils/classNames.ts';
+import ColorMode from '../islands/ColorMode.tsx';
 
 interface Route {
 	displayName?: string;

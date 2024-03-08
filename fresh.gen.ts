@@ -17,7 +17,6 @@ import * as $privacy_policy from './routes/privacy-policy.tsx';
 import * as $resume from './routes/resume.tsx';
 import * as $sitemap_xml from './routes/sitemap.xml.ts';
 import * as $ColorMode from './islands/ColorMode.tsx';
-import * as $Resume from './islands/Resume.tsx';
 import { type Manifest } from '$fresh/server.ts';
 
 const manifest = {
@@ -39,7 +38,6 @@ const manifest = {
 	},
 	islands: {
 		'./islands/ColorMode.tsx': $ColorMode,
-		'./islands/Resume.tsx': $Resume,
 	},
 	baseUrl: import.meta.url,
 } satisfies Manifest;

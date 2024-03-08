@@ -1,39 +1,40 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { Navbar, Routes } from '@/src/components/Navbar.tsx';
+import { Navbar, Routes } from '../components/Navbar.tsx';
 
-import { Footer } from '@/src/components/Footer.tsx';
-import { Head } from '@/src/components/Head.tsx';
-import { NoScript } from '@/src/components/NoScript.tsx';
+import { Footer } from '../components/Footer.tsx';
+import { Head } from '../components/Head.tsx';
+import { NoScript } from '../components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
-import { readFile } from '@/src/utils/readFile.ts';
+import { readFile } from '../utils/readFile.ts';
 import { render as renderGFM } from 'gfm';
 
 interface Data {
-	privPolicy: string | null;
+	license: string | null;
 }
 
 export const handler: Handlers<Data> = {
 	async GET(_req, ctx) {
 		// cache for 1 day
-		asset('/privacy-policy.md');
-		const privPolicy = await readFile('./static/privacy-policy.md');
-		if (!privPolicy) {
+		asset('/mit-license.md');
+
+		const license = await readFile('./static/mit-license.md');
+		if (!license) {
 			return ctx.renderNotFound();
 		}
-		return ctx.render({ ...ctx.state, privPolicy });
+		return ctx.render({ ...ctx.state, license });
 	},
 };
 
 function ResumePage(props: PageProps<Data>) {
-	const privPolicy = props.data.privPolicy;
+	const license = props.data.license;
 	return (
 		<>
 			<Head PageProps={props} />
-			<Navbar active={Routes.privPolicy} />
+			<Navbar active={Routes.license} />
 			<NoScript />
 
 			<main id='main-content' className='p-4 pt-20'>
-				{privPolicy
+				{license
 					? (
 						<>
 							<link rel='stylesheet' href={asset('/styles/markdown.css')} />
@@ -44,7 +45,7 @@ function ResumePage(props: PageProps<Data>) {
 								class='markdown-body'
 								className='p-10 mt-12 rounded-lg shadow-xl'
 								dangerouslySetInnerHTML={{
-									__html: renderGFM(privPolicy),
+									__html: renderGFM(license),
 								}}
 							/>
 						</>

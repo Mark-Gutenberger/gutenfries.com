@@ -1,12 +1,12 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { Navbar, Routes } from '@/src/components/Navbar.tsx';
-import { loadPost, Post } from '@/src/utils/blogPosts.ts';
+import { Navbar, Routes } from '../../components/Navbar.tsx';
+import { loadPost, Post } from '../../utils/blogPosts.ts';
 
-import { Footer } from '@/src/components/Footer.tsx';
-import { Head } from '@/src/components/Head.tsx';
-import { NoScript } from '@/src/components/NoScript.tsx';
+import { Footer } from '../../components/Footer.tsx';
+import { Head } from '../../components/Head.tsx';
+import { NoScript } from '../../components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
-import { renderMarkdown } from '@/src/utils/markdown.ts';
+import { renderMarkdown } from '../../utils/markdown.ts';
 
 interface Data {
 	post: Post;

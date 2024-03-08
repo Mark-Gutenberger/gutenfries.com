@@ -1,8 +1,8 @@
-import { Navbar, Routes } from '@/src/components/Navbar.tsx';
+import { Navbar, Routes } from '@/components/Navbar.tsx';
 
-import ContentCard from '@/src/components/ContentCard.tsx';
-import { Footer } from '@/src/components/Footer.tsx';
-import { Head } from '@/src/components/Head.tsx';
+import ContentCard from '@/components/ContentCard.tsx';
+import { Footer } from '@/components/Footer.tsx';
+import { Head } from '@/components/Head.tsx';
 import IconActivity from '@tabler/icons/activity.tsx';
 import IconBrandCPP from '@tabler/icons/brand-cpp.tsx';
 import IconBrandDeno from '@tabler/icons/brand-deno.tsx';
@@ -16,12 +16,12 @@ import IconQuote from '@tabler/icons/quote.tsx';
 import IconSettings from '@tabler/icons/settings.tsx';
 import IconShoe from '@tabler/icons/shoe.tsx';
 import IconStack from '@tabler/icons/stack.tsx';
-import { Link } from '@/src/components/Link.tsx';
-import { NoScript } from '@/src/components/NoScript.tsx';
+import { Link } from '@/components/Link.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
 import { PageProps } from '$fresh/server.ts';
-import { RecentActivityCard } from '@/src/components/RecentActivityCard.tsx';
-import { SnareAnimation } from '@/src/components/SnareAnimation.tsx';
-import { TechCard } from '@/src/components/TechCard.tsx';
+import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
+import { SnareAnimation } from '@/components/SnareAnimation.tsx';
+import { TechCard } from '@/components/TechCard.tsx';
 import { asset } from '$fresh/runtime.ts';
 
 function IndexPage(PageProps: PageProps) {

@@ -1,4 +1,4 @@
-import { Post } from '@/src/utils/blogPosts.ts';
+import { Post } from '@/utils/blogPosts.ts';
 
 function BlogPostPreview(props: { post: Post }) {
 	const { post } = props;

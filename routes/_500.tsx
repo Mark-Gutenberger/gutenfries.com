@@ -1,8 +1,8 @@
-import { Navbar, Routes } from '@/src/components/Navbar.tsx';
+import { Navbar, Routes } from '../components/Navbar.tsx';
 
 import { ErrorPageProps } from '$fresh/server.ts';
-import { Head } from '@/src/components/Head.tsx';
-import { NoScript } from '@/src/components/NoScript.tsx';
+import { Head } from '../components/Head.tsx';
+import { NoScript } from '../components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
 
 function ErrorPage(PageProps: ErrorPageProps) {

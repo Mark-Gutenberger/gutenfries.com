@@ -30,4 +30,4 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "gutenfries"
-          entrypoint: "./src/main.ts"
+          entrypoint: "./main.ts"

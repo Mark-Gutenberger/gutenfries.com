@@ -2,7 +2,7 @@ import { useEffect } from 'preact/hooks';
 import { useSignal } from '@preact/signals';
 import IconMoon from '@tabler/icons/moon.tsx';
 import IconSun from '@tabler/icons/sun.tsx';
-import { classNames } from '@/src/utils/classNames.ts';
+import { classNames } from '../utils/classNames.ts';
 
 const modes = ['dark', 'light'] as const;
 
@@ -48,10 +48,7 @@ export default function ColorMode() {
 			onClick={toggleColorMode}
 		>
 			<span
-				className={classNames(
-					state.value === 'dark' ? 'bg-gray-200' : 'bg-gray-800',
-					'absolute w-52 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 top-1/2 group-hover:h-52 group-hover:-translate-y-32 ease',
-				)}
+				className={'dark:bg-gray-200 bg-gray-800 absolute w-52 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 top-1/2 group-hover:h-52 group-hover:-translate-y-32 ease'}
 			/>
 			<span
 				className={'relative transition duration-300 ease'}
