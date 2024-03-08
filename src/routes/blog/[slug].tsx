@@ -68,7 +68,6 @@ export default function PostPage(props: PageProps<Data>) {
 					dangerouslySetInnerHTML={{ __html: post.content }}
 				/>
 			</main>
-
 			<Footer />
 		</>
 	);

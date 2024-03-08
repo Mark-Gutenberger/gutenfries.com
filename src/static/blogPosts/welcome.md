@@ -15,11 +15,10 @@ I'm a marching performer & software engineer from the USA. I love to write code 
 
 Check out my social links!
 
--   [GitHub](https://github.com/gutenfries)
--   [LinkedIn](https://www.linkedin.com/in/gutenfries/)
--   [Instagram](https://www.instagram.com/gutenfries/)
--   [Twitter](https://twitter.com/gutenfries)
--   [Peerlist](https://peerlist.io/gutenfries)
+- [GitHub](https://github.com/gutenfries)
+- [LinkedIn](https://www.linkedin.com/in/gutenfries/)
+- [Instagram](https://www.instagram.com/gutenfries/)
+- [Peerlist](https://peerlist.io/gutenfries)
 
 ## About this blog
 
