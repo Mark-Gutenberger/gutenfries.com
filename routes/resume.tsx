@@ -1,4 +1,3 @@
-import { asset } from '$fresh/runtime.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { render as renderGFM } from 'gfm';
 
@@ -7,8 +6,6 @@ import { Head } from '../components/Head.tsx';
 import { Navbar, Routes } from '../components/Navbar.tsx';
 import { NoScript } from '../components/NoScript.tsx';
 import { readFile } from '../utils/readFile.ts';
-import IconFileDownload from '@tabler/icons/file-download.tsx';
-import freshConfig from '@/fresh.config.ts';
 
 interface Data {
 	resumes: string[];
@@ -34,6 +31,7 @@ export const handler: Handlers<Data> = {
 };
 
 export default function ResumePage(props: PageProps<Data>) {
+	const file_id = '13iEIAH27j-lTKpbUni6mz1VkA6VLEca6So4HFk8W0LI';
 	return (
 		<>
 			<Head PageProps={props} />
@@ -45,9 +43,15 @@ export default function ResumePage(props: PageProps<Data>) {
 				className='p-4 pt-20 text-gray-800 bg-gray-100 dark:text-gray-200 dark:bg-gray-900 '
 			>
 				<iframe
-					className={'w-full h-full aspect-auto'}
-					src={`https://docs.google.com/viewer?embedded=true&url=https://gutenfries.deno.dev/resume/resume-tech.pdf`}
+					className={'w-full h-full aspect-[8.5/11] lg:aspect-[8.5/9] xl:aspect-[8.5/7] 2xl:aspect-[8.5/5]'}
+					src={`https://docs.google.com/viewer?srcid=${file_id}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`}
 				/>
+
+				{
+					/* <span>
+					https://drive.google.com/uc?export=download&id=FILEID
+				</span> */
+				}
 
 				{
 					/* <div className='flex justify-center'>

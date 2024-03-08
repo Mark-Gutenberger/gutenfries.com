@@ -17,7 +17,7 @@ import IconSquareRoundedLetterP from '@tabler/icons/square-rounded-letter-p.tsx'
 function Footer() {
 	return (
 		<footer className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200'>
-			<ul className='flex jutify-around flex-wrap text-xs sm:text-base text-center pt-20'>
+			<ul className='flex jutify-around flex-row text-xs sm:text-base text-center pt-20'>
 				<li className='p-4 w-1/3 w-full'>
 					<h3 className='font-bold text-lg text-purple-500 tracking-widest mb-3'>
 						SOCIAL

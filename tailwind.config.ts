@@ -10,10 +10,12 @@ export default {
 	darkMode: 'class',
 	theme: {
 		extend: {
-			colors: {
-				'gray': colors.trueGray,
+			aspectRatio: {
+				'pdf': '8.5 / 11',
 			},
-
+			colors: {
+				'gray': colors.neutral,
+			},
 			borderWidth: {
 				DEFAULT: '1px',
 				'0': '0',

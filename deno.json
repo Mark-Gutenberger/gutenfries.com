@@ -2,9 +2,9 @@
 	"version": "1.0.0",
 	"lock": false,
 	"tasks": {
-		"start": "deno run -Ar --unstable main.ts",
-		"dev": "deno run -A --unstable --watch=deno.json,twind.config.ts,fresh.config.ts dev.ts --no-clear-screen",
-		"test": "deno test --allow-all --no-check --unstable --doc --allow-none",
+		"start": "deno run -Ar main.ts",
+		"dev": "deno run -A --watch=components/,islands/,routes/,static/,utils/,deno.json,twind.config.ts,fresh.config.ts dev.ts --no-clear-screen",
+		"test": "deno test --allow-all --no-check --doc --allow-none",
 		"build": "deno run -A dev.ts build",
 		"preview": "deno run -A main.ts"
 	},
@@ -72,9 +72,8 @@
 		"gfm": "https://deno.land/x/gfm@0.1.26/mod.ts",
 		"speed_highlight_js/": "https://unpkg.com/@speed-highlight/core@1.1.11/dist/",
 		"tailwindcss": "npm:tailwindcss@3.4.1",
-		"tailwindcss/": "npm:/tailwindcss@3.4.1/",
-		"tailwindcss/colors": "npm:/tailwindcss@3.4.1/colors.js",
-		"tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js"
+		"tailwindcss/colors": "npm:tailwindcss@3.4.1/colors.js",
+		"tailwindcss/plugin": "npm:tailwindcss@3.4.1/plugin.js"
 	},
 	"exclude": [
 		"**/_fresh/*"
