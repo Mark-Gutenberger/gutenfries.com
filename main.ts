@@ -4,7 +4,6 @@
 /// <reference lib="dom.asynciterable" />
 /// <reference lib="deno.ns" />
 
-import 'npm:@types/node';
 import '$std/dotenv/load.ts';
 
 import { start } from '$fresh/server.ts';
