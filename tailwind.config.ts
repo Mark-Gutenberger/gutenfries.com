@@ -7,7 +7,7 @@ export default {
 	],
 	selfURL: import.meta.url,
 	mode: 'silent',
-	darkMode: 'class',
+	darkMode: 'selector',
 	theme: {
 		extend: {
 			aspectRatio: {

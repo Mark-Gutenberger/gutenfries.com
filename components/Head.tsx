@@ -31,11 +31,15 @@ function Head({ PageProps }: HeadProps) {
 
 			{/* <!-- Primary Meta Tags --> */}
 			<title>
-				{PageProps.url.pathname.slice(1)} {pipe} Marc Gutenberger
+				{PageProps.url.pathname.charAt(1).toUpperCase() + PageProps.url.pathname.slice(2)}
+				{' '}
+				{pipe} Marc Gutenberger
 			</title>
 			<meta
 				name='title'
-				content={`${PageProps.url.pathname.slice(1)} ${pipe} Marc Gutenberger`}
+				content={`${
+					PageProps.url.pathname.charAt(1).toUpperCase() + PageProps.url.pathname.slice(2)
+				} ${pipe} Marc Gutenberger`}
 			/>
 			<meta
 				name='description'

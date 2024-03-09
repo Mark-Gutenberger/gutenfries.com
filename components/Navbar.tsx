@@ -1,5 +1,5 @@
 import { classNames } from '../utils/classNames.ts';
-import ColorMode from '../islands/ColorMode.tsx';
+import ThemeMode from '../islands/ThemeMode.tsx';
 
 interface Route {
 	displayName?: string;
@@ -74,7 +74,7 @@ function Navbar(props: { active: Routes }) {
 											props.active === item.id
 												? 'animation-gradient'
 												: 'dark:text-gray-300 text-gray-800 dark:bg-gray-800 bg-gray-200 text-gray-900',
-											'rounded-md font-sedwick text-2xl font-bold p-3 mx-3 block overflow-hidden relative group cursor-pointer',
+											'transition rounded-md font-sedwick text-2xl font-bold p-3 mx-3 block overflow-hidden relative group cursor-pointer',
 										)}
 										aria-current={props.active === item.id ? 'page' : undefined}
 									>
@@ -104,7 +104,7 @@ function Navbar(props: { active: Routes }) {
 				</ul>
 
 				<div className='pr-2 items-center justify-center hidden md:flex'>
-					<ColorMode />
+					<ThemeMode />
 				</div>
 			</nav>
 		</>
