@@ -8,11 +8,11 @@ interface ContentCardProps {
 
 export default function ContentCard({ children, title, description }: ContentCardProps) {
 	return (
-		<div className='w-full mb-64 lg:my-auto lg:w-1/2 xl:py-12 xl:mb-10'>
+		<div className='lg:my-auto mb-64 xl:mb-10 xl:py-12 w-full lg:w-1/2'>
 			{children}
-			<div className='px-6 py-4 mx-6 bg-gray-600 bg-opacity-25 rounded-b-lg shadow-lg'>
-				<h2 className='mb-2 sm:text-xl text-lg font-bold'>{title}</h2>
-				<p className='sm:text-base text-sm text-gray-700 dark:text-gray-300'>
+			<div className='bg-gray-600 bg-opacity-25 shadow-lg mx-6 px-6 py-4 rounded-b-lg'>
+				<h2 className='mb-2 font-bold text-lg sm:text-xl'>{title}</h2>
+				<p className='text-gray-700 text-sm sm:text-base dark:text-gray-300'>
 					{description}
 				</p>
 			</div>

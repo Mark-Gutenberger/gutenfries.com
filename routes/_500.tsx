@@ -1,15 +1,18 @@
-import { Navbar, Routes } from '../components/Navbar.tsx';
+import { Routes } from '@/routes.ts';
+import { Navbar } from '@/components/Navbar.tsx';
 
-import { ErrorPageProps } from '$fresh/server.ts';
-import { Head } from '../components/Head.tsx';
-import { NoScript } from '../components/NoScript.tsx';
+import { PageProps } from '$fresh/server.ts';
+import { Head } from '@/components/Head.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
 
-function ErrorPage(PageProps: ErrorPageProps) {
+function ErrorPage(PageProps: PageProps) {
 	return (
 		<>
 			<Head PageProps={PageProps} />
-			<Navbar active={Routes.notFound} />
+			<Navbar
+				active={Routes.notFound}
+			/>
 
 			<NoScript />
 			<link
@@ -19,7 +22,7 @@ function ErrorPage(PageProps: ErrorPageProps) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 text-center flex flex-col justify-center h-screen overflow-x-hidden'
+				className='flex flex-col justify-center bg-gray-100 dark:bg-gray-900 h-screen text-center text-gray-900 dark:text-gray-200 overflow-x-hidden'
 			>
 				<span>
 					<h2>Error 500:</h2>

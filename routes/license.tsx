@@ -1,11 +1,12 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { Navbar, Routes } from '../components/Navbar.tsx';
+import { Routes } from '@/routes.ts';
+import { Navbar } from '@/components/Navbar.tsx';
 
-import { Footer } from '../components/Footer.tsx';
-import { Head } from '../components/Head.tsx';
-import { NoScript } from '../components/NoScript.tsx';
+import { Footer } from '@/components/Footer.tsx';
+import { Head } from '@/components/Head.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
-import { readFile } from '../utils/readFile.ts';
+import { readFile } from '@/utils/readFile.ts';
 import { render as renderGFM } from 'gfm';
 
 interface Data {
@@ -30,7 +31,9 @@ function ResumePage(props: PageProps<Data>) {
 	return (
 		<>
 			<Head PageProps={props} />
-			<Navbar active={Routes.license} />
+			<Navbar
+				active={Routes.license}
+			/>
 			<NoScript />
 
 			<main id='main-content' className='p-4 pt-20'>
@@ -43,7 +46,7 @@ function ResumePage(props: PageProps<Data>) {
 								data-light-theme='light'
 								data-dark-theme='dark'
 								class='markdown-body'
-								className='p-10 mt-12 rounded-lg shadow-xl'
+								className='shadow-xl mt-12 p-10 rounded-lg'
 								dangerouslySetInnerHTML={{
 									__html: renderGFM(license),
 								}}
@@ -52,7 +55,7 @@ function ResumePage(props: PageProps<Data>) {
 					)
 					: (
 						<>
-							<h1 className='pt-20 text-5xl font-bold rounded-lg'>
+							<h1 className='pt-20 rounded-lg font-bold text-5xl'>
 								Loading...
 							</h1>
 						</>

@@ -12,15 +12,15 @@ function TechCard({
 	children: ComponentChildren;
 }) {
 	return (
-		<div className='p-4 xl:w-1/3 md:w-1/2'>
+		<span className='p-4 md:w-1/2 xl:w-1/3'>
 			<div className='p-8 border rounded-lg'>
 				<a
-					className='flex items-center w-1/2 mb-3 text-purple-500 hover:text-purple-600 active:text-purple-700'
+					className='flex items-center mb-3 w-1/2 text-purple-500 hover:text-purple-600 active:text-purple-700'
 					href={techLink}
 					target='_blank'
 					rel='noopener'
 				>
-					<i className='flex items-center justify-center flex-shrink-0 w-10 h-10 p-1 mr-3 text-gray-800 bg-purple-500 rounded-full'>
+					<i className='flex flex-shrink-0 justify-center items-center bg-purple-500 mr-3 p-1 rounded-full w-10 h-10 text-gray-800'>
 						{icon}
 					</i>
 
@@ -29,11 +29,11 @@ function TechCard({
 					</h3>
 				</a>
 
-				<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
+				<p className='text-base text-gray-700 dark:text-gray-300'>
 					{children}
 				</p>
 			</div>
-		</div>
+		</span>
 	);
 }
 

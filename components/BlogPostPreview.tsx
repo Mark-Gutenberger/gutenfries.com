@@ -5,13 +5,13 @@ function BlogPostPreview(props: { post: Post }) {
 	return (
 		<a
 			href={`/blog/${post.slug}`}
-			className='grid p-12 text-gray-800 group sm:grid-cols-3 dark:text-gray-200'
+			className='grid sm:grid-cols-3 p-12 text-gray-800 dark:text-gray-200 group'
 		>
 			<time>
 				{new Date(post.publishedAt).toDateString() ?? 'Error Parsing Date'}
 			</time>
 			<div className='sm:col-span-2'>
-				<h2 className='text-2xl font-bold group-hover:underline'>{post.title}</h2>
+				<h2 className='font-bold text-2xl group-hover:underline'>{post.title}</h2>
 				<p className='mt-2'>{post.description}</p>
 			</div>
 		</a>

@@ -1,4 +1,5 @@
-import { Navbar, Routes } from '@/components/Navbar.tsx';
+import { Routes } from '@/routes.ts';
+import { Navbar } from '@/components/Navbar.tsx';
 
 import ContentCard from '@/components/ContentCard.tsx';
 import { Footer } from '@/components/Footer.tsx';
@@ -9,7 +10,6 @@ import IconBrandDeno from '@tabler/icons/brand-deno.tsx';
 import IconBrandDocker from '@tabler/icons/brand-docker.tsx';
 import IconBrandFlutter from '@tabler/icons/brand-flutter.tsx';
 import IconBrandReact from '@tabler/icons/brand-react.tsx';
-import IconCircleFilled from '@tabler/icons/circle-filled.tsx';
 import IconLamp from '@tabler/icons/lamp.tsx';
 import IconMedal from '@tabler/icons/medal.tsx';
 import IconQuote from '@tabler/icons/quote.tsx';
@@ -20,7 +20,6 @@ import { Link } from '@/components/Link.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { PageProps } from '$fresh/server.ts';
 import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
-import { SnareAnimation } from '@/components/SnareAnimation.tsx';
 import { TechCard } from '@/components/TechCard.tsx';
 import { asset } from '$fresh/runtime.ts';
 
@@ -29,21 +28,23 @@ function IndexPage(PageProps: PageProps) {
 		<>
 			<Head PageProps={PageProps} />
 
-			<Navbar active={Routes.home} />
+			<Navbar
+				active={Routes.home}
+			/>
 
 			<NoScript />
 
 			<main
 				id='main-content'
-				className='transition text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
+				className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition'
 			>
-				<section className='container flex flex-col items-center px-8 pb-32 mx-auto pt-28'>
-					<h1 className='py-48 sm:py-64 md:py-72 animation-gradient-text text-center font-sedwick text-7xl sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl'>
+				<section className='flex flex-col items-center mx-auto px-8 pt-28 pb-32 container'>
+					<h1 className='py-48 sm:py-64 md:py-72 font-sedwick text-6xl text-center sm:text-8xl md:text-8xl lg:text-8xl xs:text-7xl xl:text-9xl animation-gradient-text'>
 						Marc Gutenberger
 					</h1>
 				</section>
 
-				<section className='container flex flex-wrap px-10 py-32 mx-auto'>
+				<section className='flex flex-wrap mx-auto px-10 py-32 container'>
 					<ContentCard
 						title='Drum Corps & Snareline'
 						description={
@@ -98,9 +99,9 @@ impl Marc {
 						</div>
 					</ContentCard>
 
-					<div className='flex flex-col flex-wrap mb-10 text-center lg:py-6 lg:w-1/2 lg:pl-12 lg:text-left'>
-						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
-							<h2 className='flex items-center justify-center w-full mb-20 text-5xl md:text-6xl font-semibold text-center lg:text-7xl'>
+					<div className='flex flex-col flex-wrap mb-10 lg:py-6 lg:pl-12 lg:w-1/2 text-center lg:text-left'>
+						<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
+							<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
 								Text Here
 								<span className='ml-4'>
 									<IconLamp
@@ -109,9 +110,9 @@ impl Marc {
 								</span>
 							</h2>
 						</div>
-						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
+						<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
 							<h3 className='mb-3 text-3xl sm:text-4xl'>Software Engineering</h3>
-							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
+							<p className='text-base text-gray-700 dark:text-gray-300'>
 								I'm a software engineer with a passion for buiding software with the
 								{' '}
 								<Link href='https://www.rust-lang.org/'>
@@ -122,9 +123,9 @@ impl Marc {
 								including web and mobile development.
 							</p>
 						</div>
-						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
+						<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
 							<h3 className='mb-3 text-3xl sm:text-4xl'>Music</h3>
-							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
+							<p className='text-base text-gray-700 dark:text-gray-300'>
 								I share a great passion for music, especially percussive arts, and I
 								have been drumming for over 5 years. I love jazz, funk, and metal
 								genres and have been members of many ensembles and bands throughout
@@ -133,17 +134,17 @@ impl Marc {
 						</div>
 					</div>
 				</section>
-				<section className='container px-5 py-32 mx-auto'>
-					<h2 className='flex items-center justify-center w-full mb-20 text-5xl md:text-6xl font-semibold text-center lg:text-7xl'>
+				<section className='mx-auto px-5 py-32 container'>
+					<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
 						Recent Activity
 						<span className='ml-4'>
 							<IconActivity size={48} />
 						</span>
 					</h2>
 
-					<hr className='hidden h-10 mx-auto mb-10 border-t-2 border-purple-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
+					<hr className='md:flex border-purple-500 border-x-2 hidden mx-auto mb-10 border-t-2 rounded-t-lg md:w-4/5 h-10' />
 
-					<div className='flex flex-wrap -m-4 text-gray-100 dark:border-gray-300'>
+					<div className='flex flex-wrap dark:border-gray-300 -m-4 text-gray-100'>
 						<div className='p-4 md:w-1/3'>
 							<span>
 								<RecentActivityCard
@@ -201,152 +202,139 @@ impl Marc {
 					</div>
 				</section>
 
-				<section className='container px-5 py-32 mx-auto'>
-					<h2 className='flex items-center justify-center w-full mb-20 text-5xl md:text-6xl font-semibold text-center lg:text-7xl'>
+				<section className='mx-auto px-5 py-32 container'>
+					<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
 						Tech Stack
-						<span className='ml-4'>
+						<i className='ml-4'>
 							<IconStack size={48} />
-						</span>
+						</i>
 					</h2>
 
-					<hr className='hidden h-10 mx-auto mb-10 border-t-2 border-purple-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
+					<hr className='md:flex border-purple-500 border-x-2 hidden mx-auto mb-10 border-t-2 rounded-t-lg md:w-4/5 h-10' />
 
 					<div className='flex flex-wrap -m-4'>
-						<span>
-							<TechCard
-								tech='Rust'
-								techLink='https://www.rust-lang.org/'
-								icon={<IconSettings />}
-							>
-								My 'Main' language is Rust. I've been writing Rust code for several
-								years, and I am very competent and familiar with with the{' '}
-								<Link href='https://crates.io'>ecosystem</Link>{' '}
-								and advanced language features. I have written numerous applications
-								in the Rust language; some form the ground up, and others upon
-								existing codebases. Many of these codebases are Open-Sourced and
-								available on{' '}
-								<Link href='https://github.com/gutenfries'>GitHub</Link>
-							</TechCard>
-						</span>
+						<TechCard
+							tech='Rust'
+							techLink='https://www.rust-lang.org/'
+							icon={<IconSettings />}
+						>
+							My 'Main' language is Rust. I've been writing Rust code for several
+							years, and I am very competent and familiar with with the{' '}
+							<Link href='https://crates.io'>ecosystem</Link>{' '}
+							and advanced language features. I have written numerous applications in
+							the Rust language; some form the ground up, and others upon existing
+							codebases. Many of these codebases are Open-Sourced and available on
+							{' '}
+							<Link href='https://github.com/gutenfries'>GitHub</Link>
+						</TechCard>
 
-						<span>
-							<TechCard
-								tech='C++'
-								techLink='https://www.cplusplus.com/'
-								icon={<IconBrandCPP />}
-							>
-								I am very familiar with the{' '}
-								<Link href='https://wikipedia.org/wiki/C%2B%2B20'>
-									C++20 language features
-								</Link>
-								, as well as the C++ standard library. I am well versed in C++ best
-								practices, as well as advanced features, such as{' '}
-								<Link href='https://wikipedia.org/wiki/Smart_pointer'>
-									smart pointers
-								</Link>{' '}
-								and{' '}
-								<Link href='https://wikipedia.org/wiki/Resource_acquisition_is_initialization'>
-									RAII
-								</Link>. I am familiar with C++ ecosystems, such as{' '}
-								<Link href='https://www.gnu.org/software/make/'>
-									Make
-								</Link>{' '}
-								and{' '}
-								<Link href='https://cmake.org/'>
-									CMake
-								</Link>.
-							</TechCard>
-						</span>
+						<TechCard
+							tech='C++'
+							techLink='https://www.cplusplus.com/'
+							icon={<IconBrandCPP />}
+						>
+							I am very familiar with the{' '}
+							<Link href='https://wikipedia.org/wiki/C%2B%2B20'>
+								C++20 language features
+							</Link>
+							, as well as the C++ standard library. I am well versed in C++ best
+							practices, as well as advanced features, such as{' '}
+							<Link href='https://wikipedia.org/wiki/Smart_pointer'>
+								smart pointers
+							</Link>{' '}
+							and{' '}
+							<Link href='https://wikipedia.org/wiki/Resource_acquisition_is_initialization'>
+								RAII
+							</Link>. I am familiar with C++ ecosystems, such as{' '}
+							<Link href='https://www.gnu.org/software/make/'>
+								Make
+							</Link>{' '}
+							and{' '}
+							<Link href='https://cmake.org/'>
+								CMake
+							</Link>.
+						</TechCard>
 
-						<span>
-							<TechCard
-								tech='Flutter'
-								techLink='https://flutter.dev/'
-								icon={<IconBrandFlutter />}
-							>
-								I have used Flutter to build a multiplatform application that keeps
-								score for a game called{' '}
-								<Link href='https://wikipedia.org/wiki/Mille_Bornes'>
-									Mille Bournes
-								</Link>. The application features state management,{' '}
-								<Link href='https://developer.microsoft.com/fluentui'>
-									Fluent UI
-								</Link>, and persistent storage. The application runs on all
-								desktop, mobile, and web platforms. the codebase is available on
-								{' '}
-								<Link href='https://github.com/gutenfries/mille'>
-									GitHub
-								</Link>.
-							</TechCard>
-						</span>
+						<TechCard
+							tech='Flutter'
+							techLink='https://flutter.dev/'
+							icon={<IconBrandFlutter />}
+						>
+							I have used Flutter to build a multiplatform application that keeps
+							score for a game called{' '}
+							<Link href='https://wikipedia.org/wiki/Mille_Bornes'>
+								Mille Bournes
+							</Link>. The application features state management,{' '}
+							<Link href='https://developer.microsoft.com/fluentui'>
+								Fluent UI
+							</Link>, and persistent storage. The application runs on all desktop,
+							mobile, and web platforms. the codebase is available on{' '}
+							<Link href='https://github.com/gutenfries/mille'>
+								GitHub
+							</Link>.
+						</TechCard>
 
-						<span>
-							<TechCard
-								tech='Deno'
-								techLink='https://deno.land/'
-								icon={<IconBrandDeno />}
-							>
-								I have a passion for the Deno ECMAScript runtime. I have contributed
-								to the Deno core project, and have written multiple applications
-								using the Deno runtime.{' '}
-								<Link href='https://github.com/gutenfries/gutenfries.deno.dev'>
-									This website
-								</Link>{' '}
-								is built with Deno, utilizing the{' '}
-								<Link href='https://fresh.deno.dev/'>
-									Fresh
-								</Link>{' '}
-								Deno web framework. Another featured project is a{' '}
-								<Link href='https://wikipedia.org/wiki/Fibonacci_sequence'>
-									Fibonacci Sequence
-								</Link>{' '}
-								REST API, which is available on{' '}
-								<Link href='https://github.com/gutenfries/fibby'>
-									GitHub
-								</Link>.
-							</TechCard>
-						</span>
+						<TechCard
+							tech='Deno'
+							techLink='https://deno.land/'
+							icon={<IconBrandDeno />}
+						>
+							I have a passion for the Deno ECMAScript runtime. I have contributed to
+							the Deno core project, and have written multiple applications using the
+							Deno runtime.{' '}
+							<Link href='https://github.com/gutenfries/gutenfries.deno.dev'>
+								This website
+							</Link>{' '}
+							is built with Deno, utilizing the{' '}
+							<Link href='https://fresh.deno.dev/'>
+								Fresh
+							</Link>{' '}
+							Deno web framework. Another featured project is a{' '}
+							<Link href='https://wikipedia.org/wiki/Fibonacci_sequence'>
+								Fibonacci Sequence
+							</Link>{' '}
+							REST API, which is available on{' '}
+							<Link href='https://github.com/gutenfries/fibby'>
+								GitHub
+							</Link>.
+						</TechCard>
 
-						<span>
-							<TechCard
-								tech='(P)React'
-								techLink='https://preactjs.org/'
-								icon={<IconBrandReact />}
-							>
-								I am quite familiar with{' '}
-								<Link href='https://reactjs.org/'>
-									React
-								</Link>{' '}
-								and{' '}
-								<Link href='https://preactjs.org/'>
-									Preact
-								</Link>{' '}
-								ecosystems and best practices in both the Deno and Node.js runtimes.
-								This website is built using Preact.
-							</TechCard>
-						</span>
-						<span>
-							<TechCard
-								tech='Docker'
-								techLink='https://www.docker.com/'
-								icon={<IconBrandDocker />}
-							>
-								I am very familiar with Docker, and have used it to containerize
-								many applications, including{' '}
-								<Link href='https://github.com/gutenfries/gutenfries.deno.dev'>
-									this website
-								</Link>. I am familiar with how to build and deploy Docker
-								containers, and have used Docker in production environments.
-							</TechCard>
-						</span>
+						<TechCard
+							tech='(P)React'
+							techLink='https://preactjs.org/'
+							icon={<IconBrandReact />}
+						>
+							I am quite familiar with{' '}
+							<Link href='https://reactjs.org/'>
+								React
+							</Link>{' '}
+							and{' '}
+							<Link href='https://preactjs.org/'>
+								Preact
+							</Link>{' '}
+							ecosystems and best practices in both the Deno and Node.js runtimes.
+							This website is built using Preact.
+						</TechCard>
+						<TechCard
+							tech='Docker'
+							techLink='https://www.docker.com/'
+							icon={<IconBrandDocker />}
+						>
+							I am very familiar with Docker, and have used it to containerize many
+							applications, including{' '}
+							<Link href='https://github.com/gutenfries/gutenfries.deno.dev'>
+								this website
+							</Link>. I am familiar with how to build and deploy Docker containers,
+							and have used Docker in production environments.
+						</TechCard>
 					</div>
 				</section>
-				<section className='container px-5 py-32 mx-auto'>
-					<p className='flex items-center justify-center w-full mx-auto xl:w-1/2 lg:w-3/4'>
+				<section className='mx-auto px-5 py-32 container'>
+					<p className='flex justify-center items-center mx-auto w-full lg:w-3/4 xl:w-1/2'>
 						<span className='ml-4'>
-							<IconQuote className='inline-block w-8 h-8 mb-8' />
+							<IconQuote className='inline-block mb-8 w-8 h-8' />
 						</span>
-						<blockquote className='text-lg text-center'>
+						<blockquote className='text-center text-lg'>
 							My mission in software engineering is to solve unique problems with
 							technology. I am passionate about{' '}
 							<Link href='https://rust-lang.org/'>
@@ -357,11 +345,11 @@ impl Marc {
 							creating software that is usable by anyone, without sacrificing
 							performance, quality, or security.
 						</blockquote>
-						<hr className='w-2/5 h-0 mx-auto my-5 bg-purple-500 border-purple-500 rounded-lg border-1' />
+						<hr className='border-1 border-purple-500 bg-purple-500 mx-auto my-5 rounded-lg w-2/5 h-0' />
 						<h2 className='text-3xl text-center'>
 							Marc Gutenberger
 						</h2>
-						<p className='text-lg text-center'>
+						<p className='text-center text-lg'>
 							Software Engineer
 						</p>
 					</p>

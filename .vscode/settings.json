@@ -1,7 +1,6 @@
 {
 	"deno.enable": true,
 	"deno.lint": true,
-	"editor.defaultFormatter": "denoland.vscode-deno",
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
@@ -17,4 +16,26 @@
 	"css.customData": [
 		".vscode/tailwind.json"
 	],
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"tailwindCSS.includeLanguages": {
+		"javascript": "javascript",
+		"html": "HTML"
+	},
+	"tailwindSorter.categoryOrder": {
+		"sortOrder": [
+			"color",
+			"box",
+			"flex",
+			"grid",
+			"bg-visual",
+			"margins",
+			"borders",
+			"sizing",
+			"typography",
+			"transformations",
+			"other"
+		]
+	}
 }

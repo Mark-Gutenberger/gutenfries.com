@@ -4,10 +4,11 @@ import IconMoon from '@tabler/icons/moon.tsx';
 import IconSun from '@tabler/icons/sun.tsx';
 import { useSignal } from '@preact/signals';
 import { useEffect } from 'preact/hooks';
+import { JSX } from 'preact/jsx-runtime';
 
 export const modes = ['dark', 'light'] as const;
 
-export default function ThemeMode() {
+export default function ThemeMode(): JSX.Element {
 	const state = useSignal<(typeof modes)[number]>('light');
 
 	/**
@@ -53,31 +54,28 @@ export default function ThemeMode() {
 
 	useEffect(() => {
 		setThemeMode(detectThemeMode());
-		console.log('Theme mode:', detectThemeMode());
-		console.log('state:', state.value);
 	}, []);
 
-	if (IS_BROWSER) {
-		return (
-			<button
-				type='button'
-				className='transition focus:outline-none dark:bg-gray-800 bg-gray-200 rounded-md p-3 mx-3 block overflow-hidden relative group cursor-pointer'
-				onClick={() =>
-					setThemeMode(
-						state.value === 'dark' ? 'light' : 'dark',
-					)}
+	if (!IS_BROWSER) return <button />;
+	return (
+		<button
+			type='button'
+			className='transition focus:outline-none block relative bg-gray-200 dark:bg-gray-800 mx-3 p-3 rounded-md cursor-pointer overflow-hidden group'
+			onClick={() =>
+				setThemeMode(
+					state.value === 'dark' ? 'light' : 'dark',
+				)}
+		>
+			<span
+				className={'dark:bg-gray-200 bg-gray-800 absolute w-52 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 top-1/2 group-hover:h-52 group-hover:-translate-y-32 ease'}
+			/>
+			<span
+				className={'relative transition duration-300 ease'}
 			>
-				<span
-					className={'dark:bg-gray-200 bg-gray-800 absolute w-52 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 top-1/2 group-hover:h-52 group-hover:-translate-y-32 ease'}
-				/>
-				<span
-					className={'relative transition duration-300 ease'}
-				>
-					{state.value === 'dark'
-						? <IconSun className='w-8 h-8 text-yellow-400' />
-						: <IconMoon className='w-8 h-8 text-purple-700' />}
-				</span>
-			</button>
-		);
-	}
+				{state.value === 'dark'
+					? <IconSun className='w-8 h-8 text-yellow-400' />
+					: <IconMoon className='w-8 h-8 text-purple-700' />}
+			</span>
+		</button>
+	);
 }

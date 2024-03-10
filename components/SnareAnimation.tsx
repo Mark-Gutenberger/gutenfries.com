@@ -8,10 +8,10 @@ const SnareAnimation = () => {
 				href={asset('/styles/animations/drum.css')}
 			/>
 
-			<div className='mt-12 flex justify-center items-center'>
+			<div className='flex justify-center items-center mt-12'>
 				<div class='left-stick'>
 					<img
-						className='select-none z-10'
+						className='z-10 select-none'
 						src={asset('/images/snare-animation-resources/stick.svg')}
 						style={{ transform: 'scaleX(-1)' }}
 						alt='left hand stick'
@@ -20,15 +20,15 @@ const SnareAnimation = () => {
 
 				<div class='right-stick'>
 					<img
-						className='select-none z-10'
+						className='z-10 select-none'
 						src={asset('/images/snare-animation-resources/stick.svg')}
 						alt='left hand stick'
 					/>
 				</div>
 			</div>
-			<div className='z-20 sm:mx-0 mx-16 mb-12  mt-4 flex justify-center'>
+			<div className='z-20 flex justify-center mx-16 sm:mx-0 mt-4 mb-12'>
 				<img
-					className='select-none z-20'
+					className='z-20 select-none'
 					src={asset('/images/snare-animation-resources/snare-drum.svg')}
 					alt='snare drum'
 				/>

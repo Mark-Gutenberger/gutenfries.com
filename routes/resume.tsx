@@ -1,11 +1,11 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { render as renderGFM } from 'gfm';
-
-import { Footer } from '../components/Footer.tsx';
-import { Head } from '../components/Head.tsx';
-import { Navbar, Routes } from '../components/Navbar.tsx';
-import { NoScript } from '../components/NoScript.tsx';
-import { readFile } from '../utils/readFile.ts';
+import { Footer } from '@/components/Footer.tsx';
+import { Head } from '@/components/Head.tsx';
+import { Routes } from '@/routes.ts';
+import { Navbar } from '@/components/Navbar.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
+import { readFile } from '@/utils/readFile.ts';
 
 interface Data {
 	resumes: string[];
@@ -35,12 +35,14 @@ export default function ResumePage(props: PageProps<Data>) {
 	return (
 		<>
 			<Head PageProps={props} />
-			<Navbar active={Routes.resume} />
+			<Navbar
+				active={Routes.resume}
+			/>
 			<NoScript />
 
 			<main
 				id='main-content'
-				className='p-4 pt-20 text-gray-800 bg-gray-100 dark:text-gray-200 dark:bg-gray-900 '
+				className='bg-gray-100 dark:bg-gray-900 p-4 pt-20 text-gray-800 dark:text-gray-200'
 			>
 				<iframe
 					className={'w-full h-full aspect-[8.5/11] lg:aspect-[8.5/9] xl:aspect-[8.5/7] 2xl:aspect-[8.5/5]'}
@@ -59,13 +61,13 @@ export default function ResumePage(props: PageProps<Data>) {
 						Download Resume
 					</h3>
 				</div>
-				<div className='flex flex-wrap justify-center w-full mx-auto md:w-2/3'>
+				<div className='flex flex-wrap justify-center mx-auto w-full md:w-2/3'>
 					<a
 						type='button'
 						href={asset('/resume/resume-tech.pdf')}
-						className='px-6 py-2 mx-auto my-8 text-lg text-gray-100 bg-purple-500 rounded-lg dark:text-gray-800 sm:my-16 hover:bg-purple-600 active:bg-purple-700'
+						className='bg-purple-500 hover:bg-purple-600 active:bg-purple-700 mx-auto my-8 sm:my-16 px-6 py-2 rounded-lg text-gray-100 text-lg dark:text-gray-800'
 					>
-						<span className='flex items-center justify-center'>
+						<span className='flex justify-center items-center'>
 							<span className='mr-1'>
 								Tech
 							</span>
@@ -75,9 +77,9 @@ export default function ResumePage(props: PageProps<Data>) {
 					<a
 						type='button'
 						href={asset('/resume/resume-music.pdf')}
-						className='px-6 py-2 mx-auto my-8 text-lg text-gray-100 bg-purple-500 rounded-lg dark:text-gray-800 sm:my-16 hover:bg-purple-600 active:bg-purple-700'
+						className='bg-purple-500 hover:bg-purple-600 active:bg-purple-700 mx-auto my-8 sm:my-16 px-6 py-2 rounded-lg text-gray-100 text-lg dark:text-gray-800'
 					>
-						<span className='flex items-center justify-center'>
+						<span className='flex justify-center items-center'>
 							<span className='mr-1'>
 								Music
 							</span>

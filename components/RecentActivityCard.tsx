@@ -8,9 +8,9 @@ interface RecentActivityCardProps {
 
 function RecentActivityCard({ title, children, icon }: RecentActivityCardProps) {
 	return (
-		<div className='flex flex-col h-full p-8 bg-gray-800 rounded-lg'>
+		<div className='flex flex-col bg-gray-800 p-8 rounded-lg h-full'>
 			<div className='flex items-center mb-3'>
-				<i className='flex items-center justify-center flex-shrink-0 w-10 h-10 p-1 mr-3 text-gray-800 bg-purple-500 rounded-full'>
+				<i className='flex flex-shrink-0 justify-center items-center bg-purple-500 mr-3 p-1 rounded-full w-10 h-10 text-gray-800'>
 					{icon}
 				</i>
 				<h3 className='text-lg'>
@@ -18,7 +18,7 @@ function RecentActivityCard({ title, children, icon }: RecentActivityCardProps) 
 				</h3>
 			</div>
 			<div className='flex-grow'>
-				<p className='text-base text-lg text-gray-300'>
+				<p className='text-base text-gray-300'>
 					{children}
 				</p>
 			</div>
