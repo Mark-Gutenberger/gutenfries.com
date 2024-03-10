@@ -1,6 +1,6 @@
 import { DesktopNav } from '@/components/DesktopNav.tsx';
 import ThemeMode from '@/islands/ThemeMode.tsx';
-import HamburgerNav from '@/islands/HamburgerNav.tsx';
+import MobileNav from '../islands/MobileNav.tsx';
 import { Route, Routes, routes } from '@/routes.ts';
 import { FreshContext } from '$fresh/server.ts';
 
@@ -28,7 +28,7 @@ function Navbar(props: NavbarProps) {
 
 				{/* MOBILE */}
 				<div className='flex justify-center items-center sm:hidden pl-1'>
-					<HamburgerNav
+					<MobileNav
 						routes={routes}
 						active={props.active}
 					/>

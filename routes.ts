@@ -12,6 +12,7 @@ export enum Routes {
 	notFound,
 	serverError,
 	privPolicy,
+	mwotw,
 }
 
 export const routes: Route[] = [
@@ -24,6 +25,11 @@ export const routes: Route[] = [
 		id: Routes.blog,
 		href: '/blog',
 		displayName: 'Blog',
+	},
+	{
+		id: Routes.mwotw,
+		href: '/mwotw',
+		displayName: 'MWOTW',
 	},
 	{
 		id: Routes.resume,
