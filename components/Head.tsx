@@ -1,8 +1,8 @@
 import { asset, Head as FreshHead } from '$fresh/runtime.ts';
-import { ErrorPageProps, PageProps, UnknownPageProps } from '$fresh/server.ts';
+import { PageProps } from '$fresh/server.ts';
 
 interface HeadProps {
-	PageProps: PageProps | UnknownPageProps | ErrorPageProps;
+	PageProps: PageProps;
 }
 
 function Head({ PageProps }: HeadProps) {
