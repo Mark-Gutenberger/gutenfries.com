@@ -1,8 +1,7 @@
 import { DesktopNav } from '@/components/DesktopNav.tsx';
 import ThemeMode from '@/islands/ThemeMode.tsx';
-import MobileNav from '../islands/MobileNav.tsx';
-import { Route, Routes, routes } from '@/routes.ts';
-import { FreshContext } from '$fresh/server.ts';
+import MobileNav from '@/islands/MobileNav.tsx';
+import { Routes, routes } from '@/routes.ts';
 
 interface NavbarProps {
 	active: Routes;
@@ -17,7 +16,7 @@ function Navbar(props: NavbarProps) {
 			>
 				Skip to main content
 			</a>
-			<nav className='fixed flex flex-row justify-between bg-gray-800 shadow-lg w-full h-20'>
+			<nav className='z-50 fixed flex flex-row justify-between bg-gray-800 shadow-lg w-full h-20'>
 				{/* DESKTOP */}
 				<div className={'hidden sm:flex pl-1'}>
 					<DesktopNav

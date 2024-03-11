@@ -1,8 +1,6 @@
-import { useSignal } from '@preact/signals';
-import { IS_BROWSER } from '$fresh/runtime.ts';
-import { JSX } from 'preact/jsx-runtime';
 import { Route, Routes } from '@/routes.ts';
 import { classNames } from '@/utils/classNames.ts';
+import { JSX } from 'preact/jsx-runtime';
 
 interface MobileNavProps {
 	routes: Route[];
@@ -10,12 +8,6 @@ interface MobileNavProps {
 }
 
 export default function MobileNav(props: MobileNavProps): JSX.Element {
-	const isOpen = useSignal(false);
-
-	if (!IS_BROWSER) {
-		return <button />;
-	}
-
 	return (
 		<>
 			<button
@@ -25,14 +17,12 @@ export default function MobileNav(props: MobileNavProps): JSX.Element {
 					const el = document.getElementById('mobile-nav');
 
 					if (el) {
-						if (isOpen.value) {
+						if (el.classList.contains('expanded')) {
 							el.classList.remove('expanded');
 						} else {
 							el.classList.add('expanded');
 						}
 					}
-
-					isOpen.value = !isOpen.value;
 				}}
 			>
 				<span
@@ -69,26 +59,23 @@ export default function MobileNav(props: MobileNavProps): JSX.Element {
 				</span>
 			</button>
 
-			{/* sdfklitijhnserpoituservtnosiertuv09werpt8vnsueoli */}
-
 			<style>
 				{`
-    #mobile-nav {
-        transition: height 400ms ease;
-        height: 0rem;
-        overflow-y: hidden;
-    }
+				#mobile-nav {
+					transition: height 400ms ease;
+					height: 0rem;
+					overflow-y: hidden;
+				}
 
-    #mobile-nav.expanded {
-        height: 20rem;
-
-}
-`}
+				#mobile-nav.expanded {
+					height: 20rem;
+				}
+				`}
 			</style>
 
 			<ul
 				id='mobile-nav'
-				class='top-20 z-10 fixed inset-0 flex-column justify-center bg-gray-800 w-screen'
+				class='top-20 fixed inset-0 flex-column justify-center bg-gray-800 w-screen'
 			>
 				{props.routes.map((item: Route) => {
 					// if the route has a displayName, render it
