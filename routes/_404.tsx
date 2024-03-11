@@ -42,19 +42,23 @@ function NotFoundPage(PageProps: PageProps) {
 				<br />
 				<br />
 				<br />
-				<div class='relative flex justify-center items-center'>
-					<span class='block relative'>
-						<h4 className='relative z-10'>
-							<IconDirectionsOff className='w-24 h-24' />
-						</h4>
-						<h4 className='relative z-20 -mt-24'>
-							<IconDirectionsOff className='w-24 h-24' />
-						</h4>
-						<h4 className='relative z-30 -mt-24'>
-							<IconDirectionsOff className='w-24 h-24' />
-						</h4>
-					</span>
-				</div>
+				<span class='relative flex justify-center items-center'>
+					<h4 className='z-10 absolute'>
+						<i>
+							<IconDirectionsOff size={64} />
+						</i>
+					</h4>
+					<h4 className='z-20 absolute'>
+						<i>
+							<IconDirectionsOff size={64} />
+						</i>
+					</h4>
+					<h4 className='z-30 absolute'>
+						<i>
+							<IconDirectionsOff size={64} />
+						</i>
+					</h4>
+				</span>
 			</main>
 		</>
 	);
