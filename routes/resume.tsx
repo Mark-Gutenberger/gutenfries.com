@@ -32,7 +32,7 @@ export const handler: Handlers<Data> = {
 };
 
 export default function ResumePage(props: PageProps<Data>) {
-	const file_id = '13iEIAH27j-lTKpbUni6mz1VkA6VLEca6So4HFk8W0LI';
+	const file_id = '1dRlA5wpfTCSueGRvv_V_737PsIj66ZBy';
 	return (
 		<>
 			<Head PageProps={props} />
@@ -46,7 +46,7 @@ export default function ResumePage(props: PageProps<Data>) {
 				className='bg-gray-100 dark:bg-gray-900 p-4 pt-20 text-gray-800 dark:text-gray-200'
 			>
 				<iframe
-					className='z-20 w-full h-full aspect-[8.5/11] lg:aspect-[8.5/9] xl:aspect-[8.5/7] 2xl:aspect-[8.5/5]'
+					className='z-20 rounded-b-lg w-full h-full aspect-[8.5/11] lg:aspect-[8.5/9] xl:aspect-[8.5/7] 2xl:aspect-[8.5/5]'
 					src={`https://docs.google.com/viewer?srcid=${file_id}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`}
 				/>
 			</main>

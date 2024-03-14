@@ -60,22 +60,21 @@ export default function ThemeMode(): JSX.Element {
 	return (
 		<button
 			type='button'
-			className='transition focus:outline-none block relative bg-gray-200 dark:bg-gray-800 mx-3 p-3 rounded-md cursor-pointer overflow-hidden group'
+			className='relative flex bg-gray-200 dark:bg-gray-800 mx-3 p-3 rounded-md cursor-pointer overflow-hidden group'
 			onClick={() =>
 				setThemeMode(
 					state.value === 'dark' ? 'light' : 'dark',
 				)}
 		>
+			{/* <div className='z-10 absolute border-gray-800 group-hover:border-2 -m-3 w-[56px] h-[56px]' /> */}
 			<span
 				className={'dark:bg-gray-200 bg-gray-800 absolute w-52 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 top-1/2 group-hover:h-52 group-hover:-translate-y-32 ease'}
 			/>
-			<span
-				className={'relative transition duration-300 ease'}
-			>
+			<i className='relative'>
 				{state.value === 'dark'
-					? <IconSun className='w-8 h-8 text-yellow-400' />
-					: <IconMoon className='w-8 h-8 text-purple-700' />}
-			</span>
+					? <IconSun size={32} className='text-yellow-400' />
+					: <IconMoon size={32} className='text-purple-700' />}
+			</i>
 		</button>
 	);
 }
