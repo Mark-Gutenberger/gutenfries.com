@@ -1,4 +1,5 @@
-import { Navbar, Routes } from '@/components/Navbar.tsx';
+import { Routes } from '@/routes.ts';
+import { Navbar } from '@/components/Navbar.tsx';
 
 import ContentCard from '@/components/ContentCard.tsx';
 import { Footer } from '@/components/Footer.tsx';
@@ -9,7 +10,6 @@ import IconBrandDeno from '@tabler/icons/brand-deno.tsx';
 import IconBrandDocker from '@tabler/icons/brand-docker.tsx';
 import IconBrandFlutter from '@tabler/icons/brand-flutter.tsx';
 import IconBrandReact from '@tabler/icons/brand-react.tsx';
-import IconCircleFilled from '@tabler/icons/circle-filled.tsx';
 import IconLamp from '@tabler/icons/lamp.tsx';
 import IconMedal from '@tabler/icons/medal.tsx';
 import IconQuote from '@tabler/icons/quote.tsx';
@@ -20,7 +20,6 @@ import { Link } from '@/components/Link.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { PageProps } from '$fresh/server.ts';
 import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
-import { SnareAnimation } from '@/components/SnareAnimation.tsx';
 import { TechCard } from '@/components/TechCard.tsx';
 import { asset } from '$fresh/runtime.ts';
 
@@ -29,21 +28,23 @@ function IndexPage(PageProps: PageProps) {
 		<>
 			<Head PageProps={PageProps} />
 
-			<Navbar active={Routes.home} />
+			<Navbar
+				active={Routes.home}
+			/>
 
 			<NoScript />
 
 			<main
 				id='main-content'
-				className='text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-200'
+				className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition'
 			>
-				<section className='container flex flex-col items-center px-8 pb-32 mx-auto pt-28'>
-					<h1 className='py-64 animation-gradient-text text-center font-sedwick text-7xl sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl'>
+				<section className='flex flex-col items-center mx-auto px-8 pt-28 pb-32 container'>
+					<h1 className='py-48 sm:py-64 md:py-72 font-sedwick text-6xl text-center sm:text-8xl md:text-8xl lg:text-8xl xs:text-7xl xl:text-9xl animation-gradient-text'>
 						Marc Gutenberger
 					</h1>
 				</section>
 
-				<section className='container flex flex-wrap px-10 py-32 mx-auto'>
+				<section className='flex flex-wrap mx-auto px-10 py-32 container'>
 					<ContentCard
 						title='Drum Corps & Snareline'
 						description={
@@ -98,16 +99,20 @@ impl Marc {
 						</div>
 					</ContentCard>
 
-					<div className='flex flex-col flex-wrap mb-10 text-center lg:py-6 lg:w-1/2 lg:pl-12 lg:text-left'>
-						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
-							<h2 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold'>
-								Highlights
-								<IconLamp className='hidden sm:inline-block ml-4 h-14 w-14' />
+					<div className='flex flex-col flex-wrap mb-10 lg:py-6 lg:pl-12 lg:w-1/2 text-center lg:text-left'>
+						<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
+							<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
+								Text Here
+								<span className='ml-4'>
+									<IconLamp
+										size={48}
+									/>
+								</span>
 							</h2>
 						</div>
-						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
+						<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
 							<h3 className='mb-3 text-3xl sm:text-4xl'>Software Engineering</h3>
-							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
+							<p className='text-base text-gray-700 dark:text-gray-300'>
 								I'm a software engineer with a passion for buiding software with the
 								{' '}
 								<Link href='https://www.rust-lang.org/'>
@@ -118,9 +123,9 @@ impl Marc {
 								including web and mobile development.
 							</p>
 						</div>
-						<div className='flex flex-col items-center flex-grow mb-5 lg:items-start'>
+						<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
 							<h3 className='mb-3 text-3xl sm:text-4xl'>Music</h3>
-							<p className='text-base text-lg text-gray-700 dark:text-gray-300'>
+							<p className='text-base text-gray-700 dark:text-gray-300'>
 								I share a great passion for music, especially percussive arts, and I
 								have been drumming for over 5 years. I love jazz, funk, and metal
 								genres and have been members of many ensembles and bands throughout
@@ -129,71 +134,83 @@ impl Marc {
 						</div>
 					</div>
 				</section>
-				<section className='container px-5 py-32 mx-auto'>
-					<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
+				<section className='mx-auto px-5 py-32 container'>
+					<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
 						Recent Activity
-						<IconActivity className='hidden sm:inline-block ml-4 h-14 w-14' />
+						<span className='ml-4'>
+							<IconActivity size={48} />
+						</span>
 					</h2>
 
-					<hr className='hidden h-10 mx-auto mb-10 border-t-2 border-purple-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
+					<hr className='md:flex border-purple-500 border-x-2 hidden mx-auto mb-10 border-t-2 rounded-t-lg md:w-4/5 h-10' />
 
-					<div className='flex flex-wrap -m-4 text-gray-100 dark:border-gray-300'>
+					<div className='flex flex-wrap dark:border-gray-300 -m-4 text-gray-100'>
 						<div className='p-4 md:w-1/3'>
-							<RecentActivityCard
-								title='SkillsUSA Medal'
-								icon={<IconMedal />}
-							>
-								I recieved the{' '}
-								<Link href='https://www.skillsusa.org/'>SkillsUSA</Link>{' '}
-								State Software Engineering Award for best performance across a
-								written test, 3 written programs, and a technical interview. The
-								attendence to the competition was 150+ college and high school
-								students from across the state.
-							</RecentActivityCard>
+							<span>
+								<RecentActivityCard
+									title='SkillsUSA Medal'
+									icon={<IconMedal />}
+								>
+									I recieved the{' '}
+									<Link href='https://www.skillsusa.org/'>SkillsUSA</Link>{' '}
+									State Software Engineering Award for best performance across a
+									written test, 3 written programs, and a technical interview. The
+									attendence to the competition was 150+ college and high school
+									students from across the state.
+								</RecentActivityCard>
+							</span>
 						</div>
 						<div className='p-4 md:w-1/3'>
-							<RecentActivityCard
-								title='2023 DCI Contract'
-								icon={<IconShoe />}
-							>
-								I auditioned and recieved a contract to march the{' '}
-								<Link href='https://rivercityrhythm.org'>River City Rhythm</Link>
-								{' '}
-								snareline for the 2023 DCI Season, however had to respectfully
-								decline due to finances and previous outstanding commitments.
-							</RecentActivityCard>
+							<span>
+								<RecentActivityCard
+									title='2023 DCI Contract'
+									icon={<IconShoe />}
+								>
+									I auditioned and recieved a contract to march the{' '}
+									<Link href='https://rivercityrhythm.org'>
+										River City Rhythm
+									</Link>{' '}
+									snareline for the 2023 DCI Season, however had to respectfully
+									decline due to finances and previous outstanding commitments.
+								</RecentActivityCard>
+							</span>
 						</div>
 						<div className='p-4 md:w-1/3'>
-							<RecentActivityCard
-								title='Engineer lead at Dart-Sys'
-								icon={<IconBrandFlutter />}
-							>
-								I recently took on the role of lead engineer at{' '}
-								<Link href='https://github.com/dart-sys'>Dart-Sys</Link>, a startup
-								that provides raw metal access to the{' '}
-								<Link href='https://dart.dev/overview#platform'>Dart VM</Link>{' '}
-								from the{' '}
-								<Link href='https://www.rust-lang.org/'>
-									Rust
-								</Link>{' '}
-								programming language. The project has has almost{' '}
-								<Link href='https://github.com/dart-sys/dart-sys/graphs/traffic'>
-									100 dependent repositories
-								</Link>, and several dependent{' '}
-								<Link href='https://crates.io'>crates.io</Link>{' '}
-								packages, ammassing over 100,000 monthly downloads.
-							</RecentActivityCard>
+							<span>
+								<RecentActivityCard
+									title='Engineer lead at Dart-Sys'
+									icon={<IconBrandFlutter />}
+								>
+									I recently took on the role of lead engineer at{' '}
+									<Link href='https://github.com/dart-sys'>Dart-Sys</Link>, a
+									startup that provides raw metal access to the{' '}
+									<Link href='https://dart.dev/overview#platform'>Dart VM</Link>
+									{' '}
+									from the{' '}
+									<Link href='https://www.rust-lang.org/'>
+										Rust
+									</Link>{' '}
+									programming language. The project has has almost{' '}
+									<Link href='https://github.com/dart-sys/dart-sys/graphs/traffic'>
+										100 dependent repositories
+									</Link>, and several dependent{' '}
+									<Link href='https://crates.io'>crates.io</Link>{' '}
+									packages, ammassing over 100,000 monthly downloads.
+								</RecentActivityCard>
+							</span>
 						</div>
 					</div>
 				</section>
 
-				<section className='container px-5 py-32 mx-auto'>
-					<h2 className='flex items-center justify-center w-full mb-20 text-6xl font-semibold text-center lg:text-7xl'>
+				<section className='mx-auto px-5 py-32 container'>
+					<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
 						Tech Stack
-						<IconStack className='hidden sm:inline-block ml-4 h-14 w-14' />
+						<i className='ml-4'>
+							<IconStack size={48} />
+						</i>
 					</h2>
 
-					<hr className='hidden h-10 mx-auto mb-10 border-t-2 border-purple-500 rounded-t-lg md:w-4/5 md:flex border-x-2' />
+					<hr className='md:flex border-purple-500 border-x-2 hidden mx-auto mb-10 border-t-2 rounded-t-lg md:w-4/5 h-10' />
 
 					<div className='flex flex-wrap -m-4'>
 						<TechCard
@@ -312,10 +329,12 @@ impl Marc {
 						</TechCard>
 					</div>
 				</section>
-				<section className='container px-5 py-32 mx-auto'>
-					<p className='flex items-center justify-center w-full mx-auto xl:w-1/2 lg:w-3/4'>
-						<IconQuote className='inline-block w-8 h-8 mb-8' />
-						<blockquote className='text-lg text-center'>
+				<section className='mx-auto px-5 py-32 container'>
+					<p className='flex justify-center items-center mx-auto w-full lg:w-3/4 xl:w-1/2'>
+						<span className='ml-4'>
+							<IconQuote className='inline-block mb-8 w-8 h-8' />
+						</span>
+						<blockquote className='text-center text-lg'>
 							My mission in software engineering is to solve unique problems with
 							technology. I am passionate about{' '}
 							<Link href='https://rust-lang.org/'>
@@ -326,11 +345,11 @@ impl Marc {
 							creating software that is usable by anyone, without sacrificing
 							performance, quality, or security.
 						</blockquote>
-						<hr className='w-2/5 h-0 mx-auto my-5 bg-purple-500 border-purple-500 rounded-lg border-1' />
+						<hr className='border-1 border-purple-500 bg-purple-500 mx-auto my-5 rounded-lg w-2/5 h-0' />
 						<h2 className='text-3xl text-center'>
 							Marc Gutenberger
 						</h2>
-						<p className='text-lg text-center'>
+						<p className='text-center text-lg'>
 							Software Engineer
 						</p>
 					</p>

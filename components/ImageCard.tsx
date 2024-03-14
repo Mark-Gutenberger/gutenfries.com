@@ -7,15 +7,15 @@ interface ImageCardProps {
 
 const ImageCard = ({ src, alt, title, description }: ImageCardProps) => {
 	return (
-		<div className='w-full mb-64 overflow-hidden lg:my-auto lg:w-1/2 xl:py-12 xl:mb-10'>
+		<div className='lg:my-auto mb-64 xl:mb-10 xl:py-12 w-full lg:w-1/2 overflow-hidden'>
 			<img
 				// crop to 16:9 from the top
-				className='w-full rounded-lg shadow-lg h-96 object-cover object-left-top'
+				className='object-left-top shadow-lg rounded-lg w-full h-96 object-cover'
 				src={src}
 				alt={alt}
 			/>
-			<div className='px-6 py-4 mx-6 bg-gray-600 bg-opacity-25 rounded-b-lg shadow-lg'>
-				<h3 className='mb-2 text-xl font-bold'>{title}</h3>
+			<div className='bg-gray-600 bg-opacity-25 shadow-lg mx-6 px-6 py-4 rounded-b-lg'>
+				<h3 className='mb-2 font-bold text-xl'>{title}</h3>
 				<p className='text-base text-gray-700 dark:text-gray-300'>
 					{description}
 				</p>

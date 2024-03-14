@@ -1,6 +1,6 @@
 import { asset } from '$fresh/runtime.ts';
 
-import { Link } from './Link.tsx';
+import { Link } from '@/components/Link.tsx';
 import IconBrandCodepen from '@tabler/icons/brand-codepen.tsx';
 import IconBrandGit from '@tabler/icons/brand-git.tsx';
 import IconBrandGithub from '@tabler/icons/brand-github.tsx';
@@ -14,199 +14,125 @@ import IconLetterW from '@tabler/icons/letter-w.tsx';
 import IconRSS from '@tabler/icons/rss.tsx';
 import IconSquareRoundedLetterP from '@tabler/icons/square-rounded-letter-p.tsx';
 
+import { JSX } from 'preact/jsx-runtime';
+
+interface FooterItem {
+	displayName: string;
+	link: string;
+	icon: JSX.Element;
+}
+
+const footerItems: Record<string, FooterItem[]> = {
+	social: [
+		{
+			displayName: 'LinkedIn',
+			link: 'https://linkedin.com/in/gutenfries',
+			icon: <IconBrandLinkedIn size={20} />,
+		},
+		{
+			displayName: 'Peerlist',
+			link: 'https://peerlist.io/gutenfries',
+			icon: <IconSquareRoundedLetterP size={20} />,
+		},
+		{
+			displayName: 'Instagram',
+			link: 'https://instagram.com/gutenfries',
+			icon: <IconBrandInstagram size={20} />,
+		},
+		{
+			displayName: 'Facebook',
+			link: 'https://facebook.com/maybe.gutenfries',
+			icon: <IconBrandFacebook size={20} />,
+		},
+	],
+	code: [
+		{
+			displayName: 'GitHub',
+			link: 'https://github.com',
+			icon: <IconBrandGithub size={20} />,
+		},
+		{
+			displayName: 'Wakatime',
+			link: 'https://wakatime.com/@gutenfries',
+			icon: <IconLetterW className='inline-block w-4 h-4' />,
+		},
+		{
+			displayName: 'Codepen',
+			link: 'https://codepen.io/gutenfries',
+			icon: <IconBrandCodepen size={20} />,
+		},
+		{
+			displayName: 'Leetcode',
+			link: 'https://leetcode.com/gutenfries',
+			icon: <IconCode size={20} />,
+		},
+	],
+	other: [
+		{
+			displayName: 'Feed',
+			link: '/blog/feed.rss',
+			icon: <IconRSS size={20} />,
+		},
+		{
+			displayName: 'Source Code',
+			link: 'https://github.com/gutenfries/gutenfries.deno.dev',
+			icon: <IconBrandGit size={20} />,
+		},
+		{
+			displayName: 'License',
+			link: '/license',
+			icon: <IconFileCertificate size={20} />,
+		},
+		{
+			displayName: 'Privacy Policy',
+			link: '/privacy-policy',
+			icon: <IconCookie size={20} />,
+		},
+	],
+};
+
 function Footer() {
 	return (
 		<footer className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200'>
-			<ul className='flex jutify-around flex-row text-xs sm:text-base text-center pt-20'>
-				<li className='p-4 w-1/3 w-full'>
-					<h3 className='font-bold text-lg text-purple-500 tracking-widest mb-3'>
-						SOCIAL
-					</h3>
-					<nav className='list-none mb-5'>
+			<ul className='flex flex-row p-3 text-center text-xs sm:text-base jutify-around'>
+				{Object.entries(footerItems).map(([key, items]) => (
+					<li key={key} className='p-3 w-1/3'>
+						<h3 className='mb-2 font-bold text-lg text-purple-500 tracking-widest'>
+							{key.toUpperCase()}
+						</h3>
 						<ul>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='https://linkedin.com/in/gutenfries'
-								>
-									<span className='mr-1'>
-										LinkedIn
-									</span>
-									<IconBrandLinkedIn className='inline-block h-5 w-5' />
-								</Link>
-							</li>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='https://peerlist.io/gutenfries'
-								>
-									<span className='mr-1'>
-										Peerlist
-									</span>
-									<IconSquareRoundedLetterP className='inline-block h-5 w-5' />
-								</Link>
-							</li>
-							<li>
-								<Link
-									color={false}
-									href='https://instagram.com/gutenfries'
-									className='hover:text-underline flex items-center justify-center'
-								>
-									<span className='mr-1'>
-										Instagram
-									</span>
-									<IconBrandInstagram className='inline-block h-5 w-5' />
-								</Link>
-							</li>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='https://facebook.com/maybe.gutenfries'
-								>
-									<span className='mr-1'>
-										Facebook
-									</span>
-									<IconBrandFacebook className='inline-block h-5 w-5' />
-								</Link>
-							</li>
+							{items.map((item) => (
+								<li>
+									<Link
+										color={false}
+										className='flex justify-center items-center'
+										href={item.link}
+									>
+										<span className='mr-1'>
+											{item.displayName}
+										</span>
+										<i className='inline-block'>
+											{item.icon}
+										</i>
+									</Link>
+								</li>
+							))}
 						</ul>
-					</nav>
-				</li>
-				<li className='p-4 w-1/3 w-full'>
-					<h3 className='font-bold text-lg text-purple-500 tracking-widest mb-3'>
-						CODE
-					</h3>
-					<nav className='list-none mb-5'>
-						<ul>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='https://github.com'
-								>
-									<span className='mr-1'>
-										GitHub
-									</span>
-									<IconBrandGithub className='inline-block h-5 w-5' />
-								</Link>
-							</li>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='https://wakatime.com/@gutenfries'
-								>
-									<span className='mr-1'>
-										Wakatime
-									</span>
-									<IconLetterW className='inline-block h-4 w-4' />
-								</Link>
-							</li>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='https://codepen.io/gutenfries'
-								>
-									<span className='mr-1'>
-										Codepen
-									</span>
-									<IconBrandCodepen className='inline-block h-5 w-5' />
-								</Link>
-							</li>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='https://leetcode.com/gutenfries'
-								>
-									<span className='mr-1'>
-										Leetcode
-									</span>
-									<IconCode className='inline-block h-5 w-5' />
-								</Link>
-							</li>
-						</ul>
-					</nav>
-				</li>
-
-				<li className='p-4 w-1/3 w-full'>
-					<h3 className='font-bold text-lg text-purple-500 tracking-widest mb-3'>
-						OTHER
-					</h3>
-					<nav className='list-none mb-5'>
-						<ul>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='/blog/feed.rss'
-									internal
-								>
-									<span className='mr-1'>
-										Feed
-									</span>
-									<IconRSS className='inline-block h-5 w-5' />
-								</Link>
-							</li>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='https://github.com/gutenfries/gutenfries.deno.dev'
-								>
-									<span className='mr-1'>
-										Source Code
-									</span>
-									<IconBrandGit className='inline-block h-5 w-5' />
-								</Link>
-							</li>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='/license'
-									internal
-								>
-									<span className='mr-1'>
-										License
-									</span>
-									<IconFileCertificate className='inline-block h-5 w-5' />
-								</Link>
-							</li>
-							<li>
-								<Link
-									color={false}
-									className='flex items-center justify-center'
-									href='/privacy-policy'
-									internal
-								>
-									<span className='mr-1'>
-										Privacy Policy
-									</span>
-									<IconCookie className='inline-block h-5 w-5' />
-								</Link>
-							</li>
-						</ul>
-					</nav>
-				</li>
+					</li>
+				))}
 			</ul>
 
-			<section className='w-full mx-auto p-4 flex flex-wrap flex-row items-center justify-between shadow-lg bg-gray-800'>
-				<span className='w-1/3 hover:text-underline text-lg mt-2 text-sm text-center md:text-left text-gray-400'>
+			<section className='flex flex-row flex-wrap justify-between items-center bg-gray-800 shadow-lg mx-auto px-6 py-4 w-full'>
+				<span className='mt-2 w-1/3 text-center text-gray-400 text-sm md:text-left hover:text-underline'>
 					<Link
 						color={false}
 						href='/license'
-						className='ml-1'
 						internal
 					>
 						© {new Date().getFullYear()} Marc Gutenberger
 					</Link>
 				</span>
-				<span className='w-1/3 inline-flex mt-2 justify-center'>
+				<span className='inline-flex justify-center mt-2 w-1/3'>
 					<Link
 						color={false}
 						href='https://fresh.deno.dev/'
@@ -220,12 +146,11 @@ function Footer() {
 						/>
 					</Link>
 				</span>
-				<span className='w-1/3 mt-2 text-sm text-center md:text-right text-gray-400'>
-					Created with {'<'}3 and
+				<span className='md:text-right mt-2 w-1/3 text-center text-gray-400 text-sm'>
+					Created with {'<'}3, and{' '}
 					<Link
 						color={false}
 						href='https://deno.land'
-						className='ml-1'
 					>
 						Deno
 					</Link>

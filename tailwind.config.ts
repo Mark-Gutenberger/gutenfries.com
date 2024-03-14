@@ -2,12 +2,13 @@ import { type Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors';
 
 export default {
+	future: {
+		hoverOnlyWhenSupported: true,
+	},
 	content: [
 		'{routes,islands,components}/**/*.{ts,tsx}',
 	],
-	selfURL: import.meta.url,
-	mode: 'silent',
-	darkMode: 'class',
+	darkMode: 'selector',
 	theme: {
 		extend: {
 			aspectRatio: {

@@ -1,16 +1,19 @@
 import { asset } from '$fresh/runtime.ts';
-import { UnknownPageProps } from '$fresh/server.ts';
+import { PageProps } from '$fresh/server.ts';
 
-import { Head } from '../components/Head.tsx';
-import { Navbar, Routes } from '../components/Navbar.tsx';
-import { NoScript } from '../components/NoScript.tsx';
+import { Head } from '@/components/Head.tsx';
+import { Routes } from '@/routes.ts';
+import { Navbar } from '@/components/Navbar.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
 import IconDirectionsOff from '@tabler/icons/directions-off.tsx';
 
-function NotFoundPage(PageProps: UnknownPageProps) {
+function NotFoundPage(PageProps: PageProps) {
 	return (
 		<>
 			<Head PageProps={PageProps} />
-			<Navbar active={Routes.serverError} />
+			<Navbar
+				active={Routes.serverError}
+			/>
 
 			<NoScript />
 
@@ -21,7 +24,7 @@ function NotFoundPage(PageProps: UnknownPageProps) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 text-center flex flex-col items-center justify-center h-screen'
+				className='flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-900 h-screen text-center text-gray-900 dark:text-gray-200'
 			>
 				<span>
 					<h1>Error 404:</h1>
@@ -39,19 +42,23 @@ function NotFoundPage(PageProps: UnknownPageProps) {
 				<br />
 				<br />
 				<br />
-				<div class='relative flex items-center justify-center'>
-					<span class='relative block'>
-						<h4 className='z-10 relative'>
-							<IconDirectionsOff className='w-24 h-24' />
-						</h4>
-						<h4 className='z-20 relative -mt-24'>
-							<IconDirectionsOff className='w-24 h-24' />
-						</h4>
-						<h4 className='z-30 relative -mt-24'>
-							<IconDirectionsOff className='w-24 h-24' />
-						</h4>
-					</span>
-				</div>
+				<span class='relative flex justify-center items-center'>
+					<h4 className='z-10 absolute'>
+						<i>
+							<IconDirectionsOff size={64} />
+						</i>
+					</h4>
+					<h4 className='z-20 absolute'>
+						<i>
+							<IconDirectionsOff size={64} />
+						</i>
+					</h4>
+					<h4 className='z-30 absolute'>
+						<i>
+							<IconDirectionsOff size={64} />
+						</i>
+					</h4>
+				</span>
 			</main>
 		</>
 	);
