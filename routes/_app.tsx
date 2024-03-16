@@ -5,7 +5,8 @@ export default function App({ Component /* state */ }: PageProps) {
 		<>
 			{/* SSR for dark/light mode */}
 			<script>
-				{`(function () {
+				{`
+(function () {
 	try {
 		const mode = localStorage.getItem('theme');
 		document.getElementsByTagName('html')[0].className = mode === 'dark' ? 'dark' : 'light';
@@ -13,9 +14,9 @@ export default function App({ Component /* state */ }: PageProps) {
 		console.error(e);
 	}
 })();
+
 `}
 			</script>
-			<link rel='stylesheet' href='/styles/tailwind.css' />
 			<Component />
 		</>
 	);

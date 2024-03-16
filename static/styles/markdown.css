@@ -2,9 +2,9 @@
 [data-color-mode='light'][data-light-theme='light'],
 [data-color-mode='dark'][data-dark-theme='light'] {
 	--color-canvas-default-transparent: var(--transparent);
-	--color-fg-default: var(--gray-900);
+	--color-fg-default: var(--gray-800);
 	--color-fg-muted: var(--gray-800);
-	--color-canvas-default: var(--gray-100);
+	--color-canvas-default: var(--gray-200);
 	--color-canvas-subtle: var(--gray-200);
 	--color-border-default: var(--gray-200);
 	--color-border-muted: var(--gray-300);
@@ -16,9 +16,9 @@
 @media (prefers-color-scheme: light) {
 	[data-color-mode='auto'][data-light-theme='light'] {
 		--color-canvas-default-transparent: var(--transparent);
-		--color-fg-default: var(--gray-900);
+		--color-fg-default: var(--gray-800);
 		--color-fg-muted: var(--gray-800);
-		--color-canvas-default: var(--gray-100);
+		--color-canvas-default: var(--gray-200);
 		--color-canvas-subtle: var(--gray-200);
 		--color-border-default: var(--gray-200);
 		--color-border-muted: var(--gray-300);
@@ -31,9 +31,9 @@
 @media (prefers-color-scheme: dark) {
 	[data-color-mode='auto'][data-dark-theme='light'] {
 		--color-canvas-default-transparent: var(--transparent);
-		--color-fg-default: var(--gray-900);
+		--color-fg-default: var(--gray-800);
 		--color-fg-muted: var(--gray-800);
-		--color-canvas-default: var(--gray-100);
+		--color-canvas-default: var(--gray-200);
 		--color-canvas-subtle: var(--gray-200);
 		--color-border-default: var(--gray-200);
 		--color-border-muted: var(--gray-300);
@@ -48,7 +48,7 @@
 	--color-canvas-default-transparent: var(--transparent);
 	--color-fg-default: var(--gray-200);
 	--color-fg-muted: var(--gray-300);
-	--color-canvas-default: var(--gray-900);
+	--color-canvas-default: var(--gray-800);
 	--color-canvas-subtle: var(--gray-800);
 	--color-border-default: var(--gray-800);
 	--color-border-muted: var(--gray-700);
@@ -62,7 +62,7 @@
 		--color-canvas-default-transparent: var(--transparent);
 		--color-fg-default: var(--gray-200);
 		--color-fg-muted: var(--gray-300);
-		--color-canvas-default: var(--gray-900);
+		--color-canvas-default: var(--gray-800);
 		--color-canvas-subtle: var(--gray-800);
 		--color-border-default: var(--gray-800);
 		--color-border-muted: var(--gray-700);
@@ -77,7 +77,7 @@
 		--color-canvas-default-transparent: var(--transparent);
 		--color-fg-default: var(--gray-200);
 		--color-fg-muted: var(--gray-300);
-		--color-canvas-default: var(--gray-900);
+		--color-canvas-default: var(--gray-800);
 		--color-canvas-subtle: var(--gray-800);
 		--color-border-default: var(--gray-800);
 		--color-border-muted: var(--gray-700);
@@ -89,7 +89,9 @@
 }
 .markdown-body {
 	word-wrap: break-word;
-	font-size: 1rem;
+	font-size: 1.125rem;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
 	line-height: 1.5;
 }
 .markdown-body:before {

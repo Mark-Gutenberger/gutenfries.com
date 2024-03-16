@@ -2,8 +2,8 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $_404 from './routes/404.tsx';
-import * as $_500 from './routes/500.tsx';
+import * as $_404 from './routes/404.ts';
+import * as $_500 from './routes/500.ts';
 import * as $_404_1 from './routes/_404.tsx';
 import * as $_500_1 from './routes/_500.tsx';
 import * as $_app from './routes/_app.tsx';
@@ -22,8 +22,8 @@ import { type Manifest } from '$fresh/server.ts';
 
 const manifest = {
 	routes: {
-		'./routes/404.tsx': $_404,
-		'./routes/500.tsx': $_500,
+		'./routes/404.ts': $_404,
+		'./routes/500.ts': $_500,
 		'./routes/_404.tsx': $_404_1,
 		'./routes/_500.tsx': $_500_1,
 		'./routes/_app.tsx': $_app,

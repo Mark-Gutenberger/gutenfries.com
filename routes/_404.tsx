@@ -21,10 +21,9 @@ function NotFoundPage(PageProps: PageProps) {
 				rel='stylesheet'
 				href={asset('/styles/animations/glitch.css')}
 			/>
-
 			<main
 				id='main-content'
-				className='flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-900 h-screen text-center text-gray-900 dark:text-gray-200'
+				className='flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-900 p-6 pt-20 h-screen text-gray-800 dark:text-gray-200 transition'
 			>
 				<span>
 					<h1>Error 404:</h1>

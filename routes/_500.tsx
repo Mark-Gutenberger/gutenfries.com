@@ -22,7 +22,7 @@ function ErrorPage(PageProps: PageProps) {
 
 			<main
 				id='main-content'
-				className='flex flex-col justify-center bg-gray-100 dark:bg-gray-900 h-screen text-center text-gray-900 dark:text-gray-200 overflow-x-hidden'
+				className='flex flex-col justify-center bg-gray-100 dark:bg-gray-900 p-6 pt-20 h-screen text-center text-gray-900 dark:text-gray-200 overflow-x-hidden'
 			>
 				<span>
 					<h2>Error 500:</h2>

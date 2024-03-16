@@ -14,9 +14,8 @@ export default function ThemeMode(): JSX.Element {
 	/**
 	 * Toggles the color mode.
 	 * @param themeMode - Explicitly set a color mode.
-	 * @returns The next color mode.
 	 */
-	function setThemeMode(themeMode: typeof modes[number]): typeof modes[number] {
+	function setThemeMode(themeMode: typeof modes[number]) {
 		switch (themeMode) {
 			case 'dark':
 				document.documentElement.classList.add('dark');
@@ -26,10 +25,16 @@ export default function ThemeMode(): JSX.Element {
 				break;
 		}
 
+		try {
+			document.getElementsByTagName('article')[0].setAttribute(
+				'data-color-mode',
+				themeMode,
+			);
+		} catch (_e) {
+			// do nothing
+		}
 		state.value = themeMode;
 		globalThis.localStorage.theme = themeMode;
-
-		return themeMode;
 	}
 
 	/**

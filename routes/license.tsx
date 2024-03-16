@@ -36,7 +36,10 @@ function ResumePage(props: PageProps<Data>) {
 			/>
 			<NoScript />
 
-			<main id='main-content' className='p-4 pt-20'>
+			<main
+				id='main-content'
+				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
+			>
 				{license
 					? (
 						<>
@@ -45,8 +48,7 @@ function ResumePage(props: PageProps<Data>) {
 								data-color-mode='auto'
 								data-light-theme='light'
 								data-dark-theme='dark'
-								class='markdown-body'
-								className='shadow-xl mt-12 p-10 rounded-lg'
+								className='shadow-xl p-10 rounded-lg markdown-body'
 								dangerouslySetInnerHTML={{
 									__html: renderGFM(license),
 								}}
@@ -54,11 +56,9 @@ function ResumePage(props: PageProps<Data>) {
 						</>
 					)
 					: (
-						<>
-							<h1 className='pt-20 rounded-lg font-bold text-5xl'>
-								Loading...
-							</h1>
-						</>
+						<h1 className='pt-20 rounded-lg font-bold text-5xl'>
+							Loading...
+						</h1>
 					)}
 			</main>
 			<Footer />

@@ -43,7 +43,7 @@ export default function ResumePage(props: PageProps<Data>) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 p-4 pt-20 text-gray-800 dark:text-gray-200'
+				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
 			>
 				<iframe
 					className='z-20 rounded-b-lg w-full h-full aspect-[8.5/11] lg:aspect-[8.5/9] xl:aspect-[8.5/7] 2xl:aspect-[8.5/5]'

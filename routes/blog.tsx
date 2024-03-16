@@ -32,9 +32,12 @@ export default function Home(props: PageProps<Data>) {
 				active={Routes.blog}
 			/>
 			<NoScript />
-			<main id='main-content' className='bg-gray-100 dark:bg-gray-900'>
-				<section className='p-4 pt-20'>
-					<ul className='mt-16'>
+			<main
+				id='main-content'
+				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
+			>
+				<section className='shadow-xl -mt-6 p-4 rounded-b-lg markdown-body'>
+					<ul>
 						{posts.map((post) => (
 							<li className='border-t'>
 								<BlogPostPreview post={post} />

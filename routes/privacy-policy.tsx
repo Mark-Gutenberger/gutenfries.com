@@ -34,7 +34,10 @@ function ResumePage(props: PageProps<Data>) {
 			/>
 			<NoScript />
 
-			<main id='main-content' className='p-4 pt-20'>
+			<main
+				id='main-content'
+				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
+			>
 				{privPolicy
 					? (
 						<>
@@ -43,8 +46,7 @@ function ResumePage(props: PageProps<Data>) {
 								data-color-mode='auto'
 								data-light-theme='light'
 								data-dark-theme='dark'
-								class='markdown-body'
-								className='shadow-xl mt-12 p-10 rounded-lg'
+								className='shadow-xl p-10 rounded-lg markdown-body'
 								dangerouslySetInnerHTML={{
 									__html: renderGFM(privPolicy),
 								}}

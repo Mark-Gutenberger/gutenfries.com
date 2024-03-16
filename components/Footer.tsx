@@ -122,7 +122,7 @@ function Footer() {
 				))}
 			</ul>
 
-			<section className='flex flex-row flex-wrap justify-between items-center bg-gray-800 shadow-lg mx-auto px-6 py-4 w-full'>
+			<section className='flex flex-row flex-wrap justify-between items-center bg-gray-800 shadow-lg px-6 py-4 w-full h-20'>
 				<span className='mt-2 w-1/3 text-center text-gray-400 text-sm md:text-left hover:text-underline'>
 					<Link
 						color={false}

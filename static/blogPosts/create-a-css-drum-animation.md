@@ -28,34 +28,34 @@ Anyway, you will need to create an html structure like the following:
 
 ```html
 <div class="container">
- <div class="sticks">
-  <div class="left-stick">
-   <!-- the inline styles here are becuase I -->
-   <!-- used the same asset for both sticks, so -->
-   <!-- one of them would have been backwards -->
-   <img
-    class="asset"
-    src="https://gutenfries.deno.dev/images/snare-animation-resources/stick.svg"
-    style="transform: scaleX(-1)"
-    alt="left hand stick"
-   />
-  </div>
+	<div class="sticks">
+		<div class="left-stick">
+			<!-- the inline styles here are becuase I -->
+			<!-- used the same asset for both sticks, so -->
+			<!-- one of them would have been backwards -->
+			<img
+				class="asset"
+				src="https://gutenfries.deno.dev/images/snare-animation-resources/stick.svg"
+				style="transform: scaleX(-1)"
+				alt="left hand stick"
+			/>
+		</div>
 
-  <div class="right-stick">
-   <img
-    class="asset"
-    src="https://gutenfries.deno.dev/images/snare-animation-resources/stick.svg"
-    alt="left hand stick"
-   />
-  </div>
- </div>
- <div class="snare-drum">
-  <img
-   class="asset"
-   src="https://gutenfries.deno.dev/images/snare-animation-resources/snare-drum.svg"
-   alt="snare drum"
-  />
- </div>
+		<div class="right-stick">
+			<img
+				class="asset"
+				src="https://gutenfries.deno.dev/images/snare-animation-resources/stick.svg"
+				alt="left hand stick"
+			/>
+		</div>
+	</div>
+	<div class="snare-drum">
+		<img
+			class="asset"
+			src="https://gutenfries.deno.dev/images/snare-animation-resources/snare-drum.svg"
+			alt="snare drum"
+		/>
+	</div>
 </div>
 ```
 
@@ -73,35 +73,35 @@ Let's create a CSS file along with our HTML and put some basic styles in it.
 
 ```css
 body {
- background-color: #1f2937;
+	background-color: #1f2937;
 }
 
 img {
- position: relative;
+	position: relative;
 }
 
 .container {
- padding-top: 5rem;
- width: 100%;
- height: 100%;
+	padding-top: 5rem;
+	width: 100%;
+	height: 100%;
 }
 
 .sticks {
- display: flex;
- justify-content: center;
- align-items: center;
- z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
 }
 
 .snare-drum {
- margin-top: 1rem;
- z-index: 20;
- justify-content: center;
- display: flex;
+	margin-top: 1rem;
+	z-index: 20;
+	justify-content: center;
+	display: flex;
 }
 
 .asset {
- user-select: none;
+	user-select: none;
 }
 ```
 
@@ -121,35 +121,35 @@ to accomplish this, let's create some basic `@keyframes` animations.
 /* ... */
 
 .left-stick {
- animation: LeftHand 5s ease-in infinite;
+	animation: LeftHand 5s ease-in infinite;
 }
 
 .right-stick {
- animation: RightHand 5s ease-in infinite;
+	animation: RightHand 5s ease-in infinite;
 }
 
 @keyframes LeftHand {
- 0% {
-  transform: rotate(var(--rest-r));
- }
- 50% {
-  transform: rotate(30deg);
- }
- 100% {
-  transform: rotate(var(--rest-l));
- }
+	0% {
+		transform: rotate(var(--rest-r));
+	}
+	50% {
+		transform: rotate(30deg);
+	}
+	100% {
+		transform: rotate(var(--rest-l));
+	}
 }
 
 @keyframes RightHand {
- 0% {
-  transform: rotate(var(--rest-r));
- }
- 50% {
-  transform: rotate(-30deg);
- }
- 100% {
-  transform: rotate(var(--rest-l));
- }
+	0% {
+		transform: rotate(var(--rest-r));
+	}
+	50% {
+		transform: rotate(-30deg);
+	}
+	100% {
+		transform: rotate(var(--rest-l));
+	}
 }
 ```
 
@@ -160,19 +160,19 @@ degree values for the to rotate.
 ```css
 /* ... */
 @keyframes LeftHand {
- /* ... */
- 50% {
-  transform: rotate(15deg);
- }
- /* ... */
+	/* ... */
+	50% {
+		transform: rotate(15deg);
+	}
+	/* ... */
 }
 
 @keyframes RightHand {
- /* ... */
- 50% {
-  transform: rotate(-15deg);
- }
- /* ... */
+	/* ... */
+	50% {
+		transform: rotate(-15deg);
+	}
+	/* ... */
 }
 ```
 
@@ -196,10 +196,10 @@ since we will be using these values often, let's create some variables for them.
 
 ```css
 :root {
- --rest: 5deg;
- --tap: 15deg;
- --mid: 30deg;
- --full: 85deg;
+	--rest: 5deg;
+	--tap: 15deg;
+	--mid: 30deg;
+	--full: 85deg;
 }
 ```
 
@@ -207,14 +207,14 @@ However, we need the values to be different for the left and right sticks, so le
 
 ```css
 :root {
- --rest-r: -5deg;
- --rest-l: 5deg;
- --tap-r: -15deg;
- --tap-l: 15deg;
- --full-r: 85deg;
- --full-l: -85deg;
- --mid-r: 30deg;
- --mid-l: -30deg;
+	--rest-r: -5deg;
+	--rest-l: 5deg;
+	--tap-r: -15deg;
+	--tap-l: 15deg;
+	--full-r: 85deg;
+	--full-l: -85deg;
+	--mid-r: 30deg;
+	--mid-l: -30deg;
 }
 ```
 
@@ -223,22 +223,22 @@ Now we can replace the values in our `@keyframes` with the variables.
 ```css
 /* ... */
 @keyframes LeftHand {
- 0% {
-  transform: rotate(var(--rest-l));
- }
- 50% {
-  transform: rotate(var(--tap-l));
- }
- 100% {
-  transform: rotate(var(--rest-l));
- }
+	0% {
+		transform: rotate(var(--rest-l));
+	}
+	50% {
+		transform: rotate(var(--tap-l));
+	}
+	100% {
+		transform: rotate(var(--rest-l));
+	}
 }
 
 @keyframes RightHand {
- 0% {
-  transform: rotate(var(--rest-r));
- }
- /* ... */
+	0% {
+		transform: rotate(var(--rest-r));
+	}
+	/* ... */
 }
 /* ... */
 ```
@@ -285,26 +285,26 @@ Now we can begin to write `@keyframes` with music value.
 
 ```css
 @keyframes RightHand {
- 0% {
-  transform: rotate(var(--rest-r));
- }
- /* R 16th diddle */
- 1% {
-  transform: rotate(var(--tap-r));
- }
- 2% {
-  transform: rotate(var(--rest-r));
- }
- 3% {
-  transform: rotate(var(--tap-r));
- }
- 4% {
-  transform: rotate(var(--rest-r));
- }
- /* end R 16th diddle */
- 100% {
-  transform: rotate(var(--rest-r));
- }
+	0% {
+		transform: rotate(var(--rest-r));
+	}
+	/* R 16th diddle */
+	1% {
+		transform: rotate(var(--tap-r));
+	}
+	2% {
+		transform: rotate(var(--rest-r));
+	}
+	3% {
+		transform: rotate(var(--tap-r));
+	}
+	4% {
+		transform: rotate(var(--rest-r));
+	}
+	/* end R 16th diddle */
+	100% {
+		transform: rotate(var(--rest-r));
+	}
 }
 ```
 
@@ -329,11 +329,11 @@ We can solve this equasion and find that in order for 100 frames to play at the 
 ```css
 /* ... */
 .left-stick {
- animation: LeftHand 3.125s ease-in infinite;
+	animation: LeftHand 3.125s ease-in infinite;
 }
 
 .right-stick {
- animation: RightHand 3.125s ease-in infinite;
+	animation: RightHand 3.125s ease-in infinite;
 }
 /* ... */
 ```

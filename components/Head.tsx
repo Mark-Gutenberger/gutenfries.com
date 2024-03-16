@@ -87,6 +87,7 @@ function Head({ PageProps }: HeadProps) {
 
 			{/* global styles */}
 			<link rel='stylesheet' href={asset('/styles/global.css')} />
+			<link rel='stylesheet' href={asset('/styles/tailwind.css')} />
 
 			{/* favicon */}
 			<link rel='icon' href={asset('/images/code.svg')} />

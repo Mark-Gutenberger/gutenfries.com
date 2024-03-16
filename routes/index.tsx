@@ -36,9 +36,9 @@ function IndexPage(PageProps: PageProps) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition'
+				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
 			>
-				<section className='flex flex-col items-center mx-auto px-8 pt-28 pb-32 container'>
+				<section className='flex flex-col items-center mx-auto px-8 pb-32 container'>
 					<h1 className='py-48 sm:py-64 md:py-72 font-sedwick text-6xl text-center sm:text-8xl md:text-8xl lg:text-8xl xs:text-7xl xl:text-9xl animation-gradient-text'>
 						Marc Gutenberger
 					</h1>
@@ -67,15 +67,9 @@ function IndexPage(PageProps: PageProps) {
 							</>
 						}
 					>
-						<link
-							rel='stylesheet'
-							href={asset('styles/10x-dark.css')}
-						/>
+						<link rel='stylesheet' href={asset('/styles/visual-studio-dark.css')} />
 						<script type='module'>
-							{`
-					import { highlightAll } from 'https://unpkg.com/@speed-highlight/core@1.2.4/dist/index.js';
-					highlightAll();
-					`}
+							{`import { highlightAll } from 'https://unpkg.com/@speed-highlight/core@1.2.6/dist/index.js';highlightAll();`}
 						</script>
 						<div className='text-xs sm:text-sm md:text-base shj-lang-rs'>
 							{`pub struct Marc {

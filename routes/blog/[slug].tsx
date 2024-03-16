@@ -49,9 +49,9 @@ export default function PostPage(props: PageProps<Data>) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 p-4 pt-20'
+				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
 			>
-				<div className='bg-gray-100 dark:bg-gray-900 shadow-xl mt-12 p-10 rounded-t-lg text-center text-gray-900 dark:text-gray-200'>
+				<div className='bg-gray-100 dark:bg-gray-900 mt-12 p-10 text-center text-gray-900 dark:text-gray-200'>
 					<h1 className='font-bold text-5xl'>{post.title}</h1>
 					<time className='inline-block mt-4'>
 						{new Date(post.publishedAt).toLocaleDateString('en-us', {
@@ -66,8 +66,7 @@ export default function PostPage(props: PageProps<Data>) {
 					data-color-mode='auto'
 					data-light-theme='light'
 					data-dark-theme='dark'
-					class='markdown-body'
-					className='shadow-xl p-10 rounded-b-lg'
+					className='shadow-xl p-10 rounded-b-lg m markdown-body'
 					dangerouslySetInnerHTML={{ __html: post.content }}
 				/>
 			</main>
