@@ -70,6 +70,7 @@
 		"speed_highlight_js/": "https://unpkg.com/@speed-highlight/core@1.2.6/dist/",
 		"tailwindcss": "npm:tailwindcss@3.4.1",
 		"tailwindcss/": "npm:/tailwindcss@3.4.1/",
+		"pptr": "https://deno.land/x/pptr@1.2.0/mod.ts",
 		"tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
 		"tailwindcss/colors": "npm:/tailwindcss@3.4.1/colors.js"
 	},

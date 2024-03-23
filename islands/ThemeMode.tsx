@@ -65,7 +65,7 @@ export default function ThemeMode(): JSX.Element {
 	return (
 		<button
 			type='button'
-			className='relative flex bg-gray-200 dark:bg-gray-800 mx-3 p-3 rounded-md cursor-pointer overflow-hidden group'
+			className='relative flex bg-gray-200 dark:bg-gray-800 mx-3 p-3 rounded-md cursor-pointer overflow-hidden group theme-mode'
 			onClick={() =>
 				setThemeMode(
 					state.value === 'dark' ? 'light' : 'dark',
