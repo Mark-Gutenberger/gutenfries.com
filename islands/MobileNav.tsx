@@ -75,7 +75,7 @@ export default function MobileNav(props: MobileNavProps): JSX.Element {
 
 			<ul
 				id='mobile-nav'
-				class='top-20 fixed inset-0 flex-column justify-center bg-gray-800 w-screen'
+				className='top-20 fixed inset-0 flex-column justify-center bg-gray-800 w-screen'
 			>
 				{props.routes.map((item: Route) => {
 					// if the route has a displayName, render it

@@ -16,6 +16,7 @@ import * as $license from './routes/license.tsx';
 import * as $privacy_policy from './routes/privacy-policy.tsx';
 import * as $resume from './routes/resume.tsx';
 import * as $sitemap_xml from './routes/sitemap.xml.ts';
+import * as $Carousel from './islands/Carousel.tsx';
 import * as $MobileNav from './islands/MobileNav.tsx';
 import * as $ThemeMode from './islands/ThemeMode.tsx';
 import { type Manifest } from '$fresh/server.ts';
@@ -38,6 +39,7 @@ const manifest = {
 		'./routes/sitemap.xml.ts': $sitemap_xml,
 	},
 	islands: {
+		'./islands/Carousel.tsx': $Carousel,
 		'./islands/MobileNav.tsx': $MobileNav,
 		'./islands/ThemeMode.tsx': $ThemeMode,
 	},

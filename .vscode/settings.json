@@ -37,5 +37,13 @@
 			"transformations",
 			"other"
 		]
-	}
+	},
+	"grammarly.files.include": [
+		"**/*.md",
+		"**/*.txt",
+		"*.md",
+		"*.txt",
+		"**/*.html",
+		"**/*.tsx",
+	],
 }

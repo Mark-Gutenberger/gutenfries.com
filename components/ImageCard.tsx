@@ -24,4 +24,4 @@ const ImageCard = ({ src, alt, title, description }: ImageCardProps) => {
 	);
 };
 
-export default ImageCard;
+export { ImageCard };

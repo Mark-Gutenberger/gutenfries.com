@@ -51,7 +51,7 @@ export default function PostPage(props: PageProps<Data>) {
 				id='main-content'
 				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
 			>
-				<div className='bg-gray-100 dark:bg-gray-900 mt-12 p-10 text-center text-gray-900 dark:text-gray-200'>
+				<div className='bg-gray-100 dark:bg-gray-900 mt-12 p-10 text-center text-gray-900 dark:text-gray-200 transition'>
 					<h1 className='font-bold text-5xl'>{post.title}</h1>
 					<time className='inline-block mt-4'>
 						{new Date(post.publishedAt).toLocaleDateString('en-us', {

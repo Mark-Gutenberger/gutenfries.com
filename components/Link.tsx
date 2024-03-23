@@ -1,4 +1,4 @@
-import { ComponentChildren } from 'preact';
+import { ComponentChild } from 'preact';
 
 interface LinkProps {
 	/**
@@ -13,7 +13,7 @@ interface LinkProps {
 	 * children to render inside the link
 	 * @default href
 	 */
-	children?: ComponentChildren;
+	children?: ComponentChild;
 	/**
 	 * whether the link is internal or not
 	 * @default false
@@ -57,7 +57,7 @@ export function Link(
 			className={`hover:underline font-medium ${u ? 'underline' : ''} ${className ?? ''} ${
 				// if `color` is undefined or true, color the link
 				color ?? true
-					? 'hover:text-purple-600 active:text-purple-700 text-purple-500'
+					? 'hover:text-purple-600 transition active:text-purple-700 text-purple-500'
 					: ''}`}
 			target={internal ? undefined : '_blank'}
 			rel={internal ? undefined : 'noopener noreferrer'}

@@ -1,8 +1,8 @@
-import { ComponentChildren } from 'preact';
+import { ComponentChild } from 'preact';
 
 interface RecentActivityCardProps {
 	title: string;
-	children: ComponentChildren | string;
+	children: ComponentChild | string;
 	icon: preact.JSX.Element;
 }
 

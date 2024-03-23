@@ -9,7 +9,7 @@ const SnareAnimation = () => {
 			/>
 
 			<div className='flex justify-center items-center mt-12'>
-				<div class='left-stick'>
+				<div className='left-stick'>
 					<img
 						className='z-10 select-none'
 						src={asset('/images/snare-animation-resources/stick.svg')}
@@ -18,7 +18,7 @@ const SnareAnimation = () => {
 					/>
 				</div>
 
-				<div class='right-stick'>
+				<div className='right-stick'>
 					<img
 						className='z-10 select-none'
 						src={asset('/images/snare-animation-resources/stick.svg')}

@@ -86,7 +86,9 @@ export function renderMarkdown(markdown: string): string {
 					codeBlock,
 					codeBlock.replace(
 						'<pre>',
-						`<div class='shj-multiline shj-mode-header shj-lang-${languages[i]}'>`,
+						`<div class='text-base shj-multiline shj-mode-header shj-lang-${
+							languages[i]
+						}'>`,
 					),
 				);
 			} else {
@@ -95,7 +97,7 @@ export function renderMarkdown(markdown: string): string {
 					codeBlock,
 					codeBlock.replace(
 						'<pre>',
-						`<pre class='shj-multiline shj-lang-plain'>`,
+						`<pre class='text-base shj-multiline shj-lang-plain'>`,
 					),
 				);
 			}

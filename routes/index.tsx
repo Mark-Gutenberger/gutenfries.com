@@ -1,9 +1,13 @@
-import { Routes } from '@/routes.ts';
-import { Navbar } from '@/components/Navbar.tsx';
-
-import ContentCard from '@/components/ContentCard.tsx';
+import { asset } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
+import { Link } from '@/components/Link.tsx';
+import { Navbar } from '@/components/Navbar.tsx';
+import { NoScript } from '@/components/NoScript.tsx';
+import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
+import { TechCard } from '@/components/TechCard.tsx';
+import { Routes } from '@/routes.ts';
 import IconActivity from '@tabler/icons/activity.tsx';
 import IconBrandCPP from '@tabler/icons/brand-cpp.tsx';
 import IconBrandDeno from '@tabler/icons/brand-deno.tsx';
@@ -16,12 +20,8 @@ import IconQuote from '@tabler/icons/quote.tsx';
 import IconSettings from '@tabler/icons/settings.tsx';
 import IconShoe from '@tabler/icons/shoe.tsx';
 import IconStack from '@tabler/icons/stack.tsx';
-import { Link } from '@/components/Link.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
-import { PageProps } from '$fresh/server.ts';
-import { RecentActivityCard } from '@/components/RecentActivityCard.tsx';
-import { TechCard } from '@/components/TechCard.tsx';
-import { asset } from '$fresh/runtime.ts';
+import { MarcCard } from '@/components/MarcCard.tsx';
+import Carousel from '@/islands/Carousel.tsx';
 
 function IndexPage(PageProps: PageProps) {
 	return (
@@ -36,7 +36,7 @@ function IndexPage(PageProps: PageProps) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
+				className='flex flex-col justify-center bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
 			>
 				<section className='flex flex-col items-center mx-auto px-8 pb-32 container'>
 					<h1 className='py-48 sm:py-64 md:py-72 font-sedwick text-6xl text-center sm:text-8xl md:text-8xl lg:text-8xl xs:text-7xl xl:text-9xl animation-gradient-text'>
@@ -44,59 +44,13 @@ function IndexPage(PageProps: PageProps) {
 					</h1>
 				</section>
 
-				<section className='flex flex-wrap mx-auto px-10 py-32 container'>
-					<ContentCard
-						title='Drum Corps & Snareline'
-						description={
-							<>
-								<span>
-									I have a great passion for the marching arts. I marched
-									throughout high school and recieved a contract to march at{' '}
-									<Link href='https://www.rivercityrhythm.org/'>
-										River City Rhythm Drum & Bugle Corps
-									</Link>{' '}
-									for the 2023 DCI season.
-								</span>
-								<br />
-								<span>
-									To learn how I made this animation from scratch, check out{' '}
-									<Link internal href='/blog/create-a-css-drum-animation'>
-										my blog
-									</Link>.
-								</span>
-							</>
-						}
-					>
-						<link rel='stylesheet' href={asset('/styles/visual-studio-dark.css')} />
-						<script type='module'>
-							{`import { highlightAll } from 'https://unpkg.com/@speed-highlight/core@1.2.6/dist/index.js';highlightAll();`}
-						</script>
-						<div className='text-xs sm:text-sm md:text-base shj-lang-rs'>
-							{`pub struct Marc {
-	email: String,
-	loves_dinosaurs: bool,
-	skills: Vec<&str>,
-}
-impl Marc {
-	pub fn about() -> Marc {
-		Marc {
-			email: String::from("gutenfries@gmail.com"),
-			loves_dinosaurs: true,
-			skills: vec![
-				"Rust", "C/C++",
-				"TypeScript", "Flutter",
-				"(P)react", "HTML & CSS",
-			],
-		}
-	}
-}`}
-						</div>
-					</ContentCard>
+				<section className='flex flex-wrap mx-auto md:px-10 py-32 container'>
+					<Carousel className='mb-32 lg:w-1/2' />
 
 					<div className='flex flex-col flex-wrap mb-10 lg:py-6 lg:pl-12 lg:w-1/2 text-center lg:text-left'>
 						<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
-							<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
-								Text Here
+							<h2 className='flex justify-center items-center w-full font-semibold text-5xl text-center md:text-6xl xl:text-7xl'>
+								Who is Marc?
 								<span className='ml-4'>
 									<IconLamp
 										size={48}
@@ -104,28 +58,29 @@ impl Marc {
 								</span>
 							</h2>
 						</div>
-						<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
-							<h3 className='mb-3 text-3xl sm:text-4xl'>Software Engineering</h3>
-							<p className='text-base text-gray-700 dark:text-gray-300'>
-								I'm a software engineer with a passion for buiding software with the
-								{' '}
-								<Link href='https://www.rust-lang.org/'>
-									Rust programming language
-								</Link>. I love solving unique and challenging problems, and I am
-								always looking for new opportunities to learn and grow upon my
-								skills. I also am proficient in TypeScript, C/C++, and Dart,
-								including web and mobile development.
-							</p>
-						</div>
-						<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
-							<h3 className='mb-3 text-3xl sm:text-4xl'>Music</h3>
-							<p className='text-base text-gray-700 dark:text-gray-300'>
-								I share a great passion for music, especially percussive arts, and I
-								have been drumming for over 5 years. I love jazz, funk, and metal
-								genres and have been members of many ensembles and bands throughout
-								my music career. I also play guitar and bass proficiently.
-							</p>
-						</div>
+						<MarcCard title='Software Developer'>
+							I'm a software & website developer with a passion for building with the
+							{' '}
+							<Link href='https://www.rust-lang.org/'>
+								Rust programming language
+							</Link>. I love solving unique and challenging problems, and I am always
+							looking for new opportunities to learn and grow in my skills. I also am
+							proficient in TypeScript, C/C++, and Dart, including web and mobile
+							development.
+						</MarcCard>
+						<MarcCard title='Music Educator'>
+							I have a great passion for music, and share that passion through
+							education. I co-founded{' '}
+							<Link internal href='/mwotw'>
+								Musical Wonders of the World
+							</Link>{' '}
+							to reach out to youth in the community with the mission of creating a
+							sense of global community through learning about the music of different
+							cultures and time periods.
+						</MarcCard>
+						<MarcCard title='Dinosaur Enthusiast'>
+							No further explanation necessary.
+						</MarcCard>
 					</div>
 				</section>
 				<section className='mx-auto px-5 py-32 container'>
@@ -195,7 +150,6 @@ impl Marc {
 						</div>
 					</div>
 				</section>
-
 				<section className='mx-auto px-5 py-32 container'>
 					<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
 						Tech Stack

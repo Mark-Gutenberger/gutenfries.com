@@ -87,13 +87,23 @@
 		--color-danger-fg: var(--red-500);
 	}
 }
+
 .markdown-body {
 	word-wrap: break-word;
 	font-size: 1.125rem;
 	padding: 1.5rem;
 	border-radius: 0.5rem;
 	line-height: 1.5;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+		transform, filter, -webkit-backdrop-filter;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+		transform, filter, backdrop-filter;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+		transform, filter, backdrop-filter, -webkit-backdrop-filter;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
 }
+
 .markdown-body:before {
 	content: '';
 	display: table;
@@ -453,6 +463,7 @@
 .markdown-body code,
 .markdown-body tt {
 	background-color: var(--color-neutral-muted);
+	color: var(--gray-200);
 	border-radius: 0.5rem;
 	margin: 0;
 	padding: 0.2em 0.4em;

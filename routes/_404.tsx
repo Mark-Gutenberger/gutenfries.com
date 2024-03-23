@@ -41,7 +41,7 @@ function NotFoundPage(PageProps: PageProps) {
 				<br />
 				<br />
 				<br />
-				<span class='relative flex justify-center items-center'>
+				<span className='relative flex justify-center items-center'>
 					<h4 className='z-10 absolute'>
 						<i>
 							<IconDirectionsOff size={64} />
