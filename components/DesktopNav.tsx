@@ -11,12 +11,12 @@ function DesktopNav(props: DesktopNavProps) {
 		<ul className='flex'>
 			{props.routes.map((item: Route) => {
 				// if the route has a displayName, render it
-				if (item.displayName) {
+				if (item.showInNav) {
 					return (
 						<li className='flex justify-center items-center'>
 							<a
 								key={item.id}
-								href={item.href}
+								href={item.pathName}
 								className={classNames(
 									props.active === item.id
 										? 'animation-gradient'

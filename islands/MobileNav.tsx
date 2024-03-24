@@ -78,13 +78,12 @@ export default function MobileNav(props: MobileNavProps): JSX.Element {
 				className='top-20 fixed inset-0 flex-column justify-center bg-gray-800 w-screen'
 			>
 				{props.routes.map((item: Route) => {
-					// if the route has a displayName, render it
-					if (item.displayName) {
+					if (item.showInNav) {
 						return (
 							<li className='flex justify-center m-4'>
 								<a
 									key={item.id}
-									href={item.href}
+									href={item.pathName}
 									className={classNames(
 										props.active === item.id
 											? 'animation-gradient'

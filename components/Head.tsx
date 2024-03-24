@@ -1,5 +1,6 @@
 import { asset, Head as FreshHead } from '$fresh/runtime.ts';
 import { PageProps } from '$fresh/server.ts';
+import { getRouteByPathName } from '@/routes.ts';
 
 interface HeadProps {
 	PageProps: PageProps;
@@ -19,6 +20,11 @@ function Head({ PageProps }: HeadProps) {
 		pipe = '';
 	}
 
+	let pathDisplayName = getRouteByPathName(PageProps.url.pathname).displayName;
+	if (pathDisplayName === 'Home') {
+		pathDisplayName = '';
+	}
+
 	return (
 		<FreshHead>
 			{/* load fonts first to prevent font-jiggle */}
@@ -32,15 +38,11 @@ function Head({ PageProps }: HeadProps) {
 
 			{/* <!-- Primary Meta Tags --> */}
 			<title>
-				{PageProps.url.pathname.charAt(1).toUpperCase() + PageProps.url.pathname.slice(2)}
-				{' '}
-				{pipe} Marc Gutenberger
+				{pathDisplayName} {pipe} Marc Gutenberger
 			</title>
 			<meta
 				name='title'
-				content={`${
-					PageProps.url.pathname.charAt(1).toUpperCase() + PageProps.url.pathname.slice(2)
-				} ${pipe} Marc Gutenberger`}
+				content={`${pathDisplayName} ${pipe} Marc Gutenberger`}
 			/>
 			<meta
 				name='description'
