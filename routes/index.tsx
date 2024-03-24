@@ -19,7 +19,7 @@ import IconQuote from '@tabler/icons/quote.tsx';
 import IconSettings from '@tabler/icons/settings.tsx';
 import IconShoe from '@tabler/icons/shoe.tsx';
 import IconStack from '@tabler/icons/stack.tsx';
-import { MarcCard } from '@/components/MarcCard.tsx';
+import { Card } from '../components/Card.tsx';
 import Carousel from '@/islands/Carousel.tsx';
 import IconBrandFlutter from '@tabler/icons/brand-flutter.tsx';
 
@@ -58,7 +58,7 @@ function IndexPage(PageProps: PageProps) {
 								</span>
 							</h2>
 						</div>
-						<MarcCard title='Software Developer'>
+						<Card title='Software Developer'>
 							I'm a software & website developer with a passion for building with the
 							{' '}
 							<Link href='https://www.rust-lang.org/'>
@@ -67,8 +67,8 @@ function IndexPage(PageProps: PageProps) {
 							looking for new opportunities to learn and grow in my skills. I also am
 							proficient in TypeScript, C/C++, and Dart, including web and mobile
 							development.
-						</MarcCard>
-						<MarcCard title='Music Educator'>
+						</Card>
+						<Card title='Music Educator'>
 							I have a great passion for music, and share that passion through
 							education. I co-founded{' '}
 							<Link internal href='/mwotw'>
@@ -77,10 +77,10 @@ function IndexPage(PageProps: PageProps) {
 							to reach out to youth in the community with the mission of creating a
 							sense of global community through learning about the music of different
 							cultures and time periods.
-						</MarcCard>
-						<MarcCard title='Dinosaur Enthusiast'>
+						</Card>
+						<Card title='Dinosaur Enthusiast'>
 							No further explanation necessary.
-						</MarcCard>
+						</Card>
 					</div>
 				</section>
 				<section className='mx-auto px-5 py-40 container'>

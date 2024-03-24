@@ -48,8 +48,8 @@ impl Marc {
 		content: (
 			<div className='flex'>
 				<img
-					className='rounded-lg w-full h-[456px] object-center object-cover' // magic number is the height of the code block slide
-					src={asset('/images/mwotw/9186A9E2-5A86-49DF-A899-1213A8BE3A4D.jpg')}
+					className='bg-gray-200 dark:bg-[#1e1e1e] rounded-lg w-full h-[456px] transition object-center object-cover' // magic number is the height of the code block slide, and magic color is the color of the code block component
+					src={asset('/images/mwotw/6C81BFC9-7256-4CBA-BB18-6B4CCBE16F69.png')}
 					alt='Musical Wonders of the World'
 				/>
 			</div>

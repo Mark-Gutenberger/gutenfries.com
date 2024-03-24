@@ -1,11 +1,10 @@
-import { Link } from '@/components/Link.tsx';
 import { ComponentChild } from 'preact';
 
-interface MarcCardProps {
+interface CardProps {
 	title: string;
 	children: ComponentChild;
 }
-function MarcCard(props: MarcCardProps) {
+function Card(props: CardProps) {
 	return (
 		<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
 			<h3 className='mb-3 text-3xl sm:text-4xl'>{props.title}</h3>
@@ -16,4 +15,4 @@ function MarcCard(props: MarcCardProps) {
 	);
 }
 
-export { MarcCard };
+export { Card };
