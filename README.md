@@ -32,7 +32,7 @@
 [![MIT License](https://img.shields.io/github/license/gutenfries/gutenfries.deno.dev.svg)](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md)
 [![deno-tests](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml)
 
-![screenshot](static/images/screenshot.png)
+![screenshot](static/images/screenshots/screenshot-desktop-dark.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

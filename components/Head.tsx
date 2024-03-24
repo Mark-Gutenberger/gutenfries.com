@@ -6,7 +6,8 @@ interface HeadProps {
 }
 
 function Head({ PageProps }: HeadProps) {
-	const OGImageUrl = new URL(asset('/images/screenshot.png'), PageProps.url).href;
+	const OGImageUrl =
+		new URL(asset('/images/screenshots/screenshot-desktop-dark.png'), PageProps.url).href;
 	const OGDescription =
 		'pub struct Marc { name: &str, email: String, loves_dinosaurs: bool, expertise: Vec<&str>, } ...';
 	const OGTitle = 'Marc Gutenberger';
