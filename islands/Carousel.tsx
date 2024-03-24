@@ -8,8 +8,7 @@ import { ComponentChild } from 'preact';
 const SLIDES = [
 	{
 		title: 'Software Development',
-		description:
-			'I am highly proficient in systems-level programming in the Rust and C languages.',
+		description: 'Multi-paradigm systems-level programming in the Rust and C languages.',
 		content: (
 			<div className='flex'>
 				<link
@@ -58,7 +57,7 @@ impl Marc {
 	},
 	{
 		title: 'Drumline Instruction',
-		description: 'I have been both a performer and instructor in the marching percussive arts.',
+		description: 'Teaching youth the marching percussive art form.',
 		content: (
 			<div className='flex'>
 				<img
