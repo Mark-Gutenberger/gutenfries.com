@@ -36,7 +36,7 @@ function ResumePage(props: PageProps<Data>) {
 
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
+				className='bg-gray-100 dark:bg-gray-900 p-6 pt-28 text-gray-800 dark:text-gray-200 transition'
 			>
 				{privPolicy
 					? (
