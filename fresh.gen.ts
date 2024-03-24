@@ -13,6 +13,7 @@ import * as $blog_feed_rss from './routes/blog/feed.rss.ts';
 import * as $home from './routes/home.ts';
 import * as $index from './routes/index.tsx';
 import * as $license from './routes/license.tsx';
+import * as $mwotw from './routes/mwotw.tsx';
 import * as $privacy_policy from './routes/privacy-policy.tsx';
 import * as $resume from './routes/resume.tsx';
 import * as $sitemap_xml from './routes/sitemap.xml.ts';
@@ -34,6 +35,7 @@ const manifest = {
 		'./routes/home.ts': $home,
 		'./routes/index.tsx': $index,
 		'./routes/license.tsx': $license,
+		'./routes/mwotw.tsx': $mwotw,
 		'./routes/privacy-policy.tsx': $privacy_policy,
 		'./routes/resume.tsx': $resume,
 		'./routes/sitemap.xml.ts': $sitemap_xml,
