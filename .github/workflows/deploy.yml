@@ -1,9 +1,9 @@
 name: Deploy
-
 on:
   push:
+    branches: main
   pull_request:
-  workflow_dispatch:
+    branches: main
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
       contents: read # Needed to clone the repository
 
     steps:
-      - name: Checkout repository
+      - name: Clone repository
         uses: actions/checkout@v3
 
       - name: Install Deno
@@ -23,11 +23,20 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Build
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+
+      - name: Install step
+        run: "sudo apt-get insatll google-chrome-stable"
+
+      - name: Build step
         run: "deno task build"
 
-      - name: Deploy to Deno Deploy
+      - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "gutenfries"
-          entrypoint: "./main.ts"
+          entrypoint: "main.ts"
+          root: "."
