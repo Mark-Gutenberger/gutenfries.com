@@ -42,7 +42,7 @@ export default function SheetsPage(props: PageProps<Data>) {
 						{sheets.map((sheet) => (
 							<span className='p-4 md:w-1/2 xl:w-1/3'>
 								<div className='group'>
-									<div className='border-2 group-hover:border-purple-500 p-4 rounded-lg'>
+									<div className='border-2 border-gray-700 group-hover:border-purple-500 dark:border-gray-300 bg-gray-200 dark:bg-gray-900 p-4 rounded-lg'>
 										<h3 className='font-bold text-4xl text-center md:text-3xl'>
 											{sheet.title}
 										</h3>
