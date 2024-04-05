@@ -16,7 +16,8 @@ import * as $license from './routes/license.tsx';
 import * as $mwotw from './routes/mwotw.tsx';
 import * as $privacy_policy from './routes/privacy-policy.tsx';
 import * as $resume from './routes/resume.tsx';
-import * as $sitemap_xml from './routes/sitemap.xml.ts';
+import * as $sheets from './routes/sheets.tsx';
+import * as $sheets_id_ from './routes/sheets/[id].tsx';
 import * as $Carousel from './islands/Carousel.tsx';
 import * as $MobileNav from './islands/MobileNav.tsx';
 import * as $ThemeMode from './islands/ThemeMode.tsx';
@@ -38,7 +39,8 @@ const manifest = {
 		'./routes/mwotw.tsx': $mwotw,
 		'./routes/privacy-policy.tsx': $privacy_policy,
 		'./routes/resume.tsx': $resume,
-		'./routes/sitemap.xml.ts': $sitemap_xml,
+		'./routes/sheets.tsx': $sheets,
+		'./routes/sheets/[id].tsx': $sheets_id_,
 	},
 	islands: {
 		'./islands/Carousel.tsx': $Carousel,

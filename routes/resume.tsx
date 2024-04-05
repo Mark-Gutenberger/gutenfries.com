@@ -1,38 +1,14 @@
-import { Handlers, PageProps } from '$fresh/server.ts';
-import { render as renderGFM } from 'gfm';
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
 import { Routes } from '@/routes.ts';
 import { Navbar } from '@/components/Navbar.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
-import { readFile } from '@/utils/readFile.ts';
-import IconLoader from '@tabler/icons/loader.tsx';
+import { PageProps } from '$fresh/server.ts';
+import { asset } from '$fresh/runtime.ts';
 
-interface Data {
-	resumes: string[];
-}
-
-export const handler: Handlers<Data> = {
-	async GET(_req, ctx) {
-		const resumes = [
-			renderGFM(await readFile(`./static/resume/resume-tech.md`) ?? ''),
-			renderGFM(await readFile(`./static/resume/resume-music.md`) ?? ''),
-		];
-
-		try {
-			return ctx.render({
-				...ctx.state,
-				resumes,
-			});
-		} catch (e) {
-			console.error(e);
-			return ctx.renderNotFound();
-		}
-	},
-};
-
-export default function ResumePage(props: PageProps<Data>) {
+export default function ResumePage(props: PageProps) {
 	const file_id = '1nL5QPLiHmbA9ELJ0_ia4eBLH_zy7mTee';
+
 	return (
 		<>
 			<Head PageProps={props} />
@@ -47,7 +23,9 @@ export default function ResumePage(props: PageProps<Data>) {
 			>
 				<iframe
 					className='z-20 rounded-b-lg w-full h-full aspect-[8.5/11] lg:aspect-[8.5/9] xl:aspect-[8.5/7] 2xl:aspect-[8.5/5]'
-					src={`https://drive.google.com/viewer?srcid=${file_id}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`}
+					src={asset(
+						`https://drive.google.com/file/d/${file_id}/preview`,
+					)}
 				/>
 			</main>
 			<Footer />

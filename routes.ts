@@ -14,6 +14,7 @@ enum Routes {
 	serverError,
 	privPolicy,
 	mwotw,
+	sheets,
 }
 
 const routes: Route[] = [
@@ -33,6 +34,12 @@ const routes: Route[] = [
 		id: Routes.mwotw,
 		pathName: '/mwotw',
 		displayName: 'MWOTW',
+		showInNav: true,
+	},
+	{
+		id: Routes.sheets,
+		pathName: '/sheets',
+		displayName: 'Sheets',
 		showInNav: true,
 	},
 	{
@@ -71,6 +78,13 @@ function getRouteByPathName(pathname: string): Route {
 	if (pathname === '/') {
 		pathname = '/home';
 	}
+
+	// if pathname is /route/[id], remove the id
+	const pathParts = pathname.split('/');
+	if (pathParts.length > 2) {
+		pathname = pathParts.slice(0, 2).join('/');
+	}
+
 	const route = routes.find((route) => route.pathName === pathname);
 	if (!route) {
 		return routes.find((route) => route.id === Routes.notFound)!;

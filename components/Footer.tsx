@@ -97,7 +97,7 @@ function Footer() {
 			<ul className='flex flex-row p-3 text-center text-xs sm:text-base jutify-around'>
 				{Object.entries(footerItems).map(([key, items]) => (
 					<li key={key} className='p-3 w-1/3'>
-						<h3 className='mb-2 font-bold text-lg text-purple-500 tracking-widest'>
+						<h3 className='mb-2 font-bold text-lg tracking-widest animation-gradient-text'>
 							{key.toUpperCase()}
 						</h3>
 						<ul>

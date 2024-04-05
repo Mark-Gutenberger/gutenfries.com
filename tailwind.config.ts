@@ -1,8 +1,8 @@
-import { type Config } from 'tailwindcss';
+import { TailwindPluginOptions } from '$fresh/plugins/tailwind/types.ts';
 import colors from 'tailwindcss/colors';
 
 export default {
-	future: {
+	future: { // ignore error, bug within the framework plugin
 		hoverOnlyWhenSupported: true,
 	},
 	content: [
@@ -87,4 +87,4 @@ export default {
 			},
 		},
 	},
-} satisfies Config;
+} satisfies TailwindPluginOptions;

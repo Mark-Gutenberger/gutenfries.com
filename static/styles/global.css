@@ -138,26 +138,19 @@ ins {
 	scrollbar-color: var(--purple-500) rgba(107, 114, 128, 0.6);
 }
 
-img::before {
-	content: "HTTP Error 404: Image '" attr(alt) "' not found";
-	width: 100%;
-	height: 100%;
-	background-color: rgb(39, 39, 42);
-	color: rgb(244, 244, 245);
-	display: block;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
 img::after {
-	content: "HTTP Error 404: Image '" attr(alt) "' not found";
+	content: 'Error 404: Image "' attr(alt) '" not found :(';
 	width: 100%;
 	height: 100%;
+	padding: 1rem;
+	padding-top: 1.5rem;
+	text-align: center;
+	font-size: 1rem;
 	background-color: var(--gray-800);
-	color: rgb(244, 244, 245);
+	border-radius: 0.25rem;
+	color: var(--gray-100);
+	position: static;
 	display: block;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	top: 50%;
+	transform: translateY(-50%);
 }

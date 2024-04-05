@@ -44,25 +44,27 @@ interface LinkProps {
  * <Link href='/about' u internal>About</Link>
  */
 export function Link(
-	{ href, children, u, internal, className, color }: LinkProps,
+	props: LinkProps,
 ) {
 	// display the href value if text is failed to be passed to the component.
-	if (!children) {
-		children = href;
+	if (!props.children) {
+		props.children = props.href;
 	}
 
 	return (
 		<a
-			href={href}
-			className={`hover:underline font-medium ${u ? 'underline' : ''} ${className ?? ''} ${
+			href={props.href}
+			className={`hover:underline font-medium ${props.u ? 'underline' : ''} ${
+				props.className ?? ''
+			} ${
 				// if `color` is undefined or true, color the link
-				color ?? true
+				props.color ?? true
 					? 'hover:text-purple-600 transition active:text-purple-700 text-purple-500'
 					: ''}`}
-			target={internal ? undefined : '_blank'}
-			rel={internal ? undefined : 'noopener noreferrer'}
+			target={props.internal ? undefined : '_blank'}
+			rel={props.internal ? undefined : 'noopener noreferrer'}
 		>
-			{children}
+			{props.children}
 		</a>
 	);
 }

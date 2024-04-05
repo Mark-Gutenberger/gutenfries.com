@@ -51,11 +51,6 @@ function IndexPage(PageProps: PageProps) {
 						<div className='flex flex-col flex-grow items-center lg:items-start mb-5'>
 							<h2 className='flex justify-center items-center w-full font-semibold text-5xl text-center md:text-6xl xl:text-7xl'>
 								Who is Marc?
-								<span className='ml-4'>
-									<IconLamp
-										size={48}
-									/>
-								</span>
 							</h2>
 						</div>
 						<Card title='Software Developer'>
@@ -78,7 +73,7 @@ function IndexPage(PageProps: PageProps) {
 							sense of global community through learning about the music of different
 							cultures and time periods.
 						</Card>
-						<Card title='Dinosaur Enthusiast'>
+						<Card title='Dinosaur Enthusiast' icon={<IconBrandDeno />}>
 							No further explanation necessary.
 						</Card>
 					</div>
@@ -86,9 +81,6 @@ function IndexPage(PageProps: PageProps) {
 				<section className='mx-auto px-5 py-40 container'>
 					<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
 						Recent Activity
-						<span className='ml-4'>
-							<IconActivity size={48} />
-						</span>
 					</h2>
 
 					<hr className='md:flex border-purple-500 border-x-2 hidden mx-auto mb-10 border-t-2 rounded-t-lg md:w-4/5 h-10' />
@@ -141,9 +133,6 @@ function IndexPage(PageProps: PageProps) {
 				<section className='mx-auto px-5 py-40 container'>
 					<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
 						Tech Stack
-						<i className='ml-4'>
-							<IconStack size={48} />
-						</i>
 					</h2>
 
 					<hr className='md:flex border-purple-500 border-x-2 hidden mx-auto mb-10 border-t-2 rounded-t-lg md:w-4/5 h-10' />

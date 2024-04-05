@@ -1,16 +1,13 @@
-import { Handlers, PageProps } from '$fresh/server.ts';
+import { PageProps } from '$fresh/server.ts';
 import { Routes } from '@/routes.ts';
 import { Navbar } from '@/components/Navbar.tsx';
 import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import IconQuote from '@tabler/icons/quote.tsx';
-import { Link } from '@/components/Link.tsx';
 import { asset } from '$fresh/runtime.ts';
-import { Card } from '../components/Card.tsx';
-import IconGlobe from '@tabler/icons/globe.tsx';
 
-export default function Home(props: PageProps) {
+export default function MWOTWPage(props: PageProps) {
 	return (
 		<>
 			<Head PageProps={props} />
@@ -52,7 +49,9 @@ export default function Home(props: PageProps) {
 						</div>
 					</div>
 				</section>
-				<section className='mx-auto px-5 py-32 container'>
+
+				{
+					/* <section className='mx-auto px-5 py-32 container'>
 					<div className='flex flex-col justify-end w-full text-center'>
 						<span className='m-6 mx-auto'>
 							<IconQuote size={48} />
@@ -74,7 +73,8 @@ export default function Home(props: PageProps) {
 							MWOTW Co-Founder
 						</p>
 					</div>
-				</section>
+				</section> */
+				}
 			</main>
 			<Footer />
 		</>

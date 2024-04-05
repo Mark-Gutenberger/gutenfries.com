@@ -24,7 +24,7 @@ export const handler: Handlers<Data> = {
 	},
 };
 
-function ResumePage(props: PageProps<Data>) {
+function PrivacyPolicyPage(props: PageProps<Data>) {
 	const privPolicy = props.data.privPolicy;
 	return (
 		<>
@@ -66,4 +66,4 @@ function ResumePage(props: PageProps<Data>) {
 	);
 }
 
-export default ResumePage;
+export default PrivacyPolicyPage;

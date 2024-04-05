@@ -23,7 +23,7 @@ export const handler: Handlers<Data, State> = {
 	},
 };
 
-export default function Home(props: PageProps<Data>) {
+export default function BlogPage(props: PageProps<Data>) {
 	const { posts } = props.data;
 	return (
 		<>
@@ -36,10 +36,10 @@ export default function Home(props: PageProps<Data>) {
 				id='main-content'
 				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
 			>
-				<section className='shadow-xl -mt-6 p-4 rounded-b-lg markdown-body'>
+				<section className='flex flex-wrap mx-auto md:px-10 py-40 container'>
 					<ul>
-						{posts.map((post) => (
-							<li className='border-t'>
+						{posts.map((post, i) => (
+							<li className={i === 0 ? '' : 'border-t'}>
 								<BlogPostPreview post={post} />
 							</li>
 						))}

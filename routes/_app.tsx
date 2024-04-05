@@ -17,6 +17,7 @@ export default function App({ Component /* state */ }: PageProps) {
 
 `}
 			</script>
+
 			<Component />
 		</>
 	);

@@ -68,7 +68,9 @@ export default function MobileNav(props: MobileNavProps): JSX.Element {
 				}
 
 				#mobile-nav.expanded {
-					height: 20rem;
+					height: ${
+					props.routes.filter((route) => route.showInNav).length * 5
+				}rem; // 5rem for each route
 				}
 				`}
 			</style>

@@ -26,7 +26,7 @@ export const handler: Handlers<Data> = {
 	},
 };
 
-function ResumePage(props: PageProps<Data>) {
+function LicensePage(props: PageProps<Data>) {
 	const license = props.data.license;
 	return (
 		<>
@@ -66,4 +66,4 @@ function ResumePage(props: PageProps<Data>) {
 	);
 }
 
-export default ResumePage;
+export default LicensePage;
