@@ -1,9 +1,9 @@
-import { Route, Routes } from '@/routes.ts';
+import { Route, RoutesEnum } from '@/routes.ts';
 import { classNames } from '@/utils/classNames.ts';
 
 interface DesktopNavProps {
 	routes: Route[];
-	active: Routes;
+	active: RoutesEnum;
 }
 
 function DesktopNav(props: DesktopNavProps) {

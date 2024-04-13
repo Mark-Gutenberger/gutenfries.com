@@ -1,9 +1,4 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { Routes } from '@/routes.ts';
-import { Navbar } from '@/components/Navbar.tsx';
-import { Footer } from '@/components/Footer.tsx';
-import { Head } from '@/components/Head.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
 import { listSheets, Sheet } from '@/utils/sheets.ts';
 import SheetsDisplay, { SortByOpt } from '@/islands/SheetsDisplay.tsx';
 
@@ -44,31 +39,20 @@ export const handler: Handlers<Data> = {
 export default function SheetsPage(props: PageProps<Data>) {
 	return (
 		<>
-			<Head PageProps={props} />
-			<Navbar
-				active={Routes.sheets}
-			/>
-			<NoScript />
-			<main
-				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 pt-20 text-gray-800 dark:text-gray-200 transition'
-			>
-				<section className='flex flex-wrap mx-auto py-40 container'>
-					<h1 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
-						Beats & Sheets
-					</h1>
+			<section className='flex flex-wrap -m-6 mx-auto py-40 container'>
+				<h1 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
+					Beats & Sheets
+				</h1>
 
-					<div className='flex md:flex-row flex-col md:justify-between place-content-center m-0 p-0'>
-						<SheetsDisplay
-							sheets={props.data.sheets}
-							tags={props.data.tags}
-							sortBy={props.data.sortBy}
-							filterBy={props.data.filterBy}
-						/>
-					</div>
-				</section>
-			</main>
-			<Footer />
+				<div className='flex md:flex-row flex-col md:justify-between place-content-center m-0 p-0'>
+					<SheetsDisplay
+						sheets={props.data.sheets}
+						tags={props.data.tags}
+						sortBy={props.data.sortBy}
+						filterBy={props.data.filterBy}
+					/>
+				</div>
+			</section>
 		</>
 	);
 }

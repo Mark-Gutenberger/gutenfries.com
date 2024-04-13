@@ -1,5 +1,6 @@
 import { asset, Head as FreshHead } from '$fresh/runtime.ts';
 import { PageProps } from '$fresh/server.ts';
+import { getRouteDisplayByPathName } from '@/routes.ts';
 import { getRouteByPathName } from '@/routes.ts';
 
 interface HeadProps {
@@ -20,10 +21,7 @@ function Head({ PageProps }: HeadProps) {
 		pipe = '';
 	}
 
-	let pathDisplayName = getRouteByPathName(PageProps.url.pathname).displayName;
-	if (pathDisplayName === 'Home') {
-		pathDisplayName = '';
-	}
+	const pathDisplayName = getRouteDisplayByPathName(PageProps.url.pathname);
 
 	return (
 		<FreshHead>

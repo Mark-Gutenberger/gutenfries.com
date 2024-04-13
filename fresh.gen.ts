@@ -7,8 +7,10 @@ import * as $_500 from './routes/500.ts';
 import * as $_404_1 from './routes/_404.tsx';
 import * as $_500_1 from './routes/_500.tsx';
 import * as $_app from './routes/_app.tsx';
+import * as $_layout from './routes/_layout.tsx';
 import * as $blog from './routes/blog.tsx';
 import * as $blog_slug_ from './routes/blog/[slug].tsx';
+import * as $blog_layout from './routes/blog/_layout.tsx';
 import * as $blog_feed_rss from './routes/blog/feed.rss.ts';
 import * as $home from './routes/home.ts';
 import * as $index from './routes/index.tsx';
@@ -18,6 +20,7 @@ import * as $privacy_policy from './routes/privacy-policy.tsx';
 import * as $resume from './routes/resume.tsx';
 import * as $sheets from './routes/sheets.tsx';
 import * as $sheets_id_ from './routes/sheets/[id].tsx';
+import * as $sheets_layout from './routes/sheets/_layout.tsx';
 import * as $Carousel from './islands/Carousel.tsx';
 import * as $MobileNav from './islands/MobileNav.tsx';
 import * as $SheetsDisplay from './islands/SheetsDisplay.tsx';
@@ -31,8 +34,10 @@ const manifest = {
 		'./routes/_404.tsx': $_404_1,
 		'./routes/_500.tsx': $_500_1,
 		'./routes/_app.tsx': $_app,
+		'./routes/_layout.tsx': $_layout,
 		'./routes/blog.tsx': $blog,
 		'./routes/blog/[slug].tsx': $blog_slug_,
+		'./routes/blog/_layout.tsx': $blog_layout,
 		'./routes/blog/feed.rss.ts': $blog_feed_rss,
 		'./routes/home.ts': $home,
 		'./routes/index.tsx': $index,
@@ -42,6 +47,7 @@ const manifest = {
 		'./routes/resume.tsx': $resume,
 		'./routes/sheets.tsx': $sheets,
 		'./routes/sheets/[id].tsx': $sheets_id_,
+		'./routes/sheets/_layout.tsx': $sheets_layout,
 	},
 	islands: {
 		'./islands/Carousel.tsx': $Carousel,

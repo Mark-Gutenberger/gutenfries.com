@@ -1,15 +1,20 @@
 import { DesktopNav } from '@/components/DesktopNav.tsx';
 import ThemeMode from '@/islands/ThemeMode.tsx';
 import MobileNav from '@/islands/MobileNav.tsx';
-import { Routes, routes } from '@/routes.ts';
+import { getRouteEnumByPathName, routes } from '@/routes.ts';
+import { PageProps } from '$fresh/server.ts';
+import { RoutesEnum } from '@/routes.ts';
 
-interface NavbarProps {
-	active: Routes;
+interface NavBarProps {
+	PageProps: PageProps;
+	active?: RoutesEnum;
 }
 
-function Navbar(props: NavbarProps) {
+function Navbar({ PageProps }: NavBarProps) {
+	const active = getRouteEnumByPathName(PageProps.url.pathname);
+
 	return (
-		<>
+		<header>
 			<a
 				href='#main-content'
 				className='text-red-500 outline-none sr-only focus:not-sr-only focus:outline-none'
@@ -21,7 +26,7 @@ function Navbar(props: NavbarProps) {
 				<div className={'hidden sm:flex pl-1'}>
 					<DesktopNav
 						routes={routes}
-						active={props.active}
+						active={active}
 					/>
 				</div>
 
@@ -29,7 +34,7 @@ function Navbar(props: NavbarProps) {
 				<div className='flex justify-center items-center sm:hidden pl-1'>
 					<MobileNav
 						routes={routes}
-						active={props.active}
+						active={active}
 					/>
 				</div>
 
@@ -37,7 +42,7 @@ function Navbar(props: NavbarProps) {
 					<ThemeMode />
 				</div>
 			</nav>
-		</>
+		</header>
 	);
 }
 

@@ -1,10 +1,10 @@
-import { Route, Routes } from '@/routes.ts';
+import { Route, RoutesEnum } from '@/routes.ts';
 import { classNames } from '@/utils/classNames.ts';
 import { JSX } from 'preact/jsx-runtime';
 
 interface MobileNavProps {
 	routes: Route[];
-	active: Routes;
+	active: RoutesEnum;
 }
 
 export default function MobileNav(props: MobileNavProps): JSX.Element {

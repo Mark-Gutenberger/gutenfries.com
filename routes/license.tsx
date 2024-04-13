@@ -1,10 +1,4 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { Routes } from '@/routes.ts';
-import { Navbar } from '@/components/Navbar.tsx';
-
-import { Footer } from '@/components/Footer.tsx';
-import { Head } from '@/components/Head.tsx';
-import { NoScript } from '@/components/NoScript.tsx';
 import { asset } from '$fresh/runtime.ts';
 import { readFile } from '@/utils/readFile.ts';
 import { render as renderGFM } from 'gfm';
@@ -29,40 +23,28 @@ export const handler: Handlers<Data> = {
 function LicensePage(props: PageProps<Data>) {
 	const license = props.data.license;
 	return (
-		<>
-			<Head PageProps={props} />
-			<Navbar
-				active={Routes.license}
-			/>
-			<NoScript />
-
-			<main
-				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 p-6 pt-28 text-gray-800 dark:text-gray-200 transition'
-			>
-				{license
-					? (
-						<>
-							<link rel='stylesheet' href={asset('/styles/markdown.css')} />
-							<article
-								data-color-mode='auto'
-								data-light-theme='light'
-								data-dark-theme='dark'
-								className='shadow-xl p-10 rounded-lg markdown-body'
-								dangerouslySetInnerHTML={{
-									__html: renderGFM(license),
-								}}
-							/>
-						</>
-					)
-					: (
-						<h1 className='pt-20 rounded-lg font-bold text-5xl'>
-							Loading...
-						</h1>
-					)}
-			</main>
-			<Footer />
-		</>
+		<section>
+			{license
+				? (
+					<>
+						<link rel='stylesheet' href={asset('/styles/markdown.css')} />
+						<article
+							data-color-mode='auto'
+							data-light-theme='light'
+							data-dark-theme='dark'
+							className='shadow-xl mt-8 p-10 rounded-lg markdown-body'
+							dangerouslySetInnerHTML={{
+								__html: renderGFM(license),
+							}}
+						/>
+					</>
+				)
+				: (
+					<h1 className='mt-28 rounded-lg font-bold text-5xl'>
+						Loading...
+					</h1>
+				)}
+		</section>
 	);
 }
 

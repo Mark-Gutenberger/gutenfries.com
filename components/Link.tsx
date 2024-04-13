@@ -8,7 +8,7 @@ interface LinkProps {
 	/**
 	 * whether to underline the link or not
 	 */
-	u?: boolean;
+	underline?: boolean;
 	/**
 	 * children to render inside the link
 	 * @default href
@@ -37,11 +37,11 @@ interface LinkProps {
  *
  * @example
  * // link to an internal page
- * <Link internal href='/about'>About</Link>
+ * <Link internal href='/about'>Internal Link</Link>
  * // link to an external page
- * <Link href='https://google.com' ext>About</Link>
+ * <Link href='https://google.com'>External Link</Link>
  * // link to an internal page with underline
- * <Link href='/about' u internal>About</Link>
+ * <Link href='/about' underline internal color>Colored Underlined internal Link</Link>
  */
 export function Link(
 	props: LinkProps,
@@ -54,7 +54,7 @@ export function Link(
 	return (
 		<a
 			href={props.href}
-			className={`hover:underline font-medium ${props.u ? 'underline' : ''} ${
+			className={`hover:underline font-medium ${props.underline ? 'underline' : ''} ${
 				props.className ?? ''
 			} ${
 				// if `color` is undefined or true, color the link

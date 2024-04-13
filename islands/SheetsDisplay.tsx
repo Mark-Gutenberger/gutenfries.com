@@ -105,15 +105,15 @@ function SheetsDisplay(props: SheetsDisplayProps) {
 					</h2>
 					<ul className='flex flex-col h-32 md:h-auto overflow-x-none overflow-y-auto'>
 						{sortByOpts.map((sortBy) => (
-							<li class='flex items-center hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded'>
-								<label class='rounded w-full font-medium'>
+							<li className='flex items-center hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded'>
+								<label className='rounded w-full font-medium'>
 									<input
 										type='radio'
 										checked={sortBy === props.sortBy}
 										name='sortBy'
 										onChange={handleSortChange}
 										value={sortBy}
-										class='rounded w-4 h-4 text-purple-600 accent-purple-600 me-2'
+										className='m-1 w-4 h-4 text-purple-600 accent-purple-600 me-2'
 									/>
 									{sortBy}
 								</label>
@@ -125,17 +125,17 @@ function SheetsDisplay(props: SheetsDisplayProps) {
 					<h2 className='mb-4 font-bold text-2xl animation-gradient-text'>
 						Filter
 					</h2>
-					<ul class='flex flex-col h-32 md:h-auto overflow-x-none overflow-y-auto'>
+					<ul className='flex flex-col h-32 md:h-auto overflow-x-none overflow-y-auto'>
 						{props.tags.map((tag) => (
-							<li class='flex items-center hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded'>
-								<label class='rounded w-full font-medium'>
+							<li className='flex hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded'>
+								<label className='flex rounded w-full font-medium'>
 									<input
 										type='checkbox'
 										name='tags'
 										checked={props.filterBy.includes(tag)}
 										value={tag}
 										onChange={handleFilterChange}
-										class='rounded w-4 h-4 text-purple-600 accent-purple-600 me-2'
+										className='m-1 rounded w-4 h-4 text-purple-600 accent-purple-600 me-2'
 									/>
 									{tag}
 								</label>
@@ -153,10 +153,13 @@ function SheetsDisplay(props: SheetsDisplayProps) {
 								<h3 className='font-bold text-4xl text-center md:text-3xl'>
 									{sheet.title}
 								</h3>
-								<Link internal href={`/sheets/${sheet.id}`}>
+								<Link
+									internal
+									href={`/sheets/${sheet.id}`}
+								>
 									<img
 										alt={sheet.title}
-										className='group-hover:scale-[1.025] border-2 border-gray-700 dark:border-gray-800 my-4 rounded-md transition ease'
+										className='group-hover:scale-[1.025] border-2 border-gray-700 dark:border-gray-800 my-4 rounded-md w-full h-full transition aspect-pdf ease'
 										src={asset(
 											`images/sheet_images/${sheet.id}.png`,
 										)}
