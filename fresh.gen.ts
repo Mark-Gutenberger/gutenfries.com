@@ -20,6 +20,7 @@ import * as $sheets from './routes/sheets.tsx';
 import * as $sheets_id_ from './routes/sheets/[id].tsx';
 import * as $Carousel from './islands/Carousel.tsx';
 import * as $MobileNav from './islands/MobileNav.tsx';
+import * as $SheetsDisplay from './islands/SheetsDisplay.tsx';
 import * as $ThemeMode from './islands/ThemeMode.tsx';
 import { type Manifest } from '$fresh/server.ts';
 
@@ -45,6 +46,7 @@ const manifest = {
 	islands: {
 		'./islands/Carousel.tsx': $Carousel,
 		'./islands/MobileNav.tsx': $MobileNav,
+		'./islands/SheetsDisplay.tsx': $SheetsDisplay,
 		'./islands/ThemeMode.tsx': $ThemeMode,
 	},
 	baseUrl: import.meta.url,

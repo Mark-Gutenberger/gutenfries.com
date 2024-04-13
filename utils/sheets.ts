@@ -1,3 +1,5 @@
+import { ComparerToStoredComparer } from 'https://deno.land/x/ts_morph@21.0.1/common/ts_morph_common.js';
+
 /**
  * Data type for a sheet
  */
@@ -14,6 +16,14 @@ interface Sheet {
 	 * Brief description
 	 */
 	description: string;
+	/**
+	 * Relavant tags
+	 */
+	tags?: string[];
+	/**
+	 * Date of publish
+	 */
+	date: string;
 }
 
 /**
@@ -48,11 +58,15 @@ async function listSheets(): Promise<Sheet[]> {
  * {
  *     "example_id": {
  *         "title": "example_title",
- *         "description": "example_description"
+ *         "description": "example_description",
+ *         "tags": ["example_tag_1", "example_tag_2"],
+ *         "date": "12-31-2021"
  *     },
  *     "example_id_2": {
  *         "title": "example_title_2",
- *         "description": "example_description_2"
+ *         "description": "example_description_2",
+ *         "tags": ["example_tag_1", "example_tag_2"]
+ *         "date": "1-29-1995"
  *     }
  * }
  * ```
@@ -65,12 +79,16 @@ async function listSheets(): Promise<Sheet[]> {
  * {
  *     id: "example_id",
  *     title: "example_title",
- *     description: "example_description"
+ *     description: "example_description",
+ *     tags: ["example_tag_1", "example_tag_2"]
+ *     date: "12-31-2021"
  * },
  * {
  *     id: "example_id_2",
  *     title: "example_title_2",
- *     description: "example_description_2"
+ *     description: "example_description_2",
+ *     tags: ["example_tag_1", "example_tag_2"]
+ *     date: "1-29-1995"
  * }
  * ]
  * ```
@@ -79,11 +97,12 @@ function parseSheets(json: string): Sheet[] {
 	const sheets: Sheet[] = [];
 	const obj = JSON.parse(json);
 	for (const id in obj) {
-		const sheet = obj[id];
 		sheets.push({
 			id,
-			title: sheet.title,
-			description: sheet.description,
+			title: obj[id].title,
+			description: obj[id].description,
+			tags: obj[id].tags,
+			date: obj[id].date,
 		});
 	}
 

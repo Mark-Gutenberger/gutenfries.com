@@ -5,23 +5,43 @@ import { Footer } from '@/components/Footer.tsx';
 import { Head } from '@/components/Head.tsx';
 import { NoScript } from '@/components/NoScript.tsx';
 import { listSheets, Sheet } from '@/utils/sheets.ts';
-import { asset } from '$fresh/runtime.ts';
-import { Link } from '@/components/Link.tsx';
+import SheetsDisplay, { SortByOpt } from '@/islands/SheetsDisplay.tsx';
 
 interface Data {
 	sheets: Sheet[];
+	tags: string[];
+	sortBy: SortByOpt;
+	filterBy: string[];
 }
 
 export const handler: Handlers<Data> = {
 	async GET(_req, ctx) {
 		const sheets = await listSheets();
-		return ctx.render({ ...ctx.state, sheets });
+		const tags: string[] = [];
+		// create array of all UNIQUE tags
+		sheets.forEach((sheet) => {
+			sheet.tags?.forEach((tag) => {
+				if (!tags.includes(tag)) {
+					tags.push(tag);
+				}
+			});
+		});
+
+		// get the sort and filter information from the url
+		const sortBy = (ctx.url.searchParams.get('sortBy') as SortByOpt) ?? SortByOpt.TitleAZ;
+		const filterBy = ctx.url.searchParams.getAll('tags');
+
+		return ctx.render({
+			...ctx.state,
+			sheets,
+			tags,
+			sortBy,
+			filterBy,
+		});
 	},
 };
 
 export default function SheetsPage(props: PageProps<Data>) {
-	const { sheets } = props.data;
-
 	return (
 		<>
 			<Head PageProps={props} />
@@ -31,35 +51,20 @@ export default function SheetsPage(props: PageProps<Data>) {
 			<NoScript />
 			<main
 				id='main-content'
-				className='bg-gray-100 dark:bg-gray-900 p-6 pt-20 text-gray-800 dark:text-gray-200 transition'
+				className='bg-gray-100 dark:bg-gray-900 pt-20 text-gray-800 dark:text-gray-200 transition'
 			>
-				<section className='flex flex-wrap mx-auto md:px-10 py-40 container'>
-					<h2 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
+				<section className='flex flex-wrap mx-auto py-40 container'>
+					<h1 className='flex justify-center items-center mb-20 w-full font-semibold text-5xl text-center md:text-6xl lg:text-7xl'>
 						Beats & Sheets
-					</h2>
+					</h1>
 
-					<div className='flex flex-wrap -m-4'>
-						{sheets.map((sheet) => (
-							<span className='p-4 md:w-1/2 xl:w-1/3'>
-								<div className='group'>
-									<div className='border-2 border-gray-700 group-hover:border-purple-500 dark:border-gray-300 p-4 rounded-lg transition'>
-										<h3 className='font-bold text-4xl text-center md:text-3xl'>
-											{sheet.title}
-										</h3>
-										<Link internal href={`/sheets/${sheet.id}`}>
-											<img
-												alt={sheet.title}
-												className='group-hover:scale-[1.025] my-4 rounded-md transition ease'
-												src={asset(`images/sheet_images/${sheet.id}.png`)}
-											/>
-										</Link>
-										<p className='text-xl'>
-											{sheet.description}
-										</p>
-									</div>
-								</div>
-							</span>
-						))}
+					<div className='flex md:flex-row flex-col md:justify-between place-content-center m-0 p-0'>
+						<SheetsDisplay
+							sheets={props.data.sheets}
+							tags={props.data.tags}
+							sortBy={props.data.sortBy}
+							filterBy={props.data.filterBy}
+						/>
 					</div>
 				</section>
 			</main>

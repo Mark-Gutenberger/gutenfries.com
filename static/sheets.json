@@ -1,14 +1,28 @@
 {
 	"1o11_4sby1GPvSN-ioAKxfdtGgQetgqMM": {
 		"title": "Replacement Parts",
-		"description": "Short snare lick, arr. Botello"
+		"description": "Short snare lick, arr. Botello",
+		"tags": [
+			"Snare",
+			"Drum Corps"
+		],
+		"date": "9-19-2022"
 	},
 	"13aPGet38ZpyQl2MKtdrnjQGYaYtVbweA": {
 		"title": "RCR Rolls",
-		"description": "RCR 2023 triplet rolls excercise, arr. Alvarino"
+		"description": "RCR 2023 triplet rolls excercise, arr. Alvarino",
+		"tags": [
+			"RCR",
+			"Drum Corps"
+		],
+		"date": "11-30-2022"
 	},
 	"1VKLnwt6afXyUVhf0hiH2GPXBb0N--Rbu": {
 		"title": "Feliz Navidad",
-		"description": "My arrangement of the classic Christmas song"
+		"description": "My arrangement of the classic Christmas song",
+		"tags": [
+			"Christmas"
+		],
+		"date": "02-05-2024"
 	}
 }
