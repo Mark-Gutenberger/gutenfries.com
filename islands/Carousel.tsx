@@ -99,13 +99,13 @@ function Slide(props: SlideProps) {
 }
 
 interface CarouselProps {
-	slides: {
+	slides?: {
 		title: string;
 		description: string;
 		content: ComponentChild;
 	}[];
-	showNavigation: boolean;
-	interval: number;
+	showNavigation?: boolean;
+	interval?: number;
 	currentSlide?: number;
 	automatic?: boolean;
 	className?: string;
