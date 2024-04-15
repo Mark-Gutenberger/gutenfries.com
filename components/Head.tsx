@@ -35,8 +35,16 @@ function Head({ PageProps }: HeadProps) {
 			/>
 
 			{/* global styles */}
-			<link rel='stylesheet' href={asset('/styles/global.css')} />
-			<link rel='stylesheet' href={asset('/styles/animations/global/gradient.css')} />
+			<link
+				rel='stylesheet'
+				href={asset('/styles/global.css')}
+				type='text/css'
+			/>
+			<link
+				rel='stylesheet'
+				href={asset('/styles/animations/global/gradient.css')}
+				type='text/css'
+			/>
 
 			{/* <!-- Primary Meta Tags --> */}
 			<title>
