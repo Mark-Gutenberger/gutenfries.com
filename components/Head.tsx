@@ -34,6 +34,10 @@ function Head({ PageProps }: HeadProps) {
 				type='text/css'
 			/>
 
+			{/* global styles */}
+			<link rel='stylesheet' href={asset('/styles/global.css')} />
+			<link rel='stylesheet' href={asset('/styles/animations/global/gradient.css')} />
+
 			{/* <!-- Primary Meta Tags --> */}
 			<title>
 				{pathDisplayName} {pipe} Marc Gutenberger
@@ -85,10 +89,6 @@ function Head({ PageProps }: HeadProps) {
 			{/* iOS Safari */}
 			<meta name='apple-mobile-web-app-capable' content='yes' />
 			<meta name='apple-mobile-web-app-status-bar-style' content='#27272a' />
-
-			{/* global styles */}
-			<link rel='stylesheet' href={asset('/styles/global.css')} />
-			<link rel='stylesheet' href={asset('/styles/tailwind.css')} />
 
 			{/* favicon */}
 			<link rel='icon' href={asset('/images/code.svg')} />
