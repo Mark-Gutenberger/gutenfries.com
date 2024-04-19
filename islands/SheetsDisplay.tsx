@@ -97,7 +97,7 @@ function SheetsDisplay(props: SheetsDisplayProps) {
 				id='filterForm'
 				// onSubmit={handleSubmit}
 				// method='post'
-				className='flex flex-row md:flex-col gap-4 border-2 border-gray-700 dark:border-gray-300 md:m-4 p-4 rounded-lg w-auto md:w-1/4 lg:w-1/5 h-42 md:h-auto'
+				className='flex flex-row md:flex-col gap-4 border-2 border-gray-700 dark:border-gray-300 md:m-4 p-4 rounded-lg w-auto md:w-1/4 lg:w-1/5 h-42 md:h-min'
 			>
 				<div className='flex flex-col w-1/2 md:w-auto'>
 					<h2 className='mb-4 font-bold text-2xl animation-gradient-text'>
