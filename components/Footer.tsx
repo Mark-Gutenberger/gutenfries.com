@@ -93,7 +93,7 @@ const footerItems: Record<string, FooterItem[]> = {
 
 function Footer() {
 	return (
-		<footer className='bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition'>
+		<footer className='bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition'>
 			<ul className='flex flex-row p-3 text-center text-xs sm:text-base jutify-around'>
 				{Object.entries(footerItems).map(([key, items]) => (
 					<li key={key} className='p-3 w-1/3'>
