@@ -97,7 +97,7 @@ function SheetsDisplay(props: SheetsDisplayProps) {
 				id='filterForm'
 				// onSubmit={handleSubmit}
 				// method='post'
-				className='flex flex-row md:flex-col gap-4 border-2 border-gray-700 dark:border-gray-300 m-4 p-4 rounded-lg w-auto md:w-1/4 lg:w-1/5 h-42 md:h-auto'
+				className='flex flex-row md:flex-col gap-4 border-2 border-gray-700 dark:border-gray-300 md:m-4 p-4 rounded-lg w-auto md:w-1/4 lg:w-1/5 h-42 md:h-auto'
 			>
 				<div className='flex flex-col w-1/2 md:w-auto'>
 					<h2 className='mb-4 font-bold text-2xl animation-gradient-text'>
@@ -106,7 +106,7 @@ function SheetsDisplay(props: SheetsDisplayProps) {
 					<ul className='flex flex-col h-32 md:h-auto overflow-x-none overflow-y-auto'>
 						{sortByOpts.map((sortBy) => (
 							<li className='flex items-center hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded'>
-								<label className='flex items-center rounded w-full font-medium text-sm md:text-base'>
+								<label className='flex items-center rounded w-full font-medium text-base'>
 									<input
 										type='radio'
 										checked={sortBy === props.sortBy}
@@ -128,7 +128,7 @@ function SheetsDisplay(props: SheetsDisplayProps) {
 					<ul className='flex flex-col h-32 md:h-auto overflow-x-none overflow-y-auto'>
 						{props.tags.map((tag) => (
 							<li className='flex hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded'>
-								<label className='flex items-center rounded w-full font-medium text-sm md:text-base'>
+								<label className='flex items-center rounded w-full font-medium text-base'>
 									<input
 										type='checkbox'
 										name='tags'
@@ -144,7 +144,7 @@ function SheetsDisplay(props: SheetsDisplayProps) {
 					</ul>
 				</div>
 			</form>
-			<section className='flex flex-wrap mt-8 md:mt-0 w-auto md:w-3/4 lg:w-4/5'>
+			<section className='flex flex-wrap -m-4 md:m-0 mt-8 md:mt-0 w-auto md:w-3/4 lg:w-4/5'>
 				{/* <- calculated m-4 */}
 				{sheets.map((sheet) => (
 					<span className='p-4 md:w-1/2 xl:w-1/3'>
