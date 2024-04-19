@@ -106,7 +106,7 @@ function SheetsDisplay(props: SheetsDisplayProps) {
 					<ul className='flex flex-col h-32 md:h-auto overflow-x-none overflow-y-auto'>
 						{sortByOpts.map((sortBy) => (
 							<li className='flex items-center hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded'>
-								<label className='rounded w-full font-medium'>
+								<label className='rounded w-full font-medium text-sm md:text-base'>
 									<input
 										type='radio'
 										checked={sortBy === props.sortBy}
@@ -128,7 +128,7 @@ function SheetsDisplay(props: SheetsDisplayProps) {
 					<ul className='flex flex-col h-32 md:h-auto overflow-x-none overflow-y-auto'>
 						{props.tags.map((tag) => (
 							<li className='flex hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded'>
-								<label className='flex rounded w-full font-medium'>
+								<label className='flex rounded w-full font-medium text-sm md:text-base'>
 									<input
 										type='checkbox'
 										name='tags'
