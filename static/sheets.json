@@ -1,16 +1,15 @@
 {
 	"1o11_4sby1GPvSN-ioAKxfdtGgQetgqMM": {
 		"title": "Replacement Parts",
-		"description": "Short snare lick, arr. Botello",
+		"description": "Short snare lick, by Botello",
 		"tags": [
-			"Snare",
 			"Drum Corps"
 		],
 		"date": "9-19-2022"
 	},
 	"13aPGet38ZpyQl2MKtdrnjQGYaYtVbweA": {
 		"title": "RCR Rolls",
-		"description": "RCR 2023 triplet rolls excercise, arr. Alvarino",
+		"description": "RCR 2023 triplet rolls excercise, by Alvarino",
 		"tags": [
 			"RCR",
 			"Drum Corps"
@@ -21,7 +20,52 @@
 		"title": "Feliz Navidad",
 		"description": "My arrangement of the classic Christmas song",
 		"tags": [
-			"Christmas"
+			"Christmas",
+			"Lead Sheet"
+		],
+		"date": "02-05-2024"
+	},
+	"13QVjFDe0TkE32tUSvjhhVfy12O8KE-P2": {
+		"title": "Mood Change",
+		"description": "Short snare lick I wrote",
+		"tags": [
+			"Drum Corps"
+		],
+		"date": "02-15-2024"
+	},
+	"1NT0N1fDZASJbx_uiQZm-nuE6zErx4t4c": {
+		"title": "Jingle Bells",
+		"description": "My arrangement of the classic Christmas song",
+		"tags": [
+			"Christmas",
+			"Lead Sheet"
+		],
+		"date": "12-05-2023"
+	},
+	"1iGSmUzB7s5UTbgl3QwsyuKqXeUsegr6f": {
+		"title": "Jingle Bell Rock",
+		"description": "My arrangement of the classic Christmas song",
+		"tags": [
+			"Christmas",
+			"Lead Sheet"
+		],
+		"date": "12-05-2023"
+	},
+	"1snWgadzj64caQoHDR4uYnuNj4-dao2nd": {
+		"title": "Rockin Around the Christmas Tree",
+		"description": "My arrangement of the classic Christmas song",
+		"tags": [
+			"Christmas",
+			"Lead Sheet"
+		],
+		"date": "12-05-2023"
+	},
+	"1wfgZG9nFPcI161hDuQGjhoOvQtEYZl4i": {
+		"title": "On the Road Again",
+		"description": "My arrangement of Willie Nelson's classic",
+		"tags": [
+			"Country",
+			"Lead Sheet"
 		],
 		"date": "02-05-2024"
 	}
