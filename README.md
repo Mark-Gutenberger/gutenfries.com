@@ -30,7 +30,7 @@
 [![GitHub Forks](https://img.shields.io/github/forks/gutenfries/gutenfries.deno.dev)](https://github.com/gutenfries/gutenfries.deno.dev/network/members)
 [![GitHub Issues](https://img.shields.io/github/issues/gutenfries/gutenfries.deno.dev.svg)](https://github.com/gutenfries/gutenfries.deno.dev/issues)
 [![MIT License](https://img.shields.io/github/license/gutenfries/gutenfries.deno.dev.svg)](https://github.com/gutenfries/gutenfries.deno.dev/blob/main/LICENSE.md)
-[![deno-tests](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/deno-tests.yml)
+[![CI](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/ci.yml/badge.svg)](https://github.com/gutenfries/gutenfries.deno.dev/actions/workflows/ci.yml)
 
 ![screenshot](static/images/screenshots/screenshot-desktop-dark.png)
 
