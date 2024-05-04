@@ -65,7 +65,7 @@ async function listSheets(): Promise<Sheet[]> {
  *     "example_id_2": {
  *         "title": "example_title_2",
  *         "description": "example_description_2",
- *         "tags": ["example_tag_1", "example_tag_2"]
+ *         "tags": ["example_tag_1", "example_tag_2"],
  *         "date": "1-29-1995"
  *     }
  * }
@@ -80,14 +80,14 @@ async function listSheets(): Promise<Sheet[]> {
  *     id: "example_id",
  *     title: "example_title",
  *     description: "example_description",
- *     tags: ["example_tag_1", "example_tag_2"]
+ *     tags: ["example_tag_1", "example_tag_2"],
  *     date: "12-31-2021"
  * },
  * {
  *     id: "example_id_2",
  *     title: "example_title_2",
  *     description: "example_description_2",
- *     tags: ["example_tag_1", "example_tag_2"]
+ *     tags: ["example_tag_1", "example_tag_2"],
  *     date: "1-29-1995"
  * }
  * ]
