@@ -2,7 +2,7 @@ import { PageProps } from '$fresh/server.ts';
 import { asset } from '$fresh/runtime.ts';
 
 export default function ResumePage(_PageProps: PageProps) {
-	const file_id = '1nL5QPLiHmbA9ELJ0_ia4eBLH_zy7mTee';
+	const file_id = '1SnkOFLDzzFl7p_kpuHCT31KraCFnVPit8J3Qcwm8YsE';
 
 	return (
 		<section>
